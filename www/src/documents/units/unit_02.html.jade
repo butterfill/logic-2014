@@ -1,0 +1,33 @@
+---cson
+layout: 'deck_unit'
+title: "Quick Intro to Logiya (‘FOL’)"
+description: "Gives some examples of the formal language Logiya (called 'FOL' in the textbook) and explains their relation to ordinary English.  Also explains terms like 'name' and 'predicate'."
+tags: ['definitions']
+depends: []
+source: ['ph126 lecture 01', 'ppe lecture 01']
+sequence: 40
+book: ['1.1','1.2','1.3']
+exercises: ['1.1--1.5', '*1.6', '1.8--1.10']
+exercises_fast: []
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+img.handout(src='img/name_predicate_sentence.png')
+
++slide_middle
+  .handout A formal langauge enables us to avoid ambiguity, e.g.:
+  .notes We need a formal language because ambiguity is awkward to deal with theoretically
+  .handout \begin{quote}
+  p.center.handout.show This is a hospital where doctors are trained.
+  .handout \end{quote}
+
++slide_middle
+  .handout A formal langauge also enables us to some avoid appearance--reality problems:
+  .notes Appearance and reality. We need a formal language because we want a guarantee that a sentence which seems to express a proposition really does express a proposition.
+  .handout \begin{quote}
+  p.center.handout.show Many more people have been to Paris than I have.
+  .handout \end{quote}

@@ -1,0 +1,26 @@
+---cson
+layout: 'deck_units'
+images: 'unit_071'
+title: "Truth Tables"
+description: "Introduces truth tables for conjunction, disjunction and negation.  Truth tables give the meanings of connectives in our formal language Logiya."
+tags: ['definitions']
+depends: []
+source: ['ph126 fastlecture 01']
+sequence: 110
+book: ['3.1','3.2','3.3']
+exercises_fast: ['3.1, 3.3', '3.5, 3.7']
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+//- handout
+.handout Rough guide:
+.handout `$\land{}$' means and
+.handout `$\lor{}$' means or
+.handout `$\lnot{}$' means not
+
+img.handout(src='img/truth_table_or_and.png')
+img.handout(src='img/truth_table_not.png')

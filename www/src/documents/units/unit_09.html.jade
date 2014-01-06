@@ -1,0 +1,25 @@
+---cson
+layout: 'deck_units'
+images: 'unit_09'
+title: "Complex Truth Tables"
+description: "Illustrates how to construct complex truth-tables with an example, the truth-table for (P and Q) or R.  Also describes how to order the reference columns."
+tags: ['truth-tables']
+depends: ['071']
+source: ['ph126 fastlecture 01', 'ph133 lecture 02']
+sequence: 230
+book: ['3.3','3.5']
+exercises_fast: ['3.14, 3.15']
+---
+
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+//- handout
+img.handout(src='img/how_to_write_truth_tables.png')
+.handout \begin{minipage}{\columnwidth}
+.handout Complex truth table example:
+img.handout(src='img/tt_p_and_q_or_r.png')
+.handout \end{minipage}

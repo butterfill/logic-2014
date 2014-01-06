@@ -1,0 +1,31 @@
+---cson
+layout: 'deck_units'
+images: 'unit_03'
+title: "Logically Valid Arguments"
+description: "Explains the notion of logically valid argument.  This is the central notion for this course."
+tags: ['definitions']
+depends: ['unit_01','unit_02']
+source: ['ph126 lecture 01']
+sequence: 50
+book: ['2.1']
+exercises: ['2.3, 2.4']
+exercises_fast: []
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+//- handout
+.handout An argument is \emph{logically valid} just if there’s no possible situation in which the premises are true and the conclusion false
+
+.handout A \emph{connective} joins one or more sentences to make a new sentence.  E.g. ‘because’, ‘¬’.  The sentences joined by a connective are called \emph{constituent sentences}.
+.handout E.g. in ‘P $\lor{}$ Q’, 
+.handout \begin{quote}
+.handout $\lor{}$ is the connective
+.handout 	P, Q are the constituent sentences
+.handout \end{quote}
+
+
+img.handout(src='img/terminology_more.png')

@@ -1,0 +1,20 @@
+---cson
+layout: 'deck_unit'
+images: 'unit_06'
+title: "Identity"
+description: "Introduces the notion of identity used in studying first-order logic.  Includes example argument and the two principles."
+tags: ['definitions']
+book: ['2.2']
+depends: []
+source: ['ph126 fastlecture 01']
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+//- handout
+.handout Principle: If b=c then whatever is true of b is also true of c.
+.handout Principle: a=a is never false
+img.handout(src='img/arg_identity.png')

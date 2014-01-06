@@ -1,0 +1,4 @@
+.DS_Store
+.docpad.db
+# /out
+/node_modules

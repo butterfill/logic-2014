@@ -1,0 +1,36 @@
+---cson
+layout: 'deck_units'
+images: 'unit_14'
+title: "Logical Validity and Truth Tables"
+description: "Illustrates the use of truth tables to determine logical validity."
+tags: ['truth-tables']
+depends: []
+source: ['ph126 fastlecture 01']
+sequence: 150
+book: ['4.3']
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slide_middle
+  p.center We can use truth tables to establish that 
+    br
+    | some arguments are logically valid
+
++slides_from_img_folder(document.basename)
+
+//- handout
+.handout \begin{minipage}{\columnwidth}
+.handout Truth tables can be used to show that an argument is valid.  To illustrate ...
+img.handout(src='img/unit_14_example.png')
+.handout \end{minipage}
+
+.handout \begin{minipage}{\columnwidth}
+.handout To establish that an argument is valid:
+.handout \begin{enumerate}
+.handout \item Create truth tables for each premise and the conclusion.
+.handout \item Check whether there is a row of the truth table where all premises are true and the conclusion is false.
+.handout \item If not, the argument is valid.
+.handout \end{enumerate}
+.handout \end{minipage}

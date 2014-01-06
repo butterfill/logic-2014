@@ -1,0 +1,18 @@
+---cson
+layout: 'deck_unit'
+images: 'unit_012'
+title: "Sentence Letters"
+description: "Explains what sentence letters are and why we use them."
+tags: ['definitions']
+depends: []
+source: ['ph126 fastlecture 01']
+sequence: 100
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+//- handout
+img.handout(src='img/sentence_letters.png')

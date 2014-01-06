@@ -1,0 +1,48 @@
+---
+layout: 'default2'
+title: 'Fast Lecture 01'
+lecture_date: '2014/1/7'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('bali')
+
+
++title_slide({document:document, images:images})
+
+//- section: unit_029, unit_03
++insert_unit({unit:'029', title_slide:false, images:images})
++insert_unit({unit:'03', title_slide:false, images:images})
+
+//- unit: sentence letters
++insert_unit({unit:'012', title_slide:true, images:images})
+
+//- unit: counterexamples
++insert_unit({unit:'04', title_slide:true, images:images})
+
+//- unit: identity
++insert_unit({unit:'06', title_slide:true, images:images})
+
+//- unit: truth tables
++insert_unit({unit:'071', title_slide:true, images:images})
+
+//- unit: complex truth tables example
++insert_unit({unit:'09', title_slide:true, images:images})
+
+
+//- unit: using truth-tables for validity
++insert_unit({unit:'14', title_slide:true, images:images})
+
+
+//- unit: tautologies and contradictions, logical validity is not what you think it is.
+//- omit title, treat as part of previous unit
+section.slide#unit_160
+  .words
+    .middle
+      p.center Two more examples
++insert_unit({unit:'160', title_slide:false, images:images})
+//- the Bush examples
++insert_unit({unit:'162', title_slide:false, images:images, handout:false})

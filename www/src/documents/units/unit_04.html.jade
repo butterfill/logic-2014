@@ -1,0 +1,22 @@
+---cson
+layout: 'deck_unit'
+images: 'unit_04'
+title: "Counterexamples"
+description: "Explains the notion of a counterexample."
+tags: ['definitions']
+depends: ['unit_03']
+source: ['ph126 lecture 01']
+sequence: 70
+book: ['2.5']
+exercises_fast: ['2.8, 2.10, 2.12, 2.21']
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+.handout A \emph{counterexample} to an argument is a possible situation in which its premises are T and its conclusion F.
+.handout There are no counterexamples to a logically valid argument.  
+.handout If an argument is not valid, then there is a counterexample to it. 
+.handout To show that an argument is not logically valid, we specify a counterexample to it.

@@ -1,0 +1,88 @@
+---
+layout: 'frontpage'
+title: 'Logic I: PH126'
+---
+
+//- for the get_unit function
+include ../../fragments/lecture_mixins
+
+html 
+  body
+
+    .hero-unit.fade-in
+      h1 Logic I
+      h2 Introduction to Symbolic Logic
+      p --- by s.
+        a(href="http://butterfill.com") butterfill
+        span @warwick.ac.uk
+      p A course at the University of Warwick about logical validity, truth, quantification and natural deduction.
+
+
+    
+    .row
+      .span4
+        #before_taking(style="padding-right:1em;")
+          h2 Handouts & Slides
+          p There are three versions of these lectures:
+          ul
+            li: a(href="#slides_and_handouts_regular") regular (see below)
+            li: a(target="_blank", href="/index_fast.html") fast
+            li: a(target="_blank", href="/index_short.html") short (PH133 only)
+        
+      .span4(style='border-left: 1px dotted grey; border-right: 1px dotted grey;margin-right: -1px;margin-left: -1px;')
+        #extras(style="padding-right:1em;padding-left:1em")
+          h2 Extras
+          ul
+            li
+              a(target='_blank',href='/handouts/rules_of_thumb.pdf') Rules of Thumb handout [pdf]
+
+      .span4
+        #practical_info
+          h2 Practical Info
+          p For timings, past exam papers, permission to the take module as an unusual option and everything else, please see:
+          ul
+            li
+              a(target='_blank',href="http://www2.warwick.ac.uk/fac/soc/philosophy/undergraduate/modules/ph126/2013_14/") Logic I (PH126)
+            li
+              a(target='_blank',href="http://www2.warwick.ac.uk/fac/soc/philosophy/undergraduate/modules/ph133/2013_14-term3/") Introduction to Philosophy (PH133)
+
+    .row
+      //- main content: lecture outlines &c
+      .span9
+        #slides_and_handouts_regular
+          h2 Slides and Handouts for Regular Lectures
+          p You can find slides and handouts below, together with an outline of each lecture.
+          p Please note that these may be continuously revised.
+
+        //- now do a section for each lecture
+        each lecture in getCollection("normal_lectures").toJSON()
+          div(id='#{lecture.basename}')
+            .page-header
+              h2: a(href='#{lecture.url}',target='_blank') #{lecture.title}
+              if lecture.lecture_date
+                p Date given: #{moment(lecture.lecture_date).format('dddd Do MMMM YYYY')}
+              p 
+                a(href='#{lecture.url}',target='_blank') slides
+                |  , 
+                a(href='/handouts/#{lecture.basename}.handout.pdf',target='_blank') handout [pdf]
+
+            div(style="padding-left:2em;")
+              if lecture.units
+                - each unit_num in lecture.units
+                  - unit = get_unit(unit_num)
+                  h3
+                    a(href="#{unit.url}") #{unit.title}
+                    span(style="font-size:50%;color:grey;")  (#{unit_num})
+                  if unit.tags
+                    p(style="text-align:right;margin:0;padding:0;margin-top:-1.5em;") 
+                      each t in unit.tags
+                        span.label.label-info #{t}
+                        | 
+                  p #{unit.description}
+                  if unit.book && unit.book.length > 0 
+                    p Reading:  §#{unit.book.join(', §')}
+                  if unit.exercises && unit.exercises.length > 0 
+                    p Exercises (regular): #{unit.exercises.join(', ')}
+                  if unit.exercises_fast && unit.exercises_fast.length > 0
+                    p Exercises (fast): #{unit.exercises_fast.join(', ')}
+            

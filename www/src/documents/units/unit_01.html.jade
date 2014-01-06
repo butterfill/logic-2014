@@ -1,0 +1,47 @@
+---cson
+layout: 'deck_units'
+title: 'The Pigs of Logic'
+tags: ['definitions']
+description: "Explains the notion of a logically valid argument with an illustration involving two pigs.  Previews key ideas coming later."
+depends: []
+source: ['ph126 lecture 01']
+duration: 10
+book: ['1.1','1.2','2.1']
+exercises: []
+exercises_fast: []
+sequence: 10
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+//- handout
+.handout: :t(render="markdown")
+  \textbf{Argument 1:}
+  \begin{quote}
+  Either it went up the left fork or it went up the right fork.
+  
+  It didn’t go up the left fork.
+  
+  therefore:
+  
+  It went up the right fork.
+  \end{quote}
+  
+  \textbf{Argument 2:}
+  \begin{quote}
+  Either it went up the left fork or it went up the right fork.
+  
+  The left fork is unsuitable for pigs.
+  
+  therefore:
+  
+  It went up the right fork.
+  \end{quote}
+
+.handout \begin{minipage}{\columnwidth}
+.handout \textbf{FOL version of Argument 1:}
+img.handout(src='img/argument1_fol.png')
+.handout \end{minipage}

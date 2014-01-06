@@ -1,0 +1,70 @@
+---
+layout: 'default2'
+title: 'Lecture 01'
+lecture_date: '2014/1/7'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('bees')
+
+// *notes This is a course about the limits of the world.  But let me start with a concrete example.
++title_slide({document:document, images:images})
+
+
+//- section: unit_01 two pigs
+//- started translating to html
+//- include ../../fragments/unit_01_two_pigs
++insert_unit({unit:'01', title_slide:false, images:images})
+
++insert_unit({unit:'011', title_slide:true, images:images})
+  
+// *notes admin section
+section.slide
+  img.bkg(src='/img/bkg/bees/DSC_0157_crop.jpg')
+  .spacer &nbsp;
+  .title-block: .title-container
+      h2.title1 Admin
+  .words: .container_12: .grid_12
+    ul
+      li.slide Seminar groups (check email or see module web page)
+      li.slide Exercises
+      li.slide Fast-track lectures 
+        span#and_seminars.hide and seminars
+        div.slide.anim-removeclass(data-what="#and_seminars",data-class="hide")
+      li.slide Support
+// more about support --- the exams, bad email
+//- cut exams
+  section.slide
+    img.bkg(src='/img/lecture_01/slide-025.jpeg')
+  section.slide
+    img.bkg(src='/img/lecture_01/slide-026.jpeg')
+  section.slide
+    img.bkg(src='/img/lecture_01/slide-027.jpeg')
+// *notes bad email the night before resit exam
+section.slide
+  img.bkg(src='/img/lecture_01/slide-031.jpeg')
+// *notes staircase, need to progress stepwise but we will go into the light
+section.slide
+  img.bkg(src='/img/lecture_01/P4258786 merge2.jpg')
+
+
+//- unit: quick intro to Logiya
++insert_unit({unit:'02', title_slide:true, images:images})
+
+//- unit: logically valid arguments
++insert_unit({unit:'03', title_slide:true, images:images})
+
+// *notes didn't do this in 2012-3 but should have, I think
++insert_unit({unit:'06', title_slide:true, images:images})
+
+// *notes didn't do this in 2012-3 but leave it in in case you do have time!
+//- counterexamples & sound argument
++insert_unit({unit:'04', title_slide:true, images:images})
+//- omit title for sound argument, treat it as part of counterexamples
++insert_unit({unit:'041', title_slide:false, images:images})
+   
+
+

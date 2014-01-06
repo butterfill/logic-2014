@@ -1,0 +1,27 @@
+---cson
+layout: 'deck_units'
+images: 'unit_160'
+title: "Tautologies and Contradictions"
+description: "Illustrates and defines the terms 'tautology' and 'contradiction'.  Explains how they interact with the notion of logical validity using two arguments to illustrate.  Continues the use of truth-tables to demonstrate logical validity. Notes that logical validity is not what you think it is."
+tags: ['truth-tables'] 
+depends: ['unit_071','unit_09']
+source: ['ph126 fastlecture 01']
+sequence: 250
+book: ['4.1', '4.2']
+exercises_fast: ['4.1, 4.2', '4.12--4.16']
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+//- handout
+img.handout(src='img/unit_160_argument3.png')
+img.handout(src='img/unit_160_argument3b.png')
+img.handout(src='img/unit_160_argument4.png')
+.handout P $\lor{}$ ¬P is a \emph{logical truth}
+.handout logical truth defined p. 568
+.handout P $\lor{}$ ¬P is a \emph{contradiction}
+.handout contradiction defined p. 564
+ 

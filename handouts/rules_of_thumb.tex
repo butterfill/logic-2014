@@ -1,0 +1,173 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{extarticle}
+% extarticle is like article but can handle 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, and 20pt text
+
+\def \ititle {Joint Action \& the Emergence of Mindreading}
+\def \isubtitle {Lecture 2: Minimal Theory of Mind}
+\def \iauthor {Stephen A. Butterfill and Ian Apperly}
+\def \iemail{s.butterfill@warwick.ac.uk}
+\date{}
+
+\def \paperorient{landscape} %landscape
+\def \papersize{a4paper}
+
+\input{$HOME/Documents/submissions/preamble_steve_handout2}
+
+\usepackage{fitch}
+
+%itemize bullet should be dash
+\renewcommand{\labelitemi}{$-$}
+
+\begin{document}
+
+\begin{multicols}{3}
+
+\setlength\footnotesep{1em}
+
+\bibpunct{}{}{,}{s}{}{,}  %use superscript TICS style bib
+
+\bibliographystyle{newapa} %apalike
+
+%\maketitle
+%\tableofcontents
+
+
+
+
+
+
+\begin{center}
+{\Large
+Rules of Thumb for Logic 1}
+
+
+s.butterfill@warwick.ac.uk
+\end{center}
+
+
+There are exceptions to these rules of thumb.
+But they are often useful.
+
+\section{Proofs}
+
+\subsection{Starting}
+First ask, ‘Which $Elim$ rule can apply to this premise?’ for each premise.
+Apply any $Elim$ rules you can first (except $\forall Elim$---see below).
+
+Then ask, ‘Which $Intro$ rule would get me to this conclusion?’
+
+If you still can’t get to the conclusion, try using $\lnot Intro$.
+(You can do use $\lnot Intro$ even if the conclusion isn’t a negated sentence.
+For example, if the conclusion is $A \lor B$, create a subproof with $\lnot(A \lor B)$ as premise, derive a contradiction, use $\lnot Intro$ to get $\lnot \lnot(A \lor B)$ then use $\lnot Elim$.)
+
+
+\subsection{$\forall Elim$}
+Use $\forall Elim$ as late as possible in your proof.
+
+Only apply $\forall Elim$ using names that already occur in your proof.
+
+\subsection{$\bot$}
+Don’t use $\bot Elim$: you need $\lnot Intro$.
+
+When using $\lor Elim$, if you are struggling to get two subproofs with matching conclusions try using $\bot Elim$ or $\lor Intro$.
+
+
+\subsection{What to do with $\lnot$}
+Having sentences that start with negation ($\lnot$) as premises is awkward.
+Learning some standard proofs will help you.
+
+
+\
+
+
+If you have $\lnot (A \to B)$, you can get $A$ like this:
+\begin{equation*}
+    \begin{fitch}                 
+        \fh \lnot (A \to B)            \\
+        \fa \fh  \lnot A                    \\
+        \fa \fa \fh A                \\
+        \fa \fa \fa \bot            & $\bot Intro$: 2,3        \\
+        \fa \fa \fa B                & $\bot Elim$: 4                        \\
+        \fa \fa A \to B            & $\to Intro$: 3--5            \\
+        \fa \fa \bot                & $\bot Intro$: 1, 7                    \\
+        \fa \lnot \lnot A                & $\lnot Intro$: 2--7            \\
+        \fa  A                            & $\lnot Elim$: 8        \\
+    \end{fitch}
+\end{equation*}
+
+
+
+\
+
+
+
+If you have $\lnot (A \to B)$, you can get $\lnot B$ like this:
+\begin{equation*}
+    \begin{fitch}                 
+        \fh \lnot (A \to B)            \\
+        \fa \fh  B                    \\
+        \fa \fa \fh A                \\
+        \fa \fa \fa B                & $Reit$: 2                        \\
+        \fa \fa A \to B            & $\to Intro$: 3--4            \\
+        \fa \fa \bot                & $\bot Intro$: 1, 7                    \\
+        \fa \lnot B                & $\lnot Intro$: 2--6            \\
+    \end{fitch}
+\end{equation*}
+
+
+If you have $\lnot (A \lor B )$, you can get $\lnot A$ like this:
+\begin{equation*}
+    \begin{fitch}                 
+        \fh \lnot (A \lor B )            \\
+        \fa \fh  A                    \\
+        \fa \fa  (A \lor B )        & $\lor Intro$: 2                    \\
+        \fa \fa \bot                & $\bot Intro$: 1, 3                    \\
+        \fa \lnot A                & $\lnot Intro$: 2--4                \\
+    \end{fitch}
+\end{equation*}
+
+%If you have $\lnot (A \lor B )$, you can also get $\lnot B$ using a proof just like the one above.
+
+
+
+
+You can use $\lnot \exists x Blue(x)$ almost as if it were  $\forall x \lnot Blue(x)$:  you can get $\lnot Blue(b)$ like this:
+\begin{equation*}
+    \begin{fitch}                 
+        \fh \lnot \exists x Blue(x)            \\
+        \fa \fh  Blue(b)                    \\
+        \fa \fa \exists x Blue(x)  & $\exists Intro$: 2                \\
+        \fa \fa \bot                & $\bot Intro$: 1, 3                        \\
+        \fa \lnot Blue(b)                & $\lnot Intro$: 2--4            \\
+    \end{fitch}
+\end{equation*}
+
+
+
+
+
+\section{Translation}
+
+Use $\forall$ with $\to$, e.g.\ 
+\begin{quote}
+    $\forall x (Square(x) \to Broken(x))$ 
+\end{quote}
+means all squares are broken.
+
+Use $\exists$ with $\land$, e.g.\
+\begin{quote}
+    $\exists x (Square(x) \land Broken(x))$ 
+\end{quote}
+means some square is broken.
+
+English sentences with mixed quantifiers are ambiguous (e.g.\ ‘There is a store for everything.’).
+
+
+\footnotesize 
+\bibliography{$HOME/endnote/phd_biblio}
+
+\end{multicols}
+
+\end{document}
