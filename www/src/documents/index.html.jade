@@ -66,23 +66,21 @@ html
                 |  , 
                 a(href='/handouts/#{lecture.basename}.handout.pdf',target='_blank') handout [pdf]
 
-            div(style="padding-left:2em;")
-              if lecture.units
-                - each unit_num in lecture.units
-                  - unit = get_unit(unit_num)
-                  h3
-                    a(href="#{unit.url}") #{unit.title}
-                    span(style="font-size:50%;color:grey;")  (#{unit_num})
-                  if unit.tags
-                    p(style="text-align:right;margin:0;padding:0;margin-top:-1.5em;") 
-                      each t in unit.tags
-                        span.label.label-info #{t}
-                        | 
-                  p #{unit.description}
-                  if unit.book && unit.book.length > 0 
-                    p Reading:  §#{unit.book.join(', §')}
-                  if unit.exercises && unit.exercises.length > 0 
-                    p Exercises (regular): #{unit.exercises.join(', ')}
-                  if unit.exercises_fast && unit.exercises_fast.length > 0
-                    p Exercises (fast): #{unit.exercises_fast.join(', ')}
+              div(style="padding-left:2em;")
+                if lecture.units
+                  - each unit_num in lecture.units
+                    - unit = get_unit(unit_num)
+                    h3
+                      a(href="#{unit.url}") #{unit.title}
+                      span(style="font-size:50%;color:grey;")  (#{unit_num})
+                    if unit.tags
+                      p(style="text-align:right;margin:0;padding:0;margin-top:-1.5em;") 
+                        each t in unit.tags
+                          span.label.label-info #{t}
+                          | 
+                    p #{unit.description}
+                    if unit.book && unit.book.length > 0 
+                      p Reading:  §#{unit.book.join(', §')}
+                    if unit.exercises && unit.exercises.length > 0 
+                      p Exercises (regular): #{unit.exercises.join(', ')}
             

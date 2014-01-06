@@ -126,12 +126,17 @@ mixin handout(p)
 
 mixin insert_unit(p)
   - d = get_unit(p.unit)
-  if p.title_slide
-    +section({unit:d, images:p.images})
-  if p.handout !== false
-    +handout({unit:d})
-  .notes.notes-header-tex &nbsp;
-  .notes.notes-header-tex \section{#{d.title}}
-  +render_unit(d)
+  if !d
+    -console.log('*** missing unit: '+p.unit)
+    section.slide
+      p *** missing unit '#{p.unit}'
+  else
+    if p.title_slide
+      +section({unit:d, images:p.images})
+    if p.handout !== false
+      +handout({unit:d})
+    .notes.notes-header-tex &nbsp;
+    .notes.notes-header-tex \section{#{d.title}}
+    +render_unit(d)
 
 

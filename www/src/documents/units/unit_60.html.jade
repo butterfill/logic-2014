@@ -1,0 +1,18 @@
+---cson
+layout: 'deck_units'
+images: 'unit_60'
+title: "Complex Truth Tables"
+description: "Illustrates how to construct complex truth tables with an example, not(P and Q)."
+tags: ['truth-tables'] 
+depends: ['unit_071']
+source: ['ph126 lecture 02']
+sequence: 170
+---
+
+include ../../../fragments/unit_mixins
+
+//- the slides
++slides_from_img_folder(document.basename)
+
+//- handout
+img.handout(src='img/unit_60_tt.png')

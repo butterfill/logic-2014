@@ -6,6 +6,8 @@ units: []
 ---
 
 include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+include ../../fragments/logic_mixins
 
 - var images = get_images('sweeden')
 
@@ -14,7 +16,7 @@ include ../../fragments/lecture_mixins
 
 
 //- learning objectives
-+insert_unit({unit:'013', title_slide:false, images:images})
++insert_unit({unit:'013', title_slide:false, images:images, handout:false})
 
 
 // -------------------
@@ -27,9 +29,9 @@ section#unit_041.slide
   .words
     p.middle.center sound argument
 .slide
-  mixin df_sound_argument()
+  +df_sound_argument
   .slide
-    mixin df_valid()
+    +df_valid
   .slide
     .words
       div.middle.center
@@ -62,9 +64,9 @@ section#unit_041.slide
 +insert_unit({unit:'041', title_slide:true, images:images})
 
 
-// -------------------
-// (could use to start if not starting this lecture with counterexapmles!)
-//
+//- -------------------
+//- (could use to start if not starting this lecture with counterexapmles!)
+//-
   //- recap: validity and counterexamples 
   +insert_unit({unit:'05', title_slide:false, images:images})
 
@@ -85,7 +87,7 @@ section#unit_041.slide
 //- unit: using truth-tables for validity
 //- preceeded by unit on formalizing the pigs
 - d = get_unit('14')
-  mixin section({unit:d, images:images})
+  +section({unit:d, images:images})
   .slide.anim-attribute(data-what="img.bkg",data-attr="opacity:0.3")
     .words
      p.middle.center We can use truth tables to establish that 
@@ -97,8 +99,3 @@ section#unit_041.slide
 
 //- unit: complex truth tables, not(P and Q) 
 +insert_unit({unit:'60', title_slide:true, images:images})
-
-//- didn't do this in 2012-3
-  //- unit: tautologies and contradictions, logical validity is not what you think it is.
-  //- *todo would ideally save this for lecture 03! (ideally comes after unit_09!)
-- +insert_unit({unit:'016', title_slide:true, images:images})
