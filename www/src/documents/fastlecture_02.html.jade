@@ -1,0 +1,54 @@
+---
+layout: 'default2'
+title: 'Fast Lecture 02'
+lecture_date: '2014/1/14'
+units: []
+---
+
+
+//- **************************************************************************************************
+//- * todo move the subproofs from lecture 03 to here or update exercises (see feedback in lecture 03)
+//- **************************************************************************************************
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+
+- var images = get_images('sunset')
+
+
++title_slide({document:document, images:images})
+
+//- section: unit_211, unit_21 = formal proof 1
++insert_unit({unit:'211', title_slide:false, images:images})
++insert_unit({unit:'21', title_slide:false, images:images})
+
+//- unit: proof - compare conjunction intro with disjunction intro
++insert_unit({unit:'212', title_slide:true, images:images})
+
+section#exercises_warning.slide
+  p.middle.center Fast track and normal seminars have 
+    span.diff different exercises.
+  .slide.anim-addclass(data-what=".diff", data-class="bkg-words-highlight-red")
+
+//- unit: rules for identity
++insert_unit({unit:'110', title_slide:true, images:images})
+
+//- unit: truth-functional connectives
++insert_unit({unit:'072', title_slide:true, images:images})
+
+//- unit: formal proof (identity again)
++insert_unit({unit:'111', title_slide:true, images:images})
+
+
+//- unit: A and B or C
++insert_unit({unit:'151', title_slide:true, images:images})
++insert_unit({unit:'152', title_slide:false, images:images})
++insert_unit({unit:'154', title_slide:false, images:images})
+
+//- unit: Ambiguity (elephant pyjamas)
++insert_unit({unit:'170', title_slide:true, images:images})
+
+//- didn't need in 2012-3  
+//- unit: Syntax for Logiya (hopefully won't have time: belongs in lecture 03)
++insert_unit({unit:'230', title_slide:true, images:images})
