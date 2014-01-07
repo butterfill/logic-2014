@@ -31,7 +31,12 @@ html
         
       .span4(style='border-left: 1px dotted grey; border-right: 1px dotted grey;margin-right: -1px;margin-left: -1px;')
         #extras(style="padding-right:1em;padding-left:1em")
-          h2 Extras
+          h2 Exercises & Extras
+          p Exercises are set on the handouts for each lecture (links below).  There is also a summary list of exercises set:
+          ul
+            li 
+              a(href='/index_exercises.html') exercises set
+          p Other:
           ul
             li
               a(target='_blank',href='/handouts/rules_of_thumb.pdf') Rules of Thumb handout [pdf]
@@ -73,8 +78,8 @@ html
                     h3
                       a(href="#{unit.url}") #{unit.title}
                       span(style="font-size:50%;color:grey;")  (#{unit_num})
-                    if unit.tags
-                      p(style="text-align:right;margin:0;padding:0;margin-top:-1.5em;") 
+                    if unit.tags && unit.tags.length && unit.tags.length > 0
+                      p(style="text-align:right;margin:0;padding:0;margin-top:-2.5em;") 
                         each t in unit.tags
                           span.label.label-info #{t}
                           | 

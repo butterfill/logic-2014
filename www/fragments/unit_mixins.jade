@@ -146,11 +146,12 @@ mixin connect(p)
   .slide.anim-connect(data-from='#{p.from}', data-to='#{p.to}', data-from-anchor="#{p.fromAnchor||'LeftMiddle'}",data-to-anchor='#{p.toAnchor || "RightMiddle"}',data-color="#{p.color || 'hotpink'}")
 
 //- todo : temporary measure!
-mixin blur2_(what)
+mixin blur2_(what, amount)
   if typeof(what)==='string'
     - what = [what]
+  amount = amount || '2px'
   each thing in what
-    .slide.anim-continue.anim-attribute(data-what="#{thing}",data-attr="-webkit-filter:blur(2px)")
+    .slide.anim-continue.anim-attribute(data-what="#{thing}",data-attr="-webkit-filter:blur(#{amount})")
 mixin blur2(what)
   +blur2_(what)
   +anim_end()

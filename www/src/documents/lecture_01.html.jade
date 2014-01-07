@@ -12,7 +12,7 @@ include ../../fragments/unit_mixins
 
 // *notes This is a course about the limits of the world.  But let me start with a concrete example.
 +title_slide({document:document, images:images})
-
+  .notes This is a course about the limits of the world.  But let me start with a simple example.
 
 //- section: unit_01 two pigs
 //- started translating to html
@@ -22,19 +22,16 @@ include ../../fragments/unit_mixins
 +insert_unit({unit:'011', title_slide:true, images:images})
   
 // *notes admin section
-section.slide
-  img.bkg(src='/img/bkg/bees/DSC_0157_crop.jpg')
-  .spacer &nbsp;
-  .title-block: .title-container
-      h2.title1 Admin
++section({title:'Admin', images:images})
   .words: .container_12: .grid_12
+    +blur2_('img:eq(0)', '6px')
     ul
-      li.slide Seminar groups (check email or see module web page)
+      li.slide Seminar groups 
       li.slide Exercises
+      li.slide Textbook
       li.slide Fast-track lectures 
-        span#and_seminars.hide and seminars
-        div.slide.anim-removeclass(data-what="#and_seminars",data-class="hide")
-      li.slide Support
+      li.slide Web: http://logic-1.butterfill.com
+
 // more about support --- the exams, bad email
 //- cut exams
   section.slide
@@ -44,8 +41,15 @@ section.slide
   section.slide
     img.bkg(src='/img/lecture_01/slide-027.jpeg')
 // *notes bad email the night before resit exam
-section.slide
-  img.bkg(src='/img/lecture_01/slide-031.jpeg')
++slide
+  p to: s.a.butterfill@warwick.ac.uk
+  p sent: 03:55 29/08/2008
+  p subject: [none]
+  p &nbsp;
+  p Dear Stephen,
+  p I am retaking starting logic on tuesday, and I wonder if you could explain to me the difference between contingent, tatologous and inconsistent in terms of truth table results, as I cannot find this information anywhere else?
+  p Many Thanks,
+  p ---
 // *notes staircase, need to progress stepwise but we will go into the light
 section.slide
   img.bkg(src='/img/lecture_01/P4258786 merge2.jpg')
@@ -57,14 +61,13 @@ section.slide
 //- unit: logically valid arguments
 +insert_unit({unit:'03', title_slide:true, images:images})
 
-// *notes didn't do this in 2012-3 but should have, I think
-+insert_unit({unit:'06', title_slide:true, images:images})
-
 // *notes didn't do this in 2012-3 but leave it in in case you do have time!
 //- counterexamples & sound argument
 +insert_unit({unit:'04', title_slide:true, images:images})
-//- omit title for sound argument, treat it as part of counterexamples
-+insert_unit({unit:'041', title_slide:false, images:images})
-   
+//- ended here in 2013-4 but could plan to include this
+  //- omit title for sound argument, treat it as part of counterexamples
+  +insert_unit({unit:'041', title_slide:false, images:images}) 
 
-
+  // unit: identity
+  // *notes didn't do this in 2012-3 but should have, I think
+  +insert_unit({unit:'06', title_slide:true, images:images})

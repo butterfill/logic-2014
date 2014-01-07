@@ -63,14 +63,17 @@ html(lang="en")
     // Styles
     != styles.toHTML()
 
-  body(style="padding-top: 15px;")
+  body
 
     .container
-      h1 #{document.title}
+      .hero-unit
+        h1
+          a(href='/', style='color:white;') Logic I
+      
+      h1 #{document.title}: Slides and Handouts
 
       .row
         .span9
-          h2 Slides and Handouts
           p You can find slides and handouts below, together with an outline of each lecture.
           p Please note that these may be continuously revised.
 
@@ -93,8 +96,8 @@ html(lang="en")
                     h3
                       a(href="#{unit.url}") #{unit.title}
                       span(style="font-size:50%;color:grey;")  (#{unit_num})
-                    if unit.tags
-                      p(style="text-align:right;margin:0;padding:0;margin-top:-1.5em;") 
+                    if unit.tags && unit.tags.length && unit.tags.length > 0
+                      p(style="text-align:right;margin:0;padding:0;margin-top:-2.5em;") 
                         each t in unit.tags
                           span.label.label-info #{t}
                           | 

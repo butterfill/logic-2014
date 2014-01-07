@@ -12,10 +12,58 @@ exercises: ['2.5, 2.6']
 
 include ../../../fragments/unit_mixins
 
-//- the slides
-+slides_from_img_folder(document.basename)
++slide({bkg:'unit_06/slide-038.jpeg'})
+  .notes Here’s an argument involving identity.  Let’s see if it’s valid.
+  //- handout
+  .handout Principle: If b=c then whatever is true of b is also true of c.
+  .handout Principle: a=a is never false
+  img.handout(src='img/arg_identity.png')
 
-//- handout
-.handout Principle: If b=c then whatever is true of b is also true of c.
-.handout Principle: a=a is never false
-img.handout(src='img/arg_identity.png')
++slide({bkg:'unit_06/slide-039.jpeg'})
+  .notes Suppose we want to find a  counterexample.  So we need to make make the premises true.  Let’s see if we can make them true without making the conclusion true.
+
++slide({bkg:'unit_06/slide-040.jpeg'})
+  .notes Start with an empty world.  
+  
++slide({bkg:'unit_06/slide-041.jpeg'})
+  .notes Consider the first premise
+
++slide({bkg:'unit_06/slide-042.jpeg'})
+  .notes We want the first premise to be true so we have to put a to the left of b.
+
++slide({bkg:'unit_06/slide-043.jpeg'})
+  .notes What about the second premise?  So far the truth-value of the second and third premises are undefined because the name ‘c’ does not yet designate any object in this situation.
+
++slide({bkg:'unit_06/slide-044.jpeg'})
+  .notes Want the second premise to be true so we have to label the b object c as well.
+
++slide({bkg:'unit_06/slide-045.jpeg'})
+  .notes This is what b=c requires--that one and the same object have both labels.
+
++slide({bkg:'unit_06/slide-046.jpeg'})
+  .notes Now, what about the conclusion?
+  
++slide({bkg:'unit_06/slide-047.jpeg'})
+  .notes Having made the premises true, the conclusion turns out to be true as well.  
+  .notes This is sort of an informal proof that the argument is valid.  If you think about what is involved in making the premises true, you can see that it guarantees the truth of the conclusion as well.
+ 
++slide({bkg:'unit_06/slide-048.jpeg'})
+  .notes As far as the logic of identity goes, all you need to know are two principles.
+  .notes This first principle.
+
++slide({bkg:'unit_06/slide-049.jpeg'})
+  .notes You can see that this principle must be true from the meaning of identity:  b=c requires that one and the same object have both labels.
+
++slide({bkg:'unit_06/slide-050.jpeg'})
+  .notes And this first principle is  exactly what you need to prove the argument we were just looking at.
+
++slide({bkg:'unit_06/slide-051.jpeg'})
+  .notes The second principle says, roughly, that everything is identical to itself.
+
++slide({bkg:'unit_06/slide-052.jpeg'})
+  .notes You can see that this principle must be true from the meaning of identity:  a=a requires only that one and the object named 'a' be named 'a', which you can't really avoid.  (In case you're thinking there's a tricky issue about what happens if nothing is named 'a', well done.  In our system of logic, we rule that possibility out by stipulation to keep things simple.)
+
++slide({bkg:'unit_06/slide-053.jpeg'})
+  .notes These principles are all you need to understand the logical notion of identity.  They allow you to do things like prove that identity is a symmetric and transitive relation.
+
+  

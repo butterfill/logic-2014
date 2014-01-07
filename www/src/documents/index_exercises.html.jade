@@ -1,0 +1,60 @@
+---
+layout: 'frontpage'
+title: 'Logic I: PH126'
+---
+
+//- for the get_unit function
+include ../../fragments/lecture_mixins
+
+html 
+  body
+
+    .hero-unit
+      h1
+        a(href='/', style='color:white;') Logic I
+
+    .row
+      //- main content: lecture outlines &c
+      .span9
+        #slides_and_handouts_regular
+          h2 Exercises
+          p You can find exercises set in each lecture below.
+          p Note that there are different exercises for 
+            a(href='#regular') regular
+            span  and  
+            a(href='#fast') fast
+            span  groups. 
+          p Please note that these may be continuously revised.
+          p Sometimes one exercise appears more than once; this doesn't mean you need to do it again, just that the lecture material is relevant to the exercise.
+
+        h2#regular Regular Exercises
+        each lecture in getCollection("normal_lectures").toJSON()
+          div(id='#{lecture.basename}')
+            h3: a(href='#{lecture.url}',target='_blank') #{lecture.title}
+            if lecture.lecture_date
+              p Date given: #{moment(lecture.lecture_date).format('dddd Do MMMM YYYY')}
+          if lecture.units
+            div(style="padding-left:2em;")
+              - each unit_num in lecture.units
+                - unit = get_unit(unit_num)
+                if unit.exercises && unit.exercises.length > 0 
+                  p  #{unit.exercises.join(', ')} 
+                    span(style="color:grey;")   --- #{unit.title} 
+                    span(style="font-size:50%;") (#{unit_num}, regular)
+        
+        h2#fast Fast Exercises
+        each lecture in getCollection("fast_lectures").toJSON()
+          div(id='#{lecture.basename}')
+            h3: a(href='#{lecture.url}',target='_blank') #{lecture.title}
+            if lecture.lecture_date
+              p Date given: #{moment(lecture.lecture_date).format('dddd Do MMMM YYYY')}
+          if lecture.units
+            div(style="padding-left:2em;")
+              - each unit_num in lecture.units
+                - unit = get_unit(unit_num)
+                if unit.exercises_fast && unit.exercises_fast.length > 0 
+                  p #{unit.exercises_fast.join(', ')} 
+                    span(style="color:grey;")   --- #{unit.title} 
+                    span(style="font-size:50%;") (#{unit_num}, regular)
+                    
+        

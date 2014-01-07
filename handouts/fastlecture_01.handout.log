@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.11.28)  6 JAN 2014 20:42
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.11.28)  7 JAN 2014 10:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1071,10 +1071,10 @@ File: img/name_predicate_sentence.png Graphic file (type QTm)
 
 <use  "img/name_predicate_sentence.png" >
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 88.
+(Font)              <6> on input line 87.
 File: img/terminology_more.png Graphic file (type QTm)
  <use  "img/terminology_more.png" >
-Overfull \hbox (64.7584pt too wide) in paragraph at lines 99--100
+Overfull \hbox (64.7584pt too wide) in paragraph at lines 98--99
  [] 
  []
 
@@ -1090,7 +1090,7 @@ File: img/truth_table_not.png Graphic file (type QTm)
 File: img/how_to_write_truth_tables.png Graphic file (type QTm)
 
 <use  "img/how_to_write_truth_tables.png" >
-Overfull \hbox (22.9017pt too wide) in paragraph at lines 162--163
+Overfull \hbox (22.9017pt too wide) in paragraph at lines 161--162
  [] 
  []
 
@@ -1099,22 +1099,26 @@ Overfull \hbox (22.9017pt too wide) in paragraph at lines 162--163
 ]
 File: img/tt_p_and_q_or_r.png Graphic file (type QTm)
  <use  "img/tt_p_and_q_or_r.png" >
-File: img/unit_14_example.png Graphic file (type QTm)
- <use  "img/unit_14_example.png" >
-No file fastlecture_01.handout.bbl.
+File: img/unit_160_argument3.png Graphic file (type QTm)
+ <use  "img/unit_160_argument3.png" >
+File: img/unit_160_argument3b.png Graphic file (type QTm)
+
+<use  "img/unit_160_argument3b.png" >
+File: img/unit_160_argument4.png Graphic file (type QTm)
+ <use  "img/unit_160_argument4.png" >
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 248.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
  (./fastlecture_01.handout.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 248.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 248.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 247.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 247.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
  ) 
 Here is how much of TeX's memory you used:
- 23732 strings out of 493938
- 453136 string characters out of 6148856
+ 23735 strings out of 493938
+ 453236 string characters out of 6148856
  477565 words of memory out of 5000000
- 26759 multiletter control sequences out of 15000+600000
+ 26761 multiletter control sequences out of 15000+600000
  7724 words of font info for 54 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  48i,7n,80p,671b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
