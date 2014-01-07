@@ -1,0 +1,41 @@
+---cson
+layout: 'deck_units'
+title: 'Formal Proof'
+tags: ['proof']
+description: "Marks the transition from truth-tables, in which the notion of truth plays a central role, to fitch proofs which are purely formal entities."
+depends: []
+duration: 2
+sequence: 180
+book: []
+---
+
+include ../../../fragments/slide_mixins
+
+
+section#formal_proof.slide
+  #valid_df_831
+    mixin df_valid({reveal:true})
+  .slide
+    .words: .container_12: .grid_8
+      p Two ways to show that an argument is logically valid:
+      ul
+        li truth tables
+        li 
+          span#highlight-hook831 &#8203;
+          | fitch proof 
+          span#highlight-832 (formal)
+    //- must be sub slides to prevent fade effect
+    .slide.anim-addclass(data-what="#highlight-hook831", data-class="bkg-grey-row")
+    .slide.anim-addclass(data-what="#highlight-832", data-class="bkg-words-highlight-red")
+  .slide
+    .clear
+    .bottom-third-white.invert
+      .container_12.half-above.compress
+        .grid_4.prefix_2
+          ∧Elim
+          mixin fitch_proof({premises:[], lines:[['P1 ∧ P2'],['...'],['Pi']], no_line_numbers:true})
+        //-
+          .slide.grid_4.prefix_2
+            ∧Intro
+            mixin fitch_proof({premises:[], lines:[['P1'],['P2'],['...'],['P1 ∧ P2']], no_line_numbers:true})  
+    

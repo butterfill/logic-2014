@@ -18,6 +18,7 @@ def get_img_lines(the_path):
     +slide({bkg:'unit_06/slide-038.jpeg'})
     .notes 
   """
+  folder_name = the_path.split('/')[-1]
   file_names = os.popen('ls "%s"' % the_path).read().strip().split()
   file_names = [fn for fn in file_names if re.search('.jpeg$', fn) is not None ] 
   template = "+slide({bkg:'"+folder_name+"/%s'})\n  .notes \n\n"
@@ -25,28 +26,39 @@ def get_img_lines(the_path):
   return ''.join(lines)
 
 def do_move(param):
-  #first, create the new unit.html.jade file
+  #--- first, create the new unit.html.jade file
   filename = 'unit_'+param+'.html.jade'
   img_folder_name = 'unit_'+param
   img_folder_path_src = IMG_DIR_SRC+img_folder_name
   source_filename = DOC_DIR_SRC + filename
+  target_filename = DOC_DIR_DEST + filename
+  if os.path.exists(target_filename):
+    print "ABOUT: target unit.html.jade file exists!"
+    sys.exit(0) 
   source_txt = open(source_filename).read()
-  #update the layout
-  dest_txt = source_txt.replace("layout: 'deck_slides_img'","layout: 'deck_units'")
-  #add the unit_mixins
-  dest_txt += "\n\ninclude ../../../fragments/unit_mixins\n\n"
-  #add the slide lists
-  img_lines = get_img_lines(img_folder_path_src)
-  dest_txt += img_lines
-  #write the file
-  dest_filename = DOC_DIR_DEST + filename
-  dest_file = open(dest_filename, 'w')
-  dest_file.write(dest_txt)
-  dest_file.close()
-  #finally, copy the directory of images
-  cmd_str = 'cp "%s" "%s"' % (img_folder_path_src, IMG_DIR_DEST)
-  os.system(cmd_str)
-
+  #check this is an image unit
+  if os.path.isdir(img_folder_path_src) and source_txt.find("layout: 'deck_slides_img'") != -1:
+    print "treating as an image unit ..."
+    #update the layout
+    dest_txt = source_txt.replace("layout: 'deck_slides_img'","layout: 'deck_units'")
+    #add the unit_mixins
+    dest_txt += "\n\ninclude ../../../fragments/unit_mixins\n\n"
+    #add the slide lists
+    img_lines = get_img_lines(img_folder_path_src)
+    dest_txt += img_lines
+    #write the file
+    dest_filename = DOC_DIR_DEST + filename
+    dest_file = open(dest_filename, 'w')
+    dest_file.write(dest_txt)
+    dest_file.close()
+    #--- second, copy the directory of images
+    cmd_str = 'cp -r "%s" "%s"' % (img_folder_path_src, IMG_DIR_DEST)
+    #print "cmd_str: "+cmd_str
+    os.system(cmd_str)
+  else:
+    print "treating as non-image unit, will merely copy the unit file"
+    cmd_str = 'cp "%s" "%s"' % (source_filename,DOC_DIR_DEST)
+    os.system(cmd_str)
 
 # following is just main() wrapper
 #main() wrapper is by GvRget

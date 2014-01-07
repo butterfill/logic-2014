@@ -130,8 +130,72 @@ var inject = function(){
   <div class="handout">\end{center}</div>
   <div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div>
 </div>
-<section class="slide">
-  <p>*** missing unit '211'</p>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Formal Proof}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Formal Proof}</div>
+<!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
+<!-- create title slide for a lecture-->
+<!-- param p contains document and images (an array of images to use)-->
+<!-- param p contains p.unit and p.images (an array of images)-->
+<!-- see also +clip to modify the clip as an animation-->
+<!-- ------------>
+<!-- draw things-->
+<!-- ------------>
+<section id="formal_proof" class="slide">
+  <div id="valid_df_831">
+    <div style="width:230px;position:absolute;top:20px;left:500px;" class="white-box">
+      <p style="padding: 0 0.3em;">An argument is <strong>logically valid </strong>just if <span style="opacity: 0" class="the_df">there’s <span class="no-possible-situation">no possible situation </span><span>in which </span><span class="premises-true">the premises are true </span><span>and </span><span class="conclusion-false">the conclusion false.</span></span></p>
+    </div>
+    <div data-what=".the_df" class="slide anim-show"></div>
+  </div>
+  <div class="slide">
+    <div class="words">
+      <div class="container_12">
+        <div class="grid_8">
+          <p>Two ways to show that an argument is logically valid:</p>
+          <ul>
+            <li>truth tables</li>
+            <li> <span id="highlight-hook831">&#8203;</span>fitch proof <span id="highlight-832">(formal)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div data-what="#highlight-hook831" data-class="bkg-grey-row" class="slide anim-addclass"></div>
+    <div data-what="#highlight-832" data-class="bkg-words-highlight-red" class="slide anim-addclass"></div>
+  </div>
+  <div class="slide">
+    <div class="clear"></div>
+    <div class="bottom-third-white invert">
+      <div class="container_12 half-above compress">
+        <div class="grid_4 prefix_2">∧Elim
+          <table class="fitch-proof">
+            <tr class="line row-1">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td></td>
+              <td><span class="sentence">P1 ∧ P2</span></td>
+              <td>
+              </td>
+            </tr>
+            <tr class="line row-2">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td></td>
+              <td><span class="sentence">...</span></td>
+              <td>
+              </td>
+            </tr>
+            <tr class="line row-3">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td></td>
+              <td><span class="sentence">Pi</span></td>
+              <td>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <div class="handout">&nbsp;</div>
 <div class="handout">\section{Formal Proof: ∧Elim and ∧Intro}</div>
