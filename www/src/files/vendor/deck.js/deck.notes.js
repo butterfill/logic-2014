@@ -649,13 +649,13 @@ only toggle the notes panel for this cloned window.
 
 
   /*
-      jQuery.deck('Init')
-  */
+   *  jQuery.deck('Init')
+   */
   $d.bind('deck.init', function() {
     var opts = $[deck]('getOptions');
     var container = $[deck]('getContainer');
       
-    /* Bind key events */
+    // Bind key events 
     $d.unbind('keydown.decknotes').bind('keydown.decknotes', function(e) {
       if (e.which === opts.keys.notes || $.inArray(e.which, opts.keys.notes) > -1) {
         if (e.shiftKey) {
@@ -671,7 +671,7 @@ only toggle the notes panel for this cloned window.
       }
     });
   
-		/* copy the notes into the special notes element */
+		// copy the notes into the special notes element 
 		var $notesContainer = $("."+$[deck]('getOptions').classes.notesContainer);
 		var $notes = $('.deck-container .notes');
 		var slide_id,
@@ -682,7 +682,7 @@ only toggle the notes panel for this cloned window.
 			// usual case -- note belongs to slide which is its parent
 			var $slide = $note.parents('.slide').first();
 
-			//but occasionally we want to assign note to a prior sibling (because of the way we use anim and mixins)
+			// but occasionally we want to assign note to a prior sibling (because of the way we use anim and mixins)
 			previous = $note.siblings().splice(0,$note.index());
 			$previous_slide = $(previous).filter('.slide').last();
 			if( $previous_slide.length > 0 ) {
@@ -714,18 +714,17 @@ only toggle the notes panel for this cloned window.
     })
 
 				
-		/* copy the handout elements into the special handout element */
+		// copy the handout elements into the special handout element 
 		var $handoutContainer = $("."+$[deck]('getOptions').classes.handoutContainer);
 
 		// the not('.handout .handout') clause ensures we don't add things twice when .handout is nested in .handout
 		// (such nesting can be useful for showing and hiding things)
-		// the not('img') clause is because we want to do images differently
 		var $handouts = $('.deck-container .handout').not('.handout .handout');
 		var img_path ='';  //set this to use img that appear in both slideshow and handouts (tricky!)
 		$handouts.each( function(idx, handout){
 			var $handout = $(handout);
 			//is it an image?
-			if( $handout.not('img').length > 0 ) {
+			if( $handout.not('img').length > 0 && $handout.not('.img').length > 0 ) {
 				//it's not an image
 				$handoutContainer.append('<div class="handout">'+$handout.html()+'</div>');
 				// add in a blank line (for latex paragraph) unless .ctd is present
@@ -736,7 +735,7 @@ only toggle the notes panel for this cloned window.
 				//it's an image
 				//var $caption = $handout.next('.caption');
 				//var caption_txt = $caption.length ? $caption.html() : '';
-				var file = $handout.attr('src');
+				var file = $handout.attr('src') || $handout.attr('data-src');
 				$.each(['\\begin{center}',
 						'\\includegraphics[scale=0.3]{'+img_path+file+'}',
 						// '\\caption{'+caption_txt+'}',

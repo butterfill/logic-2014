@@ -130,8 +130,6 @@ var inject = function(){
   <div class="handout">\end{center}</div>
   <div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div>
 </div>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{Formal Proof}</div>
 <div class="notes notes-header-tex">&nbsp;</div>
 <div class="notes notes-header-tex">\section{Formal Proof}</div>
 <!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
@@ -214,6 +212,9 @@ var inject = function(){
     <div class="container_12">
       <div class="grid_12">
         <div class="notes"> </div>
+        <div data-src="img/rule_conjunction_intro.png" class="img handout"></div>
+        <div data-src="img/rule_conjunction_elim.png" class="img handout"></div>
+        <div data-src="img/proof_unit_21.png" class="img handout"></div>
       </div>
     </div>
   </div>
@@ -425,6 +426,8 @@ var inject = function(){
     </div>
   </div>
 </section>
+<div class="exercises">6.1</div>
+<div class="exercises_fast">5.3--5.6</div>
 <section id="unit_212" class="slide"><img src="/img/bkg/sunset/PC175701.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
@@ -751,10 +754,6 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section id="exercises_warning" class="slide">
-  <p class="middle center">Fast track and normal seminars have <span class="diff">different exercises.</span></p>
-  <div data-what=".diff" data-class="bkg-words-highlight-red" class="slide anim-addclass"></div>
-</section>
 <section id="unit_110" class="slide"><img src="/img/bkg/sunset/PC175704.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
@@ -780,6 +779,8 @@ var inject = function(){
     <div class="container_12">
       <div class="grid_12">
         <div class="notes"> </div>
+        <div data-src="img/rule_identity_intro.png" class="img handout"></div>
+        <div data-src="img/rule_identity_elim.png" class="img handout"></div>
       </div>
     </div>
   </div>
@@ -982,7 +983,633 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section id="unit_072" class="slide"><img src="/img/bkg/sunset/PC175705.JPG" class="bkg"/>
+<section id="unit_235" class="slide"><img src="/img/bkg/sunset/PC175705.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B}</div>
+<div class="handout">\emph{Reading:}  §3.6</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B}</div>
+<!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
+<!-- create title slide for a lecture-->
+<!-- param p contains document and images (an array of images to use)-->
+<!-- param p contains p.unit and p.images (an array of images)-->
+<!-- see also +clip to modify the clip as an animation-->
+<!-- ------------>
+<!-- draw things-->
+<!-- ------------>
+<div class="slide">
+  <div class="words">
+    <div class="container_12">
+      <div id="YASDC">
+        <div class="grid_4">
+          <p>A <span class="log-equiv">⫤⊨</span><span> </span><span>¬¬A</span></p>
+        </div>
+        <div class="grid_8">
+          <p><span class="invert bkg-words-highlight-white step2 hide">is logically equivalent to</span></p>
+          <p style="margin-top:-0.5em;margin-left:2em;"><span class="invert bkg-words-highlight-white step3 hide">i.e. has the same truth table as</span></p>
+        </div>
+      </div>
+    </div>
+    <div data-what=".log-equiv" data-class="invert" class="slide anim-continue anim-addclass"></div>
+    <div data-what=" .log-equiv" data-class="bkg-words-highlight-white" class="slide anim-continue anim-addclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+    <div data-what="#YASDC .step2" data-class="hide" class="slide anim-removeclass"></div>
+    <div data-what="#YASDC .step3" data-class="hide" class="slide anim-removeclass"></div>
+  </div>
+  <div id="truth-tables-1" class="hide">
+    <div class="bottom-white invert">
+      <div class="center em-above">
+        <table class="truth-table">
+          <!-- header row-->
+          <tr>
+            <td><span class="col-1">A</span></td>
+            <td class="result-col"><span class="result-col-1">¬A</span></td>
+            <td class="result-col"><span class="result-col-2">¬¬A</span></td>
+          </tr>
+          <tr class="row-1">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+          </tr>
+          <tr class="row-2">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div data-what="#truth-tables-1" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+  <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+  <div data-what="#truth-tables-1 table.truth-table tr td:nth-child(1)" data-class="bkg-words-highlight-forestgreen" class="slide anim-continue anim-addclass"></div>
+  <div data-what="#truth-tables-1 table.truth-table tr td:nth-child(3)" data-class="bkg-words-highlight-forestgreen" class="slide anim-continue anim-addclass"></div>
+  <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+  <div class="clear"></div>
+  <div class="em-above"></div>
+  <div id="equivalences" class="slide">
+    <div class="container_12">
+      <div class="grid_12">
+        <table>
+          <tr>
+            <td>¬(A ∧ B) &nbsp; &nbsp;</td>
+            <td class="step2 hide">⫤⊨ &nbsp; &nbsp;</td>
+            <td class="step2 hide bkg-words-highlight-blue"> (¬A ∨ ¬B)</td>
+          </tr>
+          <tr class="step3 hide">
+            <td>¬(A ∨ B)</td>
+            <td class="step4 hide">⫤⊨</td>
+            <td class="step4 hide">(¬A ∧ ¬B)</td>
+          </tr>
+          <tr class="step5 hide">
+            <td><span class="arrow-inner">A → B</span></td>
+            <td class="step6 hide">⫤⊨</td>
+            <td class="step6 hide"><span class="arrow-inner-equiv">¬A ∨ B</span></td>
+          </tr>
+          <tr class="step7 hide">
+            <td>¬(<span class="arrow-inner">A → B</span><span>)</span></td>
+            <td class="step8 hide">⫤⊨</td>
+            <td class="step8 hide">¬(<span class="arrow-inner-equiv">¬A ∨ B</span><span>) &nbsp; &nbsp;</span></td>
+            <td class="step9 hide">⫤⊨ &nbsp; &nbsp;</td>
+            <td class="step9 hide">A ∧ ¬B</td>
+          </tr>
+        </table>
+        <div data-what="#truth-tables-2" data-class="hide" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#truth-tables-1" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-2 .result-col-3" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-2 .result-col-4" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-2 .result-col-5" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#truth-tables-2 .result-col-3" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#truth-tables-2 .result-col-4" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#truth-tables-2 .result-col-5" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#truth-tables-2 table.truth-table tr td:nth-child(4)" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-2 table.truth-table tr td:nth-child(7)" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <!-- reveal the equivalence-->
+        <div data-what="#equivalences .step2" data-class="hide" class="slide anim-removeclass"></div>
+        <div data-what="#equivalences .step3" data-class="hide" class="slide anim-removeclass"></div>
+        <div data-what="#truth-tables-3" data-class="hide" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#truth-tables-2" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-3 .result-col-2" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#truth-tables-3 .result-col-2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#equivalences .step4" data-class="hide" class="slide anim-removeclass"></div>
+        <div data-what="#equivalences .step5" data-class="hide" class="slide anim-removeclass"></div>
+        <div data-what="#truth-tables-4" data-class="hide" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#truth-tables-3" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-4 .result-col-2" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#truth-tables-4 .result-col-2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#equivalences .step6" data-class="hide" class="slide anim-removeclass"></div>
+        <div data-what="#equivalences .step7" data-class="hide" class="slide anim-removeclass"></div>
+        <div data-what="#truth-tables-5" data-class="hide" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#truth-tables-4" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .arrow-inner" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .arrow-inner-equiv" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#equivalences .step8" data-class="hide" class="slide anim-removeclass"></div>
+        <div data-what="#equivalences .step9" data-class="hide" class="slide anim-removeclass"></div>
+        <div data-what=" .arrow-inner" data-class="bkg-words-highlight-faint-yellow" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .arrow-inner-equiv" data-class="bkg-words-highlight-faint-lime" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#truth-tables-6" data-class="hide" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#truth-tables-5" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-6 .result-col-2" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-6 .result-col-3" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#truth-tables-6 .result-col-4" data-class="hide" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#truth-tables-6 .result-col-2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#truth-tables-6 .result-col-3" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="#truth-tables-6 .result-col-4" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      </div>
+    </div>
+  </div>
+  <div id="truth-tables-2" class="hide">
+    <div class="bottom-white invert">
+      <div class="center hem-above">
+        <table class="truth-table">
+          <!-- header row-->
+          <tr>
+            <td><span class="col-1">A</span></td>
+            <td><span class="col-2">B</span></td>
+            <td class="result-col"><span class="result-col-1">A ∧ B</span></td>
+            <td class="result-col"><span class="result-col-2">¬(A ∧ B)</span></td>
+            <td class="result-col"><span class="result-col-3">¬A</span></td>
+            <td class="result-col"><span class="result-col-4">¬B</span></td>
+            <td class="result-col"><span class="result-col-5">¬A ∨ ¬B</span></td>
+          </tr>
+          <tr class="row-1">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+            <td class="result-col"><span class="result-col-3">F</span></td>
+            <td class="result-col"><span class="result-col-4">F</span></td>
+            <td class="result-col"><span class="result-col-5">F</span></td>
+          </tr>
+          <tr class="row-2">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+            <td class="result-col"><span class="result-col-3">F</span></td>
+            <td class="result-col"><span class="result-col-4">T</span></td>
+            <td class="result-col"><span class="result-col-5">T</span></td>
+          </tr>
+          <tr class="row-3">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+            <td class="result-col"><span class="result-col-3">T</span></td>
+            <td class="result-col"><span class="result-col-4">F</span></td>
+            <td class="result-col"><span class="result-col-5">T</span></td>
+          </tr>
+          <tr class="row-4">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+            <td class="result-col"><span class="result-col-3">T</span></td>
+            <td class="result-col"><span class="result-col-4">T</span></td>
+            <td class="result-col"><span class="result-col-5">T</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="truth-tables-3" class="hide">
+    <div class="bottom-white invert">
+      <div class="center hem-above">
+        <table class="truth-table">
+          <!-- header row-->
+          <tr>
+            <td><span class="col-1">A</span></td>
+            <td><span class="col-2">B</span></td>
+            <td class="result-col"><span class="result-col-1">¬(A ∨ B)</span></td>
+            <td class="result-col"><span class="result-col-2">¬A ∧ ¬B</span></td>
+          </tr>
+          <tr class="row-1">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+          </tr>
+          <tr class="row-2">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+          </tr>
+          <tr class="row-3">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+          </tr>
+          <tr class="row-4">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="truth-tables-4" class="hide">
+    <div class="bottom-white invert">
+      <div class="center hem-above">
+        <table class="truth-table">
+          <!-- header row-->
+          <tr>
+            <td><span class="col-1">A</span></td>
+            <td><span class="col-2">B</span></td>
+            <td class="result-col"><span class="result-col-1">A → B</span></td>
+            <td class="result-col"><span class="result-col-2">¬A ∨ B</span></td>
+          </tr>
+          <tr class="row-1">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+          </tr>
+          <tr class="row-2">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+          </tr>
+          <tr class="row-3">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+          </tr>
+          <tr class="row-4">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="truth-tables-5" class="hide">
+    <div class="bottom-white invert"></div>
+  </div>
+  <div id="truth-tables-6" class="hide">
+    <div class="bottom-white invert">
+      <div class="center hem-above">
+        <table class="truth-table">
+          <!-- header row-->
+          <tr>
+            <td><span class="col-1">A</span></td>
+            <td><span class="col-2">B</span></td>
+            <td class="result-col"><span class="result-col-1">A → B</span></td>
+            <td class="result-col"><span class="result-col-2">¬(A → B)</span></td>
+            <td class="result-col"><span class="result-col-3">¬(¬A ∨ B)</span></td>
+            <td class="result-col"><span class="result-col-4">¬A ∧ B</span></td>
+          </tr>
+          <tr class="row-1">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+            <td class="result-col"><span class="result-col-3">F</span></td>
+            <td class="result-col"><span class="result-col-4">F</span></td>
+          </tr>
+          <tr class="row-2">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>T</span>
+            </td>
+            <td><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">F</span></td>
+            <td class="result-col"><span class="result-col-2">T</span></td>
+            <td class="result-col"><span class="result-col-3">T</span></td>
+            <td class="result-col"><span class="result-col-4">T</span></td>
+          </tr>
+          <tr class="row-3">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td><span>T</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+            <td class="result-col"><span class="result-col-3">F</span></td>
+            <td class="result-col"><span class="result-col-4">F</span></td>
+          </tr>
+          <tr class="row-4">
+            <!-- pad-->
+            <td><span class="highlight-hook">&#8203;</span><span>F</span>
+            </td>
+            <td><span>F</span>
+            </td>
+            <td class="result-col"><span class="result-col-1">T</span></td>
+            <td class="result-col"><span class="result-col-2">F</span></td>
+            <td class="result-col"><span class="result-col-3">F</span></td>
+            <td class="result-col"><span class="result-col-4">F</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="exercises">3.19</div>
+<div class="exercises_fast">3.19</div>
+<section id="unit_221" class="slide"><img src="/img/bkg/sunset/PC175709.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">∨Elim: An Example</h2>
+    </div>
+  </div>
+</section>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_222/slide-052.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_222/slide-053.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_222/slide-054.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_222/slide-055.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_221/slide-102a.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-102b.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-103.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-104.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-105.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-106.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-107.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-108.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-109.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-110.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-111.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-112.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-113.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-114.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-115.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-116.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-117.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-118.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_221/slide-119.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_072" class="slide"><img src="/img/bkg/sunset/PC175714.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
@@ -994,9 +1621,196 @@ var inject = function(){
 <div class="handout">\section{Truth-functional Connectives}</div>
 <div class="notes notes-header-tex">&nbsp;</div>
 <div class="notes notes-header-tex">\section{Truth-functional Connectives}</div>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_072/slide-b-000.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-001.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-002.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-003.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-004.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-005.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-006.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-007.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-008.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-009.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-010.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-011.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-012.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-013.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-014.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-015.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-016.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-017.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-018.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-019.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
 <div class="exercises">7.9</div>
 <div class="exercises_fast">7.9</div>
-<section id="unit_111" class="slide"><img src="/img/bkg/sunset/PC175709.JPG" class="bkg"/>
+<section id="unit_111" class="slide"><img src="/img/bkg/sunset/PC175720.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
@@ -1087,7 +1901,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section id="unit_151" class="slide"><img src="/img/bkg/sunset/PC175714.JPG" class="bkg"/>
+<section id="unit_151" class="slide"><img src="/img/bkg/sunset/PC175723.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
@@ -1462,7 +2276,9 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section id="unit_170" class="slide"><img src="/img/bkg/sunset/PC175720.JPG" class="bkg"/>
+<div class="exercises">3.14, 3.15</div>
+<div class="exercises_fast">3.14, 3.15</div>
+<section id="unit_170" class="slide"><img src="/img/bkg/sunset/PC175730.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
@@ -1706,7 +2522,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section id="unit_230" class="slide"><img src="/img/bkg/sunset/PC175723.JPG" class="bkg"/>
+<section id="unit_230" class="slide"><img src="/img/bkg/sunset/PC175731.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">

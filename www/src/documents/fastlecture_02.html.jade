@@ -26,13 +26,25 @@ include ../../fragments/unit_mixins
 //- unit: proof - compare conjunction intro with disjunction intro
 +insert_unit({unit:'212', title_slide:true, images:images})
 
-section#exercises_warning.slide
-  p.middle.center Fast track and normal seminars have 
-    span.diff different exercises.
-  .slide.anim-addclass(data-what=".diff", data-class="bkg-words-highlight-red")
+//- section#exercises_warning.slide
+//-   p.middle.center Fast track and normal seminars have 
+//-     span.diff different exercises.
+//-   .slide.anim-addclass(data-what=".diff", data-class="bkg-words-highlight-red")
 
 //- unit: rules for identity
 +insert_unit({unit:'110', title_slide:true, images:images})
+
+//- unit: DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B
++insert_unit({unit:'235', title_slide:true, images:images})
+
+//- unit: disjunction-Elim ∨Elim (and ∨Intro)
+- d2 = get_unit(222)
+- d = get_unit(221)
++section({unit:d, images:images})
+//- prefix with super quick into to ∨Intro
++render_unit(d2)  
++render_unit(d)  
+
 
 //- unit: truth-functional connectives
 +insert_unit({unit:'072', title_slide:true, images:images})

@@ -15,6 +15,10 @@
     - d = getCollection("documents").findAll({url:'/units/'+unit_num+'.html'},[{year:-1,sort_order:1}]).toJSON();
   - }
   - var unit = d[0]
+  - if( !unit ) {
+    - console.log(' ')
+    - console.log('*** missing unit: '+p.unit)
+  - }
   - return unit;
 - };
 
@@ -127,13 +131,12 @@ mixin handout(p)
 mixin insert_unit(p)
   - d = get_unit(p.unit)
   if !d
-    -console.log('*** missing unit: '+p.unit)
     section.slide
       p *** missing unit '#{p.unit}'
   else
     if p.title_slide
       +section({unit:d, images:p.images})
-    if p.handout !== false
+    if p.handout !== false && d.handout !== false 
       +handout({unit:d})
     .notes.notes-header-tex &nbsp;
     .notes.notes-header-tex \section{#{d.title}}

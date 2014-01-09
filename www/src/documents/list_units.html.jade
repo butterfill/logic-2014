@@ -1,0 +1,45 @@
+---
+layout: 'listing'
+title: 'Logic I: PH126'
+---
+
+include ../../fragments/slide_mixins
+
+
+h1.title1 Logic I (PH126): List of Units
+h3.email s.butterfill@warwick.ac.uk
+
+//- compile map from units to lectures
+- var which_lecture = {}
+each lecture in getCollection("lectures").toJSON()
+  if lecture.units
+    each unit_num in lecture.units
+      if !which_lecture[unit_num]
+        - which_lecture[unit_num] = []
+      - which_lecture[unit_num].push(lecture.basename)
+
+
+- var unit_num
+each unit in getCollection("units").toJSON()
+  - unit_num = unit.basename.substr(5)
+  h3 #{unit.sequence}: 
+    a(href="/units_grid/#{unit.outFilename}") #{unit.title}
+    |  (#{unit_num})
+  if !which_lecture[unit_num]
+    p(style="background-color: red") Does not appear in any lecture.
+  else
+    p Lectures: #{which_lecture[unit_num].join(', ')}
+  if unit.depends && unit.depends.length && unit.depends.length > 0
+    p depends on units: #{unit.depends.join(', ')}
+  if unit.tags && unit.tags.length && unit.tags.length > 0
+    p(style="text-align:right;margin:0;padding:0;margin-top:-1.5em;") 
+      each t in unit.tags
+        span.label.label-info #{t}
+        | 
+  p #{unit.description}
+  if unit.book && unit.book.length > 0 
+    p Reading:  §#{unit.book.join(', §')}
+  if unit.exercises && unit.exercises.length > 0 
+    p Exercises: #{unit.exercises.join(', ')}
+  if unit.exercises_fast && unit.exercises_fast.length > 0
+    p Fast exercises: #{unit.exercises_fast.join(', ')}

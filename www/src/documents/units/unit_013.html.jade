@@ -1,6 +1,5 @@
 ---cson
 layout: 'deck_units'
-images: 'unit_013'
 title: "Learning Objectives"
 description: "Graphical depiction of learning objectives for this course."
 tags: []
@@ -11,7 +10,12 @@ sequence: 60
 
 include ../../../fragments/unit_mixins
 
-//- the slides
-+slides_from_img_folder(document.basename)
++slide({bkg:'unit_013/slide-001.jpeg'})
+  .notes 
 
-//- handout
++slide({bkg:'unit_013/slide-002.jpeg'})
+  .notes 
+
++slide({bkg:'unit_013/slide-003.jpeg'})
+  .notes 
+

@@ -1,0 +1,47 @@
+---
+layout: 'default2'
+title: 'Lecture 04'
+lecture_date: '2014/1/16'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('frozen')
+
++title_slide({document:document, images:images})
+
+
+//- unit: proof - compare conjunction intro with disjunction intro
++slide_middle
+  p.center How come we can prove only valid arguments?
++insert_unit({unit:'212', title_slide:false, images:images})
+
+//- unit: formal proof (identity again)
++insert_unit({unit:'111', title_slide:true, images:images})
+  
+//- ¬P ∨ ¬Q compared with ¬(P ∨ Q)
++insert_unit({unit:'232', title_slide:true, images:images})
+
++slide_middle
+  p.center Too slow?  Try fast-track.
+
+//- unit: truth-functional connectives
++insert_unit({unit:'072', title_slide:true, images:images})
+
+//- the Bush examples
+.slide
+  p.middle.center Dissatisfaction is good
++insert_unit({unit:'162', title_slide:false, images:images})
+
+
+//- unit: A and B or C
++insert_unit({unit:'151', title_slide:true, images:images})
++insert_unit({unit:'153', title_slide:false, images:images})
++insert_unit({unit:'154', title_slide:false, images:images})
+
+
+//- not used in 2012/3
+//- unit: Ambiguity (elephant pyjamas)
++insert_unit({unit:'170', title_slide:true, images:images})

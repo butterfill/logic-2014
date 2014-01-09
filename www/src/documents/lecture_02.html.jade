@@ -22,41 +22,41 @@ include ../../fragments/logic_mixins
 //- recap: validity and counterexamples 
 +insert_unit({unit:'05', title_slide:true, images:images})
 
-
-//- unit (minor): sound argument
-section#unit_041.slide
-  .words
-    p.middle.center sound argument
-.slide
-  +df_sound_argument
-  .slide
-    +df_valid
-  .slide
-    .words
-      div.middle.center
-        table.fitch-proof
-          tr
-            td
-              span.first-premise &#8203;
-            td 1.
-            td All humans are staplers.
-            td
-          tr
-            td.last-premise
-            td 2.
-            td I am a human.
-          tr
-            td
-              // span.bkg-grey-row &#8203;
-            td 3.
-            td I am a stapler.
-    .slide.anim-addclass(data-what=".first-premise",data-class="bkg-grey-row")
-    .slide.anim-removeclass(data-what=".first-premise",data-class="bkg-grey-row")
-    .slide
-      div.white-box(style="width:230px;position:absolute;top:20px;left:500px;")
-        p(style="padding: 0 0.3em;") An argument is 
-          strong logically valid 
-          | just if there's no possible situation in which the premises are true and the conclusion false.
+//- 
+//- //- unit (minor): sound argument
+//- section#unit_041.slide
+//-   .words
+//-     p.middle.center sound argument
+//- .slide
+//-   +df_sound_argument
+//-   .slide
+//-     +df_valid
+//-   .slide
+//-     .words
+//-       div.middle.center
+//-         table.fitch-proof
+//-           tr
+//-             td
+//-               span.first-premise &#8203;
+//-             td 1.
+//-             td All humans are staplers.
+//-             td
+//-           tr
+//-             td.last-premise
+//-             td 2.
+//-             td I am a human.
+//-           tr
+//-             td
+//-               // span.bkg-grey-row &#8203;
+//-             td 3.
+//-             td I am a stapler.
+//-     .slide.anim-addclass(data-what=".first-premise",data-class="bkg-grey-row")
+//-     .slide.anim-removeclass(data-what=".first-premise",data-class="bkg-grey-row")
+//-     .slide
+//-       div.white-box(style="width:230px;position:absolute;top:20px;left:500px;")
+//-         p(style="padding: 0 0.3em;") An argument is 
+//-           strong logically valid 
+//-           | just if there's no possible situation in which the premises are true and the conclusion false.
 
 //- soundness
 //- check not done in lecture 01!
@@ -69,28 +69,19 @@ section#unit_041.slide
 
 
 
+//- formalizing the pigs
++insert_unit({unit:'135', title_slide:true, images:images})
+
 //- unit: sentence letters
 +insert_unit({unit:'012', title_slide:true, images:images})
 
-//- unit: truth tables
-+insert_unit({unit:'071', title_slide:true, images:images})
 
 //- postsecret quiz: logically valid arguments
 - each d in getCollection("documents").findAll({url:'/quizes/postsecret_01.html'},[{year:-1,sort_order:1}]).toJSON()
   mixin render_unit(d)
 
-
-//- unit: using truth-tables for validity
-//- preceeded by unit on formalizing the pigs
-- d = get_unit('14')
-  +section({unit:d, images:images})
-  .slide.anim-attribute(data-what="img.bkg",data-attr="opacity:0.3")
-    .words
-     p.middle.center We can use truth tables to establish that 
-       br
-       | some arguments are logically valid
-+insert_unit({unit:'135', title_slide:false, images:images})
-+insert_unit({unit:'14', title_slide:false, images:images})
+//- unit: truth tables
++insert_unit({unit:'071', title_slide:true, images:images})
 
 
 //- unit: complex truth tables, not(P and Q) 

@@ -1,0 +1,74 @@
+---cson
+layout: 'deck_units'
+title: "Truth Tables Are Stipulations"
+description: "Sometimes people think that one or other of the truth tables for a connective is wrong.  These thoughts are always mistaken. The truth tables for the connectives are stipulations about their meanings."
+tags: ['truth-tables','semantics']
+depends: ['071']
+source: ['ph126 fastlecture 02']
+duration: 4
+standalone: true
+handout: false
+---
+
+include ../../../fragments/unit_mixins
+
+
+//- reply to student email (keep anonymous)
++slide
+  .notes A student emailed me about `... some confusion in regards to the ∨ symbol representing `or’ ...’
+  p ‘... some confusion in regards to 
+    span.first-mistake the ∨ symbol 
+      span.first-mistake-b representing ‘or’
+    | ...’
+  +highlight(".first-mistake","red")
+  .notes I think the source of the confusion is this mistake.  
+  .notes It's a mistake to think that ∨ represents or!
+  .notes Let me explain.
+  .notes Here's the truth table for v ...
+  //- indent to avoid dimming!
+  .slide.em-above
+    .notes Oops, there's a mistake in this truth table.  Let's fix it ...
+    table.truth-table
+      tr
+        td A
+        td B
+        td.result-col A ∨ B
+      tr
+        td T
+        td T
+        td.result-col T
+        td.comment.hide <-- ‘surely this is illogical’
+      tr
+        td T
+        td F
+        td.result-col
+          span.error F
+          span.correct.hide T
+      tr
+        td F
+        td T
+        td.result-col 
+          span.error F
+          span.correct.hide T
+      tr
+        td F
+        td F
+        td.result-col F
+    //- fix mistake in truth table
+    +hide_('.error')
+    +show('.correct')
+    .notes Now we've got the right truth table.
+    .notes The truth table is a stipulation about the meaning of v, the disjunction symbol.
+    .notes We're not trying to capture the meaning of any English word.
+    //- indent to avoid dimming!
+    +line-through_(".first-mistake-b")
+    +dim_(".first-mistake-b")
+    +unhighlight(".first-mistake",'red')
+    .slide
+      .notes The student goes on to ask this:
+      p.em-above ‘What makes the ∨ inclusive or exclusive, and is it always one of the two, or can it mean different things in different situations?’
+    .slide
+      p  It ‘is clearer with the example: ‘The pig went down the left fork or the right fork.’ Clearly this is a case where it can only be one or the other. The pig cannot go down both forks.’ 
+      //- indent to avoid dimming!
+      +show(".comment")
+

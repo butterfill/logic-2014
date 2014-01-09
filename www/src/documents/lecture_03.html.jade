@@ -1,0 +1,64 @@
++++
+layout: 'default2'
+title: 'Lecture 03'
+lecture_date: '2014/1/14'
+units: []
++++
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('budapest')
+
+
++title_slide({document:document, images:images})
+
+//- unit: using truth-tables for validity
++slide_middle
+  p.center We can use truth tables to establish that 
+    br
+    | some arguments are logically valid
++insert_unit({unit:'14', title_slide:false, images:images})
+
+//- section: unit_211, unit_21 = formal proof 1
++insert_unit({unit:'211', title_slide:true, images:images})
++insert_unit({unit:'213', title_slide:false, images:images})
++insert_unit({unit:'21', title_slide:false, images:images})
+
+
+//- break
+// *notes: logic can be confusing at first. Don't despair. It's important to have a logic partner.
+section#be_honest.slide
+  img.bkg(src="/img/xkcd_1146.png",width="800px").em-above
+  .words
+    p.source xkcd.com/1146
+
+
+//- section#exercises_warning.slide
+//-   p.middle.center Fast track and normal seminars have 
+//-     span.diff different exercises.
+//-   .slide.anim-addclass(data-what=".diff", data-class="bkg-words-highlight-red")
+
+
+//- reply to student email (keep anonymous)
++insert_unit({unit:'073', title_slide:false, images:images})
+
+
+//- unit: rules for identity
++insert_unit({unit:'110', title_slide:true, images:images})
+
+
+//- unit: how to write proofs
++insert_unit({unit:'130', title_slide:true, images:images})
+
+
+//- unit: complex truth tables: (P and R) or R
++insert_unit({unit:'09', title_slide:true, images:images})
+
+//- unit: tautologies and contradictions, logical validity is not what you think it is.
+//- *check: this might have been used in lecture 02 (if run out of time)
+//- 2012-3 didn't have time for bush part (unit_162)
++insert_unit({unit:'161', title_slide:false, images:images})
++insert_unit({unit:'160', title_slide:true, images:images})
+
+

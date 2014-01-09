@@ -1,0 +1,221 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+
+\documentclass[12pt]{extarticle}
+% extarticle is like article but can handle 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, and 20pt text
+
+\def \ititle {Origins of Mind}
+ 
+\def \isubtitle {Lecture 08}
+ 
+\def \iauthor {Stephen A. Butterfill}
+\def \iemail{s.butterfill@warwick.ac.uk}
+\date{}
+
+%for strikethrough
+\usepackage[normalem]{ulem}
+
+\input{$HOME/Documents/submissions/preamble_steve_handout}
+
+%\bibpunct{}{}{,}{s}{}{,}  %use superscript TICS style bib
+%remove hanging indent for TICS style bib
+%TODO doesnt work
+\setlength{\bibhang}{0em}
+%\setlength{\bibsep}{0.5em}
+
+
+%itemize bullet should be dash
+\renewcommand{\labelitemi}{$-$}
+
+\begin{document}
+
+%\raggedcolumns
+
+\begin{multicols*}{3}
+
+\setlength\footnotesep{1em}
+
+
+\bibliographystyle{newapa} %apalike
+
+%\maketitle
+%\tableofcontents
+
+
+
+
+%--------------- 
+%--- start paste
+
+
+
+\def \ititle {Logic I}
+ 
+\def \isubtitle {Lecture 03}
+ 
+\begin{center}
+ 
+{\Large
+ 
+\textbf{\ititle}: \isubtitle
+ 
+}
+ 
+ 
+ 
+\iemail %
+ 
+\end{center}
+ 
+Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.
+ 
+ 
+ 
+\section{Logical Validity and Truth Tables}
+ 
+\emph{Reading:} §4.3
+ 
+\begin{minipage}{\columnwidth}
+ 
+Truth tables can be used to show that an argument is valid. To illustrate ...
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_14_example.png}
+\end{center}
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+To establish that an argument is valid:
+ 
+\begin{enumerate}
+ 
+\item Create truth tables for each premise and the conclusion.
+ 
+\item Check whether there is a row of the truth table where all premises are true and the conclusion is false.
+ 
+\item If not, the argument is valid.
+ 
+\end{enumerate}
+ 
+\end{minipage}
+ 
+ 
+ 
+\section{Translating a Simple Argument}
+ 
+\emph{Reading:} §3.2
+ 
+ 
+ 
+\section{Formal Proof: ∧Elim and ∧Intro}
+ 
+\emph{Reading:} §5.1, §6.1
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_conjunction_intro.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_conjunction_elim.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/proof_unit_21.png}
+\end{center}
+ 
+ 
+\section{Rules of Proof for Identity}
+ 
+\emph{Reading:} §2.2
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_identity_intro.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_identity_elim.png}
+\end{center}
+ 
+ 
+\section{How to Write Proofs}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/how_to_write_proofs.png}
+\end{center}
+ 
+ 
+\section{Complex Truth Tables}
+ 
+\emph{Reading:} §3.3, §3.5
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/how_to_write_truth_tables.png}
+\end{center}
+\begin{minipage}{\columnwidth}
+ 
+Complex truth table example:
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/tt_p_and_q_or_r.png}
+\end{center}
+\end{minipage}
+ 
+ 
+ 
+\section{Logic Makes Me Die Inside}
+ 
+\emph{Reading:} §2.1
+ 
+ 
+ 
+\section{Tautologies and Contradictions}
+ 
+\emph{Reading:} §4.1, §4.2
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_160_argument3.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_160_argument3b.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_160_argument4.png}
+\end{center}
+P $\lor{}$ ¬P is a \emph{logical truth}
+ 
+logical truth defined p. 568
+ 
+P $\lor{}$ ¬P is a \emph{contradiction}
+ 
+contradiction defined p. 564
+ 
+\vfill
+\begin{minipage}{\columnwidth}
+\section{Exercises}
+These exercises will be discussed in seminars the week after this lecture.
+The numbers below refer to the numbered exercises in the course textbook, e.g. `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}.
+ 
+\begin{quote}
+5.1-5.4
+ 
+6.1
+ 
+3.12, 3.13
+ 
+4.4-4.7
+ 
+4.12-14
+ 
+4.1, 4.2
+ 
+\end{quote}
+\end{minipage}
+
+
+
+%--- end paste
+%--------------- 
+ 
+
+
+\end{multicols*}
+
+\end{document}

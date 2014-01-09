@@ -14,34 +14,80 @@ sequence: 10
 
 include ../../../fragments/unit_mixins
 
-//- the slides
-+slides_from_img_folder(document.basename)
++slide({bkg:'unit_01/slide-001.jpeg'})
+  .notes 
+  //- handout
+  .handout: :t(render="markdown")
+    \textbf{Argument 1:}
+    \begin{quote}
+    Either it went up the left fork or it went up the right fork.
+  
+    It didn’t go up the left fork.
+  
+    therefore:
+  
+    It went up the right fork.
+    \end{quote}
+  
+    \textbf{Argument 2:}
+    \begin{quote}
+    Either it went up the left fork or it went up the right fork.
+  
+    The left fork is unsuitable for pigs.
+  
+    therefore:
+  
+    It went up the right fork.
+    \end{quote}
 
-//- handout
-.handout: :t(render="markdown")
-  \textbf{Argument 1:}
-  \begin{quote}
-  Either it went up the left fork or it went up the right fork.
-  
-  It didn’t go up the left fork.
-  
-  therefore:
-  
-  It went up the right fork.
-  \end{quote}
-  
-  \textbf{Argument 2:}
-  \begin{quote}
-  Either it went up the left fork or it went up the right fork.
-  
-  The left fork is unsuitable for pigs.
-  
-  therefore:
-  
-  It went up the right fork.
-  \end{quote}
+  .handout \begin{minipage}{\columnwidth}
+  .handout \textbf{FOL version of Argument 1:}
+  .img.handout(data-src='img/argument1_fol.png')
+  .handout \end{minipage}
 
-.handout \begin{minipage}{\columnwidth}
-.handout \textbf{FOL version of Argument 1:}
-img.handout(src='img/argument1_fol.png')
-.handout \end{minipage}
++slide({bkg:'unit_01/slide-002.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-003.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-004.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-005.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-006.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-007.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-008.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-009.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-010.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-011.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-012.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-013.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-014.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-015.jpeg'})
+  .notes 
+
++slide({bkg:'unit_01/slide-016.jpeg'})
+  .notes 
+
+

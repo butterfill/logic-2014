@@ -1,0 +1,116 @@
+---
+layout: 'deck_units'
+title: 'DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B'
+tags: ['truth-tables']
+description: "Introduces DeMorgan's Laws relating ¬, ∧ and ∨.  The laws can be stated as A ∧ B ⫤⊨ ¬(¬A ∨ ¬B) and A ∨ B ⫤⊨ ¬(¬A ∧ ¬B).  Also mentions that A → B ⫤⊨ ¬A ∨ B."
+depends: ['unit_700']
+source: ['ph126 fastlecture 05']
+duration: 5
+book: ['3.6']
+exercises: ['3.19']
+exercises_fast: ['3.19']
+sequence: 570
+---
+
+include ../../../fragments/slide_mixins
+
+  
+.slide
+  .words
+    .container_12
+      #YASDC
+        .grid_4
+          p A 
+            span.log-equiv ⫤⊨
+            span 
+            span ¬¬A
+        .grid_8
+          p
+            span.invert.bkg-words-highlight-white.step2.hide is logically equivalent to
+          p(style='margin-top:-0.5em;margin-left:2em;')
+            span.invert.bkg-words-highlight-white.step3.hide i.e. has the same truth table as
+    .slide.anim-continue.anim-addclass(data-what=".log-equiv", data-class="invert")
+    mixin words-bkg(['.log-equiv'],'white')
+    mixin steps(3, '#YASDC')
+  #truth-tables-1.hide
+    .bottom-white.invert
+      .center.em-above
+          mixin truth-table(['¬A','¬¬A'],[['F','T'],['T','F']])
+  mixin show(['#truth-tables-1'])
+  mixin tt-highlight-cols([1,3],'forestgreen', '#truth-tables-1')
+  .clear
+  .em-above
+  .slide#equivalences
+    .container_12: .grid_12
+        table
+          tr
+            td ¬(A ∧ B) &nbsp; &nbsp;
+            td.step2.hide ⫤⊨ &nbsp; &nbsp;
+            td.step2.hide.bkg-words-highlight-blue  (¬A ∨ ¬B)
+          tr.step3.hide
+            td ¬(A ∨ B)
+            td.step4.hide ⫤⊨
+            td.step4.hide (¬A ∧ ¬B)
+          tr.step5.hide
+            td
+              span.arrow-inner A → B
+            td.step6.hide ⫤⊨
+            td.step6.hide
+              span.arrow-inner-equiv ¬A ∨ B
+          tr.step7.hide
+            td ¬(
+              span.arrow-inner A → B
+              span )
+            td.step8.hide ⫤⊨
+            td.step8.hide ¬(
+              span.arrow-inner-equiv ¬A ∨ B
+              span ) &nbsp; &nbsp;
+            td.step9.hide ⫤⊨ &nbsp; &nbsp;
+            td.step9.hide A ∧ ¬B
+        //- switch truth tables in bottom white half
+        mixin showhide(['#truth-tables-2'],['#truth-tables-1', '#truth-tables-2 .result-col-3','#truth-tables-2 .result-col-4','#truth-tables-2 .result-col-5'])
+        //- reveal more of the truth tables
+        mixin show(['#truth-tables-2 .result-col-3','#truth-tables-2 .result-col-4','#truth-tables-2 .result-col-5'])
+        //- point out the identity of two truth tables
+        mixin tt-highlight-cols([4,7],'blue', '#truth-tables-2')
+        // reveal the equivalence
+        mixin step(2, '#equivalences')
+        //- reveal lhs of next equivalence
+        mixin step(3, '#equivalences')
+        mixin showhide(['#truth-tables-3'],['#truth-tables-2','#truth-tables-3 .result-col-2'])
+        mixin show(['#truth-tables-3 .result-col-2'])
+        mixin steps(4, 5, '#equivalences')
+        mixin showhide(['#truth-tables-4'],['#truth-tables-3','#truth-tables-4 .result-col-2'])
+        mixin show(['#truth-tables-4 .result-col-2'])
+        mixin steps(6, 7, '#equivalences')
+        mixin showhide(['#truth-tables-5'],['#truth-tables-4'])
+        //- *notes show that we can use previous equivalence for this one
+        //- *notes i.e. hint at the substitution theorem
+        mixin words-bkg(['.arrow-inner'],'yellow')
+        mixin words-bkg(['.arrow-inner-equiv'],'lime')
+        mixin step(8, '#equivalences')
+        mixin step(9, '#equivalences')
+        mixin words-bkg-faint(['.arrow-inner'],'yellow')
+        mixin words-bkg-faint(['.arrow-inner-equiv'],'lime')
+        mixin showhide(['#truth-tables-6'],['#truth-tables-5', '#truth-tables-6 .result-col-2', '#truth-tables-6 .result-col-3','#truth-tables-6 .result-col-4'])
+        mixin show(['#truth-tables-6 .result-col-2'])
+        mixin show(['#truth-tables-6 .result-col-3'])
+        mixin show(['#truth-tables-6 .result-col-4'])
+  #truth-tables-2.hide
+    .bottom-white.invert
+      .center.hem-above
+          mixin truth-table(['A ∧ B','¬(A ∧ B)','¬A','¬B','¬A ∨ ¬B'],[['T','F','F','F'],['F','T','T','T'],['F','F','T','T'],['F','T','F','T'],['F','T','T','T']])
+  #truth-tables-3.hide
+    .bottom-white.invert
+      .center.hem-above
+          mixin truth-table(['¬(A ∨ B)','¬A ∧ ¬B'],[['F','F','F','T'],['F','F','F','T']])
+  #truth-tables-4.hide
+    .bottom-white.invert
+      .center.hem-above
+          mixin truth-table(['A → B','¬A ∨ B'],[['T','F','T','T'],['T','F','T','T']])
+  #truth-tables-5.hide
+    .bottom-white.invert
+  #truth-tables-6.hide
+    .bottom-white.invert
+      .center.hem-above
+          mixin truth-table(['A → B','¬(A → B)','¬(¬A ∨ B)','¬A ∧ B'],[['T','F','T','T'],['F','T','F','F'],['F','T','F','F'],['F','T','F','F']])
