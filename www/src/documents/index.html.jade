@@ -53,12 +53,23 @@ html
 
     .row
       //- main content: lecture outlines &c
-      .span9
+      .span12
         #slides_and_handouts_regular
           h2 Slides and Handouts for Regular Lectures
           p You can find slides and handouts below, together with an outline of each lecture.
           p Please note that these may be continuously revised.
 
+    .row
+      #sidebar.span4.bs-docs-sidebar
+        ul.nav.nav-list.bs-docs-sidenav 
+          //(data-spy="affix",data-offset-top="100",style="margin-top:250;")
+          //- create a menu item for each lecture
+          each lecture in getCollection("normal_lectures").toJSON()
+            li
+              a(href='##{lecture.basename}')
+                i.icon-chevron-right
+                | #{lecture.title}
+      .span8
         //- now do a section for each lecture
         each lecture in getCollection("normal_lectures").toJSON()
           div(id='#{lecture.basename}')
@@ -70,22 +81,23 @@ html
                 a(href='#{lecture.url}',target='_blank') slides
                 |  , 
                 a(href='/handouts/#{lecture.basename}.handout.pdf',target='_blank') handout [pdf]
-
-              div(style="padding-left:2em;")
-                if lecture.units
-                  - each unit_num in lecture.units
-                    - unit = get_unit(unit_num)
-                    h3
-                      a(href="#{unit.url}") #{unit.title}
-                      span(style="font-size:50%;color:grey;")  (#{unit_num})
-                    if unit.tags && unit.tags.length && unit.tags.length > 0
-                      p(style="text-align:right;margin:0;padding:0;margin-top:-2.5em;") 
-                        each t in unit.tags
-                          span.label.label-info #{t}
-                          | 
-                    p #{unit.description}
-                    if unit.book && unit.book.length > 0 
-                      p Reading:  §#{unit.book.join(', §')}
-                    if unit.exercises && unit.exercises.length > 0 
-                      p Exercises (regular): #{unit.exercises.join(', ')}
+              
+              .units(style='border-left: 1px dotted grey;margin-left: -1px;')
+                div(style="padding-left:2em;")
+                  if lecture.units
+                    - each unit_num in lecture.units
+                      - unit = get_unit(unit_num)
+                      h3
+                        a(href="#{unit.url}") #{unit.title}
+                        span(style="font-size:50%;color:grey;")  (#{unit_num})
+                      if unit.tags && unit.tags.length && unit.tags.length > 0
+                        p(style="text-align:right;margin:0;padding:0;margin-top:-2.5em;") 
+                          each t in unit.tags
+                            span.label.label-info #{t}
+                            | 
+                      p #{unit.description}
+                      if unit.book && unit.book.length > 0 
+                        p Reading:  §#{unit.book.join(', §')}
+                      if unit.exercises && unit.exercises.length > 0 
+                        p Exercises (regular): #{unit.exercises.join(', ')}
             

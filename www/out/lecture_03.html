@@ -130,17 +130,6 @@ var inject = function(){
   <div class="handout">\end{center}</div>
   <div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div>
 </div>
-<section class="slide">
-  <div class="container_12">
-    <div class="grid_12 ">
-      <div class="words">
-        <div class="middle">
-          <p class="center">We can use truth tables to establish that <br/>some arguments are logically valid</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <div class="handout">&nbsp;</div>
 <div class="handout">\section{Logical Validity and Truth Tables}</div>
 <div class="handout">\emph{Reading:}  §4.3</div>
@@ -369,7 +358,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Don’t need to go further, already have a false premise.  So this won’t be a situation in which the premises are true and the conclusion false.</div>
       </div>
     </div>
   </div>
@@ -441,7 +430,8 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">This situation is different from the other two: the premises are true in this possible situation, so we had to think about whether the conclusion is true.</div>
+        <div class="notes">But, as you can see, the conclusion is also true.  So this is no counterexample.</div>
       </div>
     </div>
   </div>
@@ -486,7 +476,11 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">So if someone asked you to show that this argument is valid using truth tables, what would you do?</div>
+        <div class="notes">First, create truth tables for each premise and for the conclusion.</div>
+        <div class="notes">Next, check whether there is any row where the premises are true and the conclusion false.</div>
+        <div class="notes">If not, you can write this:</div>
+        <div class="notes">By inspecting the truth table, there is no row where the premises are true and the conclusion false; therefore, the argument is logically valid.</div>
       </div>
     </div>
   </div>
@@ -504,7 +498,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">When you're doing truth tables there's a temptation to race through them.</div>
       </div>
     </div>
   </div>
@@ -513,7 +507,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"></div>
+        <div class="notes">But you shouldn't do that.  Be the little snail.</div>
       </div>
     </div>
   </div>
@@ -529,14 +523,13 @@ var inject = function(){
 </section>
 <div class="notes notes-header-tex">&nbsp;</div>
 <div class="notes notes-header-tex">\section{Formal Proof}</div>
-<!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
-<!-- create title slide for a lecture-->
-<!-- param p contains document and images (an array of images to use)-->
-<!-- param p contains p.unit and p.images (an array of images)-->
-<!-- see also +clip to modify the clip as an animation-->
-<!-- ------------>
-<!-- draw things-->
-<!-- ------------>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
 <section id="formal_proof" class="slide">
   <div id="valid_df_831">
     <div style="width:230px;position:absolute;top:20px;left:500px;" class="white-box">
@@ -556,8 +549,10 @@ var inject = function(){
         </div>
       </div>
     </div>
-    <div data-what="#highlight-hook831" data-class="bkg-grey-row" class="slide anim-addclass"></div>
-    <div data-what="#highlight-832" data-class="bkg-words-highlight-red" class="slide anim-addclass"></div>
+    <div data-what=" #highlight-hook831" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+    <div data-what=" #highlight-832" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
   </div>
   <div class="slide">
     <div class="clear"></div>
@@ -626,7 +621,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">This doesn’t seem to be true.</div>
       </div>
     </div>
   </div>
@@ -635,7 +630,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">But this does seem to be true, or at least horribly plausible.</div>
       </div>
     </div>
   </div>
@@ -644,7 +639,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">And this seems right too, maybe.  </div>
       </div>
     </div>
   </div>
@@ -812,7 +807,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">See how we have P in a premise and P in the conclusion?</div>
       </div>
     </div>
   </div>
@@ -821,7 +816,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">We have to get the P out of the conjunction and back into the conclusion.</div>
       </div>
     </div>
   </div>
@@ -830,7 +825,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">How can we get P out of this premise?</div>
       </div>
     </div>
   </div>
@@ -839,7 +834,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">First we have to ask, What's the connective?</div>
       </div>
     </div>
   </div>
@@ -848,7 +843,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">The connective is conjunction.  This tells us we want to use a conjunction-rule.  But is it the introduction or elimination rule that we need?</div>
       </div>
     </div>
   </div>
@@ -857,7 +852,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">It's elimination.  Nearly always we need elimination when we're acting on premises.</div>
       </div>
     </div>
   </div>
@@ -866,7 +861,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">See how the rule matches our premise.</div>
       </div>
     </div>
   </div>
@@ -884,7 +879,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Now having used the rule we have to explain exactly what we've done.  This requires two things ...</div>
       </div>
     </div>
   </div>
@@ -893,7 +888,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">We must cite the rule used.</div>
       </div>
     </div>
   </div>
@@ -902,7 +897,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">And we must cite the lines we applied the rule to.</div>
       </div>
     </div>
   </div>
@@ -920,7 +915,9 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Getting the R out of the second premise can be done in exactly the same way.</div>
+        <div class="notes">Now, how are we going to get to the conclusion?</div>
+        <div class="notes">In general, we use introduction rules to get to the conclusion.  And since this conclusion is a conjunction, we'll use conjunction-intro to get to it.</div>
       </div>
     </div>
   </div>
@@ -929,7 +926,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Look at the rule for conjunction intro. </div>
       </div>
     </div>
   </div>
@@ -938,7 +935,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">See how our proof fits the pattern of the rule.</div>
       </div>
     </div>
   </div>
@@ -947,7 +944,8 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">So it turns out we already did what we need for conjunction intro.  </div>
+        <div class="notes">All that's left is to explain what we've done.  As before this requres two things.</div>
       </div>
     </div>
   </div>
@@ -956,7 +954,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">We must cite the rule used.</div>
       </div>
     </div>
   </div>
@@ -965,7 +963,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">And we must cite the lines we applied the rule to.</div>
       </div>
     </div>
   </div>
@@ -974,7 +972,8 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Note the pattern of rules that we have for conjunction: introduction and elimination.</div>
+        <div class="notes">For each connective we'll have such a pair of rules, one introduction rule and one elimination rule.</div>
       </div>
     </div>
   </div>
@@ -983,7 +982,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">With the elimination rule, we have the connective at the start and we eliminate it in applying the rule.</div>
       </div>
     </div>
   </div>
@@ -992,7 +991,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">See how this worked in our proof.</div>
       </div>
     </div>
   </div>
@@ -1001,7 +1000,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">With the introduction rule, we don't have the connective at the start and we introduce it by appling the rule. </div>
       </div>
     </div>
   </div>
@@ -1010,7 +1009,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"></div>
+        <div class="notes">Here's how we did it in the proof.</div>
       </div>
     </div>
   </div>
@@ -1125,6 +1124,7 @@ var inject = function(){
         <div class="notes"> </div>
         <div data-src="img/rule_identity_intro.png" class="img handout"></div>
         <div data-src="img/rule_identity_elim.png" class="img handout"></div>
+        <div data-src="img/proof_identity_example.png" class="img handout"></div>
       </div>
     </div>
   </div>
@@ -1808,6 +1808,14 @@ var inject = function(){
 <div class="exercises">4.4-4.7</div>
 <div class="exercises">4.12-14</div>
 <div class="exercises_fast">3.14, 3.15</div>
+<section id="unit_161" class="slide"><img src="/img/bkg/budapest/IMG_nc_5605.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Logic Makes Me Die Inside</h2>
+    </div>
+  </div>
+</section>
 <div class="handout">&nbsp;</div>
 <div class="handout">\section{Logic Makes Me Die Inside}</div>
 <div class="handout">\emph{Reading:}  §2.1</div>
@@ -1824,7 +1832,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Do they use it?  I’m not on it.  I already have a friend, so I recon I’ve got that one covered already.</div>
       </div>
     </div>
   </div>
@@ -1862,14 +1870,6 @@ var inject = function(){
       <div class="grid_12">
         <div class="notes"></div>
       </div>
-    </div>
-  </div>
-</section>
-<section id="unit_160" class="slide"><img src="/img/bkg/budapest/IMG_nc_5605.JPG" class="bkg"/>
-  <div class="spacer">&nbsp;</div>
-  <div style="" class="title-block">
-    <div class="title-container">
-      <h2 class="title1">Tautologies and Contradictions</h2>
     </div>
   </div>
 </section>
@@ -2112,7 +2112,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"></div>
+        <div class="notes">Unlike say knowledge or truth, where it’s up to you to form a view of your own to a large extent, with logical validity there is a precise and clear definition that we are working with.  Of course there are still questions about the nature of logical validity, but to get to those questions you first have to accept its definition.</div>
       </div>
     </div>
   </div>

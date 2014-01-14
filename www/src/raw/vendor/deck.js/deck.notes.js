@@ -6,6 +6,8 @@ https://github.com/imakewebthings/deck.js/blob/master/MIT-license.txt
 https://github.com/imakewebthings/deck.js/blob/master/GPL-license.txt
 
 MODIFIED by STEVE 2013
+
+TODO: gather findAndReplaceDOMText and apply to notes & handout
 */
 
 /*
@@ -775,7 +777,24 @@ only toggle the notes panel for this cloned window.
     findAndReplaceDOMText($handoutContainer[0], {
       find: /&/g,
       replace: '\\&'
-    })
+    });
+    findAndReplaceDOMText($handoutContainer[0], {
+      find: /⫤⊨/g,
+      replace: '$\\leftmodels\\models$'
+    });
+    findAndReplaceDOMText($handoutContainer[0], {
+      find: /⫤/g,
+      replace: '$\\leftmodels$'
+    });
+    findAndReplaceDOMText($handoutContainer[0], {
+      find: /⊨/g,
+      replace: '$\\models$'
+    });
+    findAndReplaceDOMText($handoutContainer[0], {
+      find: /⊥/g,
+      replace: '$\\bot$'
+    });
+  
 		
   });
     

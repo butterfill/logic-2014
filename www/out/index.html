@@ -19,11 +19,11 @@
 	cursor: wait !important;
 	opacity: 0;
 	transition: opacity 0.5s ease;
-}</style><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap2.min.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/frontpage.css" />
+}</style><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap2.min.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-docs.css" /><link  rel="stylesheet" href="/styles/frontpage.css" />
   </head>
-  <body>
+  <body style="padding-top:0;">
     <div class="container">
-      <section id="content" class="content">
+      <section id="content" style="padding-top:0;" class="content">
 <html> 
   <body>
     <div class="hero-unit fade-in">
@@ -62,52 +62,67 @@
           <h2>Practical Info</h2>
           <p>For timings, past exam papers, permission to the take module as an unusual option and everything else, please see:</p>
           <ul>
-            <li><a target="_blank" href="http://www2.warwick.ac.uk/fac/soc/philosophy/undergraduate/modules/ph126/2013_14/">Logic I (PH126)</a></li>
+            <li><a target="_blank" href="http://www2.warwick.ac.uk/fac/soc/philosophy/undergraduate/modules/ph126/2013_14/">Logic I (PH126 & PH136)</a></li>
             <li><a target="_blank" href="http://www2.warwick.ac.uk/fac/soc/philosophy/undergraduate/modules/ph133/2013_14-term3/">Introduction to Philosophy (PH133)</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="span9">
+      <div class="span12">
         <div id="slides_and_handouts_regular">
           <h2>Slides and Handouts for Regular Lectures</h2>
           <p>You can find slides and handouts below, together with an outline of each lecture.</p>
           <p>Please note that these may be continuously revised.</p>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="sidebar" class="span4 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav"> 
+          <!--(data-spy="affix",data-offset-top="100",style="margin-top:250;")-->
+          <li><a href="#lecture_01"><i class="icon-chevron-right"></i>Lecture 01</a></li>
+          <li><a href="#lecture_02"><i class="icon-chevron-right"></i>Lecture 02</a></li>
+          <li><a href="#lecture_03"><i class="icon-chevron-right"></i>Lecture 03</a></li>
+          <li><a href="#lecture_04"><i class="icon-chevron-right"></i>Lecture 04</a></li>
+        </ul>
+      </div>
+      <div class="span8">
         <div id="lecture_01">
           <div class="page-header">
             <h2><a href="/lecture_01.html" target="_blank">Lecture 01</a></h2>
             <p>Date given: Tuesday 7th January 2014</p>
             <p> <a href="/lecture_01.html" target="_blank">slides</a> , <a href="/handouts/lecture_01.handout.pdf" target="_blank">handout [pdf]</a></p>
-            <div style="padding-left:2em;">
-              <h3><a href="/units/unit_01.html">The Pigs of Logic</a><span style="font-size:50%;color:grey;"> (01)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Explains the notion of a logically valid argument with an illustration involving two pigs.  Previews key ideas coming later.</p>
-              <p>Reading:  §1.1, §1.2, §2.1</p>
-              <h3><a href="/units/unit_011.html">Why Logic?</a><span style="font-size:50%;color:grey;"> (011)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Provides two reasons for studing logic, one abstract the other practical.</p>
-              <h3><a href="/units/unit_02.html">Quick Intro to Logiya (‘FOL’)</a><span style="font-size:50%;color:grey;"> (02)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Gives some examples of the formal language Logiya (called 'FOL' in the textbook) and explains their relation to ordinary English.  Also explains terms like 'name' and 'predicate'.</p>
-              <p>Reading:  §1.1, §1.2, §1.3</p>
-              <p>Exercises (regular): 1.1--1.5, *1.6, 1.8--1.10</p>
-              <h3><a href="/units/unit_03.html">Logically Valid Arguments</a><span style="font-size:50%;color:grey;"> (03)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Explains the notion of logically valid argument.  This is the central notion for this course.</p>
-              <p>Reading:  §2.1</p>
-              <p>Exercises (regular): 2.3, 2.4</p>
-              <h3><a href="/units/unit_04.html">Counterexamples</a><span style="font-size:50%;color:grey;"> (04)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Explains the notion of a counterexample.</p>
-              <p>Reading:  §2.5</p>
-              <p>Exercises (regular): 2.8, 2.10, 2.12, 2.21</p>
+            <div style="border-left: 1px dotted grey;margin-left: -1px;" class="units">
+              <div style="padding-left:2em;">
+                <h3><a href="/units/unit_01.html">The Pigs of Logic</a><span style="font-size:50%;color:grey;"> (01)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Explains the notion of a logically valid argument with an illustration involving two pigs.  Previews key ideas coming later.</p>
+                <p>Reading:  §1.1, §1.2, §2.1</p>
+                <h3><a href="/units/unit_011.html">Why Logic?</a><span style="font-size:50%;color:grey;"> (011)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Provides two reasons for studing logic, one abstract the other practical.</p>
+                <h3><a href="/units/unit_02.html">Quick Intro to Logiya (‘FOL’)</a><span style="font-size:50%;color:grey;"> (02)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Gives some examples of the formal language Logiya (called 'FOL' in the textbook) and explains their relation to ordinary English.  Also explains terms like 'name' and 'predicate'.</p>
+                <p>Reading:  §1.1, §1.2, §1.3</p>
+                <p>Exercises (regular): 1.1--1.5, *1.6, 1.8--1.10</p>
+                <h3><a href="/units/unit_03.html">Logically Valid Arguments</a><span style="font-size:50%;color:grey;"> (03)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Explains the notion of logically valid argument.  This is the central notion for this course.</p>
+                <p>Reading:  §2.1</p>
+                <p>Exercises (regular): 2.3, 2.4</p>
+                <h3><a href="/units/unit_04.html">Counterexamples</a><span style="font-size:50%;color:grey;"> (04)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Explains the notion of a counterexample.</p>
+                <p>Reading:  §2.5</p>
+                <p>Exercises (regular): 2.8, 2.10, 2.12, 2.21</p>
+              </div>
             </div>
           </div>
         </div>
@@ -116,42 +131,44 @@
             <h2><a href="/lecture_02.html" target="_blank">Lecture 02</a></h2>
             <p>Date given: Thursday 9th January 2014</p>
             <p> <a href="/lecture_02.html" target="_blank">slides</a> , <a href="/handouts/lecture_02.handout.pdf" target="_blank">handout [pdf]</a></p>
-            <div style="padding-left:2em;">
-              <h3><a href="/units/unit_013.html">Learning Objectives</a><span style="font-size:50%;color:grey;"> (013)</span></h3>
-              <p>Graphical depiction of learning objectives for this course.</p>
-              <h3><a href="/units/unit_05.html">Recap: Validity, Counterexamples</a><span style="font-size:50%;color:grey;"> (05)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Illustrates the notions of counterexample and validity with a simple example argument.</p>
-              <h3><a href="/units/unit_041.html">Soundness</a><span style="font-size:50%;color:grey;"> (041)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Explains the notion of a sound argument.</p>
-              <h3><a href="/units/unit_06.html">Identity</a><span style="font-size:50%;color:grey;"> (06)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Introduces the notion of identity used in studying first-order logic.  Includes example argument and the two principles.</p>
-              <p>Reading:  §2.2</p>
-              <p>Exercises (regular): 2.5, 2.6</p>
-              <h3><a href="/units/unit_135.html">Formalizing Arguments</a><span style="font-size:50%;color:grey;"> (135)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">translation</span> 
-              </p>
-              <p>Illustrates how for formalise simple arguments with the 'pigs' illustration.</p>
-              <p>Reading:  §3.7</p>
-              <h3><a href="/units/unit_012.html">Sentence Letters</a><span style="font-size:50%;color:grey;"> (012)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Explains what sentence letters are and why we use them.</p>
-              <h3><a href="/units/unit_071.html">Truth Tables</a><span style="font-size:50%;color:grey;"> (071)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Introduces truth tables for conjunction, disjunction and negation.  Truth tables give the meanings of connectives in our formal language Logiya.</p>
-              <p>Reading:  §3.1, §3.2, §3.3</p>
-              <p>Exercises (regular): 3.1, 3.2, 3.5, 3.7</p>
-              <h3><a href="/units/unit_60.html">Complex Truth Tables</a><span style="font-size:50%;color:grey;"> (60)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
-              </p>
-              <p>Illustrates how to construct complex truth tables with an example, not(P and Q).</p>
+            <div style="border-left: 1px dotted grey;margin-left: -1px;" class="units">
+              <div style="padding-left:2em;">
+                <h3><a href="/units/unit_013.html">Learning Objectives</a><span style="font-size:50%;color:grey;"> (013)</span></h3>
+                <p>Graphical depiction of learning objectives for this course.</p>
+                <h3><a href="/units/unit_05.html">Recap: Validity, Counterexamples</a><span style="font-size:50%;color:grey;"> (05)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Illustrates the notions of counterexample and validity with a simple example argument.</p>
+                <h3><a href="/units/unit_041.html">Soundness</a><span style="font-size:50%;color:grey;"> (041)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Explains the notion of a sound argument.</p>
+                <h3><a href="/units/unit_06.html">Identity</a><span style="font-size:50%;color:grey;"> (06)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Introduces the notion of identity used in studying first-order logic.  Includes example argument and the two principles.</p>
+                <p>Reading:  §2.2</p>
+                <p>Exercises (regular): 2.5, 2.6</p>
+                <h3><a href="/units/unit_135.html">Formalizing Arguments</a><span style="font-size:50%;color:grey;"> (135)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">translation</span> 
+                </p>
+                <p>Illustrates how for formalise simple arguments with the 'pigs' illustration.</p>
+                <p>Reading:  §3.7</p>
+                <h3><a href="/units/unit_012.html">Sentence Letters</a><span style="font-size:50%;color:grey;"> (012)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Explains what sentence letters are and why we use them.</p>
+                <h3><a href="/units/unit_071.html">Truth Tables</a><span style="font-size:50%;color:grey;"> (071)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Introduces truth tables for conjunction, disjunction and negation.  Truth tables give the meanings of connectives in our formal language Logiya.</p>
+                <p>Reading:  §3.1, §3.2, §3.3</p>
+                <p>Exercises (regular): 3.1, 3.2, 3.5, 3.7</p>
+                <h3><a href="/units/unit_60.html">Complex Truth Tables</a><span style="font-size:50%;color:grey;"> (60)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
+                </p>
+                <p>Illustrates how to construct complex truth tables with an example, not(P and Q).</p>
+              </div>
             </div>
           </div>
         </div>
@@ -160,58 +177,60 @@
             <h2><a href="/lecture_03.html" target="_blank">Lecture 03</a></h2>
             <p>Date given: Tuesday 14th January 2014</p>
             <p> <a href="/lecture_03.html" target="_blank">slides</a> , <a href="/handouts/lecture_03.handout.pdf" target="_blank">handout [pdf]</a></p>
-            <div style="padding-left:2em;">
-              <h3><a href="/units/unit_14.html">Logical Validity and Truth Tables</a><span style="font-size:50%;color:grey;"> (14)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
-              </p>
-              <p>Illustrates the use of truth tables to determine logical validity.</p>
-              <p>Reading:  §4.3</p>
-              <p>Exercises (regular): 5.1-5.4</p>
-              <h3><a href="/units/unit_211.html">Formal Proof</a><span style="font-size:50%;color:grey;"> (211)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> 
-              </p>
-              <p>Marks the transition from truth-tables, in which the notion of truth plays a central role, to fitch proofs which are purely formal entities.</p>
-              <h3><a href="/units/unit_213.html">Translating a Simple Argument</a><span style="font-size:50%;color:grey;"> (213)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">translation</span> 
-              </p>
-              <p>Illustrates how to translate an argument from English into our formal language Logiya.</p>
-              <p>Reading:  §3.2</p>
-              <h3><a href="/units/unit_21.html">Formal Proof: ∧Elim and ∧Intro</a><span style="font-size:50%;color:grey;"> (21)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Introduces and illustrates the use of rules of proof for conjunction.</p>
-              <p>Reading:  §5.1, §6.1</p>
-              <p>Exercises (regular): 6.1</p>
-              <h3><a href="/units/unit_073.html">Truth Tables Are Stipulations</a><span style="font-size:50%;color:grey;"> (073)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> <span class="label label-info">semantics</span> 
-              </p>
-              <p>Sometimes people think that one or other of the truth tables for a connective is wrong.  These thoughts are always mistaken. The truth tables for the connectives are stipulations about their meanings.</p>
-              <h3><a href="/units/unit_110.html">Rules of Proof for Identity</a><span style="font-size:50%;color:grey;"> (110)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> 
-              </p>
-              <p>Introduces and illustrates the rules of proof for identity, =Intro and =Elim.</p>
-              <p>Reading:  §2.2</p>
-              <h3><a href="/units/unit_130.html">How to Write Proofs</a><span style="font-size:50%;color:grey;"> (130)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
-              </p>
-              <p>Describes how to write proofs.</p>
-              <h3><a href="/units/unit_09.html">Complex Truth Tables</a><span style="font-size:50%;color:grey;"> (09)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
-              </p>
-              <p>Illustrates how to construct complex truth-tables with an example, the truth-table for (P and Q) or R.  Also describes how to order the reference columns.</p>
-              <p>Reading:  §3.3, §3.5</p>
-              <p>Exercises (regular): 3.12, 3.13, 4.4-4.7, 4.12-14</p>
-              <h3><a href="/units/unit_161.html">Logic Makes Me Die Inside</a><span style="font-size:50%;color:grey;"> (161)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definition</span> 
-              </p>
-              <p>Is the definition of logical validity flawed?</p>
-              <p>Reading:  §2.1</p>
-              <h3><a href="/units/unit_160.html">Tautologies and Contradictions</a><span style="font-size:50%;color:grey;"> (160)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
-              </p>
-              <p>Illustrates and defines the terms 'tautology' and 'contradiction'.  Explains how they interact with the notion of logical validity using two arguments to illustrate.  Continues the use of truth-tables to demonstrate logical validity. Notes that logical validity is not what you think it is.</p>
-              <p>Reading:  §4.1, §4.2</p>
-              <p>Exercises (regular): 4.1, 4.2</p>
+            <div style="border-left: 1px dotted grey;margin-left: -1px;" class="units">
+              <div style="padding-left:2em;">
+                <h3><a href="/units/unit_14.html">Logical Validity and Truth Tables</a><span style="font-size:50%;color:grey;"> (14)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
+                </p>
+                <p>Illustrates the use of truth tables to determine logical validity.</p>
+                <p>Reading:  §4.3</p>
+                <p>Exercises (regular): 5.1-5.4</p>
+                <h3><a href="/units/unit_211.html">Formal Proof</a><span style="font-size:50%;color:grey;"> (211)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> 
+                </p>
+                <p>Marks the transition from truth-tables, in which the notion of truth plays a central role, to fitch proofs which are purely formal entities.</p>
+                <h3><a href="/units/unit_213.html">Translating a Simple Argument</a><span style="font-size:50%;color:grey;"> (213)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">translation</span> 
+                </p>
+                <p>Illustrates how to translate an argument from English into our formal language Logiya.</p>
+                <p>Reading:  §3.2</p>
+                <h3><a href="/units/unit_21.html">Formal Proof: ∧Elim and ∧Intro</a><span style="font-size:50%;color:grey;"> (21)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Introduces and illustrates the use of rules of proof for conjunction.</p>
+                <p>Reading:  §5.1, §6.1</p>
+                <p>Exercises (regular): 6.1</p>
+                <h3><a href="/units/unit_073.html">Truth Tables Are Stipulations</a><span style="font-size:50%;color:grey;"> (073)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> <span class="label label-info">semantics</span> 
+                </p>
+                <p>Sometimes people think that one or other of the truth tables for a connective is wrong.  These thoughts are always mistaken. The truth tables for the connectives are stipulations about their meanings.</p>
+                <h3><a href="/units/unit_110.html">Rules of Proof for Identity</a><span style="font-size:50%;color:grey;"> (110)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> 
+                </p>
+                <p>Introduces and illustrates the rules of proof for identity, =Intro and =Elim.</p>
+                <p>Reading:  §2.2</p>
+                <h3><a href="/units/unit_130.html">How to Write Proofs</a><span style="font-size:50%;color:grey;"> (130)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definitions</span> 
+                </p>
+                <p>Describes how to write proofs.</p>
+                <h3><a href="/units/unit_09.html">Complex Truth Tables</a><span style="font-size:50%;color:grey;"> (09)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
+                </p>
+                <p>Illustrates how to construct complex truth-tables with an example, the truth-table for (P and Q) or R.  Also describes how to order the reference columns.</p>
+                <p>Reading:  §3.3, §3.5</p>
+                <p>Exercises (regular): 3.12, 3.13, 4.4-4.7, 4.12-14</p>
+                <h3><a href="/units/unit_161.html">Logic Makes Me Die Inside</a><span style="font-size:50%;color:grey;"> (161)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">definition</span> 
+                </p>
+                <p>Is the definition of logical validity flawed?</p>
+                <p>Reading:  §2.1</p>
+                <h3><a href="/units/unit_160.html">Tautologies and Contradictions</a><span style="font-size:50%;color:grey;"> (160)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
+                </p>
+                <p>Illustrates and defines the terms 'tautology' and 'contradiction'.  Explains how they interact with the notion of logical validity using two arguments to illustrate.  Continues the use of truth-tables to demonstrate logical validity. Notes that logical validity is not what you think it is.</p>
+                <p>Reading:  §4.1, §4.2</p>
+                <p>Exercises (regular): 4.1, 4.2</p>
+              </div>
             </div>
           </div>
         </div>
@@ -220,49 +239,51 @@
             <h2><a href="/lecture_04.html" target="_blank">Lecture 04</a></h2>
             <p>Date given: Thursday 16th January 2014</p>
             <p> <a href="/lecture_04.html" target="_blank">slides</a> , <a href="/handouts/lecture_04.handout.pdf" target="_blank">handout [pdf]</a></p>
-            <div style="padding-left:2em;">
-              <h3><a href="/units/unit_212.html">∧Intro and ∨Intro: Compare and Contrast</a><span style="font-size:50%;color:grey;"> (212)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> 
-              </p>
-              <p>Contrasts two rules of proof and explores how their differences are related to truth-tables.</p>
-              <p>Reading:  §6.1</p>
-              <h3><a href="/units/unit_111.html">Formal Proof</a><span style="font-size:50%;color:grey;"> (111)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> 
-              </p>
-              <p>Explains that Fitch is a formal (non-sematic) system of proof by highlighting an incorrect use of =Elim.</p>
-              <h3><a href="/units/unit_232.html">¬P ∨ ¬Q compared with ¬(P ∨ Q)</a><span style="font-size:50%;color:grey;"> (232)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">syntax</span> 
-              </p>
-              <p>Explains how the brackets make a different to the meanings of sentences.  Illustrates by comparing ¬P ∨ ¬Q with ¬(P ∨ Q).</p>
-              <p>Reading:  §3.5</p>
-              <p>Exercises (regular): 3.20, 3.21, 3.22</p>
-              <h3><a href="/units/unit_072.html">Truth-functional Connectives</a><span style="font-size:50%;color:grey;"> (072)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> <span class="label label-info">semantics</span> 
-              </p>
-              <p>Explains the notion of a truth-functional connective.  Discussion of why 'because' could not have a truth table.</p>
-              <p>Exercises (regular): 7.9</p>
-              <h3><a href="/units/unit_162.html">Tautologies and Contradictions: More</a><span style="font-size:50%;color:grey;"> (162)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
-              </p>
-              <p>Illustrates and defines the terms 'tautology' and 'contradiction' with some quotes from George Bush.</p>
-              <h3><a href="/units/unit_151.html">A ∧ B ∨ C</a><span style="font-size:50%;color:grey;"> (151)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> <span class="label label-info">syntax</span> 
-              </p>
-              <p>Distinguishes lexical from structural ambiguity.  Asks how we can know there is no structural ambiguity in our formal language Logiya.</p>
-              <p>Reading:  §3.5</p>
-              <h3><a href="/units/unit_153.html">A ∧ B ∨ C: the Truth-tables</a><span style="font-size:50%;color:grey;"> (153)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
-              </p>
-              <p>Illustrates how to construct complex truth tables for (A ∧ B) ∨ C and A ∧ (B ∨ C).</p>
-              <h3><a href="/units/unit_154.html">A ∧ B ∨ C: They Are Different</a><span style="font-size:50%;color:grey;"> (154)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
-              </p>
-              <p>Uses two arguments to show that (A ∧ B) ∨ C and A ∧ (B ∨ C) really are different.</p>
-              <p>Exercises (regular): 3.14, 3.15</p>
-              <h3><a href="/units/unit_170.html">Ambiguity</a><span style="font-size:50%;color:grey;"> (170)</span></h3>
-              <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">syntax</span> 
-              </p>
-              <p>What is the source of ambiguity in natural languages?  Depicts two structures for Groucho Marx' utterance 'I shot an elephant in my pyjamas'.</p>
+            <div style="border-left: 1px dotted grey;margin-left: -1px;" class="units">
+              <div style="padding-left:2em;">
+                <h3><a href="/units/unit_212.html">∧Intro and ∨Intro: Compare and Contrast</a><span style="font-size:50%;color:grey;"> (212)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> 
+                </p>
+                <p>Contrasts two rules of proof and explores how their differences are related to truth-tables.</p>
+                <p>Reading:  §6.1</p>
+                <h3><a href="/units/unit_111.html">Formal Proof</a><span style="font-size:50%;color:grey;"> (111)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> 
+                </p>
+                <p>Explains that Fitch is a formal (non-sematic) system of proof by highlighting an incorrect use of =Elim.</p>
+                <h3><a href="/units/unit_232.html">¬P ∨ ¬Q compared with ¬(P ∨ Q)</a><span style="font-size:50%;color:grey;"> (232)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">syntax</span> 
+                </p>
+                <p>Explains how the brackets make a different to the meanings of sentences.  Illustrates by comparing ¬P ∨ ¬Q with ¬(P ∨ Q).</p>
+                <p>Reading:  §3.5</p>
+                <p>Exercises (regular): 3.20, 3.21, 3.22</p>
+                <h3><a href="/units/unit_072.html">Truth-functional Connectives</a><span style="font-size:50%;color:grey;"> (072)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> <span class="label label-info">semantics</span> 
+                </p>
+                <p>Explains the notion of a truth-functional connective.  Discussion of why 'because' could not have a truth table.</p>
+                <p>Exercises (regular): 7.9</p>
+                <h3><a href="/units/unit_162.html">Tautologies and Contradictions: More</a><span style="font-size:50%;color:grey;"> (162)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
+                </p>
+                <p>Illustrates and defines the terms 'tautology' and 'contradiction' with some quotes from George Bush.</p>
+                <h3><a href="/units/unit_151.html">A ∧ B ∨ C</a><span style="font-size:50%;color:grey;"> (151)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">proof</span> <span class="label label-info">syntax</span> 
+                </p>
+                <p>Distinguishes lexical from structural ambiguity.  Asks how we can know there is no structural ambiguity in our formal language Logiya.</p>
+                <p>Reading:  §3.5</p>
+                <h3><a href="/units/unit_153.html">A ∧ B ∨ C: the Truth-tables</a><span style="font-size:50%;color:grey;"> (153)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
+                </p>
+                <p>Illustrates how to construct complex truth tables for (A ∧ B) ∨ C and A ∧ (B ∨ C).</p>
+                <h3><a href="/units/unit_154.html">A ∧ B ∨ C: They Are Different</a><span style="font-size:50%;color:grey;"> (154)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">truth-tables</span> 
+                </p>
+                <p>Uses two arguments to show that (A ∧ B) ∨ C and A ∧ (B ∨ C) really are different.</p>
+                <p>Exercises (regular): 3.14, 3.15</p>
+                <h3><a href="/units/unit_170.html">Ambiguity</a><span style="font-size:50%;color:grey;"> (170)</span></h3>
+                <p style="text-align:right;margin:0;padding:0;margin-top:-2.5em;"> <span class="label label-info">syntax</span> 
+                </p>
+                <p>What is the source of ambiguity in natural languages?  Depicts two structures for Groucho Marx' utterance 'I shot an elephant in my pyjamas'.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -272,7 +293,7 @@
 </html></section>
       <hr>
       <footer style="padding-bottom: 30px;">
-        <div style="font-style:italic; font-size: 12px">Last updated at Wed Jan 08 2014 20:43:52 GMT+0000 (GMT)</div>
+        <div style="font-style:italic; font-size: 12px">Last updated at Tue Jan 14 2014 10:52:24 GMT+0000 (GMT)</div>
       </footer>
     </div>
     <!-- Scripts--><script >(function(){
@@ -320,6 +341,6 @@ var inject = function(){
 	} else {
 		inject();
 	}
-})();</script><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.custom.01932.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+})();</script><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.custom.01932.js"></script><script defer="defer"  src="/vendor/waypoints.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
   </body>
 </html>

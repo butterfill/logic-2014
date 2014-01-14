@@ -132,14 +132,13 @@ var inject = function(){
 </div>
 <div class="notes notes-header-tex">&nbsp;</div>
 <div class="notes notes-header-tex">\section{Formal Proof}</div>
-<!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
-<!-- create title slide for a lecture-->
-<!-- param p contains document and images (an array of images to use)-->
-<!-- param p contains p.unit and p.images (an array of images)-->
-<!-- see also +clip to modify the clip as an animation-->
-<!-- ------------>
-<!-- draw things-->
-<!-- ------------>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
 <section id="formal_proof" class="slide">
   <div id="valid_df_831">
     <div style="width:230px;position:absolute;top:20px;left:500px;" class="white-box">
@@ -159,8 +158,10 @@ var inject = function(){
         </div>
       </div>
     </div>
-    <div data-what="#highlight-hook831" data-class="bkg-grey-row" class="slide anim-addclass"></div>
-    <div data-what="#highlight-832" data-class="bkg-words-highlight-red" class="slide anim-addclass"></div>
+    <div data-what=" #highlight-hook831" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+    <div data-what=" #highlight-832" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
   </div>
   <div class="slide">
     <div class="clear"></div>
@@ -223,7 +224,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">See how we have P in a premise and P in the conclusion?</div>
       </div>
     </div>
   </div>
@@ -232,7 +233,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">We have to get the P out of the conjunction and back into the conclusion.</div>
       </div>
     </div>
   </div>
@@ -241,7 +242,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">How can we get P out of this premise?</div>
       </div>
     </div>
   </div>
@@ -250,7 +251,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">First we have to ask, What's the connective?</div>
       </div>
     </div>
   </div>
@@ -259,7 +260,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">The connective is conjunction.  This tells us we want to use a conjunction-rule.  But is it the introduction or elimination rule that we need?</div>
       </div>
     </div>
   </div>
@@ -268,7 +269,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">It's elimination.  Nearly always we need elimination when we're acting on premises.</div>
       </div>
     </div>
   </div>
@@ -277,7 +278,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">See how the rule matches our premise.</div>
       </div>
     </div>
   </div>
@@ -295,7 +296,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Now having used the rule we have to explain exactly what we've done.  This requires two things ...</div>
       </div>
     </div>
   </div>
@@ -304,7 +305,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">We must cite the rule used.</div>
       </div>
     </div>
   </div>
@@ -313,7 +314,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">And we must cite the lines we applied the rule to.</div>
       </div>
     </div>
   </div>
@@ -331,7 +332,9 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Getting the R out of the second premise can be done in exactly the same way.</div>
+        <div class="notes">Now, how are we going to get to the conclusion?</div>
+        <div class="notes">In general, we use introduction rules to get to the conclusion.  And since this conclusion is a conjunction, we'll use conjunction-intro to get to it.</div>
       </div>
     </div>
   </div>
@@ -340,7 +343,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Look at the rule for conjunction intro. </div>
       </div>
     </div>
   </div>
@@ -349,7 +352,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">See how our proof fits the pattern of the rule.</div>
       </div>
     </div>
   </div>
@@ -358,7 +361,8 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">So it turns out we already did what we need for conjunction intro.  </div>
+        <div class="notes">All that's left is to explain what we've done.  As before this requres two things.</div>
       </div>
     </div>
   </div>
@@ -367,7 +371,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">We must cite the rule used.</div>
       </div>
     </div>
   </div>
@@ -376,7 +380,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">And we must cite the lines we applied the rule to.</div>
       </div>
     </div>
   </div>
@@ -385,7 +389,8 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">Note the pattern of rules that we have for conjunction: introduction and elimination.</div>
+        <div class="notes">For each connective we'll have such a pair of rules, one introduction rule and one elimination rule.</div>
       </div>
     </div>
   </div>
@@ -394,7 +399,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">With the elimination rule, we have the connective at the start and we eliminate it in applying the rule.</div>
       </div>
     </div>
   </div>
@@ -403,7 +408,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">See how this worked in our proof.</div>
       </div>
     </div>
   </div>
@@ -412,7 +417,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="notes">With the introduction rule, we don't have the connective at the start and we introduce it by appling the rule. </div>
       </div>
     </div>
   </div>
@@ -421,7 +426,7 @@ var inject = function(){
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"></div>
+        <div class="notes">Here's how we did it in the proof.</div>
       </div>
     </div>
   </div>
@@ -453,6 +458,16 @@ var inject = function(){
     <div class="container_12">
       <div class="grid_12">
         <div class="notes"> </div>
+        <div data-src="img/rule_disjunction_intro.png" class="img handout"></div>
+        <div data-src="img/proof_unit_212" class="img handout"></div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">Let us define a new connective with this truth table:</div>
+        <div data-src="img/tt_not_equivalent.png" class="img handout"></div>
+        <div class="handout">\end{minipage}</div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">The following rule is unacceptable.  Why?</div>
+        <div data-src="img/rule_not_equivalent_intro_wrong.png" class="img handout"></div>
+        <div class="handout">\end{minipage}</div>
       </div>
     </div>
   </div>
@@ -754,7 +769,85 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section id="unit_110" class="slide"><img src="/img/bkg/sunset/PC175704.JPG" class="bkg"/>
+<section id="unit_130" class="slide"><img src="/img/bkg/sunset/PC175704.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">How to Write Proofs</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{How to Write Proofs}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{How to Write Proofs}</div>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_130/slide-031.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/how_to_write_proofs.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_130/slide-032.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_130/slide-033.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_130/slide-034.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_130/slide-035.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">Fast track and normal seminars have <span class="diff">different exercises.</span></p>
+          <div data-what=" .diff" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_110" class="slide"><img src="/img/bkg/sunset/PC175705.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
@@ -781,6 +874,7 @@ var inject = function(){
         <div class="notes"> </div>
         <div data-src="img/rule_identity_intro.png" class="img handout"></div>
         <div data-src="img/rule_identity_elim.png" class="img handout"></div>
+        <div data-src="img/proof_identity_example.png" class="img handout"></div>
       </div>
     </div>
   </div>
@@ -983,7 +1077,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section id="unit_235" class="slide"><img src="/img/bkg/sunset/PC175705.JPG" class="bkg"/>
+<section id="unit_235" class="slide"><img src="/img/bkg/sunset/PC175709.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
@@ -1005,6 +1099,12 @@ var inject = function(){
 <!-- draw things-->
 <!-- ------------>
 <div class="slide">
+  <div class="handout">`$\leftmodels\models$' means `is logically equivalent to', so for now `has the same truth table as'.</div>
+  <div class="handout">A $\leftmodels\models$ ¬¬A</div>
+  <div class="handout">¬(A ∧ B)  $\leftmodels\models$ (¬A ∨ ¬B)</div>
+  <div class="handout">¬(A ∨ B)  $\leftmodels\models$ (¬A ∧ ¬B)</div>
+  <div class="handout">A → B  $\leftmodels\models$ ¬A ∨ B</div>
+  <div class="handout">¬(A → B) $\leftmodels\models$ ¬(¬A ∨ B) $\leftmodels\models$ 	A ∧ ¬B</div>
   <div class="words">
     <div class="container_12">
       <div id="YASDC">
@@ -1380,14 +1480,485 @@ var inject = function(){
 </div>
 <div class="exercises">3.19</div>
 <div class="exercises_fast">3.19</div>
-<section id="unit_221" class="slide"><img src="/img/bkg/sunset/PC175709.JPG" class="bkg"/>
+<div class="exercises_fast">4.31</div>
+<section id="unit_390" class="slide"><img src="/img/bkg/sunset/PC175714.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
-      <h2 class="title1">∨Elim: An Example</h2>
+      <h2 class="title1">→Intro, →Elim</h2>
     </div>
   </div>
 </section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{→Intro, →Elim}</div>
+<div class="handout">\emph{Reading:}  §8.1, §8.2</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{→Intro, →Elim}</div>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_390/slide-038.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/rule_arrow_intro.png" class="img handout"></div>
+        <div data-src="img/rule_arrow_elim.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-039.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-040.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-041.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-042.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-043.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-044.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-045.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-046.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-047.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-048.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-049.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-050.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-051.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-052.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-053.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-054.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-055.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-056.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-057.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-058.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-059.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-060.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-061.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-062.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-063.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-064.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-065.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-066.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-067.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-068.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-069.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-070.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_390/slide-071.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{→Intro: An Example}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{→Intro: An Example}</div>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_391/slide-072.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/proof_arrow_intro.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-073.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-074.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-075.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-076.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-077.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-078.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-079.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-080.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-081.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-082.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-083.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-084.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_391/slide-085.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_222" class="slide"><img src="/img/bkg/sunset/PC175720.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">∨Intro and ∨Elim</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{∨Intro and ∨Elim}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{∨Intro and ∨Elim}</div>
 <!---->
 <!-- short form:-->
 <!--  remove_class('.blur')-->
@@ -1400,6 +1971,8 @@ var inject = function(){
     <div class="container_12">
       <div class="grid_12">
         <div class="notes"> </div>
+        <div data-src="img/rule_disjunction_intro.png" class="img handout"></div>
+        <div data-src="img/rule_disjunction_elim.png" class="img handout"></div>
       </div>
     </div>
   </div>
@@ -1431,6 +2004,10 @@ var inject = function(){
     </div>
   </div>
 </section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{∨Elim: An Example}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{∨Elim: An Example}</div>
 <!---->
 <!-- short form:-->
 <!--  remove_class('.blur')-->
@@ -1443,6 +2020,8 @@ var inject = function(){
     <div class="container_12">
       <div class="grid_12">
         <div class="notes"> </div>
+        <div class="handout">To prove a conclusion from a disjunction, prove it from each disjunct.</div>
+        <div data-src="img/proof_disjunction_elim.png" class="img handout"></div>
       </div>
     </div>
   </div>
@@ -1609,18 +2188,19 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section id="unit_072" class="slide"><img src="/img/bkg/sunset/PC175714.JPG" class="bkg"/>
+<section id="unit_270" class="slide"><img src="/img/bkg/sunset/PC175723.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
-      <h2 class="title1">Truth-functional Connectives</h2>
+      <h2 class="title1">¬, ⊥</h2>
     </div>
   </div>
 </section>
 <div class="handout">&nbsp;</div>
-<div class="handout">\section{Truth-functional Connectives}</div>
+<div class="handout">\section{¬, ⊥}</div>
+<div class="handout">\emph{Reading:}  §6.3</div>
 <div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{Truth-functional Connectives}</div>
+<div class="notes notes-header-tex">\section{¬, ⊥}</div>
 <!---->
 <!-- short form:-->
 <!--  remove_class('.blur')-->
@@ -1628,7 +2208,19 @@ var inject = function(){
 <!--  remove_class('.elements', 'blur')-->
 <!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
 <!---->
-<section class="slide"><img src="/img/unit_072/slide-b-000.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-005.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/tt_contradiction.png" class="img handout"></div>
+        <div data-src="img/rule_contradiction_intro.png" class="img handout"></div>
+        <div data-src="img/rule_contradiction_elim.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-006.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1637,7 +2229,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-001.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-007.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1646,7 +2238,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-002.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-008.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1655,7 +2247,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-003.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-009.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1664,7 +2256,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-004.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-010.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1673,7 +2265,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-005.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-011.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1682,7 +2274,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-006.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-012.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1691,7 +2283,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-007.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-013.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1700,7 +2292,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-008.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-014.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1709,7 +2301,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-009.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-015.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1718,7 +2310,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-010.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-016.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1727,7 +2319,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-011.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-017.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1736,7 +2328,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-012.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-018.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1745,7 +2337,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-013.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-019.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1754,7 +2346,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-014.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-020.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1763,7 +2355,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-015.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-021.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1772,7 +2364,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-016.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-022.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1781,7 +2373,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-017.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-023.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1790,7 +2382,7 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-018.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-024.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1799,7 +2391,115 @@ var inject = function(){
     </div>
   </div>
 </section>
-<section class="slide"><img src="/img/unit_072/slide-b-019.jpeg" class="bkg"/>
+<section class="slide"><img src="/img/unit_270/slide-025.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-026.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-027.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-028.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-029.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-030.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-031.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-032.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-033.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-034.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-035.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-036.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_270/slide-037.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
@@ -1808,9 +2508,612 @@ var inject = function(){
     </div>
   </div>
 </section>
-<div class="exercises">7.9</div>
-<div class="exercises_fast">7.9</div>
-<section id="unit_111" class="slide"><img src="/img/bkg/sunset/PC175720.JPG" class="bkg"/>
+<section id="unit_280" class="slide"><img src="/img/bkg/sunset/PC175730.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">¬Elim</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{¬Elim}</div>
+<div class="handout">\emph{Reading:}  §6.3</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{¬Elim}</div>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_280/slide-078.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/rule_negation_elim.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-079.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-080.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-081.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-082.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-083.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-084.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-085.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-086.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-087.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-088.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-089.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-090.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-091.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-092.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-093.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-094.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-095.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-096.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_280/slide-097.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Scope: A Mistaken Application of ¬Elim}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Scope: A Mistaken Application of ¬Elim}</div>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_291/slide-094.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div class="handout">What is wrong with this proof?</div>
+        <div data-src="img/proof_negation_elim_wrong.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_291/slide-095.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_291/slide-096.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_291/slide-097.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_291/slide-098.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_291/slide-099.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_291/slide-100.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_291/slide-101.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_281" class="slide"><img src="/img/bkg/sunset/PC175731.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">¬Intro</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{¬Intro}</div>
+<div class="handout">\emph{Reading:}  §5.3, §6.3</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{¬Intro}</div>
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_281/slide-102.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/rule_negation_intro.png" class="img handout"></div>
+        <div data-src="img/proof_example_unit_281.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-103.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-104.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-105.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-106.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-107.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-108.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-109.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-110.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-111.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-112.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-113.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-114.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-115.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-116.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-117.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-118.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-119.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-120.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-121.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-122.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-123.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-124.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-125.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-126.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-127.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-128.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-129.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-130.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-131.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-132.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_281/slide-133.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">6.7</div>
+<div class="exercises">6.8</div>
+<div class="exercises">6.24</div>
+<div class="exercises">6.25</div>
+<div class="exercises">6.26</div>
+<div class="exercises_fast">6.7--6.12</div>
+<div class="exercises_fast">6.18--6.20</div>
+<div class="exercises_fast">6.24--6.27</div>
+<div class="exercises_fast">*6.40--6.42</div>
+<section id="unit_111" class="slide"><img src="/img/bkg/sunset/APC175703.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
@@ -1818,8 +3121,6 @@ var inject = function(){
     </div>
   </div>
 </section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{Formal Proof}</div>
 <div class="notes notes-header-tex">&nbsp;</div>
 <div class="notes notes-header-tex">\section{Formal Proof}</div>
 <!---->
@@ -1893,1168 +3194,6 @@ var inject = function(){
   </div>
 </section>
 <section class="slide"><img src="/img/unit_111/slide-183.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="unit_151" class="slide"><img src="/img/bkg/sunset/PC175723.JPG" class="bkg"/>
-  <div class="spacer">&nbsp;</div>
-  <div style="" class="title-block">
-    <div class="title-container">
-      <h2 class="title1">A ∧ B ∨ C</h2>
-    </div>
-  </div>
-</section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{A ∧ B ∨ C}</div>
-<div class="handout">\emph{Reading:}  §3.5</div>
-<div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{A ∧ B ∨ C}</div>
-<!---->
-<!-- short form:-->
-<!--  remove_class('.blur')-->
-<!-- long forms:-->
-<!--  remove_class('.elements', 'blur')-->
-<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
-<!---->
-<section class="slide"><img src="/img/unit_151/slide-082.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_151/slide-083.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_151/slide-084.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_151/slide-085.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_151/slide-086.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_151/slide-087.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_151/slide-088.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{A ∧ B ∨ C: the Truth-tables (quick version)}</div>
-<div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{A ∧ B ∨ C: the Truth-tables (quick version)}</div>
-<!---->
-<!-- short form:-->
-<!--  remove_class('.blur')-->
-<!-- long forms:-->
-<!--  remove_class('.elements', 'blur')-->
-<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
-<!---->
-<section class="slide"><img src="/img/unit_152/slide-120.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-121.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-122.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-123.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-124.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-125.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-126.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-127.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-128.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-129.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-130.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-131.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-132.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-133.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_152/slide-134.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{A ∧ B ∨ C: They Are Different}</div>
-<div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{A ∧ B ∨ C: They Are Different}</div>
-<!---->
-<!-- short form:-->
-<!--  remove_class('.blur')-->
-<!-- long forms:-->
-<!--  remove_class('.elements', 'blur')-->
-<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
-<!---->
-<section class="slide"><img src="/img/unit_154/slide-128.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-129.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-130.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-131.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-132.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-133.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-134.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-135.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-136.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-137.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-138.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-139.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-140.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-141.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_154/slide-142.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="exercises">3.14, 3.15</div>
-<div class="exercises_fast">3.14, 3.15</div>
-<section id="unit_170" class="slide"><img src="/img/bkg/sunset/PC175730.JPG" class="bkg"/>
-  <div class="spacer">&nbsp;</div>
-  <div style="" class="title-block">
-    <div class="title-container">
-      <h2 class="title1">Ambiguity</h2>
-    </div>
-  </div>
-</section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{Ambiguity}</div>
-<div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{Ambiguity}</div>
-<!---->
-<!-- short form:-->
-<!--  remove_class('.blur')-->
-<!-- long forms:-->
-<!--  remove_class('.elements', 'blur')-->
-<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
-<!---->
-<section class="slide"><img src="/img/unit_170/slide-156.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-157.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-158.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-159.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-160.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-161.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-162.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-163.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-164.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-165.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-166.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-167.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-168.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-169.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-170.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-171.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-172.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-173.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-174.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-175.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-176.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-177.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-178.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-179.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_170/slide-180.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="unit_230" class="slide"><img src="/img/bkg/sunset/PC175731.JPG" class="bkg"/>
-  <div class="spacer">&nbsp;</div>
-  <div style="" class="title-block">
-    <div class="title-container">
-      <h2 class="title1">The Syntax of Logiya</h2>
-    </div>
-  </div>
-</section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{The Syntax of Logiya}</div>
-<div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{The Syntax of Logiya}</div>
-<!---->
-<!-- short form:-->
-<!--  remove_class('.blur')-->
-<!-- long forms:-->
-<!--  remove_class('.elements', 'blur')-->
-<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
-<!---->
-<section class="slide"><img src="/img/unit_230/slide-012.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-013.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-014.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-015.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-016.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-017.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-018.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-019.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-020.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-021.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-022.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-023.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-024.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-025.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-026.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-027.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-028.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-029.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-030.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-031.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-032.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-033.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-034.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-035.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-036.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-037.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-038.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-039.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-040.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-041.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-042.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-043.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-044.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-045.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-046.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-047.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-048.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-049.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-050.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-051.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-052.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-053.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-054.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-055.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-056.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-057.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-058.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-059.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-060.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-061.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-062.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-063.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-064.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-065.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-066.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-067.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-068.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_230/slide-069.jpeg" class="bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_12">

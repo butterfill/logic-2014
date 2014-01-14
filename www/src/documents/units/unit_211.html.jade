@@ -9,12 +9,13 @@ sequence: 180
 handout: false
 ---
 
-include ../../../fragments/slide_mixins
+include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
 
 
 section#formal_proof.slide
   #valid_df_831
-    mixin df_valid({reveal:true})
+    +df_valid({reveal:true})
   .slide
     .words: .container_12: .grid_8
       p Two ways to show that an argument is logically valid:
@@ -25,15 +26,15 @@ section#formal_proof.slide
           | fitch proof 
           span#highlight-832 (formal)
     //- must be sub slides to prevent fade effect
-    .slide.anim-addclass(data-what="#highlight-hook831", data-class="bkg-grey-row")
-    .slide.anim-addclass(data-what="#highlight-832", data-class="bkg-words-highlight-red")
+    +highlight-row('#highlight-hook831')
+    +highlight('#highlight-832', 'red')
   .slide
     .clear
     .bottom-third-white.invert
       .container_12.half-above.compress
         .grid_4.prefix_2
           ∧Elim
-          mixin fitch_proof({premises:[], lines:[['P1 ∧ P2'],['...'],['Pi']], no_line_numbers:true})
+          +fitch_proof({premises:[], lines:[['P1 ∧ P2'],['...'],['Pi']], no_line_numbers:true})
         //-
           .slide.grid_4.prefix_2
             ∧Intro

@@ -8,9 +8,11 @@
 //- Bootstrap
 - scripts.add(["/vendor/twitter-bootstrap/js/bootstrap.min.js"])
 - styles.add(["/vendor/twitter-bootstrap/css/bootstrap2.min.css","/vendor/twitter-bootstrap/css/bootstrap-responsive.min.css"])
+- styles.add(["/vendor/twitter-bootstrap/css/bootstrap-docs.css"])
 
 //- Other Scripts
 - scripts.add(["/vendor/log.js","/vendor/modernizr.custom.01932.js"])
+- scripts.add(["/vendor/waypoints.min.js"])
 
 //- User
 - scripts.add(["/scripts/script.js"])
@@ -60,10 +62,10 @@ html(lang="en")
     // Styles
     != styles.toHTML()
 
-  body
+  body(style='padding-top:0;')
 
     .container
-      section#content.content!= content
+      section#content(style="padding-top:0;").content!= content
       hr
       footer(style="padding-bottom: 30px;")
         div(style="font-style:italic; font-size: 12px") Last updated at #{site.date}

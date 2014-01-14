@@ -26,41 +26,62 @@ include ../../fragments/unit_mixins
 //- unit: proof - compare conjunction intro with disjunction intro
 +insert_unit({unit:'212', title_slide:true, images:images})
 
-//- section#exercises_warning.slide
-//-   p.middle.center Fast track and normal seminars have 
-//-     span.diff different exercises.
-//-   .slide.anim-addclass(data-what=".diff", data-class="bkg-words-highlight-red")
+//- how to write proofs
++insert_unit({unit:'130', title_slide:true, images:images})
+
++slide_middle
+  p.center Fast track and normal seminars have 
+    span.diff different exercises.
+  +highlight('.diff', 'red')
 
 //- unit: rules for identity
 +insert_unit({unit:'110', title_slide:true, images:images})
 
+
 //- unit: DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B
 +insert_unit({unit:'235', title_slide:true, images:images})
 
+//- unit: arrow intro, arrow elim
++insert_unit({unit:'390', title_slide:true, images:images})
+//- continuation: arrow-intro proof example
++insert_unit({unit:'391', title_slide:false, images:images})
+
+
+
 //- unit: disjunction-Elim ∨Elim (and ∨Intro)
-- d2 = get_unit(222)
-- d = get_unit(221)
-+section({unit:d, images:images})
-//- prefix with super quick into to ∨Intro
-+render_unit(d2)  
-+render_unit(d)  
++insert_unit({unit:'222', title_slide:true, images:images})
++insert_unit({unit:'221', title_slide:false, images:images})
 
+//- ¬, ⊥ (270)
++insert_unit({unit:'270', title_slide:true, images:images})
 
-//- unit: truth-functional connectives
-+insert_unit({unit:'072', title_slide:true, images:images})
+//- ¬Elim (280)
++insert_unit({unit:'280', title_slide:true, images:images})
+
+//- Scope: A Mistaken Application of ¬Elim (291)
++insert_unit({unit:'291', title_slide:false, images:images})
+
+//- ¬Intro (281)
++insert_unit({unit:'281', title_slide:true, images:images})
 
 //- unit: formal proof (identity again)
 +insert_unit({unit:'111', title_slide:true, images:images})
 
+//-
+  //- unit: truth-functional connectives
+  +insert_unit({unit:'072', title_slide:true, images:images})
 
-//- unit: A and B or C
-+insert_unit({unit:'151', title_slide:true, images:images})
-+insert_unit({unit:'152', title_slide:false, images:images})
-+insert_unit({unit:'154', title_slide:false, images:images})
+//-
+  //- unit: A and B or C
+  +insert_unit({unit:'151', title_slide:true, images:images})
+  +insert_unit({unit:'152', title_slide:false, images:images})
+  +insert_unit({unit:'154', title_slide:false, images:images})
 
-//- unit: Ambiguity (elephant pyjamas)
-+insert_unit({unit:'170', title_slide:true, images:images})
+  //- unit: Ambiguity (elephant pyjamas)
+  +insert_unit({unit:'170', title_slide:true, images:images})
 
-//- didn't need in 2012-3  
-//- unit: Syntax for Logiya (hopefully won't have time: belongs in lecture 03)
-+insert_unit({unit:'230', title_slide:true, images:images})
+  //- didn't need in 2012-3  
+  //- unit: Syntax for Logiya (hopefully won't have time: belongs in lecture 03)
+  +insert_unit({unit:'230', title_slide:true, images:images})
+
+
