@@ -608,15 +608,17 @@ btm-white(height,top)
   btm-X(height,top)
   invert_text()
   box-shadow: 0px -8px 8px 0 rgba(255,255,255,0.5)
+  z-index -99
 
-.deck-container .bottom-white
-  btm-white 225px, 375px
+.deck-container 
+  .bottom-white
+    btm-white 225px, 375px
  
-.deck-container .bottom-half-white
-  btm-white 300px, 300px
+  .bottom-half-white
+    btm-white 300px, 300px
 
-.deck-container .bottom-third-white
-  btm-white 200px, 400px
+  .bottom-third-white
+    btm-white 200px, 400px
 
 
 btm-black(height,top)
@@ -625,6 +627,7 @@ btm-black(height,top)
   //background linear-gradient(top, rgba(0,0,0,0), 20% rgba(0,0,0,1), rgba(0,0,0,1))
   background-color: black
   box-shadow: 0px -8px 8px 0 rgba(0,0,0,0.5)
+  z-index -99
 
 top-black(height)
   top-X height
@@ -653,6 +656,7 @@ top-black(height)
   width: 400px
   left: 400px
   invert_text()
+  z-index -99
 
 .deck-container .left-half-white
   background-color: white
@@ -663,6 +667,7 @@ top-black(height)
   width: 400px
   left: 0px
   invert_text()
+  z-index -99
 
 
 /**

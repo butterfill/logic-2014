@@ -1,0 +1,183 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+
+\documentclass[12pt]{extarticle}
+% extarticle is like article but can handle 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, and 20pt text
+
+\def \ititle {Origins of Mind}
+ 
+\def \isubtitle {Lecture 08}
+ 
+\def \iauthor {Stephen A. Butterfill}
+\def \iemail{s.butterfill@warwick.ac.uk}
+\date{}
+
+%for strikethrough
+\usepackage[normalem]{ulem}
+
+\input{$HOME/Documents/submissions/preamble_steve_handout}
+
+%\bibpunct{}{}{,}{s}{}{,}  %use superscript TICS style bib
+%remove hanging indent for TICS style bib
+%TODO doesnt work
+\setlength{\bibhang}{0em}
+%\setlength{\bibsep}{0.5em}
+
+
+%itemize bullet should be dash
+\renewcommand{\labelitemi}{$-$}
+
+\begin{document}
+
+%\raggedcolumns
+
+\begin{multicols*}{3}
+
+\setlength\footnotesep{1em}
+
+
+\bibliographystyle{newapa} %apalike
+
+%\maketitle
+%\tableofcontents
+
+
+
+
+%--------------- 
+%--- start paste
+
+\def \ititle {Logic I}
+ 
+\def \isubtitle {Lecture 04}
+ 
+\begin{center}
+ 
+{\Large
+ 
+\textbf{\ititle}: \isubtitle
+ 
+}
+ 
+ 
+ 
+\iemail %
+ 
+\end{center}
+ 
+Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.
+ 
+ 
+ 
+\section{∧Intro and ∨Intro: Compare and Contrast}
+ 
+\emph{Reading:} §6.1
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_disjunction_intro.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/proof_unit_212}
+\end{center}
+\begin{minipage}{\columnwidth}
+ 
+Let us define a new connective with this truth table:
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/tt_not_equivalent.png}
+\end{center}
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+The following rule is unacceptable. Why?
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_not_equivalent_intro_wrong.png}
+\end{center}
+\end{minipage}
+ 
+ 
+ 
+\section{Truth-functional Connectives}
+ 
+\emph{Reading:} §7.0 (the text before §7.1)
+ 
+A \emph{connective} joins zero or more sentences to make a new sentence. Examples of connectives include: `∧', `¬', `$\bot$' and `because'.
+ 
+A sentence joined by a connective is a \emph{constituent}. For example, consider the sentence ‘P because Q’: P is a constituent of this sentence.
+ 
+A \emph{truth functional connective} produces a new sentence whose truth value depends only on the truth values of its constituent sentences.
+ 
+When P and Q are both true, ‘P because Q’ is sometimes true and sometimes false. Therefore, ‘because’ is not a truth functional connective. To illustrate, consider `Alan got yellow cards because some apples are green' and `Alan got yellow cards because he used his elbows'. All the constituent sentences are true, but the first sentence is false whereas the second is true.
+ 
+ 
+ 
+\section{A ∧ B ∨ C}
+ 
+\emph{Reading:} §3.5
+ 
+Ambiguity can be \emph{lexical}, e.g. `Actor testifies in horse suit'. Ambiguity can also be \emph{syntactic}, e.g. `How to combat the feeling of helplessness with illegal drugs'. (Both examples are from Bucaria, C. (2004), `Lexical and syntactic ambiguity as a source of humor: The case of newspaper headlines', Humour 17(3): 279--309.)
+ 
+ 
+ 
+\section{A ∧ B ∨ C: the Truth-tables}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/tt_unit_153.png}
+\end{center}
+ 
+ 
+\section{A ∧ B ∨ C: They Are Different}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/arg1_unit_153.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/arg2_unit_153.png}
+\end{center}
+ 
+ 
+\section{Ambiguity}
+ 
+Rule 1: a NP followed by a VP is a S
+ 
+Rule 2: a Vt followed by a NP is a VP
+ 
+Rule 3: a NP followed by a PP is a S
+ 
+Rule 4: A Vt followed by a NP then a PP is a VP
+ 
+Two derivations of Groucho Marx’ claim, ‘I shot an elephant in my pyjamas':
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/groucho1.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/groucho2.png}
+\end{center}
+\vfill
+\begin{minipage}{\columnwidth}
+\section{Exercises}
+These exercises will be discussed in seminars the week after this lecture.
+The numbers below refer to the numbered exercises in the course textbook, e.g. `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}.
+ 
+\begin{quote}
+7.9
+ 
+3.20, 3.21, 3.22
+ 
+3.14, 3.15
+ 
+\end{quote}
+\end{minipage}
+
+
+%--- end paste
+%--------------- 
+ 
+
+
+\end{multicols*}
+
+\end{document}

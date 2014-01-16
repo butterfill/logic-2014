@@ -1,0 +1,45 @@
+---
+layout: 'deck_units'
+title: "Not Or"
+tags: ['translation']
+description: "Negating disjunctions is tricky.  This contrasts ¬(A ∨ B) with ¬A ∨ ¬B."
+depends: ['']
+source: ['']
+duration: 5
+book: ['3.7']
+exercises: []
+exercises_fast: []
+---
+
+include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
+
+.slide
+  .img.handout(data-src='img/tt_unit_603.png')
+  .words
+    .container_12: .grid_12
+      p Either the music has stopped or I am dead.
+      p.indent.slide.nodim A ∨ B
+      .slide.nodim
+        p.hidelater.em-above That's not true.
+        p.indent.slide.nodim
+          span.negation ¬
+          span (A ∨ B)
+      .slide.nodim
+        p.em-above Either the music has not stopped or I am not dead.
+        p.indent.slide.nodim
+          span.negation ¬
+          span A ∨ 
+          span.negation ¬
+          span B
+      +highlight('.negation','pink')
+  #truth-tables.slide
+    .bottom-white.invert
+      .center.hem-above
+          mixin truth-table(['A ∨ B','¬(A ∨ B)','¬A','¬B','¬A ∨ ¬B'],[['T','T','T','F'],['F','F','F','T'],['F','F','T','T'],['F','T','F','T'],['F','T','T','T']])
+    mixin show(['#truth-tables .result-col-2'])
+    mixin show(['#truth-tables .result-col-3','#truth-tables .result-col-4'])
+    mixin show(['#truth-tables .result-col-5'])
+    mixin hide(['#truth-tables .result-col-1','#truth-tables .result-col-3','#truth-tables .result-col-4'])
+    mixin tt-highlight-rows([2,3], '#truth-tables')
+

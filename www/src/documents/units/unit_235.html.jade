@@ -6,13 +6,15 @@ description: "Introduces DeMorgan's Laws relating ¬, ∧ and ∨.  The laws can
 depends: ['unit_700']
 source: ['ph126 fastlecture 05']
 duration: 5
-book: ['3.6']
-exercises: ['3.19']
+book: ['3.6','4.2']
+exercises: ['3.19', '4.15--18']
 exercises_fast: ['3.19', '4.31']
 sequence: 570
 ---
 
-include ../../../fragments/slide_mixins
+include ../../../fragments/unit_mixins
+include ../../../fragments/compatibility_mixins
+include ../../../fragments/logic_mixins
 
   
 .slide
@@ -27,6 +29,7 @@ include ../../../fragments/slide_mixins
     .container_12
       #YASDC
         .grid_4
+          .notes Here's a useful equivalence: double negations cancel out (at least in logic).
           p A 
             span.log-equiv ⫤⊨
             span 
@@ -36,15 +39,14 @@ include ../../../fragments/slide_mixins
             span.invert.bkg-words-highlight-white.step2.hide is logically equivalent to
           p(style='margin-top:-0.5em;margin-left:2em;')
             span.invert.bkg-words-highlight-white.step3.hide i.e. has the same truth table as
-    .slide.anim-continue.anim-addclass(data-what=".log-equiv", data-class="invert")
-    mixin words-bkg(['.log-equiv'],'white')
-    mixin steps(3, '#YASDC')
+    +invert(".log-equiv")
+    +steps(3, '#YASDC')
   #truth-tables-1.hide
     .bottom-white.invert
       .center.em-above
-          mixin truth-table(['¬A','¬¬A'],[['F','T'],['T','F']])
-  mixin show(['#truth-tables-1'])
-  mixin tt-highlight-cols([1,3],'forestgreen', '#truth-tables-1')
+          +truth-table(['¬A','¬¬A'],[['F','T'],['T','F']])
+  +show('#truth-tables-1')
+  +tt-highlight-cols([1,3],'forestgreen', '#truth-tables-1')
   .clear
   .em-above
   .slide#equivalences
@@ -93,12 +95,12 @@ include ../../../fragments/slide_mixins
         mixin showhide(['#truth-tables-5'],['#truth-tables-4'])
         //- *notes show that we can use previous equivalence for this one
         //- *notes i.e. hint at the substitution theorem
-        mixin words-bkg(['.arrow-inner'],'yellow')
-        mixin words-bkg(['.arrow-inner-equiv'],'lime')
+        +highlight(['.arrow-inner'],'yellow')
+        +highlight(['.arrow-inner-equiv'],'lime')
         mixin step(8, '#equivalences')
         mixin step(9, '#equivalences')
-        mixin words-bkg-faint(['.arrow-inner'],'yellow')
-        mixin words-bkg-faint(['.arrow-inner-equiv'],'lime')
+        +highlight-faint(['.arrow-inner'],'yellow')
+        +highlight-faint(['.arrow-inner-equiv'],'lime')
         mixin showhide(['#truth-tables-6'],['#truth-tables-5', '#truth-tables-6 .result-col-2', '#truth-tables-6 .result-col-3','#truth-tables-6 .result-col-4'])
         mixin show(['#truth-tables-6 .result-col-2'])
         mixin show(['#truth-tables-6 .result-col-3'])

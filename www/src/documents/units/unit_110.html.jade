@@ -12,17 +12,19 @@ book: ['2.2']
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_110/slide-055.jpeg'})
-  .notes 
+  .notes Earlier I said to understand identity as logicians think about it, there are just two principles you need.
+  .notes These principles correspond to the identity and elimitation rules for identity.
+  .notes The first principle said that if b=c, then whatever is true of b is also true of c.
   //- handout
   .img.handout(data-src='img/rule_identity_intro.png')
   .img.handout(data-src='img/rule_identity_elim.png')
   .img.handout(data-src='img/proof_identity_example.png')
 
 +slide({bkg:'unit_110/slide-056.jpeg'})
-  .notes 
+  .notes This principle is the rule =Elim.
 
 +slide({bkg:'unit_110/slide-057.jpeg'})
-  .notes 
+  .notes Then there was another principle, a=a is never false; this is the rule of proof =Intro.
 
 +slide({bkg:'unit_110/slide-058.jpeg'})
   .notes 
@@ -31,56 +33,56 @@ include ../../../fragments/unit_mixins
   .notes 
 
 +slide({bkg:'unit_110/slide-060.jpeg'})
-  .notes 
+  .notes Let's see how these work with a simple proof.
 
 +slide({bkg:'unit_110/slide-061.jpeg'})
-  .notes 
+  .notes First I need some line numbers.
 
 +slide({bkg:'unit_110/slide-062.jpeg'})
-  .notes 
+  .notes To apply =Elim I need an identity statement; and that's just what I have at line 2.
 
 +slide({bkg:'unit_110/slide-063.jpeg'})
   .notes 
 
 +slide({bkg:'unit_110/slide-064.jpeg'})
-  .notes 
+  .notes To apply =Elim I also need a statement about the thing named on the left hand side of the identity statement, in this case b.
 
 +slide({bkg:'unit_110/slide-065.jpeg'})
-  .notes 
+  .notes That's just what I have at line 1 of the proof.
 
 +slide({bkg:'unit_110/slide-066.jpeg'})
   .notes 
 
 +slide({bkg:'unit_110/slide-067.jpeg'})
-  .notes 
+  .notes So actually I have both of the things I need to apply =Elim.
 
 +slide({bkg:'unit_110/slide-068.jpeg'})
-  .notes 
+  .notes But now look at the conclusion of this argument.
 
 +slide({bkg:'unit_110/slide-069.jpeg'})
-  .notes 
+  .notes The conclusion is just what =Elim allows me to conclude.
 
 +slide({bkg:'unit_110/slide-070.jpeg'})
-  .notes 
+  .notes Have I finished the proof?  Not yet.  I need to justify the step, which involves two things: I need to cite the rule and to cite the lines I've used in applying it.
 
 +slide({bkg:'unit_110/slide-071.jpeg'})
-  .notes 
+  .notes Let's look at the same thing a different way.
 
 +slide({bkg:'unit_110/slide-072.jpeg'})
-  .notes 
+  .notes The first premise is a statement about b (it says a is left of it) whereas the conclusion is the same statement about c (it says that a is left of it).
 
 +slide({bkg:'unit_110/slide-073.jpeg'})
-  .notes 
+  .notes I take the b from the first premise and put it into the identity statement.
 
 +slide({bkg:'unit_110/slide-074.jpeg'})
-  .notes 
+  .notes I move accross the identity statement from left to right and find c. And this c I put into the conclusion just where b was earlier.
 
 +slide({bkg:'unit_110/slide-075.jpeg'})
-  .notes 
+  .notes And this is just the pattern I need to make to use =Elim.
 
 +slide({bkg:'unit_110/slide-076.jpeg'})
-  .notes 
+  .notes One last thing ...
 
 +slide({bkg:'unit_110/slide-077.jpeg'})
-  .notes 
+  .notes Look at this thing on your right.  It looks much like a proof.  But actually it's no more a proof than a toddler's scribble.  Why not?  (I'll return to this question later.)
 

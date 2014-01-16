@@ -8,28 +8,53 @@ source: ['ph133 lecture 03']
 duration: 2
 sequence: 290
 book: ['3.5']
+exercises: ['3.20, 3.21, 3.22']
 ---
 
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_151/slide-082.jpeg'})
-  .notes 
+  .notes Here's Johnny Depp having his hair cut in Charlie and the Chocolate Factory.
+  .notes Mrs B made me watch this film because she fancies Jonny Depp.
+  //- handout
+  .handout Ambiguity can be \emph{lexical}, e.g. `Actor testifies in horse suit'.  Ambiguity can also be \emph{syntactic}, e.g. `How to combat the feeling of helplessness with illegal drugs'.  (Both examples are from Bucaria, C. (2004), `Lexical and syntactic ambiguity as a source of humor: The case of newspaper headlines', Humour 17(3): 279--309.)
 
 +slide({bkg:'unit_151/slide-083.jpeg'})
-  .notes 
+  .notes But, to be fair, how could one not?
+  .notes Anyway, here he's saying 'I need a heir' and holding up a hair.
+  .notes This is one example of ambiguity.
+  .notes Note that here the ambiguity can be traced to a single word, 'heir' which sounds just like another word with a different meaning.  We might say, the ambiguity is all in the word.
 
 +slide({bkg:'unit_151/slide-084.jpeg'})
-  .notes 
+  .notes Now contrast a statement like 'two puffins ate six fish'.
+  .notes This statement is ambiguous because there are two quite different ways of understanding it.
+  .notes Here you see one interpretation where There were two puffins: and they ate six fish
+  .notes This interpretation is good for the puffins, less good for the fish.
 
 +slide({bkg:'unit_151/slide-085.jpeg'})
-  .notes 
+  .notes Here's the other interpretation of 'two puffins ate six fish'.  Here it means there were six fish: and two puffins ate them.
+  .notes So less happy puffins.
+  .notes Here's the key thing, though.  The sentence 'Two puffins ate six fish' is ambiguous but the ambiguity is not due to any particular word.  It's not that the word 'puffin' is ambiguous, for example.
+  .notes This matters because it shows that not all ambiguity is lexical; some of it is, as linguists might say, synatactic or structural.
+  .notes But why does ambiguity matter to us?
+  .notes We are constructing a formal language and we want each sentence to have just one truth value, true or false.
+  .notes In our formal language, we don't want sentences that are true and false.
+  .notes This means of course that we need to avoid ambiguity.
+  .notes Insofar as ambiguity is merely lexical--insofar as it is linked to particular words having multiple meanings--it's easy to avoid.
+  .notes To avoid that sort of ambiguity, lexical ambiguity, we just have to avoid defining words twice.  Easy.
+  .notes But how can we be sure that our formal language involves no syntactic ambiguity?
 
 +slide({bkg:'unit_151/slide-086.jpeg'})
-  .notes 
+  .notes Consider this thing (it's not a sentence).  If we allowed this into our language, we'd have problems.
 
 +slide({bkg:'unit_151/slide-087.jpeg'})
-  .notes 
+  .notes For one thing, we'd not be able to say what the right way to construct its truth table is.
 
 +slide({bkg:'unit_151/slide-088.jpeg'})
-  .notes 
+  .notes Now this thing is not a sentence.  Instead we have two distinct sentences, (A ∧ B) ∨ C and A ∧ (B ∨ C).
+  .notes Just a moment ago I asked, How can we be sure that our formal language involves no syntactic ambiguity? 
+  .notes The simplest answer is: because we use brackets.
+  .notes It's important to realise this, but it's not a very satisfying answer for two reasons.
+  .notes First, it's not satisfying because we don't know \emph{how} the brackets enable us to avoid ambiguity.  The answer doesn't enable us to prove that our language contains no ambiguous sentences.
+  .notes And, second, it's not satisfying because we haven't said anything yet about what the brackets mean.  We can't just throw symbols into our language without explaining them. (This is the down side of having a formal language: we have to say what everything means explicity, since it's a creature of our own creation.)
 

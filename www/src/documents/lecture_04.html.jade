@@ -12,27 +12,28 @@ include ../../fragments/unit_mixins
 
 +title_slide({document:document, images:images})
 
+//- disjunction intro
++insert_unit({unit:'225', title_slide:false, images:images})
 
 //- unit: proof - compare conjunction intro with disjunction intro
-+slide_middle
-  p.center How come we can prove only valid arguments?
-+insert_unit({unit:'212', title_slide:false, images:images})
++insert_unit({unit:'212', title_slide:true, images:images})
 
 //- unit: formal proof (identity again)
 +insert_unit({unit:'111', title_slide:true, images:images})
   
-//- ¬P ∨ ¬Q compared with ¬(P ∨ Q)
-+insert_unit({unit:'232', title_slide:true, images:images})
-
 +slide_middle
   p.center Too slow?  Try fast-track.
+
++slide_middle
+  p.center.huge-glow Logic Support
+  p.center Fridays from 4-6pm in S0.13
 
 //- unit: truth-functional connectives
 +insert_unit({unit:'072', title_slide:true, images:images})
 
 //- the Bush examples
-.slide
-  p.middle.center Dissatisfaction is good
++slide_middle
+  p.center Dissatisfaction is good
 +insert_unit({unit:'162', title_slide:false, images:images})
 
 

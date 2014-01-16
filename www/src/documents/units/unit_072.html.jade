@@ -6,7 +6,7 @@ tags: ['truth-tables','semantics']
 depends: ['071']
 source: ['ph126 fastlecture 02']
 duration: 10
-book: []
+book: ['7.0 (the text before §7.1)']
 exercises: ['7.9']
 exercises_fast: ['7.9']
 sequence: 280
@@ -17,7 +17,13 @@ include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_072/slide-b-000.jpeg'})
   .notes 
+  //- handout
+  .handout A \emph{connective} joins zero or more sentences to make a new sentence.  Examples of connectives include: `∧', `¬', `$\bot$' and `because'.
+  .handout A sentence joined by a connective is a \emph{constituent}. For example, consider the sentence ‘P because Q’: P is a constituent of this sentence.
+  .handout A \emph{truth functional connective} produces a new sentence whose truth value depends only on the truth values of its constituent sentences. 
+  .handout When P and Q are both true, ‘P because Q’ is sometimes true and sometimes false.  Therefore, ‘because’ is not a truth functional connective.  To illustrate, consider `Alan got yellow cards because some apples are green' and `Alan got yellow cards because he used his elbows'.  All the constituent sentences are true, but the first sentence is false whereas the second is true.
 
+  
 +slide({bkg:'unit_072/slide-b-001.jpeg'})
   .notes 
 

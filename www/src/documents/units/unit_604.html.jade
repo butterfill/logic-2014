@@ -1,0 +1,44 @@
+---
+layout: 'deck_units'
+title: "Not If"
+tags: ['translation']
+description: "Negating sentences whose main connective is the arrow is tricky.  This contrasts ¬(A → B) with A → ¬B."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises: []
+exercises_fast: []
+---
+
+include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
+
+
+  
+.slide
+  .words
+    .container_12: .grid_12
+      p If she has seen it, I am dead.
+      p.indent.slide.nodim A → B
+      .slide.nodim
+        p.hidelater.em-above That's not true.
+        p.indent.slide.nodim
+          span.negation ¬
+          span (A → B)
+      .slide.nodim
+        p.em-above If she has seen it, I am not dead.
+        p.indent.slide.nodim
+          span A → 
+          span.negation ¬
+          span B
+      +highlight('.negation','yellow')
+  #truth-tables.slide
+    .bottom-white.invert
+      .center.hem-above
+          mixin truth-table(['A → B','¬(A → B)','A → ¬B'],[['T','F','T','T'],['F','T','F','F'],['F','T','T','T']])
+    mixin show(['#truth-tables .result-col-2'])
+    mixin show(['#truth-tables .result-col-3'])
+    mixin tt-highlight-rows([3,4], '#truth-tables')
+
+

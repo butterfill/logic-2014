@@ -11,11 +11,105 @@ book:['6.1']
 
 include ../../../fragments/unit_mixins
 
++slide_middle
+  p.center How come we can prove only valid arguments?
+
 +slide({bkg:'unit_212/slide-045.jpeg'})
-  .notes 
-  //- handout
-  .img.handout(data-src='img/rule_disjunction_intro.png')
+  .notes Explain ∨Intro with an example: if you know Bill is in the Library but don’t want to give this away but do want to speak the truth you can say “Bill is in the library or Bill is in the garden”.  
+  .notes ∨Intro is saying that if you have any sentence, you can create a disjunction with any other sentence you like.
+
   .img.handout(data-src='img/proof_unit_212')
+
++slide({bkg:'unit_212/slide-046.jpeg'})
+  .notes Contrast ∧Intro ...
+
++slide({bkg:'unit_212/slide-047.jpeg'})
+  .notes ∧Intro is just like ∨Intro except that you need both conjuncts for ∧Intro.
+  .notes Why should we have set things up like this?  Why is using ∧Intro more demanding than using ∨Intro?
+
++slide({bkg:'unit_212/slide-b-000.jpeg'})
+  .notes Let's have a look at a proof involving these two rules.
+
++slide({bkg:'unit_212/slide-b-001.jpeg'})
+  .notes We're using ∨Intro at line 3 to get R∨T.  
+
++slide({bkg:'unit_212/slide-b-002.jpeg'})
+  .notes See how what we've done matches the rule.  (Sometimes people ask, Where does the T come from?  The answer is: it just comes from nowhere.)
+
++slide({bkg:'unit_212/slide-b-003.jpeg'})
+  .notes Now we're using ∧Intro.
+
++slide({bkg:'unit_212/slide-b-004.jpeg'})
+  .notes 
+
++slide({bkg:'unit_212/slide-b-005.jpeg'})
+  .notes 
+
++slide({bkg:'unit_212/slide-b-006.jpeg'})
+  .notes Note some properties of the proof:
+  .notes Each step builds on the previous steps; each step is made in accordance with a rule; and the rules we've seen so far extend the proof by one line.
+
++slide({bkg:'unit_212/slide-b-007.jpeg'})
+  .notes The most important property, though is this: The new line is guaranteed to be a logical consequence of the lines above.
+
++slide({bkg:'unit_212/slide-b-008.jpeg'})
+  .notes Let me illustrate ...
+
++slide({bkg:'unit_212/slide-b-009.jpeg'})
+  .notes Consider the truth table for disjunction.
+
++slide({bkg:'unit_212/slide-b-010.jpeg'})
+  .notes What happens when the prerequiste for the disjunction-intro rule is true?  In that case, we're in the first two rows of the truth table.
+
++slide({bkg:'unit_212/slide-b-011.jpeg'})
+  .notes And in those first two rows, the disjunction which the rule adds to the proof is true.
+  .notes So given the truth table, we can see that disjunction-intro will never take us from a truth to a falsehood; from a truth we can only reach another truth using disjunction-intro.
+
++slide({bkg:'unit_212/slide-b-012.jpeg'})
+  .notes Now look at conjunction intro.
+
++slide({bkg:'unit_212/slide-b-013.jpeg'})
+  .notes Here's the truth table for conjunction.
+
++slide({bkg:'unit_212/slide-b-014.jpeg'})
+  .notes 
+
++slide({bkg:'unit_212/slide-b-015.jpeg'})
+  .notes Now what happens when the first prerequisite for conjunction introduction is true?
+
++slide({bkg:'unit_212/slide-b-016.jpeg'})
+  .notes In that case, we're in the first two rows of the truth table.
+
++slide({bkg:'unit_212/slide-b-017.jpeg'})
+  .notes 
+
++slide({bkg:'unit_212/slide-b-018.jpeg'})
+  .notes And here the conjunction which conjunction-introduction adds to the proof is sometimes true and sometimes false.
+  .notes So if conjunction-intro required just one conjunct, it would sometimes take us from a truth to a falsehood.
+
++slide({bkg:'unit_212/slide-b-019.jpeg'})
+  .notes But actually conjunction-intro requires that we already have both conjuncts in our proof.
+
++slide({bkg:'unit_212/slide-b-020.jpeg'})
+  .notes 
+
++slide({bkg:'unit_212/slide-b-021.jpeg'})
+  .notes And this means that when everything conjunction-intro requires is true, then the conjunction it allows us to introduce must always be true.
+  .notes Earlier I asked, Why is using ∧Intro more demanding than using ∨Intro?  Now we can see exactly what the answer is.
+  .notes Speaking entirely formally, we can use whatever rules we like.
+  .notes But we want our rules to mirror logical validity--given truths, we want them to take us only to truths.  We want them never to take us from truth to falsehood.
+  .notes For this reason, given the truth table for conjunction, ∧Intro has to require that we already have both conjuncts.
+
++slide({bkg:'unit_212/slide-b-022.jpeg'})
+  .notes Let me make the same point by introducing a new connective.
+
++slide({bkg:'unit_212/slide-b-023.jpeg'})
+  .notes 
+
++slide({bkg:'unit_212/slide-b-024.jpeg'})
+  .notes Suppose we have a connective called 'is not eqivalent' and we stipulate this introduction rule.
+
+  //- handout
   .handout \begin{minipage}{\columnwidth}
   .handout Let us define a new connective with this truth table:
   .img.handout(data-src='img/tt_not_equivalent.png')
@@ -26,102 +120,22 @@ include ../../../fragments/unit_mixins
   .handout \end{minipage}
   
 
-+slide({bkg:'unit_212/slide-046.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-047.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-000.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-001.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-002.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-003.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-004.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-005.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-006.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-007.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-008.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-009.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-010.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-011.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-012.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-013.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-014.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-015.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-016.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-017.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-018.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-019.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-020.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-021.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-022.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-023.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_212/slide-b-024.jpeg'})
-  .notes 
-
 +slide({bkg:'unit_212/slide-b-025.jpeg'})
-  .notes 
+  .notes Suppose also that our new connective has this truth table, so that the 'P1 is not eqivalent to P2' is true exactly when P1 and P2 have different truth values.
 
 +slide({bkg:'unit_212/slide-b-026.jpeg'})
-  .notes 
+  .notes Now the rule for not-equivalent-intro is just like the rule for disjunction-intro.
 
 +slide({bkg:'unit_212/slide-b-027.jpeg'})
-  .notes 
+  .notes What happens when the prerequsite for these rules is true?
 
 +slide({bkg:'unit_212/slide-b-028.jpeg'})
-  .notes 
+  .notes The disjunction that we can introduce with disjunction-intro is true.
 
 +slide({bkg:'unit_212/slide-b-029.jpeg'})
-  .notes 
+  .notes But the sentence that we can introduce with not-equivalent-intro is sometimes false and sometimes true.
+  .notes So the new rule not-equivalent-intro would allow us to move from truths to falsehoods.  
 
 +slide({bkg:'unit_212/slide-b-030.jpeg'})
-  .notes 
+  .notes That's why we shouldn't have this rule.
 

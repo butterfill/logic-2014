@@ -116,7 +116,8 @@ mixin section(p)
       if img.filename.indexOf('.low.') != -1
         - low = true
     .spacer &nbsp;
-    .title-block(style="#{low ? 'position:relative; top:425px' : ''}"): .title-container
+    .title-block(style="#{low ? 'position:relative; top:425px' : ''}")
+      .title-container
         h2.title1 #{p.unit ? p.unit.title : p.title}
     block
 
