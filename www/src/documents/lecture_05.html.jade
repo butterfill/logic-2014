@@ -17,21 +17,28 @@ include ../../fragments/unit_mixins
 - each d in getCollection("documents").findAll({url:'/skits/skit_03.html'},[{year:-1,sort_order:1}]).toJSON()
   +render_unit(d)
 
+
 //- unit: negation and contradiction (rules of proof for contradiction)
 +insert_unit({unit:'270', title_slide:true, images:images})
 
 
 //- unit: arrow intro, arrow elim
 +insert_unit({unit:'390', title_slide:true, images:images})
-//- continuation: arrow elim hard proof example
-+insert_unit({unit:'391', title_slide:false, images:images})
 
 
 //- skit: feedback
-+slide
-  p.center feedback
-  p.em-above ‘The lectures are really helpful and engaging, however it is quite difficult to write down all the important points during the lectures so it would be really helpful if the powerpoints from the lectures and maybe even audio recordings could be made available to students.’
-  p.slide  ‘I couldn’t fail to dislike your lectures less.’
++slide_middle
+  p.center.huge-glow feedback
+  p.center ‘The lectures are really helpful and engaging, however it is quite difficult to write down all the important points during the lectures so it would be really helpful if the powerpoints from the lectures and maybe even audio recordings could be made available to students.’
+
++slide_middle
+  p.center.huge-glow Logic Support
+  p.center Fridays, 4-6pm in S0.13
+
++slide_middle
+  .notes When people say they can't do logic, sometimes that's not true and they are thinking they can't do it just because they don't realise that it requires time.
+  p.center.huge-glow 8 hours
+
 //-
     p.slide  ‘WHY HAVEN’T WE BEEN GIVEN ANY HELP FOR USING THE PROGRAMMES?!!! Pen and Paper all the way. I can’t do half of the exercises as I can’t use the programmes that we’re s’posed to do them on..’
   - each d in getCollection("documents").findAll({url:'/skits/skit_01.html'},[{year:-1,sort_order:1}]).toJSON()
@@ -42,39 +49,44 @@ include ../../fragments/unit_mixins
 +insert_unit({unit:'112', title_slide:true, images:images})
 
 
-//- disjunction-Elim ∨Elim (and ∨Intro)
-//- state disjunction-Elim ∨Elim (and ∨Intro)
-+insert_unit({unit:'222', title_slide:true, images:images})
-//- prefix with discussion of why ∨Elim can't be much simpler (soundness theorem)
-+insert_unit({unit:'226', title_slide:false, images:images})
-//- example proof with disjunction-elim
-+insert_unit({unit:'221', title_slide:false, images:images})
+//- unit: Ambiguity recap (elephant pyjamas)
++insert_unit({unit:'170', title_slide:true, images:images})
+//- I Shot an Elephant In My Pyjamas
++insert_unit({unit:'171', title_slide:true, images:images})
 
 
-//- not or
-+insert_unit({unit:'603', title_slide:true, images:images})
+//- 2013-4 ended here (could have done a bit more, but not ∨Elim)
 
-//- deMorgan
-+insert_unit({unit:'235', title_slide:true, images:images})
+  //- disjunction-Elim ∨Elim (and ∨Intro)
+  //- state disjunction-Elim ∨Elim (and ∨Intro)
+  +insert_unit({unit:'222', title_slide:true, images:images})
+  //- prefix with discussion of why ∨Elim can't be much simpler (soundness theorem)
+  +insert_unit({unit:'226', title_slide:false, images:images})
+  //- example proof with disjunction-elim
+  +insert_unit({unit:'221', title_slide:false, images:images})
 
 
-//- TODO: include 604 in lecture 06 !!!
+  //- not or
+  +insert_unit({unit:'603', title_slide:true, images:images})
 
-//- TODO: move to lecture 06 or later!
-  //- unit: everything is broken (intro to quantifiers)
-  - var d2 = get_unit('473')
-  - var d = get_unit('471')
-    mixin section({unit:d, images:images})
-    //- choose your quantifiers (polka, value)
-    mixin render_unit(d2)
-    mixin render_unit(d)
+  //- deMorgan
+  +insert_unit({unit:'235', title_slide:true, images:images})
 
-//2012-3 ended here, was fine (even a bit tight)
-//-
-  //- unit: Syntax for Logiya 
-  - var d = get_unit('230')
-  mixin section({unit:d, images:images})
-    //- unit_231 is a recap
-  - var d2 = get_unit('231')
-    mixin render_unit(d2)  
-  mixin render_unit(d)  
+
+  //- TODO: include 604 in lecture 06 !!!
+
+  //- TODO: move to lecture 06 or later!
+    //- unit: everything is broken (intro to quantifiers)
+    - var d2 = get_unit('473')
+    - var d = get_unit('471')
+      mixin section({unit:d, images:images})
+      //- choose your quantifiers (polka, value)
+      mixin render_unit(d2)
+      mixin render_unit(d)
+
+
+
+  //- *TODO 2013-4 move to lecture 06 ...
+  //- continuation: arrow elim hard proof example
+    +insert_unit({unit:'391', title_slide:false, images:images})
+

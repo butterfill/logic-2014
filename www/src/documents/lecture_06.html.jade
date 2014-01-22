@@ -1,0 +1,46 @@
+---
+layout: 'default'
+title: 'Lecture 06'
+lecture_date: '2014/1/21'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('flowers')
+
++title_slide({document:document, images:images})
+
+
+
+//- disjunction-Elim ∨Elim (and ∨Intro)
+//- state disjunction-Elim ∨Elim (and ∨Intro)
++insert_unit({unit:'222', title_slide:false, images:images})
+//- prefix with discussion of why ∨Elim can't be much simpler (soundness theorem)
++insert_unit({unit:'226', title_slide:false, images:images})
+//- example proof with disjunction-elim
++insert_unit({unit:'221', title_slide:false, images:images})
+
+
+//- not or
++insert_unit({unit:'603', title_slide:true, images:images})
+
+
+//- arrow elim hard proof example
++insert_unit({unit:'391', title_slide:true, images:images})
+
+
+
+//- ¬Elim 
++insert_unit({unit:'280', title_slide:true, images:images})
+//- ¬Intro
++insert_unit({unit:'281', title_slide:true, images:images})
+//- unit_282 just completes a proof example
++insert_unit({unit:'282', title_slide:false, images:images})
+
+
+//- prefix with unit_223, a recap of the use of or-elim
++insert_unit({unit:'223', title_slide:true, images:images})
+//- unit: subproofs are tricky
++insert_unit({unit:'224', title_slide:true, images:images})

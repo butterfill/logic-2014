@@ -1,0 +1,97 @@
+---
+layout: 'default'
+title: 'Fast Lecture 03'
+lecture_date: '2014/1/21'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+
+//- *TODO remove -- now part of unit 390 but forgot to include in 2013-4
+.exercises_fast 8.20--8.25
+
+//- *DONE: move the subproofs earlier or update exercises
+  'Last weeks seminar exercises (week 2's, due in this Monday) was all new material and it took a lot of time to learn what subproofs and rules were and how it all works, because that's what the exercises were about.  Then I come to the fast track lecture today, and it covers subproofs and rules, which I had taught myself to do the exercises.
+  I'm just wondering why we do exercises before we cover the material which we need to do the exercises, hence we have to teach it to ourselves then go to a lecture to rehear it after we've self taught it.'
+
+//- *TODO: missing the syntax stuff that was in the last lecture
+
+- var images = get_images('birds_baby')
+
+
++title_slide({document:document, images:images})
+
+//- if and the arrow
++insert_unit({unit:'700', title_slide:false, images:images})
+
+
+
+//- A ∧ B ∨ C (lexical vs structural ambiguity)
++insert_unit({unit:'151', title_slide:true, images:images})
+//- A ∧ B ∨ C: the Truth-tables (quick version)
++insert_unit({unit:'152', title_slide:false, images:images})
+//- A ∧ B ∨ C: They Are Different 
++insert_unit({unit:'154', title_slide:false, images:images})
+
+//- I Shot an Elephant in My Pyjamas
++insert_unit({unit:'171', title_slide:true, images:images})
+
+
+
+
+//- unit: Syntax for Logiya 
+//- unit_231 is just a recap
+//- +insert_unit({unit:'231', title_slide:false, images:images})
++insert_unit({unit:'230', title_slide:true, images:images})
+
+//- syntax is followed by postsecret quiz but do this later in the lecture (see below)
+
+
+//- Truth-functional Connectives 
++insert_unit({unit:'072', title_slide:true, images:images})
+
+
+//- unit: subproofs are tricky
++insert_unit({unit:'224', title_slide:true, images:images})
+
+
+//- postsecret quiz: syntax
+- each d in getCollection("documents").findAll({url:'/quizes/postsecret_02.html'},[{year:-1,sort_order:1}]).toJSON()
+  mixin render_unit(d)
+
+
+//- *TODO: things removed, need to add material here.
+
+//- 
+  //- skit: feedback
+  - each d in getCollection("documents").findAll({url:'/skits/skit_01.html'},[{year:-1,sort_order:1}]).toJSON()
+    mixin render_unit(d)
++slide_middle
+  p.center.huge-glow feedback
+  p.center ‘The lectures are really helpful and engaging, however it is quite difficult to write down all the important points during the lectures so it would be really helpful if the powerpoints from the lectures and maybe even audio recordings could be made available to students.’
+
++slide_middle
+  p.center.huge-glow Logic Support
+  p.center Fridays, 4-6pm in S0.13
+
++slide_middle
+  p.center.huge-glow 8 hours
+
+
+//- unit: scope
++section({title:'Scope', images:images})
+//- introduce it with discussion of a mistake about ¬Intro (rules of proof apply only to connective with widest scope)
+//- (yes, I know this is repetition)
++insert_unit({unit:'291', title_slide:false, images:images})
+//- the big scope unit
++insert_unit({unit:'290', title_slide:false, images:images})
+
+
+//- nb this ended up in lecture_04 in 2011-2
+//- unit: everything is broken (intro to quantifiers)
+
++section({title:'Everything Is Broken', images:images})
++insert_unit({unit:'473', title_slide:false, images:images})
++insert_unit({unit:'471', title_slide:false, images:images})

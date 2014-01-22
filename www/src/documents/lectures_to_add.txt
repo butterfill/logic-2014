@@ -1,0 +1,39 @@
+//- deMorgan
++insert_unit({unit:'235', title_slide:true, images:images})
+
+//- Not If
++insert_unit({unit:'604', title_slide:true, images:images})
+
+//- negation-intro further proof example
++insert_unit({unit:'283', title_slide:true, images:images})
+
+
+//- unit: Syntax for Logiya 
++insert_unit({unit:'231', title_slide:true, images:images})
++insert_unit({unit:'230', title_slide:true, images:images})
+
+//- *skip because alt version in unit_232 for now (*todo fix)
+  //- postsecret quiz: syntax
+  - each d in getCollection("documents").findAll({url:'/quizes/postsecret_02.html'},[{year:-1,sort_order:1}]).toJSON()
+    +render_unit(d)
+
++insert_unit({unit:'232', title_slide:true, images:images})
+
+
+
+
+//- would be good to leave this for another lecture
+//- unit: scope
+//- *didn't cover this in 2012-3
+  section#unit_290.slide
+    img.bkg(src='/img/bkg/flowers/P1011068.JPG')
+    .spacer &nbsp;
+    .title-block: .title-container
+        h2.title1 Scope
+  //- introduce it with discussion of a mistake about ¬Intro (rules of proof apply only to connective with widest scope)
+  - d = get_unit(291)
+    mixin render_unit(d)
+  //- scope 
+  - d = get_unit(290)
+    mixin render_unit(d)  
+

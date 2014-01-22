@@ -1,7 +1,7 @@
 ---cson
 layout: 'deck_units'
-title: "The Syntax of Logiya"
-description: "States the rules of syntax for Logiya.  Illustrates these with tree diagrams.  Links to truth tables."
+title: "The Syntax of FOL"
+description: "States the rules of syntax for FOL.  Illustrates these with tree diagrams.  Links to truth tables."
 tags: ['syntax']
 depends: ['unit_170']
 source: ['ph126 lecture 06']
@@ -13,6 +13,25 @@ sequence: 380
 ---
 
 include ../../../fragments/unit_mixins
+
++slide_middle
+  p.center What do the brackets mean?
+  //- handout
+  .handout We define what counts as a sentence of FOL using rules.  E.g.: 
+  .handout 1. If * and \# are sentences, then so is(* ∧ \#)  
+  .handout 2. If * and \# are sentences, then so is (* ∨ \#)  
+  .handout 3. P, Q, R, … are sentences 
+  .handout 4. If * is a sentence, then ¬* is a sentence 
+  .handout So: 
+  .handout a. P is a sentence    // rule 3 
+  .handout b. ¬P is a sentence    // rule 4, a 
+  .handout c. ( ¬P ∧ Q ) is a sentence  // rule 1, b, a  
+  .handout There is no structural ambiguity in FOL because these rules are formulated to  ensure that for any FOL sentence, there is exactly one way of constructing it.
+  .img.handout(data-src='img/unit_230_tree1.png')
+  .img.handout(data-src='img/unit_230_tree2.png')
+  .img.handout(data-src='img/unit_230_tree_tt.png')
+
+
 
 +slide({bkg:'unit_230/slide-012.jpeg'})
   .notes 

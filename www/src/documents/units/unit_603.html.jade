@@ -7,12 +7,15 @@ depends: ['']
 source: ['']
 duration: 5
 book: ['3.7']
-exercises: []
+exercises: ['3.19','5.18']
 exercises_fast: []
 ---
 
 include ../../../fragments/unit_mixins
 include ../../../fragments/logic_mixins
+
++slide_middle
+  p.center ‘What is the difference between putting the negation outside of parenthesis and putting into individual brackets?’
 
 .slide
   .img.handout(data-src='img/tt_unit_603.png')
@@ -21,7 +24,7 @@ include ../../../fragments/logic_mixins
       p Either the music has stopped or I am dead.
       p.indent.slide.nodim A ∨ B
       .slide.nodim
-        p.hidelater.em-above That's not true.
+        p.hidelater.em-above That’s not true.
         p.indent.slide.nodim
           span.negation ¬
           span (A ∨ B)
@@ -42,4 +45,4 @@ include ../../../fragments/logic_mixins
     mixin show(['#truth-tables .result-col-5'])
     mixin hide(['#truth-tables .result-col-1','#truth-tables .result-col-3','#truth-tables .result-col-4'])
     mixin tt-highlight-rows([2,3], '#truth-tables')
-
+    .notes So the truth of the first denial sentence, ¬(A ∨ B), guarantees that you're alive (B = 'I am dead'), whereas the truth of the second denial, ¬A ∨ ¬B, doesn't entail that you're alive.
