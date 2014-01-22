@@ -1,0 +1,39 @@
+---
+layout: 'default'
+title: 'Lecture 07'
+lecture_date: '2014/1/28'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('twins_2008')
+
++title_slide({document:document, images:images})
+
+//- recap structural ambiguity in natural languages
++insert_unit({unit:'231', title_slide:false, images:images})
+//- syntax for FOL
++insert_unit({unit:'230', title_slide:true, images:images})
+
+//- ¬P ∨ ¬Q compared with ¬(P ∨ Q)
+//- *skip postsecret because alt version in unit_232 for now (*todo fix)
+  //- postsecret quiz: syntax
+  - each d in getCollection("documents").findAll({url:'/quizes/postsecret_02.html'},[{year:-1,sort_order:1}]).toJSON()
+    +render_unit(d)
++insert_unit({unit:'232', title_slide:true, images:images})
+
+//- unit: Subproofs Are Tricky: The Answer
++insert_unit({unit:'227', title_slide:true, images:images})
+
+//- negation-intro further proof example
++insert_unit({unit:'283', title_slide:true, images:images})
+
+//- deMorgan
++insert_unit({unit:'235', title_slide:true, images:images})
+
+
++section({title:'Everything Is Broken', images:images})
++insert_unit({unit:'473', title_slide:false, images:images})
++insert_unit({unit:'471', title_slide:false, images:images})

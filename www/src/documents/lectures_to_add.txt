@@ -1,23 +1,13 @@
-//- deMorgan
-+insert_unit({unit:'235', title_slide:true, images:images})
 
 //- Not If
 +insert_unit({unit:'604', title_slide:true, images:images})
 
-//- negation-intro further proof example
-+insert_unit({unit:'283', title_slide:true, images:images})
+
+//- valid arguments can have conclusions unrelated to their premises
++insert_unit({unit:'163', title_slide:true, images:images})
 
 
-//- unit: Syntax for Logiya 
-+insert_unit({unit:'231', title_slide:true, images:images})
-+insert_unit({unit:'230', title_slide:true, images:images})
 
-//- *skip because alt version in unit_232 for now (*todo fix)
-  //- postsecret quiz: syntax
-  - each d in getCollection("documents").findAll({url:'/quizes/postsecret_02.html'},[{year:-1,sort_order:1}]).toJSON()
-    +render_unit(d)
-
-+insert_unit({unit:'232', title_slide:true, images:images})
 
 
 

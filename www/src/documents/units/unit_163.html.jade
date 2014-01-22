@@ -1,0 +1,38 @@
+---cson
+layout: 'deck_units'
+title: "We knew that it was invalid ..."
+description: "Some arguments are logically valid even though the conclusion is unrelated to the premises."
+tags: ['definition'] 
+depends: ['unit_161']
+source: ['student feedback']
+handbook: false
+---
+
+include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
+
+.slide
+  .words
+    .container_12: .grid_12
+      p Hi, we have been working on the logic exercises ... ended in a 15 minute argument between two maths students and two philosophy students
+    .clear
+    .container_12: .grid_8
+      .slide
+        p.nodim The exercise is 5.6 which says:
+          br
+          | 'From P ∧ Q and ¬P, infer R'
+      .slide.nodim
+        p.the-mistake We knew that it was invalid because of not being able to infer R when it is not involved at all in the premise, 
+        .slide
+          +df_valid({})
+        +highlight('.the-mistake','red')
+      .slide
+        p however the problem arose when we were discussing the premises.
+      .slide
+        p.nodim Is it a contradiction to say that ... that P and Q, then have a second statement that says it's not the case that P? 
+      .slide.nodim
+        p And if so, then if the premises are contradictory does that automatically make the argument 
+          span.the-mistake2 invalid 
+          span by default?
+      +highlight('.premises-true, .no-possible-situation', 'red')
+      +highlight('.the-mistake2', 'red')
