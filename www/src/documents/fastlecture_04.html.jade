@@ -1,0 +1,133 @@
+---
+layout: 'default'
+title: 'Fast Lecture 04'
+lecture_date: '2014/1/28'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+
+- var images = get_images('flowers')
+
+//- more proofs, e.g. prove P → (Q → P) from no premises
+.exercises_fast 8.26--8.30
+
+
++title_slide({document:document, images:images})
+
+
+//- unit: everything is broken (intro to quantifiers)
+//- +section({title:'Everything Is Broken', images:images})
++insert_unit({unit:'473', title_slide:false, images:images})
++insert_unit({unit:'471', title_slide:false, images:images})
+
+
+//- **** TODO : quick existential intro, universal elimination?
+
+
+//- unit: proof: ∃Elim 
++insert_unit({unit:'550', title_slide:true, images:images})
+
+
+//- unit: all squares are blue (fast version)
++insert_unit({unit:'504', title_slide:true, images:images})
+
+//- unit: What does ∀ mean?
++insert_unit({unit:'492', title_slide:true, images:images})
+
+
+
+//- unit: proof: ∀Intro
++insert_unit({unit:'570', title_slide:true, images:images})
+
+//- unit: summary of rules of proof
++insert_unit({unit:'575', title_slide:true, images:images})
+
+
+
+
+
+//- advertise logic options and the degree
++slide_middle
+  p.center advert
++slide_middle
+  p.center
+    img(src="/img/people/walt_s.jpg",width="300px")
++slide_rh_white
+  +left_half
+    ul
+      li Logic II: Metatheory
+      li Logic III: Incompleteness and Undecidability
+      li Modal Logic
+      li Philosophy of Logic
+      li Philosophy of Mathematics
+      li Philosophy of Computation
+  +right_half
+    p 3 year BSc in Mathematics and Philosophy
+    p.em-above 4 year BSc in Mathematics and Philosophy with specialism in Logic and Foundations
+
+
+
+//- ***todo broken -- create unit; move
+//- compare and contrast formulae
+.slide#universal_arrow
+  .words
+    .container_12: .grid_6
+      p ∀x( Square(x) ∧ Broken(x) )
+      p ∀x( Square(x) ∧ Broken(x) ) ⊨  ∀x Square(x) 
+      p ∀x( Square(x) ∧ Broken(x) ) ⊨  ∀x Broken(x) 
+      p ∀x( Square(x) → Broken(x) )
+      p.step2.hide ∀x(  ¬Square(x) ∨ Broken(x) )
+      .em-above
+      p.step3.hide ∃x( Square(x) → Broken(x) )
+      p.step4.hide ∃x( ¬Square(x) ∨ Broken(x) )
+      p.step3.hide ∃x( Square(x) ∧ Broken(x) )
+      mixin steps(4, '#universal_arrow')
+
+
+//- unit: scope and quantifiers
++insert_unit({unit:'710', title_slide:true, images:images})
+
+//- unit: translating sentences with quantifiers
++insert_unit({unit:'507', title_slide:true, images:images})
+
+//- What does ∃ mean? (491)
++insert_unit({unit:'491', title_slide:true, images:images})
+//- unit: quantifiers: binding
+//- ***TODO should really explain the significance of binding (it tells us *which* names to replace when evaluating the truth or falsity of sentences involving quantifiers).  To this end, I have prefixed it with What does ∃ mean? (491)
++insert_unit({unit:'711', title_slide:true, images:images})
+
+
+
+//- unit: State the subsitution theorem
++insert_unit({unit:'250', title_slide:true, images:images})
+
+//- unit: Fubar Rules
++insert_unit({unit:'340', title_slide:true, images:images})
+
+
+//- unit: Something is above something
++insert_unit({unit:'740', title_slide:true, images:images})
+  
+//- unit: Two things are broken
++insert_unit({unit:'470', title_slide:true, images:images})
+
+//- *hope not to have time for this (but it's a good one to end on)
+//- unit: Does ‘if’ mean what ‘→’ means?
++insert_unit({unit:'640', title_slide:true, images:images})
+
+
+
+
+
+
+
+
+
+
+
+
+
+

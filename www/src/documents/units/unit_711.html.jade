@@ -1,0 +1,75 @@
+---cson
+layout: 'deck_units'
+title: "Quantifiers Bind Variables"
+description: "Illustrates how quantifiers bind variables (but does not define this).  Contrast ∀x(Square(x) → Blue(x)), all squares are blue, with ∀x Square(x) → ∀x Blue(x), if everything is square then everything is blue."
+tags: ['semantics'] 
+depends: ['unit_710']
+source: ['ph126 fastlecture 05']
+duration: 6
+book: ['9.3']
+exercises: []
+exercises_fast: []
+sequence: 680
+---
+
+
+include ../../../fragments/unit_mixins
+
++slide_middle
+  .notes Suppose you had to work out whether this sentence is true in a certain possible situation.
+  .notes That would be tricky given what we've said so far about the meanings of the quantifiers.
+  .notes It would be tricky because we have talked about replacing variables with names without saying, in cases like this, which variables to replace.
+  .notes To specify this we need the notion of binding ...
+  p.center 
+    span.h2 ∀x
+    span ( Square(x) → 
+    span.h3 ∃x 
+    span Blue(
+    span.h1 x
+    span ) )
+    +highlight('.h1', 'yellow')
+    .notes But first, to see the problem, think about this variable instance.
+    +highlight('.h2', 'yellow')
+    .notes When do we replace it?  Is it when removing the truth of the universal quantifier?
+    +highlight('.h3', 'yellow')
+    .notes Or should we leave the variable in tact and replace it when removing the existential quantifier?
+    .notes To answer this question we need the notion of binding ...
+    .notes (Btw, this sentence is eqvuivalent to 'either not everything is square or something is blue')
+
++slide({bkg:'unit_711/slide-025.jpeg'})
+  .notes 
+  .handout.img(data-src='img/quantifiers_scope.png')
+
++slide({bkg:'unit_711/slide-026.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-027.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-028.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-029.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-030.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-031.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-032.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-033.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-034.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-035.jpeg'})
+  .notes 
+
++slide({bkg:'unit_711/slide-036.jpeg'})
+  .notes 
+

@@ -758,7 +758,7 @@ only toggle the notes panel for this cloned window.
 			$handoutContainer.append("<div>\\begin{minipage}{\\columnwidth}</div>")
 			$handoutContainer.append("<div>\\section{Exercises}</div>")
 			$handoutContainer.append("<div>These exercises will be discussed in seminars the week after this lecture.</div>")
-			$handoutContainer.append("<div>The numbers below refer to the numbered exercises in the course textbook, e.g.\\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \\emph{Language, Proof and Logic}.</div>")
+			$handoutContainer.append("<div>The numbers below refer to the numbered exercises in the course textbook, e.g.\\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \\emph{Language, Proof and Logic}.  Exercises marked `*' are optional.</div>")
 			$handoutContainer.append("<div>&nbsp;</div>");
 			$handoutContainer.append("<div>\\begin{quote}</div>");
       $exercises.each( function(idx, ex) {

@@ -1,11 +1,13 @@
++slide_middle
+  p.center No lectures or seminars in reading week (Week 6).
+
+
 //- Not If
 +insert_unit({unit:'604', title_slide:true, images:images})
 
 
 //- valid arguments can have conclusions unrelated to their premises
 +insert_unit({unit:'163', title_slide:true, images:images})
-
-
 
 
 
@@ -26,3 +28,15 @@
   - d = get_unit(290)
     mixin render_unit(d)  
 
+
+//- **** fast unit : quick existential intro, universal elimination
+
+** unit on quantifier counterexamples
+  exercises_fast: ['12.4, 12.5-–12.5.7, 12.8–-12.12']
+  
+** unit on isn't anything
+  exercises_fast: ['9.18--9.19']
+
+
++slide_middle
+  p.center No lectures or seminars in reading week (Week 6).

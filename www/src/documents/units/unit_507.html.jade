@@ -1,0 +1,92 @@
+---cson
+layout: 'deck_units'
+title: 'Translation with Quantifiers'
+tags: ['translation']
+description: "Discusses how to translate 'Some persuasive arguments are not valid' and 'All French discordians weep and wail except Gillian Deleude' into first-order logic."
+depends: ['unit_503']
+book: ['9.5','9.6']
+sequence: 600
+exercises_fast:['9.12-–9.13']
+---
+
+include ../../../fragments/slide_mixins
+
+//- *todo doesn't the last one imply that Gillian Deleude does not weep and wail, and that she is a French discordian?
+//-   if so, the translation is inadequate
+
+
+.slide#unit_507
+  .handout \begin{minipage}{\columnwidth}
+  .handout All discordians weep:
+  .handout ∀x( Dscrdn(x) → Wps(x) )
+  .handout \end{minipage}
+  
+  .handout \begin{minipage}{\columnwidth}
+  .handout All \textbf{French} discordians weep:
+  .handout ∀x( ( \textbf{Frnch(x) ∧} Dscrdn(x) ) → Wps(x) )
+  .handout \end{minipage}
+
+  .handout \begin{minipage}{\columnwidth}
+  .handout All French discordians weep \textbf{and wail}:
+  .handout ∀x( ( Frnch(x) ∧ Dscrdn(x) ) → ( Wps(x) \textbf{ ∧ Wls(x)} ) )
+  .handout \end{minipage}
+
+  .handout \begin{minipage}{\columnwidth}
+  .handout All French discordians weep and wail \textbf{except Gillian Deleude}:
+  .handout ∀x( ( Frnch(x) ∧ Dscrdn(x) \textbf{∧ ¬(x=a)} ) → ( Wps(x) ∧ Wls(x) ) )
+  .handout \end{minipage}
+  
+  .container_12
+    .grid_12
+      .words
+        .existential_translation
+          p Some 
+            span.step5.hide
+              span.bkg-words-highlight-yellow persuasive 
+              span and 
+            span.step3.hide.bkg-words-highlight-red useful 
+            span arguments are not valid.
+          p.step2.hide ∃x(
+            span.step6.hide
+              span.bkg-words-highlight-yellow Persuasive(x) 
+              span ∧ 
+            span.step4.hide
+              span.bkg-words-highlight-red Useful(x) 
+              span ∧  
+            span Argument(x) ∧ ¬Valid(x))
+          mixin steps(6)
+        .slide.anim-addclass(data-what=".existential_translation",data-class="dim")
+        .slide.nodim
+          p.em-above All 
+            span.universal-who discordians 
+            span.universal-what weep.
+          p.slide.nodim ∀x( 
+            span.universal-who Dscrdn(x) 
+            span → 
+            span.universal-what Wps(x) 
+            span )
+          .slide.anim-addclass(data-what=".universal-who",data-class="bkg-words-highlight-blue")
+          .slide.anim-addclass(data-what=".universal-what",data-class="bkg-words-highlight-pink")
+        .slide
+          p.em-above All 
+            span.bkg-words-highlight-yellow French 
+            span discordians weep. 
+          p.slide ∀x( (
+            span.bkg-words-highlight-yellow Frnch(x)
+            span ∧ Dscrdn(x) ) →  Wps(x) )
+        .slide
+          p.em-above All French discordians weep 
+            span.bkg-words-highlight-yellow and wail.
+          p.slide ∀x( ( Frnch(x) ∧ Dscrdn(x) ) → 
+            span.bkg-words-highlight-yellow ( 
+            span Wps(x) 
+            span.bkg-words-highlight-yellow ∧ Wls(x) ) 
+            span )
+        .slide
+          p.em-above All French discordians weep and wail 
+            span.bkg-words-highlight-yellow except Gillian Deleude.
+          p.slide ∀x( ( Frnch(x) ∧ Dscrdn(x) 
+            span.bkg-words-highlight-yellow ∧ ¬(x=a) 
+            span ) →  ( Wps(x) ∧ Wls(x) ) )
+            
+      

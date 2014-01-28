@@ -2,18 +2,43 @@
 layout: 'deck_units'
 images: 'unit_250'
 title: "Substitution of Equivalents"
-description: "Statement of the substitution theorem.  Suppose that φ, ψ and χ are sentences of Logiya.  Suppose that φ is logically equivalent to ψ.  Let χ[φ/ψ] be the result of replacing, in χ, zero or more occurrences of φ with ψ. Then the subsitution theorem says that χ[φ/ψ] is logically equivalent to χ."
+description: "Statement of the substitution theorem.  Suppose that φ, ψ and χ are sentences of FOL.  Suppose that φ is logically equivalent to ψ.  Let χ[φ/ψ] be the result of replacing, in χ, zero or more occurrences of φ with ψ. Then the subsitution theorem says that χ[φ/ψ] is logically equivalent to χ."
 tags: ['meta']
 depends: ['']
 source: ['ph126 fastlecture 04']
 duration: 5
 book: ['4.5','10.3']
-exercises: []
-exercises_fast: ['4.31']
+exercises: ['7.25']
+exercises_fast: ['4.31, 7.25']
 ---
 
 
 include ../../../fragments/unit_mixins
+
+
+// prefix with reminder about demorgan
++slide_middle
+  .handout Suppose that φ, ψ and χ are sentences of FOL.  Suppose that φ is logically equivalent to ψ.  Let χ[φ/ψ] be the result of replacing, in χ, zero or more occurrences of φ with ψ. The \emph{subsitution theorem} says that χ[φ/ψ] is logically equivalent to χ.
+  p A ∧ B ⫤⊨ ¬(¬A ∨ ¬B)
+  .slide
+    p.example A ∨ B ⫤⊨ ¬(¬A ∧ ¬B)
+    p A → B ⫤⊨ ¬A ∨ B
+  +highlight('.example', 'yellow')
+  .slide
+    p 
+      span ¬
+      span.step2.hide ¬(¬A ∧ ¬B)
+      span.step3.hide  ⫤⊨ 
+      span.step4.hide ¬(
+      span.step5.hide A ∨ B
+      span.step4.hide )
+      +show('.step2')
+      +highlight('.step2','yellow')
+      +show('.step3')
+      +show('.step4')
+      +show('.step5')
+      +highlight('.step5','yellow')
+
 
 +slide({bkg:'unit_250/slide-161.jpeg'})
   .notes 
