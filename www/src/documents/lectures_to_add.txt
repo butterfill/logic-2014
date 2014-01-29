@@ -3,31 +3,9 @@
   p.center No lectures or seminars in reading week (Week 6).
 
 
-//- Not If
-+insert_unit({unit:'604', title_slide:true, images:images})
 
 
-//- valid arguments can have conclusions unrelated to their premises
-+insert_unit({unit:'163', title_slide:true, images:images})
-
-
-
-
-
-//- would be good to leave this for another lecture
-//- unit: scope
-//- *didn't cover this in 2012-3
-  section#unit_290.slide
-    img.bkg(src='/img/bkg/flowers/P1011068.JPG')
-    .spacer &nbsp;
-    .title-block: .title-container
-        h2.title1 Scope
-  //- introduce it with discussion of a mistake about ¬Intro (rules of proof apply only to connective with widest scope)
-  - d = get_unit(291)
-    mixin render_unit(d)
-  //- scope 
-  - d = get_unit(290)
-    mixin render_unit(d)  
+** unit on double arrow!!! (necessary because exams)
 
 
 //- **** fast unit : quick existential intro, universal elimination
@@ -37,7 +15,35 @@
   
 ** unit on isn't anything
   exercises_fast: ['9.18--9.19']
-
+  exercises: ['9.12']
 
 +slide_middle
   p.center No lectures or seminars in reading week (Week 6).
+
+
+
+
+//- advertise logic options and the degree
++slide_middle
+  p.center advert
++slide_middle
+  p.center
+    img(src="/img/people/walt_s.jpg",width="300px")
++slide_rh_white
+  +left_half
+    ul
+      li Logic II: Metatheory
+      li Logic III: Incompleteness and Undecidability
+      li Modal Logic
+      li Philosophy of Logic
+      li Philosophy of Mathematics
+      li Philosophy of Computation
+  +right_half
+    p 3 year BSc in Mathematics and Philosophy
+    p.em-above 4 year BSc in Mathematics and Philosophy with specialism in Logic and Foundations
+
+
+
+//- exercises (normal)
+8.1"(conditionals;"yes/no"answers"are"ok)"
+8.17–19,"*8.20–23"

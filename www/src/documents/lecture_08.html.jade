@@ -1,0 +1,65 @@
+---
+layout: 'default'
+title: 'Lecture 08'
+lecture_date: '2014/1/30'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('keyhaven')
+
+//- *todo : move (these are now in unit 235)
+.exercises 7.1--7.2, *7.3--7.6
+
+
++title_slide({document:document, images:images})
+
+//- 2013-4 ended previous lecture half way through this unit (re-do here):
++insert_unit({unit:'471', title_slide:false, images:images})
+
+//- all squares are blue
++insert_unit({unit:'503', title_slide:true, images:images})
+
+//- unit: What does ∀ mean?
++insert_unit({unit:'492', title_slide:true, images:images})
+
+//- unit: Vegetarians are evil
++insert_unit({unit:'502', title_slide:true, images:images})
+
+//- *todo here: counterexamples
+
+
+//- feedback: rules of proof are on your handout
++slide_middle
+  p I recently compiled all the rules of proofs on a sheet and now use this sheet as a constant reference while working on them.  It has improved the way i work substancially so that logic no longer makes me want to die inside 
+    span.slide(style="border-bottom: 4px dashed yellow") ... as much.  
+
+//- postsecret quiz: state rules of proof
+- each d in getCollection("documents").findAll({url:'/quizes/postsecret_03.html'},[{year:-1,sort_order:1}]).toJSON()
+  +render_unit(d)
+
+
+
+//- valid arguments can have conclusions unrelated to their premises
++insert_unit({unit:'163', title_slide:true, images:images})
+
+
+//- Not If
++insert_unit({unit:'604', title_slide:true, images:images})
+
+
+//- unit: scope
+//- *didn't cover this in 2012-3
++section({title:'Scope', images:images})
+//- introduce it with discussion of a mistake about ¬Intro (rules of proof apply only to connective with widest scope)
++insert_unit({unit:'291', title_slide:false, images:images})
++insert_unit({unit:'290', title_slide:true, images:images})
+
+
+//- unit: Proof Example: ¬(P∨Q) therefore ¬P∧¬Q
++insert_unit({unit:'821', title_slide:true, images:images})
+
+.handout \usepackage{pdfpages}
+.handout \includepdf[pages={1}]{img/rules.pdf}

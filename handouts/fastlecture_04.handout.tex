@@ -32,7 +32,7 @@
 
 \begin{document}
 
-%\raggedcolumns
+\raggedcolumns
 
 \begin{multicols*}{3}
 
@@ -49,6 +49,7 @@
 
 %--------------- 
 %--- start paste
+
 \def \ititle {Logic I}
  
 \def \isubtitle {Fast Lecture 04}
@@ -153,7 +154,8 @@ We give the meaning of ∀ by specifying what it takes for a sentence containing
 \end{enumerate}
  
  
- 
+\begin{minipage}{\columnwidth}
+
 \section{∀Intro}
  
 \emph{Reading:} §12.1, §12.3, §13.1
@@ -164,6 +166,9 @@ We give the meaning of ∀ by specifying what it takes for a sentence containing
 \begin{center}
 \includegraphics[scale=0.3]{img/proof_universal_intro.png}
 \end{center}
+\end{minipage}
+
+
 \begin{minipage}{\columnwidth}
  
 Why is this proof incorrect?
@@ -183,7 +188,7 @@ Why is this proof incorrect?
 \includegraphics[scale=0.3]{img/quantifier_rule_summary.png}
 \end{center}
  
- 
+\columnbreak 
 \section{Scope and Quantifiers}
  
 \emph{Reading:} §9.5, §9.6
@@ -237,6 +242,23 @@ All French discordians weep and wail \textbf{except Gillian Deleude}:
  
  
  
+\columnbreak  
+\section{What does ∃ mean?}
+ 
+We give the meaning of ∃ by specifying what it takes for a sentence containing ∃ to be true:
+ 
+\begin{enumerate}
+ 
+\item Give every object a name.
+ 
+\item For each name in turn, create a new sentence like this: delete the quantifier and replace all instances of the variable it binds with that name.
+ 
+\item If ANY of the new sentences are true, so is the original sentence.
+ 
+\end{enumerate}
+ 
+ 
+ 
 \section{Quantifiers Bind Variables}
  
 \emph{Reading:} §9.3
@@ -245,7 +267,7 @@ All French discordians weep and wail \textbf{except Gillian Deleude}:
 \includegraphics[scale=0.3]{img/quantifiers_scope.png}
 \end{center}
  
- 
+\columnbreak 
 \section{Substitution of Equivalents}
  
 \emph{Reading:} §4.5, §10.3
@@ -303,23 +325,19 @@ To translate sentences involving number into FOL, use identity. For example,
  
 \emph{Reading:} §7.3
  
-\begin{minipage}{\columnwidth}
  
 These two arguments are valid: does that mean that `if' means what `→' means?
  
 \begin{center}
 \includegraphics[scale=0.3]{img/if_is_arrow.png}
 \end{center}
-\end{minipage}
  
-\begin{minipage}{\columnwidth}
  
 The English argument isn't valid; the FOL argument is valid; therefore `if' can't mean what `→' means?
  
 \begin{center}
 \includegraphics[scale=0.3]{img/if_aint_arrow.png}
 \end{center}
-\end{minipage}
  
 \vfill
 \begin{minipage}{\columnwidth}
@@ -352,7 +370,6 @@ The numbers below refer to the numbered exercises in the course textbook, e.g.\ 
  
 \end{quote}
 \end{minipage}
-
 
 %--- end paste
 %--------------- 
