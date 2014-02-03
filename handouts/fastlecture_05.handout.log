@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.11.28)  3 FEB 2014 22:18
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.11.28)  3 FEB 2014 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1329,14 +1329,11 @@ File: img/unit_583_counterexample.png Graphic file (type QTm)
 <use  "img/unit_583_counterexample.png" > [1
 
 ]
-File: img/unit_583_counterexample_formal.png Graphic file (type QTm)
-
-<use  "img/unit_583_counterexample_formal.png" >
 File: img/unit_572_proof.png Graphic file (type QTm)
-
-<use  "img/unit_572_proof.png" >
+ <use  "img/unit_572_proof.png" >
 File: img/unit_572_proof2.png Graphic file (type QTm)
- <use  "img/unit_572_proof2.png" >
+
+<use  "img/unit_572_proof2.png" >
 Underfull \hbox (badness 10000) in paragraph at lines 244--244
  |[]\EU1/LinuxLibertineO(0)/bx/n/14.4 Quantifier Equivalences:
  []
@@ -1389,12 +1386,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 320.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 320.
  ) 
 Here is how much of TeX's memory you used:
- 26153 strings out of 493938
- 485319 string characters out of 6148856
+ 26151 strings out of 493938
+ 485247 string characters out of 6148856
  492096 words of memory out of 5000000
- 29118 multiletter control sequences out of 15000+600000
+ 29117 multiletter control sequences out of 15000+600000
  18588 words of font info for 88 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 48i,7n,80p,671b,562s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,7n,80p,671b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on fastlecture_05.handout.pdf (3 pages).
