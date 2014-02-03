@@ -1,0 +1,44 @@
+---
+layout: 'default'
+title: 'Lecture 09'
+lecture_date: '2014/02/04'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('twins_2009')
+
+
++title_slide({document:document, images:images})
+
+
+//- recap: scope
++insert_unit({unit:'292', title_slide:false, images:images})
+
+//- unit: scope and negation
++insert_unit({unit:'320', title_slide:true, images:images})
+
+
+
+
+//- I met a philosopher
++insert_unit({unit:'501', title_slide:true, images:images})
+
+//- unit: translating sentences with quantifiers
++insert_unit({unit:'507', title_slide:true, images:images})
+
+//- unit: scope and quantifiers
++insert_unit({unit:'710', title_slide:true, images:images})
+
+
+//- postsecret quiz: state rules of proof
+- each d in getCollection("documents").findAll({url:'/quizes/postsecret_03.html'},[{year:-1,sort_order:1}]).toJSON()
+  +render_unit(d)
+
+//- unit: proof example: ¬P∨R therefore P→R
++insert_unit({unit:'820', title_slide:true, images:images})
+
+//- unit: ∀Elim
++insert_unit({unit:'800', title_slide:true, images:images})

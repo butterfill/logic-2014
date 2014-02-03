@@ -10,8 +10,9 @@
 
 //- **** fast unit : quick existential intro, universal elimination
 
-** unit on quantifier counterexamples
-  exercises_fast: ['12.4, 12.5-–12.5.7, 12.8–-12.12']
+fast lecture: include ** unit on quantifier counterexamples, 502b ?
+
+  
   
 ** unit on isn't anything
   exercises_fast: ['9.18--9.19']

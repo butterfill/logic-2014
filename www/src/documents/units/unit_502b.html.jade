@@ -1,0 +1,42 @@
+---cson
+layout: 'deck_units'
+title: "Counterexamples with Quantifiers"
+description: "Illustrates giving a counterexample to an argument involving quantifiers."
+tags: ['quantification']
+depends: ['unit_502']
+duration: 5
+exercises: []
+exercises_fast: []
+---
+
+
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_502/slide-054.jpeg'})
+  .handout.img(data-src='img/unit_502b_counterexample.png')
+  .notes 
+  .slide
+    table.data(style='margin-top:270px')
+      thead
+        tr
+          td 
+          td.center Evil(x)
+          td.center HatesMeat(x)
+          td.center Vegetarian(x)
+      tbody  
+        tr.odd
+          td Ayesha
+          td.center
+            span.step2.hide no
+          td.center
+             span.step3a.hide ?
+             span.step3b.hide no
+          td.center
+            span.step1.hide yes
+      +show('.step1')
+      +show('.step2')
+      +show('.step3a')
+      +hide_('.step3a')      
+      +show('.step3b')
+      

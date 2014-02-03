@@ -1,0 +1,213 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+
+\documentclass[12pt]{extarticle}
+% extarticle is like article but can handle 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, and 20pt text
+
+\def \ititle {Origins of Mind}
+ 
+\def \isubtitle {Lecture 08}
+ 
+\def \iauthor {Stephen A. Butterfill}
+\def \iemail{s.butterfill@warwick.ac.uk}
+\date{}
+
+%for strikethrough
+\usepackage[normalem]{ulem}
+
+\usepackage{pdfpages}
+
+
+\input{$HOME/Documents/submissions/preamble_steve_handout}
+
+%logic symbol \leftmodels
+\usepackage{MnSymbol}
+
+%\bibpunct{}{}{,}{s}{}{,}  %use superscript TICS style bib
+%remove hanging indent for TICS style bib
+%TODO doesnt work
+\setlength{\bibhang}{0em}
+%\setlength{\bibsep}{0.5em}
+
+
+%itemize bullet should be dash
+\renewcommand{\labelitemi}{$-$}
+
+\begin{document}
+
+%\raggedcolumns
+
+\begin{multicols*}{3}
+
+\setlength\footnotesep{1em}
+
+
+\bibliographystyle{newapa} %apalike
+
+%\maketitle
+%\tableofcontents
+
+
+
+
+%--------------- 
+%--- start paste
+
+\def \ititle {Logic I}
+ 
+\def \isubtitle {Lecture 09}
+ 
+\begin{center}
+ 
+{\Large
+ 
+\textbf{\ititle}: \isubtitle
+ 
+}
+ 
+ 
+ 
+\iemail %
+ 
+\end{center}
+ 
+Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.
+ 
+ 
+ 
+\section{Recap: Scope}
+ 
+\emph{Reading:} §3.5
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_292_fig1.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_292_fig2.png}
+\end{center}
+ 
+ 
+\section{Scope and Negation}
+ 
+\emph{Reading:} §3.5, §3.6
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_320_fig1.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_320_fig2.png}
+\end{center}
+ 
+ 
+\section{I Met a Philosopher}
+ 
+\emph{Reading:} §9.2, §9.3, §9.5
+ 
+ 
+ 
+\section{Translation with Quantifiers}
+ 
+\emph{Reading:} §9.5, §9.6
+ 
+\begin{minipage}{\columnwidth}
+ 
+All discordians weep:
+ 
+∀x( Dscrdn(x) → Wps(x) )
+ 
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+All \textbf{French} discordians weep:
+ 
+∀x( ( \textbf{Frnch(x) ∧} Dscrdn(x) ) → Wps(x) )
+ 
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+All French discordians weep \textbf{and wail}:
+ 
+∀x( ( Frnch(x) ∧ Dscrdn(x) ) → ( Wps(x) \textbf{ ∧ Wls(x)} ) )
+ 
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+All French discordians weep and wail \textbf{except Gillian Deleude}:
+ 
+∀x( ( Frnch(x) ∧ Dscrdn(x) \textbf{∧ ¬(x=a)} ) → ( Wps(x) ∧ Wls(x) ) )
+ 
+\end{minipage}
+ 
+ 
+ 
+\section{Scope and Quantifiers}
+ 
+\emph{Reading:} §9.5, §9.6
+ 
+\begin{minipage}{\columnwidth}
+ 
+Underlining shows the scope of the quantifiers:
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/scope_quantifiers.png}
+\end{center}
+\end{minipage}
+ 
+ 
+ 
+\section{Proof Example: ¬P∨R therefore P→R}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_320_proof.png}
+\end{center}
+ 
+ 
+\section{∀Elim}
+ 
+\emph{Reading:} §13.1
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_universal_elim.png}
+\end{center}
+\vfill
+\begin{minipage}{\columnwidth}
+\section{Exercises}
+These exercises will be discussed in seminars the week after this lecture.
+The numbers below refer to the numbered exercises in the course textbook, e.g.\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}. Exercises marked `*' are optional.
+ 
+\begin{quote}
+3.14
+ 
+3.15
+ 
+9.1 odd numbers only
+ 
+9.2 even numbers only
+ 
+9.4
+ 
+9.5
+ 
+9.8
+ 
+9.9
+ 
+9.10
+ 
+9.12
+ 
+\end{quote}
+\end{minipage}
+
+
+%--- end paste
+%--------------- 
+ 
+
+
+\end{multicols*}
+
+\end{document}

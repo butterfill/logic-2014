@@ -1,0 +1,86 @@
+---
+layout: 'deck_unit'
+title: "There Is Exactly One"
+tags: ['translation']
+description: "Mentions several ways of expressing the idea that there is exactly one creator in our formal language, Logiya."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises: []
+exercises_fast: ['11.10, 11.13']
+---
+
+include ../../../fragments/slide_mixins
+
+
+
+.slide
+  .words#FYDe7
+    .container_12: .grid_12
+      .preliminaries(style="z-index:-20;position:relative;")
+        p There is one creator 
+          span.slide (at least one, maybe more).
+        p.indent ∃x Creator(x)
+      .slide.nodim.preliminaries
+        p.em-above
+            span.brian-to-exists Brian
+            |  is the one and only creator.
+        p.indent
+          span.hide ∃y( 
+          span Creator(
+          span.brian b
+          | ) 
+          span.slide ∧ ∀x( 
+            span.antecedent Creator(x)
+            span  → 
+            span.consequent x=
+              span.brian b
+            |  )
+      //- *note explain what's going on here: we're saying all creators are brian, like all squares are blue
+      .slide
+        div.allsquares.white-box(style="width:260px;position:absolute;top:0px;left:400px;z-index:-10;")
+          p.center All squares are broken.
+          p.center ∀x( 
+            span.antecedent Sqr(x)
+            span  → 
+            span.consequent Brkn(x)
+            span  )
+        mixin words-bkg(['.antecedent'],'pink')
+        mixin words-bkg(['.consequent'],'blue')
+        mixin dim(['.allsquares'])
+        mixin words-bkg-remove-all(['.consequent','.antecedent'])
+      .slide.nodim
+        .the-solution(style="padding-bottom:.66em;")
+          p.em-above
+              span.brian-to-exists There is
+              |  one and only one creator.
+          mixin words-bkg(['.brian-to-exists'],'yellow')
+          mixin words-bkg(['.brian'],'yellow')
+          p.indent.slide.nodim
+            span.step2.bkg-words-highlight-teal.hide ∃y( 
+            span Creator(
+            span.var-y y
+            span ) ∧ ∀x( Creator(x) → x=
+            span.var-y y
+            span  ) 
+            span.step2.hide )
+            mixin words-bkg(['.var-y'],'yellow')
+            mixin steps(2)
+      //- *note another way of expressing the same proposition (these are logically equivalent)
+      .slide.nodim
+        .clever-alternative
+            p or:
+            p.indent ∃y( ∀x( Creator(x) 
+              span.log-equiv ↔
+              span  x=y ) )
+      mixin words-bkg(['.log-equiv'],'lime')
+      mixin blur(['.clever-alternative','.preliminaries'])
+      mixin words-bkg-remove-all(['.brian-to-exists','.brian','.step2','.var-y'])
+      mixin row-bkg('.the-solution','grey')
+      //- exercise to check you've got it
+      .slide
+        p.em-above Ex: There is one and only one female creator.
+        p.slide Ex: There is one and only one creator and she is female.
+
+a.deck-permalink(href='.', title='Permalink to this slide') #
