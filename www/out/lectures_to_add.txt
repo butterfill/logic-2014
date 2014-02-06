@@ -1,25 +1,36 @@
+fast track feedback
+-- 'flexible seminar times'
+-- Steven's dress sense inspires me
+-- have a nice table with proof rules somewhere with quick summary of proofs / how to prove certain examples
+-- Access to recent past papers if possible
+-- this module is way too easy
+-- want exercises which don't come from the book
+-- lecture notes online (handouts that can be read independently of lectures)
+-- more explanation of proofs
+  
+
+
+
 +slide_middle
   p.center No lectures or seminars in reading week (Week 6).
 
 
 
 
-** unit on double arrow!!! (necessary because exams)
-
+** unit 567 on double arrow!!! (necessary because exams)
+** put unit 567 into fast lecture
 
 //- **** fast unit : quick existential intro, universal elimination
 
 fast lecture: include ** unit on quantifier counterexamples, 502b ?
 
   
-  
-** unit on isn't anything
-  exercises_fast: ['9.18--9.19']
-  exercises: ['9.12']
 
 +slide_middle
   p.center No lectures or seminars in reading week (Week 6).
 
+units to include in normal lectures later:
+- What does ∃ mean? (491)
 
 
 
@@ -43,6 +54,8 @@ fast lecture: include ** unit on quantifier counterexamples, 502b ?
     p.em-above 4 year BSc in Mathematics and Philosophy with specialism in Logic and Foundations
 
 
+
+What does ∃ mean? (491)
 
 //- exercises (normal)
 8.1"(conditionals;"yes/no"answers"are"ok)"

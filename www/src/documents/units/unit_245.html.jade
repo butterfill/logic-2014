@@ -1,0 +1,75 @@
+---
+layout: 'deck_units'
+title: "Don't use ∃ with →"
+tags: ['translation']
+description: "Stresses that ∀ works with → by examining sentences with ∀ and ∧, and ∃ with →."
+depends: ['']
+source: ['']
+duration: 7
+book: []
+exercises: ['9.10']
+exercises_fast: ['9.10']
+sequence: 590
+---
+
+include ../../../fragments/slide_mixins
+
+
+
+//- compare and contrast formulae
+.slide
+  .words#PAsdqT
+    .container_12
+      .grid_7
+        #universal_arrow.universal_arrow
+          p
+            span.invert.bkg-words-highlight-white 1.
+            div(style="margin-top:-1em;margin-left:0.5em;") ∀x(Square(x) ∧ Broken(x))
+          p
+            span.invert.bkg-words-highlight-white 2.
+            div(style="margin-top:-1em;margin-left:0.5em;") ∀x(Square(x) → Broken(x))
+          .step5.hide
+            div(style="margin-top:-0.25em;margin-left:1em;") ⫤⊨
+            span.invert.bkg-words-highlight-white 3.
+            div(style="margin-top:-1em;margin-left:0.5em;") ∀x(¬Square(x) ∨ Broken(x))
+          .em-above
+        #existential_conjunction.existential_conjunction
+          p
+            .step6.hide
+              span.invert.bkg-words-highlight-white 4.
+              div(style="margin-top:-1em;margin-left:0.5em;") ∃x(Square(x) ∧ Broken(x))
+          p
+            .step6.hide
+              span.invert.bkg-words-highlight-white 5.
+              div(style="margin-top:-1em;margin-left:0.5em;") ∃x(Square(x) → Broken(x))
+          p
+            .step9.hide
+              div(style="margin-top:-0.25em;margin-left:1em;") ⫤⊨
+              span.invert.bkg-words-highlight-white 6.
+              div(style="margin-top:-1em;margin-left:0.5em;") ∃x(¬Square(x) ∨ Broken(x))
+          p
+            .step10.hide
+              div(style="margin-top:-0.25em;margin-left:1em;") ⫤⊨
+              span.invert.bkg-words-highlight-white 7.
+              div(style="margin-top:-1em;margin-left:0.5em;") ∃x(¬Square(x)) ∨ ∃x(Broken(x))
+      .grid_5.right-side
+        .universal_arrow.center
+          img.step2.hide(src='img/world_01.png')
+          p.step3.hide
+            span.invert.bkg-words-highlight-red 1. is false
+          p.step4.hide
+            span.invert.bkg-words-highlight-lime 2. is true
+        .existential_conjunction.center.hide
+          img(src='img/world_02.png')
+          p.step7.hide
+            span.invert.bkg-words-highlight-red 4. is false
+          p.step8.hide
+            span.invert.bkg-words-highlight-pink 5. is ???
+      mixin steps(5, '#PAsdqT')
+      mixin fade(['#PAsdqT .universal_arrow'])
+      mixin step(6, '#PAsdqT')
+      mixin showremove(['#PAsdqT .right-side .existential_conjunction'],['#PAsdqT .right-side .universal_arrow'])
+      mixin steps(7, 10, '#PAsdqT')
+
+
+a.deck-permalink(href='.', title='Permalink to this slide') #

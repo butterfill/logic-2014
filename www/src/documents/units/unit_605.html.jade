@@ -1,0 +1,100 @@
+---
+layout: 'deck_units'
+title: "There Does Not Exist"
+tags: ['translation','quantification']
+description: "How can we translate sentences involving quantifiers and negation from English into our formal language Logiya?  Discusses translating 'Something is not dead' and 'Nothing is dead'; also 'Everything is not broken' and 'Not everything is broken'.  New: now includes discussion of first-order counterexamples."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises_fast: ['9.18--9.19']
+exercises: ['9.12']
+---
+
+include ../../../fragments/slide_mixins
+
+
+
+  
+.slide
+  .handout Something is not dead:
+  .handout \hspace{3mm} ∃x ¬Dead(x)
+  .handout Nothing is dead:
+  .handout \hspace{3mm} ¬∃x Dead(x)
+  .handout Everything is not broken:
+  .handout \hspace{3mm}   ∀x ¬Broken(x)
+  .handout Not everything is broken:
+  .handout \hspace{3mm}   ¬∀x Broken(x)
+  .handout.img(data-src='img/unit_605_prf1.png')
+  .handout.img(data-src='img/unit_605_prf2.png')
+  .handout.img(data-src='img/unit_605_counterexample.png')
+  .words
+    .container_12
+      .grid_6.left-half
+        p.hidelater Something is dead.
+        p.hidelater.indent.slide.nodim ∃x Dead(x)
+        .slide.nodim
+          p.hidelater.em-above Something is not dead.
+          p.indent.side.translation-with-negation
+            span ∃x  
+            span.negation ¬
+            span Dead(x)
+        .slide.nodim
+          p.hidelater.em-above Nothing is dead.
+          p.indent.slide.translation-with-negation
+            span.negation ¬
+            span ∃x  
+            span Dead(x)
+        mixin words-bkg(['.negation'],'pink','.left-half')
+        mixin fade('.left-half')
+        .step2.hide.em-above
+          - var prf1 = {premises:[''], lines:[['a=a','=Intro'],['∃x (x=x)', '∃Intro',[2]]]}
+          mixin fitch_proof(prf1)
+      .grid_6.slide.right-half
+        .old-right-half
+          p.hidelater.nodim Everything is broken.
+          p.hidelater.indent.slide.nodim
+            span ∀x 
+            span Broken(x)
+          p.hidelater.em-above.slide.nodim Everything is not broken.
+          p.indent.slide.nodim.translation-with-negation
+            span ∀x 
+            span.negation ¬
+            span Broken(x)
+          p.hidelater.em-above.slide.nodim Not everything is broken.
+          p.indent.slide.nodim.translation-with-negation
+            span.negation ¬
+            span ∀x 
+            span Broken(x)
+        mixin words-bkg(['.negation'],'yellow','.right-half')
+        //- *notes Quick discussion of which of the sentences entail the others
+        mixin unfade('.left-half')
+        mixin fade('.hidelater')
+        mixin show('.step2')
+    .clear
+    mixin collapse(['.hidelater','.step2'], 1000)
+    .container_12: grid_12
+      .slide.em-above
+        .proof2u605
+          - var prf2sub1 = {premises:['Dead(a)'], lines:[['∃x Dead(x)','∃Intro',[2]],['⊥','⊥Intro',[1,3]]]}
+          - var prf2 = {premises:['¬∃x Dead(x)'], lines:[prf2sub1,['¬Dead(a)','¬Intro',['2-4']],['∃x ¬Dead(x)', '∃Intro',[5]]]}
+          mixin fitch_proof(prf2)
+        mixin collapse(['.proof2u605'],1000)
+      .slide.em-above.nodim
+        .proof3u605
+          - var prf3 = {premises:['∃x ¬Dead(x)'], lines:[['¬∃x Dead(x)']]}
+          mixin fitch_proof(prf3)
+      .slide.em-above.nodim
+        .counterexample(style='width:300px;')
+          p Counterexample: 
+          p.indent Domain: {a,b}
+          p.indent Dead : {b}
+      .slide.em-above.nodim
+        .indent
+          p.nodim ... Dead(b) is true
+            span.slide.nodim ; so the conclusion, ¬∃x Dead(x), is false
+          p.slide.nodim ... and ¬Dead(a) is true
+            span.slide.nodim ; so the premise, ∃x ¬Dead(x), is true
+        mixin words-bkg(['.counterexample'],'blue')
+
+a.deck-permalink(href='.', title='Permalink to this slide') #

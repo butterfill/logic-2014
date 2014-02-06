@@ -1,0 +1,84 @@
+---
+layout: 'deck_unit'
+title: "↔ : truth tables and rules"
+tags: ['translation']
+description: "Mentions the truth-tables and rules of proof for the biconditional, ↔."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises: []
+exercises_fast: []
+---
+
+include ../../../fragments/slide_mixins
+
+
+.slide
+  .handout.img(data-src='img/tt_biconditional.png') 
+  .handout.img(data-src='img/rule_biconditional_elim.png') 
+  .handout.img(data-src='img/rule_biconditional_intro.png') 
+  .words
+    .container_12
+      .grid_12
+        #truth-tables 
+          mixin truth-table(['A → B','B → A','(A → B) ∧ (B → A)','A ↔ B'],[['T','F','T','T'],['T','T','F','T'],['T','F','F','T'],['T','F','F','T']])
+        mixin show(['#truth-tables .result-col-2'])
+        mixin show(['#truth-tables .result-col-3'])
+        mixin show(['#truth-tables .result-col-4'])
+        mixin tt-highlight-cols([6],'forestgreen', '#truth-tables')
+        p.em-above 
+    .container_12
+      .grid_6
+        .proof1.hide
+          - var prf1 = {premises:['A ↔ B','A'], lines:[['B','↔Elim',[1,2]]]}
+          mixin fitch_proof(prf1)
+      .grid_6
+        .proof2.hide
+          - var prf2 = {premises:['A ↔ B','B'], lines:[['A','↔Elim',[1,2]]]}
+          mixin fitch_proof(prf2)
+        mixin show(['.proof1'])
+        mixin fade(['.proof1'])
+        mixin tt-highlight-cols([4],'yellow', '#truth-tables')
+        mixin show(['.proof2'])
+
+.slide
+  p.center.middle How do I intro ↔?
+
+.slide
+  .words
+    .container_12
+      .grid_4
+        #truth-tables
+          #tt-bi
+            mixin truth-table(['A ↔ B'],[['T','F','F','T']])
+            mixin show('#tt-bi')
+          .em-above
+          #tt-arrow
+            mixin truth-table(['A → B'],[['T','F','T','T']])
+            mixin fade('#tt-bi')
+            mixin show('#tt-arrow')
+      .grid_4
+        .proof3.hide
+          - var prf3sub1 = {premises:['A'], lines:[['...'],['B']]}
+          - var prf3sub2 = {premises:['B'], lines:[['...'],['A']]}
+          - var prf3 = {premises:[], lines:[prf3sub1,prf3sub2,['A ↔ B']]}
+          mixin fitch_proof(prf3)
+      .grid_4
+        .proof4.hide
+          - var prf4sub1 = {premises:['A'], lines:[['...'],['B']]}
+          - var prf4 = {premises:[], lines:[prf4sub1,['A → B']]}
+          mixin fitch_proof(prf4)
+        mixin show(['.proof4'])
+        mixin fade(['#tt-arrow','.proof4'])
+        mixin unfade(['#tt-bi'])
+        mixin show(['.proof3'])
+        mixin words-bkg(['.fitch-proof .fitch-proof:eq(1)'],'pink')
+        mixin words-bkg(['.fitch-proof .fitch-proof:eq(0)'],'blue')
+        mixin unfade(['.proof4'])
+        mixin words-bkg(['.proof4 .fitch-proof .fitch-proof:eq(0)'],'blue')
+
+
+
+
+a.deck-permalink(href='.', title='Permalink to this slide') #

@@ -1,0 +1,60 @@
+---
+layout: 'default'
+title: 'Lecture 10'
+lecture_date: '2014/02/06'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+// *todo: enough images?
+- var images = get_images('sunclouds')
+
++title_slide({document:document, images:images})
+
+//- todo check not already included in units
+.exercises 8.17-–8.19, *8.20–-8.23
+//- todo remove (now part of unit 507)
+.exercises 9.4–-9.5, 9.8–-9.9
+
+//- propositional part
+
+//- What does ‘→’ mean? (700)
++insert_unit({unit:'700', title_slide:false, images:images})
+
+//- fubar rules
++insert_unit({unit:'340', title_slide:true, images:images})
+
+//- ↔ : truth tables and rules (567)
++insert_unit({unit:'567', title_slide:true, images:images})
+
+
++slide_middle
+  p.center feedback
+
+
+//- quantifier part
+
+//- ∃Intro, includes recap of ∀Elim
++insert_unit({unit:'801', title_slide:true, images:images})
+
+//- What does ∃ mean? (491)
++insert_unit({unit:'491', title_slide:true, images:images})
+
+//- Quantifier Equivalences: ∀x Created(x) ⫤⊨ ¬∃x Created(x)
++insert_unit({unit:'764', title_slide:true, images:images})
+
+//- There Does Not Exist
++insert_unit({unit:'605', title_slide:true, images:images})
+
+
+
+//- for lecture 11
+  //- Revision: ∀Elim, ∃Intro (551)
+  //- ∃Elim (550)
+  //- Don't use ∃ with → (245)
+  //- Watch Out, Here Come Multiple Quantifiers (744)
+  //- Something Is Above Something (740)
+  //- Multiple Quantifiers: Something Makes Someone Want to Die Inside (741)
+  //- Multiple Quantifiers: Everyone Likes Puffins (742)
