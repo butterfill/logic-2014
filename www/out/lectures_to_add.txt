@@ -1,36 +1,37 @@
-fast track feedback
--- 'flexible seminar times'
--- Steven's dress sense inspires me
--- have a nice table with proof rules somewhere with quick summary of proofs / how to prove certain examples
--- Access to recent past papers if possible
--- this module is way too easy
--- want exercises which don't come from the book
--- lecture notes online (handouts that can be read independently of lectures)
--- more explanation of proofs
+** skipped part of 567 --- maybe split unit and do later
+
+exercises normal week 9:
+  13.6, 13.7, *13.8, *13.9 
+  13.19, 13.23--13.27, *13.28--13.31
+  *13.33, 13.35, 13.37, 13.39
+  13.43--13.45, 13.49--13.50, *13.51--13.52 
+
+
+exercises normal last week:
+  14.1, 14.2, 14.3 (*14.4–5)  [trans] 
+  *14.10–12, *14.13    [proofs] 
+  *14.26, 14.28     
   
 
-
-
-+slide_middle
-  p.center No lectures or seminars in reading week (Week 6).
-
-
-
-
-** unit 567 on double arrow!!! (necessary because exams)
-** put unit 567 into fast lecture
-
-//- **** fast unit : quick existential intro, universal elimination
 
 fast lecture: include ** unit on quantifier counterexamples, 502b ?
 
-  
+fast lecture 07: proofs 14.13, 13.51–2
+fast lecture 07 at the end:
 
-+slide_middle
-  p.center No lectures or seminars in reading week (Week 6).
+  .exercises_fast B. For each of the following sentences of FOL, give a logically equivalent sentence of idiomatic English using the specified interpretation.  Your English sentences should be as concise as possible.  
+  .exercises_fast Domain : people and actions 
+  .exercises_fast D(x)	: x is desirable
+  .exercises_fast V(x)	: x is virtuous
+  .exercises_fast A(x)	: x is an action
+  .exercises_fast H(x)	: x is a person
+  .exercises_fast P(x,y)	: x performed y
+  .exercises_fast i.	∀x [ D(x) → V(x) ]
+  .exercises_fast ii.	∀x [ [A(x)∧ D(x) ] → V(x) ] ]
+  .exercises_fast iii.	∃x [ A(x) ∧ ¬[ D(x) → V(x) ] ]
+  .exercises_fast *iv. ∃x[H(x) ∧ ∀y[[A(y) ∧ P(x,y)] → V(y)]]
+  .exercises_fast **v. ¬∃x [∃y [H(x) ∧ P(x,y) ∧ A(y) ∧ ¬V(y)]	∧ ¬∃z[P(x,z) ∧ A(z) ∧ V(z)]]
 
-units to include in normal lectures later:
-- What does ∃ mean? (491)
 
 
 
@@ -55,8 +56,3 @@ units to include in normal lectures later:
 
 
 
-What does ∃ mean? (491)
-
-//- exercises (normal)
-8.1"(conditionals;"yes/no"answers"are"ok)"
-8.17–19,"*8.20–23"

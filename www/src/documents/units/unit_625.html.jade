@@ -1,14 +1,14 @@
 ---
-layout: 'deck_unit'
+layout: 'deck_units' 
 title: "There Is Exactly One"
 tags: ['translation']
-description: "Mentions several ways of expressing the idea that there is exactly one creator in our formal language, Logiya."
+description: "Mentions several ways of expressing the idea that there is exactly one creator in our formal language, FOL."
 depends: ['']
 source: ['']
 duration: 5
 book: []
 exercises: []
-exercises_fast: ['11.10, 11.13']
+exercises_fast: ['11.10, 11.13', '14.2']
 ---
 
 include ../../../fragments/slide_mixins
@@ -16,6 +16,16 @@ include ../../../fragments/slide_mixins
 
 
 .slide
+  .handout There is one creator (at least one, maybe more).
+  .handout \hspace{3mm}  ∃x Creator(x)
+  .handout Brian is the one and only creator.
+  .handout \hspace{3mm}  Creator(b) ∧ ∀x( Creator(x) → x=b )
+  .handout All squares are broken.
+  .handout \hspace{3mm}  ∀x( Sqr(x) → Brkn(x) )
+  .handout There is one and only one creator.
+  .handout \hspace{3mm}  ∃y( Creator(y) ∧ ∀x( Creator(x) → x=y ) )
+  .handout \hspace{3mm}  or:
+  .handout \hspace{3mm}  ∃y( ∀x( Creator(x) ↔ x=y ) )
   .words#FYDe7
     .container_12: .grid_12
       .preliminaries(style="z-index:-20;position:relative;")

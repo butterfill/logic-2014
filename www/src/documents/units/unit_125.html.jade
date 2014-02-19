@@ -1,5 +1,5 @@
 ---cson
-layout: 'deck_units'
+layout: 'deck_units' 
 title: "Relations: Transitivity"
 description: "Explains what it is for a relation to be transitive.  Describes how to show, using counterexamples, that the relation NotAdjacent (which holds between two objects just when the first is not adjacent to the second) is not transitive."
 tags: ['quantification','relations','counterexamples']
@@ -19,6 +19,16 @@ include ../../../fragments/unit_mixins
 +slide({bkg:'unit_125/slide-173.jpeg'})
   .notes 
   .handout A \emph{transitive} relation is one such that if x bears it to y and y bears it to z then x bears it to z.  (E.g. LeftOf is transitive; NotAdjacent is not transitive.)
+  .handout \begin{minipage}{\columnwidth}
+  .handout If NotAdjacent were transitive, the following argument would be logically valid:
+  .handout.img(data-src='img/unit_125_argument.png')
+  .handout \end{minipage}
+  .handout \begin{minipage}{\columnwidth}
+  .handout A counterexample to this argument:
+  .handout.img(data-src='img/unit_125_counterexample.png')
+  .handout \end{minipage}
+ 
+
 
 +slide({bkg:'unit_125/slide-174.jpeg'})
   .notes 

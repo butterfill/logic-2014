@@ -1,0 +1,104 @@
+---
+layout: 'default'
+title: 'Fast Lecture 06'
+lecture_date: '2014/02/18'
+units: []
+---
+
+
+//- This lecture was rubbish ... parts too simple, nothing major new, I think the first part was ok but later bit was bored
+
+//- I promised to prove soundness & completeness next week ...
+
+
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+
+- var images = get_images('twins_2009')
+
+.exercises_fast 13.12, 13.14, 13.16
+
+
++title_slide({document:document, images:images})
+
+
+//- phase on quantifier equivalences ...
+
+//- unit: quantifier equivalences: using propositional equivalences
++insert_unit({unit:'764', title_slide:false, images:images})
+
+//- proof examples related to the above
+//- ∃x Dead(x) ⊢ ¬∀x¬ Dead(x)
++insert_unit({unit:'825', title_slide:true, images:images})
+//- ¬∀x Dead(x) ⊢ ∃x¬ Dead(x)
++insert_unit({unit:'826', title_slide:true, images:images})
+
+//- unit: quantifier equivalences: using propositional equivalences
++insert_unit({unit:'760', title_slide:true, images:images})
+
+
++slide
+  p feedback
+  ul
+    li.slide flexible seminar times
+    li.slide Steven's dress sense inspires me
+    li.slide this module is way too easy
+    li.slide more explanation of proofs
+    li.slide exercises which don't come from the book
+    li.slide lecture notes online (handouts that can be read independently of lectures)
+    li.slide access to recent past papers if possible
+    li.slide have a nice table with proof rules somewhere with quick summary of proofs / how to prove certain examples
+
+
+//- phase on translation ...
+
+//- There Does Not Exist
++insert_unit({unit:'605', title_slide:true, images:images})
+
+//- unit: Two things are broken
++insert_unit({unit:'470', title_slide:true, images:images})
+
+//- there is exactly one
++insert_unit({unit:'625', title_slide:true, images:images})
+
+//- unit: double arrow
++insert_unit({unit:'567', title_slide:true, images:images})
+
+//- variables
++insert_unit({unit:'600', title_slide:true, images:images})
+
+
+//- more dead horse
++insert_unit({unit:'565', title_slide:true, images:images})
+
+
+//- unit: ∀Intro: An Incorrect Proof
++insert_unit({unit:'572', title_slide:true, images:images})
+
+
+//- unit: State the subsitution theorem
++insert_unit({unit:'250', title_slide:true, images:images})
+
+//- How Big Is a Truth-Table? (431)
+//- +insert_unit({unit:'431', title_slide:true, images:images})
+//- Truth-functional completeness (430)
++insert_unit({unit:'430', title_slide:true, images:images})
+
+
+//- unit: Statement of soundness and completeneness
++insert_unit({unit:'400', title_slide:true, images:images})
+
+
+
+//- stuff
+
+
+  //- unit: Fubar Rules
+  +insert_unit({unit:'340', title_slide:true, images:images})
+  
+  //- *hope not to have time for this (but it's a good one to end on)
+  //- unit: Does ‘if’ mean what ‘→’ means?
+  +insert_unit({unit:'640', title_slide:true, images:images})
+

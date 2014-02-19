@@ -2,14 +2,20 @@
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
 
+#http://docpad.org/docs/troubleshoot#watching-doesn-t-work-works-only-some-of-the-time-or-i-get-eisdir-errors
+watchOptions: preferredMethods: ['watchFile','watch']
+
 plugins:
+  #this avoids problems with svg which require text elements!
+  text:
+    matchElementRegexString: 't'
   raw:
-    commands:
+    raw:
       # rsync
       # -r recursive
       # -u skip file if the destination file is newer
       # -l copy any links over as well
-      raw  : ['rsync', '-rul', 'src/raw/', 'out/' ]
+      command: ['rsync', '-rul', './src/raw/', './out/' ]
 
 
 	#renderPasses : 1

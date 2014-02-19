@@ -1,0 +1,29 @@
+---cson
+layout: 'deck_units' 
+title: "Watch Out, Here Come Multiple Quantifiers"
+description: "Preliminary to discussion of multiple quantifiers."
+tags: ['revision','quantification','semantics','translation']
+depends: ['']
+source: ['ph126 lecture 12']
+duration: 5
+book: ['11.1']
+exercises: []
+exercises_fast: []
+sequence: 630
+---
+
+include ../../../fragments/slide_mixins
+
+//- first display associated images
+mixin display_images_as_slides(document)
+
+//- now add some content after
+section.slide
+  .words: .container_12: .grid_12
+    p.middle.center  
+      span.first-q Every
+      span  time I go to the dentist  
+      span.second-q someone
+      |  dies.
+    mixin invert(['.second-q'])
+    mixin invert(['.first-q'])

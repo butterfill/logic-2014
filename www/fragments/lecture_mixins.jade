@@ -58,7 +58,7 @@ mixin display_images_as_slides(unit)
 //- render a unit as part of a larger slideshow document
 mixin render_unit(unit)
   //- first if the unit is coded as images, do a slide for each image
-  if unit.layout.replace('.html.jade','') == 'deck_slides_img'
+  if unit.layout && unit.layout.replace('.html.jade','') == 'deck_slides_img'
     +display_images_as_slides(unit)
   else
     != unit.contentRenderedWithoutLayouts

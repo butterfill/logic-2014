@@ -1,0 +1,34 @@
+---
+layout: 'default'
+title: 'Lecture 13'
+lecture_date: '2014/02/25'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('indo_2003')
+
++title_slide({document:document, images:images})
+
+.exercises 10.24–7, *10.28–9
+
+
+//- *** TAKE POSTIT NOTES ***
+
+
+//- there is a store for everything
++insert_unit({unit:'560', title_slide:false, images:images})
+
+//- postsecret quiz: translation with multiple quantifiers
+- each d in getCollection("documents").findAll({url:'/quizes/postsecret_04.html'},[{year:-1,sort_order:1}]).toJSON()
+  +render_unit(d)
+
+
+
+//- How Big Is a Truth-Table? (431)
++insert_unit({unit:'431', title_slide:true, images:images})
+
+//- Truth-functional completeness (430)
++insert_unit({unit:'430', title_slide:true, images:images})

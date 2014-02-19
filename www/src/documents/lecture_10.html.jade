@@ -11,6 +11,8 @@ include ../../fragments/unit_mixins
 // *todo: enough images?
 - var images = get_images('sunclouds')
 
+//- *timing: 2013-4 allowed 3 min for feedback and had to skip part of 605 and rush through 764 --- tiny bit too long
+
 +title_slide({document:document, images:images})
 
 //- todo check not already included in units
@@ -26,9 +28,15 @@ include ../../fragments/unit_mixins
 //- fubar rules
 +insert_unit({unit:'340', title_slide:true, images:images})
 
++slide_middle
+  p.center No lectures or seminars in reading week (Week 6).
+
 //- ↔ : truth tables and rules (567)
 +insert_unit({unit:'567', title_slide:true, images:images})
 
+
++slide_middle
+  p.center No lectures or seminars in reading week (Week 6).
 
 +slide_middle
   p.center feedback
@@ -42,12 +50,17 @@ include ../../fragments/unit_mixins
 //- What does ∃ mean? (491)
 +insert_unit({unit:'491', title_slide:true, images:images})
 
-//- Quantifier Equivalences: ∀x Created(x) ⫤⊨ ¬∃x Created(x)
-+insert_unit({unit:'764', title_slide:true, images:images})
++slide_middle
+  p.center No lectures or seminars in reading week (Week 6).
 
 //- There Does Not Exist
 +insert_unit({unit:'605', title_slide:true, images:images})
 
+//- Quantifier Equivalences: ∀x Created(x) ⫤⊨ ¬∃x Created(x)
++insert_unit({unit:'764', title_slide:true, images:images})
+
++slide_middle
+  p.center No lectures or seminars in reading week (Week 6).
 
 
 //- for lecture 11

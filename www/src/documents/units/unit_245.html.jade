@@ -1,5 +1,5 @@
 ---
-layout: 'deck_units'
+layout: 'deck_units' 
 title: "Don't use ∃ with →"
 tags: ['translation']
 description: "Stresses that ∀ works with → by examining sentences with ∀ and ∧, and ∃ with →."
@@ -7,7 +7,7 @@ depends: ['']
 source: ['']
 duration: 7
 book: []
-exercises: ['9.10']
+exercises: ['9.10','9.15--9.17','*9.18--9']
 exercises_fast: ['9.10']
 sequence: 590
 ---
@@ -18,6 +18,15 @@ include ../../../fragments/slide_mixins
 
 //- compare and contrast formulae
 .slide
+  .handout \begin{minipage}{\columnwidth}
+  .handout Is true ∃x(Square(x) → Broken(x)) in this world?
+  .handout.img(data-src='img/word_02.png')
+  .handout \end{minipage}
+  .handout ∃x(Square(x) → Broken(x))
+  .handout \hspace{3mm} ⫤⊨
+  .handout ∃x(¬Square(x) ∨ Broken(x))
+  .handout \hspace{3mm} ⫤⊨
+  .handout ∃x(¬Square(x)) ∨ ∃x(Broken(x))
   .words#PAsdqT
     .container_12
       .grid_7
@@ -54,13 +63,13 @@ include ../../../fragments/slide_mixins
               div(style="margin-top:-1em;margin-left:0.5em;") ∃x(¬Square(x)) ∨ ∃x(Broken(x))
       .grid_5.right-side
         .universal_arrow.center
-          img.step2.hide(src='img/world_01.png')
+          img.step2.hide(src='/img/world_01.png')
           p.step3.hide
             span.invert.bkg-words-highlight-red 1. is false
           p.step4.hide
             span.invert.bkg-words-highlight-lime 2. is true
         .existential_conjunction.center.hide
-          img(src='img/world_02.png')
+          img(src='/img/world_02.png')
           p.step7.hide
             span.invert.bkg-words-highlight-red 4. is false
           p.step8.hide

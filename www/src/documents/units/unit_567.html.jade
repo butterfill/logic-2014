@@ -1,5 +1,5 @@
 ---
-layout: 'deck_unit'
+layout: 'deck_units' 
 title: "↔ : truth tables and rules"
 tags: ['translation']
 description: "Mentions the truth-tables and rules of proof for the biconditional, ↔."
@@ -42,8 +42,8 @@ include ../../../fragments/slide_mixins
         mixin tt-highlight-cols([4],'yellow', '#truth-tables')
         mixin show(['.proof2'])
 
-.slide
-  p.center.middle How do I intro ↔?
++slide_middle
+  p.center How do I intro ↔?
 
 .slide
   .words
@@ -52,7 +52,6 @@ include ../../../fragments/slide_mixins
         #truth-tables
           #tt-bi
             mixin truth-table(['A ↔ B'],[['T','F','F','T']])
-            mixin show('#tt-bi')
           .em-above
           #tt-arrow
             mixin truth-table(['A → B'],[['T','F','T','T']])

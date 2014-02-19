@@ -1,0 +1,54 @@
+---
+layout: 'default'
+title: 'Lecture 11'
+lecture_date: '2014/02/18'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('usa_parks')
+
+//- propositonal proofs and counterexamples
+.exercises 6.17--6.20
+.exercises 6.33, 6.40
+.exercises 8.24--8.25
+
+
++title_slide({document:document, images:images})
+
+//- propositional part
+
+//- Revision: ∀Elim, ∃Intro (551)
++insert_unit({unit:'551', title_slide:false, images:images})
+
+//- ∃Elim (550)
++insert_unit({unit:'550', title_slide:true, images:images})
+
+//- Don't use ∃ with → (245)
++insert_unit({unit:'245', title_slide:true, images:images})
+
+//- Watch Out, Here Come Multiple Quantifiers (744)
++insert_unit({unit:'744', title_slide:true, images:images})
+
+//- Something Is Above Something (740)
++insert_unit({unit:'740', title_slide:true, images:images})
+
+//- Multiple Quantifiers: Something Makes Someone Want to Die Inside (741)
++insert_unit({unit:'741', title_slide:true, images:images})
+
+//- Multiple Quantifiers: Everyone Likes Puffins (742)
++insert_unit({unit:'742', title_slide:true, images:images})
+
+//- Quantifiers Bind Variables (711)
++insert_unit({unit:'711', title_slide:true, images:images})
+
+//- Summary of Quantifier Rules So Far (571)
++insert_unit({unit:'571', title_slide:true, images:images})
+
+//- ∀Intro (570)
++insert_unit({unit:'570', title_slide:true, images:images})
+
+//- ∀Intro: An Incorrect Proof (572)
++insert_unit({unit:'572', title_slide:true, images:images})

@@ -1,0 +1,75 @@
+---
+layout: 'default'
+title: 'Lecture 12'
+lecture_date: '2014/02/20'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('birds_mexico')
+
++title_slide({document:document, images:images})
+
+.exercises 9.20
+.exercises 13.1--13.4, 13.10--13.15, *13.16
+
+//- -----------------------
+//- relations (includes how to express counterexamples formally)
+
++insert_unit({unit:'120', title_slide:false, images:images})
++insert_unit({unit:'125', title_slide:false, images:images})
+//- +insert_unit({unit:'127', title_slide:false, images:images})
+
++insert_unit({unit:'128', title_slide:true, images:images})
+
++insert_unit({unit:'129', title_slide:true, images:images})
+
++insert_unit({unit:'581', title_slide:true, images:images})
+
+
++slide#feedback
+  p feedback
+  ul
+    li.slide like interactions (post-it note activities, gestures, ...)
+    li.slide smaller seminar groups
+    .slide
+      li lectures are too hard
+      li lectures are too slow
+    li.slide ‘You could recommend an introduction to logic or an introduction to thinking about logic’
+      ol
+        li Stephen Read,  
+          span.italic Thinking about Logic
+        li Mark Sainsbury, 
+          span.italic Logical Forms
+
+//- interlude : Negating Identity
++insert_unit({unit:'323', title_slide:true, images:images})
+
+    
+  //- -----------------------
+  //- relations continued
+
+//- expressing transitivity etc with quantifiers
++insert_unit({unit:'583', title_slide:true, images:images})
+
+//- summary of relations (can come before units 581, 583 if not including those in this lecture)
++insert_unit({unit:'126', title_slide:true, images:images})
+
+
+//- -----------------------
+//- spare topics: not needed in 2012-3 
+
+//- Proof Example: A∧B therefore ¬(¬A∨¬B)
++insert_unit({unit:'822', title_slide:true, images:images})
+      
+//- Proof Example: P therefore ¬¬P
++insert_unit({unit:'823', title_slide:true, images:images})
+
+//- Proof Example: S∨(Q∧R) therefore S∨Q
++insert_unit({unit:'824', title_slide:true, images:images})
+
+//- why logic?
+//- +insert_unit({unit:'380', title_slide:true, images:images})
+    

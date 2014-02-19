@@ -1,8 +1,8 @@
 ---
-layout: 'deck_units'
+layout: 'deck_units' 
 title: "There Does Not Exist"
 tags: ['translation','quantification']
-description: "How can we translate sentences involving quantifiers and negation from English into our formal language Logiya?  Discusses translating 'Something is not dead' and 'Nothing is dead'; also 'Everything is not broken' and 'Not everything is broken'.  New: now includes discussion of first-order counterexamples."
+description: "How can we translate sentences involving quantifiers and negation from English into our formal language FOL?  Discusses translating 'Something is not dead' and 'Nothing is dead'; also 'Everything is not broken' and 'Not everything is broken'.  New: now includes discussion of first-order counterexamples."
 depends: ['']
 source: ['']
 duration: 5
@@ -87,8 +87,9 @@ include ../../../fragments/slide_mixins
       .slide.em-above.nodim
         .counterexample(style='width:300px;')
           p Counterexample: 
-          p.indent Domain: {a,b}
-          p.indent Dead : {b}
+          p.indent Domain: {Ayesha,Beatrice}
+          p.indent Dead : {Beatrice}
+          p.indent a : Ayesha ; b : Beatrice
       .slide.em-above.nodim
         .indent
           p.nodim ... Dead(b) is true

@@ -1,0 +1,49 @@
+---
+layout: 'deck_units'
+title: "Negating Identity"
+tags: ['semantics']
+description: "Sometimes people think that ¬a=b and ¬(a=b) mean something different.  They don't."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises: []
+exercises_fast: []
+---
+
+include ../../../fragments/unit_mixins
+
+.slide
+  .handout.img(data-src='img/unit_323.png')
+  .words#FUOASda
+    .container_12: .grid_12
+      table
+        tbody
+          tr
+            td(style="padding-right:2em;padding-top:1em;padding-bottom:1em;")
+              .main-point
+                p ¬a=b 
+                p ¬(a=b) 
+            td.step2.hide(style="padding-top:1em;padding-bottom:1em;")
+              span.stretch-3(style="position:relative;top:-0.3em;padding-right:0.2em;") }  
+              |  these mean the same thing
+      +show('.step2')
+      .everything-else
+        .slide.nodim
+          p.em-above Ayesha is not Beatrice.
+          .slide.nodim
+            p.indent It’s not true that: Ayesha is Beatrice
+            p.indent Ayesha is this: not Beatrice (?)
+        .slide.nodim
+          p.em-above  a=
+            span.the-error ¬b
+            |  <== don’t do this!
+          +highlight('.the-error', 'red')
+        .slide.nodim
+          p.em-above  
+            span.the-error2 (¬a)
+            | =b 
+            | <== don’t do this either!
+          +highlight('.the-error2', 'red')
+      +blur_('.everything-else')
+      +highlight-row('.main-point', 'grey')
