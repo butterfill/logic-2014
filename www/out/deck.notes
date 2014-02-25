@@ -798,6 +798,10 @@ only toggle the notes panel for this cloned window.
       find: /⊢/g,
       replace: '$\\vdash$'
     });
+    findAndReplaceDOMText($handoutContainer[0], {
+      find: /⊬/g,
+      replace: '$\\nvdash$'
+    });
 
 		
   });

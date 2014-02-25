@@ -11,6 +11,7 @@ html{overflow:hidden}
 .deck-container .blur-text span[class*='bkg-words-']{opacity:.4;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";filter:alpha(opacity=40);-webkit-filter:alpha(opacity=40);-moz-filter:alpha(opacity=40);-o-filter:alpha(opacity=40);-ms-filter:alpha(opacity=40)}
 .deck-container .blur-text .blur-except,.deck-container .blur-text span.blur-except{opacity:1;-ms-filter:none;filter:none;-webkit-filter:none;-moz-filter:none;-o-filter:none;-ms-filter:none;-webkit-animation-name:anim_unblur;-moz-animation-name:anim_unblur;-o-animation-name:anim_unblur;-ms-animation-name:anim_unblur;animation-name:anim_unblur;color:#fff;text-shadow:0 0 2px #000,1px 1px 2px #000,1px -1px 2px #000,-1px 1px 2px #000,-1px -1px 2px #000,0 0 5px #000,0 0 5px #000}
 .italic{font-style:italic}
+.deck-container .bold{font-weight:bold}
 .grey-text{color:#808080}
 .line-through{text-decoration:line-through}
 .brightness-150{filter:brightness(150%);-webkit-filter:brightness(150%);-moz-filter:brightness(150%);-o-filter:brightness(150%);-ms-filter:brightness(150%)}
@@ -19,7 +20,7 @@ html{overflow:hidden}
 .display-none{display:none}
 .center{text-align:center}
 .right{text-align:right}
-.indent{padding-left:1em}
+.deck-container .indent{padding-left:1em}
 .width-720{width:720px}
 .width-500{width:500px}
 .width-450{width:450px}

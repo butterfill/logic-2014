@@ -1,0 +1,38 @@
+---
+layout: 'deck_units'
+title: "Soundness and Completeness: Restatement of the Theorems"
+tags: ['meta']
+description: "Single-slide statement of soundness and completeness."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises: []
+exercises_fast: []
+---
+
+include ../../../fragments/slide_mixins
+
+
+.slide
+  .words
+    .container_12: .grid_6
+        p Soundness:
+        p if A ⊢ B then A ⊨ B
+        p For a system of proof to be  
+          em sound
+          |  is for it not to permit proofs of arguments unless they are valid.
+  .right-half-white.slide
+    .words
+      .container_12: .grid_6
+        p Completeness:
+        p if A ⊨
+          sub(style="position:relative;top:0.7em;left:-0.5em; ") TT
+          |  B then A ⊢ B
+        p For a system of proof to be 
+          em complete
+            sub TT
+          |  is for it to contain proofs of all arguments which are logically valid in virtue of the meanings of the truth-functional connectives.
+        
+        
+a.deck-permalink(href='.', title='Permalink to this slide') #

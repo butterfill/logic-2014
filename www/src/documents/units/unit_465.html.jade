@@ -1,0 +1,121 @@
+---cson
+layout: 'deck_units'
+title: "Proof of Proposition 4 for the Completeness Theorem"
+description: "Describes how quantifiers can be used to express the claim that a particular relation is reflexive, symmetric or transitive.  Also introduces dot-arrow diagrams to describe relations."
+tags: ['quantification','relations']
+depends: ['740','742']
+source: ['ph126 fastlecture 05']
+duration: 5
+book: ['15.1', '15.6']
+exercises: ['15.33--15.40 (second edition)']
+exercises_fast: ['15.33, 15.37--15.39 (second edition)']
+sequence: 760
+---
+
+
+
+include ../../../fragments/unit_mixins
+
++slide_rh_white
+  .notes This is a proof of Proposition 4 in §17.2 of the textbook LPL.
+  +left_half
+    p Define a structure, h, so that: 
+    p.indent h(P)=T when P is in 
+      span.bold A*
+    p.indent h(P)=F when  ¬P is in 
+      span.bold A*
+    p Claim: h(X)=T for every X such that 
+      span.bold A* 
+      span ⊢ X 
+    .slide
+      .notes We want to provide this slightly stronger claim (because we're going to do induction)
+      p Proposition: for every X, h(X)=T iff 
+        span.bold A* 
+        span ⊢ X 
+    .slide
+      p Suppose not.  Then take the shortest sentence, Y, such that the Proposition is false.
+    .slide
+      p Either: 
+        span.case1 h(Y)=T and  
+          span.bold A* 
+          span ⊬ Y 
+      p Or: 
+        span.case2 h(Y)=F and 
+          span.bold A* 
+          span ⊢ Y 
+    .slide
+      .notes We know that Y cannot be a sentence letter or its negation from the assumption about how h() was defined
+      p Also, Y has the form 
+        span.caseA (A→B) 
+        span  or 
+        span.caseB (A∧B) 
+        span  or 
+        span ...
+        
+  +right_half
+    .part1
+      .notes Let's consider a case. 
+      +highlight('.case1')
+      +highlight('.caseB')
+      .slide
+        p h(Y)=T 
+        p.slide So h(A∧B)=T 
+        p.slide So h(A)=T and h(B)=T
+        p.slide But A and B are shorter than Y
+        p.slide So, by assumption, 
+          span.bold A* 
+          span ⊢ A and 
+          span.bold A* 
+          span ⊢ B 
+        p.slide Then 
+          span.bold A* 
+          span ⊢ A∧B  
+        p.slide
+          span i.e 
+          span.bold A* 
+          span ⊢ Y  
+        p.slide This contradicts our assumption
+    +unhighlight_('.case1, .caseB')
+    +blur2('.part1')
+    +highlight('.case2')
+    +highlight('.caseA')
+    +remove('.part1')
+    .part2.slide
+      p
+        span.bold A* 
+        span ⊢ Y i.e. 
+        span.proovesAarrowB 
+          span.bold A* 
+          span ⊢ A→B 
+      p.slide h(Y)=F i.e. h(A→B)=F 
+      p.slide So h(A)=T and h(B)=F
+      p.slide But A and B are shorter than Y.
+      p.slide So, by assumption, 
+        span.proovesA
+          span.bold A* 
+          span ⊢ A
+        span  and  
+        span.bold A* 
+        span ⊬ B 
+      p.slide But for all X, 
+        span.bold A* 
+        span ⊢ X or 
+        span.bold A* 
+        span ⊢ ¬X 
+      p.slide So 
+        span.proovesNotB
+          span.bold A* 
+          span ⊢ ¬B 
+      +highlight('.proovesA, .proovesNotB', 'blue')
+      p.slide So 
+        span.proovesNotAarrowB
+          span.bold A* 
+          span ⊢ ¬(A→B)
+        span  (proofs about proofs)
+      +unhighlight('.proovesA, .proovesNotB', 'blue')
+      +highlight('.proovesAarrowB, .proovesNotAarrowB', 'blue')
+      p.slide So 
+        span.bold A* 
+        span ⊢ ⊥ (proofs about proofs)
+        span.slide , which contradicts our assumption.
+          

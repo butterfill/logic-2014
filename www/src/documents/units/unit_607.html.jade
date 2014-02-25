@@ -1,0 +1,57 @@
+---
+layout: 'deck_units'
+title: "Somebody Is Not Dead"
+tags: ['translation','quantification']
+description: "Continues discussion of how to translate sentences involving quantifiers and negation from English into our formal language Logiya?  Discusses translating 'Some person is not dead' and 'No person is dead'; also 'Every person is not dead' and 'Not every person is dead'."
+depends: ['605']
+source: ['']
+duration: 5
+book: []
+exercises: []
+exercises_fast: []
+---
+
+include ../../../fragments/slide_mixins
+
+.slide
+  .words
+    .container_12
+      .grid_6.left-half
+        p.hidelater Some person is dead.
+        p.hidelater.indent.slide.nodim ∃x(Person(x) ∧ Dead(x))
+        .slide.nodim
+          p.hidelater.em-above Some person is not dead.
+          p.indent.slide.equiv-pair1
+            span ∃x(Person(x) ∧    
+            span.negation ¬
+            span Dead(x))
+        .slide.nodim
+          p.hidelater.em-above No person is dead.
+          p.indent.slide.equiv-pair2
+            span.negation ¬
+            span ∃x(Person(x) ∧ Dead(x))
+        mixin words-bkg(['.negation'],'pink','.left-half')
+        mixin fade(['.left-half'],5000)
+      .grid_6.slide.right-half
+        p.hidelater.nodim Every person is dead.
+        p.hidelater.indent.slide.nodim
+          span ∀x(Person(x) → Dead(x))
+        p.hidelater.em-above.slide.nodim Every person is not dead.
+        p.indent.slide.nodim.equiv-pair2
+          span ∀x(Person(x) → 
+          span.negation ¬
+          span Dead(x))
+        p.hidelater.em-above.slide.nodim Not every person is dead.
+        p.indent.slide.nodim.equiv-pair1
+          span.negation ¬
+          span ∀x(Person(x) → Dead(x))
+        mixin words-bkg(['.negation'],'yellow','.right-half')
+        //- *notes Quick discussion of which of the sentences entail the others
+        mixin unfade(['.left-half'])
+        mixin fade(['.hidelater'])
+        mixin words-bkg(['.equiv-pair1'],'blue')
+        mixin words-bkg-faint(['.equiv-pair1'],'blue')
+        mixin words-bkg(['.equiv-pair2'],'red')
+
+
+  a.deck-permalink(href='.', title='Permalink to this slide') #

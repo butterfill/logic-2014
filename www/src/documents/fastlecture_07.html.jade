@@ -1,0 +1,108 @@
+---
+layout: 'default'
+title: 'Fast Lecture 07'
+lecture_date: '2014/02/18'
+units: []
+---
+
+
+//- This lecture was rubbish ... parts too simple, nothing major new, I think the first part was ok but later bit was bored
+
+//- I promised to prove soundness & completeness next week ...
+
+
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+
+- var images = get_images('sunclouds')
+
+
++title_slide({document:document, images:images})
+
+
+
+
+
+//- unit: every time I go to the dentist
++insert_unit({unit:'750', title_slide:false, images:images})
+
+  //- *cut in 2012-13 (I get the sense they understand this)
+    //- Quantifier equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ¬∃x(Square(x) ∧ ¬Broken(x)) 
+    - d = get_unit(770)
+      mixin section({unit:d, images:images})
+      mixin render_unit(d)
+
+
+//- --------------------------------------------------
+//- soundness theorem
+    
+//- *cut (not needed)
+  //- re-statement of soundness and completeness theorems
+  //- +insert_unit({unit:'401', title_slide:true, images:images})
+  
+
+//- and-fubar and the soundness properly
++insert_unit({unit:'346', title_slide:true, images:images})
+    
+//- proof of soundness theorem
++insert_unit({unit:'410', title_slide:true, images:images})
+    
+
+//- *cut in 2012-3 (want to finish)
+  //- unit: Does ‘if’ mean what ‘→’ means?
+  //- +insert_unit({unit:'640', title_slide:true, images:images})
+
+
+//- --------------------------------------------------
+//- completeness
+
+//- outline of completeness theorem
++insert_unit({unit:'450', title_slide:true, images:images})
+
+//- proofs about proofs
++insert_unit({unit:'440', title_slide:true, images:images})
+  
+//- lemma for completeness
++insert_unit({unit:'453', title_slide:true, images:images})
+
+//- completeness
++insert_unit({unit:'455', title_slide:true, images:images})
+
+//- Proof of Proposition 4 for the Completeness Theorem
+//- skip if short of time
++insert_unit({unit:'465', title_slide:true, images:images})
+
+
+//- *cut in 2012-3 : I really like this but no time
+  //- Could there be nothing
+  //- +insert_unit({unit:'805', title_slide:true, images:images})
+
+//- More records than the KGB
++insert_unit({unit:'780', title_slide:true, images:images})
+
+//- The End Is Near
+//- *nb don't use section header with this one!
++insert_unit({unit:'790', title_slide:false, images:images})
+
+
+
+
+
+.exercises_fast 13.51–2, 14.13 %proofs
+
+.exercises_fast For each of the following sentences of FOL, give a logically equivalent sentence of idiomatic English using the specified interpretation.  Your English sentences should be as concise as possible.  
+.exercises_fast Domain : people and actions 
+.exercises_fast D(x)	: x is desirable
+.exercises_fast V(x)	: x is virtuous
+.exercises_fast A(x)	: x is an action
+.exercises_fast H(x)	: x is a person
+.exercises_fast P(x,y)	: x performed y
+.exercises_fast i.	∀x (( D(x) → V(x) )
+.exercises_fast ii.	∀x ( (A(x)∧ D(x) ) → V(x) ) )
+.exercises_fast iii.	∃x ( A(x) ∧ ¬( D(x) → V(x) ) )
+.exercises_fast *iv. ∃x(H(x)∧∀y((A(y)∧P(x,y))→V(y)))
+.exercises_fast **v. ¬∃x (∃y (H(x) ∧ P(x,y) ∧ A(y) ∧ ¬V(y))	∧ ¬∃z[P(x,z) ∧ A(z) ∧ V(z)))
+
+

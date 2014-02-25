@@ -1,0 +1,158 @@
+---cson
+layout: 'deck_units'
+title: "Proof of the Soundness Theorem"
+description: "Sketches a proof of the soundness theorem for the propositional part of our formal system of proof, Fitch."
+tags: ['meta']
+depends: ['345','400']
+source: ['ph126 lecture 13']
+duration: 5
+book: ['8.3']
+exercises: []
+exercises_fast: []
+sequence: 910
+---
+
+
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_410/slide-055.jpeg'})
+  .notes 
+  .handout \begin{minipage}{\columnwidth}
+  .handout \textbf{Illustration of soundness proof: ∨Intro}
+  .handout.img(data-src='img/soundness_or.png')
+  .handout \end{minipage}
+  .handout \emph{Useful Observation about any argument that ends with ∨Intro.} Suppose this argument is not valid, i.e. the premises are true and the conclusion false.  Then Z must be false.  So the argument from the premises to Z (line n) is not a valid argument. So there is a shorter proof which is not valid.
+  .handout \emph{Stipulation}: when I say that \emph{a proof is not valid}, I mean that the last step of the proof is not a logical consequence of the premises (including premises of any open subproofs).
+  .handout \begin{minipage}{\columnwidth}
+  .handout \textbf{Illustration of soundness proof: ¬Intro}
+  .handout.img(data-src='img/soundness_not.png')
+  .handout \end{minipage}
+  .handout \begin{minipage}{\columnwidth}
+  .handout \textbf{How to prove soundness?  Outline}
+  .handout Step 1: show that each rule has this property:
+  .handout \hspace{5mm} Where the last step in a proof involves that rule, if proof is not valid then there is a shorter proof which is not valid.
+  .handout Step 2: Suppose (for a contradiction) that some Fitch proofs are not valid.  Select one of the shortest invalid proofs. The last step must involve one of the Fitch rules. Whichever rule it involves, we know that there must be a shorter proof which is not valid. This contradicts the fact that the selected proof is a shortest invalid proof.
+  .handout \end{minipage}
+
+
++slide({bkg:'unit_410/slide-056.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-057.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-058.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-059.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-060.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-061.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-062.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-063.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-064.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-065.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-066.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-067.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-068.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-069.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-070.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-071.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-072.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-073.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-074.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-075.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-076.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-077.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-078.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-079.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-080.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-081.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-082.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-083.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-084.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-085.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-086.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-087.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-088.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-089.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-090.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-091.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-092.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-093.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-094.jpeg'})
+  .notes 
+
++slide({bkg:'unit_410/slide-095.jpeg'})
+  .notes 
+

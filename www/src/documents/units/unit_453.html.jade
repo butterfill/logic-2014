@@ -1,0 +1,145 @@
+---cson
+layout: 'deck_units'
+title: "Lemma for the Completeness Theorem"
+description: "Proves the following claim, where Γ is a set of sentences of Logiya: if for every sentence letter P, either Γ⊢P or Γ⊢¬P, then for every sentence of Logiya φ, either Γ⊢φ or Γ⊢¬φ."
+tags: ['meta']
+depends: ['440']
+source: ['ph126 lecture 13']
+duration: 10
+book: ['8.3']
+exercises: []
+exercises_fast: []
+sequence: 980
+---
+
+
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_453/slide-218.jpeg'})
+  .notes 
+  .handout 
+  .handout If for every sentence letter, P, either A ⊢ P or A ⊢ ¬P, then for every formula, X, either A ⊢ X or A ⊢ ¬X. 
+  .handout Proof  
+  .handout \textbf{Step a.} Suppose (for a contradiction) that there are formulae, X, such that A ⊬ X and A ⊬ ¬X.  Take a shortest such formula, call it Y.  
+  .handout \textbf{Step b.}  This formula, Y, must have one of the following forms: ¬P, P∨Q, P∧Q, P→Q, P↔Q, ⊥
+  .handout \textbf{Step c.} We can show that whichever form X has, either A ⊢ Y and A ⊢ ¬Y.  
+  .handout Case 1: X is P→Q.  Then since P and Q are shorter than X, either:
+  .handout \hspace{5mm} (i) A  ⊢ P and A  ⊢ ¬Q
+  .handout \hspace{5mm} or
+  .handout \hspace{5mm} (ii) A  ⊢ ¬P
+  .handout \hspace{5mm} or
+  .handout \hspace{5mm} (iii) A  ⊢ Q
+  .handout \hspace{5mm} If (i), A ⊢ ¬(P→Q), that is, A ⊢ ¬X.
+  .handout \hspace{5mm} If (ii), A ⊢ P→Q,  that is, A ⊢ ¬X.
+  .handout \hspace{5mm} If (iii), A ⊢ P→Q, that is, A ⊢ ¬X.
+  .handout \hspace{5mm} (Here we use the last two Proofs about Proofs, see earlier)
+  .handout Case 2: X is ¬P.  
+  .handout \hspace{5mm} Then since P is shorter, A ⊢ P or A ⊢ ¬P. 
+  .handout \hspace{5mm} If A ⊢ P then A ⊢ ¬¬P so A ⊢ ¬X which would contradict our assumption. This is shown in the proofs about proofs above.
+  .handout \hspace{5mm} If A ⊢ ¬P then A ⊢ X (because X is ¬P), which would contradict our assumption.
+  .handout Case 3: …
+  .handout \textbf{Step d.}  The demonstration in Step c contradicts our assumption, so we can conclude that it is false. That is, either A ⊢ X and A ⊢ ¬X for every formula X.
+
++slide({bkg:'unit_453/slide-219.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-220.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-221.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-222.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-223.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-224.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-225.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-226.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-227.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-228.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-229.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-230.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-231.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-232.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-233.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-234.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-235.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-236.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-237.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-238.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-239.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-240.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-241.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-242.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-243.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-244.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-245.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-246.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-247.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-248.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-249.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-250.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-251.jpeg'})
+  .notes 
+
++slide({bkg:'unit_453/slide-252.jpeg'})
+  .notes 
+

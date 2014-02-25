@@ -1,0 +1,229 @@
+% !TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+
+\documentclass[12pt]{extarticle}
+% extarticle is like article but can handle 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, and 20pt text
+
+\def \ititle {Origins of Mind}
+ 
+\def \isubtitle {Lecture 08}
+ 
+\def \iauthor {Stephen A. Butterfill}
+\def \iemail{s.butterfill@warwick.ac.uk}
+\date{}
+
+%for strikethrough
+\usepackage[normalem]{ulem}
+
+\usepackage{pdfpages}
+
+
+\input{$HOME/Documents/submissions/preamble_steve_handout}
+
+%logic symbol \leftmodels
+\usepackage{MnSymbol}
+
+%\bibpunct{}{}{,}{s}{}{,}  %use superscript TICS style bib
+%remove hanging indent for TICS style bib
+%TODO doesnt work
+\setlength{\bibhang}{0em}
+%\setlength{\bibsep}{0.5em}
+
+
+%itemize bullet should be dash
+\renewcommand{\labelitemi}{$-$}
+
+\begin{document}
+
+%\raggedcolumns
+
+\begin{multicols*}{3}
+
+\setlength\footnotesep{1em}
+
+
+\bibliographystyle{newapa} %apalike
+
+%\maketitle
+%\tableofcontents
+
+
+
+
+%--------------- 
+%--- start paste
+
+\def \ititle {Logic I}
+ 
+\def \isubtitle {Lecture 14}
+ 
+\begin{center}
+ 
+{\Large
+ 
+\textbf{\ititle}: \isubtitle
+ 
+}
+ 
+ 
+ 
+\iemail %
+ 
+\end{center}
+ 
+Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.
+ 
+ 
+ 
+\section{Two Things Are Broken}
+ 
+\emph{Reading:} §14.1
+ 
+To translate sentences involving number into FOL, use identity. For example,
+ 
+`Two things are broken' might be translated as:
+ 
+∃x ∃y ( Broken(x) ∧ Broken(y) ∧ ¬(x=y) )
+ 
+ 
+ 
+\section{Loving and Being Loved}
+ 
+\emph{Reading:} §11.2, §11.3
+ 
+ 
+ 
+\section{More Dead Horse}
+ 
+\emph{Reading:} §11.4, §11.5
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_565_proof.png}
+\end{center}
+“Tesco is a store for everything”
+ 
+\hspace{3mm} ∀x StoreFor(b,x)
+ 
+Tesco is a store for everything except dead horses
+ 
+\hspace{3mm} ∀x (¬DeadHorse(x) → StoreFor(b,x) )
+ 
+Tesco is a store for everything except Tesco
+ 
+\hspace{3mm} ∀x (¬x=b → StoreFor(b,x) )
+ 
+There is a store for everything except itself
+ 
+\hspace{3mm} ∃y ∀x (¬x=y → StoreFor(y,x) )
+ 
+ 
+ 
+\section{Somebody Is Not Dead}
+ 
+ 
+ 
+\section{Quantifier Equivalences: ∀x(Square(x) → Broken(x)) $\leftmodels\models$ ∀x(¬Broken(x) → ¬Square(x))}
+ 
+\emph{Reading:} §10.3
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_760_tt.png}
+\end{center}
+ 
+ 
+\section{Quantifier Equivalences: ∀x(Square(x) → Broken(x)) $\leftmodels\models$ ∀x(¬Square(x) ∨ Broken(x))}
+ 
+\emph{Reading:} §10.3
+ 
+ 
+ 
+\section{Soundness and Completeness: Statement of the Theorems}
+ 
+\emph{Reading:} §8.3, §13.4
+ 
+‘A $\vdash$ B’ means there is a proof of B using premises A
+ 
+‘$\vdash$ B’ means there is a proof of B using no premises
+ 
+‘A $\models$ B’ means B is a logical consequence of A
+ 
+‘$\models$ B’ means B is a tautology
+ 
+‘A $\models$$_{TT}$ B’ means B is a logical consequence of A just in virtue of the meanings of truth-functions (the textbook LPL calls this ‘tautological consequence’)
+ 
+\emph{Soundness}: If A $\vdash$ B then A $\models$ B
+ 
+\hspace{3mm} i.e. if you can prove it in Fitch, it’s valid
+ 
+\emph{Completeness}: If A $\models$$_{TT}$ B then A $\vdash$ B
+ 
+\hspace{3mm} i.e. if it’s valid just in virtue of the meanings of the truth-functional connectives, then you can prove it in Fitch.
+ 
+ 
+ 
+\section{The Soundness Property and the Fubar Rules}
+ 
+\emph{Reading:} §8.3
+ 
+ 
+ 
+\section{Proof of the Soundness Theorem}
+ 
+\emph{Reading:} §8.3
+ 
+\begin{minipage}{\columnwidth}
+ 
+\textbf{Illustration of soundness proof: ∨Intro}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/soundness_or.png}
+\end{center}
+\end{minipage}
+ 
+\emph{Useful Observation about any argument that ends with ∨Intro.} Suppose this argument is not valid, i.e. the premises are true and the conclusion false. Then Z must be false. So the argument from the premises to Z (line n) is not a valid argument. So there is a shorter proof which is not valid.
+ 
+\emph{Stipulation}: when I say that \emph{a proof is not valid}, I mean that the last step of the proof is not a logical consequence of the premises (including premises of any open subproofs).
+ 
+\begin{minipage}{\columnwidth}
+ 
+\textbf{Illustration of soundness proof: ¬Intro}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/soundness_not.png}
+\end{center}
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+\textbf{How to prove soundness? Outline}
+ 
+Step 1: show that each rule has this property:
+ 
+\hspace{5mm} Where the last step in a proof involves that rule, if proof is not valid then there is a shorter proof which is not valid.
+ 
+Step 2: Suppose (for a contradiction) that some Fitch proofs are not valid. Select one of the shortest invalid proofs. The last step must involve one of the Fitch rules. Whichever rule it involves, we know that there must be a shorter proof which is not valid. This contradicts the fact that the selected proof is a shortest invalid proof.
+ 
+\end{minipage}
+ 
+\vfill
+\begin{minipage}{\columnwidth}
+\section{Exercises}
+These exercises will be discussed in seminars the week after this lecture.
+The numbers below refer to the numbered exercises in the course textbook, e.g.\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}. Exercises marked `*' are optional.
+ 
+\begin{quote}
+10.20, 10.22
+ 
+7.32
+ 
+\end{quote}
+\end{minipage}
+
+%--- end paste
+%--------------- 
+ 
+
+
+\end{multicols*}
+
+\end{document}

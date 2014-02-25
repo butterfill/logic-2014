@@ -16,23 +16,6 @@ exercises normal last week:
 
 fast lecture: include ** unit on quantifier counterexamples, 502b ?
 
-fast lecture 07: proofs 14.13, 13.51–2
-fast lecture 07 at the end:
-
-  .exercises_fast B. For each of the following sentences of FOL, give a logically equivalent sentence of idiomatic English using the specified interpretation.  Your English sentences should be as concise as possible.  
-  .exercises_fast Domain : people and actions 
-  .exercises_fast D(x)	: x is desirable
-  .exercises_fast V(x)	: x is virtuous
-  .exercises_fast A(x)	: x is an action
-  .exercises_fast H(x)	: x is a person
-  .exercises_fast P(x,y)	: x performed y
-  .exercises_fast i.	∀x [ D(x) → V(x) ]
-  .exercises_fast ii.	∀x [ [A(x)∧ D(x) ] → V(x) ] ]
-  .exercises_fast iii.	∃x [ A(x) ∧ ¬[ D(x) → V(x) ] ]
-  .exercises_fast *iv. ∃x[H(x) ∧ ∀y[[A(y) ∧ P(x,y)] → V(y)]]
-  .exercises_fast **v. ¬∃x [∃y [H(x) ∧ P(x,y) ∧ A(y) ∧ ¬V(y)]	∧ ¬∃z[P(x,z) ∧ A(z) ∧ V(z)]]
-
-
 
 
 //- advertise logic options and the degree
