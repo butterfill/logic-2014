@@ -18,6 +18,46 @@ include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_620/slide-077.jpeg'})
   .notes 
+  .handout There are at least two squares:
+  .handout \hspace{5mm} ∃x ∃y ( Square(x) ∧ Square(y) ∧ ¬x=y )
+  .handout At least two squares are broken:
+  .handout \hspace{5mm} ∃x ∃y ( 
+  .handout \hspace{10mm} Square(x) ∧ Broken(x) 
+  .handout \hspace{10mm} ∧ 
+  .handout \hspace{10mm} Square(y) ∧ Broken(y) 
+  .handout \hspace{10mm} ∧ 
+  .handout \hspace{10mm} ¬x=y
+  .handout \hspace{5mm} )
+  .handout There are at least three squares:
+  .handout \hspace{5mm} ∃x ∃y ∃z ( 
+  .handout \hspace{10mm} Square(x) ∧ Square(y) ∧ Square(z) 
+  .handout \hspace{10mm} ∧ 
+  .handout \hspace{10mm} ¬x=y ∧ ¬y=z ∧ ¬x=z
+  .handout \hspace{5mm} )
+  .handout There are at most two squares: 
+  .handout \hspace{5mm} ¬There are at least three squares
+  .handout \hspace{5mm} ¬∃x ∃y ∃z ( Square(x) ∧ Square(y) ∧ Square(z) ∧ ¬x=y ∧ ¬y=z ∧ ¬x=z)
+  .handout There are exactly two squares:
+  .handout \hspace{5mm} There are at most two squares ∧ There are at least two squares
+
+  .handout \textbf{Number: alternatives}
+  .handout There is at most one square: 
+  .handout \hspace{5mm} ∀x ∀y ( (Square(x) ∧ Square(y)) → x=y )
+  .handout There are at most two squares: 
+  .handout \hspace{5mm} ∀x ∀y ∀z ( 
+  .handout \hspace{10mm}   (Square(x) ∧ Square(y) ∧ Square(z))
+  .handout \hspace{10mm} →  
+  .handout \hspace{10mm} (x=y ∨ y=z ∨ x=z) 
+  .handout \hspace{5mm}      )
+  .handout There is exactly one square: 
+  .handout \hspace{5mm} ∃x ( Square(x) ∧ ∀y( Square(y) → x=y ) )
+  .handout There are exactly two squares: 
+  .handout \hspace{5mm} ∃x∃y (
+  .handout \hspace{10mm} Square(x) ∧ Square(y) ∧ ¬x=y 
+  .handout \hspace{10mm}   ∧
+  .handout \hspace{10mm} ∀z( Square(z) → (z=x ∨ z=y) )
+  .handout \hspace{5mm} )
+
 
 +slide({bkg:'unit_620/slide-078.jpeg'})
   .notes 

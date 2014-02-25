@@ -7,7 +7,7 @@ depends: ['470']
 source: ['ph126 lecture 15']
 duration: 10
 book: ['14.3']
-exercises: []
+exercises: ['14.26, 14.28']
 exercises_fast: ['14.2', '14.4, 14.5', '14.10, 14.11', '14.26, 14.28']
 sequence: 1040
 ---
@@ -18,6 +18,18 @@ include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_790/slide-133.jpeg'})
   .notes 
+  .handout ‘The’ can be a quantifier, e.g. ‘the square is broken’.  How to formalise it?
+  .handout The square is broken
+  .handout ⫤⊨ There is exactly one square and it is broken
+  .handout ⫤⊨ There is at most one square and there is at least one square and it is broken
+  .handout ⫤⊨ There is at most one square and there is at least one square and all squares are broken
+  .handout ⫤⊨ ¬ ∃x ∃y ( Square(x) ∧ Square(y) ∧ ¬x=y ) 
+  .handout \hspace{5mm} ∧ ∃x Square(x) 
+  .handout \hspace{5mm}  ∧ ∀x ( Square(x) → Broken(x) )
+
+  .handout Which shorter sentences are equivalent to this?
+  .handout ∃x ( Square(x) ∧ ∀y ( Square(y) → y=x ) ∧ Broken(x) )
+  .handout ∃x ( ∀y ( Square(y) ↔ y=x ) ∧ Broken(x) )
 
 +slide({bkg:'unit_790/slide-134.jpeg'})
   .notes 

@@ -14,6 +14,20 @@ exercises_fast: []
 include ../../../fragments/slide_mixins
 
 .slide
+  .handout Some person is dead.
+  .handout \hspace{5mm} ∃x(Person(x) ∧ Dead(x))
+  .handout Some person is not dead.
+  .handout \hspace{5mm} ∃x(Person(x) ∧ ¬Dead(x))
+  .handout No person is dead.
+  .handout \hspace{5mm} ¬∃x(Person(x) ∧ Dead(x))
+  
+  .handout   Every person is dead.
+  .handout \hspace{5mm} ∀x(Person(x) → Dead(x))
+  .handout   Every person is not dead.
+  .handout \hspace{5mm}   ∀x(Person(x) → ¬Dead(x))
+  .handout   Not every person is dead.
+  .handout \hspace{5mm}   ¬∀x(Person(x) → Dead(x))
+
   .words
     .container_12
       .grid_6.left-half
@@ -54,4 +68,4 @@ include ../../../fragments/slide_mixins
         mixin words-bkg(['.equiv-pair2'],'red')
 
 
-  a.deck-permalink(href='.', title='Permalink to this slide') #
+    a.deck-permalink(href='.', title='Permalink to this slide') #

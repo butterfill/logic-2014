@@ -1,0 +1,42 @@
+---
+layout: 'default'
+title: 'Lecture 15'
+lecture_date: '2014/03/04'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('portugal_others')
+
++title_slide({document:document, images:images})
+
+
+//- Translation from FOL to English (951)
++slide_middle
+  p.center Translation from FOL to English 
++insert_unit({unit:'951', title_slide:false, images:images})
+
+//- Numerical Quantifiers (620)
++insert_unit({unit:'620', title_slide:true, images:images})
+
+//- There Is Exactly One (625)
++insert_unit({unit:'625', title_slide:true, images:images})
+
+//- Quantifier Equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ¬∃x(Square(x) ∧ ¬Broken(x))
++insert_unit({unit:'770', title_slide:true, images:images})
+
+//- Proof Example: ∃x Dead(x) ⊢ ¬∀x¬ Dead(x). (825)
++insert_unit({unit:'825', title_slide:true, images:images})
+
+//- Proof Example: ¬∀x Dead(x) ⊢ ∃x¬ Dead(x). (826)
++insert_unit({unit:'826', title_slide:true, images:images})
+
+.handout \section{Extra Exercises: Proofs}
+.handout You may not have time to do these exercises involving proofs until after term, but it would be a good idea to complete them at some point.
+.handout \hspace{5mm}  13.6, 13.7, *13.8, *13.9 
+.handout \hspace{5mm}  13.19, 13.23--13.27, *13.28--13.31
+.handout \hspace{5mm}  *13.33, 13.35, 13.37, 13.39
+.handout \hspace{5mm}  13.43--13.45, 13.49--13.50, *13.51--13.52 
+ 

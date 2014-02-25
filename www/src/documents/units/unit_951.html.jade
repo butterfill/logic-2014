@@ -1,0 +1,139 @@
+---
+layout: 'deck_units'
+title: "Translation from FOL to English"
+tags: ['translation','quantification','revision']
+description: "Revises translation from FOL to English by considering some questions from an exam paper."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises: ['14.1--14.3, (*14.4--14.5)']
+exercises_fast: []
+---
+
+include ../../../fragments/slide_mixins
+
+.slide#fguypasD
+  .handout Using the interpretation below, providing English translations of the following sentences of FOL.
+  .handout \hspace{5mm} \begin{minipage}{\columnwidth}
+  .handout \hspace{5mm}  Domain: {people and actions} 
+  .handout \hspace{5mm}  D(x) : x is desirable 
+  .handout \hspace{5mm}  V(x) : x is virtuous 
+  .handout \hspace{5mm}  A(x) : x is an action 
+  .handout \hspace{5mm}  P(x,y) : x performed y 
+  .handout \hspace{5mm}  a : Ayesha 
+  .handout \end{minipage}
+  .handout i. ∀x( D(x) → V(x) ) 
+  .handout ii. ∀x( (A(x) ∧ D(x)) → V(x) ) 
+  .handout iii. ∃x( A(x) ∧ ¬D(x) ) 
+  .handout iv. ∃x( A(x) ∧ ¬D(x) ∧ V(x) ) 
+  .handout v. ∃x( A(x) ∧ P(a,x) ∧ ¬V(x) ) 
+  .handout vi. ¬∃x( 
+  .handout \hspace{5mm} ∃y( A(y) ∧ P(x,y) ∧ ¬V(y) ) 
+  .handout \hspace{5mm}  ∧ 
+  .handout  \hspace{5mm} ¬∃z( A(z) ∧ P(x,z) ∧ V(z) ) 
+  .handout  )
+  .words
+    .container_12
+      .grid_5
+        .white-box
+          p Domain: {people and actions}
+          p D(x) : x is desirable 
+          p V(x) : x is virtuous 
+          p A(x) : x is an action 
+          p P(x,y) : x performed y
+          p a : Ayesha
+        .step3.hide.em-above
+          .white-box(style="position:relative;z-index:-10;")
+              p.center All 
+                span.antecedent squares
+                |  are 
+                span.consequence blue.
+              p.center ∀x( 
+                span.antecedent S(x)
+                |  → 
+                span.consequent B(x)
+                |  ) 
+        .step5.hide.em-above
+          .white-box(style="position:relative;z-index:-10;")
+              p.center Some 
+                span.left-conjunct squares
+                |  are 
+                span.right-conjunct blue.
+              p.center ∃x( 
+                span.left-conjunct S(x)
+                |  ∧ 
+                span.right-conjunct B(x)
+                |  ) 
+      .grid_7
+        .em-above-each-td
+          table
+            tbody
+              tr.hide.step2
+                td i.
+                td ∀x( 
+                  span.antecedent D(x)
+                  |  → 
+                  span.consequent V(x)
+                  |  ) 
+              tr.hide.step4
+                td ii.
+                td ∀x( 
+                  span.antecedent2 (A(x) ∧ D(x))
+                  |  → 
+                  span.consequent2 V(x)
+                  |  )
+              tr.hide.step6
+                td iii.
+                td ∃x( 
+                  span.left-conjunct A(x)
+                  |  ∧ 
+                  span.right-conjunct ¬D(x)
+                  |  )
+              tr.hide.step8
+                td iv.
+                td ∃x( 
+                  span.left-conjunct2 A(x) ∧ 
+                    span.fuiosfq ¬D(x)
+                  |  ∧ V(x) )
+              tr.hide.step10
+                td(style="padding-right:1em;") v.
+                td ∃x( A(x) ∧ 
+                  span.fuiosfq P(a,x)
+                  |   ∧ ¬V(x) )
+              tr.hide.step12
+                td(style="padding-right:1em;") vi.
+                td ¬∃x(
+                  div.indent.left-conjunct12 ∃y( A(y) ∧ P(x,y) ∧ ¬V(y) )
+                  div.indent ∧
+                  div.indent.right-conjunct12  ¬∃z( A(z) ∧ P(x,z) ∧ V(z) )
+                  div  )
+      mixin steps(2,3)
+      mixin words-bkg('.antecedent','pink')
+      mixin words-bkg('.consequent','blue')
+      mixin blur('.step2')
+      mixin words-bkg-remove-all(['.step3 .antecedent','.step3 .consequent'])
+      mixin step(4)
+      mixin words-bkg(['.antecedent','.antecedent2'],'pink')
+      mixin blur(['.step4','.step3'])
+      mixin step(6)
+      mixin showremove(['.step5'],['.step3'])
+      mixin words-bkg('.left-conjunct','lime')
+      mixin words-bkg('.right-conjunct','orange')
+      mixin blur('.step6')
+      mixin words-bkg-remove-all(['.step5 .left-conjunct','.step5 .right-conjunct'])
+      mixin step(8)
+      mixin words-bkg(['.left-conjunct','.left-conjunct2'],'lime')
+      mixin blur(['.step8','.step5'])
+      mixin step(10)
+      mixin unblur('.step8')
+      mixin words-bkg-remove('.left-conjunct2','lime')
+      mixin words-bkg('.fuiosfq','yellow')
+      mixin blur(['.step8','.step10'])
+      mixin step(12)
+      mixin words-bkg('.left-conjunct12','yellow')
+      mixin words-bkg-faint('.left-conjunct12','yellow')
+      mixin words-bkg('.right-conjunct12','orange')
+      mixin words-bkg-remove-all(['.left-conjunct12','.right-conjunct12'])
+      
+      

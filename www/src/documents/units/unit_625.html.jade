@@ -7,7 +7,7 @@ depends: ['']
 source: ['']
 duration: 5
 book: []
-exercises: []
+exercises: ['14.10--14.12, *14.13']
 exercises_fast: ['11.10, 11.13', '14.2']
 ---
 
@@ -25,7 +25,7 @@ include ../../../fragments/slide_mixins
   .handout There is one and only one creator.
   .handout \hspace{3mm}  ∃y( Creator(y) ∧ ∀x( Creator(x) → x=y ) )
   .handout \hspace{3mm}  or:
-  .handout \hspace{3mm}  ∃y( ∀x( Creator(x) ↔ x=y ) )
+  .handout \hspace{3mm}  ∃y ∀x( Creator(x) ↔ x=y ) 
   .words#FYDe7
     .container_12: .grid_12
       .preliminaries(style="z-index:-20;position:relative;")

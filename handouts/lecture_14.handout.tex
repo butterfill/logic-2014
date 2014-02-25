@@ -91,6 +91,9 @@ To translate sentences involving number into FOL, use identity. For example,
  
 \emph{Reading:} §11.2, §11.3
  
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_755_loved.png}
+\end{center}
  
  
 \section{More Dead Horse}
@@ -120,21 +123,43 @@ There is a store for everything except itself
  
 \section{Somebody Is Not Dead}
  
+Some person is dead.
+ 
+\hspace{5mm} ∃x(Person(x) ∧ Dead(x))
+ 
+Some person is not dead.
+ 
+\hspace{5mm} ∃x(Person(x) ∧ ¬Dead(x))
+ 
+No person is dead.
+ 
+\hspace{5mm} ¬∃x(Person(x) ∧ Dead(x))
+ 
+Every person is dead.
+ 
+\hspace{5mm} ∀x(Person(x) → Dead(x))
+ 
+Every person is not dead.
+ 
+\hspace{5mm} ∀x(Person(x) → ¬Dead(x))
+ 
+Not every person is dead.
+ 
+\hspace{5mm} ¬∀x(Person(x) → Dead(x))
  
  
-\section{Quantifier Equivalences: ∀x(Square(x) → Broken(x)) $\leftmodels\models$ ∀x(¬Broken(x) → ¬Square(x))}
+ 
+\section{Quantifier Equivalences: }
  
 \emph{Reading:} §10.3
+ 
+ ∀x(Square(x) → Broken(x)) 
+ 
+ \hspace{5mm} $\leftmodels\models$ ∀x(¬Broken(x) → ¬Square(x))
  
 \begin{center}
 \includegraphics[scale=0.3]{img/unit_760_tt.png}
 \end{center}
- 
- 
-\section{Quantifier Equivalences: ∀x(Square(x) → Broken(x)) $\leftmodels\models$ ∀x(¬Square(x) ∨ Broken(x))}
- 
-\emph{Reading:} §10.3
- 
  
  
 \section{Soundness and Completeness: Statement of the Theorems}
@@ -165,6 +190,12 @@ There is a store for everything except itself
  
 \emph{Reading:} §8.3
  
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_346_and.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_346_fubar.png}
+\end{center}
  
  
 \section{Proof of the Soundness Theorem}
@@ -209,7 +240,6 @@ Step 2: Suppose (for a contradiction) that some Fitch proofs are not valid. Sele
 \begin{minipage}{\columnwidth}
 \section{Exercises}
 These exercises will be discussed in seminars the week after this lecture.
-The numbers below refer to the numbered exercises in the course textbook, e.g.\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}. Exercises marked `*' are optional.
  
 \begin{quote}
 10.20, 10.22

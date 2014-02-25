@@ -4,17 +4,9 @@
 
 ** skipped part of 567 --- maybe split unit and do later
 
-exercises normal week 9:
-  13.6, 13.7, *13.8, *13.9 
-  13.19, 13.23--13.27, *13.28--13.31
-  *13.33, 13.35, 13.37, 13.39
-  13.43--13.45, 13.49--13.50, *13.51--13.52 
 
 
-exercises normal last week:
-  14.1, 14.2, 14.3 (*14.4–5)  [trans] 
-  *14.10–12, *14.13    [proofs] 
-  *14.26, 14.28     
+       
   
 
 

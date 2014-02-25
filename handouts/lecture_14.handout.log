@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.11.28)  25 FEB 2014 15:37
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.11.28)  25 FEB 2014 21:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1168,7 +1168,7 @@ LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
 LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 )
-No file lecture_14.handout.aux.
+(./lecture_14.handout.aux)
 \openout1 = `lecture_14.handout.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -1187,6 +1187,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 36.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 36.
+
 (/usr/local/texlive/2013/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
@@ -1335,96 +1336,51 @@ LaTeX Info: Redefining \Ref on input line 513.
 LaTeX Info: Redefining \ref on input line 36.
 LaTeX Info: Redefining \pageref on input line 36.
 LaTeX Info: Redefining \nameref on input line 36.
+
+(./lecture_14.handout.out) (./lecture_14.handout.out)
 \@outlinefile=\write3
 \openout3 = `lecture_14.handout.out'.
 
 LaTeX Info: Redefining \Ref on input line 36.
+File: img/unit_755_loved.png Graphic file (type QTm)
 
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
+<use  "img/unit_755_loved.png" >
 File: img/unit_565_proof.png Graphic file (type QTm)
-<use  "img/unit_565_proof.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
- |[]\EU1/LinuxLibertineO(0)/bx/n/14.4 Quantifier Equivalences:
- []
-
-
-Underfull \hbox (badness 6927) in paragraph at lines 125--125
- \EU1/LinuxLibertineO(0)/bx/n/14.4 ∀x(Square(x) → Broken(x)) $\U/MnSymbolA/m/n/
-14.4 âà$
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 125.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftmodels' on input line 125.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\models' on input line 125.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 125.
-
+ <use  "img/unit_565_proof.png" >
 File: img/unit_760_tt.png Graphic file (type QTm)
+
 <use  "img/unit_760_tt.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
- |[]\EU1/LinuxLibertineO(0)/bx/n/14.4 Quantifier Equivalences:
- []
-
-
-Underfull \hbox (badness 6927) in paragraph at lines 134--134
- \EU1/LinuxLibertineO(0)/bx/n/14.4 ∀x(Square(x) → Broken(x)) $\U/MnSymbolA/m/n/
-14.4 âà$
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 134.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftmodels' on input line 134.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\models' on input line 134.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 134.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--140
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
  |[]\EU1/LinuxLibertineO(0)/bx/n/14.4 Soundness and Completeness:
  []
 
-File: img/soundness_or.png Graphic file (type QTm)
-<use  "img/soundness_or.png" > [1
+[1
 
 ]
+File: img/unit_346_and.png Graphic file (type QTm)
+ <use  "img/unit_346_and.png" >
+File: img/unit_346_fubar.png Graphic file (type QTm)
+ <use  "img/unit_346_fubar.png" >
+File: img/soundness_or.png Graphic file (type QTm)
+
+<use  "img/soundness_or.png" >
 File: img/soundness_not.png Graphic file (type QTm)
  <use  "img/soundness_not.png" > [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
 
 (./lecture_14.handout.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 229.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 259.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 259.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
- 26777 strings out of 493938
- 495370 string characters out of 6148856
- 505290 words of memory out of 5000000
- 29730 multiletter control sequences out of 15000+600000
- 18588 words of font info for 88 fonts, out of 8000000 for 9000
+ 26754 strings out of 493938
+ 494910 string characters out of 6148856
+ 504405 words of memory out of 5000000
+ 29712 multiletter control sequences out of 15000+600000
+ 12242 words of font info for 66 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 39i,7n,80p,667b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,7n,80p,667b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on lecture_14.handout.pdf (2 pages).
