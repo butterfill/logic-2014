@@ -12,11 +12,25 @@ include ../../fragments/unit_mixins
 
 +title_slide({document:document, images:images})
 
+//- --------------------------------------------------
+//- soundness theorem
+  
+//- statement of soundness and completeness theorems
++insert_unit({unit:'400', title_slide:false, images:images})
+
+//- and-fubar and the soundness properly
++insert_unit({unit:'345', title_slide:true, images:images})
+  
+//- proof of soundness theorem
++insert_unit({unit:'410', title_slide:true, images:images})
+    
+  
+
 
 //- Translation from FOL to English (951)
-+slide_middle
-  p.center Translation from FOL to English 
-+insert_unit({unit:'951', title_slide:false, images:images})
+//- +slide_middle
+//-   p.center Translation from FOL to English 
++insert_unit({unit:'951', title_slide:true, images:images})
 
 //- Numerical Quantifiers (620)
 +insert_unit({unit:'620', title_slide:true, images:images})
@@ -24,14 +38,16 @@ include ../../fragments/unit_mixins
 //- There Is Exactly One (625)
 +insert_unit({unit:'625', title_slide:true, images:images})
 
-//- Quantifier Equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ¬∃x(Square(x) ∧ ¬Broken(x))
-+insert_unit({unit:'770', title_slide:true, images:images})
-
-//- Proof Example: ∃x Dead(x) ⊢ ¬∀x¬ Dead(x). (825)
-+insert_unit({unit:'825', title_slide:true, images:images})
-
-//- Proof Example: ¬∀x Dead(x) ⊢ ∃x¬ Dead(x). (826)
-+insert_unit({unit:'826', title_slide:true, images:images})
+//- move later?
+//- 
+//- //- Quantifier Equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ¬∃x(Square(x) ∧ ¬Broken(x))
+//- +insert_unit({unit:'770', title_slide:true, images:images})
+//- 
+//- //- Proof Example: ∃x Dead(x) ⊢ ¬∀x¬ Dead(x). (825)
+//- +insert_unit({unit:'825', title_slide:true, images:images})
+//- 
+//- //- Proof Example: ¬∀x Dead(x) ⊢ ∃x¬ Dead(x). (826)
+//- +insert_unit({unit:'826', title_slide:true, images:images})
 
 .handout \section{Extra Exercises: Proofs}
 .handout You may not have time to do these exercises involving proofs until after term, but it would be a good idea to complete them at some point.
