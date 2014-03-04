@@ -343,6 +343,10 @@ mixin unhighlight(what, color, container)
   +highlight-remove(what, color, container)
 mixin unhighlight_(what, color, container)
   +highlight-remove_(what, color, container)
+mixin unhighlight-all(what, container)
+  +highlight-remove-all(what,container)
+mixin unhighlight-all_(what, container)
+  +highlight-remove-all_(what, container)
 
 mixin highlight-remove_(what, color, container)
   if typeof(what)==='string'

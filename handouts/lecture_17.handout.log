@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.11.28)  4 MAR 2014 21:10
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.11.28)  4 MAR 2014 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**lecture_16.handout.tex
-(./lecture_16.handout.tex
+**lecture_17.handout.tex
+(./lecture_17.handout.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -1168,8 +1168,8 @@ LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
 LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 )
-(./lecture_16.handout.aux)
-\openout1 = `lecture_16.handout.aux'.
+(./lecture_17.handout.aux)
+\openout1 = `lecture_17.handout.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -1269,7 +1269,7 @@ LaTeX Font Info:    Redeclaring math symbol \Phi on input line 36.
 LaTeX Font Info:    Redeclaring math symbol \Psi on input line 36.
 LaTeX Font Info:    Redeclaring math symbol \Omega on input line 36.
 
-./lecture_16.handout.tex:36: LaTeX Error: Command `\mathdollar' already defined
+./lecture_17.handout.tex:36: LaTeX Error: Command `\mathdollar' already defined
 .
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1337,85 +1337,33 @@ LaTeX Info: Redefining \ref on input line 36.
 LaTeX Info: Redefining \pageref on input line 36.
 LaTeX Info: Redefining \nameref on input line 36.
 
-(./lecture_16.handout.out) (./lecture_16.handout.out)
+(./lecture_17.handout.out) (./lecture_17.handout.out)
 \@outlinefile=\write3
-\openout3 = `lecture_16.handout.out'.
+\openout3 = `lecture_17.handout.out'.
 
 LaTeX Info: Redefining \Ref on input line 36.
-File: img/uni_805_proof1.png Graphic file (type QTm)
-
-<use  "img/uni_805_proof1.png" >
-File: img/uni_805_proof2.png Graphic file (type QTm)
- <use  "img/uni_805_proof2.png" >
-File: img/uni_805_proof3.png Graphic file (type QTm)
-
-<use  "img/uni_805_proof3.png" >
 File: img/unit_450.png Graphic file (type QTm)
- <use  "img/unit_450.png" >
-File: img/unit_440_a.png Graphic file (type QTm)
 
-<use  "img/unit_440_a.png" >
-File: img/unit_440_b.png Graphic file (type QTm)
- <use  "img/unit_440_b.png" > [1
+<use  "img/unit_450.png" >
+File: img/unit_455_completeness.png Graphic file (type QTm)
+ <use  "img/unit_455_completeness.png" > [1
 
-]
-File: img/unit_440_c.png Graphic file (type QTm)
+] [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
 
-<use  "img/unit_440_c.png" >
-File: img/if_is_arrow.png Graphic file (type QTm)
- <use  "img/if_is_arrow.png" >
-Overfull \hbox (69.57643pt too wide) in paragraph at lines 187--188
- [] 
- []
-
-File: img/if_aint_arrow.png Graphic file (type QTm)
-<use  "img/if_aint_arrow.png" >
-Overfull \hbox (35.85017pt too wide) in paragraph at lines 196--197
- [] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 202.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\vdash' on input line 202.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 202.
-
-File: img/unit_825_proof.png Graphic file (type QTm)
-<use  "img/unit_825_proof.png" >
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\vdash' on input line 209.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
-
-File: img/unit_826_proof.png Graphic file (type QTm)
-<use  "img/unit_826_proof.png" > [2] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
- (./lecture_16.handout.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 232.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 232.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
+(./lecture_17.handout.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 202.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 202.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
  ) 
 Here is how much of TeX's memory you used:
- 26798 strings out of 493938
- 495758 string characters out of 6148856
- 503405 words of memory out of 5000000
- 29738 multiletter control sequences out of 15000+600000
- 18588 words of font info for 88 fonts, out of 8000000 for 9000
+ 26744 strings out of 493938
+ 494728 string characters out of 6148856
+ 505405 words of memory out of 5000000
+ 29707 multiletter control sequences out of 15000+600000
+ 12242 words of font info for 66 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 39i,7n,80p,667b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,6n,80p,667b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on lecture_16.handout.pdf (3 pages).
+Output written on lecture_17.handout.pdf (2 pages).

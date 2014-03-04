@@ -90,6 +90,30 @@ Readings refer to sections of the course textbook, \emph{Language, Proof and Log
  
  
  
+\section{There Is Exactly One}
+ 
+There is one creator (at least one, maybe more).
+ 
+\hspace{3mm} ∃x Creator(x)
+ 
+Brian is the one and only creator.
+ 
+\hspace{3mm} Creator(b) ∧ ∀x( Creator(x) → x=b )
+ 
+All squares are broken.
+ 
+\hspace{3mm} ∀x( Sqr(x) → Brkn(x) )
+ 
+There is one and only one creator.
+ 
+\hspace{3mm} ∃y( Creator(y) ∧ ∀x( Creator(x) → x=y ) )
+ 
+\hspace{3mm} or:
+ 
+\hspace{3mm} ∃y ∀x( Creator(x) ↔ x=y )
+ 
+ 
+ 
 \section{Could There Be Nothing?}
  
 \emph{Reading:} §13.2
@@ -103,30 +127,6 @@ Readings refer to sections of the course textbook, \emph{Language, Proof and Log
 \begin{center}
 \includegraphics[scale=0.3]{img/uni_805_proof3.png}
 \end{center}
- 
- 
-\section{Does ‘if’ mean what ‘→’ means?}
- 
-\emph{Reading:} §7.3
- 
-\begin{minipage}{\columnwidth}
- 
-These two arguments are valid: does that mean that `if' means what `→' means?
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/if_is_arrow.png}
-\end{center}
-\end{minipage}
- 
-\begin{minipage}{\columnwidth}
- 
-The English argument isn't valid; the FOL argument is valid; therefore `if' can't mean what `→' means?
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/if_aint_arrow.png}
-\end{center}
-\end{minipage}
- 
  
  
 \section{The Essence of the Completeness Theorem}
@@ -175,102 +175,42 @@ Proof:
  
  
  
-\section{Lemma for the Completeness Theorem}
+\section{Does ‘if’ mean what ‘→’ means?}
  
-\emph{Reading:} §8.3
+\emph{Reading:} §7.3
  
+\begin{minipage}{\columnwidth}
  
-If for every sentence letter, P, either A $\vdash$ P or A $\vdash$ ¬P, then for every formula, X, either A $\vdash$ X or A $\vdash$ ¬X.
- 
-Proof
- 
-\textbf{Step a.} Suppose (for a contradiction) that there are formulae, X, such that A $\nvdash$ X and A $\nvdash$ ¬X. Take a shortest such formula, call it Y.
- 
-\textbf{Step b.} This formula, Y, must have one of the following forms: ¬P, P∨Q, P∧Q, P→Q, P↔Q, $\bot$
- 
-\textbf{Step c.} We can show that whichever form X has, either A $\vdash$ Y and A $\vdash$ ¬Y.
- 
-Case 1: X is P→Q. Then since P and Q are shorter than X, either:
- 
-\hspace{5mm} (i) A $\vdash$ P and A $\vdash$ ¬Q
- 
-\hspace{5mm} or
- 
-\hspace{5mm} (ii) A $\vdash$ ¬P
- 
-\hspace{5mm} or
- 
-\hspace{5mm} (iii) A $\vdash$ Q
- 
-\hspace{5mm} If (i), A $\vdash$ ¬(P→Q), that is, A $\vdash$ ¬X.
- 
-\hspace{5mm} If (ii), A $\vdash$ P→Q, that is, A $\vdash$ ¬X.
- 
-\hspace{5mm} If (iii), A $\vdash$ P→Q, that is, A $\vdash$ ¬X.
- 
-\hspace{5mm} (Here we use the last two Proofs about Proofs, see earlier)
- 
-Case 2: X is ¬P.
- 
-\hspace{5mm} Then since P is shorter, A $\vdash$ P or A $\vdash$ ¬P.
- 
-\hspace{5mm} If A $\vdash$ P then A $\vdash$ ¬¬P so A $\vdash$ ¬X which would contradict our assumption. This is shown in the proofs about proofs above.
- 
-\hspace{5mm} If A $\vdash$ ¬P then A $\vdash$ X (because X is ¬P), which would contradict our assumption.
- 
-Case 3: …
- 
-\textbf{Step d.} The demonstration in Step c contradicts our assumption, so we can conclude that it is false. That is, either A $\vdash$ X and A $\vdash$ ¬X for every formula X.
- 
- 
- 
-\section{Proof of the Completeness Theorem}
- 
-\emph{Reading:} §8.3, §17.1, §17.2
+These two arguments are valid: does that mean that `if' means what `→' means?
  
 \begin{center}
-\includegraphics[scale=0.3]{img/unit_455_completeness.png}
+\includegraphics[scale=0.3]{img/if_is_arrow.png}
+\end{center}
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+The English argument isn't valid; the FOL argument is valid; therefore `if' can't mean what `→' means?
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/if_aint_arrow.png}
+\end{center}
+\end{minipage}
+ 
+ 
+ 
+\section{Proof Example: ∃x Dead(x) $\vdash$ ¬∀x¬ Dead(x).}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_825_proof.png}
 \end{center}
  
  
-\section{Proof of Proposition 4 for the Completeness Theorem}
+\section{Proof Example: ¬∀x Dead(x) $\vdash$ ∃x¬ Dead(x).}
  
-\emph{Reading:} §15.1, §15.6
- 
- 
- 
-\section{More Records Than the KGB}
- 
-\emph{Reading:} §14.1, §14.3
- 
- 
- 
-\section{The End Is Near}
- 
-\emph{Reading:} §14.3
- 
-‘The’ can be a quantifier, e.g. ‘the square is broken’. How to formalise it?
- 
-The square is broken
- 
-$\leftmodels\models$ There is exactly one square and it is broken
- 
-$\leftmodels\models$ There is at most one square and there is at least one square and it is broken
- 
-$\leftmodels\models$ There is at most one square and there is at least one square and all squares are broken
- 
-$\leftmodels\models$ ¬ ∃x ∃y ( Square(x) ∧ Square(y) ∧ ¬x=y )
- 
-\hspace{5mm} ∧ ∃x Square(x)
- 
-\hspace{5mm} ∧ ∀x ( Square(x) → Broken(x) )
- 
-Which shorter sentences are equivalent to this?
- 
-∃x ( Square(x) ∧ ∀y ( Square(y) → y=x ) ∧ Broken(x) )
- 
-∃x ( ∀y ( Square(y) ↔ y=x ) ∧ Broken(x) )
- 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_826_proof.png}
+\end{center}
 \vfill
 \begin{minipage}{\columnwidth}
 \section{Exercises}
@@ -278,13 +218,10 @@ These exercises will be discussed in seminars the week after this lecture.
 The numbers below refer to the numbered exercises in the course textbook, e.g.\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}. Exercises marked `*' are optional.
  
 \begin{quote}
-15.33--15.40 (second edition)
- 
-14.26, 14.28
+14.10--14.12, *14.13
  
 \end{quote}
 \end{minipage}
-
 %--- end paste
 %--------------- 
  
