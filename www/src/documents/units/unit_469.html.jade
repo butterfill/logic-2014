@@ -1,0 +1,133 @@
+---cson
+layout: 'deck_units'
+title: "If (A ⊬ ⊥ entails A ⊭TT ⊥) then  (A ⊨TT B entails A ⊢ B) "
+description: "This is a step towards our proof of the completeness theorem.  The completeness theorem says A ⊨TT B entails A ⊢ B.  Here we prove that we can show this by showing that A ⊬ ⊥ entails A ⊭TT ⊥."
+tags: ['meta']
+depends: []
+source: ['new']
+duration: 5
+book: []
+exercises: []
+exercises_fast: []
+sequence: 760
+---
+
+
+
+include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
+
++slide
+  .handout First we show that if \textbf{A}, ¬B ⊢ ⊥  then \textbf{A}  ⊢ B .
+  .handout (To do this, we show how to turn transform a proof of the former kind into a proof of the latter kind.)
+  .handout: :t()
+     Now assume that 
+     for all sets \textbf{A}, \textbf{A} ⊬ ⊥ entails \textbf{A} ⊭$_{TT}$ ⊥
+  .handout: :t()
+    Suppose that  \textbf{A} ⊨TT  B
+  .handout: :t()
+    Then \textbf{A}, ¬B ⊨TT  ⊥
+  .handout So, by our assumption, \textbf{A}, ¬B ⊢ ⊥
+  .handout Therefore (by the thing we showed first)  \textbf{A}  ⊢ B 
+     
+  p If
+    span.antecedent
+      span.bold A
+      span , ¬B ⊢ ⊥ 
+    span  then 
+    span.consequent
+      span.bold A
+      span  ⊢ B 
+  +highlight('.antecedent','yellow')
+  .container_12
+    .grid_5
+      .slide
+        - var prf1 = {premises:['A1', '...', 'An', '¬B'], lines:[['...',''],['⊥', '']]}
+        +fitch_proof(prf1)
+        
+    +unhighlight('.antecedent','yellow')
+    .grid_6
+      .slide
+        - var prf3 = {premises:['¬B'], lines:[['...',''],['⊥', '']]}
+        - var prf2 = {premises:['A1', '...', 'An'], lines:[prf3,['¬¬B','¬Intro',['4-6']],['B', '¬Elim',[7]]]}
+        +fitch_proof(prf2)
+    +highlight('.consequent','yellow')
+        
++slide
+  p Assume that 
+    span.assumption
+      span for all sets 
+      span.bold A
+      span , 
+      span.bold A 
+      span  ⊬ ⊥ entails 
+      span.bold A
+      span  ⊭
+        sub TT
+      span  ⊥
+  .slide
+    p Suppose that 
+      span.supposition
+        span.bold A 
+        span  ⊨ 
+          sub TT
+        span  B
+  .slide.what-to-show
+    p (We want to show that 
+      span.bold A
+      span  ⊢ B) 
+  +blur2_('.what-to-show')
+  +highlight('.supposition','yellow')
+  .slide
+    p Therefore: 
+      span.bold A
+      span , ¬B ⊨ 
+        sub TT
+      span  ⊥
+  .slide.df-valid
+    +df_valid
+  +unhighlight_('.supposition','yellow')
+  +dim_('.df-valid')
+  +blur2_('.df-valid')
+  .slide
+    p Suppose for a contradiction that 
+      span.bold A
+      span , ¬B ⊬ ⊥ 
+  +highlight('.assumption', 'yellow')
+  .slide
+    p Then, from the assumption, we would have 
+      span.bold A
+      span , ¬B ⊭ 
+        sub TT
+      span  ⊥
+  .slide
+    p So: 
+      span.bold A
+      span , ¬B ⊢ ⊥ 
+  +unhighlight('.assumption', 'yellow')
+  .slide
+    p Therefore (by the previous result) 
+      span.result
+        span.bold A
+        span  ⊢ B 
+  +invert('.supposition')
+  .notes So we assumed this.
+  +invert('.result')
+  .notes And derived this.
+  +invert('.assumption')
+  .slide
+    p So: 
+    p If 
+      span.bold A
+      span  ⊬ ⊥ entails 
+      span.bold A
+      span  ⊭
+      sub TT
+      span  ⊥ 
+    p then 
+       span.bold A 
+       span  ⊨
+       sub TT
+       span  B entails 
+       span.bold A
+       span  ⊢ B 

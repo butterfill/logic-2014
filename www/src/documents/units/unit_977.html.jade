@@ -1,0 +1,47 @@
+---cson
+layout: 'deck_units' 
+title: "Revison: Proofs (propositional)"
+description: "Discusses an exam question."
+tags: ['proof','proof-example']
+depends: []
+source: ['ppe revision lecture 03']
+duration: 10
+book: []
+exercises: []
+exercises_fast: []
+sequence: 990
+---
+
+
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_977/slide-001.jpeg'})
+  .notes 
+  //- handout
+  //- requires \usepackage{fitch}
+  .handout \begin{enumerate}
+
+  .handout \item 
+  .handout  \begin{equation*}
+  .handout.ctd \begin{fitch}                 
+  .handout.ctd \fh \lnot P \land R            \\
+  .handout.ctd \fa \lnot P                    \\
+  .handout.ctd \end{fitch}
+  .handout.ctd \end{equation*}
+
+  .handout \item 
+  .handout  \begin{equation*}
+  .handout.ctd \begin{fitch}                 
+  .handout.ctd \fh \lnot P \lor R             \\
+  .handout.ctd \fa P \to R                    \\
+  .handout.ctd \end{fitch}
+  .handout.ctd \end{equation*}
+
+  .handout \end{enumerate}
+
+
+- var img_nos = range(2,31)
+each img_no in img_nos
+  - var filename = 'unit_977/slide-0'+(img_no<10 ? '0' : '')+img_no+'.jpeg'
+  +slide_img(filename)

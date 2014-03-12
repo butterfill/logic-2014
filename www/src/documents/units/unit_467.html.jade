@@ -1,0 +1,66 @@
+---cson
+layout: 'deck_units'
+title: "A ⊨ ⊥"
+description: "Explains what A ⊨ ⊥ means.  (A ⊨ ⊥, i.e. the argument with premises A and conclusion ⊥ is logicallly valid.)"
+tags: ['meta']
+depends: []
+source: ['new']
+duration: 5
+book: []
+exercises: []
+exercises_fast: []
+sequence: 760
+---
+
+
+
+include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
+
++slide
+  .notes We know what A ⊢ ⊥ means: it means that there's a proof from premises A of ⊥. 
+  .step1 
+    p
+      span.bold A 
+      span  ⊢ ⊥
+    .step1b.slide
+      .notes What does putting the line through mean?  Just that there's no proof of ⊥ from premises A.
+      p 
+        span.bold A 
+        span ⊬ ⊥
+  +blur2_('.step1')
+  .step2.slide
+    .notes This is also easy to understand ...
+    p
+      span.bold A
+      span  ⊨ B
+    .step2b.slide
+      p
+        span.bold A
+        span  ⊭ B
+  .step3.slide
+    +df_valid
+  +blur2_('.step2')
+  .step4.slide
+    .notes But what does A ⊨ ⊥ mean?
+    .notes The argument is logically valid ... no possible situation where ... but ⊥ is always false, so no possible situation where premises A are all true
+    p
+      span.bold A
+      span  ⊨ ⊥
+    .step4b.slide
+      p
+        span.bold A
+        span  ⊭ ⊥
+  .step5.slide
+    p
+      span.bold A
+      span  ⊨
+      sub TT
+      span ⊥
+    .step5b.slide
+      p
+        span.bold A
+        span  ⊭
+        sub TT
+        span ⊥
+        

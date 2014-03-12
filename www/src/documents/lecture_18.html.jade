@@ -1,0 +1,36 @@
+---
+layout: 'default'
+title: 'Lecture 18'
+lecture_date: '2014/03/13'
+units: []
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('bali2')
+
++title_slide({document:document, images:images})
+
+//- Proofs about Proofs (440)
++insert_unit({unit:'440', title_slide:false, images:images})
+
+//- A ⊨ ⊥
++insert_unit({unit:'467', title_slide:true, images:images})
+
+//- If (A ⊬ ⊥ entails A ⊭TT ⊥) then  (A ⊨TT B entails A ⊢ B) 
++insert_unit({unit:'469', title_slide:true, images:images})
+
+
+//- outline of completeness theorem
++insert_unit({unit:'450', title_slide:true, images:images})
+
+//- lemma for completeness
++insert_unit({unit:'453', title_slide:true, images:images})
+
+//- completeness
++insert_unit({unit:'455', title_slide:true, images:images})
+
+//- Proof of Proposition 4 for //- the Completeness Theorem
+//- skip if short of time
++insert_unit({unit:'465', title_slide:true, images:images})

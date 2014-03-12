@@ -1,0 +1,58 @@
+---cson
+layout: 'deck_units' 
+title: "Revison: Proofs (with quantifiers)"
+description: "Discusses an exam question."
+tags: ['proof','proof-example']
+depends: []
+source: ['ppe revision lecture 03']
+duration: 10
+book: []
+exercises: []
+exercises_fast: []
+sequence: 990
+---
+
+
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_979/slide-001.jpeg'})
+  .notes 
+  //- requires \usepackage{fitch}
+  .handout \begin{enumerate}
+
+  .handout \item 
+  .handout  \begin{equation*}
+  .handout.ctd \begin{fitch}                 
+  .handout.ctd \fh ∀x S(x)            \\
+  .handout.ctd \fh ∀x \lnot S(x)            \\
+  .handout.ctd \fa ⊥                    \\
+  .handout.ctd \end{fitch}
+  .handout.ctd \end{equation*}
+
+
+
+  .handout \item 
+  .handout  \begin{equation*}
+  .handout.ctd \begin{fitch}                 
+  .handout.ctd \fh ∀x ( F(x) → x=a )             \\
+  .handout.ctd \fa ¬∃x ( F(x) ∧ ¬x=a )                    \\
+  .handout.ctd \end{fitch}
+  .handout.ctd \end{equation*}
+
+  .handout \item 
+  .handout  \begin{equation*}
+  .handout.ctd \begin{fitch}                 
+  .handout.ctd \fh ∃x ∀y ( F(y) → ¬G(x,y) )         \\
+  .handout.ctd \fa ∀y ∃x ( F(y) → ¬G(x,y) )                   \\
+  .handout.ctd \end{fitch}
+  .handout.ctd \end{equation*}
+
+  .handout \end{enumerate}
+  //- handout
+
+
+- var img_nos = range(2,39)
+each img_no in img_nos
+  - var filename = 'unit_979/slide-0'+(img_no<10 ? '0' : '')+img_no+'.jpeg'
+  +slide_img(filename)

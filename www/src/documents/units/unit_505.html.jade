@@ -1,0 +1,71 @@
+---
+layout: 'deck_units'
+title: "All Cats Are Grey"
+tags: ['translation']
+description: "Covers translation of simple sentences like 'All cats are grey' using single quantifiers."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises: []
+exercises_fast: []
+---
+
+include ../../../fragments/slide_mixins
+
+
+.slide
+    .words
+      .container_12: .grid_12
+        p Everything is broken
+        p.indent.slide.nodim ∀x Broken(x)
+        .slide.nodim
+          p.hidelater.em-above All 
+            span.antecedent squares
+            span  are 
+            span.consequent broken
+            span .
+          p.indent.slide.nodim
+            span ∀x ( 
+            span.antecedent Square(x)
+            span  → 
+            span.consequent Broken(x)
+            span  )
+          mixin words-bkg(['.antecedent'],'blue')
+          mixin words-bkg(['.consequent'],'pink')
+          mixin words-bkg-faint(['.antecedent'],'blue')
+          mixin words-bkg-faint(['.consequent'],'pink')
+        .slide.nodim
+          p.hidelater.em-above Every
+            span.antecedent2 thing of mine 
+            span  is 
+            span.consequent2 broken
+            span .
+          p.indent.slide.nodim
+            span ∀x ( 
+            span.antecedent2.step2.hide ThingofMine(x)
+            span  → 
+            span.consequent2.step3.hide Broken(x)
+            span  )
+          mixin words-bkg(['.antecedent2'],'blue')
+          mixin show('.step2')
+          mixin words-bkg(['.consequent2'],'pink')
+          mixin show('.step3')
+          mixin words-bkg-faint(['.antecedent2'],'blue')
+          mixin words-bkg-faint(['.consequent2'],'pink')
+        .slide.nodim
+          p.hidelater.em-above Every
+            span.antecedent3 body
+            span  
+            span.consequent3 loves chocolate or logic.
+            span .
+          p.indent.slide.nodim
+            span ∀x ( 
+            span.antecedent3.step5.hide Person(x)
+            span  → 
+            span.consequent3.step4.hide LovesChocolateOrLogic(x)
+            span  )
+          mixin words-bkg(['.consequent3'],'pink')
+          mixin show('.step4')
+          mixin words-bkg(['.antecedent3'],'blue')
+          mixin show('.step5')

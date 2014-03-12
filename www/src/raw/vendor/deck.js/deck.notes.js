@@ -787,8 +787,16 @@ only toggle the notes panel for this cloned window.
       replace: '$\\leftmodels$'
     });
     findAndReplaceDOMText($handoutContainer[0], {
+      find: /⊨TT/g,
+      replace: '$\\vDash _{TT}$'
+    });
+    findAndReplaceDOMText($handoutContainer[0], {
       find: /⊨/g,
-      replace: '$\\models$'
+      replace: '$\\vDash$'
+    });
+    findAndReplaceDOMText($handoutContainer[0], {
+      find: /⊭TT/g,
+      replace: '$\\nvDash _{TT}$'
     });
     findAndReplaceDOMText($handoutContainer[0], {
       find: /⊥/g,
@@ -801,6 +809,10 @@ only toggle the notes panel for this cloned window.
     findAndReplaceDOMText($handoutContainer[0], {
       find: /⊬/g,
       replace: '$\\nvdash$'
+    });
+    findAndReplaceDOMText($handoutContainer[0], {
+      find: /⊭/g,
+      replace: '$\\nvDash$'
     });
 
 		
