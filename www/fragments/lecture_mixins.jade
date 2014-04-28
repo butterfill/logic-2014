@@ -137,7 +137,7 @@ mixin insert_unit(p)
   else
     if p.title_slide
       +section({unit:d, images:p.images})
-    if p.handout !== false && d.handout !== false 
+    if p.handout !== false && p.handout !== 'false' && d.handout !== false && d.handout !== 'false'
       +handout({unit:d})
     .notes.notes-header-tex &nbsp;
     .notes.notes-header-tex \section{#{d.title}}

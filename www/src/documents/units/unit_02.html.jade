@@ -84,3 +84,18 @@ include ../../../fragments/unit_mixins
   .handout \begin{quote}
   p.center.handout.show Many more people have been to Paris than I have.
   .handout \end{quote}
+
+//- doesn't know jack
++slide_middle
+  .notes Finally, consider these sentences.  
+  p Ayesha does
+    span.neg n't 
+    span  know diddly squat about logic
+  p Ayesha does know diddly squat about logic
+  +invert('.neg')
+  .notes: :t()
+     The only difference is an extra negation in the first sentence.
+     Normally you might think that adding a negation changes the meaning, and does so systematically.
+     But this is not true of natural languages like English.
+     We can construct our formal language so that it is true, thereby making our lives simpler 
+     insofar as we are interested in reflecting on inferential relations among sentences.
