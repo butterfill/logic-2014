@@ -13,6 +13,7 @@ book:['2.1']
 
 
 include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
 
 +slide({bkg:'unit_161/slide-049.jpeg'})
   .notes Do they use it?  I’m not on it.  I already have a friend, so I recon I’ve got that one covered already.
@@ -29,3 +30,9 @@ include ../../../fragments/unit_mixins
 +slide({bkg:'unit_161/slide-053.jpeg'})
   .notes 
 
+section.slide
+  .words: .container_12
+    .grid_6
+      mixin fitch_proof({premises:[['P ∧ ¬P']], lines:[['Q']], no_line_numbers:true})
+    .slide.grid_6
+      mixin fitch_proof({premises:[['Q']], lines:[['P ∨ ¬P']], no_line_numbers:true})

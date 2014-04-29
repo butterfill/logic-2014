@@ -1,0 +1,63 @@
+---
+layout: 'default2'
+title: 'Logic (PH133)'
+subtitle: 'Lecture 4'
+units: []
+lecture_date: '2014/05/07'
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('bees')
+
+
++title_slide({document:document, images:images})
+
+
+
+
+
+//- everything is broken
++insert_unit({unit:'471', title_slide:false, images:images})
++insert_unit({unit:'473', title_slide:false, images:images})
+
+//- what does exists mean?
++insert_unit({unit:'491', title_slide:true, images:images})
+
+//- =Elim again
+//- *notes explain that we could have other =Elim rules; prove the right =Elim proof
+//- *notes go back to the soundness of <!> -- say that we could have the rule but it wouldn't give us soundness
++insert_unit({unit:'112', title_slide:true, images:images})
+
+//- *** CHECK NOT DONE IN lecture_03 ****
+//- →Intro, →Elim 
++insert_unit({unit:'390', title_slide:true, images:images})
+//- harder example of →Intro (skip)
+  +insert_unit({unit:'391', title_slide:false, images:images})
+
+
+//-  Biconditionals
++insert_unit({unit:'567', title_slide:true, images:images})
+
+
+//- ∨Intro (225)
++insert_unit({unit:'225', title_slide:true, images:images})
+
+//- ∨Elim (221, 226) 
++insert_unit({unit:'221', title_slide:true, images:images})
++insert_unit({unit:'226', title_slide:false, images:images})
+
+
+//- not done in 2012-3
+
+  //- I met a philosopher
+  +insert_unit({unit:'501', title_slide:true, images:images})
+  
+  //- * in case need more material
+
+  //- truth-functional connectives
+  +insert_unit({unit:'072', title_slide:true, images:images})
+
+
+

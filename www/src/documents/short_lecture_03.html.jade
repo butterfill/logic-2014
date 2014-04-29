@@ -1,0 +1,59 @@
+---
+layout: 'default2'
+title: 'Logic (PH133)'
+subtitle: 'Lecture 3'
+units: []
+lecture_date: '2014/05/06'
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('bees')
+
+
++title_slide({document:document, images:images})
+
+//- *2011-2 lecture started with conjunction elim and conjunction intro: recap or re-order if starting later
+
+//- compare and contrast disjuntcion intro with conjunction elim
++insert_unit({unit:'212', title_slide:false, images:images})
+
+//- unit: how to write proofs
++insert_unit({unit:'130', title_slide:true, images:images})
+
+//- unit: rules of proof for identity
++insert_unit({unit:'110', title_slide:true, images:images})
+
+//- logic makes me die inside
++insert_unit({unit:'161', title_slide:true, images:images})
+
+
+//- ¬, ⊥
++insert_unit({unit:'270', title_slide:true, images:images})
+
+//- A and B or C
++insert_unit({unit:'151', title_slide:true, images:images})
++insert_unit({unit:'153', title_slide:false, images:images})
++insert_unit({unit:'154', title_slide:false, images:images})
+
+//- formal proof: =elim mistake
++insert_unit({unit:'111', title_slide:true, images:images})
+
+
+
+//- *** aim to end here, following are extras in case too much time (this takes us to the end of 2011-2's Lecture 04)
+
+//- did end here in 2012-3
+  //- →Intro, →Elim 
+  +insert_unit({unit:'390', title_slide:true, images:images})
+  //- harder example of →Intro
+  +insert_unit({unit:'391', title_slide:false, images:images})
+
+  +insert_unit({unit:'072', title_slide:true, images:images})
+
+
+
+
+
+

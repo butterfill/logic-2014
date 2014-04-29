@@ -85,14 +85,14 @@ html(lang="en")
               li
                 a(href='##{lecture.basename}')
                   i.icon-chevron-right
-                  | #{lecture.title}
+                  | #{lecture.subtitle || lecture.title}
         
         .span8
           //- now do a section for each lecture
           each lecture in getCollection(document.the_collection).toJSON()
             div(id='#{lecture.basename}')
               .page-header
-                h2: a(href='#{lecture.url}',target='_blank') #{lecture.title}
+                h2: a(href='#{lecture.url}',target='_blank') #{lecture.subtitle || lecture.title}
                 if lecture.lecture_date
                   p Date given: #{moment(lecture.lecture_date).format('dddd Do MMMM YYYY')}
                 p 

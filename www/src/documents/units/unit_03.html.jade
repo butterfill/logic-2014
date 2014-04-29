@@ -15,7 +15,6 @@ exercises_fast: []
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_03/slide-001.jpeg'})
-  .notes 
   //- handout
   .handout An argument is \emph{logically valid} just if there’s no possible situation in which the premises are true and the conclusion false
 
@@ -26,56 +25,96 @@ include ../../../fragments/unit_mixins
   .handout 	P, Q are the constituent sentences
   .handout \end{quote}
 
+  //- notes
+  .notes Consider these three sentences.  
+  .notes: :t()
+    The first sentence says that John is square or Ayesha is square.
+    The second sentence says John is not square.  (I know I just told you John is square; I'm not very consistent, am I?)
+    And the third sentence says Ayesha is square. 
+
   .img.handout(data-src='img/terminology_more.png')
 
 +slide({bkg:'unit_03/slide-002.jpeg'})
-  .notes 
+  .notes Note the symbol; we saw this a moment ago, it's a bit like the English 'or'.
 
 +slide({bkg:'unit_03/slide-003.jpeg'})
-  .notes 
+  .notes There is also a new symbol in the second sentence, this a bit like the English 'not'.
 
 +slide({bkg:'unit_03/slide-014.jpeg'})
-  .notes 
+  .notes As you recall, these symbols are called 'connectives'.
+  .notes Note that the negation connective in the second sentence is making a new sentence from just one sentence.  (Connectives can join any number of sentences.)
 
 +slide({bkg:'unit_03/slide-015.jpeg'})
-  .notes 
+  .notes You may also recall that these first two sentences are non-atomic (they contain connectives), ...
 
 +slide({bkg:'unit_03/slide-016.jpeg'})
-  .notes 
+  .notes ... whereas the third sentence is atomic.
 
 +slide({bkg:'unit_03/slide-017.jpeg'})
-  .notes 
+  .notes: :t()
+     OK, so much for the sentences.  
+     So far we've been fixing terminology and getting a feeling for a formal language, which is a tool for studying logic.
+     But I haven't said anything about what logic is.  
+  .notes: :t()
+    What is logic?  What is this course about?
+  .notes: :t()
+    The answer is here: it's about the notion of logical validity.  An argument is logically valid just if there's no possible situation where the premises are true and the conclusion false.
+  .notes: :t()
+    Logic is the study of logical validity.  We want to know which arguments have this property, and which means there are of establishing where arguments are valid or not.
+     
 
 +slide({bkg:'unit_03/slide-018.jpeg'})
-  .notes 
+  .notes Let's go  though this slowly.  First, what is an argument?
+  .notes For our purposes, an argument is just a sequence of sentences where zero or more are identified as premises and exactly one is identified as the conclusion.
 
 +slide({bkg:'unit_03/slide-019.jpeg'})
-  .notes 
+  .notes But what do we mean by premises and conclusions?
+  .notes A premise is just a sentence that we say is a premise.  (That's all there is to being a premise.)
+  .notes Likewise, a conclusion is just a sentence that we say is a conclusion.  How simple is that?
 
 +slide({bkg:'unit_03/slide-020.jpeg'})
-  .notes 
-
+  .notes Now we're going to write a lot of arguments so it would be helpful to have a compact way of identifying premises and conclusions ...
+  
 +slide({bkg:'unit_03/slide-021.jpeg'})
-  .notes 
+  .notes ... That is the purpose of these lines.  The horizontal line specifies that the sentences to its right an argument.
 
 +slide({bkg:'unit_03/slide-022.jpeg'})
-  .notes 
+  .notes And the vertical line separates the premises from the conclusion.
 
 +slide({bkg:'unit_03/slide-023.jpeg'})
-  .notes 
+  .notes So this is logic: the study of logical validity.  Have we understood the definition yet?  Not quite ...
 
 +slide({bkg:'unit_03/slide-024.jpeg'})
-  .notes 
+  .notes ... What do we mean by 'possible situation'?
+  .notes: :t()
+    A possibile situation is just a way that the world is or could be.
+    So consider the situation which is as similar to the actual situation as possible except that you are in Havana smoking a fat cigar rather than attending my lecture.
+    This is a possible situation.
 
 +slide({bkg:'unit_03/slide-025.jpeg'})
-  .notes 
+  .notes: :t()
+    Now possible situations are huge things; in specifying a possible situation, you are specifying something as big as the actual situation,
+    with all the trees, leaves, insects and everything.
+    It is helpful to have a proxy for possible situations, something much simpler than a real possible situation. 
+  .notes: :t()
+    For our purposes, a good proxy is often an arrangement of shapes in two dimensional space.
+    For evaluating the argument about John and Ayesha, we can pretend that possible situations are just shapes in space.
+    Thinking of possible situations in this way is simpler, and doesn't ignore anything relevant to this particular argument. 
 
 +slide({bkg:'unit_03/slide-026.jpeg'})
-  .notes 
+  .notes: :t()
+    The final concepts in our definition of logical validity are truth and falsity.  
+    These concepts are too simple to say anything much illuminating about.
+  .notes: :t()
+    Note that whether a sentence is true or false depends on which possible situation we are talking about.
+    In this possible situation, the first premise is true, the second premise is false and the conclusion is false.
 
 +slide({bkg:'unit_03/slide-027.jpeg'})
-  .notes 
+  .notes But in this possible situation, ...
 
 +slide({bkg:'unit_03/slide-028.jpeg'})
-  .notes 
+  .notes ... the conclusion is true.
+  .notes: :t()
+    Incidentally, you will sometimes be asked whether a logically valid argument can have one or more false premises and a true conclusion.
+    If you're asked that question, do think about this argument and this possible situation.
 

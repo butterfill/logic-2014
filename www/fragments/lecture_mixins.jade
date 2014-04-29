@@ -87,14 +87,23 @@ mixin title_slide(p)
         - low = true
     .fade-in
       .title-block(style="#{low ? 'position:relative; top:325px' : ''}"): .title-container
+        if p.document.subtitle
+          h1.title1.fade-in #{p.document.title}
+          h1.title2.fade-in #{p.document.subtitle}
+          h3.email.fade-in s.butterfill@warwick.ac.uk
+        else
           h1.title1.fade-in #{site.title}
           h1.title2.fade-in #{p.document.title}
           h3.email.fade-in s.butterfill@warwick.ac.uk
     if p.document.weburl
       .words
         span(style="position:relative;top:250px;left:450px;").white-box.big.center #{p.document.weburl}
-    .handout \def \ititle {#{site.title}}
-    .handout \def \isubtitle {#{p.document.title}}
+    if p.document.subtitle
+      .handout \def \ititle {#{p.document.title}}
+      .handout \def \isubtitle {#{p.document.subtitle}}
+    else
+      .handout \def \ititle {#{site.title}}
+      .handout \def \isubtitle {#{p.document.title}}
     .handout \begin{center}
     .handout {\Large
     .handout \textbf{\ititle}: \isubtitle

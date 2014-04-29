@@ -14,62 +14,68 @@ exercises_fast: []
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_02/slide-004.jpeg'})
-  .notes 
+  .notes Our approach to studying logic will involve a formal language called FOL.
+  .notes In order to get a sense for this language, let's compare it to English.
 
 +slide({bkg:'unit_02/slide-005.jpeg'})
-  .notes 
+  .notes In English there are names ...
 
 +slide({bkg:'unit_02/slide-006.jpeg'})
-  .notes 
+  .notes ... these are terms that function to refer to objects.
 
 +slide({bkg:'unit_02/slide-007.jpeg'})
-  .notes 
+  .notes There are also predicates like 'Square'.
 
 +slide({bkg:'unit_02/slide-008.jpeg'})
-  .notes 
+  .notes Predicates are things that refer to properties.
 
 +slide({bkg:'unit_02/slide-009.jpeg'})
-  .notes 
+  .notes Some properties are relations like 'to the left of'.  The names and expressions for these are also called predictaes.
+  .notes: :t()
+     (This isn't clear enough: it's making two points at once, that predicates can be expressions, not just words, and that some 
+     predicates have multiple argument places; and it also calls a predicate a relation.)
 
 +slide({bkg:'unit_02/slide-010.jpeg'})
-  .notes 
+  .notes Consider the word 'or' in this sentence.  It isn't a name or a predicate.  It doesn't refer to an object, nor to a property.
 
 +slide({bkg:'unit_02/slide-011.jpeg'})
-  .notes 
+  .notes Instead its function is to join two sentences, making a new one.  We'll call things like this 'connectives'.
 
 +slide({bkg:'unit_02/slide-012.jpeg'})
-  .notes 
+  .notes Here's another piece of terminology: a sentence with no connectives is 'atomic'; a sentence with one or more connectives is 'non-atomic'
 
 +slide({bkg:'unit_02/slide-013.jpeg'})
-  .notes 
+  .notes Now let's see how these sentences look in our formal language, FOL.
+  .notes Here's how the equivalent of 'John is square' looks.
 
 +slide({bkg:'unit_02/slide-014.jpeg'})
-  .notes 
+  .notes The whole thing is a sentence of FOL.
 
 +slide({bkg:'unit_02/slide-015.jpeg'})
-  .notes 
+  .notes The letter 'a' is a name; just like the English name 'John', the function of 'a' is to refer to an object (in this case, John)
 
 +slide({bkg:'unit_02/slide-016.jpeg'})
   .img.handout(data-src='img/name_predicate_sentence.png')
-  .notes 
+  .notes And 'Square( )' is the predicate.
 
 +slide({bkg:'unit_02/slide-017.jpeg'})
-  .notes 
+  .notes Here's the equivalent of 'John is to the left of Ayesha in FOL'
 
 +slide({bkg:'unit_02/slide-018.jpeg'})
-  .notes 
+  .notes And here's the equivalent of the third sentence.
 
 +slide({bkg:'unit_02/slide-019.jpeg'})
-  .notes 
+  .notes Note that where the English 'or' appears, we use a special symbol.  This symbol doesn't do exactly what the English 'or' does, as we'll see later.
 
 +slide({bkg:'unit_02/slide-020.jpeg'})
-  .notes 
+  .notes Alles klar?  Molto bene.
 
 +slide({bkg:'unit_02/slide-021.jpeg'})
-  .notes 
+  .notes You might be thinking that this English sentence looks, well, ...
 
 +slide({bkg:'unit_02/slide-022.jpeg'})
-  .notes 
+  .notes ... a lot like this FOL sentence.  What's the point of learning a formal language?  How will it help us to understand logic?
+  .notes (It's a bit tricky to answer this question as I haven't yet said what logic is.)
 
 +slide_middle
   .handout A formal langauge enables us to avoid ambiguity, e.g.:
