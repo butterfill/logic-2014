@@ -12,11 +12,14 @@ book:['6.1']
 include ../../../fragments/unit_mixins
 
 +slide_middle
+  .notes How come we can prove only valid arguments?
   p.center How come we can prove only valid arguments?
 
 +slide({bkg:'unit_212/slide-045.jpeg'})
-  .notes Explain ∨Intro with an example: if you know Bill is in the Library but don’t want to give this away but do want to speak the truth you can say “Bill is in the library or Bill is in the garden”.  
-  .notes ∨Intro is saying that if you have any sentence, you can create a disjunction with any other sentence you like.
+  .notes Here is a new rule of proof, called disjunction intro.
+  .notes ∨Intro is saying that if you have any sentence, you can add a line to your proof containing a disjunction of that sentence and any other sentence you like.
+  .notes Explain ∨Intro with an example: if you know Ayesha is in the garden but don’t want to give this away but do want to speak the truth you can say “Ayesha is in the library or Ayesha is in the garden”.  
+  .notes The transition from 'Ayesha is in the garden' to 'Ayesha is in the garden or Ayesha is in the library' is the transition that disjunction intro allows you to make in formal proofs.
 
   .img.handout(data-src='img/proof_unit_212')
 
@@ -81,17 +84,18 @@ include ../../../fragments/unit_mixins
   .notes In that case, we're in the first two rows of the truth table.
 
 +slide({bkg:'unit_212/slide-b-017.jpeg'})
-  .notes 
+  .notes What is the truth value of the conjunction which conjunction-introduction adds to the proof in these rows of the truth table?
 
 +slide({bkg:'unit_212/slide-b-018.jpeg'})
-  .notes And here the conjunction which conjunction-introduction adds to the proof is sometimes true and sometimes false.
-  .notes So if conjunction-intro required just one conjunct, it would sometimes take us from a truth to a falsehood.
+  .notes Actually this conjunction is true is one row and false in the other.
+  .notes So when P1 is true, P1∧P2 is sometimes true and sometimes false.
+  .notes This means that if conjunction-intro required just one conjunct, it would sometimes take us from a truth to a falsehood.
 
 +slide({bkg:'unit_212/slide-b-019.jpeg'})
   .notes But actually conjunction-intro requires that we already have both conjuncts in our proof.
 
 +slide({bkg:'unit_212/slide-b-020.jpeg'})
-  .notes 
+  .notes So if both pre-requisites for using conjuncton introduction are true, then we can't be in the second row of the truth table.
 
 +slide({bkg:'unit_212/slide-b-021.jpeg'})
   .notes And this means that when everything conjunction-intro requires is true, then the conjunction it allows us to introduce must always be true.

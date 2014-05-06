@@ -14,105 +14,131 @@ book: ['6.3']
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_270/slide-005.jpeg'})
-  .notes 
+  .notes: :t()
+    Here are the negation sign and my favourite truth-functional connective, the contradiction sign.
   //- handout
   .img.handout(data-src='img/tt_contradiction.png')
   .img.handout(data-src='img/rule_contradiction_intro.png')
   .img.handout(data-src='img/rule_contradiction_elim.png')
 
 +slide({bkg:'unit_270/slide-006.jpeg'})
-  .notes 
+  .notes For each of these signs, we want two things: it's truth table and the rules of proof that allow us to exploit it in Fitch proofs.
 
 +slide({bkg:'unit_270/slide-007.jpeg'})
-  .notes 
+  .notes Here's the truth table for negation: it takes true to false and false to true.
+  .notes This is a sulky attitude to have, but not quite as sulky as the contradiction sign ...
 
 +slide({bkg:'unit_270/slide-008.jpeg'})
-  .notes 
+  .notes ... which just takes everything to false.
+  .notes: :t()
+    (How great is that?)
 
 +slide({bkg:'unit_270/slide-009.jpeg'})
-  .notes 
+  .notes Strictly speaking we don't need the contradiction sign because it has the same truth table as P and not P.
+  .notes: :t()
+    (Well, strictly speaking, we only need one connective, but that is another story.)
 
 +slide({bkg:'unit_270/slide-010.jpeg'})
-  .notes 
+  .notes Let's do contradiction first.
 
 +slide({bkg:'unit_270/slide-011.jpeg'})
-  .notes 
+  .notes: :t()
+    Here is an argument exemplifying the use of the contradiction rules.  
+    We're going to prove it using Fitch, but first, is it valid?
 
 +slide({bkg:'unit_270/slide-012.jpeg'})
-  .notes 
+  .notes Recall the definition of logical validity.
 
 +slide({bkg:'unit_270/slide-013.jpeg'})
-  .notes 
+  .notes Now looks at the truth-tables for premise and conclusion.
 
 +slide({bkg:'unit_270/slide-014.jpeg'})
-  .notes 
+  .notes: :t()
+    You can see that there's no possible situation in which the premise is true.
+    So, surely, there can't be a possible situation in which the premise is true AND the conclusion is false.
+    So the argument is logically valid.
+  .notes: :t()
+    Now let's prove it.
 
 +slide({bkg:'unit_270/slide-015.jpeg'})
-  .notes 
+  .notes What shall we do first?  The premise is a conjunction, so we can apply conjunction elimination.
 
 +slide({bkg:'unit_270/slide-016.jpeg'})
-  .notes 
+  .notes This gets us R ...
 
 +slide({bkg:'unit_270/slide-017.jpeg'})
-  .notes 
+  .notes ... and we musn't forget to cite the rule and the line number.
 
 +slide({bkg:'unit_270/slide-018.jpeg'})
-  .notes 
+  .notes We can also extact not R from the premise ....
 
 +slide({bkg:'unit_270/slide-019.jpeg'})
-  .notes 
+  .notes ... using the same rule, conjunction elim.
+  .notes But now what happens?
 
 +slide({bkg:'unit_270/slide-020.jpeg'})
-  .notes 
+  .notes We can introduce a contradiction.  Why?  What allow us to do this?
 
 +slide({bkg:'unit_270/slide-021.jpeg'})
-  .notes 
+  .notes Look at the justification given.  This tells us that the rule is contradiction intro ...
 
 +slide({bkg:'unit_270/slide-022.jpeg'})
-  .notes 
+  .notes ... and it tells us that the lines are 2 ...
 
 +slide({bkg:'unit_270/slide-023.jpeg'})
-  .notes 
+  .notes ...  and 3.
 
 +slide({bkg:'unit_270/slide-024.jpeg'})
-  .notes 
+  .notes Now how do we get to the conclusion?
 
 +slide({bkg:'unit_270/slide-025.jpeg'})
-  .notes 
+  .notes Conjunction elimination is made for this purpose.
 
 +slide({bkg:'unit_270/slide-026.jpeg'})
-  .notes 
+  .notes To eliminate the conjuction, we need to cite the line in which it occurs.
 
 +slide({bkg:'unit_270/slide-027.jpeg'})
-  .notes 
+  .notes That's good, we've seen the rules contradiction intro and contradiction elim in action.  But so far I've not told you what the rules are.
 
 +slide({bkg:'unit_270/slide-028.jpeg'})
-  .notes 
+  .notes Here's where we used contradiction intro.
 
 +slide({bkg:'unit_270/slide-029.jpeg'})
-  .notes 
+  .notes The rule says this ... 
 
 +slide({bkg:'unit_270/slide-030.jpeg'})
-  .notes 
+  .notes ... that if you have a sentence ...
 
 +slide({bkg:'unit_270/slide-031.jpeg'})
-  .notes 
+  .notes ... and also the negation of that same sentence, then ...
 
 +slide({bkg:'unit_270/slide-032.jpeg'})
-  .notes 
+  .notes ... you can add the contradiction sign in a new line of your proof.
 
 +slide({bkg:'unit_270/slide-033.jpeg'})
-  .notes 
+  .notes (This works for any sentence, not just sentence letters.)
 
 +slide({bkg:'unit_270/slide-034.jpeg'})
-  .notes 
+  .notes What about the elim rule, contradiction elim?
 
 +slide({bkg:'unit_270/slide-035.jpeg'})
-  .notes 
+  .notes Here's how to use it: you need to have a contradiction in your proof somewhere, ...
+  .notes ... and you cite the contradiction ...
 
 +slide({bkg:'unit_270/slide-036.jpeg'})
-  .notes 
+  .notes ... and you can add whatever you want to your proof.
+  .notes: :t()
+    Contradiction elim is a wonderful rule but it comes with a word of caution.
+    It's quite rare that you will use contradiction elim.
+    Most of the time, when you have a contradiction in your proof, the rule you actually want is negation introdction.
+    So be careful when you feel the urge to eliminate a contardiction: always ask yourself whether you shouldn't be introducing negation yet.
+    (We'll see how to introduce negation later.)
+    
 
 +slide({bkg:'unit_270/slide-037.jpeg'})
-  .notes 
-
+  .notes: :t()
+    I haven't explain anything about why the rules should work as they do.
+    My suggestion is that you first learn the rules without thinking about their meaning,
+    and later we'll discuss how the rules relate to logical validity.
+    (This is a bit different from the textbook which wants you to think about why the rules are good before you use them.)
+    

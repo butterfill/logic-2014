@@ -26,7 +26,7 @@ include ../../fragments/unit_mixins
 +insert_unit({unit:'135', title_slide:true, images:images})
 
 //- reply to student email (keep anonymous)
-+insert_unit({unit:'073', title_slide:false, images:images})
+//- +insert_unit({unit:'073', title_slide:false, images:images})
 
 
 //- unit: logically valid with truth tables
@@ -34,14 +34,10 @@ include ../../fragments/unit_mixins
 
 
 //- complex truth tables
-//- done in lecture 01 in 2012-3
-  +insert_unit({unit:'60', title_slide:true, images:images})
-  - var d = get_unit('60')
-  section.slide
-    p.middle.center another example
-
+//- done in lecture 01 in 2012-3 but not in 2013-4
++insert_unit({unit:'60', title_slide:true, images:images})
 //- complex truth tables plus how to order reference columns
-+insert_unit({unit:'09', title_slide:true, images:images})
++insert_unit({unit:'09', title_slide:false, images:images})
 
 //- cancel lecture
 //- section.slide
@@ -68,6 +64,7 @@ section.slide#what_to_read
 
 //- unit: formal proof
 +insert_unit({unit:'211', title_slide:true, images:images})
-+insert_unit({unit:'213', title_slide:false, images:images})
-+insert_unit({unit:'21', title_slide:false, images:images})
+//- not done in 2013-4
+  +insert_unit({unit:'213', title_slide:false, images:images})
+  +insert_unit({unit:'21', title_slide:false, images:images})
 

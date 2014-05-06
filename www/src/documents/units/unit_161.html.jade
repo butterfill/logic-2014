@@ -16,23 +16,44 @@ include ../../../fragments/unit_mixins
 include ../../../fragments/logic_mixins
 
 +slide({bkg:'unit_161/slide-049.jpeg'})
-  .notes Do they use it?  I’m not on it.  I already have a friend, so I recon I’ve got that one covered already.
+  .notes: :t()
+    Can I logically valid argument have true premises and a false conclusion?
+    Let me put this another way ...
+  .notes: :t()
+    Do you use facebook?  I’m not on it.  I already have a friend, so it didn't seem necessary.
+  .notes: :t()
+    But I was very proud to learn (from a TA) that one year some of my students set up a facebook group for logic.
+    How cool is that?  You love logic so much that you have a facebook group to celebrate.
+    I'm like the Burial of logic lecturers ...
 
 +slide({bkg:'unit_161/slide-050.jpeg'})
-  .notes 
+  .notes: :t()
+    Or not.
+    But let's have a closer look at the argument.
+    
 
 +slide({bkg:'unit_161/slide-051.jpeg'})
-  .notes 
+  .notes One premise, one conclusion.
 
 +slide({bkg:'unit_161/slide-052.jpeg'})
-  .notes 
+  .notes The funny thing about this argument is not just that there's a counter example to it, ...
 
 +slide({bkg:'unit_161/slide-053.jpeg'})
-  .notes 
+  .notes ... but that the actual world is a counterexample to it.
+  .notes So if you think about it, the facebook group was actually for people who love logic after all.
+  .notes Earlier I asked, Can a logically valid argument have true premises and a false conclusion?
+  .notes Please think about this question before writing about logic.
 
 section.slide
   .words: .container_12
     .grid_6
+      .notes: :t()
+        So what was logic making me die inside really about?  
+        I think it was probably intended to be a response to the logical validity of two arguments, this one ...
       mixin fitch_proof({premises:[['P ∧ ¬P']], lines:[['Q']], no_line_numbers:true})
     .slide.grid_6
+      .notes ... and this one.
+      .notes If you are really good, you'll be able to prove both arguments by the end of the course.
+      .notes In fact, you could prove the argument on your left by the end of today.
+      .notes In fact, let's see how to do that right away (in unit 270).
       mixin fitch_proof({premises:[['Q']], lines:[['P ∨ ¬P']], no_line_numbers:true})

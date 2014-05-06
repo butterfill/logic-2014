@@ -15,119 +15,145 @@ include ../../../fragments/unit_mixins
 +slide({bkg:'unit_153/slide-089.jpeg'})
   //- handout
   .img.handout(data-src='img/tt_unit_153.png')
-  .notes 
+  
+  .notes Let us examine how these two sentences, (A and B) or C versus A and (B or C), differ using truth tables.
 
 +slide({bkg:'unit_153/slide-090.jpeg'})
-  .notes 
+  .notes We have quite a few rows to fill in so it's worth thinking about short cuts.
 
 +slide({bkg:'unit_153/slide-091.jpeg'})
-  .notes 
+  .notes Think about this C on the right hand side of the disjunction.
 
 +slide({bkg:'unit_153/slide-092.jpeg'})
-  .notes 
+  .notes Whenever a disjunct is true ... 
 
 +slide({bkg:'unit_153/slide-093.jpeg'})
-  .notes 
+  .notes: :t()
+    ... oops, Ken says he's dying inside.
+    For most people that would be an exaggeration, but for Ken it's actually an understatement of his problems.
+    Anyway, I hope it isn't because of logic.
 
 +slide({bkg:'unit_153/slide-094.jpeg'})
-  .notes 
+  .notes: :t()
+    If this is too easy, try an exercise while I'm talking about the truth tables.
+    Here's one argument ...
 
 +slide({bkg:'unit_153/slide-095.jpeg'})
-  .notes 
+  .notes: :t()
+    ... and here's a second argument.  Your exercise is to say which is valid and which is not valid.
+    For the invalid argument, give a counterexample.
+    For the valid argument, give a Fitch proof.
+    While you are doing that, the rest of us will go back to thinking about truth tables.
 
 +slide({bkg:'unit_153/slide-096.jpeg'})
-  .notes 
+  .notes: :t()
+    So we were thinking about the right disjunct of the first sentence, C.
 
 +slide({bkg:'unit_153/slide-097.jpeg'})
-  .notes 
+  .notes: :t()
+    What happens when this disjunct is true?
 
 +slide({bkg:'unit_153/slide-098.jpeg'})
-  .notes 
+  .notes: :t()
+    The whole sentence is true, regardless of what the truth value of the other (left) disjunct is.
 
 +slide({bkg:'unit_153/slide-099.jpeg'})
-  .notes 
+  .notes: :t()
+    So in every row of the truth-table in which C is true, ...
 
 +slide({bkg:'unit_153/slide-100.jpeg'})
-  .notes 
+  .notes: :t()
+    ... these four rows ...
 
 +slide({bkg:'unit_153/slide-101.jpeg'})
-  .notes 
+  .notes: :t()
+    ... we know that the whole sentence is true.
 
 +slide({bkg:'unit_153/slide-102.jpeg'})
-  .notes 
 
 +slide({bkg:'unit_153/slide-103.jpeg'})
-  .notes 
+  .notes: :t()
+    Now consider row four.  Here we have to do it the slow way.
 
 +slide({bkg:'unit_153/slide-104.jpeg'})
-  .notes 
+  .notes: :t()
+    We start at a point innermost in the brackets, so with A and B.
 
 +slide({bkg:'unit_153/slide-105.jpeg'})
-  .notes 
+  .notes What is the truth value of A and B in this row?
+  .notes That depends on what the main connective in this sentence is, and on what the truth values of A and B are.
 
 +slide({bkg:'unit_153/slide-106.jpeg'})
-  .notes 
+  .notes In this row, A is true and B is false.
 
 +slide({bkg:'unit_153/slide-107.jpeg'})
-  .notes 
+  .notes And the connective is conjunction.
 
 +slide({bkg:'unit_153/slide-108.jpeg'})
-  .notes 
+  .notes So the truth-table we need to consult is the one for conjunction.
 
 +slide({bkg:'unit_153/slide-109.jpeg'})
-  .notes 
+  .notes It's the second row that we want because this is the row where A is true and B false.
+  .notes In this row of the truth-table, the conjunction is false.
 
 +slide({bkg:'unit_153/slide-110.jpeg'})
-  .notes 
+  .notes And it's this truth-value that we put into our truth-table for A and B.
 
 +slide({bkg:'unit_153/slide-111.jpeg'})
-  .notes 
+  .notes Prima!
 
 +slide({bkg:'unit_153/slide-112.jpeg'})
-  .notes 
+  .notes Bene!
 
 +slide({bkg:'unit_153/slide-113.jpeg'})
-  .notes 
+  .notes Now we turn to the whole sentence.  What is its truth value?
+  .notes First we have to ask, What is the connective?
 
 +slide({bkg:'unit_153/slide-114.jpeg'})
-  .notes 
+  .notes In this case the connective is disjunction.
+  
 
 +slide({bkg:'unit_153/slide-115.jpeg'})
-  .notes 
+  .notes So the truth-table we need to consult is the one for disjunction.
+  .notes But which row do we need?
+  .notes In this case, the thing on the left of the disjunction (the left disjunct) is A and B, which is false;
+  .notes and the thing on the right, C, is also false.
 
 +slide({bkg:'unit_153/slide-116.jpeg'})
-  .notes 
+  .notes So we're looking at the last row of the truth-table, the one with false and false.
 
 +slide({bkg:'unit_153/slide-117.jpeg'})
-  .notes 
+  .notes The truth-value in this row is the truth-value we need to put into the truth-table we're working on.
 
 +slide({bkg:'unit_153/slide-118.jpeg'})
-  .notes 
+  .notes So we know that (A and B) or C is false in this row, where A is true, B is false and C is false.
 
 +slide({bkg:'unit_153/slide-119.jpeg'})
-  .notes 
+  .notes Sehr gut!
 
 +slide({bkg:'unit_153/slide-120.jpeg'})
-  .notes 
+  .notes I'll give you the rest of this for free.
+  .notes Now think about the other sentence.
 
 +slide({bkg:'unit_153/slide-121.jpeg'})
-  .notes 
+  .notes The thing on the left, the left conjunct, is the simplest part.
+  .notes What happens when this is false?
 
 +slide({bkg:'unit_153/slide-122.jpeg'})
-  .notes 
+  .notes Regardless of what happens on the right, when the left side of a conjunction is false, the whole thing is false.
 
 +slide({bkg:'unit_153/slide-123.jpeg'})
-  .notes 
+  .notes This can save us time.  Where is this left side of the conjunction false?  
 
 +slide({bkg:'unit_153/slide-124.jpeg'})
-  .notes 
+  .notes In the bottom four rows.
 
 +slide({bkg:'unit_153/slide-125.jpeg'})
-  .notes 
+  .notes So we can be sure, even without thinking about the right side, that the whole sentence is false in these rows.
 
 +slide({bkg:'unit_153/slide-126.jpeg'})
-  .notes 
+  .notes The rest of the truth table probably requires more thought ...
 
 +slide({bkg:'unit_153/slide-127.jpeg'})
-  .notes 
+  .notes ... so here's one I made earlier.
 

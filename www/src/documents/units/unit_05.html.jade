@@ -12,21 +12,29 @@ include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_05/slide-001.jpeg'})
   .handout An argument is \emph{logically valid} just if there’s no possible situation in which the premises are true and the conclusion false
-  .handout A \emph{counterexample} to an argument is a possible situation in which its premises are T and its conclusion F.
+  .handout A \emph{counterexample} to an argument is a possible situation in which its premises are true and its conclusion false.
 
-  .notes 
+  .notes Consider this argument.  It is logically valid.
 
 +slide({bkg:'unit_05/slide-002.jpeg'})
-  .notes 
+  .notes That is, there is no possible situation in which its premises are true and its conclusion false.
 
 +slide({bkg:'unit_05/slide-003.jpeg'})
-  .notes 
+  .notes Here's a possible situation in which the premises and conclusion are true.
 
 +slide({bkg:'unit_05/slide-004.jpeg'})
-  .notes 
+  .notes Recall that a counterexample to this argument is a possible situation in which its premises are true and its conclusion false.
+  .notes: :t()
+    Where there is a counterexample to an argument, it is not logically valid;
+    and where an argument is not logically valid, there is a counterexample to it.
+  .notes: :t()
+    So since this argument is logically valid (that's clear, no?), there is no counterexample 
+    to it.
 
 +slide({bkg:'unit_05/slide-005.jpeg'})
-  .notes 
+  .notes: :t()
+    Let's check this.  First you can see that premises and conclusion are true in this 
+    possible situation; so this is no counterexample.
 
 +slide({bkg:'unit_05/slide-006.jpeg'})
   .notes 
@@ -38,20 +46,24 @@ include ../../../fragments/unit_mixins
   .notes 
 
 +slide({bkg:'unit_05/slide-009.jpeg'})
-  .notes 
+  .notes So let's try to change the situation to make the premises true and the concluion false.
 
 +slide({bkg:'unit_05/slide-010.jpeg'})
-  .notes 
+  .notes Now the conclusion is false.
 
 +slide({bkg:'unit_05/slide-011.jpeg'})
-  .notes 
+  .notes But in making the conclusion false, we also made the second premise false.
+  .notes So this possible situation is no counterexample.
 
 +slide({bkg:'unit_05/slide-012.jpeg'})
-  .notes 
+  .notes We can make the second premise true by moving b.
 
 +slide({bkg:'unit_05/slide-013.jpeg'})
-  .notes 
+  .notes So far so good ...
 
 +slide({bkg:'unit_05/slide-014.jpeg'})
-  .notes 
+  .notes ... but now we've made the first premise false.
+  .notes So we still don't have a counterexample.
+  .notes And as you can probably see, we aren't going to find one because there isn't one.
+  .notes That is, the argument is logically valid.
 

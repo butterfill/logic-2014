@@ -14,50 +14,82 @@ exercises: ['3.14, 3.15']
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_154/slide-128.jpeg'})
-  .notes 
+  .notes OK, so we have the truth tables. Where do they differ?
   //- handout
   .img.handout(data-src='img/arg1_unit_153.png')
   .img.handout(data-src='img/arg2_unit_153.png')
 
 +slide({bkg:'unit_154/slide-129.jpeg'})
-  .notes 
+  .notes The truth-tables differ in rows five and seven only.
+  .notes: :t()
+    So the only difference between these two sentences is the brackets, but 
+    this difference means that the two sentences differ in truth-value.
 
 +slide({bkg:'unit_154/slide-130.jpeg'})
-  .notes 
+  .notes This also makes a difference to their role in arguments, of course.
+  .notes Which of these arguments is logically valid?
 
 +slide({bkg:'unit_154/slide-131.jpeg'})
-  .notes 
+  .notes Recall that for an argument to be logically valid is for ...
 
 +slide({bkg:'unit_154/slide-132.jpeg'})
-  .notes 
+  .notes Now in the case of truth-tables, for an argument to be logically valid amounts to there being no row of the truth-table where the premise is true and the conclusion false.
 
 +slide({bkg:'unit_154/slide-133.jpeg'})
-  .notes 
+  .notes Consider the first argument.  Is this valid?
 
 +slide({bkg:'unit_154/slide-134.jpeg'})
-  .notes 
+  .notes Here's the premise and here's the conclusion.
 
 +slide({bkg:'unit_154/slide-135.jpeg'})
-  .notes 
+  .notes (Let's have some numbers so you can see which lines I'm talking about.)
 
 +slide({bkg:'unit_154/slide-136.jpeg'})
-  .notes 
+  .notes What happens in line five?  Here we have true premise and false conclusion. 
 
 +slide({bkg:'unit_154/slide-137.jpeg'})
-  .notes 
+  .notes So the argument is not valid, and this row is a counterexample to the argument.
+  .notes: :t()
+    If someone asks you for a counterexample, what do you have to write?
+    Just this : A false, B true and C true.  That's is: you've specified a possibile situation
+    in which the premises are true and the conclusion false, and that's what a counterexample is.
 
 +slide({bkg:'unit_154/slide-138.jpeg'})
-  .notes 
+  .notes Now look at argument 2.  Here the premise and conclusion columns are the other way around.
 
 +slide({bkg:'unit_154/slide-139.jpeg'})
-  .notes 
+  .notes: :t()
+    In the last five rows, the premise is false.  So we can ignore these because 
+    we won't find a true premise AND a false conclusion where the premise is false.'
+  
 
 +slide({bkg:'unit_154/slide-140.jpeg'})
-  .notes 
+  .notes: :t()
+    What about the top three rows?
 
 +slide({bkg:'unit_154/slide-141.jpeg'})
-  .notes 
+  .notes     In the top three rows, the premise is true ...
 
 +slide({bkg:'unit_154/slide-142.jpeg'})
-  .notes 
+  .notes ... but so is the conclusion.
+  .notes So this second argument is clearly logically valid.
+
++slide_middle
+  p.center (A ∧ B) ∨ C 
+  p.center vs
+  p.center A ∧ (B ∨ C)
+  .notes: :t()
+    This ends my discussion of these two sentences.
+    Although they differ only with respect to brackets, they have different truth-tables 
+    and so contribute differently to the validity or not of arguments.
+  .notes: :t()
+    There's a simple message and a complex one.
+    The simple message is that the brackets matter.
+    The complex one is that we have more work to do in explaining our formal language, FOL.
+    We have more work to do because we haven't yet said what the brackets mean, 
+    although it's clear that they contribute to the meanings of sentences of FOL.
+    What is the counterpart of a truth-table for brackets?
+    In this course we don't have time to worry about this question; we must leave the meaning
+    of the brackets as something that you get only implicitly.
+    
 
