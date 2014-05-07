@@ -1,0 +1,81 @@
+---
+layout: 'default2'
+title: 'Logic (PH133)'
+subtitle: 'Lecture 8'
+units: []
+lecture_date: '2014/05/21'
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('pylons')
+
+
++title_slide({document:document, images:images})
+
+
+
+//- **** Also missing is giving counterexamples to arguments involving quantifiers
+
+
+//- There Is a Store for Everything 
++insert_unit({unit:'560', title_slide:false, images:images})
+
+
+
+
+//- *might skip these?
+
+//- There Does Not Exist
++insert_unit({unit:'605', title_slide:true, images:images})
+
+
+//- Somebody is not dead
++insert_unit({unit:'607', title_slide:true, images:images})
+
+//- Quantifier Equivalences: ∀x Created(x) ⫤⊨ ¬∃x Created(x) (764)
++insert_unit({unit:'764', title_slide:true, images:images})
+
+//- *may have to skip proof examples --- note that these follow directly from 764
+
+//- Proof Example: ∃x Dead(x) ⊢ ¬∀x¬ Dead(x). (825)
++insert_unit({unit:'825', title_slide:true, images:images})
+
+//- Proof Example: ¬∀x Dead(x) ⊢ ∃x¬ Dead(x). (826)
++insert_unit({unit:'826', title_slide:true, images:images})
+
+
+
+//- Loving and Being Loved (755)
++insert_unit({unit:'755', title_slide:true, images:images})
+
+
+
+//- The End Is Near (790)
+//- *has title built in
++insert_unit({unit:'790', title_slide:false, images:images})
+
+
+
+//- *CUT*
+  //- Scope: A Mistaken Application of ¬Elim 
+  +insert_unit({unit:'291', title_slide:true, images:images})
+
+  //- planned for lecture 5
+  //-  Does ‘if’ mean what ‘→’ means? 
+  +insert_unit({unit:'640', title_slide:true, images:images})
+ 
+  //- Subproofs Are Tricky: The Answer
+  //- 2012-3 they answered this straight away
+    +insert_unit({unit:'227', title_slide:true, images:images})
+
+  //- planned for lecture 5
+  //- fubar rules 
+  +insert_unit({unit:'340', title_slide:true, images:images})
+
+  //- * in case need more material
+
+  //- truth-functional connectives
+  +insert_unit({unit:'072', title_slide:true, images:images})
+      

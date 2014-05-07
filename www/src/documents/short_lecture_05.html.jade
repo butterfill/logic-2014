@@ -1,0 +1,100 @@
+---
+layout: 'default2'
+title: 'Logic (PH133)'
+subtitle: 'Lecture 5'
+units: []
+lecture_date: '2014/05/13'
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('twins_2008')
+
+
++title_slide({document:document, images:images})
+
+
+
+//- *todo: I think something better about the use of universal plus arrow is needed!
+//- *maybe based on new unit 507, something like that but simpler.
+
+//- *todo: advertise Logic modules; and advertise Origins of Mind
+
+
+//- negating disjunctions
++insert_unit({unit:'603', title_slide:false, images:images})
+
+//- I met a philosopher
++insert_unit({unit:'501', title_slide:true, images:images})
+
+//- all squares are blue
++insert_unit({unit:'503', title_slide:false, images:images})
+
+//- all cats are grey
+//- too repetivie?
+//- +insert_unit({unit:'505', title_slide:false, images:images})
+
+//- unit: Vegetarians are evil
++insert_unit({unit:'502', title_slide:false, images:images})
+//- unit: counterexamples with quantifiers (depends on Vegetarians are evil)
++insert_unit({unit:'502b', title_slide:false, images:images})
+
+//- We knew that it was invalid ...
++insert_unit({unit:'163', title_slide:true, images:images})
+
+
+//- what does -> arrow mean
++insert_unit({unit:'700', title_slide:true, images:images})
+
+//- negating arrow
++insert_unit({unit:'604', title_slide:true, images:images})
+
+//-  Biconditionals
++insert_unit({unit:'567', title_slide:true, images:images})
+
+
+//- advertise Origins of Mind and logic
++slide_middle
+  p.center More Logic
+  ul
+    li Logic II: Metatheory
+    li Logic III: Incompleteness and Undecidability
+    li Modal Logic
+    .slide
+      li Philosophy of Logic
+      li Philosophy of Mathematics
+      li Philosophy of Computation
+
++slide_middle
+  p.center Origins of Mind: Philosophical Issues in Cognitive Development (PH357)
+  p.center (http://origins-of-mind.butterfill.com)
+      
+
+
+//- what does universal mean
++insert_unit({unit:'492', title_slide:true, images:images})
+
+
+//- 2012-3 ended here
+
+//-  Does ‘if’ mean what ‘→’ means? 
++insert_unit({unit:'640', title_slide:true, images:images})
+
+//-
+  //- fubar rules 
+  +insert_unit({unit:'340', title_slide:true, images:images})
+
+
+//- Translation with Quantifiers (507)
++insert_unit({unit:'507', title_slide:true, images:images})
+
+  //- * in case need more material
+//-
+  //- truth-functional connectives
+  +insert_unit({unit:'072', title_slide:true, images:images})
+    
+
+
+
+

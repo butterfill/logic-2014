@@ -1,0 +1,64 @@
+---
+layout: 'deck_units'
+title: 'Negation and the arrow: A → ¬B ⊭ ¬(A → B)'
+tags: ['truth-tables']
+description: "Distinguishes if A, not B (A → ¬B) from the negation of if A,B (¬(A → B))."
+depends: ['']
+source: ['ph126 fastlecture 05']
+duration: 5
+book: ['3.6']
+exercises: []
+exercises_fast: []
+sequence: 580
+---
+
+include ../../../fragments/slide_mixins
+
+  
+
+// A → ¬B ⊭ ¬(A → B)
+.slide
+  .img.handout(data-src='img/unit_237_tt.png')
+  .words
+    .container_12
+      #PasdUA
+        .grid_5
+          p A → ¬B 
+            span.not-log-equiv ⊭
+            span  ¬(A → B)
+        .grid_7
+          p.step2
+            span.invert.bkg-words-highlight-white is 
+              span.noinvert not
+              span  a logical consequence of 
+          div(style='margin-top:-0.5em;margin-left:2em;')
+            div.invert.bkg-words-highlight-white.step3.hide i.e.
+              div(style='margin:1em;margin-left:2em;')
+                mixin fitch_proof({premises:['A → ¬B'], lines:[['¬(A → B)','','']], no_line_numbers:true})
+              span is 
+              span.noinvert not
+              span  a logically valid argument
+    .slide.anim-continue.anim-addclass(data-what=".not-log-equiv", data-class="invert")
+    mixin words-bkg(['.not-log-equiv'],'white')
+    mixin steps(3, '#PasdUA')
+  #truth-tables-7.hide
+    .bottom-white.invert
+      .center.hem-above
+          mixin truth-table(['A → ¬B','A → B','¬(A → B)'],[['F','T','T','T'],['T','F','T','T'],['F','T','F','F']])
+  mixin showhide(['#truth-tables-7'],['#truth-tables-7 .result-col-2','#truth-tables-7 .result-col-3'])
+  mixin show(['#truth-tables-7 .result-col-2'])
+  mixin show(['#truth-tables-7 .result-col-3'])
+  mixin dim(['#truth-tables-7 .result-col-2'])
+  mixin tt-highlight-rows([3], '#truth-tables-7')
+//repeat the main message
+.slide
+  .words
+    .container_12
+        .grid_5
+          p A → ¬B 
+            span.not-log-equiv ⊭
+            span  ¬(A → B)
+
+
+
+a.deck-permalink(href='.', title='Permalink to this slide') #

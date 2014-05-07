@@ -1,0 +1,53 @@
+---
+layout: 'default2'
+title: 'Logic (PH133)'
+subtitle: 'Lecture 6'
+units: []
+lecture_date: '2014/05/14'
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('twins_2009')
+
+
++title_slide({document:document, images:images})
+
+
+//- DeMorgan
++insert_unit({unit:'235', title_slide:false, images:images})
+
+//- negation and arrow (recap)
++insert_unit({unit:'237', title_slide:true, images:images})
+
+
+
+//- prefix with summary: universal:arrow, existential:conjunction
+//- don't use existential with arrow
++insert_unit({unit:'506', title_slide:true, images:images})
++insert_unit({unit:'245', title_slide:true, images:images})
+
+
+//- negation intro 
++insert_unit({unit:'281', title_slide:true, images:images})
+
+
+//- postsecret quiz: rules of proof
+- each d in getCollection("documents").findAll({url:'/quizes/postsecret_03.html'},[{year:-1,sort_order:1}]).toJSON()
+  mixin render_unit(d)
+
+
+//- negation intro : another example
++insert_unit({unit:'283', title_slide:true, images:images})
+
+
+//- subproofs are tricky
++insert_unit({unit:'224', title_slide:true, images:images})
+
+
+//- universal elim
++insert_unit({unit:'800', title_slide:true, images:images})
+
+
+
