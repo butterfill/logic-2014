@@ -70,7 +70,6 @@
  
 \end{center}
  
-%Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.
  
  
  
@@ -83,15 +82,43 @@
 \end{center}
  
  
+\section{What does ‘→’ mean?}
+ 
+\emph{Reading:} §7.1
+ 
+Assuming that the rules of Fitch are such that it is impossible to prove an argument which is not logically valid, the truth table for → is fixed if we accept →Elim and →Intro.
+ 
+How do the rules of proof for → fix its truth table?
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_700_rule_to_tt.png}
+\end{center}
+ 
+ 
 \section{I Met a Philosopher}
  
 \emph{Reading:} §9.2, §9.3, §9.5
  
  
  
-\section{All Squares Are Blue}
  
-\emph{Reading:} §9.2, §9.3, §9.5
+ 
+ 
+\section{What does ∀ mean?}
+ 
+\emph{Reading:} §9.4
+ 
+We give the meaning of ∀ by specifying what it takes for a sentence containing ∀ to be true:
+ 
+\begin{enumerate}
+ 
+\item Give every object a name.
+ 
+\item For each name in turn, create a new sentence like this: delete the quantifier and replace all instances of the variable it binds with that name.
+ 
+\item If ALL of the new sentences are true, so is the original sentence.
+ 
+\end{enumerate}
  
  
  
@@ -108,19 +135,6 @@
  
 \begin{center}
 \includegraphics[scale=0.3]{img/unit_502b_counterexample.png}
-\end{center}
- 
- 
-\section{What does ‘→’ mean?}
- 
-\emph{Reading:} §7.1
- 
-Assuming that the rules of Fitch are such that it is impossible to prove an argument which is not logically valid, the truth table for → is fixed if we accept →Elim and →Intro.
- 
-How do the rules of proof for → fix its truth table?
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_700_rule_to_tt.png}
 \end{center}
  
  
@@ -146,25 +160,7 @@ How do the rules of proof for → fix its truth table?
 \includegraphics[scale=0.3]{img/rule_biconditional_intro.png}
 \end{center}
  
- 
-\section{What does ∀ mean?}
- 
-\emph{Reading:} §9.4
- 
-We give the meaning of ∀ by specifying what it takes for a sentence containing ∀ to be true:
- 
-\begin{enumerate}
- 
-\item Give every object a name.
- 
-\item For each name in turn, create a new sentence like this: delete the quantifier and replace all instances of the variable it binds with that name.
- 
-\item If ALL of the new sentences are true, so is the original sentence.
- 
-\end{enumerate}
- 
- 
- 
+\columnbreak
 \section{Does ‘if’ mean what ‘→’ means?}
  
 \emph{Reading:} §7.3
@@ -186,49 +182,7 @@ The English argument isn't valid; the FOL argument is valid; therefore `if' can'
 \includegraphics[scale=0.3]{img/if_aint_arrow.png}
 \end{center}
 \end{minipage}
- 
- 
- 
-\section{Translation with Quantifiers}
- 
-\emph{Reading:} §9.5, §9.6
- 
-\begin{minipage}{\columnwidth}
- 
-All discordians weep:
- 
-∀x( Dscrdn(x) → Wps(x) )
- 
-\end{minipage}
- 
-\begin{minipage}{\columnwidth}
- 
-All \textbf{French} discordians weep:
- 
-∀x( ( \textbf{Frnch(x) ∧} Dscrdn(x) ) → Wps(x) )
- 
-\end{minipage}
- 
-\begin{minipage}{\columnwidth}
- 
-All French discordians weep \textbf{and wail}:
- 
-∀x( ( Frnch(x) ∧ Dscrdn(x) ) → ( Wps(x) \textbf{ ∧ Wls(x)} ) )
- 
-\end{minipage}
- 
-\begin{minipage}{\columnwidth}
- 
-All French discordians weep and wail \textbf{except Gillian Deleude}:
- 
-∀x( ( Frnch(x) ∧ Dscrdn(x) \textbf{∧ ¬(x=a)} ) → ( Wps(x) ∧ Wls(x) ) )
- 
-\end{minipage}
- 
-\vfill
-
-
-%--- end paste
+ %--- end paste
 %--------------- 
  
 

@@ -18,7 +18,78 @@ sequence: 440
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_501/slide-005.jpeg'})
-  .notes 
+  .notes: :t()
+    You may remember the two basic forms of quantified sentences we've been considering so far.
+    These are quite limiting.  What happens if we want to say, not that everything is broken, but that everything of mine is broken.
+    And how could we say, not just that something is broken, but that a red square is broken (say)?
+  +reset
+  //- spacer
+  div(style="margin-top:100px;") &nbsp;
+  .slide
+    .container_12
+      .grid_6
+        .example3
+          .step2.hide
+            p All 
+              span.circles circles
+              span  are 
+              span.broken2 broken.
+          .step3.hide
+            p 
+              span ∀x( 
+              span.circles Circle(x)
+              span   → 
+              span.broken2 Broken(x)
+              span  )
+      .grid_6
+        .example1
+          p A 
+            span.square square
+            span  is 
+            span.broken broken
+          .slide
+            p Something is 
+              span.square square
+              span  and  
+              span.broken broken
+          .slide 
+            p ∃
+              span.variable x
+              span  ( 
+              span.square Square(
+              span.variable x
+              span ) 
+              span  ∧ 
+              span.broken Broken(
+              span.variable x
+              span )
+              span )
+          +highlight('.square')
+          +highlight('.broken','yellow')
+          .variables
+            +unhighlight_('.square')
+            +unhighlight_('.broken','yellow')
+            +invert('.variable','')
+            .notes These are variables.  I have a terrible conscience about variables because I've been talking about them without explaining what they are.
+            
+        +blur2('.example1')
+        .example2
+          p.slide A red square is broken
+          p.slide Something is red and square and broken
+          p.slide ∃x ( 
+            span.red Red(x) 
+            span  ∧ 
+            span.square2 Square(x) 
+            span  ∧ 
+            span.broken2 Broken(x)
+            span  )
+          +highlight('.red','teal')
+    +blur2('.example2')
+    +show('.step2')
+    +show('.step3')
+    +highlight('.circles')
+    +highlight('.broken2','yellow')
+    
 
 +slide({bkg:'unit_501/slide-006.jpeg'})
   .notes 

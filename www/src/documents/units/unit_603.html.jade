@@ -15,34 +15,52 @@ include ../../../fragments/unit_mixins
 include ../../../fragments/logic_mixins
 
 +slide_middle
+  .notes I was asked, What is the difference between putting the negation outside of parenthesis and putting into individual brackets?
+  .notes Let's have a look.
   p.center ‘What is the difference between putting the negation outside of parenthesis and putting into individual brackets?’
 
 .slide
   .img.handout(data-src='img/tt_unit_603.png')
   .words
     .container_12: .grid_12
+      .notes Consider this sentence, 'Either the music has stopped or I am dead.'
       p Either the music has stopped or I am dead.
       p.indent.slide.nodim A ∨ B
+      .notes Let's suppose we can represent it in FOL as A ∨ B.
       .slide.nodim
+        .notes What happens if you deny the whole sentence?  
         p.hidelater.em-above That’s not true.
         p.indent.slide.nodim
+          .notes To capture this denial in FOL, we put negation outside the brackets.
           span.negation ¬
           span (A ∨ B)
       .slide.nodim
+        .notes Now consider this alternative sentence, 'Either the music has not stopped or I am not dead.'
         p.em-above Either the music has not stopped or I am not dead.
         p.indent.slide.nodim
+          .notes To capture this in FOL, we put negation inside the brackets.
           span.negation ¬
           span A ∨ 
           span.negation ¬
           span B
       +highlight('.negation','pink')
+      .notes So now we have a sentence with negation outside the brackets and another one with negation inside the brackets.
+      .notes And, thinking about the English sentences, you can perhaps see that if we put negation inside the brackets we are not denying the sentence, just asserting a different disjunction.
+      .notes Let's see how these two differ by constructing truth-tables.
+      
   #truth-tables.slide
+    .notes In constructing truth-tables we start with the truth table for disjunction (∨).
     .bottom-white.invert
       .center.hem-above
-          mixin truth-table(['A ∨ B','¬(A ∨ B)','¬A','¬B','¬A ∨ ¬B'],[['T','T','T','F'],['F','F','F','T'],['F','F','T','T'],['F','T','F','T'],['F','T','T','T']])
-    mixin show(['#truth-tables .result-col-2'])
-    mixin show(['#truth-tables .result-col-3','#truth-tables .result-col-4'])
-    mixin show(['#truth-tables .result-col-5'])
-    mixin hide(['#truth-tables .result-col-1','#truth-tables .result-col-3','#truth-tables .result-col-4'])
+          +truth-table(['A ∨ B','¬(A ∨ B)','¬A','¬B','¬A ∨ ¬B'],[['T','T','T','F'],['F','F','F','T'],['F','F','T','T'],['F','T','F','T'],['F','T','T','T']])
+    +show(['#truth-tables .result-col-2'])
+    .notes To get the truth table for ¬(A ∨ B) we merely need to flip the truth-values of the truth-table for (A ∨ B).
+    +show(['#truth-tables .result-col-3','#truth-tables .result-col-4'])
+    .notes By contrast, if we want the truth-table for ¬A ∨ ¬B, we need to start with truth-tables for ¬A and for ¬B.
+    +show(['#truth-tables .result-col-5'])
+    .notes We then combine these two truth tables using disjunction -- so it's True whenever  ¬A is True or ¬B is True, and False otherwise.
+    +hide(['#truth-tables .result-col-1','#truth-tables .result-col-3','#truth-tables .result-col-4'])
+    .notes Now focus just on the truth tables for our two sentences, one with negation inside the brackets the other with negation outside the brackets
     mixin tt-highlight-rows([2,3], '#truth-tables')
-    .notes So the truth of the first denial sentence, ¬(A ∨ B), guarantees that you're alive (B = 'I am dead'), whereas the truth of the second denial, ¬A ∨ ¬B, doesn't entail that you're alive.
+    .notes The truth of the first denial sentence, ¬(A ∨ B), guarantees that you're alive (B = 'I am dead'), whereas the truth of the second denial, ¬A ∨ ¬B, doesn't entail that you're alive.
+    .notes Sometimes students decide they'll ignore brackets and hope for the best.  But the difference between putting the negation outside of parenthesis and putting into individual brackets is a matter of life or death.
