@@ -73,7 +73,49 @@
 Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.
  
  
-
+ 
+\section{Watch Out, Here Come Multiple Quantifiers}
+ 
+\emph{Reading:} §11.1
+ 
+ 
+ 
+\section{Something Is Above Something}
+ 
+\emph{Reading:} §11.1
+ 
+\begin{minipage}{\columnwidth}
+ 
+Something is above something:
+ 
+\hspace{3mm} ∃x ∃y Above(x,y)
+ 
+\end{minipage}
+ 
+ 
+ 
+\section{There Is Exactly One}
+ 
+There is one creator (at least one, maybe more).
+ 
+\hspace{3mm} ∃x Creator(x)
+ 
+Ahura Mazda is the one and only creator.
+ 
+\hspace{3mm} Creator(a) ∧ ∀x( Creator(x) → x=a )
+ 
+All squares are broken.
+ 
+\hspace{3mm} ∀x( Sqr(x) → Brkn(x) )
+ 
+There is one and only one creator.
+ 
+\hspace{3mm} ∃y( Creator(y) ∧ ∀x( Creator(x) → x=y ) )
+ 
+\hspace{3mm} or:
+ 
+\hspace{3mm} ∃y ∀x( Creator(x) ↔ x=y )
+ 
  
  
 \section{∃Intro}
@@ -82,9 +124,6 @@ Readings refer to sections of the course textbook, \emph{Language, Proof and Log
  
 \begin{center}
 \includegraphics[scale=0.3]{img/rule_disjunction_intro.png}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_801_proof.png}
 \end{center}
  
  
@@ -156,7 +195,7 @@ All French discordians weep and wail \textbf{except Gillian Deleude}:
 Underlining shows the scope of the quantifiers:
  
 \begin{center}
-\includegraphics[scale=0.3]{img/scope_quantifiers.png}
+\includegraphics[scale=0.23]{img/scope_quantifiers.png}
 \end{center}
 \end{minipage}
  
@@ -167,7 +206,7 @@ Underlining shows the scope of the quantifiers:
 \emph{Reading:} §12.1, §12.3, §13.1
  
 \begin{center}
-\includegraphics[scale=0.3]{img/rule_universal_intro.png}
+\includegraphics[scale=0.23]{img/rule_universal_intro.png}
 \end{center}
 \begin{center}
 \includegraphics[scale=0.3]{img/proof_universal_intro.png}
@@ -192,46 +231,17 @@ Why is this proof incorrect?
 \end{center}
  
  
-\section{Something Is Above Something}
+\section{Two Things Are Broken}
  
-\emph{Reading:} §11.1
+\emph{Reading:} §14.1
  
-\begin{minipage}{\columnwidth}
+To translate sentences involving number into FOL, use identity. For example,
  
-Something is above something:
+`Two things are broken' might be translated as:
  
-\hspace{3mm} ∃x ∃y Above(x,y)
- 
-\end{minipage}
- 
- 
- 
-\section{There Is Exactly One}
- 
-There is one creator (at least one, maybe more).
- 
-\hspace{3mm} ∃x Creator(x)
- 
-Ahura Mazda is the one and only creator.
- 
-\hspace{3mm} Creator(a) ∧ ∀x( Creator(x) → x=a )
- 
-All squares are broken.
- 
-\hspace{3mm} ∀x( Sqr(x) → Brkn(x) )
- 
-There is one and only one creator.
- 
-\hspace{3mm} ∃y( Creator(y) ∧ ∀x( Creator(x) → x=y ) )
- 
-\hspace{3mm} or:
- 
-\hspace{3mm} ∃y ∀x( Creator(x) ↔ x=y )
- 
- 
+∃x ∃y ( Broken(x) ∧ Broken(y) ∧ ¬(x=y) )
  
 \vfill
-
 
 %--- end paste
 %--------------- 

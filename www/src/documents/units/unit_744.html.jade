@@ -12,18 +12,58 @@ exercises_fast: []
 sequence: 630
 ---
 
-include ../../../fragments/slide_mixins
+include ../../../fragments/unit_mixins
 
 //- first display associated images
-mixin display_images_as_slides(document)
++slide({bkg:'unit_744/slide-005.jpeg'})
+  .notes: :t()
+    Let me give you a brief history of our engagement with quantification.
+    We started with the simplest case.
+
++slide({bkg:'unit_744/slide-006.jpeg'})
+  .notes: :t()
+    This sort of thing is great if you're a poet, but not much use otherwise.
+
++slide({bkg:'unit_744/slide-007.jpeg'})
+  .notes: :t()
+    Even Aristotle knew way, way back before the internet that it was necessary, in order to do useful logic, 
+
++slide({bkg:'unit_744/slide-008.jpeg'})
+  .notes: :t()
+    to have more sophisticated forms of expression in our formal language.
+
++slide({bkg:'unit_744/slide-009.jpeg'})
+  .notes: :t()
+    And this was great, I mean people were really happy with this for like, 2000 years or more, 
+
++slide({bkg:'unit_744/slide-010.jpeg'})
+  .notes: :t()
+    I think that, logically speaking, they were easily entertained---quite unlike you and me, of course.
+
++slide({bkg:'unit_744/slide-011.jpeg'})
+  .notes: :t()
+    They were content to say some squares are blue or whatever,
+
++slide({bkg:'unit_744/slide-012.jpeg'})
+  .notes: :t()
+    and you know they spent quite a long time sorting out the logic of sentences like these.
+
++slide({bkg:'unit_744/slide-013.jpeg'})
+  .notes: :t()
+    But the thing about these sentences is that they involve just one quantifier whereas, if you think about it, ...
+
 
 //- now add some content after
 section.slide
   .words: .container_12: .grid_12
+    .notes ... many ordinary senetnces are not like this.
     p.middle.center  
       span.first-q Every
       span  time I go to the dentist  
       span.second-q someone
       |  dies.
-    mixin invert(['.second-q'])
-    mixin invert(['.first-q'])
+    +invert(['.second-q'])
+    .notes Many ordinary sentences, like this line from Phoebe in friends, involve not just one quantifier ...
+    +invert(['.first-q'])
+    .notes ... but two.  One of the big advances in modern logic is that it provides us with tools powerful enough to deal with sentences involving arbitrary combinations of quantifiers.
+    .notes This is one main topic for the next lectures (another is proofs involving quantifiers).

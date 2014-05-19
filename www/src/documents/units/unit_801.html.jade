@@ -18,131 +18,139 @@ sequence: 550
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_801/slide-165.jpeg'})
-  .notes 
+  .notes Although this is about the rule ∃Intro, I want to start by revising universal elimination.
+  .notes Consider this argument.  Actually it's not true that puffins have yellow beaks.
   .handout.img(data-src='img/rule_disjunction_intro.png')
   .handout.img(data-src='img/unit_801_proof.png')
   
 
 +slide({bkg:'unit_801/slide-166.jpeg'})
-  .notes 
+  .notes Well, there might be a bit of yellow, 
 
 +slide({bkg:'unit_801/slide-167.jpeg'})
-  .notes 
+  .notes but that's not what I'd call a yellow beak.
 
 +slide({bkg:'unit_801/slide-168.jpeg'})
-  .notes 
+  .notes Anyway, back to the argument.  How can we formalise it?
 
 +slide({bkg:'unit_801/slide-169.jpeg'})
-  .notes 
+  .notes One approach would be to use sentence letters.  Nothing wrong with this
 
 +slide({bkg:'unit_801/slide-170.jpeg'})
-  .notes 
+  .notes except that it doesn't capture the structure in virtue of which the argument is valid.  There's a counterexample to this form.
 
 +slide({bkg:'unit_801/slide-171.jpeg'})
-  .notes 
+  .notes Here it is.  So how can we do better?
 
 +slide({bkg:'unit_801/slide-172.jpeg'})
-  .notes 
+  .notes Start with the conclusion.
 
 +slide({bkg:'unit_801/slide-173.jpeg'})
-  .notes 
+  .notes We need a name and a predicate.
 
 +slide({bkg:'unit_801/slide-174.jpeg'})
-  .notes 
+  .notes These allow us to write the conclusion as 'YelBk(a)'.  Easy, no?  (It's supposed to be easy, we're just revising stuff.)
 
 +slide({bkg:'unit_801/slide-175.jpeg'})
-  .notes 
+  .notes What about the second premise?
 
 +slide({bkg:'unit_801/slide-176.jpeg'})
-  .notes 
+  .notes For this we need another predicate.
 
 +slide({bkg:'unit_801/slide-177.jpeg'})
-  .notes 
+  .notes And then we can write this in FOL as 'Puf(a)', Ayesha is a Puffin
 
 +slide({bkg:'unit_801/slide-178.jpeg'})
-  .notes 
+  .notes Finally, we have to formalise the first premise.  How?
 
 +slide({bkg:'unit_801/slide-179.jpeg'})
-  .notes 
+  .notes Well you know that, for universal sentences, we're always going to work from this example about all Fs are Gs.
 
 +slide({bkg:'unit_801/slide-180.jpeg'})
-  .notes 
+  .notes So, well you know how it goes by now I hope.
 
 +slide({bkg:'unit_801/slide-181.jpeg'})
-  .notes 
+  .notes Now we have the argument translated into FOL in such a way that the translation is logically valid too.  Can we prove it?
 
 +slide({bkg:'unit_801/slide-182.jpeg'})
-  .notes 
+  .notes Yes, we can.
 
 +slide({bkg:'unit_801/slide-183.jpeg'})
-  .notes 
+  .notes To this end, we need the rule we looked at at the end of last lecture, universal elim.
 
 +slide({bkg:'unit_801/slide-184.jpeg'})
-  .notes 
+  .notes This allows us to infer that what is true of all things is true of Ayehsa in particular.
 
 +slide({bkg:'unit_801/slide-185.jpeg'})
-  .notes 
+  .notes In English, If she's a puffin then she has a yellow beak.
 
 +slide({bkg:'unit_801/slide-186.jpeg'})
-  .notes 
+  .notes Of course we have to cite the rule we're using and the line we're applying it to.
 
 +slide({bkg:'unit_801/slide-187.jpeg'})
-  .notes 
+  .notes So you remember how universal-elim goes.  We start with a universally quantified sentence ...
 
 +slide({bkg:'unit_801/slide-188.jpeg'})
-  .notes 
+  .notes ... universal something ...
 
 +slide({bkg:'unit_801/slide-189.jpeg'})
-  .notes 
+  .notes ... and we add the something to our proof, replacing the variable with whatever name we like.
 
 +slide({bkg:'unit_801/slide-190.jpeg'})
-  .notes 
+  .notes Meraviglioso
 
 +slide({bkg:'unit_801/slide-191.jpeg'})
-  .notes 
+  .notes Now we have just what we need to get to the conclusion.  But what's the rule and what lines should we cite?
 
 +slide({bkg:'unit_801/slide-192.jpeg'})
-  .notes 
+  .notes It's arrow-elim and the lines we should cite are 2 and 3.
 
 +slide({bkg:'unit_801/slide-193.jpeg'})
-  .notes 
+  .notes So far so good, ...
 
 +slide({bkg:'unit_801/slide-194.jpeg'})
-  .notes 
+  .notes now for existential elim
 
 +slide({bkg:'unit_801/slide-195.jpeg'})
-  .notes 
+  .notes Here's some English
 
 +slide({bkg:'unit_801/slide-196.jpeg'})
-  .notes 
+  .notes It's clear, I suppose, how we translate the premise.  But what about the conclusion?
 
 +slide({bkg:'unit_801/slide-197.jpeg'})
-  .notes 
+  .notes Well we're talking about something so we're going to need the existential quantifier.
+  .notes But how can we prove this argument?
 
 +slide({bkg:'unit_801/slide-198.jpeg'})
-  .notes 
+  .notes Well, that's just what the rule existential-intro is made for.
 
 +slide({bkg:'unit_801/slide-199.jpeg'})
-  .notes 
+  .notes You have a statement about some named person, in this case about Ayesha.
 
 +slide({bkg:'unit_801/slide-200.jpeg'})
-  .notes 
+  .notes: :t()
+    You remove the name and replace it with a variable (here I've used x as the variable, 
+    but you can use y or z or any variable you like), 
+    and add an existential quantifier to the front.
 
 +slide({bkg:'unit_801/slide-201.jpeg'})
-  .notes 
+  .notes Of course we have to cite the rule and the line referenced, as always.
 
 +slide({bkg:'unit_801/slide-202.jpeg'})
-  .notes 
+  .notes And that's it.
 
 +slide({bkg:'unit_801/slide-203.jpeg'})
-  .notes 
+  .notes Now the premise of this argument is the conclusion of the argument we proved just a moment ago.
 
 +slide({bkg:'unit_801/slide-204.jpeg'})
-  .notes 
+  .notes So we can join the two arguments together to make one big one.
 
 +slide({bkg:'unit_801/slide-205.jpeg'})
-  .notes 
+  .notes Look, these premises allow us to prove this conclusion.
 
 +slide({bkg:'unit_801/slide-206.jpeg'})
-  .notes 
+  .notes: :t()
+    I know this maybe isn't the most exciting thing ever.
+    I'm just showing you so you can see how to get from universal to existential.
+    In case you ever need to.
 

@@ -30,7 +30,7 @@ include ../../../fragments/unit_mixins
   .preliminaries(style="z-index:-20;position:relative;")
     p There is one creator 
       span.slide (at least one, maybe more).
-    p.indent ∃x Creator(x)
+    p.indent.slide ∃x Creator(x)
   .slide.nodim.preliminaries
     p.em-above
         span.brian-to-exists Ahura Mazda
@@ -67,17 +67,23 @@ include ../../../fragments/unit_mixins
       +highlight('.brian-to-exists','yellow')
       +highlight('.brian','yellow')
       p.indent.slide.nodim
-        span.step2.bkg-words-highlight-teal.hide ∃y( 
+        span.step2.existential.bkg-words-highlight-yellow.hide ∃y( 
         span Creator(
         span.var-y y
-        span ) ∧ ∀x( Creator(x) → x=
+        span ) ∧ 
+        span.universal ∀x
+        span ( Creator(x) → x=
         span.var-y y
         span  ) 
         span.step2.hide )
         +highlight('.var-y','yellow')
         +steps(2)
-  //- *note another way of expressing the same proposition (these are logically equivalent)
+  +unhighlight-all_('.brian-to-exists, .brian, .step2, .var-y')
+  +invert('.existential, .universal')
+  .notes Look, two quantifiers.  But not just two quantifiers, one is existential and the other is universal.  Mixed quantifiers!
+  +uninvert('.existential, .universal')
   .slide.nodim
+    .notes Here's another, shorter way of expressing the same proposition (these are logically equivalent)
     .clever-alternative
         p or:
         p.indent ∃y( ∀x( Creator(x) 
@@ -85,7 +91,6 @@ include ../../../fragments/unit_mixins
           span  x=y ) )
   +highlight('.log-equiv','lime')
   +blur2_('.clever-alternative, .preliminaries')
-  +unhighlight-all_('.brian-to-exists, .brian, .step2, .var-y')
   +highlight-row('.the-solution','grey')
   //- exercise to check you've got it
   .slide

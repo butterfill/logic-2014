@@ -95,6 +95,7 @@ mixin slides_from_img(filenames)
       img.bkg.nodim(src="/img/#{filename}")
 
 //- create a sequence of slides from images in a folder
+//- nb: this will work *only* if img files for unit are in files/ rather than raw/ directory!
 mixin slides_from_img_folder(folder_name)
   each f in getFilesAtPath('img/'+folder_name+'/',[{basename:1}]).toJSON()
     section.slide

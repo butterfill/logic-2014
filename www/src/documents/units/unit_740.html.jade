@@ -17,7 +17,7 @@ sequence: 640
 include ../../../fragments/unit_mixins
 
 +slide({bkg:'unit_740/slide-038.jpeg'})
-  .notes 
+  .notes So how can we start thinking about sentences with multiple quantifiers in our formal language, FOL?
   //- handout 
   .handout \begin{minipage}{\columnwidth}
   .handout Something is above something:
@@ -25,83 +25,110 @@ include ../../../fragments/unit_mixins
   .handout \end{minipage}
 
 +slide({bkg:'unit_740/slide-039.jpeg'})
-  .notes 
+  .notes Here's a very simple possible situation in which b is above a.
 
 +slide({bkg:'unit_740/slide-040.jpeg'})
-  .notes 
+  .notes Now suppose that we lost the name a.
 
 +slide({bkg:'unit_740/slide-041.jpeg'})
-  .notes 
+  .notes: :t()
+    Actually, we didn't really lose it.  There were some terrorists, the logical equivalent of Hezbollah,
+    (here they are pictured in Southern Lebanon looking all military and disciplined)
+    and they were taking a break from doing their good work for Bashar Assad in his war on Syria
+    and Bashar had given them some cool weapons 
+    and they were like, let's destroy the name a.
 
 +slide({bkg:'unit_740/slide-042.jpeg'})
-  .notes 
+  .notes And so they did.
 
 +slide({bkg:'unit_740/slide-043.jpeg'})
-  .notes 
+  .notes So we can't say b is above a anymore.  We can only say that b is above something.
 
 +slide({bkg:'unit_740/slide-044.jpeg'})
-  .notes 
+  .notes Luckily we know how to do this.  We just drop the a, replace it with a variable (in this case, y), and add an existential quantifier.
+  .notes Why existential?  Because we're talking about something, not everything.
 
 +slide({bkg:'unit_740/slide-045.jpeg'})
-  .notes 
+  .notes But look what happened next.
 
 +slide({bkg:'unit_740/slide-046.jpeg'})
-  .notes 
+  .notes This time is wasn't Hezbollah.
+  .notes: :t()
+    It was my terrible twins, just back from training with the taliban. 
+    (You may laugh but it's just very hard to get quality childcare without religion these days.)
+    
 
 +slide({bkg:'unit_740/slide-047.jpeg'})
-  .notes 
+  .notes Yes, and they destroyed the name b.
 
 +slide({bkg:'unit_740/slide-048.jpeg'})
-  .notes 
+  .notes So now we can't name that object either, we can only say that something is above something.
 
 +slide({bkg:'unit_740/slide-049.jpeg'})
-  .notes 
+  .notes But, look, we already know how to do this.  We just remove the name b from the sentence we last had, replace it with a variable (in this case, x) and add an existential quantifer out the front.
 
 +slide({bkg:'unit_740/slide-050.jpeg'})
-  .notes 
-
+  .notes Now we've got a sentence with multiple quanifiers without doing anything new, just replacing names with quantifiers.
+  .notes Let's consider translation the other way, from FOL back to English.
+  
 +slide({bkg:'unit_740/slide-051.jpeg'})
-  .notes 
+  .notes Do we understand this sentence of FOL?
+  .notes Well, is it true in this possible situation?
 
 +slide({bkg:'unit_740/slide-052.jpeg'})
-  .notes 
+  .notes And is it true in this possible situation?  How do we know?
 
 +slide({bkg:'unit_740/slide-053.jpeg'})
-  .notes 
+  .notes Take this possible situation first.
 
 +slide({bkg:'unit_740/slide-054.jpeg'})
-  .notes 
+  .notes There is a procedure for determining the truth or falsity of an existentially quantified sentence.
+  .notes We first give every object a name.
+  .notes In this  possible situation there are two objects so there we assign two names.
+  .notes (Look, here are a and b again.   I guess they weren't destroyed forever.  Maybe we had a little war on terror and got them back.)
 
 +slide({bkg:'unit_740/slide-055.jpeg'})
-  .notes 
+  .notes Then we make new sentences by removing an existential quantifier and replacing the variable with each name in turn.
+  .notes Look here: two objects so two names so two sentences.
 
 +slide({bkg:'unit_740/slide-056.jpeg'})
-  .notes 
+  .notes Now if either of these are true, ...
 
 +slide({bkg:'unit_740/slide-057.jpeg'})
-  .notes 
+  .notes ... then so is the sentence we started with, ∃x ∃y Above(x,y).
 
 +slide({bkg:'unit_740/slide-058.jpeg'})
-  .notes 
+  .notes But what does it take for one of these to be true?
+  .notes Consider the second.
+  .notes To work out whether it's true  we have to apply the same procedure again.
+  .notes The first step is to give everything a name, but since everything already has a name there's nothing we need to do.
+  .notes Then we make new sentences by removing an existential quantifier and replacing the variable with each name in turn.
+  .notes This gives us these new sentences, Above(b,a) and Above(b,b)
+  .notes Now if either of these are true, then so is the sentence we started with, ∃y Above(b,y).
 
 +slide({bkg:'unit_740/slide-059.jpeg'})
-  .notes 
+  .notes But the first of these is true!
 
 +slide({bkg:'unit_740/slide-060.jpeg'})
-  .notes 
+  .notes This tells us that ∃y Above(b,y) is true.
 
 +slide({bkg:'unit_740/slide-061.jpeg'})
-  .notes 
+  .notes And that tells us that ∃x ∃y Above(x,y) is true as well.
+  .notes This is how we can understand sentences of FOL involving multiple quantifiers.
+  .notes To work out whether they are true, we apply the procedure for determining the truth of an existentially quantified statement removing just one quantifer.
+  .notes And we keep applying these procedures until not quantifiers are left.
+  .notes This is much like doing complex truth-tables.
+  .notes Magic, no?
 
 +slide({bkg:'unit_740/slide-062.jpeg'})
-  .notes 
+  .notes If you've been following along you should be able to do the same in any other possible situation like this one.
 
 +slide({bkg:'unit_740/slide-063.jpeg'})
-  .notes 
+  .notes The procedure has three steps.  First ... well, you know what the procedure is.
 
 +slide({bkg:'unit_740/slide-064.jpeg'})
-  .notes 
+  .notes You do things ...
 
 +slide({bkg:'unit_740/slide-065.jpeg'})
-  .notes 
+  .notes ... and you can see whether the sentence is true or false.
 
