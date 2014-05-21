@@ -94,6 +94,27 @@ Other sentences to translate:
  
  
  
+\section{Variables}
+ 
+Names : a, b, c, …
+ 
+Variables : x, y, z, w, …
+ 
+Variables are for saying several things about one thing even without specifying which thing it is
+ 
+NB: `Some x is a horse and x is dead' ain't English.
+ 
+ \columnbreak
+ 
+\section{Loving and Being Loved}
+ 
+\emph{Reading:} §11.2, §11.3
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_755_loved.png}
+\end{center}
+ 
+ 
 \section{There Does Not Exist}
  
 Something is not dead:
@@ -120,6 +141,26 @@ Not everything is broken:
 \end{center}
 \begin{center}
 \includegraphics[scale=0.3]{img/unit_605_counterexample.png}
+\end{center}
+ 
+ 
+\section{Quantifier Equivalences: \\ ¬∀x Created(x) $\leftmodels\models$ ∃x ¬Created(x)}
+ 
+\emph{Reading:} §10.1, §10.3, §10.4
+ 
+ 
+ 
+\section{Proof Example: \\ ∃x Dead(x) $\vdash$ ¬∀x¬ Dead(x).}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_825_proof.png}
+\end{center}
+ 
+ 
+\section{Proof Example: \\ ¬∀x Dead(x) $\vdash$ ∃x¬ Dead(x).}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_826_proof.png}
 \end{center}
  
  
@@ -151,35 +192,6 @@ Not every person is dead.
  
  
  
-\section{Quantifier Equivalences: ¬∀x Created(x) $\leftmodels\models$ ∃x ¬Created(x)}
- 
-\emph{Reading:} §10.1, §10.3, §10.4
- 
- 
- 
-\section{Proof Example: ∃x Dead(x) $\vdash$ ¬∀x¬ Dead(x).}
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_825_proof.png}
-\end{center}
- 
- 
-\section{Proof Example: ¬∀x Dead(x) $\vdash$ ∃x¬ Dead(x).}
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_826_proof.png}
-\end{center}
- 
- 
-\section{Loving and Being Loved}
- 
-\emph{Reading:} §11.2, §11.3
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_755_loved.png}
-\end{center}
- 
- 
 \section{The End Is Near}
  
 \emph{Reading:} §14.3
@@ -187,27 +199,18 @@ Not every person is dead.
 ‘The’ can be a quantifier, e.g. ‘the square is broken’. How to formalise it?
  
 The square is broken
- 
+\\ 
 $\leftmodels\models$ There is exactly one square and it is broken
  
-$\leftmodels\models$ There is at most one square and there is at least one square and it is broken
+Recall that we can translate `There is exactly one square' as:
  
-$\leftmodels\models$ There is at most one square and there is at least one square and all squares are broken
+\hspace{5mm} ∃x ( Square(x) ∧ ∀y ( Square(y) → x=y ) )
  
-$\leftmodels\models$ ¬ ∃x ∃y ( Square(x) ∧ Square(y) ∧ ¬x=y )
+So `There is exactly one square and it's broken':
  
-\hspace{5mm} ∧ ∃x Square(x)
- 
-\hspace{5mm} ∧ ∀x ( Square(x) → Broken(x) )
- 
-Which shorter sentences are equivalent to this?
- 
-∃x ( Square(x) ∧ ∀y ( Square(y) → y=x ) ∧ Broken(x) )
- 
-∃x ( ∀y ( Square(y) ↔ y=x ) ∧ Broken(x) )
+∃x ( Sqr(x) ∧ ∀y ( Sqr(y) → x=y ) ∧ Broken(x) )
  
 \vfill
-
 
 %--- end paste
 %--------------- 
