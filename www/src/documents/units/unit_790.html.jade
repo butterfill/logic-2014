@@ -31,57 +31,78 @@ include ../../../fragments/unit_mixins
   .handout ∃x ( Square(x) ∧ ∀y ( Square(y) → y=x ) ∧ Broken(x) )
   .handout ∃x ( ∀y ( Square(y) ↔ y=x ) ∧ Broken(x) )
 
-+slide({bkg:'unit_790/slide-134.jpeg'})
-  .notes 
+  .slide
+    p(style='margin-top:150px;') There is an end
+      span.hide.step2 , and all ends are this end
+      span.hide.step4 , and it is near.
+  .slide 
+    p ∃x 
+      span.hide.step3  ( 
+      span End(x) 
+      span.hide.step3  ∧ ∀y ( End(y) → x=y ) 
+      span.hide.step5  ∧ Near(x) 
+      span.hide.step3  ) 
+  +show('.step2')
+  +show('.step3')
+  +invert('.step2, .step3')
+  +uninvert('.step2, .step3')
+  +show('.step4')
+  +show('.step5')
+  +invert('.step4, .step5')
+  +uninvert('.step4, .step5')
 
-+slide({bkg:'unit_790/slide-135.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-136.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-137.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-138.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-139.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-140.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-141.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-142.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-143.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-144.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-145.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-146.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-147.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-148.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-149.jpeg'})
-  .notes 
-
-+slide({bkg:'unit_790/slide-150.jpeg'})
-  .notes 
-
+//- 
+//- +slide({bkg:'unit_790/slide-134.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-135.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-136.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-137.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-138.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-139.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-140.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-141.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-142.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-143.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-144.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-145.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-146.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-147.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-148.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-149.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-150.jpeg'})
+//-   .notes 
+//- 
 +slide({bkg:'unit_790/slide-151.jpeg'})
   .notes 
 
