@@ -16,21 +16,24 @@ include ../../fragments/unit_mixins
 
 +title_slide({document:document, images:images})
 
-//- why logic
-+insert_unit({unit:'011', title_slide:false, images:images})
-
 //- recap validity
-+insert_unit({unit:'05', title_slide:true, images:images})
+//- removed -- necessary?
+//- +insert_unit({unit:'05', title_slide:false, images:images})
 
 //- recap connectives via formalising pigs argument
-+insert_unit({unit:'135', title_slide:true, images:images})
++insert_unit({unit:'135', title_slide:false, images:images})
 
 //- reply to student email (keep anonymous)
 //- +insert_unit({unit:'073', title_slide:false, images:images})
 
 
 //- unit: logically valid with truth tables
-+insert_unit({unit:'14', title_slide:true, images:images})
++insert_unit({unit:'14', title_slide:false, images:images})
+
+//- why logic
++insert_unit({unit:'011', title_slide:true, images:images})
+
+
 
 
 //- complex truth tables
@@ -62,9 +65,9 @@ section.slide#what_to_read
 //- section.slide
 //- p.middle.center No lecture on Tuesday 30th April.
 
-//- unit: formal proof
+//- unit: formal proof (skipped in 2014-5)
 +insert_unit({unit:'211', title_slide:true, images:images})
-//- not done in 2013-4
+//- not done in 2013-4 or 2014-5
   +insert_unit({unit:'213', title_slide:false, images:images})
   +insert_unit({unit:'21', title_slide:false, images:images})
 
