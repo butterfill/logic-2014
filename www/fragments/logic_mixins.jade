@@ -80,6 +80,10 @@ mixin tt-highlight-rows(rows, container)
   each row in rows
     .slide.anim-continue.anim-addclass(data-what="#{container ? container : ''} .truth-table .row-#{row} .highlight-hook", data-class="bkg-grey-row")
   mixin anim_end()
+mixin tt-unhighlight-rows(rows, container)
+  each row in rows
+    .slide.anim-continue.anim-removeclass(data-what="#{container ? container : ''} .truth-table .row-#{row} .highlight-hook", data-class="bkg-grey-row")
+  mixin anim_end()
 
 
 

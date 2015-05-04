@@ -41,6 +41,32 @@ include ../../../fragments/unit_mixins
               span   → 
               span.broken2 Broken(x)
               span  )
+        .example4
+          .step4.hide
+            p.em-above All 
+              span.idols idols
+              span  are 
+              span.equal dead.
+          .step5.hide
+            p 
+              span ∀x( 
+              span.idols Idols(x)
+              span   → 
+              span.dead Idols(x)
+              span  )
+        .example5
+          .step6.hide
+            p.em-above All 
+              span.who-wander who wander
+              span  are 
+              span.lost lost.
+          .step7.hide
+            p 
+              span ∀x( 
+              span.who-wander Wanderer(x)
+              span   → 
+              span.lost Lost(x)
+              span  )
       .grid_6
         .example1
           p A 
@@ -89,6 +115,16 @@ include ../../../fragments/unit_mixins
     +show('.step3')
     +highlight('.circles')
     +highlight('.broken2','yellow')
+    +blur2_('.example3')
+    +show('.step4')
+    +show('.step5')
+    +highlight('.idols')
+    +highlight('.dead', 'yellow')
+    +blur2_('.example4')
+    +show('.step6')
+    +show('.step7')
+    +highlight('.who-wander')
+    +highlight('.lost', 'yellow')
     
 
 +slide({bkg:'unit_501/slide-006.jpeg'})
