@@ -61,6 +61,11 @@ include ../../../fragments/slide_mixins
               div(style="margin-top:-0.25em;margin-left:1em;") ⫤⊨
               span.invert.bkg-words-highlight-white 7.
               div(style="margin-top:-1em;margin-left:0.5em;") ∃x(¬Square(x)) ∨ ∃x(Broken(x))
+          p
+            .step11.hide
+              div nb
+              div(style="margin-left:0.5em;margin-right:-12em;") ∀x(¬Square(x) ∨ Broken(x)) ⊭  ∀x(¬Square(x)) ∨ ∀x(Broken(x))
+              
       .grid_5.right-side
         .universal_arrow.center
           img.step2.hide(src='/img/world_01.png')
@@ -79,6 +84,7 @@ include ../../../fragments/slide_mixins
       mixin step(6, '#PAsdqT')
       mixin showremove(['#PAsdqT .right-side .existential_conjunction'],['#PAsdqT .right-side .universal_arrow'])
       mixin steps(7, 10, '#PAsdqT')
+      +show('.step11')
 
 
 a.deck-permalink(href='.', title='Permalink to this slide') #

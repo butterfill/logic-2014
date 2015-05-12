@@ -39,6 +39,18 @@ include ../../fragments/unit_mixins
 +insert_unit({unit:'281', title_slide:true, images:images})
 
 
++slide_middle
+  p.center Joint Action:
+  p.center Which forms of shared agency underpin our social nature?
+  p.center (Autumn Term)
+  p.center.em-above Social Cognition: 
+  p.center What makes others’ minds and actions intelligible to us?
+  p.center (Spring Term)
++slide_middle
+  p.center Origins of Mind: Philosophical Issues in Cognitive Development (PH357)
+  p.center (http://origins-of-mind.butterfill.com)
+
+
 //- postsecret quiz: rules of proof
 - each d in getCollection("documents").findAll({url:'/quizes/postsecret_03.html'},[{year:-1,sort_order:1}]).toJSON()
   mixin render_unit(d)

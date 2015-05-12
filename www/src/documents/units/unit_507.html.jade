@@ -2,7 +2,7 @@
 layout: 'deck_units' 
 title: 'Translation with Quantifiers'
 tags: ['translation']
-description: "Discusses how to translate 'Some persuasive arguments are not valid' and 'All French discordians weep and wail except Gillian Deleude' into first-order logic."
+description: "Discusses how to translate 'Some persuasive arguments are not valid' and 'All Lib. Dem. discordians weep and wail except Gillian Deleude' into first-order logic."
 depends: ['unit_503']
 book: ['9.5','9.6']
 sequence: 600
@@ -23,18 +23,18 @@ include ../../../fragments/slide_mixins
   .handout \end{minipage}
   
   .handout \begin{minipage}{\columnwidth}
-  .handout All \textbf{French} discordians weep:
-  .handout ∀x( ( \textbf{Frnch(x) ∧} Dscrdn(x) ) → Wps(x) )
+  .handout All \textbf{Lib. Dem.} discordians weep:
+  .handout ∀x( ( \textbf{LibDem(x) ∧} Dscrdn(x) ) → Wps(x) )
   .handout \end{minipage}
 
   .handout \begin{minipage}{\columnwidth}
-  .handout All French discordians weep \textbf{and wail}:
-  .handout ∀x( ( Frnch(x) ∧ Dscrdn(x) ) → ( Wps(x) \textbf{ ∧ Wls(x)} ) )
+  .handout All Lib. Dem. discordians weep \textbf{and wail}:
+  .handout ∀x( ( LibDem(x) ∧ Dscrdn(x) ) → ( Wps(x) \textbf{ ∧ Wls(x)} ) )
   .handout \end{minipage}
 
   .handout \begin{minipage}{\columnwidth}
-  .handout All French discordians weep and wail \textbf{except Gillian Deleude}:
-  .handout ∀x( ( Frnch(x) ∧ Dscrdn(x) \textbf{∧ ¬(x=a)} ) → ( Wps(x) ∧ Wls(x) ) )
+  .handout All Lib. Dem. discordians weep and wail \textbf{except Gillian Deleude}:
+  .handout ∀x( ( LibDem(x) ∧ Dscrdn(x) \textbf{∧ ¬(x=a)} ) → ( Wps(x) ∧ Wls(x) ) )
   .handout \end{minipage}
   
   .container_12
@@ -70,23 +70,23 @@ include ../../../fragments/slide_mixins
           .slide.anim-addclass(data-what=".universal-what",data-class="bkg-words-highlight-pink")
         .slide
           p.em-above All 
-            span.bkg-words-highlight-yellow French 
+            span.bkg-words-highlight-yellow Lib.Dem. 
             span discordians weep. 
           p.slide ∀x( (
-            span.bkg-words-highlight-yellow Frnch(x)
+            span.bkg-words-highlight-yellow LibDem(x)
             span ∧ Dscrdn(x) ) →  Wps(x) )
         .slide
-          p.em-above All French discordians weep 
+          p.em-above All Lib.Dem. discordians weep 
             span.bkg-words-highlight-yellow and wail.
-          p.slide ∀x( ( Frnch(x) ∧ Dscrdn(x) ) → 
+          p.slide ∀x( ( LibDem(x) ∧ Dscrdn(x) ) → 
             span.bkg-words-highlight-yellow ( 
             span Wps(x) 
             span.bkg-words-highlight-yellow ∧ Wls(x) ) 
             span )
         .slide
-          p.em-above All French discordians weep and wail 
+          p.em-above All Lib.Dem. discordians weep and wail 
             span.bkg-words-highlight-yellow except Gillian Deleude.
-          p.slide ∀x( ( Frnch(x) ∧ Dscrdn(x) 
+          p.slide ∀x( ( LibDem(x) ∧ Dscrdn(x) 
             span.bkg-words-highlight-yellow ∧ ¬(x=a) 
             span ) →  ( Wps(x) ∧ Wls(x) ) )
             
