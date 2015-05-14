@@ -14,13 +14,21 @@ include ../../fragments/unit_mixins
 
 +title_slide({document:document, images:images})
 
-
+//- 2014-5 cut quite a bit of material without updating handout
+//- this was because lecture 07 ran out of time
 
 //- **** Also missing is giving counterexamples to arguments involving quantifiers
 
+//- 2012-3 they answered this straight away
++insert_unit({unit:'227', title_slide:false, images:images})
+
+
+
+//- ∀Intro 
++insert_unit({unit:'570', title_slide:true, images:images})
 
 //- There Is a Store for Everything 
-+insert_unit({unit:'560', title_slide:false, images:images})
++insert_unit({unit:'560', title_slide:true, images:images})
 
 //- Variables
 +insert_unit({unit:'600', title_slide:true, images:images})
@@ -35,24 +43,27 @@ include ../../fragments/unit_mixins
 
 //- *might skip these?
 
+//- can do but no time in 2014-5
 //- There Does Not Exist
-+insert_unit({unit:'605', title_slide:true, images:images})
+// +insert_unit({unit:'605', title_slide:true, images:images})
 
 
-//- Quantifier Equivalences: ∀x Created(x) ⫤⊨ ¬∃x Created(x) (764)
-+insert_unit({unit:'764', title_slide:true, images:images})
 
 //- *may have to skip proof examples --- note that these follow directly from 764
 
+//- can do but no time in 2014-5
 //- Proof Example: ∃x Dead(x) ⊢ ¬∀x¬ Dead(x). (825)
-+insert_unit({unit:'825', title_slide:true, images:images})
+//- +insert_unit({unit:'825', title_slide:true, images:images})
 
+//- can do but no time in 2014-5
 //- Proof Example: ¬∀x Dead(x) ⊢ ∃x¬ Dead(x). (826)
-+insert_unit({unit:'826', title_slide:true, images:images})
+//- +insert_unit({unit:'826', title_slide:true, images:images})
 
 //- Somebody is not dead
 +insert_unit({unit:'607', title_slide:true, images:images})
 
+//- Quantifier Equivalences: ∀x Created(x) ⫤⊨ ¬∃x Created(x) (764)
++insert_unit({unit:'764', title_slide:true, images:images})
 
 
 //- The End Is Near (790)
