@@ -1,0 +1,541 @@
+{
+  'courseName' : 'UK_W20_PH126'
+  'variant' : 'normal'
+  'description' : 'These exercises are aimed at students who did not take a mathematical subject at A-Level or equivalent.'
+  'lectures' : [
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_01'
+      'slides' : '/lecture_01.html'
+      'handout' : '/handouts/lecture_01.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Quick Intro to FOL'
+          'slides' : '/units/unit_02.html'
+          'rawReading' : ["1.1","1.2","1.3"]
+          'rawExercises' : [
+            '1.1--1.5'
+            '*1.6'
+            '1.8--1.10'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Logically Valid Arguments'
+          'slides' : '/units/unit_03.html'
+          'rawReading' : ["2.1"]
+          'rawExercises' : [
+            '2.3, 2.4'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Counterexamples'
+          'slides' : '/units/unit_04.html'
+          'rawReading' : ["2.5"]
+          'rawExercises' : [
+            '2.8, 2.10, 2.12, 2.21'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_02'
+      'slides' : '/lecture_02.html'
+      'handout' : '/handouts/lecture_02.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Identity'
+          'slides' : '/units/unit_06.html'
+          'rawReading' : ["2.2"]
+          'rawExercises' : [
+            '2.5, 2.6'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Truth Tables'
+          'slides' : '/units/unit_071.html'
+          'rawReading' : ["3.1","3.2","3.3"]
+          'rawExercises' : [
+            '3.1, 3.2'
+            '3.5, 3.7'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_03'
+      'slides' : '/lecture_03.html'
+      'handout' : '/handouts/lecture_03.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Logical Validity and Truth Tables'
+          'slides' : '/units/unit_14.html'
+          'rawReading' : ["4.3"]
+          'rawExercises' : [
+            '5.1-5.4'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Formal Proof: ∧Elim and ∧Intro'
+          'slides' : '/units/unit_21.html'
+          'rawReading' : ["5.1","6.1"]
+          'rawExercises' : [
+            '6.1'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Complex Truth Tables'
+          'slides' : '/units/unit_09.html'
+          'rawReading' : ["3.3","3.5"]
+          'rawExercises' : [
+            '3.12, 3.13'
+            '4.4-4.7'
+            '4.12-14'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Tautologies and Contradictions'
+          'slides' : '/units/unit_160.html'
+          'rawReading' : ["4.1","4.2"]
+          'rawExercises' : [
+            '4.1, 4.2'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_04'
+      'slides' : '/lecture_04.html'
+      'handout' : '/handouts/lecture_04.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Truth-functional Connectives'
+          'slides' : '/units/unit_072.html'
+          'rawReading' : ["7.0 (the text before §7.1)"]
+          'rawExercises' : [
+            '7.9'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'A ∧ B ∨ C'
+          'slides' : '/units/unit_151.html'
+          'rawReading' : ["3.5"]
+          'rawExercises' : [
+            '3.20, 3.21, 3.22'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'A ∧ B ∨ C: They Are Different'
+          'slides' : '/units/unit_154.html'
+          'rawReading' : [""]
+          'rawExercises' : [
+            '3.14, 3.15'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_05'
+      'slides' : '/lecture_05.html'
+      'handout' : '/handouts/lecture_05.handout.pdf'
+      'units' :  [
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_06'
+      'slides' : '/lecture_06.html'
+      'handout' : '/handouts/lecture_06.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : '∨Elim: An Example'
+          'slides' : '/units/unit_221.html'
+          'rawReading' : [""]
+          'rawExercises' : [
+            '5.1--5.6'
+            '6.2--6.6'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Not Or'
+          'slides' : '/units/unit_603.html'
+          'rawReading' : ["3.7"]
+          'rawExercises' : [
+            '3.19'
+            '5.18'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : '¬Intro'
+          'slides' : '/units/unit_281.html'
+          'rawReading' : ["5.3","6.3"]
+          'rawExercises' : [
+            '6.7--6.10'
+            '*6.11--6.12'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_07'
+      'slides' : '/lecture_07.html'
+      'handout' : '/handouts/lecture_07.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : '¬Intro Proof Example'
+          'slides' : '/units/unit_283.html'
+          'rawReading' : ["5.3","6.3"]
+          'rawExercises' : [
+            '6.24--6.26'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B'
+          'slides' : '/units/unit_235.html'
+          'rawReading' : ["3.6","4.2"]
+          'rawExercises' : [
+            '3.19'
+            '4.15--18'
+            '7.1--7.2, *7.3--7.6'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Everything Is Broken'
+          'slides' : '/units/unit_471.html'
+          'rawReading' : ["9.1","9.2"]
+          'rawExercises' : [
+            '9.1 odd numbers only'
+            '9.2 even numbers only'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_08'
+      'slides' : '/lecture_08.html'
+      'handout' : '/handouts/lecture_08.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Everything Is Broken'
+          'slides' : '/units/unit_471.html'
+          'rawReading' : ["9.1","9.2"]
+          'rawExercises' : [
+            '9.1 odd numbers only'
+            '9.2 even numbers only'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'All Squares Are Blue'
+          'slides' : '/units/unit_503.html'
+          'rawReading' : ["9.2","9.3","9.5"]
+          'rawExercises' : [
+            '9.4--9.5'
+            '9.8--9.10'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Scope: A Mistaken Application of ¬Elim'
+          'slides' : '/units/unit_291.html'
+          'rawReading' : [""]
+          'rawExercises' : [
+            '6.8'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Scope'
+          'slides' : '/units/unit_290.html'
+          'rawReading' : ["3.5"]
+          'rawExercises' : [
+            '3.14'
+            '3.15'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Proof Example: ¬(P∨Q) therefore ¬P∧¬Q'
+          'slides' : '/units/unit_821.html'
+          'rawReading' : [""]
+          'rawExercises' : [
+            '6.24--6.27'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_09'
+      'slides' : '/lecture_09.html'
+      'handout' : '/handouts/lecture_09.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Recap: Scope'
+          'slides' : '/units/unit_292.html'
+          'rawReading' : ["3.5"]
+          'rawExercises' : [
+            '3.14'
+            '3.15'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'I Met a Philosopher'
+          'slides' : '/units/unit_501.html'
+          'rawReading' : ["9.2","9.3","9.5"]
+          'rawExercises' : [
+            '9.1 odd numbers only'
+            '9.2 even numbers only'
+            '9.4'
+            '9.5'
+            '9.8'
+            '9.9'
+            '9.10'
+            '9.12'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Translation with Quantifiers'
+          'slides' : '/units/unit_507.html'
+          'rawReading' : ["9.5","9.6"]
+          'rawExercises' : [
+            '9.4–-9.5'
+            '9.8–-9.9'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_10'
+      'slides' : '/lecture_10.html'
+      'handout' : '/handouts/lecture_10.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'What does ‘→’ mean?'
+          'slides' : '/units/unit_700.html'
+          'rawReading' : ["7.1"]
+          'rawExercises' : [
+            '7.1--7.6'
+            '8.1 (yes/no answers are ok)'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'There Does Not Exist'
+          'slides' : '/units/unit_605.html'
+          'rawReading' : [""]
+          'rawExercises' : [
+            '9.12'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_11'
+      'slides' : '/lecture_11.html'
+      'handout' : '/handouts/lecture_11.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Don't use ∃ with →'
+          'slides' : '/units/unit_245.html'
+          'rawReading' : [""]
+          'rawExercises' : [
+            '9.10'
+            '9.15--9.17'
+            '*9.18--9'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Multiple Quantifiers: Everyone Likes Puffins'
+          'slides' : '/units/unit_742.html'
+          'rawReading' : ["11.1"]
+          'rawExercises' : [
+            '11.2'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : '∀Intro'
+          'slides' : '/units/unit_570.html'
+          'rawReading' : ["12.1","12.3","13.1"]
+          'rawExercises' : [
+            '12.4--12.5'
+            '*12.6--12.7'
+            '12.9--12.10'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_12'
+      'slides' : '/lecture_12.html'
+      'handout' : '/handouts/lecture_12.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Expressing Relations with Quantifiers'
+          'slides' : '/units/unit_581.html'
+          'rawReading' : ["15.1","15.6"]
+          'rawExercises' : [
+            '15.33--15.40 (second edition)'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_13'
+      'slides' : '/lecture_13.html'
+      'handout' : '/handouts/lecture_13.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'There Is a Store for Everything'
+          'slides' : '/units/unit_560.html'
+          'rawReading' : ["11.2","11.3"]
+          'rawExercises' : [
+            '11.3'
+            '11.4, 11.8, 11.9'
+            '11.11, 11.13, *11.10'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Truth-functional completeness'
+          'slides' : '/units/unit_430.html'
+          'rawReading' : ["7.4"]
+          'rawExercises' : [
+            '7.25, 7.26, *7.28, 7.29'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_14'
+      'slides' : '/lecture_14.html'
+      'handout' : '/handouts/lecture_14.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Quantifier Equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ∀x(¬Broken(x) → ¬Square(x))'
+          'slides' : '/units/unit_760.html'
+          'rawReading' : ["10.3"]
+          'rawExercises' : [
+            '10.20, 10.22'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_15'
+      'slides' : '/lecture_15.html'
+      'handout' : '/handouts/lecture_15.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'The Soundness Property and the Fubar Rules'
+          'slides' : '/units/unit_345.html'
+          'rawReading' : ["8.3"]
+          'rawExercises' : [
+            '7.32'
+          ]
+        }
+        {
+          'type' : 'unit'
+          'name' : 'Translation from FOL to English'
+          'slides' : '/units/unit_951.html'
+          'rawReading' : [""]
+          'rawExercises' : [
+            '14.1--14.3, (*14.4--14.5)'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_16'
+      'slides' : '/lecture_16.html'
+      'handout' : '/handouts/lecture_16.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'There Is Exactly One'
+          'slides' : '/units/unit_625.html'
+          'rawReading' : [""]
+          'rawExercises' : [
+            '14.10--14.12, *14.13'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_17'
+      'slides' : '/lecture_17.html'
+      'handout' : '/handouts/lecture_17.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'The End Is Near'
+          'slides' : '/units/unit_790.html'
+          'rawReading' : ["14.3"]
+          'rawExercises' : [
+            '14.26, 14.28'
+          ]
+        }
+      ]
+    }
+    {
+      'type' : 'lecture'
+      'name' : 'lecture_18'
+      'slides' : '/lecture_18.html'
+      'handout' : '/handouts/lecture_18.handout.pdf'
+      'units' :  [
+        {
+          'type' : 'unit'
+          'name' : 'Proof of Proposition 4 for the Completeness Theorem'
+          'slides' : '/units/unit_465.html'
+          'rawReading' : ["15.1","15.6"]
+          'rawExercises' : [
+            '15.33--15.40 (second edition)'
+          ]
+        }
+      ]
+    }
+  ]
+}

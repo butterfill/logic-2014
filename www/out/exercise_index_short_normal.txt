@@ -1,0 +1,142 @@
+{
+  "courseName": "UK_W20_PH133",
+  "variant": "short",
+  "description": "These exercises are aimed at students taking the logic part of PH133 (Introduction to Philosophy).",
+  "lectures": [
+    {
+      "type": "lecture",
+      "name": "short_lecture_01",
+      "slides": "http://logic-1.butterfill.com/short_lecture_01.html",
+      "handout": "http://logic-1.butterfill.com/handouts/short_lecture_01.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "Quick Intro to FOL",
+          "slides": "http://logic-1.butterfill.com/units/unit_02.html",
+          "rawReading": [
+            "1.1",
+            "1.2",
+            "1.3"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/in the sentence ‘John is square or Ayesha is triangular’, the word ‘John’ is a name|in the same sentence, ‘square’ is a predicate|in the same sentence, ‘square’ is a connective|in the same sentence, ‘or’ is a predicate|in the same sentence, ‘or’ is a connective",
+            "/ex/TorF/qq/‘Many more people have been to Paris than you have’ is false|‘Many more people have been to Paris than you have’ is true",
+            "/ex/TorF/qq/‘Ayesha cries’ is an atomic sentence|‘Ayesha cries or Beatrice weeps’ is a non-atomic sentence|‘People come and people go’ is a non-atomic sentence",
+            "/ex/q/What is an atomic sentence?",
+            "/ex/TorF/qq/‘John is square’ is a non-atomic sentence|‘John is square or Ayesha is triangular’ is a non-atomic sentence|‘John is square because Ayesha is triangular’ is a non-atomic sentence|‘Necessarily, John is square’ is a non-atomic sentence",
+            "/ex/create/qq/White(a)",
+            "/ex/create/qq/not White(a)",
+            "/ex/create/qq/not White(a)|Happy(a)",
+            "/ex/create/qq/not White(a)|Happy(a)|Sad(b)",
+            "/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)",
+            "/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)|TallerThan(b,a)",
+            "/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)|TallerThan(a,b)|SameSize(a,b)",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/White1/sentence/Ayesha is white",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/White1/sentence/Ayesha is not white",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/White1|Happy1/sentence/Ayesha is happy",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1/sentence/Beatrice is sad",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1/sentence/Beatrice is not sad",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y/sentence/Beatrice is left of Ayesha",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y/sentence/Ayesha is left of Beatrice",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y|TallerThan2-x-is-taller-than-y/sentence/Ayesha is taller than Beatrice",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y|TallerThan2-x-is-taller-than-y|WiderThan2-x-is-wider-than-y/sentence/Beatrice is wider than Ayesha",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Yellow1/sentence/Yellow(a)",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1/sentence/Red(b)",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1/sentence/Yellow(a) or Red(b)",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1|Adjacent2-x-is-adjacent-to-y/sentence/Adjacent(a,b)",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1|Adjacent2-x-is-adjacent-to-y/sentence/not Adjacent(a,b)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Logically Valid Arguments",
+          "slides": "http://logic-1.butterfill.com/units/unit_03.html",
+          "rawReading": [
+            "2.1"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/a logically valid argument cannot have a false conclusion|a logically valid argument cannot have false premises",
+            "/ex/TorF/from/Ayesha is a fish|Ayesha cannot swim/to/Ayesha is a fish who cannot swim/qq/The argument is logically valid",
+            "/ex/TorF/from/Ayesha is a fish|Beatrice is not a fish/to/Ayesha isn’t Beatrice/qq/The argument is logically valid",
+            "/ex/TorF/from/Most fish swim|Ayesha is a fish/to/Ayesha swims/qq/The argument is logically valid",
+            "/ex/TorF/from/All fish swim|Ayesha is a fish/to/Ayesha swims/qq/The argument is logically valid",
+            "/ex/TorF/from/If Beatrice is a fish, she can swim|Beatrice is a fish/to/Beatrice can swim/qq/The argument is logically valid",
+            "/ex/TorF/from/If Ayesha is a bird, she can fly|Ayesha can fly/to/Ayesha is a bird/qq/The argument is logically valid",
+            "/ex/TorF/from/Ayesha can fly|Beatrice can swim/to/Ayesha isn’t Beatrice/qq/The argument is logically valid",
+            "/ex/TorF/qq/a logically valid argument can have true premises and a true conclusion|a logically valid argument can have true premises and a false conclusion|a logically valid argument can have false premises and a true conclusion|a logically valid argument can have false premises and a false conclusion"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Counterexamples",
+          "slides": "http://logic-1.butterfill.com/units/unit_04.html",
+          "rawReading": [
+            "2.5"
+          ],
+          "rawExercises": [
+            "/ex/create/from/TallerThan(a,b)/to/WiderThan(a,b)",
+            "/ex/create/from/Adjacent(a,b)|Adjacent(b,c)/to/Adjacent(a,c)",
+            "/ex/create/from/SameShape(a,b)/to/SameSize(a,b)",
+            "/ex/create/from/SameSize(a,b)/to/SameShape(a,b)",
+            "/ex/TorF/from/Happy(a) or Happy(b)|Happy(a)/to/not Happy(b)/world/[{\"x\":9,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\"}:\",\"^\",\"D\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"pink\",\"f\":[\":'\",\"-\",\"D\"]},{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"purple\",\"f\":[\":'\",\"-\",\"(\"]}]/qq/Happy(a) or Happy(b)|Happy(a)|not Happy(b)|The possible situation is a counterexample to the argument",
+            "/ex/TorF/from/Happy(a)/to/not Happy(b)/world/[{\"x\":3,\"y\":0,\"w\":3,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":\",\"-\",\")\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"red\",\"f\":[\":'\",\">\",\"(\"]}]/qq/Happy(a)|not Happy(b)|The possible situation is a counterexample to the argument",
+            "/ex/TorF/from/LargerThan(a,b)/to/not SameShape(a,b)/world/[{\"x\":3,\"y\":0,\"w\":3,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":\",\"-\",\")\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"red\",\"f\":[\":'\",\">\",\"(\"]}]/qq/LargerThan(a,b)|not SameShape(a,b)|The possible situation is a counterexample to the argument",
+            "/ex/q/define ‘counterexample’",
+            "/ex/create/from/LeftOf(a,b)|RightOf(b,c)/to/LeftOf(a,c)",
+            "/ex/create/from/LeftOf(a,b)|Adjacent(b,c)/to/LeftOf(a,c)",
+            "/ex/create/from/not LeftOf(a,b)|not LeftOf(b,a)/to/a=b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "short_lecture_02",
+      "slides": "http://logic-1.butterfill.com/short_lecture_02.html",
+      "handout": "http://logic-1.butterfill.com/handouts/short_lecture_02.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "short_lecture_03",
+      "slides": "http://logic-1.butterfill.com/short_lecture_03.html",
+      "handout": "http://logic-1.butterfill.com/handouts/short_lecture_03.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "short_lecture_04",
+      "slides": "http://logic-1.butterfill.com/short_lecture_04.html",
+      "handout": "http://logic-1.butterfill.com/handouts/short_lecture_04.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "short_lecture_05",
+      "slides": "http://logic-1.butterfill.com/short_lecture_05.html",
+      "handout": "http://logic-1.butterfill.com/handouts/short_lecture_05.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "short_lecture_06",
+      "slides": "http://logic-1.butterfill.com/short_lecture_06.html",
+      "handout": "http://logic-1.butterfill.com/handouts/short_lecture_06.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "short_lecture_07",
+      "slides": "http://logic-1.butterfill.com/short_lecture_07.html",
+      "handout": "http://logic-1.butterfill.com/handouts/short_lecture_07.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "short_lecture_08",
+      "slides": "http://logic-1.butterfill.com/short_lecture_08.html",
+      "handout": "http://logic-1.butterfill.com/handouts/short_lecture_08.handout.pdf",
+      "units": []
+    }
+  ]
+}

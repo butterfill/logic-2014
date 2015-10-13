@@ -1,0 +1,1 @@
+<%- JSON.stringify(@getShortFastEx(),null,2)  %>

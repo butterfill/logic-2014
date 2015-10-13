@@ -1,0 +1,104 @@
+{
+  "courseName": "UK_W20_PH126",
+  "variant": "fast",
+  "description": "These exercises are aimed at students with a qualification equivalent to further maths at A-Level.",
+  "lectures": [
+    {
+      "type": "lecture",
+      "name": "fastlecture_01",
+      "slides": "http://logic-1.butterfill.com/fastlecture_01.html",
+      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_01.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "Terminology",
+          "slides": "http://logic-1.butterfill.com/units/unit_029.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/q/define ‘logically valid argument’",
+            "/ex/TorF/qq/in the sentence ‘John is square or Ayesha is triangular’, the word ‘John’ is a name|in the same sentence, ‘square’ is a predicate|in the same sentence, ‘square’ is a connective|in the same sentence, ‘or’ is a predicate|in the same sentence, ‘or’ is a connective"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Logically Valid Arguments",
+          "slides": "http://logic-1.butterfill.com/units/unit_03.html",
+          "rawReading": [
+            "2.1"
+          ],
+          "rawExercises": [
+            "/ex/TorF/from/Ayesha is a fish|Beatrice is not a fish/to/Ayesha isn’t Beatrice/qq/The argument is logically valid",
+            "/ex/TorF/from/Most fish swim|Ayesha is a fish/to/Ayesha swims/qq/The argument is logically valid",
+            "/ex/TorF/from/If Beatrice is a fish, she can swim|Beatrice is a fish/to/Beatrice can swim/qq/The argument is logically valid",
+            "/ex/TorF/from/If Ayesha is a bird, she can fly|Ayesha can fly/to/Ayesha is a bird/qq/The argument is logically valid",
+            "/ex/TorF/from/Ayesha can fly|Beatrice can swim/to/Ayesha isn’t Beatrice/qq/The argument is logically valid",
+            "/ex/TorF/qq/a logically valid argument can have true premises and a true conclusion|a logically valid argument can have true premises and a false conclusion|a logically valid argument can have false premises and a true conclusion|a logically valid argument can have false premises and a false conclusion"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Counterexamples",
+          "slides": "http://logic-1.butterfill.com/units/unit_04.html",
+          "rawReading": [
+            "2.5"
+          ],
+          "rawExercises": [
+            "/ex/create/from/TallerThan(a,b)/to/WiderThan(a,b)",
+            "/ex/create/from/Adjacent(a,b)|Adjacent(b,c)/to/Adjacent(a,c)",
+            "/ex/create/from/SameShape(a,b)/to/SameSize(a,b)",
+            "/ex/create/from/SameSize(a,b)/to/SameShape(a,b)",
+            "/ex/TorF/from/Happy(a) or Happy(b)|Happy(a)/to/not Happy(b)/world/[{\"x\":9,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\"}:\",\"^\",\"D\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"pink\",\"f\":[\":'\",\"-\",\"D\"]},{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"purple\",\"f\":[\":'\",\"-\",\"(\"]}]/qq/Happy(a) or Happy(b)|Happy(a)|not Happy(b)|The possible situation is a counterexample to the argument",
+            "/ex/TorF/from/Happy(a)/to/not Happy(b)/world/[{\"x\":3,\"y\":0,\"w\":3,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":\",\"-\",\")\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"red\",\"f\":[\":'\",\">\",\"(\"]}]/qq/Happy(a)|not Happy(b)|The possible situation is a counterexample to the argument",
+            "/ex/TorF/from/LargerThan(a,b)/to/not SameShape(a,b)/world/[{\"x\":3,\"y\":0,\"w\":3,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":\",\"-\",\")\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"red\",\"f\":[\":'\",\">\",\"(\"]}]/qq/LargerThan(a,b)|not SameShape(a,b)|The possible situation is a counterexample to the argument",
+            "/ex/q/define ‘counterexample’",
+            "/ex/create/from/LeftOf(a,b)|RightOf(b,c)/to/LeftOf(a,c)",
+            "/ex/create/from/LeftOf(a,b)|Adjacent(b,c)/to/LeftOf(a,c)",
+            "/ex/create/from/not LeftOf(a,b)|not LeftOf(b,a)/to/a=b"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "fastlecture_02",
+      "slides": "http://logic-1.butterfill.com/fastlecture_02.html",
+      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_02.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "fastlecture_03",
+      "slides": "http://logic-1.butterfill.com/fastlecture_03.html",
+      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_03.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "fastlecture_04",
+      "slides": "http://logic-1.butterfill.com/fastlecture_04.html",
+      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_04.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "fastlecture_05",
+      "slides": "http://logic-1.butterfill.com/fastlecture_05.html",
+      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_05.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "fastlecture_06",
+      "slides": "http://logic-1.butterfill.com/fastlecture_06.html",
+      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_06.handout.pdf",
+      "units": []
+    },
+    {
+      "type": "lecture",
+      "name": "fastlecture_07",
+      "slides": "http://logic-1.butterfill.com/fastlecture_07.html",
+      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_07.handout.pdf",
+      "units": []
+    }
+  ]
+}

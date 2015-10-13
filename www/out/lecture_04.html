@@ -1,28 +1,1727 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><head><!-- (c) copyright 2013 Stephen A. Butterfill--><meta charset="utf-8"/><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><title>Lecture 04 | Logic I</title><meta name="description" content="Notes for lectures on Logic I (PH126 and PH133), an introduction to predicate logic."/><meta name="keywords" content="logic, truth, logical validity"/><meta name="author" content=""/><meta name="generator" content="DocPad v6.63.3" /><meta name="viewport" content="width=device-width"/><!-- - fonts--><link href="http://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/><link href="http://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/><!--[if lt IE 9]><script async="async" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" /></head><body><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/jquery.crSplineBkg.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.custom.01932.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script><div class="deck-notes"><div class="deck-notes-container"></div></div><div class="deck-handout"><div class="deck-handout-container"></div></div><div class="deck-container"><section id="instructions" class="slide"><div class="words"><div class="container_12"><div class="grid_12"><div class="middle"><p class="center">Press the right key for the next slide (or swipe left)</p></div></div></div></div></section><section class="slide"><!-- .notes You won't believe how many people emailed me to say the slides don't work.--><div class="words"><div class="container_12"><div class="grid_12"><p>also ...</p><p>Press the left key to go backwards (or swipe right)</p><p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p><p>Press m or double tap to see a menu of slides</p></div></div></div></section><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><div class="notes notes-header-tex">\title {Logic I \\ Lecture 04}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\maketitle</div><div id="title-slide" class="slide"><img src="/img/bkg/frozen/DSC_1587_mod.jpg" class="bkg"/><div class="spacer">&nbsp;</div><div class="fade-in"><div style="" class="title-block"><div class="title-container"><h1 class="title1 fade-in">Logic I</h1><h1 class="title2 fade-in">Lecture 04</h1><h3 class="email fade-in">s.butterfill@warwick.ac.uk</h3></div></div></div><div class="handout">\def \ititle {Logic I}</div><div class="handout">\def \isubtitle {Lecture 04}</div><div class="handout">\begin{center}</div><div class="handout">{\Large</div><div class="handout">\textbf{\ititle}: \isubtitle</div><div class="handout">}</div><div class="handout">&nbsp;</div><div class="handout">\iemail %<s.butterfill@warwick.ac.uk></div><div class="handout">\end{center}</div><div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div></div><div class="handout">&nbsp;</div><div class="handout">\section{∨Intro}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{∨Intro}</div><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_225/slide-099.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div data-src="img/rule_disjunction_intro.png" class="img handout"></div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-100.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-101.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-102.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-103.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-104.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-105.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-106.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-107.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-108.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-109.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_225/slide-110.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><section id="unit_212" class="slide"><img src="/img/bkg/frozen/DSC_1593_mod.jpg" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">∧Intro and ∨Intro: Compare and Contrast</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{∧Intro and ∨Intro: Compare and Contrast}</div><div class="handout">\emph{Reading:}  §6.1</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{∧Intro and ∨Intro: Compare and Contrast}</div><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><div class="notes">How come we can prove only valid arguments?</div><p class="center">How come we can prove only valid arguments?</p></div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-045.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here is a new rule of proof, called disjunction intro.</div><div class="notes">∨Intro is saying that if you have any sentence, you can add a line to your proof containing a disjunction of that sentence and any other sentence you like.</div><div class="notes">Explain ∨Intro with an example: if you know Ayesha is in the garden but don’t want to give this away but do want to speak the truth you can say “Ayesha is in the library or Ayesha is in the garden”.  </div><div class="notes">The transition from 'Ayesha is in the garden' to 'Ayesha is in the garden or Ayesha is in the library' is the transition that disjunction intro allows you to make in formal proofs.</div><div data-src="img/proof_unit_212" class="img handout"></div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-046.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Contrast ∧Intro ...</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-047.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">∧Intro is just like ∨Intro except that you need both conjuncts for ∧Intro.</div><div class="notes">Why should we have set things up like this?  Why is using ∧Intro more demanding than using ∨Intro?</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-000.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Let's have a look at a proof involving these two rules.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-001.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We're using ∨Intro at line 3 to get R∨T.  </div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-002.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">See how what we've done matches the rule.  (Sometimes people ask, Where does the T come from?  The answer is: it just comes from nowhere.)</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-003.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now we're using ∧Intro.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-004.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-005.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-006.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Note some properties of the proof:</div><div class="notes">Each step builds on the previous steps; each step is made in accordance with a rule; and the rules we've seen so far extend the proof by one line.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-007.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The most important property, though is this: The new line is guaranteed to be a logical consequence of the lines above.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-008.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Let me illustrate ...</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-009.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Consider the truth table for disjunction.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-010.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What happens when the prerequiste for the disjunction-intro rule is true?  In that case, we're in the first two rows of the truth table.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-011.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And in those first two rows, the disjunction which the rule adds to the proof is true.</div><div class="notes">So given the truth table, we can see that disjunction-intro will never take us from a truth to a falsehood; from a truth we can only reach another truth using disjunction-intro.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-012.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now look at conjunction intro.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-013.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here's the truth table for conjunction.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-014.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-015.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now what happens when the first prerequisite for conjunction introduction is true?</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-016.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">In that case, we're in the first two rows of the truth table.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-017.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What is the truth value of the conjunction which conjunction-introduction adds to the proof in these rows of the truth table?</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-018.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Actually this conjunction is true is one row and false in the other.</div><div class="notes">So when P1 is true, P1∧P2 is sometimes true and sometimes false.</div><div class="notes">This means that if conjunction-intro required just one conjunct, it would sometimes take us from a truth to a falsehood.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-019.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But actually conjunction-intro requires that we already have both conjuncts in our proof.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-020.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So if both pre-requisites for using conjuncton introduction are true, then we can't be in the second row of the truth table.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-021.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And this means that when everything conjunction-intro requires is true, then the conjunction it allows us to introduce must always be true.</div><div class="notes">Earlier I asked, Why is using ∧Intro more demanding than using ∨Intro?  Now we can see exactly what the answer is.</div><div class="notes">Speaking entirely formally, we can use whatever rules we like.</div><div class="notes">But we want our rules to mirror logical validity--given truths, we want them to take us only to truths.  We want them never to take us from truth to falsehood.</div><div class="notes">For this reason, given the truth table for conjunction, ∧Intro has to require that we already have both conjuncts.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-022.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Let me make the same point by introducing a new connective.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-023.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-024.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Suppose we have a connective called 'is not eqivalent' and we stipulate this introduction rule.</div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">Let us define a new connective with this truth table:</div><div data-src="img/tt_not_equivalent.png" class="img handout"></div><div class="handout">\end{minipage}</div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">The following rule is unacceptable.  Why?</div><div data-src="img/rule_not_equivalent_intro_wrong.png" class="img handout"></div><div class="handout">\end{minipage}</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-025.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Suppose also that our new connective has this truth table, so that the 'P1 is not eqivalent to P2' is true exactly when P1 and P2 have different truth values.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-026.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now the rule for not-equivalent-intro is just like the rule for disjunction-intro.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-027.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What happens when the prerequsite for these rules is true?</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-028.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The disjunction that we can introduce with disjunction-intro is true.</div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-029.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But the sentence that we can introduce with not-equivalent-intro is sometimes false and sometimes true.</div><div class="notes">So the new rule not-equivalent-intro would allow us to move from truths to falsehoods.  </div></div></div></div></section><section class="slide"><img src="/img/unit_212/slide-b-030.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">That's why we shouldn't have this rule.</div></div></div></div></section><section id="unit_111" class="slide"><img src="/img/bkg/frozen/DSC_1595_mod.jpg" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">Formal Proof</h2></div></div></section><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Formal Proof}</div><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_111/slide-077.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Recall these two diagrams from earlier.  The left one is a proof, the right one is not.</div><div class="notes">Spot the difference.</div></div></div></div></section><section class="slide"><img src="/img/unit_111/slide-078.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Yes, the difference is at line 2.</div><div class="notes">But why is this difference significant?</div></div></div></div></section><section class="slide"><img src="/img/unit_111/slide-178.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Look what happens in the left diagram (the genuine proof).  Do you see the pattern?</div></div></div></div></section><section class="slide"><img src="/img/unit_111/slide-179.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">That pattern matches the pattern described by the rule identity elimination (=Elim)</div></div></div></div></section><section class="slide"><img src="/img/unit_111/slide-180.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now look at the pattern in the diagram on the right.</div><div class="notes">This is a different pattern.</div><div class="notes">You might protest that b=c and c=b mean the same thing; one can't be true unless the other is.
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+  <head>
+    <!-- (c) copyright 2013 Stephen A. Butterfill-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Lecture 04 | Logic I</title>
+    <meta name="description" content="Notes for lectures on Logic I (PH126 and PH133), an introduction to predicate logic."/>
+    <meta name="keywords" content="logic, truth, logical validity"/>
+    <meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" />
+    <meta name="viewport" content="width=device-width"/>
+    <!-- - fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/>
+    <!--if lt IE 9
+    script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+    
+    --><style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" />
+  </head>
+  <body><script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/jquery.crSplineBkg.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.custom.01932.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+    <div class="deck-notes">
+      <div class="deck-notes-container"></div>
+    </div>
+    <div class="deck-handout">
+      <div class="deck-handout-container"></div>
+    </div>
+    <div class="deck-container">
+      <section id="instructions" class="slide">
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <div class="middle">
+                <p class="center">Press the right key for the next slide (or swipe left)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <!-- .notes You won't believe how many people emailed me to say the slides don't work.-->
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <p>also ...</p>
+              <p>Press the left key to go backwards (or swipe right)</p>
+              <p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p>
+              <p>Press m or double tap to see a menu of slides</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<div class="notes notes-header-tex">\title {Logic I \\ Lecture 04}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\maketitle</div>
+<div id="title-slide" class="slide"><img src="/img/bkg/frozen/DSC_1587_mod.jpg" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div class="fade-in">
+    <div style="" class="title-block">
+      <div class="title-container">
+        <h1 class="title1 fade-in">Logic I</h1>
+        <h1 class="title2 fade-in">Lecture 04</h1>
+        <h3 class="email fade-in">s.butterfill@warwick.ac.uk</h3>
+      </div>
+    </div>
+  </div>
+  <div class="handout">\def \ititle {Logic I}</div>
+  <div class="handout">\def \isubtitle {Lecture 04}</div>
+  <div class="handout">\begin{center}</div>
+  <div class="handout">{\Large</div>
+  <div class="handout">\textbf{\ititle}: \isubtitle</div>
+  <div class="handout">}</div>
+  <div class="handout">&nbsp;</div>
+  <div class="handout">\iemail %<s.butterfill@warwick.ac.uk></div>
+  <div class="handout">\end{center}</div>
+  <div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div>
+</div>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{∨Intro}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{∨Intro}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_225/slide-099.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/rule_disjunction_intro.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-100.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-101.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-102.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-103.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-104.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-105.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-106.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-107.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-108.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-109.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_225/slide-110.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_212" class="slide"><img src="/img/bkg/frozen/DSC_1593_mod.jpg" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">∧Intro and ∨Intro: Compare and Contrast</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{∧Intro and ∨Intro: Compare and Contrast}</div>
+<div class="handout">\emph{Reading:}  §6.1</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{∧Intro and ∨Intro: Compare and Contrast}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <div class="notes">How come we can prove only valid arguments?</div>
+          <p class="center">How come we can prove only valid arguments?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-045.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here is a new rule of proof, called disjunction intro.</div>
+        <div class="notes">∨Intro is saying that if you have any sentence, you can add a line to your proof containing a disjunction of that sentence and any other sentence you like.</div>
+        <div class="notes">Explain ∨Intro with an example: if you know Ayesha is in the garden but don’t want to give this away but do want to speak the truth you can say “Ayesha is in the library or Ayesha is in the garden”.  </div>
+        <div class="notes">The transition from 'Ayesha is in the garden' to 'Ayesha is in the garden or Ayesha is in the library' is the transition that disjunction intro allows you to make in formal proofs.</div>
+        <div data-src="img/proof_unit_212" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-046.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Contrast ∧Intro ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-047.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">∧Intro is just like ∨Intro except that you need both conjuncts for ∧Intro.</div>
+        <div class="notes">Why should we have set things up like this?  Why is using ∧Intro more demanding than using ∨Intro?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-000.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let's have a look at a proof involving these two rules.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-001.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We're using ∨Intro at line 3 to get R∨T.  </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-002.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">See how what we've done matches the rule.  (Sometimes people ask, Where does the T come from?  The answer is: it just comes from nowhere.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-003.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now we're using ∧Intro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-004.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-005.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-006.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Note some properties of the proof:</div>
+        <div class="notes">Each step builds on the previous steps; each step is made in accordance with a rule; and the rules we've seen so far extend the proof by one line.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-007.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The most important property, though is this: The new line is guaranteed to be a logical consequence of the lines above.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-008.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let me illustrate ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-009.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Consider the truth table for disjunction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-010.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What happens when the prerequiste for the disjunction-intro rule is true?  In that case, we're in the first two rows of the truth table.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-011.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And in those first two rows, the disjunction which the rule adds to the proof is true.</div>
+        <div class="notes">So given the truth table, we can see that disjunction-intro will never take us from a truth to a falsehood; from a truth we can only reach another truth using disjunction-intro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-012.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now look at conjunction intro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-013.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here's the truth table for conjunction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-014.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-015.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now what happens when the first prerequisite for conjunction introduction is true?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-016.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">In that case, we're in the first two rows of the truth table.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-017.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What is the truth value of the conjunction which conjunction-introduction adds to the proof in these rows of the truth table?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-018.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Actually this conjunction is true is one row and false in the other.</div>
+        <div class="notes">So when P1 is true, P1∧P2 is sometimes true and sometimes false.</div>
+        <div class="notes">This means that if conjunction-intro required just one conjunct, it would sometimes take us from a truth to a falsehood.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-019.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But actually conjunction-intro requires that we already have both conjuncts in our proof.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-020.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So if both pre-requisites for using conjuncton introduction are true, then we can't be in the second row of the truth table.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-021.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And this means that when everything conjunction-intro requires is true, then the conjunction it allows us to introduce must always be true.</div>
+        <div class="notes">Earlier I asked, Why is using ∧Intro more demanding than using ∨Intro?  Now we can see exactly what the answer is.</div>
+        <div class="notes">Speaking entirely formally, we can use whatever rules we like.</div>
+        <div class="notes">But we want our rules to mirror logical validity--given truths, we want them to take us only to truths.  We want them never to take us from truth to falsehood.</div>
+        <div class="notes">For this reason, given the truth table for conjunction, ∧Intro has to require that we already have both conjuncts.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-022.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let me make the same point by introducing a new connective.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-023.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-024.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Suppose we have a connective called 'is not eqivalent' and we stipulate this introduction rule.</div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">Let us define a new connective with this truth table:</div>
+        <div data-src="img/tt_not_equivalent.png" class="img handout"></div>
+        <div class="handout">\end{minipage}</div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">The following rule is unacceptable.  Why?</div>
+        <div data-src="img/rule_not_equivalent_intro_wrong.png" class="img handout"></div>
+        <div class="handout">\end{minipage}</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-025.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Suppose also that our new connective has this truth table, so that the 'P1 is not eqivalent to P2' is true exactly when P1 and P2 have different truth values.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-026.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now the rule for not-equivalent-intro is just like the rule for disjunction-intro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-027.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What happens when the prerequsite for these rules is true?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-028.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The disjunction that we can introduce with disjunction-intro is true.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-029.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But the sentence that we can introduce with not-equivalent-intro is sometimes false and sometimes true.</div>
+        <div class="notes">So the new rule not-equivalent-intro would allow us to move from truths to falsehoods.  </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_212/slide-b-030.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">That's why we shouldn't have this rule.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_111" class="slide"><img src="/img/bkg/frozen/DSC_1595_mod.jpg" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Formal Proof</h2>
+    </div>
+  </div>
+</section>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Formal Proof}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_111/slide-077.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Recall these two diagrams from earlier.  The left one is a proof, the right one is not.</div>
+        <div class="notes">Spot the difference.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_111/slide-078.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Yes, the difference is at line 2.</div>
+        <div class="notes">But why is this difference significant?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_111/slide-178.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Look what happens in the left diagram (the genuine proof).  Do you see the pattern?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_111/slide-179.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">That pattern matches the pattern described by the rule identity elimination (=Elim)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_111/slide-180.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now look at the pattern in the diagram on the right.</div>
+        <div class="notes">This is a different pattern.</div>
+        <div class="notes">You might protest that b=c and c=b mean the same thing; one can't be true unless the other is.
 These sentences do not express different thoughts.
-This is true but it is entirely besides the point.</div><div class="notes">Why is it beside the point?
+This is true but it is entirely besides the point.
+        </div>
+        <div class="notes">Why is it beside the point?
 In studying proof, we're interested in ways of linking the purely formal to the genuinely meaningful.
 The proof system Fitch is a formal system of proof.
 What we want to show is that, within limits, Fitch captures a notion of logical validity.
-This is interesting only because we can describe Fitch entirely without invoking truth or meaning.</div><div class="notes">So the fact that b=c and c=b mean the same is irrelevant in Fitch.
+This is interesting only because we can describe Fitch entirely without invoking truth or meaning.
+        </div>
+        <div class="notes">So the fact that b=c and c=b mean the same is irrelevant in Fitch.
 When you're thinking about Fitch, all you care about is the pattern of symbols.
-And b=c is a different pattern from c=b.</div></div></div></div></section><section class="slide"><img src="/img/unit_111/slide-181.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This is Abdurrahman Wahid, popularly known Gus Dur, a former president of Indoneisa and one of the most jovial national leaders ever.  He was a really nice guy.  As president he was infirm and nearly blind.  When asked to resign he replied “I need help to step up, let alone step down.” (Economist 2010-01-07 obituary).  Unfortunately he died recently (december 30 2009)  </div></div></div></div></section><section class="slide"><img src="/img/unit_111/slide-182.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And this is Than Schwe, Myanamar’s military ruler.</div><div class="notes">Guess who I'd pick to marks your logic exam.</div></div></div></div></section><section class="slide"><img src="/img/unit_111/slide-183.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">One last thing.  The argument on your right is logically valid.  Can you prove it?</div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">Too slow?  Try fast-track.</p></div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center huge-glow">Logic Support</p><p class="center">Fridays, 4-6pm in S0.13</p></div></div></div></div></section><section id="unit_072" class="slide"><img src="/img/bkg/frozen/DSC_1600_mod.jpg" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">Truth-functional Connectives</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Truth-functional Connectives}</div><div class="handout">\emph{Reading:}  §7.0 (the text before §7.1)</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Truth-functional Connectives}</div><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_072/slide-b-000.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div class="handout">A \emph{connective} joins zero or more sentences to make a new sentence.  Examples of connectives include: `∧', `¬', `$\bot$' and `because'.</div><div class="handout">A sentence joined by a connective is a \emph{constituent}. For example, consider the sentence ‘P because Q’: P is a constituent of this sentence.</div><div class="handout">A \emph{truth functional connective} produces a new sentence whose truth value depends only on the truth values of its constituent sentences. </div><div class="handout">When P and Q are both true, ‘P because Q’ is sometimes true and sometimes false.  Therefore, ‘because’ is not a truth functional connective.  To illustrate, consider `Alan got yellow cards because some apples are green' and `Alan got yellow cards because he used his elbows'.  All the constituent sentences are true, but the first sentence is false whereas the second is true.</div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-001.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-002.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-003.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-004.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-005.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-006.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-007.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-008.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-009.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-010.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-011.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-012.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-013.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-014.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-015.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-016.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-017.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-018.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_072/slide-b-019.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><div class="exercises">7.9</div><div class="exercises_fast">7.9</div><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">Dissatisfaction is good</p></div></div></div></div></section><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{The Storm Clouds on the Horizon Were Getting Nearly Directly Overhead}</div><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_162/slide-166.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_162/slide-167.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">No because logic.</div></div></div></div></section><section class="slide"><img src="/img/unit_162/slide-168.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Yes because logic.</div></div></div></div></section><section class="slide"><img src="/img/unit_162/slide-169.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_162/slide-170.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><section id="unit_151" class="slide"><img src="/img/bkg/frozen/DSC_1603.low.jpg" class="bkg"/><div class="spacer">&nbsp;</div><div style="position:relative; top:425px" class="title-block"><div class="title-container"><h2 class="title1">A ∧ B ∨ C</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{A ∧ B ∨ C}</div><div class="handout">\emph{Reading:}  §3.5</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{A ∧ B ∨ C}</div><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_151/slide-082.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here's Johnny Depp having his hair cut in Charlie and the Chocolate Factory.</div><div class="notes">Mrs B made me watch this film because she fancies Jonny Depp.</div><div class="handout">Ambiguity can be \emph{lexical}, e.g. `Actor testifies in horse suit'.  Ambiguity can also be \emph{syntactic}, e.g. `How to combat the feeling of helplessness with illegal drugs'.  (Both examples are from Bucaria, C. (2004), `Lexical and syntactic ambiguity as a source of humor: The case of newspaper headlines', Humour 17(3): 279--309.)</div></div></div></div></section><section class="slide"><img src="/img/unit_151/slide-083.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But, to be fair, how could one not?</div><div class="notes">Anyway, here he's saying 'I need a heir' and holding up a hair.</div><div class="notes">This is one example of ambiguity.</div><div class="notes">Note that here the ambiguity can be traced to a single word, 'heir' which sounds just like another word with a different meaning.  We might say, the ambiguity is all in the word.</div></div></div></div></section><section class="slide"><img src="/img/unit_151/slide-084.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now contrast a statement like 'two puffins ate six fish'.</div><div class="notes">This statement is ambiguous because there are two quite different ways of understanding it.</div><div class="notes">Here you see one interpretation where There were two puffins: and they ate six fish</div><div class="notes">This interpretation is good for the puffins, less good for the fish.</div></div></div></div></section><section class="slide"><img src="/img/unit_151/slide-085.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here's the other interpretation of 'two puffins ate six fish'.  Here it means there were six fish: and two puffins ate them.</div><div class="notes">So less happy puffins.</div><div class="notes">Here's the key thing, though.  The sentence 'Two puffins ate six fish' is ambiguous but the ambiguity is not due to any particular word.  It's not that the word 'puffin' is ambiguous, for example.</div><div class="notes">This matters because it shows that not all ambiguity is lexical; some of it is, as linguists might say, synatactic or structural.</div><div class="notes">But why does ambiguity matter to us?</div><div class="notes">We are constructing a formal language and we want each sentence to have just one truth value, true or false.</div><div class="notes">In our formal language, we don't want sentences that are true and false.</div><div class="notes">This means of course that we need to avoid ambiguity.</div><div class="notes">Insofar as ambiguity is merely lexical--insofar as it is linked to particular words having multiple meanings--it's easy to avoid.</div><div class="notes">To avoid that sort of ambiguity, lexical ambiguity, we just have to avoid defining words twice.  Easy.</div><div class="notes">But how can we be sure that our formal language involves no syntactic ambiguity?</div></div></div></div></section><section class="slide"><img src="/img/unit_151/slide-086.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Consider this thing (it's not a sentence).  If we allowed this into our language, we'd have problems.</div></div></div></div></section><section class="slide"><img src="/img/unit_151/slide-087.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">For one thing, we'd not be able to say what the right way to construct its truth table is.</div></div></div></div></section><section class="slide"><img src="/img/unit_151/slide-088.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now this thing is not a sentence.  Instead we have two distinct sentences, (A ∧ B) ∨ C and A ∧ (B ∨ C).</div><div class="notes">Just a moment ago I asked, How can we be sure that our formal language involves no syntactic ambiguity? </div><div class="notes">The simplest answer is: because we use brackets.</div><div class="notes">It's important to realise this, but it's not a very satisfying answer for two reasons.</div><div class="notes">First, it's not satisfying because we don't know \emph{how} the brackets enable us to avoid ambiguity.  The answer doesn't enable us to prove that our language contains no ambiguous sentences.</div><div class="notes">And, second, it's not satisfying because we haven't said anything yet about what the brackets mean.  We can't just throw symbols into our language without explaining them. (This is the down side of having a formal language: we have to say what everything means explicity, since it's a creature of our own creation.)</div></div></div></div></section><div class="exercises">3.20, 3.21, 3.22</div><div class="handout">&nbsp;</div><div class="handout">\section{A ∧ B ∨ C: the Truth-tables}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{A ∧ B ∨ C: the Truth-tables}</div><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_153/slide-089.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div data-src="img/tt_unit_153.png" class="img handout"></div><div class="notes">Let us examine how these two sentences, (A and B) or C versus A and (B or C), differ using truth tables.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-090.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We have quite a few rows to fill in so it's worth thinking about short cuts.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-091.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Think about this C on the right hand side of the disjunction.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-092.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Whenever a disjunct is true ... </div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-093.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... oops, Ken says he's dying inside.
+And b=c is a different pattern from c=b.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_111/slide-181.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This is Abdurrahman Wahid, popularly known Gus Dur, a former president of Indoneisa and one of the most jovial national leaders ever.  He was a really nice guy.  As president he was infirm and nearly blind.  When asked to resign he replied “I need help to step up, let alone step down.” (Economist 2010-01-07 obituary).  Unfortunately he died recently (december 30 2009)  </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_111/slide-182.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And this is Than Schwe, Myanamar’s military ruler.</div>
+        <div class="notes">Guess who I'd pick to marks your logic exam.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_111/slide-183.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">One last thing.  The argument on your right is logically valid.  Can you prove it?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">Too slow?  Try fast-track.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center huge-glow">Logic Support</p>
+          <p class="center">Fridays, 4-6pm in S0.13</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_072" class="slide"><img src="/img/bkg/frozen/DSC_1600_mod.jpg" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Truth-functional Connectives</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Truth-functional Connectives}</div>
+<div class="handout">\emph{Reading:}  §7.0 (the text before §7.1)</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Truth-functional Connectives}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_072/slide-b-000.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div class="handout">A \emph{connective} joins zero or more sentences to make a new sentence.  Examples of connectives include: `∧', `¬', `$\bot$' and `because'.</div>
+        <div class="handout">A sentence joined by a connective is a \emph{constituent}. For example, consider the sentence ‘P because Q’: P is a constituent of this sentence.</div>
+        <div class="handout">A \emph{truth functional connective} produces a new sentence whose truth value depends only on the truth values of its constituent sentences. </div>
+        <div class="handout">When P and Q are both true, ‘P because Q’ is sometimes true and sometimes false.  Therefore, ‘because’ is not a truth functional connective.  To illustrate, consider `Alan got yellow cards because some apples are green' and `Alan got yellow cards because he used his elbows'.  All the constituent sentences are true, but the first sentence is false whereas the second is true.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-001.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-002.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-003.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-004.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-005.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-006.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-007.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-008.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-009.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-010.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-011.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-012.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-013.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-014.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-015.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-016.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-017.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-018.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_072/slide-b-019.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">7.9</div>
+<div class="exercises_fast">7.9</div>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">Dissatisfaction is good</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{The Storm Clouds on the Horizon Were Getting Nearly Directly Overhead}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_162/slide-166.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_162/slide-167.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">No because logic.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_162/slide-168.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Yes because logic.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_162/slide-169.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_162/slide-170.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_151" class="slide"><img src="/img/bkg/frozen/DSC_1603.low.jpg" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">A ∧ B ∨ C</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{A ∧ B ∨ C}</div>
+<div class="handout">\emph{Reading:}  §3.5</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{A ∧ B ∨ C}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_151/slide-082.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here's Johnny Depp having his hair cut in Charlie and the Chocolate Factory.</div>
+        <div class="notes">Mrs B made me watch this film because she fancies Jonny Depp.</div>
+        <div class="handout">Ambiguity can be \emph{lexical}, e.g. `Actor testifies in horse suit'.  Ambiguity can also be \emph{syntactic}, e.g. `How to combat the feeling of helplessness with illegal drugs'.  (Both examples are from Bucaria, C. (2004), `Lexical and syntactic ambiguity as a source of humor: The case of newspaper headlines', Humour 17(3): 279--309.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_151/slide-083.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But, to be fair, how could one not?</div>
+        <div class="notes">Anyway, here he's saying 'I need a heir' and holding up a hair.</div>
+        <div class="notes">This is one example of ambiguity.</div>
+        <div class="notes">Note that here the ambiguity can be traced to a single word, 'heir' which sounds just like another word with a different meaning.  We might say, the ambiguity is all in the word.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_151/slide-084.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now contrast a statement like 'two puffins ate six fish'.</div>
+        <div class="notes">This statement is ambiguous because there are two quite different ways of understanding it.</div>
+        <div class="notes">Here you see one interpretation where There were two puffins: and they ate six fish</div>
+        <div class="notes">This interpretation is good for the puffins, less good for the fish.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_151/slide-085.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here's the other interpretation of 'two puffins ate six fish'.  Here it means there were six fish: and two puffins ate them.</div>
+        <div class="notes">So less happy puffins.</div>
+        <div class="notes">Here's the key thing, though.  The sentence 'Two puffins ate six fish' is ambiguous but the ambiguity is not due to any particular word.  It's not that the word 'puffin' is ambiguous, for example.</div>
+        <div class="notes">This matters because it shows that not all ambiguity is lexical; some of it is, as linguists might say, synatactic or structural.</div>
+        <div class="notes">But why does ambiguity matter to us?</div>
+        <div class="notes">We are constructing a formal language and we want each sentence to have just one truth value, true or false.</div>
+        <div class="notes">In our formal language, we don't want sentences that are true and false.</div>
+        <div class="notes">This means of course that we need to avoid ambiguity.</div>
+        <div class="notes">Insofar as ambiguity is merely lexical--insofar as it is linked to particular words having multiple meanings--it's easy to avoid.</div>
+        <div class="notes">To avoid that sort of ambiguity, lexical ambiguity, we just have to avoid defining words twice.  Easy.</div>
+        <div class="notes">But how can we be sure that our formal language involves no syntactic ambiguity?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_151/slide-086.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Consider this thing (it's not a sentence).  If we allowed this into our language, we'd have problems.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_151/slide-087.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">For one thing, we'd not be able to say what the right way to construct its truth table is.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_151/slide-088.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now this thing is not a sentence.  Instead we have two distinct sentences, (A ∧ B) ∨ C and A ∧ (B ∨ C).</div>
+        <div class="notes">Just a moment ago I asked, How can we be sure that our formal language involves no syntactic ambiguity? </div>
+        <div class="notes">The simplest answer is: because we use brackets.</div>
+        <div class="notes">It's important to realise this, but it's not a very satisfying answer for two reasons.</div>
+        <div class="notes">First, it's not satisfying because we don't know \emph{how} the brackets enable us to avoid ambiguity.  The answer doesn't enable us to prove that our language contains no ambiguous sentences.</div>
+        <div class="notes">And, second, it's not satisfying because we haven't said anything yet about what the brackets mean.  We can't just throw symbols into our language without explaining them. (This is the down side of having a formal language: we have to say what everything means explicity, since it's a creature of our own creation.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">3.20, 3.21, 3.22</div>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{A ∧ B ∨ C: the Truth-tables}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{A ∧ B ∨ C: the Truth-tables}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_153/slide-089.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div data-src="img/tt_unit_153.png" class="img handout"></div>
+        <div class="notes">Let us examine how these two sentences, (A and B) or C versus A and (B or C), differ using truth tables.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-090.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We have quite a few rows to fill in so it's worth thinking about short cuts.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-091.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Think about this C on the right hand side of the disjunction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-092.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Whenever a disjunct is true ... </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-093.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... oops, Ken says he's dying inside.
 For most people that would be an exaggeration, but for Ken it's actually an understatement of his problems.
-Anyway, I hope it isn't because of logic.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-094.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">If this is too easy, try an exercise while I'm talking about the truth tables.
-Here's one argument ...</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-095.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... and here's a second argument.  Your exercise is to say which is valid and which is not valid.
+Anyway, I hope it isn't because of logic.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-094.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">If this is too easy, try an exercise while I'm talking about the truth tables.
+Here's one argument ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-095.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... and here's a second argument.  Your exercise is to say which is valid and which is not valid.
 For the invalid argument, give a counterexample.
 For the valid argument, give a Fitch proof.
-While you are doing that, the rest of us will go back to thinking about truth tables.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-096.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So we were thinking about the right disjunct of the first sentence, C.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-097.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What happens when this disjunct is true?</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-098.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The whole sentence is true, regardless of what the truth value of the other (left) disjunct is.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-099.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So in every row of the truth-table in which C is true, ...</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-100.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... these four rows ...</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-101.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... we know that the whole sentence is true.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-102.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-103.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now consider row four.  Here we have to do it the slow way.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-104.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We start at a point innermost in the brackets, so with A and B.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-105.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What is the truth value of A and B in this row?</div><div class="notes">That depends on what the main connective in this sentence is, and on what the truth values of A and B are.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-106.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">In this row, A is true and B is false.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-107.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And the connective is conjunction.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-108.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So the truth-table we need to consult is the one for conjunction.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-109.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">It's the second row that we want because this is the row where A is true and B false.</div><div class="notes">In this row of the truth-table, the conjunction is false.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-110.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And it's this truth-value that we put into our truth-table for A and B.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-111.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Prima!</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-112.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Bene!</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-113.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now we turn to the whole sentence.  What is its truth value?</div><div class="notes">First we have to ask, What is the connective?</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-114.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">In this case the connective is disjunction.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-115.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So the truth-table we need to consult is the one for disjunction.</div><div class="notes">But which row do we need?</div><div class="notes">In this case, the thing on the left of the disjunction (the left disjunct) is A and B, which is false;</div><div class="notes">and the thing on the right, C, is also false.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-116.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So we're looking at the last row of the truth-table, the one with false and false.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-117.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The truth-value in this row is the truth-value we need to put into the truth-table we're working on.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-118.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So we know that (A and B) or C is false in this row, where A is true, B is false and C is false.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-119.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Sehr gut!</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-120.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">I'll give you the rest of this for free.</div><div class="notes">Now think about the other sentence.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-121.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The thing on the left, the left conjunct, is the simplest part.</div><div class="notes">What happens when this is false?</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-122.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Regardless of what happens on the right, when the left side of a conjunction is false, the whole thing is false.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-123.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This can save us time.  Where is this left side of the conjunction false?  </div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-124.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">In the bottom four rows.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-125.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So we can be sure, even without thinking about the right side, that the whole sentence is false in these rows.</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-126.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The rest of the truth table probably requires more thought ...</div></div></div></div></section><section class="slide"><img src="/img/unit_153/slide-127.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... so here's one I made earlier.</div></div></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{A ∧ B ∨ C: They Are Different}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{A ∧ B ∨ C: They Are Different}</div><!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_154/slide-128.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">OK, so we have the truth tables. Where do they differ?</div><div data-src="img/arg1_unit_153.png" class="img handout"></div><div data-src="img/arg2_unit_153.png" class="img handout"></div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-129.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The truth-tables differ in rows five and seven only.</div><div class="notes">So the only difference between these two sentences is the brackets, but 
-this difference means that the two sentences differ in truth-value.</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-130.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This also makes a difference to their role in arguments, of course.</div><div class="notes">Which of these arguments is logically valid?</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-131.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Recall that for an argument to be logically valid is for ...</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-132.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now in the case of truth-tables, for an argument to be logically valid amounts to there being no row of the truth-table where the premise is true and the conclusion false.</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-133.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Consider the first argument.  Is this valid?</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-134.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here's the premise and here's the conclusion.</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-135.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">(Let's have some numbers so you can see which lines I'm talking about.)</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-136.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What happens in line five?  Here we have true premise and false conclusion. </div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-137.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So the argument is not valid, and this row is a counterexample to the argument.</div><div class="notes">If someone asks you for a counterexample, what do you have to write?
+While you are doing that, the rest of us will go back to thinking about truth tables.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-096.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So we were thinking about the right disjunct of the first sentence, C.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-097.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What happens when this disjunct is true?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-098.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The whole sentence is true, regardless of what the truth value of the other (left) disjunct is.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-099.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So in every row of the truth-table in which C is true, ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-100.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... these four rows ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-101.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... we know that the whole sentence is true.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-102.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-103.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now consider row four.  Here we have to do it the slow way.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-104.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We start at a point innermost in the brackets, so with A and B.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-105.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What is the truth value of A and B in this row?</div>
+        <div class="notes">That depends on what the main connective in this sentence is, and on what the truth values of A and B are.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-106.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">In this row, A is true and B is false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-107.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And the connective is conjunction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-108.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So the truth-table we need to consult is the one for conjunction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-109.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">It's the second row that we want because this is the row where A is true and B false.</div>
+        <div class="notes">In this row of the truth-table, the conjunction is false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-110.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And it's this truth-value that we put into our truth-table for A and B.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-111.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Prima!</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-112.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Bene!</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-113.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now we turn to the whole sentence.  What is its truth value?</div>
+        <div class="notes">First we have to ask, What is the connective?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-114.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">In this case the connective is disjunction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-115.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So the truth-table we need to consult is the one for disjunction.</div>
+        <div class="notes">But which row do we need?</div>
+        <div class="notes">In this case, the thing on the left of the disjunction (the left disjunct) is A and B, which is false;</div>
+        <div class="notes">and the thing on the right, C, is also false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-116.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So we're looking at the last row of the truth-table, the one with false and false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-117.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The truth-value in this row is the truth-value we need to put into the truth-table we're working on.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-118.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So we know that (A and B) or C is false in this row, where A is true, B is false and C is false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-119.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Sehr gut!</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-120.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I'll give you the rest of this for free.</div>
+        <div class="notes">Now think about the other sentence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-121.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The thing on the left, the left conjunct, is the simplest part.</div>
+        <div class="notes">What happens when this is false?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-122.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Regardless of what happens on the right, when the left side of a conjunction is false, the whole thing is false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-123.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This can save us time.  Where is this left side of the conjunction false?  </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-124.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">In the bottom four rows.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-125.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So we can be sure, even without thinking about the right side, that the whole sentence is false in these rows.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-126.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The rest of the truth table probably requires more thought ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_153/slide-127.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... so here's one I made earlier.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{A ∧ B ∨ C: They Are Different}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{A ∧ B ∨ C: They Are Different}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_154/slide-128.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">OK, so we have the truth tables. Where do they differ?</div>
+        <div data-src="img/arg1_unit_153.png" class="img handout"></div>
+        <div data-src="img/arg2_unit_153.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-129.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The truth-tables differ in rows five and seven only.</div>
+        <div class="notes">So the only difference between these two sentences is the brackets, but 
+this difference means that the two sentences differ in truth-value.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-130.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This also makes a difference to their role in arguments, of course.</div>
+        <div class="notes">Which of these arguments is logically valid?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-131.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Recall that for an argument to be logically valid is for ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-132.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now in the case of truth-tables, for an argument to be logically valid amounts to there being no row of the truth-table where the premise is true and the conclusion false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-133.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Consider the first argument.  Is this valid?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-134.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here's the premise and here's the conclusion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-135.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">(Let's have some numbers so you can see which lines I'm talking about.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-136.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What happens in line five?  Here we have true premise and false conclusion. </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-137.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So the argument is not valid, and this row is a counterexample to the argument.</div>
+        <div class="notes">If someone asks you for a counterexample, what do you have to write?
 Just this : A false, B true and C true.  That's is: you've specified a possibile situation
-in which the premises are true and the conclusion false, and that's what a counterexample is.</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-138.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now look at argument 2.  Here the premise and conclusion columns are the other way around.</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-139.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">In the last five rows, the premise is false.  So we can ignore these because 
-we won't find a true premise AND a false conclusion where the premise is false.'</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-140.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What about the top three rows?</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-141.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">    In the top three rows, the premise is true ...</div></div></div></div></section><section class="slide"><img src="/img/unit_154/slide-142.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... but so is the conclusion.</div><div class="notes">So this second argument is clearly logically valid.</div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">(A ∧ B) ∨ C </p><p class="center">vs</p><p class="center">A ∧ (B ∨ C)</p><div class="notes">This ends my discussion of these two sentences.
+in which the premises are true and the conclusion false, and that's what a counterexample is.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-138.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now look at argument 2.  Here the premise and conclusion columns are the other way around.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-139.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">In the last five rows, the premise is false.  So we can ignore these because 
+we won't find a true premise AND a false conclusion where the premise is false.'
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-140.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What about the top three rows?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-141.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">    In the top three rows, the premise is true ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_154/slide-142.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... but so is the conclusion.</div>
+        <div class="notes">So this second argument is clearly logically valid.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">(A ∧ B) ∨ C </p>
+          <p class="center">vs</p>
+          <p class="center">A ∧ (B ∨ C)</p>
+          <div class="notes">This ends my discussion of these two sentences.
 Although they differ only with respect to brackets, they have different truth-tables 
-and so contribute differently to the validity or not of arguments.</div><div class="notes">There's a simple message and a complex one.
+and so contribute differently to the validity or not of arguments.
+          </div>
+          <div class="notes">There's a simple message and a complex one.
 The simple message is that the brackets matter.
 The complex one is that we have more work to do in explaining our formal language, FOL.
 We have more work to do because we haven't yet said what the brackets mean, 
 although it's clear that they contribute to the meanings of sentences of FOL.
 What is the counterpart of a truth-table for brackets?
 In this course we don't have time to worry about this question; we must leave the meaning
-of the brackets as something that you get only implicitly.</div></div></div></div></div></section><div class="exercises">3.14, 3.15</div><div class="exercises_fast">3.14, 3.15</div><div class="exercises_fast">7.2, 7.5, 7.6</div></div></body></html>
+of the brackets as something that you get only implicitly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">3.14, 3.15</div>
+<div class="exercises_fast">3.14, 3.15</div>
+<div class="exercises_fast">7.2, 7.5, 7.6</div>
+    </div>
+  </body>
+</html>

@@ -1,27 +1,4 @@
 
-
-- get_unit = function(unit_num) {
-  - var extract = (unit_num+'').match(/^unit_([0-9]*)/);
-  - if(extract){
-    - unit_num = extract[1];
-  - };
-  - var d = getCollection("documents").findAll({url:'/units/unit_'+unit_num+'.html'},[{year:-1,sort_order:1}]).toJSON();
-  - if (d && d[0]) {
-    - if (document.units && document.units.indexOf(unit_num)==-1) {
-      - document.units.push(unit_num);
-    - }
-  - } else {
-    - // non-numeric unit
-    - d = getCollection("documents").findAll({url:'/units/'+unit_num+'.html'},[{year:-1,sort_order:1}]).toJSON();
-  - }
-  - var unit = d[0]
-  - if( !unit ) {
-    - console.log(' ')
-    - console.log('*** missing unit: '+p.unit)
-  - }
-  - return unit;
-- };
-
 //- wrap a list so that it has a next() method that cycles through the elements
 - wrap_list = function(lst) {
 -   var res = { list:lst, counter:-1 };
