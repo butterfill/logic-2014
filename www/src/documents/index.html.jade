@@ -32,10 +32,10 @@ html
       .span4(style='border-left: 1px dotted grey; border-right: 1px dotted grey;margin-right: -1px;margin-left: -1px;')
         #extras(style="padding-right:1em;padding-left:1em")
           h2 Exercises & Extras
-          p Exercises are set on the handouts for each lecture (links below).  There is also a summary list of exercises set:
+          p Exercises are set for subtopics of each lecture (links below).  You can also find a summary of all exercises set on logic-ex:
           ul
             li 
-              a(href='/index_exercises.html') exercises set
+              a(href='http://logic-ex.butterfill.com/courses') logic-ex
           p Other:
           ul
             li
@@ -73,7 +73,7 @@ html
         //- now do a section for each lecture
         each lecture in getCollection("normal_lectures").toJSON()
           div(id='#{lecture.basename}')
-            .page-header
+            div(style="margin-top:2em")
               h2: a(href='#{lecture.url}',target='_blank') #{lecture.title}
               if lecture.lecture_date
                 p Date given: #{moment(lecture.lecture_date).format('dddd Do MMMM YYYY')}
@@ -81,6 +81,12 @@ html
                 a(href='#{lecture.url}',target='_blank') slides
                 |  , 
                 a(href='/handouts/#{lecture.basename}.handout.pdf',target='_blank') handout [pdf]
+              p Exercises for this lecture:
+              ul
+                li
+                  a(target="_blank", href="http://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-normal/lecture/#{lecture.subtitle || lecture.title}") regular exercises
+                li
+                  a(target="_blank", href="http://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-fast/lecture/#{lecture.subtitle || lecture.title}") fast exercises
               
               .units(style='border-left: 1px dotted grey;margin-left: -1px;')
                 div(style="padding-left:2em;")
@@ -98,6 +104,16 @@ html
                       p #{unit.description}
                       if unit.book && unit.book.length > 0 
                         p Reading:  §#{unit.book.join(', §')}
+                      
+                      //- exercises
+                      if unit.exNormal && unit.exNormal.length > 0
+                        p 
+                          a(target="_blank", href="http://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-normal/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises (regular)
+                      if unit.exFast && unit.exFast.length > 0
+                        p 
+                          a(target="_blank", href="http://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-fast/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises (fast)
                       if unit.exercises && unit.exercises.length > 0 
-                        p Exercises (regular): #{unit.exercises.join(', ')}
+                        p Alternative textbook exercises (regular): #{unit.exercises.join(', ')}
+                      if unit.exercises_fast && unit.exercises_fast.length > 0
+                        p Alternative textbook exercises (fast): #{unit.exercises_fast.join(', ')}
             

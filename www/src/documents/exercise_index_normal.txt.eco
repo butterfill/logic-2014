@@ -1,1 +1,0 @@
-<%- JSON.stringify(@getNormalEx(),null,2)  %>

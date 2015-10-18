@@ -1,4 +1,4 @@
----
+---cson
 layout: 'deck_units' 
 title: "There Does Not Exist"
 tags: ['translation','quantification']
@@ -9,6 +9,37 @@ duration: 5
 book: []
 exercises_fast: ['9.18--9.19']
 exercises: ['9.12']
+exNormal:[
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1/sentence/Ayesha is happy'
+  '/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is happy'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Crying1/sentence/Ayesha is happy and crying'
+  '/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is happy and crying'
+  '/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is neither happy nor crying'
+  '/ex/create/qq/exists (x) Crying(x)'
+  '/ex/create/orValid/from/exists (x) (Happy(x) and Crying(x))/to/Happy(a) and Crying(a)'
+  '/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is not happy'
+  '/ex/trans/domain/people/names/-/predicates/Happy1/sentence/No one is happy'
+  '/ex/trans/domain/people/names/-/predicates/Broken1/sentence/Everyone is not broken'
+  '/ex/trans/domain/people/names/-/predicates/Broken1/sentence/Not everything is broken'
+  '/ex/proof/orInvalid/from/not exists x Dead(x)/to/exists x not Dead(x)'
+  '/ex/proof/orInvalid/from/exists x not Dead(x)/to/not exists x Dead(x)'
+  '/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)'
+  '/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)'
+]
+exFast:[
+  '/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is happy and crying'
+  '/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is neither happy nor crying'
+  '/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is not happy'
+  '/ex/trans/domain/people/names/-/predicates/Happy1/sentence/No one is happy'
+  '/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Everything is not broken'
+  '/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Not everything is broken'
+  '/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Not everything red is broken'
+  '/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Everything red is not broken'
+  '/ex/proof/orInvalid/from/not exists x Dead(x)/to/exists x not Dead(x)'
+  '/ex/proof/orInvalid/from/exists x not Dead(x)/to/not exists x Dead(x)'
+  '/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)'
+  '/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)'
+]
 ---
 
 include ../../../fragments/slide_mixins

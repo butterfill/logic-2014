@@ -1,7 +1,7 @@
 {
   "courseName": "UK_W20_PH126",
-  "variant": "fast",
-  "description": "These exercises are aimed at students with a qualification equivalent to further maths at A-Level.",
+  "variant": "fast-normal",
+  "description": "These exercises are aimed at students who want to do plenty of standard exercises.  They are linked to the ‘fast’ lectures.",
   "lectures": [
     {
       "type": "lecture",
@@ -16,6 +16,10 @@
           "rawReading": [],
           "rawExercises": [
             "/ex/q/define ‘logically valid argument’",
+            "/ex/TorF/from/Either the pig went up the left fork or it went up the right fork|The pig didn’t go up the left fork/to/The pig went up the right fork/qq/The argument is logically valid",
+            "/ex/TorF/from/A or B|not A/to/B/qq/The argument is logically valid",
+            "/ex/TorF/from/The pig didn’t go up the left fork/to/The pig went up the right fork/qq/The argument is logically valid",
+            "/ex/TorF/from/not A/to/B/qq/The argument is logically valid",
             "/ex/TorF/qq/in the sentence ‘John is square or Ayesha is triangular’, the word ‘John’ is a name|in the same sentence, ‘square’ is a predicate|in the same sentence, ‘square’ is a connective|in the same sentence, ‘or’ is a predicate|in the same sentence, ‘or’ is a connective"
           ]
         },
@@ -27,8 +31,11 @@
             "2.1"
           ],
           "rawExercises": [
+            "/ex/TorF/qq/a logically valid argument cannot have a false conclusion|a logically valid argument cannot have false premises",
+            "/ex/TorF/from/Ayesha is a fish|Ayesha cannot swim/to/Ayesha is a fish who cannot swim/qq/The argument is logically valid",
             "/ex/TorF/from/Ayesha is a fish|Beatrice is not a fish/to/Ayesha isn’t Beatrice/qq/The argument is logically valid",
             "/ex/TorF/from/Most fish swim|Ayesha is a fish/to/Ayesha swims/qq/The argument is logically valid",
+            "/ex/TorF/from/All fish swim|Ayesha is a fish/to/Ayesha swims/qq/The argument is logically valid",
             "/ex/TorF/from/If Beatrice is a fish, she can swim|Beatrice is a fish/to/Beatrice can swim/qq/The argument is logically valid",
             "/ex/TorF/from/If Ayesha is a bird, she can fly|Ayesha can fly/to/Ayesha is a bird/qq/The argument is logically valid",
             "/ex/TorF/from/Ayesha can fly|Beatrice can swim/to/Ayesha isn’t Beatrice/qq/The argument is logically valid",
@@ -94,7 +101,44 @@
       "name": "Fast Lecture 06",
       "slides": "http://logic-1.butterfill.com/fastlecture_06.html",
       "handout": "http://logic-1.butterfill.com/handouts/fastlecture_06.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "There Does Not Exist",
+          "slides": "http://logic-1.butterfill.com/units/unit_605.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1/sentence/Ayesha is happy",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is happy",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Crying1/sentence/Ayesha is happy and crying",
+            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is happy and crying",
+            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is neither happy nor crying",
+            "/ex/create/qq/exists (x) Crying(x)",
+            "/ex/create/orValid/from/exists (x) (Happy(x) and Crying(x))/to/Happy(a) and Crying(a)",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is not happy",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/No one is happy",
+            "/ex/trans/domain/people/names/-/predicates/Broken1/sentence/Everyone is not broken",
+            "/ex/trans/domain/people/names/-/predicates/Broken1/sentence/Not everything is broken",
+            "/ex/proof/orInvalid/from/not exists x Dead(x)/to/exists x not Dead(x)",
+            "/ex/proof/orInvalid/from/exists x not Dead(x)/to/not exists x Dead(x)",
+            "/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)",
+            "/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "↔ : truth tables and rules",
+          "slides": "http://logic-1.butterfill.com/units/unit_567.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/qq/A ↔ B",
+            "/ex/tt/from/A ↔ B/A arrow B",
+            "/ex/tt/qq/(A arrow B) ↔ not (A and not B)",
+            "/ex/proof/from/A ↔ B/to/B arrow A",
+            "/ex/proof/from/(not A or B)|(B arrow A)/to/A ↔ B"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",

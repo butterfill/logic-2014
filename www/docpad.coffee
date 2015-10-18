@@ -86,31 +86,45 @@ docpadConfig = {
         console.log('*** missing unit: '+unit_num)
       return unit
     
-    getNormalEx : () ->
+    getNormalNormalEx : () ->
       result = 
         'courseName' : 'UK_W20_PH126'
-        'variant' : 'normal'
-        'description' : 'These exercises are aimed at students who did not take a mathematical subject at A-Level or equivalent.'
+        'variant' : 'normal-normal'
+        'description' : 'These exercises are aimed at students who did not take a mathematical subject at A-Level or equivalent. They are linked to the ‘normal’ lectures.'
         'lectures' : @_getLectures(@getCollection("normal_lectures").toJSON(), 'exNormal')
       return result
-    getFastEx : () ->
+    getNormalFastEx : () ->
       result = 
         'courseName' : 'UK_W20_PH126'
-        'variant' : 'fast'
-        'description' : 'These exercises are aimed at students with a qualification equivalent to further maths at A-Level.'
+        'variant' : 'normal-fast'
+        'description' : 'These exercises are aimed at students with a qualification equivalent to further maths at A-Level.  They are linked to the ‘normal’ lectures.'
+        'lectures' : @_getLectures(@getCollection("normal_lectures").toJSON(), 'exFast')
+      return result
+    getFastNormalEx : () ->
+      result = 
+        'courseName' : 'UK_W20_PH126'
+        'variant' : 'fast-normal'
+        'description' : 'These exercises are aimed at students who want to do plenty of standard exercises.  They are linked to the ‘fast’ lectures.'
+        'lectures' : @_getLectures(@getCollection("fast_lectures").toJSON(), 'exNormal')
+      return result
+    getFastFastEx : () ->
+      result = 
+        'courseName' : 'UK_W20_PH126'
+        'variant' : 'fast-fast'
+        'description' : 'These exercises are aimed at students with a qualification equivalent to further maths at A-Level. They are linked to the ‘fast’ lectures.'
         'lectures' : @_getLectures(@getCollection("fast_lectures").toJSON(), 'exFast')
       return result
     getShortNormalEx : () ->
       result = 
         'courseName' : 'UK_W20_PH133'
-        'variant' : 'short'
+        'variant' : 'normal'
         'description' : 'These exercises are aimed at students taking the logic part of PH133 (Introduction to Philosophy).'
         'lectures' : @_getLectures(@getCollection("short_lectures").toJSON(), 'exNormal')
       return result
     getShortFastEx : () ->
       result = 
         'courseName' : 'UK_W20_PH133'
-        'variant' : 'short'
+        'variant' : 'fast'
         'description' : 'These exercises are aimed at students with a qualification equivalent to further maths at A-Level taking the logic part of PH133 (Introduction to Philosophy).'
         'lectures' : @_getLectures(@getCollection("short_lectures").toJSON(), 'exFast')
       return result
@@ -123,7 +137,7 @@ docpadConfig = {
       for lecture in lectures
         lectureDoc = {
           'type' : 'lecture'
-          'name' : lecture.basename
+          'name' : lecture.subtitle || lecture.title
           'slides' : "#{baseurl}#{lecture.url}"
           'handout' : "#{baseurl}/handouts/#{lecture.basename}.handout.pdf"
           'units' : []
@@ -147,8 +161,16 @@ docpadConfig = {
     short_lectures: -> @getCollection('documents').findAll({basename:/^short_lecture_/}, [basename:1])
     fast_lectures: -> @getCollection('documents').findAll({basename:$startsWith:'fastlecture_'}, [basename:1])
     units: -> @getCollection('documents').findAll({url:/\/units\/unit_/}, [sequence:1])
-      
-      
+
+
+  events:
+    serverExtend: (opts) ->
+      # CORS
+      opts.server.use (req,res,next) ->
+        res.header 'Access-Control-Allow-Origin', '*'
+        res.header 'Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'
+        res.header 'Access-Control-Allow-Headers', 'Content-Type,X-Requested-With'
+        return next()
 }
 
 # Export our DocPad Configuration

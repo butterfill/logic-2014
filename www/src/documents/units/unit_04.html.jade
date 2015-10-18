@@ -20,7 +20,9 @@ exNormal: [
   '/ex/q/define ‘counterexample’'
   '/ex/create/from/LeftOf(a,b)|RightOf(b,c)/to/LeftOf(a,c)'
   '/ex/create/from/LeftOf(a,b)|Adjacent(b,c)/to/LeftOf(a,c)'
-  '/ex/create/from/not LeftOf(a,b)|not LeftOf(b,a)/to/a=b'
+  '/ex/create/orValid/from/LeftOf(a,b)|LeftOf(b,c)/to/LeftOf(a,c)'
+  '/ex/create/orValid/from/SameSize(a,b)|SameShape(b,c)/to/SameSize(a,c)'
+  '/ex/create/orValid/from/not LeftOf(a,b)|not LeftOf(b,a)/to/a=b'
 ]
 exFast: [
   '/ex/create/from/TallerThan(a,b)/to/WiderThan(a,b)'
@@ -33,7 +35,9 @@ exFast: [
   '/ex/q/define ‘counterexample’'
   '/ex/create/from/LeftOf(a,b)|RightOf(b,c)/to/LeftOf(a,c)'
   '/ex/create/from/LeftOf(a,b)|Adjacent(b,c)/to/LeftOf(a,c)'
-  '/ex/create/from/not LeftOf(a,b)|not LeftOf(b,a)/to/a=b'
+  '/ex/create/orValid/from/LeftOf(a,b)|LeftOf(b,c)/to/LeftOf(a,c)'
+  '/ex/create/orValid/from/SameSize(a,b)|SameShape(b,c)/to/SameSize(a,c)'
+  '/ex/create/orValid/from/not LeftOf(a,b)|not LeftOf(b,a)/to/a=b'
 ]
 ---
 
