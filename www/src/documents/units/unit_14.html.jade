@@ -8,9 +8,23 @@ source: ['ph126 fastlecture 01']
 sequence: 150
 book: ['4.3']
 exercises: ['5.1-5.4']
+exNormal: [
+  '/ex/tt/from/A or B|not A/to/B'
+  '/ex/tt/from/A or B|B/to/not A'
+  '/ex/tt/from/not A or not B|A/to/not B'
+  '/ex/tt/from/not (A or B)/to/not A'
+  '/ex/tt/from/not (A and B)/to/not A'
+]
+exFast: [
+  '/ex/tt/from/A or B|not A/to/B'
+  '/ex/tt/from/not (A or B)/to/not A'
+  '/ex/tt/from/not (A and B)/to/not A'
+]
 ---
 
 include ../../../fragments/unit_mixins
+
+//-  TODO: extend to add another example where you specify which rows are counterexamples!
 
 //- the slides
 +slide_middle

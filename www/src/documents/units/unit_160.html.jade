@@ -1,7 +1,7 @@
 ---cson
 layout: 'deck_units' 
-title: "Tautologies and Contradictions"
-description: "Illustrates and defines the terms 'tautology' and 'contradiction'.  Explains how they interact with the notion of logical validity using two arguments to illustrate.  Continues the use of truth-tables to demonstrate logical validity. Notes that logical validity is not what you think it is."
+title: "Contradictions, Logical Truths and Logical Possibilities"
+description: "Illustrates and defines the terms ‘contradiction’, ‘logical truth’ and ‘logical possibility’.  Explains how the first two of these interact with the notion of logical validity using two arguments to illustrate.  Continues the use of truth-tables to demonstrate logical validity. Notes that logical validity is not what you think it is."
 tags: ['truth-tables'] 
 depends: ['unit_071','unit_09']
 source: ['ph126 fastlecture 01']
@@ -9,11 +9,23 @@ sequence: 250
 book: ['4.1', '4.2']
 exercises_fast: ['4.1, 4.2', '4.12--4.16']
 exercises: ['4.1, 4.2']
+exNormal: [
+  '/ex/tt/qq/A or not A'
+  '/ex/tt/qq/(A or B) or not A'
+  '/ex/tt/qq/(A and B) or not A'
+  '/ex/tt/qq/(A and B) and not A'
+]
+exFast: [
+  '/ex/tt/qq/A or not A'
+  '/ex/tt/qq/(A and B) and not A'
+  '/ex/tt/qq/(A or not B) and not (A or not A)'
+]
 ---
 
 include ../../../fragments/unit_mixins
 
-
+//- TODO: tautology TO logical truth
+//- TODO: be sure to explain logical possibility
 
 +slide({bkg:'unit_160/slide-142.jpeg'})
   .notes 

@@ -59,6 +59,38 @@
       "units": [
         {
           "type": "unit",
+          "name": "Identity",
+          "slides": "http://logic-1.butterfill.com/units/unit_06.html",
+          "rawReading": [
+            "2.2"
+          ],
+          "rawExercises": [
+            "/ex/create/orValid/from/LeftOf(a,b)|b=c/to/LeftOf(a,c)",
+            "/ex/create/orValid/from/a=b/to/not SameSize(a,b)",
+            "/ex/create/orValid/from/not SameShape(a,b)/to/a=b",
+            "/ex/create/orValid/from/a=b|b=c/to/a=c",
+            "/ex/create/orValid/from/SameSize(a,b)|SameShape(a,b)/to/a=b"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Truth Tables",
+          "slides": "http://logic-1.butterfill.com/units/unit_071.html",
+          "rawReading": [
+            "3.1",
+            "3.2",
+            "3.3"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/A or B",
+            "/ex/TorF/world/[{\"x\":9,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\"}:\",\"^\",\"D\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"pink\",\"f\":[\":'\",\"-\",\"D\"]},{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"purple\",\"f\":[\":'\",\"-\",\"(\"]}]/qq/Happy(a)|not Happy(b)|not not Happy(a)|not not not Happy(a)|not not not not Happy(a)",
+            "/ex/create/qq/Laughing(c)|Frowning(d)",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"c\",\"c\":\"cyan\",\"f\":[\":\",\">\",\"D\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"d\",\"c\":\"orange\",\"f\":[\"}:\",\"-\",\"|\"]}]/qq/Laughing(c)|Frowning(d)|Laughing(c) and Frowning(d)|Laughing(c) or Frowning(d)",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"c\",\"c\":\"cyan\",\"f\":[\":\",\">\",\"D\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"d\",\"c\":\"orange\",\"f\":[\"}:\",\"-\",\"|\"]}]/qq/Frowning(d)|not Frowning(d)|Laughing(c) and not Frowning(d)|not (Laughing(c) and not Frowning(d))"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Complex Truth Tables",
           "slides": "http://logic-1.butterfill.com/units/unit_60.html",
           "rawReading": [],
@@ -74,14 +106,110 @@
       "name": "Lecture 03",
       "slides": "http://logic-1.butterfill.com/lecture_03.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_03.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Logical Validity and Truth Tables",
+          "slides": "http://logic-1.butterfill.com/units/unit_14.html",
+          "rawReading": [
+            "4.3"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/A or B|not A/to/B",
+            "/ex/tt/from/not (A or B)/to/not A",
+            "/ex/tt/from/not (A and B)/to/not A"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Formal Proof: ∧Elim and ∧Intro",
+          "slides": "http://logic-1.butterfill.com/units/unit_21.html",
+          "rawReading": [
+            "5.1",
+            "6.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/Happy(a) and Sad(b)|Sad(b) and Confused(c)/to/Happy(a) and Confused(c)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Rules of Proof for Identity",
+          "slides": "http://logic-1.butterfill.com/units/unit_110.html",
+          "rawReading": [
+            "2.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/Happy(a)|a=b/to/Happy(b)",
+            "/ex/proof/from/LeftOf(a,b)|Happy(b)|a=b/to/LeftOf(b,a) and Happy(a)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Complex Truth Tables",
+          "slides": "http://logic-1.butterfill.com/units/unit_09.html",
+          "rawReading": [
+            "3.3",
+            "3.5"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/(A and B) or C",
+            "/ex/tt/qq/A and (B or C)",
+            "/ex/create/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))",
+            "/ex/tt/qq/A|not not A",
+            "/ex/tt/qq/not (A or B)|not A and not B",
+            "/ex/tt/qq/not (A and not B)|not A or B",
+            "/ex/tt/qq/not (not A and B)|(A and not B)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Logic Makes Me Die Inside",
+          "slides": "http://logic-1.butterfill.com/units/unit_161.html",
+          "rawReading": [
+            "2.1"
+          ],
+          "rawExercises": [
+            "/ex/TorF/from/The planet is approximately round/to/I am a biscuit/qq/The argument is logically valid",
+            "/ex/TorF/from/not a=a/to/B/qq/The argument is logically valid|There is a possible situation in which the premises are true|There is a possible situation in which the argument is sound",
+            "/ex/tt/from/A and not A/to/B",
+            "/ex/tt/from/B/to/A or not A",
+            "/ex/tt/from/A and not A/to/B and not B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Contradictions, Logical Truths and Logical Possibilities",
+          "slides": "http://logic-1.butterfill.com/units/unit_160.html",
+          "rawReading": [
+            "4.1",
+            "4.2"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/A or not A",
+            "/ex/tt/qq/(A and B) and not A",
+            "/ex/tt/qq/(A or not B) and not (A or not A)"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",
       "name": "Lecture 04",
       "slides": "http://logic-1.butterfill.com/lecture_04.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_04.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "The Storm Clouds on the Horizon Were Getting Nearly Directly Overhead",
+          "slides": "http://logic-1.butterfill.com/units/unit_162.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/from/The storm clouds on the horizon were getting nearly directly overhead/to/those who enter the country illegally violate the law/qq/the argument is valid|the argument is sound",
+            "/ex/TorF/qq/If there’s no possible situation in which the premises of an argument are all true, it must be logically valid|If there’s no possible situation in which the premises of an argument are all true, it cannot be logically valid|If there is no possible situation in which the conclusion of an argument is false, it must be logically valid|If there is no possible situation in which the conclusion of an argument is false, it cannot be logically valid|If there’s no possible situation in which the premises of an argument are all false, it must be logically valid|If there’s no possible situation in which the premises of an argument are all false, it cannot be logically valid"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",

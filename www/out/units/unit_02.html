@@ -5,8 +5,8 @@
     <meta charset="utf-8"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Quick Intro to FOL | Logic I</title>
-    <meta name="description" content="Gives some examples of the formal language FOL and explains their relation to ordinary English.  Also explains terms like 'name' and 'predicate'."/>
+    <title>Quick Intro to awFOL | Logic I</title>
+    <meta name="description" content="Gives some examples of the formal language awFOL and explains their relation to ordinary English.  Also explains terms like 'name' and 'predicate'."/>
     <meta name="keywords" content="logic, truth, logical validity"/>
     <meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" />
     <meta name="viewport" content="width=device-width"/>
@@ -103,7 +103,7 @@ var inject = function(){
         <div class="spacer">&nbsp;</div>
         <div style="" class="title-block">
           <div class="title-container">
-            <h2 class="title1">Quick Intro to FOL</h2>
+            <h2 class="title1">Quick Intro to awFOL</h2>
           </div>
         </div>
       </section>
@@ -120,7 +120,7 @@ var inject = function(){
 <section class="slide">
   <div class="handout"></div>
   <div data-src="img/name_predicate_sentence.png" class="img handout"></div>
-  <div class="notes"><t:022682377928867936></t:022682377928867936>
+  <div class="notes"><t:017181982076726854></t:017181982076726854>
   </div> 
   <div class="words">
     <div class="container_12">
@@ -142,10 +142,16 @@ var inject = function(){
       </div>
     </div>
   </div>
-  <div class="notes">Our approach to studying logic will involve a formal language called FOL.
-`FOL' stands for first order language.
+  <div class="notes">Our approach to studying logic will involve a formal language called awFOL.
+`FOL' stands for first order language, and I call this particular first-order language
+`awFOL` because, like nearly all first-order languages used in textbooks, it’s awful.
+(Where are the binary quantifiers?  Why are brackets used with two completely
+different meanings?  ...)
   </div>
-  <div class="notes">'FOL' is a really stupid name  because there are lots of first-order languages.
+  <div class="notes">The language of the textbook is called ‘FOL’.
+‘awFOL’ is basically the same as FOL except that you can replace symbols with
+words which makes typing it easier.
+Also 'FOL' is a really stupid name  because there are lots of first-order languages.
 It's a bit like I ask you what language you speak and instead of saying
 'Farsi' or 'English' or 'Cantonese' you say 'Language, I speak Language'.
 But this is trivial, it doesn't really matter what you call things.  Let's move on.
@@ -227,13 +233,13 @@ A connective is anything that you can combine with zero or more sentences and to
   <div data-what=".second-example, .third-example" class="slide anim-continue anim-fade"></div>
   <div data-what=".second-example, .third-example" data-attr="-webkit-filter:blur(2px)" class="slide anim-continue anim-attribute"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-  <div class="notes">Now let's see how these sentences look in our formal language, FOL.</div>
+  <div class="notes">Now let's see how these sentences look in our formal language, awFOL.</div>
   <div data-what=".first-example-fol" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-  <div class="notes">Here's how the equivalent of 'John is square' looks in FOL.</div>
+  <div class="notes">Here's how the equivalent of 'John is square' looks in awFOL.</div>
   <div data-what=" .first-example-fol, .atomic-sentence" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-addclass"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-  <div class="notes">The whole thing is a sentence of FOL.</div>
+  <div class="notes">The whole thing is a sentence of awFOL.</div>
   <div data-what=" .first-example-fol" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-removeclass"></div>
   <div data-what=" .first-example-fol .name" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
@@ -246,10 +252,10 @@ A connective is anything that you can combine with zero or more sentences and to
   <div data-what=".second-example" class="slide anim-continue anim-show"></div>
   <div data-what=".second-example" data-attr="-webkit-filter:blur(0)" class="slide anim-continue anim-attribute"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-  <div class="notes">What about 'John is to the left of Ayesha', how can we say something like this in FOL?</div>
+  <div class="notes">What about 'John is to the left of Ayesha', how can we say something like this in awFOL?</div>
   <div data-what=".second-example-fol" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-  <div class="notes">Here's the equivalent of 'John is to the left of Ayesha in FOL'</div>
+  <div class="notes">Here's the equivalent of 'John is to the left of Ayesha in awFOL'</div>
   <div data-what=" .second-example-fol .name" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
   <div class="notes">Again, the single letters a and b are names.</div>
@@ -264,7 +270,7 @@ It affects who we are saying is to the left of who.
   <div data-what=".third-example" class="slide anim-continue anim-show"></div>
   <div data-what=".third-example" data-attr="-webkit-filter:blur(0)" class="slide anim-continue anim-attribute"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-  <div class="notes">Lastly, what is the equivalent of the third sentence in FOL?</div>
+  <div class="notes">Lastly, what is the equivalent of the third sentence in awFOL?</div>
   <div data-what=".third-example-fol" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
   <div class="notes">Much as you would expect.</div>
@@ -291,7 +297,7 @@ This symbol doesn't do exactly what the English 'or' does, as we'll see later.
   <div data-what=" .first-example" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
   <div data-what=" .first-example-fol" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
   <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-  <div class="notes">... a lot like this FOL sentence.  What's the point of learning a formal language?  
+  <div class="notes">... a lot like this awFOL sentence.  What's the point of learning a formal language?  
 How will it help us to understand logic?
   </div>
   <div class="notes">(It's a bit tricky to answer this question as I haven't yet said what logic is.)</div>

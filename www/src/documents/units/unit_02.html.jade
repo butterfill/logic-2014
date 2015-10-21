@@ -1,7 +1,7 @@
 ---cson
 layout: 'deck_units' 
-title: "Quick Intro to FOL"
-description: "Gives some examples of the formal language FOL and explains their relation to ordinary English.  Also explains terms like 'name' and 'predicate'."
+title: "Quick Intro to awFOL"
+description: "Gives some examples of the formal language awFOL and explains their relation to ordinary English.  Also explains terms like 'name' and 'predicate'."
 tags: ['definitions']
 depends: []
 source: ['ph126 lecture 01', 'ppe lecture 01']
@@ -124,10 +124,16 @@ section.slide
         span.non-atomic-sentence.hide non-atomic sentence
         span.non-atomic-sentence-df.hide  (contains connectives)
   .notes: :t()
-    Our approach to studying logic will involve a formal language called FOL.
-    `FOL' stands for first order language.
+    Our approach to studying logic will involve a formal language called awFOL.
+    `FOL' stands for first order language, and I call this particular first-order language
+    `awFOL` because, like nearly all first-order languages used in textbooks, it’s awful.
+    (Where are the binary quantifiers?  Why are brackets used with two completely
+    different meanings?  ...)
   .notes: :t()
-    'FOL' is a really stupid name  because there are lots of first-order languages.
+    The language of the textbook is called ‘FOL’.
+    ‘awFOL’ is basically the same as FOL except that you can replace symbols with
+    words which makes typing it easier.
+    Also 'FOL' is a really stupid name  because there are lots of first-order languages.
     It's a bit like I ask you what language you speak and instead of saying
     'Farsi' or 'English' or 'Cantonese' you say 'Language, I speak Language'.
     But this is trivial, it doesn't really matter what you call things.  Let's move on.
@@ -203,11 +209,11 @@ section.slide
   //- fol 
   +fade_('.second-example, .third-example')
   +blur2('.second-example, .third-example')
-  .notes Now let's see how these sentences look in our formal language, FOL.
+  .notes Now let's see how these sentences look in our formal language, awFOL.
   +show('.first-example-fol')
-  .notes Here's how the equivalent of 'John is square' looks in FOL.
+  .notes Here's how the equivalent of 'John is square' looks in awFOL.
   +highlight('.first-example-fol, .atomic-sentence', 'lime')  
-  .notes The whole thing is a sentence of FOL.
+  .notes The whole thing is a sentence of awFOL.
   +unhighlight_('.first-example-fol', 'lime')
   +highlight('.first-example-fol .name', 'pink')
   .notes The letter 'a' is a name; just like the English name 'John', the function of 'a' is to refer to an object (in this case, John)
@@ -219,9 +225,9 @@ section.slide
   +fade_('.first-example, .first-example-fol')
   +unfade_('.second-example')
   +unblur2('.second-example')
-  .notes What about 'John is to the left of Ayesha', how can we say something like this in FOL?
+  .notes What about 'John is to the left of Ayesha', how can we say something like this in awFOL?
   +show('.second-example-fol')
-  .notes Here's the equivalent of 'John is to the left of Ayesha in FOL'
+  .notes Here's the equivalent of 'John is to the left of Ayesha in awFOL'
   +highlight('.second-example-fol .name', 'pink')
   .notes Again, the single letters a and b are names.
   +highlight('.second-example-fol .predicate', 'blue')
@@ -235,7 +241,7 @@ section.slide
   +blur2_('.second-example, .second-example-fol')
   +unfade_('.third-example')
   +unblur2('.third-example')
-  .notes Lastly, what is the equivalent of the third sentence in FOL?
+  .notes Lastly, what is the equivalent of the third sentence in awFOL?
   +show('.third-example-fol')
   .notes Much as you would expect.
   +highlight('.third-example-fol, .non-atomic-sentence', 'orange')
@@ -259,7 +265,7 @@ section.slide
   +unhighlight-row_('.first-example')
   +highlight-row('.first-example-fol')
   .notes: :t()
-    ... a lot like this FOL sentence.  What's the point of learning a formal language?  
+    ... a lot like this awFOL sentence.  What's the point of learning a formal language?  
     How will it help us to understand logic?
   .notes (It's a bit tricky to answer this question as I haven't yet said what logic is.)
 

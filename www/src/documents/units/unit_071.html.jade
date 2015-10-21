@@ -1,7 +1,7 @@
 ---cson
 layout: 'deck_units' 
 title: "Truth Tables"
-description: "Introduces truth tables for conjunction, disjunction and negation.  Truth tables give the meanings of connectives in our formal language FOL."
+description: "Introduces truth tables for conjunction, disjunction and negation.  Truth tables give the meanings of connectives in our formal language awFOL."
 tags: ['definitions']
 depends: []
 source: ['ph126 fastlecture 01']
@@ -9,6 +9,24 @@ sequence: 110
 book: ['3.1','3.2','3.3']
 exercises_fast: ['3.1, 3.3', '3.5, 3.7']
 exercises: ['3.1, 3.2', '3.5, 3.7']
+exNormal: [
+  '/ex/tt/noQ/qq/A and B'
+  '/ex/tt/noQ/qq/A or B'
+  '/ex/tt/noQ/qq/not A'
+  """/ex/TorF/world/[{"x":9,"y":0,"w":2,"h":2,"n":"a","c":"white","f":["}:","^","D"]},{"x":0,"y":0,"w":2,"h":2,"n":"b","c":"pink","f":[":\'","-","D"]},{"x":4,"y":0,"w":2,"h":2,"n":"","c":"purple","f":[":\'","-","("]}]/qq/Happy(a)|not Happy(b)|Happy(a) or Happy(b)"""
+  """/ex/TorF/world/[{"x":9,"y":0,"w":2,"h":2,"n":"a","c":"white","f":["}:","^","D"]},{"x":0,"y":0,"w":2,"h":2,"n":"b","c":"pink","f":[":\'","-","D"]},{"x":4,"y":0,"w":2,"h":2,"n":"","c":"purple","f":[":\'","-","("]}]/qq/Happy(a)|not Happy(b)|not not Happy(a)|not not not Happy(a)|not not not not Happy(a)"""
+  '/ex/create/qq/Laughing(c)|Frowning(d)'
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"c","c":"cyan","f":[":",">","D"]},{"x":7,"y":0,"w":2,"h":2,"n":"d","c":"orange","f":["}:","-","|"]}]/qq/Laughing(c)|Frowning(d)|Laughing(c) and Frowning(d)|Laughing(c) or Frowning(d)"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"c","c":"cyan","f":[":",">","D"]},{"x":7,"y":0,"w":2,"h":2,"n":"d","c":"orange","f":["}:","-","|"]}]/qq/Frowning(d)|not Frowning(d)|Laughing(c) and not Frowning(d)|not (Laughing(c) and not Frowning(d))"""
+]
+exFast: [
+  '/ex/tt/qq/A or B'
+  """/ex/TorF/world/[{"x":9,"y":0,"w":2,"h":2,"n":"a","c":"white","f":["}:","^","D"]},{"x":0,"y":0,"w":2,"h":2,"n":"b","c":"pink","f":[":\'","-","D"]},{"x":4,"y":0,"w":2,"h":2,"n":"","c":"purple","f":[":\'","-","("]}]/qq/Happy(a)|not Happy(b)|not not Happy(a)|not not not Happy(a)|not not not not Happy(a)"""
+  '/ex/create/qq/Laughing(c)|Frowning(d)'
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"c","c":"cyan","f":[":",">","D"]},{"x":7,"y":0,"w":2,"h":2,"n":"d","c":"orange","f":["}:","-","|"]}]/qq/Laughing(c)|Frowning(d)|Laughing(c) and Frowning(d)|Laughing(c) or Frowning(d)"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"c","c":"cyan","f":[":",">","D"]},{"x":7,"y":0,"w":2,"h":2,"n":"d","c":"orange","f":["}:","-","|"]}]/qq/Frowning(d)|not Frowning(d)|Laughing(c) and not Frowning(d)|not (Laughing(c) and not Frowning(d))"""
+]
+
 ---
 
 include ../../../fragments/unit_mixins

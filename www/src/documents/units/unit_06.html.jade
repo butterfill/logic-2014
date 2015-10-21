@@ -8,6 +8,22 @@ book: ['2.2']
 depends: []
 source: ['ph126 fastlecture 01']
 exercises: ['2.5, 2.6']
+exNormal: [
+  '/ex/create/orValid/from/White(a)|a=b/to/White(b)'
+  '/ex/create/orValid/from/a=b|b=c/to/a=c'
+  '/ex/create/orValid/from/LeftOf(a,b)|b=c/to/LeftOf(a,c)'
+  '/ex/create/orValid/from/SameSize(a,b)/to/a=b'
+  '/ex/create/orValid/from/a=b/to/SameSize(a,b)'
+  '/ex/create/orValid/from/SameSize(a,b)|SameShape(a,b)/to/a=b'
+]
+exFast: [
+  '/ex/create/orValid/from/LeftOf(a,b)|b=c/to/LeftOf(a,c)'
+  '/ex/create/orValid/from/a=b/to/not SameSize(a,b)'
+  '/ex/create/orValid/from/not SameShape(a,b)/to/a=b'
+  '/ex/create/orValid/from/a=b|b=c/to/a=c'
+  '/ex/create/orValid/from/SameSize(a,b)|SameShape(a,b)/to/a=b'
+]
+
 ---
 
 include ../../../fragments/unit_mixins
