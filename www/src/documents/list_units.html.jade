@@ -23,7 +23,7 @@ each lecture in getCollection("lectures").toJSON()
 each unit in getCollection("units").toJSON()
   - unit_num = unit.basename.substr(5)
   h3 #{unit.sequence}: 
-    a(href="/units_grid/#{unit.outFilename}") #{unit.title}
+    a(href="/units/#{unit.outFilename}") #{unit.title}
     |  (#{unit_num})
   if !which_lecture[unit_num]
     p(style="background-color: red") Does not appear in any lecture.

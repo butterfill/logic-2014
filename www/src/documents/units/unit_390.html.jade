@@ -10,6 +10,33 @@ exercises: []
 exercises_fast: ['8.20--8.25']
 duration: 10
 sequence: 330
+exNormal: [
+  '/ex/create/qq/Happy(a)|Happy(a) arrow Happy(b)'
+  '/ex/proof/from/A and C|A arrow B/to/B'
+  '/ex/proof/from/A arrow B|B arrow C/to/A arrow C'
+  # Not allowed to ask about truth tables yet
+  # '/ex/tt/qq/A arrow A'
+  '/ex/proof/from/-/to/A arrow A'
+  
+  '/ex/proof/from/A|A arrow false/to/B'
+  '/ex/proof/from/A arrow not A|A/to/false'
+]
+
+exFast: [
+  '/ex/create/orValid/from/Sad(a) arrow Sad(b)|Sad(b) arrow Sad(c)/to/Sad(a) arrow Sad(c)'
+  '/ex/proof/orInvalid/from/Sad(a) arrow Sad(b)|Sad(b) arrow Sad(c)/to/Sad(a) arrow Sad(c)'
+  '/ex/proof/from/A|A arrow false/to/B'
+
+  '/ex/proof/from/-/to/A arrow A'
+  '/ex/proof/from/-/to/A arrow (B arrow A)'
+  '/ex/proof/from/-/to/not A arrow (A arrow B)'
+  
+  '/ex/create/orValid/from/Sad(a) arrow Sad(c)/to/(Sad(a) and Sad(b)) arrow Sad(c)'
+  '/ex/proof/orInvalid/from/Sad(a) arrow Sad(c)/to/(Sad(a) and Sad(b)) arrow Sad(c)'
+  '/ex/create/orValid/from/Tall(a) arrow Tall(c)/to/(Tall(a) or Tall(b)) arrow Tall(c)'
+  '/ex/proof/orInvalid/from/Tall(a) arrow Tall(c)/to/(Tall(a) or Tall(b)) arrow Tall(c)'
+  
+]
 ---
 
 

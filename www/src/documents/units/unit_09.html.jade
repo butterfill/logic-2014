@@ -15,19 +15,27 @@ exNormal: [
   '/ex/create/qq/(Happy(a) and Happy(b)) or Happy(c)|not (Happy(a) and (Happy(b) or Happy(c)))'
   '/ex/tt/qq/not (A and B)'
   '/ex/tt/qq/A|not not A'
+  '/ex/trans/domain/Tobin/names/a=Tobin/predicates/Ugly1/sentence/not not Ugly(a)'
   '/ex/tt/qq/not (A or B)|not A or not B'
+  '/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/not (Ugly(a) or Inept(b))'
   '/ex/tt/qq/not (A or B)|not A and not B'
+  '/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musician1-x-is-a-musician/sentence/It’s false that Tobin and Suzi are both musicians'
+  '/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/It’s false that Tobin is ugly and Suzi inept'
+  '/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musicial1/sentence/It’s false that Tobin isn’t musical and Suzi isn’t musical'
   '/ex/tt/qq/not (not A and not B)|(A and B)'
-  '/ex/tt/qq/(A and B) and C|A and (B and C)'
+  '/ex/create/from/not (not Happy(a) and not Happy(b))/to/(Happy(a) and Happy(b))'
 ]
 exFast: [
   '/ex/tt/qq/(A and B) or C'
   '/ex/tt/qq/A and (B or C)'
   '/ex/create/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))'
   '/ex/tt/qq/A|not not A'
+  '/ex/create/orValid/from/Happy(a)/to/not not Happy(a)'
   '/ex/tt/qq/not (A or B)|not A and not B'
   '/ex/tt/qq/not (A and not B)|not A or B'
+  '/ex/create/orValid/not (Sad(a) and not Sad(b))|not Sad(a) or Sad(b)'
   '/ex/tt/qq/not (not A and B)|(A and not B)'
+  '/ex/create/orValid/from/not (not Happy(a) and Happy(b))/to/(Happy(a) and not Happy(b))'
 ]
 ---
 

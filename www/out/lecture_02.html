@@ -384,7 +384,78 @@ possible situation; so this is no counterexample.
   <div class="words">
     <div class="container_12">
       <div class="grid_12">
-        <div class="notes"> </div>
+        <div class="slide">
+          <table class="fitch-proof">
+            <tr class="premise row-1">
+              <td><span class="highlight-hook">&#8203;</span></td>
+              <td>1.</td>
+              <td>
+                <p class="sentence">All cats are grey</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr class="premise row-2">
+              <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
+              <td>2.</td>
+              <td>
+                <p class="sentence">Catmando is grey</p>
+              </td>
+              <td></td>
+            </tr>
+            <tr class="line row-3">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td>3.</td>
+              <td><span class="sentence">Catmando is a cat</span></td>
+              <td>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="notes">‘Catmando, Joint leader of the Official Monster Raving Loony Party from 1999 to 2002.’
+This argument isn’t valid so of course it won’t be sound.
+Let’s fix that
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_041/slide-084.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <table class="fitch-proof">
+          <tr class="premise row-1">
+            <td><span class="highlight-hook">&#8203;</span></td>
+            <td>1.</td>
+            <td>
+              <p class="sentence">All cats are grey</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="premise row-2">
+            <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
+            <td>2.</td>
+            <td>
+              <p class="sentence">Catmando is a cat</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="line row-3">
+            <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+            <td>3.</td>
+            <td><span class="sentence">Catmando is grey</span></td>
+            <td>
+            </td>
+          </tr>
+        </table>
+        <div class="notes">‘Catmando, Joint leader of the Official Monster Raving Loony Party from 1999 to 2002.’
+Now the argument is valid, but is it sound?
+        </div>
+        <div data-what=" .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+        <div data-what=" .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
       </div>
     </div>
   </div>
@@ -453,7 +524,6 @@ possible situation; so this is no counterexample.
   </div>
 </section>
 <!-- unit: identity-->
-<!-- *notes didn't do this in 2012-3 but should have, I think-->
 <section id="unit_06" class="slide"><img src="/img/bkg/sweeden/P8184976.JPG" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
@@ -622,6 +692,170 @@ possible situation; so this is no counterexample.
     <div class="container_12">
       <div class="grid_12">
         <div class="notes">These principles are all you need to understand the logical notion of identity.  They allow you to do things like prove that identity is a symmetric and transitive relation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0027.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I want to show you quickly how to work with identity in logic-ex.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0028.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let’s add a person to the possible situation
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0029.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here I’ve added some names
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0029b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I’ve called one person ‘a’ and the other ‘b’.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0029c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Of course this makes the first sentence false, not true.
+How do I make it true?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0030.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Like this ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0030b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I’ve given one person both names.
+To give more than one name to a person, simply type multiple names
+separated by commas or spaces (or both), just as I’ve done here.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0030c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And this makes the sentence ‘a=b’ true, of course.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0030d.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But what about the next sentence, ‘not b=c’?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0030e.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">To make this true or false, I need to give someone the name c.
+I’m going to add that to the person already known as ‘a’ and ‘b’.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0031.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0031b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So here you see one person has all three names
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0031c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Of course this means the second sentence, ‘not b=c’ is false.
+We need to make that true.
+How are we going to do that?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0032.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let me re-arrange the names.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0032b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">You see that I’ve named the other, yellow person c.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_06/151023-0032c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And this is enough to make the second sentence true.
+        </div>
       </div>
     </div>
   </div>
@@ -1442,6 +1676,322 @@ In the case of natural language, meaning has to be discovered, not stipulated.
     </div>
   </div>
 </section>
+<section id="unit_065" class="slide"><img src="/img/bkg/sweeden/P8185091.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Contradictions, Logical Truths and Logical Possibilities</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Contradictions, Logical Truths and Logical Possibilities}</div>
+<div class="handout">\emph{Reading:}  §2.2</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Contradictions, Logical Truths and Logical Possibilities}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide">
+  <div style="z-index:-22;" class="right-half-white hide"></div>
+  <div class="container_12">
+    <div class="handout">A \emph{contradiction} is a sentence that is 
+false in all possible situations.
+    </div>
+    <div class="handout">A \emph{logical truth} is a sentence that is 
+true in all possible situations.
+    </div>
+    <div class="handout">A \emph{logical possibility} is a sentence that is 
+true in one or more possible situations.
+    </div>
+    <div class="grid_6 words left-half">
+      <div style="padding-right:1em;">
+        <p>contradiction</p>
+        <p class="em-above">A sentence that is <span class="truth-value">false</span><span> in all possible situations.</span></p>
+        <div class="slide">
+          <p class="em-above">E.g.</p>
+          <table class="truth-table">
+            <tr>
+              <td><span class="col-1">A</span></td>
+              <td class="result-col"><span class="result-col-1">A ∨ ¬A</span></td>
+            </tr>
+            <tr class="row-1">
+              <td><span class="highlight-hook">&#8203;</span><span>T</span>
+              </td>
+              <td class="result-col"><span class="result-col-1">T</span></td>
+            </tr>
+            <tr class="row-2">
+              <td><span class="highlight-hook">&#8203;</span><span>F</span>
+              </td>
+              <td class="result-col"><span class="result-col-1">T</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="grid_6 words invert right-half hide">
+      <div style="padding-left:1em;">
+        <div data-what=".right-half-white, .right-half" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <p>logical truth</p>
+        <p class="em-above">A sentence that is <span class="truth-value">true</span><span> in all possible situations.</span></p>
+        <div class="slide">
+          <p class="em-above">E.g.</p>
+          <table class="truth-table">
+            <tr>
+              <td><span class="col-1">A</span></td>
+              <td class="result-col"><span class="result-col-1">A ∧ ¬A</span></td>
+            </tr>
+            <tr class="row-1">
+              <td><span class="highlight-hook">&#8203;</span><span>T</span>
+              </td>
+              <td class="result-col"><span class="result-col-1">F</span></td>
+            </tr>
+            <tr class="row-2">
+              <td><span class="highlight-hook">&#8203;</span><span>F</span>
+              </td>
+              <td class="result-col"><span class="result-col-1">F</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div data-what=" .truth-value" data-class="bkg-words-highlight-invert" class="slide anim-continue anim-addclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+    <div data-what=" .truth-value" data-class="bkg-words-highlight-invert" class="slide anim-continue anim-removeclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+    <div class="slide">
+      <div class="clear"></div>
+      <div class="words">
+        <p class="center">logical possibility</p>
+        <p class="center">  a sentence that is true in one or more possible situations.</p>
+      </div>
+      <div class="container_12"></div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center"> <a href="http://logic-ex.butterfill.com/ex/tt/qq/A%20or%20not%20A">http://logic-ex.butterfill.com/ex/tt/qq/A or not A</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0033.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I’ll illustrate how this works in logic-ex.
+Let’s say we want to construct the truth table for A or not A.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0033b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The first thing I need is more rows, so I hit the circled plus thing.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0034.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now I’ve got a second row, and in this case two rows is enough.
+Time to start filling in values ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0035.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"><t:09729008020367473></t:09729008020367473>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0036.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I’m doing the reference columns first because these are always the same
+and I don’t need to work out what the values are.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0037.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now I have to enter the value of A or not A when A is true.
+You might be able to compute this in value in your head, but 
+that won’t always be the case.  I expect that, often, before 
+you enter a value in the table in logic-ex you will have taken
+a pencil and paper and worked out the truth table step by step.
+        </div>
+        <div class="notes">So what you enter will often be something that took quite a bit 
+of work to compute.
+        </div>
+        <div class="notes">Or you could just guess.  But this is not generally a good strategy
+because I take the view that a truth table is either right or wrong,
+and if you are really guessing you only have a 1/16 chance of being
+right for most truth tables.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0038.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Anyway, I think it’s true.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0039.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now for the last truth value.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0040.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This is also true.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0040b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We’re not done yet, we now have to say whether the 
+sentence is a contradiction.
+A \emph{contradiction} is a sentence that is 
+false in all possible situations.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0044.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This sentence isn’t 
+false in all possible situations ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0041.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... so it isn’t a contradiction.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0041b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Next we have to specify whether ‘A or not A’ is a logical truth.
+A \emph{logical truth} is a sentence that is 
+true in all possible situations.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0045.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This sentence is true in all possible situations ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0042.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... so this sentence is a logical truth.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0042b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Finally, we’re asked whether the sentence is a logical possibility.
+A \emph{logical possibility} is a sentence that is 
+true in one or more possible situations.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0044.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This sentence is true in at least one possible situation ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_065/151023-0043.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... so this sentence is a logical possibility.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">2.5, 2.6</div>
     </div>
   </body>
 </html>

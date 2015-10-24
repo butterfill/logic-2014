@@ -656,7 +656,18 @@ only toggle the notes panel for this cloned window.
   $d.bind('deck.init', function() {
     var opts = $[deck]('getOptions');
     var container = $[deck]('getContainer');
-      
+    
+    // notes can be specified in the url
+    var show_notes = (window.location.search.search(/[\?&]notes([&=]|$)/) != -1);
+    var large_notes = (window.location.search.search(/[\?&]largenotes([&=]|$)/) != -1);
+    if( large_notes ) {
+      $notesEl = $("."+$[deck]('getOptions').classes.notes);
+      $notesEl.toggleClass('large-format');
+    }
+    if( show_notes || large_notes) {
+      $[deck]('toggleNotes');
+    }
+    
     // Bind key events 
     $d.unbind('keydown.decknotes').bind('keydown.decknotes', function(e) {
       if (e.which === opts.keys.notes || $.inArray(e.which, opts.keys.notes) > -1) {
@@ -748,30 +759,30 @@ only toggle the notes panel for this cloned window.
 			}
 		});
 
-    // add exercises to the end of the handout
-    var $exercises = $('.deck-container .exercises');
-    if( document.title.match(/^Fast/) ) {
-      var $exercises = $('.deck-container .exercises_fast');
-    }
-    if( $exercises.length > 0 ) {
-			$handoutContainer.append("<div>\\vfill</div>")
-			$handoutContainer.append("<div>\\begin{minipage}{\\columnwidth}</div>")
-			$handoutContainer.append("<div>\\section{Exercises}</div>")
-			$handoutContainer.append("<div>These exercises will be discussed in seminars the week after this lecture.</div>")
-			$handoutContainer.append("<div>The numbers below refer to the numbered exercises in the course textbook, e.g.\\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \\emph{Language, Proof and Logic}.  Exercises marked `*' are optional.</div>")
-			$handoutContainer.append("<div>&nbsp;</div>");
-			$handoutContainer.append("<div>\\begin{quote}</div>");
-      $exercises.each( function(idx, ex) {
-        var $ex=$(ex);
-				$handoutContainer.append('<div class="handout exercise">'+$ex.html()+'</div>');
-				// add in a blank line (for latex paragraph) unless .ctd is present
-				if( !$exercises.eq(idx+1).hasClass('ctd') ) {
-					$handoutContainer.append("<div>&nbsp;</div>");
-				}
-      });
-			$handoutContainer.append("<div>\\end{quote}</div>");
-			$handoutContainer.append("<div>\\end{minipage}</div>")
-    }
+    //     // add exercises to the end of the handout
+    //     var $exercises = $('.deck-container .exercises');
+    //     if( document.title.match(/^Fast/) ) {
+    //       var $exercises = $('.deck-container .exercises_fast');
+    //     }
+    //     if( $exercises.length > 0 ) {
+    // $handoutContainer.append("<div>\\vfill</div>")
+    // $handoutContainer.append("<div>\\begin{minipage}{\\columnwidth}</div>")
+    // $handoutContainer.append("<div>\\section{Exercises}</div>")
+    // $handoutContainer.append("<div>These exercises will be discussed in seminars the week after this lecture.</div>")
+    // $handoutContainer.append("<div>The numbers below refer to the numbered exercises in the course textbook, e.g.\\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \\emph{Language, Proof and Logic}.  Exercises marked `*' are optional.</div>")
+    // $handoutContainer.append("<div>&nbsp;</div>");
+    // $handoutContainer.append("<div>\\begin{quote}</div>");
+    //       $exercises.each( function(idx, ex) {
+    //         var $ex=$(ex);
+    //   $handoutContainer.append('<div class="handout exercise">'+$ex.html()+'</div>');
+    //   // add in a blank line (for latex paragraph) unless .ctd is present
+    //   if( !$exercises.eq(idx+1).hasClass('ctd') ) {
+    //     $handoutContainer.append("<div>&nbsp;</div>");
+    //   }
+    //       });
+    // $handoutContainer.append("<div>\\end{quote}</div>");
+    // $handoutContainer.append("<div>\\end{minipage}</div>")
+    //     }
     
     // escape & characters for latex
     findAndReplaceDOMText($handoutContainer[0], {
@@ -827,6 +838,6 @@ only toggle the notes panel for this cloned window.
 		var slide_id = $(slideTo).attr('id');
 		var $notes = $('.for-'+slide_id, $notesContainer).not('.notes-header-tex');
 		$notes.show();
-    });
+  });
 
 })(jQuery, 'deck');

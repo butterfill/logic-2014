@@ -1,8 +1,11 @@
 ---cson
 layout: 'deck_units' 
 title: "Formal Proof: ∧Elim and ∧Intro"
-description: "Introduces and illustrates the use of rules of proof for conjunction."
-tags: ['definitions']
+description: """
+  Introduces and illustrates the use of rules of proof for conjunction.
+  Explains how to create proofs using logic-ex.
+  """
+tags: ['proof','logic-ex']
 depends: ['unit_211']
 source: ['ph133 lecture 03']
 sequence: 200
@@ -111,3 +114,167 @@ include ../../../fragments/unit_mixins
     ... When I was learning logic, I often didn't immediately understand the lectures and needed 
     to go back over my notes after each lecture.
     Hopefully you will do the same because I don't really have the patience for spoon feeding.
+
+
+//- now see how to do it in logic-ex
+
++slide_middle
+  .handout \textbf{Writing a proof in logic-ex}
+  .img.handout(data-src='img/151024-0010-crop.png')
+  p.center
+    a(href="http://logic-ex.butterfill.com/ex/proof/from/A%20and%20B%7CB%20and%20C/to/A%20and%20C") http://logic-ex.butterfill.com/ex/proof/from/A and B|B and C/to/A and C
+
++slide({bkg:'unit_21/151024-0001.png'})
+  .notes: :t
+    When you start an exercise, you’re already given the basic form of 
+    the proof, with a couple of blank lines.
+  .notes: :t
+    The box you’re working in is just a text editor.
+    You can add lines by pressing ‘return’ and delete lines 
+    just like you would in any text editor.
+  .notes: :t
+    To repeat: the proof is just some text that you edit in the normal way.
++slide({bkg:'unit_21/151024-0001b.png'})
+  .notes: :t
+    We just need to a step here.
+    
++slide({bkg:'unit_21/151024-0002.png'})
+  .notes: :t
+    I’ve gone ahead and typed A because we need to derive A from the premises.
++slide({bkg:'unit_21/151024-0002b.png'})
+  .notes: :t
+    Here’s the A I typed.
++slide({bkg:'unit_21/151024-0002c.png'})
+  .notes: :t
+    This red dot suggests that there is a problem with the line.
++slide({bkg:'unit_21/151024-0002d.png'})
+  .notes: :t
+    The text under or proof is giving us a clue: we didn’t justify the step yet.
+    Let’s do that now.
++slide({bkg:'unit_21/151024-0003.png'})
+  .notes: :t
+    Here I’ve added justification.
++slide({bkg:'unit_21/151024-0003b.png'})
+  .notes: :t
+    It’s over here on the right (I just added spaces to move it away from the sentence ‘A’).
+  .notes: :t
+    I want to mention a couple of conventions.
++slide({bkg:'unit_21/151024-0003c.png'})
+  .notes: :t
+    First, justification needs to start with ‘//’.  This is to separate justification 
+    from the sentence itself.
+  .notes: :t
+    If you forget the ‘//’, logic-ex won’t be able to understand your proof and won’t 
+    be able to explain to you what went wrong.
++slide({bkg:'unit_21/151024-0003d.png'})
+  .notes: :t
+    The next thing to note is that I typed the word ‘and’ rather than the symbol
+    for conjunction (‘∧’).  As a convenience, logic-ex will let us use words 
+    rather than making us type symbols.  But we can type the symbols if we prefer.
+  .notes: :t
+    The same is true when we’re writing sentences: you can type ‘A and B’ instead of
+    ‘A ∧ B’ if you like.
+  .notes: :t
+    This is a handy feature of awFOL vs the language of the textbook we’re using.
+    awFOL let’s you use words where really there should be a symbol, just to make 
+    it easy to type things.
++slide({bkg:'unit_21/151024-0003e.png'})
+  .notes: :t
+    Finally, note that we put a number at the end.  This is the number 1,
+    which refers to the first line.
+  .notes: :t
+    Logic-ex provides line numbers for us (you can add your own
+    if you prefer, but then you have to be really consistent about 
+    starting each line with a number).
++slide({bkg:'unit_21/151024-0003f.png'})
+  .notes: :t
+    Wait a minute.  We still have that red dot and the error message
+    telling us our line is not justified.  But we have added the justification.
+    What’s going on?
+  .notes: :t
+    Logic-ex might be a bit slow to update.  In this situation, just move your
+    cursor up and down to get logic-ex to check your line again.
+    Let me do that now ...
++slide({bkg:'unit_21/151024-0004.png'})
+  .notes: :t
+    ... and the dot has turned green, indicating that this line is ok.
++slide({bkg:'unit_21/151024-0004b.png'})
+  .notes: :t
+    What’s next?
++slide({bkg:'unit_21/151024-0004c.png'})
+  .notes: :t
+    We need to add another step to the proof.
+  .notes: :t
+    (It just happens that we have the right amount of space for this proof,
+    but generally you are going to have to add lines to your proof.  Do this
+    with the return key, as mentioned above.)
++slide({bkg:'unit_21/151024-0005.png'})
+  .notes: :t
+    Here I’ve added the setntence we need (‘C’).
++slide({bkg:'unit_21/151024-0006.png'})
+  .notes: :t
+    And here’s the justification as well.
++slide({bkg:'unit_21/151024-0006-1.png'})
+  .notes: :t
+    But wait, the red dot is back.
+    That means there’s something wrong with the line.
+    What has gone wrong?
++slide({bkg:'unit_21/151024-0006-3.png'})
+  .notes: :t
+    The status message is really unhelpful in this case, as it often will be.
+    (Maybe it will be improved at some point.)
+    Sorry about that.
+    
++slide({bkg:'unit_21/151024-0006-4.png'})
+  .notes: :t
+    What could have gone wrong? Note that we’re citing line 1.
++slide({bkg:'unit_21/151024-0006-5.png'})
+  .notes: :t
+    So let’s have a look at line 1.
+
++slide({bkg:'unit_21/151024-0006-6.png'})
+  .notes: :t
+    This line contains ‘A and B’.
++slide({bkg:'unit_21/151024-0006-7.png'})
+  .notes: :t
+    But actually we’re trying to derive C.
+    And you can’t derive C from A and B.
++slide({bkg:'unit_21/151024-0006-8.png'})
+  .notes: :t
+    The C we want to derive is actually here, in line 2.
++slide({bkg:'unit_21/151024-0006-9.png'})
+  .notes: :t
+    So we have to edit the line number.
+    (This kind of mistake tends to happen to me quite a bit because
+    I like to copy and paste justification to save typing)
++slide({bkg:'unit_21/151024-0007.png'})
+  .notes: :t
+    Here I’ve fixed the line number.
++slide({bkg:'unit_21/151024-0007-1.png'})
+  .notes: :t
+    What’s next?
++slide({bkg:'unit_21/151024-0007-2.png'})
+  .notes: :t
+    There’s a big whole where the justification for the last line should be.
+    (Remember that every line of the proof is either a premise or needs justification.)
++slide({bkg:'unit_21/151024-0008.png'})
+  .notes: :t
+    So I’ve gone ahead and added the justification.
++slide({bkg:'unit_21/151024-0008-1.png'})
+  .notes: :t
+    But it hasn’t worked: we’ve got the red dot again.
+    Unless you’re really good at logic, you’re going to be seeing a lot of the red dot
+    for a few weeks.
+
++slide({bkg:'unit_21/151024-0008-2.png'})
+  .notes: :t
+    Here’s the mistake: we’re still citing and elim.
+    But at this point we’re supposed to be *introducing* a conjunction
+    rather than eliminating one.
++slide({bkg:'unit_21/151024-0010.png'})
+  .notes: :t
+    We can fix this just by deleting ‘elim’ and replacing it with ‘intro’
++slide({bkg:'unit_21/151024-0010-1.png'})
+  .notes: :t
+    And here’s the finished proof.
+    This is correct; if you submit it, logic-ex should say your proof is correct.

@@ -1,8 +1,13 @@
 ---cson
 layout: 'deck_units' 
 title: "Counterexamples"
-description: "Explains the notion of a counterexample."
-tags: ['definitions']
+description: """
+  Explains the notion of a counterexample.
+  Discusses a counterexample to a simple argument.
+  Demonstrates using logic-ex to construct a counterexample involving
+  shape and size properties.
+  """
+tags: ['definitions','logic-ex']
 depends: ['unit_03']
 source: ['ph126 lecture 01']
 sequence: 70
@@ -67,3 +72,58 @@ include ../../../fragments/unit_mixins
 +slide({bkg:'unit_04/slide-081.jpeg'})
   .notes 
 
++slide_middle
+  p.center
+    a(href="http://logic-ex.butterfill.com/ex/create/from/SameShape(a%2Cb)/to/SameSize(a%2Cb)") http://logic-ex.butterfill.com/ex/create/from/SameShape(a,b)/to/SameSize(a,b)
+  .notes: :t
+    Let’s see how to create counterexamples in this in logic-ex.
+
++slide({bkg:'unit_04/151023-0024.png'})
+  .notes: :t
+    We have to create a counterexample to an argument.
++slide({bkg:'unit_04/151023-0024b.png'})
+  .notes: :t
+    So the premise must be true ...
++slide({bkg:'unit_04/151023-0024c.png'})
+  .notes: :t
+    ... and the conclusion must be false.
++slide({bkg:'unit_04/151023-0024d.png'})
+  .notes: :t
+    I already put the names in; without having things named ‘a’ and ‘b’
+    the sentences would not be true or false in our possible situation.
++slide({bkg:'unit_04/151023-0024e.png'})
+  .notes: :t
+    We need to make the conclusion false.
+    At the moment it’s true because a and b are the same size.
+    So let’s change the size of a.
+    Do this by dragging the corner to stretch her.
++slide({bkg:'unit_04/151023-0025.png'})
+  .notes: :t
+    Now a is wider.
++slide({bkg:'unit_04/151023-0025b.png'})
+  .notes: :t
+    This makes the conclusion false, as we wanted.
++slide({bkg:'unit_04/151023-0025c.png'})
+  .notes: :t
+    But now the premise is false too.
+    (This is often the problem with creating counterexamples.)
+    What can we do?
++slide({bkg:'unit_04/151023-0025d.png'})
+  .notes: :t
+    Let’s make a taller as well by stretching her down.
+    Do this by dragging the corner.
++slide({bkg:'unit_04/151023-0026.png'})
+  .notes: :t
+    Now a is both wider and taller than b.
++slide({bkg:'unit_04/151023-0026b.png'})
+  .notes: :t
+    So the conclusion is still false ...
++slide({bkg:'unit_04/151023-0026c.png'})
+  .notes: :t
+    ... but now the premise is true, just as we wanted.
+
++slide_middle
+  p: :t
+    A counterexample to an argument is a possible situation in which 
+    its premises are true and its conclusion is false.
+  

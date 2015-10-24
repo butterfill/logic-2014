@@ -142,7 +142,7 @@ docpadConfig = {
           'handout' : "#{baseurl}/handouts/#{lecture.basename}.handout.pdf"
           'units' : []
         }
-        for unitNum in lecture.units
+        for unitNum in (lecture.units or [])
           unit = @get_unit(unitNum)
           if unit?[exType]?
             lectureDoc.units.push {

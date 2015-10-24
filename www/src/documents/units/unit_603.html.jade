@@ -1,4 +1,4 @@
----
+---cson
 layout: 'deck_units' 
 title: "Not Or"
 tags: ['translation']
@@ -9,6 +9,24 @@ duration: 5
 book: ['3.7']
 exercises: ['3.19','5.18']
 exercises_fast: []
+exNormal: [
+  '/ex/create/qq/Frowning(a)'
+  '/ex/create/qq/Frowning(a)|Sad(a)'
+  '/ex/tt/qq/not A or not B|not (A or B)'
+  '/ex/create/orValid/from/not Frowning(a) or not Sad(b)/to/not (Frowning(a) or Sad(b))'
+  '/ex/create/orValid/from/not (Frowning(a) or Sad(b))/to/not Frowning(a) or not Sad(b)'
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Sad1/sentence/not Frowning(a) or not Sad(b)'
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Sad1/sentence/not (Frowning(a) or Sad(b))'
+  
+  '/ex/tt/qq/not A and not B|not (A and B)'
+
+  '/ex/create/qq/not (not Wide(a) or Tall(b))'
+  '/ex/tt/qq/not A and B|not (not A or B)'
+  '/ex/create/orValid/from/not Tall(a) and Wide(b)/to/not (not Tall(a) or Wide(b))'
+  '/ex/create/orValid/from/not (not Tall(a) or Wide(b))/to/not Tall(a) and Wide(b)'
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Tall1|Wide1/sentence/not Tall(a) and Wide(b)'
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Tall1|Wide1/sentence/not (not Tall(a) or Wide(b))'
+]
 ---
 
 include ../../../fragments/unit_mixins

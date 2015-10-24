@@ -1,0 +1,147 @@
+---cson
+layout: 'deck_units'
+title: "Contradictions, Logical Truths and Logical Possibilities"
+description: """
+  Illustrates and defines the terms ‘contradiction’, ‘logical truth’ 
+  and ‘logical possibility’.  
+  Describes how to recognise these from truth tables.
+  Demonstrates using logic-ex to construct truth-tables and answer
+  questions about contradictions, logical truths and logical possibilities.
+  """
+tags: ['definitions','logic-ex']
+book: ['2.2']
+depends: []
+source: ['ph126 fastlecture 01']
+exercises: ['2.5, 2.6']
+exNormal: [
+  '/ex/tt/qq/A or not A'
+  '/ex/tt/qq/A and not A'
+  '/ex/tt/qq/A or A'
+]
+exFast: [
+  '/ex/tt/qq/A or not A'
+  '/ex/tt/qq/not (A or not A)'
+  '/ex/tt/qq/A or (A and not A)'
+]
+
+---
+
+include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
+
++slide_rh_white({step:true})
+  .handout: :t
+    A \emph{contradiction} is a sentence that is 
+    false in all possible situations.
+  .handout: :t
+    A \emph{logical truth} is a sentence that is 
+    true in all possible situations.
+  .handout: :t
+    A \emph{logical possibility} is a sentence that is 
+    true in one or more possible situations.
+  +left_half
+    p contradiction
+    p.em-above A sentence that is 
+      span.truth-value false
+      span  in all possible situations.
+    .slide
+      p.em-above E.g.
+      +truth-table(['A ∨ ¬A'],[['T','T']])
+  +right_half({step:true})
+    p logical truth
+    p.em-above A sentence that is 
+      span.truth-value true
+      span  in all possible situations.
+    .slide
+      p.em-above E.g.
+      +truth-table(['A ∧ ¬A'],[['F','F']])
+  +invert('.truth-value')
+  +uninvert('.truth-value')
+  .slide
+    +run_across
+      p.center logical possibility
+      p.center   a sentence that is true in one or more possible situations.
+  
+  
++slide_middle
+  p.center 
+    a(href="http://logic-ex.butterfill.com/ex/tt/qq/A%20or%20not%20A") http://logic-ex.butterfill.com/ex/tt/qq/A or not A
+
++slide({bkg:'unit_065/151023-0033.png'})
+  .notes: :t
+    I’ll illustrate how this works in logic-ex.
+    Let’s say we want to construct the truth table for A or not A.
++slide({bkg:'unit_065/151023-0033b.png'})
+  .notes: :t
+    The first thing I need is more rows, so I hit the circled plus thing.
++slide({bkg:'unit_065/151023-0034.png'})
+  .notes: :t
+    Now I’ve got a second row, and in this case two rows is enough.
+    Time to start filling in values ...
++slide({bkg:'unit_065/151023-0035.png'})
+  .notes: :t
++slide({bkg:'unit_065/151023-0036.png'})
+  .notes: :t
+    I’m doing the reference columns first because these are always the same
+    and I don’t need to work out what the values are.
++slide({bkg:'unit_065/151023-0037.png'})
+  .notes: :t
+    Now I have to enter the value of A or not A when A is true.
+    You might be able to compute this in value in your head, but 
+    that won’t always be the case.  I expect that, often, before 
+    you enter a value in the table in logic-ex you will have taken
+    a pencil and paper and worked out the truth table step by step.
+  .notes: :t
+    So what you enter will often be something that took quite a bit 
+    of work to compute.
+  .notes: :t
+    Or you could just guess.  But this is not generally a good strategy
+    because I take the view that a truth table is either right or wrong,
+    and if you are really guessing you only have a 1/16 chance of being
+    right for most truth tables.
++slide({bkg:'unit_065/151023-0038.png'})
+  .notes: :t
+    Anyway, I think it’s true.
++slide({bkg:'unit_065/151023-0039.png'})
+  .notes: :t
+    Now for the last truth value.
++slide({bkg:'unit_065/151023-0040.png'})
+  .notes: :t
+    This is also true.
++slide({bkg:'unit_065/151023-0040b.png'})
+  .notes: :t
+    We’re not done yet, we now have to say whether the 
+    sentence is a contradiction.
+    A \emph{contradiction} is a sentence that is 
+    false in all possible situations.
++slide({bkg:'unit_065/151023-0044.png'})
+  .notes: :t
+    This sentence isn’t 
+    false in all possible situations ...
++slide({bkg:'unit_065/151023-0041.png'})
+  .notes: :t
+    ... so it isn’t a contradiction.
++slide({bkg:'unit_065/151023-0041b.png'})
+  .notes: :t
+    Next we have to specify whether ‘A or not A’ is a logical truth.
+    A \emph{logical truth} is a sentence that is 
+    true in all possible situations.
++slide({bkg:'unit_065/151023-0045.png'})
+  .notes: :t
+    This sentence is true in all possible situations ...
++slide({bkg:'unit_065/151023-0042.png'})
+  .notes: :t
+    ... so this sentence is a logical truth.
++slide({bkg:'unit_065/151023-0042b.png'})
+  .notes: :t
+    Finally, we’re asked whether the sentence is a logical possibility.
+    A \emph{logical possibility} is a sentence that is 
+    true in one or more possible situations.
++slide({bkg:'unit_065/151023-0044.png'})
+  .notes: :t
+    This sentence is true in at least one possible situation ...
++slide({bkg:'unit_065/151023-0043.png'})
+  .notes: :t
+    ... so this sentence is a logical possibility.
+    
+    

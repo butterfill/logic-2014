@@ -1,4 +1,4 @@
----
+---cson
 layout: 'deck_units' 
 title: 'DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B'
 tags: ['truth-tables']
@@ -10,6 +10,12 @@ book: ['3.6','4.2']
 exercises: ['3.19', '4.15--18', '7.1--7.2, *7.3--7.6']
 exercises_fast: ['3.19', '4.31']
 sequence: 570
+exNormal: [
+  # More exercises needed; these were fast exercises for unit_151
+  '/ex/tt/qq/not (A and not B) or not C|not (not A or (B or not C))'
+  '/ex/create/orValid/from/not (Happy(a) and not Sad(b)) or not Laughing(c)/to/not (not Happy(a) or (Sad(b) or not Laughing(c)))'
+  '/ex/create/orValid/from/not (not Happy(a) or (Sad(b) or not Laughing(c)))/to/not (Happy(a) and not Sad(b)) or not Laughing(c)'
+]
 ---
 
 include ../../../fragments/unit_mixins

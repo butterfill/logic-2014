@@ -8,6 +8,8 @@ source: ['ph126 lecture 01']
 sequence: 80
 exNormal: [
   '/ex/q/Define ‘sound argument’'
+  """/ex/TorF/from/Kelela Mizanekristos is a human|All humans are women/to/Kelela Mizanekristos is a woman/qq/Kelela Mizanekristos is a human|All humans are women|Kelela Mizanekristos is a woman|The argument is logically valid|The argument is sound in the actual situation"""
+  """/ex/TorF/from/Kelela Mizanekristos is a human|All humans are animals/to/Kelela Mizanekristos is an animal/qq/Kelela Mizanekristos is a human|All humans are animals|Kelela Mizanekristos is an animal|The argument is logically valid|The argument is sound in the actual situation"""
   """/ex/TorF/from/LeftOf(a,b)|LeftOf(b,c)/to/LeftOf(a,c)/world/[{"x":5,"y":0,"w":2,"h":2,"n":"a","c":"white","f":[":'","-","|"]},{"x":1,"y":0,"w":2,"h":2,"n":"b","c":"yellow","f":[":'","-","()"]},{"x":3,"y":0,"w":2,"h":2,"n":"c","c":"red","f":["}:","^","("]}]/qq/LeftOf(a,b)|LeftOf(b,c)|LeftOf(a,c)|The argument is logically valid|The argument is sound in this possible situation"""
   """/ex/TorF/from/LeftOf(a,b)|LeftOf(b,c)/to/LeftOf(a,c)/world/[{"x":2,"y":0,"w":2,"h":2,"n":"a","c":"white","f":[":'","-","|"]},{"x":5,"y":0,"w":2,"h":2,"n":"b","c":"yellow","f":[":'","-","()"]},{"x":8,"y":0,"w":2,"h":2,"n":"c","c":"red","f":["}:","^","("]}]/qq/LeftOf(a,b)|LeftOf(b,c)|LeftOf(a,c)|The argument is logically valid|The argument is sound in this possible situation"""
   """/ex/TorF/from/Sad(a)|Neutral(b)/to/Laughing(c)/world/[{"x":5,"y":0,"w":2,"h":2,"n":"b","c":"pink","f":[":","-","|"]},{"x":8,"y":0,"w":2,"h":2,"n":"c","c":"purple","f":[";","^","D"]},{"x":2,"y":0,"w":2,"h":2,"n":"a","c":"blue","f":[":",">","("]}]/qq/Sad(a)|Neutral(b)|Laughing(c)|The argument is logically valid|The argument is sound in this possible situation"""
@@ -16,6 +18,7 @@ exNormal: [
 
 
 include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
 
 +slide({bkg:'unit_041/slide-082.jpeg'})
   .notes 
@@ -29,8 +32,24 @@ include ../../../fragments/unit_mixins
   .notes 
 
 +slide({bkg:'unit_041/slide-084.jpeg'})
-  .notes 
-
+  .slide
+    - var prf = {premises:['All cats are grey', 'Catmando is grey'], lines:[['Catmando is a cat','']]}
+     +fitch_proof(prf)
+  .notes: :t
+    ‘Catmando, Joint leader of the Official Monster Raving Loony Party from 1999 to 2002.’
+    This argument isn’t valid so of course it won’t be sound.
+    Let’s fix that
+    
++slide({bkg:'unit_041/slide-084.jpeg'})
+  - var prf = {premises:['All cats are grey', 'Catmando is a cat'], lines:[['Catmando is grey','']]}
+   +fitch_proof(prf)
+  .notes: :t
+    ‘Catmando, Joint leader of the Official Monster Raving Loony Party from 1999 to 2002.’
+    Now the argument is valid, but is it sound?
+  +highlight-row('.row-2 .highlight-hook')
+  +unhighlight-row_('.row-2 .highlight-hook')
+  +highlight-row('.row-1 .highlight-hook')
+    
 +slide({bkg:'unit_041/slide-085.jpeg'})
   .notes 
 

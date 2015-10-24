@@ -2,8 +2,13 @@
 layout: 'deck_units'
 images: 'unit_06'
 title: "Identity"
-description: "Introduces the notion of identity used in studying first-order logic.  Includes example argument and the two principles."
-tags: ['definitions']
+description: """
+  Introduces the notion of identity used in studying first-order logic.  
+  Includes example argument and the two principles.
+  Also demonstrates how to assign names in logic-ex, and
+  using logic-ex to make identity statements true and false.
+  """
+tags: ['definitions','logic-ex']
 book: ['2.2']
 depends: []
 source: ['ph126 fastlecture 01']
@@ -82,4 +87,55 @@ include ../../../fragments/unit_mixins
 +slide({bkg:'unit_06/slide-053.jpeg'})
   .notes These principles are all you need to understand the logical notion of identity.  They allow you to do things like prove that identity is a symmetric and transitive relation.
 
-  
++slide({bkg:'unit_06/151023-0027.png'})
+  .notes: :t
+    I want to show you quickly how to work with identity in logic-ex.
++slide({bkg:'unit_06/151023-0028.png'})
+  .notes: :t
+    Let’s add a person to the possible situation
++slide({bkg:'unit_06/151023-0029.png'})
+  .notes: :t
+    Here I’ve added some names
++slide({bkg:'unit_06/151023-0029b.png'})
+  .notes: :t
+    I’ve called one person ‘a’ and the other ‘b’.
++slide({bkg:'unit_06/151023-0029c.png'})
+  .notes: :t
+    Of course this makes the first sentence false, not true.
+    How do I make it true?
++slide({bkg:'unit_06/151023-0030.png'})
+  .notes: :t
+    Like this ...
++slide({bkg:'unit_06/151023-0030b.png'})
+  .notes: :t
+    I’ve given one person both names.
+    To give more than one name to a person, simply type multiple names
+    separated by commas or spaces (or both), just as I’ve done here.
++slide({bkg:'unit_06/151023-0030c.png'})
+  .notes: :t
+    And this makes the sentence ‘a=b’ true, of course.
++slide({bkg:'unit_06/151023-0030d.png'})
+  .notes: :t
+    But what about the next sentence, ‘not b=c’?
++slide({bkg:'unit_06/151023-0030e.png'})
+  .notes: :t
+    To make this true or false, I need to give someone the name c.
+    I’m going to add that to the person already known as ‘a’ and ‘b’.
++slide({bkg:'unit_06/151023-0031.png'})
++slide({bkg:'unit_06/151023-0031b.png'})
+  .notes: :t
+    So here you see one person has all three names
++slide({bkg:'unit_06/151023-0031c.png'})
+  .notes: :t
+    Of course this means the second sentence, ‘not b=c’ is false.
+    We need to make that true.
+    How are we going to do that?
++slide({bkg:'unit_06/151023-0032.png'})
+  .notes: :t
+    Let me re-arrange the names.
++slide({bkg:'unit_06/151023-0032b.png'})
+  .notes: :t
+    You see that I’ve named the other, yellow person c.
++slide({bkg:'unit_06/151023-0032c.png'})
+  .notes: :t
+    And this is enough to make the second sentence true.

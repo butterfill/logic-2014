@@ -104,9 +104,12 @@
             "/ex/tt/qq/A and (B or C)",
             "/ex/create/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))",
             "/ex/tt/qq/A|not not A",
+            "/ex/create/orValid/from/Happy(a)/to/not not Happy(a)",
             "/ex/tt/qq/not (A or B)|not A and not B",
             "/ex/tt/qq/not (A and not B)|not A or B",
-            "/ex/tt/qq/not (not A and B)|(A and not B)"
+            "/ex/create/orValid/not (Sad(a) and not Sad(b))|not Sad(a) or Sad(b)",
+            "/ex/tt/qq/not (not A and B)|(A and not B)",
+            "/ex/create/orValid/from/not (not Happy(a) and Happy(b))/to/(Happy(a) and not Happy(b))"
           ]
         },
         {
@@ -125,10 +128,24 @@
         {
           "type": "unit",
           "name": "Contradictions, Logical Truths and Logical Possibilities",
+          "slides": "http://logic-1.butterfill.com/units/unit_065.html",
+          "rawReading": [
+            "2.2"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/A or not A",
+            "/ex/tt/qq/not (A or not A)",
+            "/ex/tt/qq/A or (A and not A)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Contradictions, Logical Truths and Logical Validity",
           "slides": "http://logic-1.butterfill.com/units/unit_160.html",
           "rawReading": [
             "4.1",
-            "4.2"
+            "4.2",
+            "5.4"
           ],
           "rawExercises": [
             "/ex/tt/qq/A or not A",
@@ -168,14 +185,72 @@
         },
         {
           "type": "unit",
+          "name": "∧Intro and ∨Intro: Compare and Contrast",
+          "slides": "http://logic-1.butterfill.com/units/unit_212.html",
+          "rawReading": [
+            "6.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A|C/to/A and (B or C)"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Rules of Proof for Identity",
           "slides": "http://logic-1.butterfill.com/units/unit_110.html",
           "rawReading": [
             "2.2"
           ],
           "rawExercises": [
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Frowning1/sentence/a=b",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/Frowning1/sentence/Ayesha isn’t Beatrice",
             "/ex/proof/from/Happy(a)|a=b/to/Happy(b)",
             "/ex/proof/from/LeftOf(a,b)|Happy(b)|a=b/to/LeftOf(b,a) and Happy(a)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "→Intro, →Elim",
+          "slides": "http://logic-1.butterfill.com/units/unit_390.html",
+          "rawReading": [
+            "8.1",
+            "8.2"
+          ],
+          "rawExercises": [
+            "/ex/create/orValid/from/Sad(a) arrow Sad(b)|Sad(b) arrow Sad(c)/to/Sad(a) arrow Sad(c)",
+            "/ex/proof/orInvalid/from/Sad(a) arrow Sad(b)|Sad(b) arrow Sad(c)/to/Sad(a) arrow Sad(c)",
+            "/ex/proof/from/A|A arrow false/to/B",
+            "/ex/proof/from/-/to/A arrow A",
+            "/ex/proof/from/-/to/A arrow (B arrow A)",
+            "/ex/proof/from/-/to/not A arrow (A arrow B)",
+            "/ex/create/orValid/from/Sad(a) arrow Sad(c)/to/(Sad(a) and Sad(b)) arrow Sad(c)",
+            "/ex/proof/orInvalid/from/Sad(a) arrow Sad(c)/to/(Sad(a) and Sad(b)) arrow Sad(c)",
+            "/ex/create/orValid/from/Tall(a) arrow Tall(c)/to/(Tall(a) or Tall(b)) arrow Tall(c)",
+            "/ex/proof/orInvalid/from/Tall(a) arrow Tall(c)/to/(Tall(a) or Tall(b)) arrow Tall(c)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "→Intro: An Example",
+          "slides": "http://logic-1.butterfill.com/units/unit_391.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/A or B/to/not A arrow B",
+            "/ex/create/orValid/from/Tall(a) or Tall(b)/to/not Tall(b) arrow Tall(a)",
+            "/ex/proof/from/A arrow not B/to/B arrow (A arrow C)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "¬, ⊥",
+          "slides": "http://logic-1.butterfill.com/units/unit_270.html",
+          "rawReading": [
+            "6.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/false/to/A",
+            "/ex/proof/from/Tall(a)|not Tall(b)|a=b/to/false",
+            "/ex/proof/from/Tall(a) or Happy(a)|not (Tall(a) or Happy(a))/to/Tall(a) and Happy(a)"
           ]
         }
       ]
@@ -185,7 +260,43 @@
       "name": "Fast Lecture 03",
       "slides": "http://logic-1.butterfill.com/fastlecture_03.html",
       "handout": "http://logic-1.butterfill.com/handouts/fastlecture_03.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "A ∧ B ∨ C: They Are Different",
+          "slides": "http://logic-1.butterfill.com/units/unit_154.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/qq/(A and B) or C|A and (B or C)",
+            "/ex/create/orValid/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))",
+            "/ex/create/orValid/from/Happy(a) and (Happy(b) or Happy(c))/to/(Happy(a) and Happy(b)) or Happy(c)",
+            "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy; and she is frowning or crying",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/(Happy(a) and Happy(b)) or Happy(c)",
+            "/ex/create/qq/Wide(a)|Tall(b)",
+            "/ex/create/qq/not (Wide(a) and not Tall(b))",
+            "/ex/tt/qq/not A and B|not (not A or B)",
+            "/ex/create/orValid/from/not Tall(a) and Wide(b)/to/not (not Tall(a) or Wide(b))",
+            "/ex/create/orValid/from/not (not Tall(a) or Wide(b))/to/not Tall(a) and Wide(b)",
+            "/ex/tt/qq/not (A and not B) or not C|not (not A or (B or not C))",
+            "/ex/create/orValid/from/not (Happy(a) and not Sad(b)) or not Laughing(c)/to/not (not Happy(a) or (Sad(b) or not Laughing(c)))",
+            "/ex/create/orValid/from/not (not Happy(a) or (Sad(b) or not Laughing(c)))/to/not (Happy(a) and not Sad(b)) or not Laughing(c)",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1|Sad1|Laughing1/sentence/not (not Happy(a) or (Sad(b) or not Laughing(c)))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1|Sad1|Laughing1/sentence/not (Happy(a) and not Sad(b)) or not Laughing(c)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Truth-functional Connectives",
+          "slides": "http://logic-1.butterfill.com/units/unit_072.html",
+          "rawReading": [
+            "7.0 (the text before §7.1)"
+          ],
+          "rawExercises": [
+            "/ex/q/Explain why ‘Ayesha said that ...’ is not a truth-functional connective",
+            "/ex/TorF/qq/conjunction (‘∧’) is a truth-functional connective|‘Because’ is a truth-functional connective|‘Maybe’ (as in ‘Maybe Elvis lives’) is a truth-functional connective|‘Certainly’ (as in ‘Certainly, fish swim’) is a truth-functional connective|‘Probably’ (as in ‘Probably, it will rain’) is a truth-functional connective|Identity (‘=’) is a truth-functional connective"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",

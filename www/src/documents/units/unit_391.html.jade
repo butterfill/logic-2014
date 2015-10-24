@@ -7,6 +7,27 @@ depends: ['unit_221']
 source: ['ph126 lecture 05']
 duration: 4
 sequence: 340
+exNormal: [
+  # These were fast for unit_390
+  '/ex/proof/from/-/to/A arrow (B arrow A)'
+  '/ex/proof/from/-/to/not A arrow (A arrow B)'
+  
+  # These were fast for unit_390
+  '/ex/create/orValid/from/Sad(a) arrow Sad(c)/to/(Sad(a) and Sad(b)) arrow Sad(c)'
+  '/ex/proof/orInvalid/from/Sad(a) arrow Sad(c)/to/(Sad(a) and Sad(b)) arrow Sad(c)'
+  '/ex/create/orValid/from/Tall(a) arrow Tall(c)/to/(Tall(a) or Tall(b)) arrow Tall(c)'
+  '/ex/proof/orInvalid/from/Tall(a) arrow Tall(c)/to/(Tall(a) or Tall(b)) arrow Tall(c)'
+
+  '/ex/proof/from/A or B/to/not A arrow B'
+  '/ex/proof/from/A arrow not B/to/B arrow (A arrow C)'
+  
+]
+exFast: [
+  '/ex/proof/orInvalid/from/A or B/to/not A arrow B'
+  '/ex/create/orValid/from/Tall(a) or Tall(b)/to/not Tall(b) arrow Tall(a)'
+  '/ex/proof/from/A arrow not B/to/B arrow (A arrow C)'
+]
+
 ---
 
 
