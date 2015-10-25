@@ -1,0 +1,97 @@
+---cson
+layout: 'deck_units' 
+title: "Creating Your Own Exercises"
+description: "In logic-ex, an exercise is a url. You can set exercises just by creating a list of urls."
+tags: ['logic-ex', 'tutors']
+---
+
+include ../../../fragments/unit_mixins
+
++slide
+  //- screenshots to use later (show then hide)
+  .ex1.hide(style='position: absolute; top:0; left:0; width:100%; height:100%;')
+    img.bkg(src='/img/unit_051/151024-0012.png')
+  .ex1-grade.hide(style='position: absolute; top:0; left:0; width:100%; height:100%;')
+    img.bkg(src='/img/unit_051/151024-0013.png')
+  
+  .main-bit
+    .notes: :t
+      In logic-ex, an exercise is a url. You can set exercises just by creating a list of urls.
+    p An exercise is a url
+    p.em-above To ask a question:
+    ul
+      li: a(href="http://logic-ex.butterfill.com/ex/q/define ‘logically valid’") /ex/q/define ‘logically valid’
+    .notes: :t
+      You can replace the text after ‘/q/’ with whatever question you want to ask.
+      For this type of exercise, the student will be given a text box to fill in the answer.
+    +hide_('.main-bit')
+    +show('.ex1')
+    .notes: :t
+      Here’s what it looks like.
+    +show_('.main-bit')
+    +hide('.ex1')
+    .notes: :t
+      What if you want to grade this exercise?
+    .slide
+      p To grade answers:
+        ul
+          li
+            a(href="http://logic-ex.butterfill.com/ex/q/define ‘logically valid’/grade") /ex/q/define ‘logically valid’
+              span.grade /grade
+      +invert('.grade')
+      .notes: :t
+        Just add ‘/grade’ to the end of any url starting with ‘/ex/’ and you will see all the answers
+        that students have submitted to you.
+    +hide_('.main-bit')
+    +show('.ex1-grade')
+    .notes: :t
+      Here you can mark the answer correct or incorrect and add a comment 
+      if you like.
+    .notes: :t
+      After you grade one answer, anyone who gives a relevantly similar answer will 
+      get the same grade and comment.
+    .notes: :t
+      Which students’ answers will you see here? 
+      All those who currently specify the email you registered on logic-ex with as the 
+      email of their tutor.
+      So you would typically expect to whip through a lot of answers at once.
+    +hide('.ex1-grade')
+    +show_('.main-bit')
+    .notes: :t
+      Questions like this aren’t really interesting because the machine
+      can’t do much to help you grading.
+      Let’s look at other examples ...
+
++slide
+  //- screenshots to use later (show then hide)
+  .ex2.hide(style='position: absolute; top:0; left:0; width:100%; height:100%;')
+    img.bkg(src='/img/unit_051/151025-0001.png')
+
+  .main-bit
+    p An exercise is a url
+    p.em-above To set a proof:
+    ul
+      li: a(href="http://logic-ex.butterfill.com/ex/proof/from/exists x all y Loves(x,y)/to/∀y ∃x Loves(x,y)") /ex/proof/from/exists x all y Loves(x,y)/to/∀y ∃x Loves(x,y)
+    .notes: :t
+      How about asking students to write proofs?
+      In logic-ex, an exercise is a url. 
+      The url for a proof starts ‘/ex/proof’
+      Then you add ‘/from/ [premise] | [premise] | ... | [premise]’ for the premises
+      and ‘/to/ [conclusion]’ for the conclusion.
+    .notes: :t
+      The premises and conclusion need to be sentences of awFOL.
+      You can write these using symbols (‘∀y ∃x Loves(x,y)’)
+      but you don’t have to.
+      It’s usually quicker to write in words (‘exists x all y Loves(x,y)’).
+    .notes: :t
+      Regardless of how you use words or symbols, and of how you use brackets, 
+      the sentences will be represented in a canonical way.
+    +hide_('.main-bit')
+    +show('.ex2')
+    .notes: :t
+      Proofs will be automatically graded.  
+    .notes: :t
+      You can still see what your students wrote
+      by adding ‘/grade’ to the url.  This allows you to add comments
+      and suggestions when the student doesn’t succeed.
+
