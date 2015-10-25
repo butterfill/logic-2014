@@ -18,12 +18,31 @@ html
 
 
     .row
+      h2 For students:
       //- main content: lecture outlines &c
       .span12
         - var unit_num
         each unit in getCollection("units").toJSON()
           if unit.tags && unit.tags.length && unit.tags.length > 0
-            if unit.tags.indexOf('logic-ex') != -1
+            if unit.tags.indexOf('logic-ex') != -1 && unit.tags.indexOf('tutors') == -1
+              - unit_num = unit.basename.substr(5)
+              h3 
+                a(href="/units/#{unit.outFilename}?notes=true") #{unit.title}
+              if unit.tags && unit.tags.length && unit.tags.length > 0
+                p(style="text-align:right;margin:0;padding:0;margin-top:-1.5em;") 
+                  each t in unit.tags
+                    if t != 'logic-ex'
+                      span.label.label-info #{t}
+                      | 
+              p #{unit.description}
+
+    .row
+      h2 For tutors:
+      .span12
+        - var unit_num
+        each unit in getCollection("units").toJSON()
+          if unit.tags && unit.tags.length && unit.tags.length > 0
+            if unit.tags.indexOf('logic-ex') != -1 && unit.tags.indexOf('tutors') != -1
               - unit_num = unit.basename.substr(5)
               h3 
                 a(href="/units/#{unit.outFilename}?notes=true") #{unit.title}
