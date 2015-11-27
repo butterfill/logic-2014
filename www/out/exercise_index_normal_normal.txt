@@ -443,6 +443,36 @@
       "units": [
         {
           "type": "unit",
+          "name": "∨Elim and Soundness",
+          "slides": "http://logic-1.butterfill.com/units/unit_226.html",
+          "rawReading": [
+            "5.2",
+            "6.2"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/A or B/to/B",
+            "/ex/tt/from/A or B|A arrow C|B arrow C/to/C"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "∨Elim: An Example",
+          "slides": "http://logic-1.butterfill.com/units/unit_221.html",
+          "rawReading": [
+            "5.2",
+            "6.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A or B/to/B or A",
+            "/ex/proof/orInvalid/from/A or B|not A/to/B",
+            "/ex/proof/orInvalid/from/A or B|A/to/not B",
+            "/ex/proof/orInvalid/from/A and B|not A/to/B",
+            "/ex/proof/orInvalid/from/A and (B or C)/to/(A and C) or (A and B)",
+            "/ex/proof/orInvalid/from/(A and B) or (C and D)/to/B or C"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Not Or",
           "slides": "http://logic-1.butterfill.com/units/unit_603.html",
           "rawReading": [
@@ -483,6 +513,19 @@
         },
         {
           "type": "unit",
+          "name": "¬Elim",
+          "slides": "http://logic-1.butterfill.com/units/unit_280.html",
+          "rawReading": [
+            "6.3"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/not not A/to/A",
+            "/ex/proof/from/not not A/to/A",
+            "/ex/proof/from/not not A and B/to/A"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "¬Intro",
           "slides": "http://logic-1.butterfill.com/units/unit_281.html",
           "rawReading": [
@@ -490,7 +533,35 @@
             "6.3"
           ],
           "rawExercises": [
+            "/ex/proof/from/A/to/not not A",
+            "/ex/proof/from/A arrow B|not B/to/not A",
+            "/ex/proof/from/not A/to/not (A and B)",
+            "/ex/proof/from/not (A and B)|A/to/not B",
+            "/ex/proof/from/not (A arrow B)/to/A",
+            "/ex/proof/from/not (A arrow B)/to/B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "¬Intro continued",
+          "slides": "http://logic-1.butterfill.com/units/unit_282.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/A and B/to/not (not A or not B)",
+            "/ex/proof/from/not (A or B)/to/not A",
+            "/ex/proof/from/not (A or B)/to/not A and not B",
+            "/ex/proof/from/not A or not B/to/not (A and B)",
             "/ex/proof/from/A arrow not B/to/B arrow not A"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Subproofs Are Tricky",
+          "slides": "http://logic-1.butterfill.com/units/unit_224.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/A or B/to/B or A",
+            "/ex/proof/orInvalid/from/A or B/to/B and A"
           ]
         }
       ]
@@ -501,6 +572,20 @@
       "slides": "http://logic-1.butterfill.com/lecture_07.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_07.handout.pdf",
       "units": [
+        {
+          "type": "unit",
+          "name": "The Syntax of awFOL",
+          "slides": "http://logic-1.butterfill.com/units/unit_230.html",
+          "rawReading": [
+            "9.3"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/(A and B) or C|A and (B or C)",
+            "/ex/tt/qq/(A arrow B) arrow C|A arrow (B arrow C)",
+            "/ex/proof/orInvalid/from/not A and B/to/not (A and B)",
+            "/ex/proof/orInvalid/from/not (A and B)/to/not A and B"
+          ]
+        },
         {
           "type": "unit",
           "name": "DeMorgan: ¬(A ∧ B) ⫤⊨ ¬A ∨ ¬B",

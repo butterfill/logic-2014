@@ -35,7 +35,7 @@ html
           p Exercises are set for subtopics of each lecture (links below).  You can also find a summary of all exercises set on logic-ex:
           ul
             li 
-              a(href='http://logic-ex.butterfill.com/courses') logic-ex
+              a(href='https://logic-ex.butterfill.com/courses') logic-ex
           p Other:
           ul
             li
@@ -84,9 +84,9 @@ html
               p Exercises for this lecture:
               ul
                 li
-                  a(target="_blank", href="http://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-normal/lecture/#{lecture.subtitle || lecture.title}") regular exercises
+                  a(target="_blank", href="https://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-normal/lecture/#{lecture.subtitle || lecture.title}") regular exercises
                 li
-                  a(target="_blank", href="http://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-fast/lecture/#{lecture.subtitle || lecture.title}") fast exercises
+                  a(target="_blank", href="https://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-fast/lecture/#{lecture.subtitle || lecture.title}") fast exercises
               
               .units(style='border-left: 1px dotted grey;margin-left: -1px;')
                 div(style="padding-left:2em;")
@@ -108,10 +108,10 @@ html
                       //- exercises
                       if unit.exNormal && unit.exNormal.length > 0
                         p 
-                          a(target="_blank", href="http://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-normal/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises (regular)
+                          a(target="_blank", href="https://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-normal/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises (regular)
                       if unit.exFast && unit.exFast.length > 0
                         p 
-                          a(target="_blank", href="http://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-fast/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises (fast)
+                          a(target="_blank", href="https://logic-ex.butterfill.com/course/UK_W20_PH126/exerciseSet/normal-fast/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises (fast)
                       if unit.exercises && unit.exercises.length > 0 
                         p Alternative textbook exercises (regular): #{unit.exercises.join(', ')}
                       if unit.exercises_fast && unit.exercises_fast.length > 0

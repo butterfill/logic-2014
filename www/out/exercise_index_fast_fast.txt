@@ -242,6 +242,22 @@
         },
         {
           "type": "unit",
+          "name": "∨Elim: An Example",
+          "slides": "http://logic-1.butterfill.com/units/unit_221.html",
+          "rawReading": [
+            "5.2",
+            "6.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A or B/to/B or A",
+            "/ex/proof/orInvalid/from/A or B|not A/to/B",
+            "/ex/proof/orInvalid/from/A and (B or C)/to/(A and C) or (A and B)",
+            "/ex/proof/orInvalid/from/(A and C) or (A and B)/to/A and (B or C)",
+            "/ex/proof/orInvalid/from/(A and B) or (C and D)/to/B or C"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "¬, ⊥",
           "slides": "http://logic-1.butterfill.com/units/unit_270.html",
           "rawReading": [
@@ -251,6 +267,36 @@
             "/ex/proof/from/false/to/A",
             "/ex/proof/from/Tall(a)|not Tall(b)|a=b/to/false",
             "/ex/proof/from/Tall(a) or Happy(a)|not (Tall(a) or Happy(a))/to/Tall(a) and Happy(a)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "¬Elim",
+          "slides": "http://logic-1.butterfill.com/units/unit_280.html",
+          "rawReading": [
+            "6.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/not not A and B/to/A"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "¬Intro",
+          "slides": "http://logic-1.butterfill.com/units/unit_281.html",
+          "rawReading": [
+            "5.3",
+            "6.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A/to/not not A",
+            "/ex/proof/from/not A/to/not (A and B)",
+            "/ex/proof/from/A and B/to/not (not A or not B)",
+            "/ex/proof/from/A arrow not B/to/B arrow not A",
+            "/ex/proof/from/not (A and B)/to/not A or not B",
+            "/ex/proof/from/not A or not B/to/not (A and B)",
+            "/ex/proof/from/not (A or B)/to/not A and not B",
+            "/ex/proof/from/not A and not B/to/not (A or B)"
           ]
         }
       ]

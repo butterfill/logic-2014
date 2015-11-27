@@ -57,10 +57,10 @@ html(lang="en")
 
     //- Shims: IE6-8 support of HTML5 elements
     //if lt IE 9
-      script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+      script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
 
     // - lato font
-    link(href='http://fonts.googleapis.com/css?family=Lato:300,400,900,400italic',rel='stylesheet',type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic',rel='stylesheet',type='text/css')
 
     // Styles
     != styles.toHTML()
@@ -102,9 +102,9 @@ html(lang="en")
                 p Exercises for this lecture:
                 ul
                   li
-                    a(target="_blank", href="http://logic-ex.butterfill.com/course/#{document.courseName}/exerciseSet/#{document.exerciseSetPrefix || ''}normal/lecture/#{lecture.subtitle || lecture.title}") regular exercises
+                    a(target="_blank", href="https://logic-ex.butterfill.com/course/#{document.courseName}/exerciseSet/#{document.exerciseSetPrefix || ''}normal/lecture/#{lecture.subtitle || lecture.title}") regular exercises
                   li
-                    a(target="_blank", href="http://logic-ex.butterfill.com/course/#{document.courseName}/exerciseSet/#{document.exerciseSetPrefix || ''}fast/lecture/#{lecture.subtitle || lecture.title}") fast exercises
+                    a(target="_blank", href="https://logic-ex.butterfill.com/course/#{document.courseName}/exerciseSet/#{document.exerciseSetPrefix || ''}fast/lecture/#{lecture.subtitle || lecture.title}") fast exercises
 
               .units(style='border-left: 1px dotted grey;margin-left: -1px;')
                 div(style="padding-left:2em;")
@@ -125,10 +125,10 @@ html(lang="en")
                       //- exercises
                       if unit.exNormal && unit.exNormal.length > 0
                         p 
-                          a(target="_blank", href="http://logic-ex.butterfill.com/course/#{document.courseName}/exerciseSet/#{document.exerciseSetPrefix || ''}normal/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises for this topic (regular)
+                          a(target="_blank", href="https://logic-ex.butterfill.com/course/#{document.courseName}/exerciseSet/#{document.exerciseSetPrefix || ''}normal/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises for this topic (regular)
                       if unit.exFast && unit.exFast.length > 0
                         p 
-                          a(target="_blank", href="http://logic-ex.butterfill.com/course/#{document.courseName}/exerciseSet/#{document.exerciseSetPrefix || ''}fast/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises for this topic (fast)
+                          a(target="_blank", href="https://logic-ex.butterfill.com/course/#{document.courseName}/exerciseSet/#{document.exerciseSetPrefix || ''}fast/lecture/#{lecture.subtitle || lecture.title}/unit/#{unit.title}") Exercises for this topic (fast)
                       if unit.exercises && unit.exercises.length > 0 
                         p Alternative textbook exercises (regular): #{unit.exercises.join(', ')}
                       if unit.exercises_fast && unit.exercises_fast.length > 0

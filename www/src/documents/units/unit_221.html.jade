@@ -7,8 +7,24 @@ depends: []
 source: ['ph133 lecture 04', 'ph126 fastlecture 03']
 duration: 10
 sequence: 350
+book: ['5.2','6.2']
 exercises: ['5.1--5.6','6.2--6.6']
 exercises_fast: []
+exNormal: [
+  '/ex/proof/from/A or B/to/B or A'
+  '/ex/proof/orInvalid/from/A or B|not A/to/B'
+  '/ex/proof/orInvalid/from/A or B|A/to/not B'
+  '/ex/proof/orInvalid/from/A and B|not A/to/B'
+  '/ex/proof/orInvalid/from/A and (B or C)/to/(A and C) or (A and B)'
+  '/ex/proof/orInvalid/from/(A and B) or (C and D)/to/B or C'
+]
+exFast: [
+  '/ex/proof/from/A or B/to/B or A'
+  '/ex/proof/orInvalid/from/A or B|not A/to/B'
+  '/ex/proof/orInvalid/from/A and (B or C)/to/(A and C) or (A and B)'
+  '/ex/proof/orInvalid/from/(A and C) or (A and B)/to/A and (B or C)'
+  '/ex/proof/orInvalid/from/(A and B) or (C and D)/to/B or C'
+]
 ---
 
 include ../../../fragments/unit_mixins
