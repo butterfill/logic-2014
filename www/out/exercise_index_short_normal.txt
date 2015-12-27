@@ -496,6 +496,17 @@
         },
         {
           "type": "unit",
+          "name": "I Met a Philosopher",
+          "slides": "http://logic-1.butterfill.com/units/unit_501.html",
+          "rawReading": [
+            "9.2",
+            "9.3",
+            "9.5"
+          ],
+          "rawExercises": []
+        },
+        {
+          "type": "unit",
           "name": "All Squares Are Blue",
           "slides": "http://logic-1.butterfill.com/units/unit_503.html",
           "rawReading": [

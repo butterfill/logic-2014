@@ -107,7 +107,7 @@
             "/ex/create/orValid/from/Happy(a)/to/not not Happy(a)",
             "/ex/tt/qq/not (A or B)|not A and not B",
             "/ex/tt/qq/not (A and not B)|not A or B",
-            "/ex/create/orValid/not (Sad(a) and not Sad(b))|not Sad(a) or Sad(b)",
+            "/ex/create/orInconsistent/qq/not (Sad(a) and not Sad(b))|not Sad(a) or Sad(b)",
             "/ex/tt/qq/not (not A and B)|(A and not B)",
             "/ex/create/orValid/from/not (not Happy(a) and Happy(b))/to/(Happy(a) and not Happy(b))"
           ]
