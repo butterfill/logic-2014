@@ -9,28 +9,67 @@ sequence: 600
 exercises_fast:['9.12-–9.13']
 exercises: ['9.4–-9.5', '9.8–-9.9']
 exNormal: [
- # 9.4–-9.5, 9.8–-9.9
- 
-]
-exFast: [
-  #  9.16.10--9.16.15, 9.17.7--9.17.15
-  '/ex/create/qq/exists x Tall(x) and Broken(x) and Crying(x)'
+  '/ex/create/qq/exists x (Tall(x) and Sad(x))'
+  '/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))'
+  '/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x) and Red(x))'
+  
+  '/ex/create/qq/Tall(a)|exists x LeftOf(x,a)'
+  '/ex/create/qq/Tall(a)|exists x (Tall(x) and LeftOf(x,a))'
+  '/ex/create/qq/Tall(a)|exists x Laughing(x)|exists x (Laughing(x) and Tall(x) and LeftOf(x,a))'
   
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken'
   
-  '/ex/create/qq/exists x Tall(x) and Broken(x) and not Crying(x)'
-  '/ex/create/qq/not (exists x Tall(x) and Broken(x) and Crying(x))'
-  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/No red, sad thing is broken'
+  '/ex/create/qq/some x Tall(x)|all x (Tall(x) arrow Sad(x))'
+  '/ex/create/qq/some x (Tall(x) and Sad(x))|some x (Tall(x) and not Sad(x))'
+  '/ex/create/qq/some x Tall(x)|not all x (Tall(x) arrow Sad(x))'
   
+  '/ex/create/qq/exists x Tall(x)'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)|all x (Tall(x) arrow Crying(x))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))'
+    
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying'
+
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken'
   
-  # 9.12-–9.13
+]
+exFast: [
+  '/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))'
+  
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken'
+  
+  '/ex/create/qq/exists x (Tall(x) and Sad(x) and not Crying(x))'
+  '/ex/create/qq/not (exists x (Tall(x) and Sad(x) and Crying(x)))'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/No red, sad thing is broken'
+  
+  '/ex/create/qq/exists x (Tall(x) and Sad(x))|exists x (Tall(x) and not Sad(x))|exists x (not Tall(x) and Sad(x))'
+  
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)|all x (Tall(x) arrow Crying(x))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))'
+    
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying'
+
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken'  
 ]
 ---
 

@@ -343,6 +343,16 @@
         },
         {
           "type": "unit",
+          "name": "Formal Proof",
+          "slides": "http://logic-1.butterfill.com/units/unit_111.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/a=b/to/b=a",
+            "/ex/proof/from/LeftOf(a,b)|c=b/to/LeftOf(a,c)"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Truth-functional Connectives",
           "slides": "http://logic-1.butterfill.com/units/unit_072.html",
           "rawReading": [
@@ -698,6 +708,53 @@
             "/ex/create/qq/all x (Yellow(x) arrow Happy(x))|all x (Red(x) arrow Sad(x))|exists x (not Happy(x) and not Sad(x))",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Happy1/sentence/Someone is neither happy nor sad"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "What does ∀ mean?",
+          "slides": "http://logic-1.butterfill.com/units/unit_492.html",
+          "rawReading": [
+            "9.4"
+          ],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\">\",\")\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x Happy(x)|all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Counterexamples with Quantifiers",
+          "slides": "http://logic-1.butterfill.com/units/unit_502b.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/create/qq/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "We knew that it was invalid ...",
+          "slides": "http://logic-1.butterfill.com/units/unit_163.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/from/A and B|not A/to/C",
+            "/ex/proof/from/A and B|not A/to/C"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Proof Example: ¬(P∨Q) therefore ¬P∧¬Q",
+          "slides": "http://logic-1.butterfill.com/units/unit_821.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/not (A or B)/to/not A and not B",
+            "/ex/proof/from/not A and not B/to/not (A or B)",
+            "/ex/proof/from/not A or not B/to/not (A and B)",
+            "/ex/proof/from/not (A and B)/to/not A or not B",
+            "/ex/proof/from/not (A arrow B)/to/A and not B",
+            "/ex/proof/from/A and not B/to/not (A arrow B)"
+          ]
         }
       ]
     },
@@ -706,7 +763,74 @@
       "name": "Lecture 09",
       "slides": "http://logic-1.butterfill.com/lecture_09.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_09.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Recap: Scope",
+          "slides": "http://logic-1.butterfill.com/units/unit_292.html",
+          "rawReading": [
+            "3.5"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/A and (B or C)|(A and B) or C",
+            "/ex/tt/qq/A arrow (B arrow C)|(A arrow B) arrow C"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Scope and Negation",
+          "slides": "http://logic-1.butterfill.com/units/unit_320.html",
+          "rawReading": [
+            "3.5",
+            "3.6"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/not (A or B)/to/not A",
+            "/ex/tt/from/not A or not B/to/not A",
+            "/ex/create/from/not (Tall(a) and Tall(b))/to/not Tall(a) and not Tall(b)",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":\",\"^\",\")\"]}]/qq/not (Tall(a) arrow Sad(a))|Tall(a) arrow not Sad(a)",
+            "/ex/tt/from/not (A arrow B)/to/A arrow not B",
+            "/ex/tt/from/A arrow not B/to/not (A arrow B)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Translation with Quantifiers",
+          "slides": "http://logic-1.butterfill.com/units/unit_507.html",
+          "rawReading": [
+            "9.5",
+            "9.6"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x (Tall(x) and Sad(x))",
+            "/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))",
+            "/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x) and Red(x))",
+            "/ex/create/qq/Tall(a)|exists x LeftOf(x,a)",
+            "/ex/create/qq/Tall(a)|exists x (Tall(x) and LeftOf(x,a))",
+            "/ex/create/qq/Tall(a)|exists x Laughing(x)|exists x (Laughing(x) and Tall(x) and LeftOf(x,a))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken",
+            "/ex/create/qq/some x Tall(x)|all x (Tall(x) arrow Sad(x))",
+            "/ex/create/qq/some x (Tall(x) and Sad(x))|some x (Tall(x) and not Sad(x))",
+            "/ex/create/qq/some x Tall(x)|not all x (Tall(x) arrow Sad(x))",
+            "/ex/create/qq/exists x Tall(x)",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)|all x (Tall(x) arrow Crying(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",
@@ -714,6 +838,37 @@
       "slides": "http://logic-1.butterfill.com/lecture_10.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_10.handout.pdf",
       "units": [
+        {
+          "type": "unit",
+          "name": "What does ‘→’ mean?",
+          "slides": "http://logic-1.butterfill.com/units/unit_700.html",
+          "rawReading": [
+            "7.1"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/not A/to/A arrow B",
+            "/ex/proof/from/not A/to/A arrow B",
+            "/ex/tt/from/A arrow B|B/to/A",
+            "/ex/tt/from/A arrow B|not B/to/not A",
+            "/ex/tt/from/(A or C) arrow B|not B/to/not A",
+            "/ex/tt/from/(A and C) arrow B|not B/to/not A",
+            "/ex/tt/from/A arrow B/to/A arrow (B and C)",
+            "/ex/tt/from/A arrow B/to/A arrow (B or C)",
+            "/ex/proof/from/A or B|A arrow C/to/C or B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Not If",
+          "slides": "http://logic-1.butterfill.com/units/unit_604.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/from/¬(A → B)/to/not B",
+            "/ex/proof/orInvalid/from/¬(A → B)/to/not B",
+            "/ex/tt/from/(A → ¬B)/to/not B",
+            "/ex/proof/orInvalid/from/(A → ¬B)/to/not B"
+          ]
+        },
         {
           "type": "unit",
           "name": "↔ : truth tables and rules",
@@ -725,6 +880,33 @@
             "/ex/tt/qq/(A arrow B) ↔ not (A and not B)",
             "/ex/proof/from/A ↔ B/to/B arrow A",
             "/ex/proof/from/(not A or B)|(B arrow A)/to/A ↔ B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "∃Intro",
+          "slides": "http://logic-1.butterfill.com/units/unit_801.html",
+          "rawReading": [
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/Tall(a)/to/exists x Tall(x)",
+            "/ex/proof/from/Tall(a)|Red(a)/to/exists x (Tall(x) and Red(x))",
+            "/ex/proof/from/Tall(a)|Red(b)/to/exists x Tall(x) and exists x Red(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "What does ∃ mean?",
+          "slides": "http://logic-1.butterfill.com/units/unit_491.html",
+          "rawReading": [
+            "9.4"
+          ],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/exists x Tall(x)|all x Tall(x)",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/exists x Tall(x)|all x Tall(x)",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/exists x Tall(x)|all x Tall(x)",
+            "/ex/create/qq/exists x Tall(x)|all x Tall(x)"
           ]
         },
         {
@@ -749,6 +931,24 @@
             "/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)",
             "/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Quantifier Equivalences: ¬∀x Created(x) ⫤⊨ ∃x ¬Created(x)",
+          "slides": "http://logic-1.butterfill.com/units/unit_764.html",
+          "rawReading": [
+            "10.1",
+            "10.3",
+            "10.4"
+          ],
+          "rawExercises": [
+            "/ex/create/orInconsistent/qq/∀x ¬Happy(x)|∃x Happy(x)",
+            "/ex/create/orValid/from/¬∀x Happy(x)/to/∃x Happy(x)",
+            "/ex/create/orValid/from/¬∀x Happy(x)/to/∃x ¬Happy(x)",
+            "/ex/create/orValid/from/¬∃x Happy(x)/to/∀x ¬Happy(x)",
+            "/ex/create/orValid/from/¬∃x Happy(x)/to/¬∀x ¬Happy(x)",
+            "/ex/create/orValid/from/¬∃x Happy(x)/to/¬∀x Happy(x)"
+          ]
         }
       ]
     },
@@ -757,7 +957,35 @@
       "name": "Lecture 11",
       "slides": "http://logic-1.butterfill.com/lecture_11.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_11.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Revision: ∀Elim, ∃Intro",
+          "slides": "http://logic-1.butterfill.com/units/unit_551.html",
+          "rawReading": [
+            "12.1",
+            "13.1",
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/all x Happy(x)/to/Happy(a)",
+            "/ex/proof/from/Happy(a)/to/exists x Happy(x)",
+            "/ex/proof/from/all x Happy(x)/to/exists x Happy(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "∃Elim",
+          "slides": "http://logic-1.butterfill.com/units/unit_550.html",
+          "rawReading": [
+            "12.2",
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/∃x( Blue(x) ∧ Tall(x) )/to/∃x Blue(x)"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",

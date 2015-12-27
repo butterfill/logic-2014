@@ -10,6 +10,17 @@ exercises: []
 exercises_fast: []
 sequence: 530
 book: ['9.4']
+exNormal: [
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":2,"n":"a","c":"white","f":[":'","-","|"]},{"x":5,"y":0,"w":2,"h":3,"n":"","c":"yellow","f":[":","-",")"]}]/qq/exists x Tall(x)|all x Tall(x)"""
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":3,"n":"a","c":"white","f":[":'","-","|"]},{"x":5,"y":0,"w":2,"h":3,"n":"","c":"yellow","f":[":","-",")"]}]/qq/exists x Tall(x)|all x Tall(x)"""
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":2,"n":"a","c":"white","f":[":'","-","|"]},{"x":5,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":","-",")"]}]/qq/exists x Tall(x)|all x Tall(x)"""
+  '/ex/create/qq/exists x Tall(x)|all x Tall(x)'
+  
+]
+exFast: [
+  '/ex/create/qq/exists x Tall(x)|all x Tall(x)'
+  '/ex/create/qq/exists x Tall(x)|all x Tall(x)|all x (Tall(x) arrow x=a)'
+]
 ---
 
 

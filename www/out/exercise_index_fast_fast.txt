@@ -298,6 +298,16 @@
             "/ex/proof/from/not (A or B)/to/not A and not B",
             "/ex/proof/from/not A and not B/to/not (A or B)"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Formal Proof",
+          "slides": "http://logic-1.butterfill.com/units/unit_111.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/a=b/to/b=a",
+            "/ex/proof/from/LeftOf(a,b)|c=b/to/LeftOf(a,c)"
+          ]
         }
       ]
     },
@@ -307,6 +317,25 @@
       "slides": "http://logic-1.butterfill.com/fastlecture_03.html",
       "handout": "http://logic-1.butterfill.com/handouts/fastlecture_03.handout.pdf",
       "units": [
+        {
+          "type": "unit",
+          "name": "What does ‘→’ mean?",
+          "slides": "http://logic-1.butterfill.com/units/unit_700.html",
+          "rawReading": [
+            "7.1"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/not A/to/A arrow B",
+            "/ex/proof/from/not A/to/A arrow B",
+            "/ex/tt/from/A arrow B|B/to/A",
+            "/ex/tt/from/A arrow B|not B/to/not A",
+            "/ex/tt/from/(A or C) arrow B|not B/to/not A",
+            "/ex/tt/from/(A and C) arrow B|not B/to/not A",
+            "/ex/tt/from/A arrow B/to/A arrow (B and C)",
+            "/ex/tt/from/A arrow B/to/A arrow (B or C)",
+            "/ex/proof/from/A or B|A arrow C/to/C or B"
+          ]
+        },
         {
           "type": "unit",
           "name": "A ∧ B ∨ C: They Are Different",
@@ -395,6 +424,19 @@
         },
         {
           "type": "unit",
+          "name": "∃Elim",
+          "slides": "http://logic-1.butterfill.com/units/unit_550.html",
+          "rawReading": [
+            "12.2",
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/∃x( Blue(x) ∧ Tall(x) )/to/∃x Blue(x)",
+            "/ex/proof/from/all x Blue(x)/to/not exists x not Blue(x)"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "All Squares Are Blue (Fast Version)",
           "slides": "http://logic-1.butterfill.com/units/unit_504.html",
           "rawReading": [
@@ -414,6 +456,62 @@
             "/ex/create/qq/all x (Yellow(x) arrow Happy(x))|all x (Red(x) arrow Sad(x))|exists x (not Happy(x) and not Sad(x))",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Happy1/sentence/Someone is neither happy nor sad"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "What does ∀ mean?",
+          "slides": "http://logic-1.butterfill.com/units/unit_492.html",
+          "rawReading": [
+            "9.4"
+          ],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\">\",\")\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x Happy(x)|all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Translation with Quantifiers",
+          "slides": "http://logic-1.butterfill.com/units/unit_507.html",
+          "rawReading": [
+            "9.5",
+            "9.6"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken",
+            "/ex/create/qq/exists x (Tall(x) and Sad(x) and not Crying(x))",
+            "/ex/create/qq/not (exists x (Tall(x) and Sad(x) and Crying(x)))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/No red, sad thing is broken",
+            "/ex/create/qq/exists x (Tall(x) and Sad(x))|exists x (Tall(x) and not Sad(x))|exists x (not Tall(x) and Sad(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)|all x (Tall(x) arrow Crying(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "What does ∃ mean?",
+          "slides": "http://logic-1.butterfill.com/units/unit_491.html",
+          "rawReading": [
+            "9.4"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x Tall(x)|all x Tall(x)",
+            "/ex/create/qq/exists x Tall(x)|all x Tall(x)|all x (Tall(x) arrow x=a)"
+          ]
         }
       ]
     },
@@ -422,7 +520,17 @@
       "name": "Fast Lecture 05",
       "slides": "http://logic-1.butterfill.com/fastlecture_05.html",
       "handout": "http://logic-1.butterfill.com/handouts/fastlecture_05.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Counterexamples with Quantifiers",
+          "slides": "http://logic-1.butterfill.com/units/unit_502b.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",
@@ -430,6 +538,24 @@
       "slides": "http://logic-1.butterfill.com/fastlecture_06.html",
       "handout": "http://logic-1.butterfill.com/handouts/fastlecture_06.handout.pdf",
       "units": [
+        {
+          "type": "unit",
+          "name": "Quantifier Equivalences: ¬∀x Created(x) ⫤⊨ ∃x ¬Created(x)",
+          "slides": "http://logic-1.butterfill.com/units/unit_764.html",
+          "rawReading": [
+            "10.1",
+            "10.3",
+            "10.4"
+          ],
+          "rawExercises": [
+            "/ex/create/orInconsistent/qq/∀x ¬Happy(x)|∃x Happy(x)",
+            "/ex/create/orValid/from/¬∀x Happy(x)/to/∃x Happy(x)",
+            "/ex/create/orValid/from/¬∀x Happy(x)/to/∃x ¬Happy(x)",
+            "/ex/create/orValid/from/¬∃x Happy(x)/to/∀x ¬Happy(x)",
+            "/ex/create/orValid/from/¬∃x Happy(x)/to/¬∀x ¬Happy(x)",
+            "/ex/create/orValid/from/¬∃x Happy(x)/to/¬∀x Happy(x)"
+          ]
+        },
         {
           "type": "unit",
           "name": "There Does Not Exist",
