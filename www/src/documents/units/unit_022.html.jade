@@ -1,0 +1,85 @@
+---cson
+layout: 'deck_units' 
+title: "Symbols and Words"
+description: """
+  When you use logic-ex you can type words instead of using symbols.
+  But which words stand for which symbols?  Here’s a list.
+  """
+tags: ['proof','logic-ex']
+---
+
+include ../../../fragments/unit_mixins
+
++slide
+  .notes: :t
+    When typing proofs or sentences, it’s often awkward to enter symbols.
+    In the first-order language awFOL, you can use words as well as symbols (they are
+    treated as equivalent).  This makes typing easier.
+    And since logic-ex recognises awFOL, you can use the words in logic-ex.
+  .notes: :t
+    Here’s a table listing the words you can use for each symbol.
+  table.data
+    thead
+      tr
+        td 
+          span symbol
+        td
+          span word(s)
+    tbody
+      tr.odd
+        td
+          span ¬
+        td
+          span not
+      tr.even
+        td
+          span →
+        td
+          span arrow, ->
+          
+      tr.odd
+        td
+          span ↔
+        td
+          span double_arrow, <->
+      tr.even
+        td
+          span ⊥
+        td
+          span false, contradiction
+      tr.odd
+        td
+          span ∧
+        td
+          span and, &
+      tr.even
+        td
+          span ∨
+        td
+          span or, ||
+      tr.odd
+        td
+          span ↓
+        td
+          span nor
+      tr.even
+        td
+          span ↑
+        td
+          span nand
+        
+      tr.odd
+        td
+          span ∀
+        td
+          span all, every
+      tr.even
+        td
+          span ∃
+        td
+          span some, exists
+        
+          
+          
+          
+          

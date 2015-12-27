@@ -341,6 +341,32 @@
             "/ex/q/Explain why ‘Ayesha said that ...’ is not a truth-functional connective",
             "/ex/TorF/qq/conjunction (‘∧’) is a truth-functional connective|‘Because’ is a truth-functional connective|‘Maybe’ (as in ‘Maybe Elvis lives’) is a truth-functional connective|‘Certainly’ (as in ‘Certainly, fish swim’) is a truth-functional connective|‘Probably’ (as in ‘Probably, it will rain’) is a truth-functional connective|Identity (‘=’) is a truth-functional connective"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Subproofs Are Tricky",
+          "slides": "http://logic-1.butterfill.com/units/unit_224.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/qq/If an argument is valid it remains valid when you add a new sentence to the premises, regardless of what that new sentence is.|No valid argument may have a contradiction as its conclusion.|An invalid argument can be turned into a valid argument by replacing the conclusion with its negation"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Everything Is Broken",
+          "slides": "http://logic-1.butterfill.com/units/unit_471.html",
+          "rawReading": [
+            "9.1",
+            "9.2"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1/sentence/Ayesha is happy",
+            "/ex/trans/domain/Ayesha/names/-/predicates/Happy1/sentence/Someone is happy",
+            "/ex/trans/domain/Ayesha/names/-/predicates/Happy1/sentence/all x Broken(x)",
+            "/ex/create/qq/not all x Happy(x)",
+            "/ex/create/qq/exists x Happy(x)|not all x Happy(x)",
+            "/ex/create/qq/not all x Tall(x)|all x Happy(x)"
+          ]
         }
       ]
     },
@@ -349,7 +375,47 @@
       "name": "Fast Lecture 04",
       "slides": "http://logic-1.butterfill.com/fastlecture_04.html",
       "handout": "http://logic-1.butterfill.com/handouts/fastlecture_04.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Everything Is Broken",
+          "slides": "http://logic-1.butterfill.com/units/unit_471.html",
+          "rawReading": [
+            "9.1",
+            "9.2"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1/sentence/Ayesha is happy",
+            "/ex/trans/domain/Ayesha/names/-/predicates/Happy1/sentence/Someone is happy",
+            "/ex/trans/domain/Ayesha/names/-/predicates/Happy1/sentence/all x Broken(x)",
+            "/ex/create/qq/not all x Happy(x)",
+            "/ex/create/qq/exists x Happy(x)|not all x Happy(x)",
+            "/ex/create/qq/not all x Tall(x)|all x Happy(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "All Squares Are Blue (Fast Version)",
+          "slides": "http://logic-1.butterfill.com/units/unit_504.html",
+          "rawReading": [
+            "9.2",
+            "9.3",
+            "9.5"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Happy1/sentence/exists x (Happy(x) and Red(x))",
+            "/ex/create/qq/exists x (Happy(x) and Yellow(x))|exists x (Happy(x) and Red(x))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Yellow1|Happy1/sentence/Something sad is yellow",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Blue1|Sad1/sentence/Everything blue is sad",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\">\",\")\"]}]/qq/exists x (Happy(x) and Red(x))|all x (Happy(x) arrow Red(x))",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\">\",\"(\"]}]/qq/exists x (Happy(x) and Red(x))|all x (Happy(x) arrow Red(x))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Yellow1|Happy1/sentence/all x (Yellow(x) arrow Happy(x))",
+            "/ex/create/qq/all x (Yellow(x) arrow Happy(x))|all x (Red(x) arrow Sad(x))",
+            "/ex/create/qq/all x (Yellow(x) arrow Happy(x))|all x (Red(x) arrow Sad(x))|exists x (not Happy(x) and not Sad(x))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Happy1/sentence/Someone is neither happy nor sad"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",

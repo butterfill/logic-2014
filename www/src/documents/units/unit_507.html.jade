@@ -8,6 +8,30 @@ book: ['9.5','9.6']
 sequence: 600
 exercises_fast:['9.12-–9.13']
 exercises: ['9.4–-9.5', '9.8–-9.9']
+exNormal: [
+ # 9.4–-9.5, 9.8–-9.9
+ 
+]
+exFast: [
+  #  9.16.10--9.16.15, 9.17.7--9.17.15
+  '/ex/create/qq/exists x Tall(x) and Broken(x) and Crying(x)'
+  
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken'
+  
+  '/ex/create/qq/exists x Tall(x) and Broken(x) and not Crying(x)'
+  '/ex/create/qq/not (exists x Tall(x) and Broken(x) and Crying(x))'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/No red, sad thing is broken'
+  
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying'
+  
+  # 9.12-–9.13
+]
 ---
 
 include ../../../fragments/slide_mixins
