@@ -538,6 +538,19 @@
         },
         {
           "type": "unit",
+          "name": "Vegetarians Are Evil",
+          "slides": "http://logic-1.butterfill.com/units/unit_502.html",
+          "rawReading": [
+            "9.2",
+            "9.3",
+            "9.5"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Counterexamples with Quantifiers",
           "slides": "http://logic-1.butterfill.com/units/unit_502b.html",
           "rawReading": [],
@@ -607,6 +620,32 @@
         },
         {
           "type": "unit",
+          "name": "I Met a Philosopher",
+          "slides": "http://logic-1.butterfill.com/units/unit_501.html",
+          "rawReading": [
+            "9.2",
+            "9.3",
+            "9.5"
+          ],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"orange\",\"f\":[\"}:\",\"-\",\"(\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"blue\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"indigo\",\"f\":[\";\",\">\",\")\"]}]/qq/all x (Frowning(x) arrow Happy(x))",
+            "/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad",
+            "/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))",
+            "/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad",
+            "/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1/sentence/A tall thing is crying",
+            "/ex/create/qq/exists x Wide(x)|exists x Frowning(x)|exists x (Wide(x) and Frowning(x))",
+            "/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and Frowning(x))",
+            "/ex/create/qq/exists x Wide(x)|exists x not Frowning(x)|exists x (Wide(x) and not Frowning(x))",
+            "/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and not Frowning(x))",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is not crying",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1|Sad1/sentence/A tall sad person is not crying",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is crying",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is not crying"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Translation with Quantifiers",
           "slides": "http://logic-1.butterfill.com/units/unit_507.html",
           "rawReading": [
@@ -615,6 +654,11 @@
           ],
           "rawExercises": [
             "/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))|all x (LeftOf(x,a) arrow LargerThan(x,a))",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying",
@@ -627,13 +671,65 @@
             "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))",
             "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))",
             "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))",
+            "/ex/create/qq/exists x RightOf(x,a)",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x) and LeftOf(x,b))",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying",
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying",
-            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken"
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken",
+            "/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))",
+            "/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y/sentence/Something is left of Ayesha",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y/sentence/Something is left of Ayesha and right of Beatrice",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1/sentence/Something tall is left of Ayesha and right of Beatrice",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1|Sad1/sentence/Something tall and sad is left of Ayesha and right of Beatrice"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Scope and Quantifiers",
+          "slides": "http://logic-1.butterfill.com/units/unit_710.html",
+          "rawReading": [
+            "9.5",
+            "9.6"
+          ],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\"}:\",\"-\",\"|\"]}]/qq/exists x (Happy(x) and Tall(x))|exists x Tall(x) and exists x Happy(x)",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"orange\",\"f\":[\"}:\",\">\",\"(\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\"(\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"orange\",\"f\":[\"}:\",\"^\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)",
+            "/ex/create/orValid/from/exists x White(x) and exists x Sad(x)/to/exists x (White(x) and Sad(x))",
+            "/ex/create/orValid/from/exists x (White(x) and Sad(x))/to/exists x White(x) and exists x Sad(x)",
+            "/ex/create/orValid/from/all x White(x) arrow all x Sad(x)/to/all x (White(x) arrow Sad(x))",
+            "/ex/create/orValid/from/all x (White(x) arrow Sad(x))/to/all x White(x) arrow all x Sad(x)",
+            "/ex/create/orValid/from/exists x Tall(x) and exists x Happy(x)/to/exists x Tall(x) and exists y Happy(y)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Proof Example: ¬P∨R therefore P→R",
+          "slides": "http://logic-1.butterfill.com/units/unit_820.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/not A or B/to/A arrow B",
+            "/ex/proof/from/not (A and not B)/to/A arrow B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "∀Elim",
+          "slides": "http://logic-1.butterfill.com/units/unit_800.html",
+          "rawReading": [
+            "13.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/all x Red(x)/to/Red(a)",
+            "/ex/proof/from/all x a=x|Red(a)/to/Red(b)"
           ]
         }
       ]
@@ -779,6 +875,36 @@
           "rawExercises": [
             "/ex/proof/from/∃x( Blue(x) ∧ Tall(x) )/to/∃x Blue(x)",
             "/ex/proof/from/all x Blue(x)/to/not exists x not Blue(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Don't use ∃ with →",
+          "slides": "http://logic-1.butterfill.com/units/unit_245.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":2,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"white\",\"f\":[\":\",\"^\",\"|\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":'\",\"-\",\"(\"]}]/qq/all x (Sad(x) arrow Crying(x))|all x (Sad(x) and Crying(x))",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Everything is sad and crying.",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Everything sad is crying.",
+            "/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))",
+            "/ex/TorF/world/[{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\">\",\"|\"]}]/qq/exists x (Sad(x) and Crying(x))|all x (Sad(x) arrow Crying(x))",
+            "/ex/translate/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is sad and crying.",
+            "/ex/translate/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or crying.",
+            "/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))",
+            "/ex/create/qq/exists x LeftOf(x,a)",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))|all x (LeftOf(x,a) arrow LargerThan(x,a))",
+            "/ex/create/qq/exists x RightOf(x,a)",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x) and LeftOf(x,b))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y/sentence/Something is left of Ayesha",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y/sentence/Something is left of Ayesha and right of Beatrice",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1/sentence/Something tall is left of Ayesha and right of Beatrice",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1|Sad1/sentence/Something tall and sad is left of Ayesha and right of Beatrice"
           ]
         }
       ]

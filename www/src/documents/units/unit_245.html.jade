@@ -1,4 +1,4 @@
----
+---cson
 layout: 'deck_units' 
 title: "Don't use ∃ with →"
 tags: ['translation']
@@ -10,6 +10,62 @@ book: []
 exercises: ['9.10','9.15--9.17','*9.18--9']
 exercises_fast: ['9.10']
 sequence: 590
+exNormal: [
+  """/ex/TorF/world/[{"x":2,"y":0,"w":2,"h":2,"n":"","c":"white","f":[":","^","|"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":'","-","("]}]/qq/all x (Sad(x) arrow Crying(x))|all x (Sad(x) and Crying(x))"""
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Everything is sad and crying.'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Everything sad is crying.'
+  '/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))'
+  
+  """/ex/TorF/world/[{"x":0,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":",">","|"]}]/qq/exists x (Sad(x) and Crying(x))|all x (Sad(x) arrow Crying(x))"""
+  '/ex/translate/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is sad and crying.'
+  '/ex/translate/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or crying.'
+  '/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))'
+
+  '/ex/create/qq/exists x LeftOf(x,a)'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))|all x (LeftOf(x,a) arrow LargerThan(x,a))'
+  
+  '/ex/create/qq/exists x RightOf(x,a)'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x) and LeftOf(x,b))'
+  
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y/sentence/Something is left of Ayesha'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y/sentence/Something is left of Ayesha and right of Beatrice'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1/sentence/Something tall is left of Ayesha and right of Beatrice'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1|Sad1/sentence/Something tall and sad is left of Ayesha and right of Beatrice'
+]
+exFast: [
+  """/ex/TorF/world/[{"x":2,"y":0,"w":2,"h":2,"n":"","c":"white","f":[":","^","|"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":'","-","("]}]/qq/all x (Sad(x) arrow Crying(x))|all x (Sad(x) and Crying(x))"""
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Everything is sad and crying.'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Everything sad is crying.'
+  '/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))'
+  
+  """/ex/TorF/world/[{"x":0,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":",">","|"]}]/qq/exists x (Sad(x) and Crying(x))|all x (Sad(x) arrow Crying(x))"""
+  '/ex/translate/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is sad and crying.'
+  '/ex/translate/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or crying.'
+  '/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))'
+
+  '/ex/create/qq/exists x LeftOf(x,a)'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))|all x (LeftOf(x,a) arrow LargerThan(x,a))'
+  
+  '/ex/create/qq/exists x RightOf(x,a)'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x) and LeftOf(x,b))'
+  
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y/sentence/Something is left of Ayesha'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y/sentence/Something is left of Ayesha and right of Beatrice'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1/sentence/Something tall is left of Ayesha and right of Beatrice'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1|Sad1/sentence/Something tall and sad is left of Ayesha and right of Beatrice'
+]
 ---
 
 include ../../../fragments/slide_mixins

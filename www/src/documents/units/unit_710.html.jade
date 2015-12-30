@@ -10,6 +10,29 @@ book: ['9.5','9.6']
 exercises: []
 exercises_fast: []
 sequence: 550
+exNormal: [  
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"green","f":["}:","-",")"]},{"x":2,"y":0,"w":2,"h":3,"n":"","c":"blue","f":["}:","-","|"]}]/qq/exists x (Happy(x) and Tall(x))|exists x Tall(x) and exists x Happy(x)"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"green","f":["}:","-",")"]},{"x":2,"y":0,"w":2,"h":3,"n":"","c":"blue","f":[":","-",")"]},{"x":0,"y":0,"w":2,"h":3,"n":"","c":"orange","f":["}:",">","("]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"green","f":["}:","-","("]},{"x":2,"y":0,"w":2,"h":3,"n":"","c":"blue","f":[":","-",")"]},{"x":0,"y":0,"w":2,"h":3,"n":"","c":"orange","f":["}:","^",")"]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)"""
+  
+  '/ex/create/qq/exists x White(x) and exists x Sad(x)|not exists x (White(x) and Sad(x))'
+  '/ex/create/qq/all x White(x) arrow all x Sad(x)|not all x (White(x) arrow Sad(x))'
+
+  '/ex/create/orValid/from/exists x Tall(x) and exists x Happy(x)/to/exists x Tall(x) and exists y Happy(y)'
+]
+exFast: [
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"green","f":["}:","-",")"]},{"x":2,"y":0,"w":2,"h":3,"n":"","c":"blue","f":["}:","-","|"]}]/qq/exists x (Happy(x) and Tall(x))|exists x Tall(x) and exists x Happy(x)"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"green","f":["}:","-",")"]},{"x":2,"y":0,"w":2,"h":3,"n":"","c":"blue","f":[":","-",")"]},{"x":0,"y":0,"w":2,"h":3,"n":"","c":"orange","f":["}:",">","("]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"green","f":["}:","-","("]},{"x":2,"y":0,"w":2,"h":3,"n":"","c":"blue","f":[":","-",")"]},{"x":0,"y":0,"w":2,"h":3,"n":"","c":"orange","f":["}:","^",")"]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)"""
+  
+  '/ex/create/orValid/from/exists x White(x) and exists x Sad(x)/to/exists x (White(x) and Sad(x))'
+  '/ex/create/orValid/from/exists x (White(x) and Sad(x))/to/exists x White(x) and exists x Sad(x)'
+  '/ex/create/orValid/from/all x White(x) arrow all x Sad(x)/to/all x (White(x) arrow Sad(x))'
+  '/ex/create/orValid/from/all x (White(x) arrow Sad(x))/to/all x White(x) arrow all x Sad(x)'
+
+  '/ex/create/orValid/from/exists x Tall(x) and exists x Happy(x)/to/exists x Tall(x) and exists y Happy(y)'
+
+]
 ---
 
 

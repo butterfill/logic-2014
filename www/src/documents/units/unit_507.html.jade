@@ -44,7 +44,15 @@ exNormal: [
   
 ]
 exFast: [
+  # Includes some exercises from unit 245 (not done in fast lectures)
+  
   '/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))'
+
+  '/ex/create/qq/exists x LeftOf(x,a)'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))|all x (LeftOf(x,a) arrow LargerThan(x,a))'
   
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken'
@@ -61,7 +69,13 @@ exFast: [
   '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))'
   '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))'
   '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))'
-    
+
+  '/ex/create/qq/exists x RightOf(x,a)'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x) and LeftOf(x,b))'
+  
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken'
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying'
@@ -70,6 +84,14 @@ exFast: [
   '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying'
 
   '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken'  
+
+  '/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))'
+  '/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))'
+
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y/sentence/Something is left of Ayesha'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y/sentence/Something is left of Ayesha and right of Beatrice'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1/sentence/Something tall is left of Ayesha and right of Beatrice'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1|Sad1/sentence/Something tall and sad is left of Ayesha and right of Beatrice'
 ]
 ---
 

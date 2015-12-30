@@ -10,8 +10,52 @@ book: ['9.2','9.3','9.5']
 exercises: ['9.1 odd numbers only', '9.2 even numbers only', '9.4', '9.5', '9.8', '9.9', '9.10', '9.12']
 exercises_fast: ['9.8', '9.9', '9.10','9.12','9.13']
 sequence: 440
-# TODO  = exNormal: []
+exNormal: [
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"green","f":["}:","-",")"]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">","("]}]/qq/all x (Frowning(x) arrow Happy(x))"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":["}:","-",")"]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">",")"]}]/qq/all x (Frowning(x) arrow Happy(x))"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"orange","f":["}:","-","("]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">",")"]}]/qq/all x (Frowning(x) arrow Happy(x))"""
+
+  '/ex/trans/domain/5things/names/-/predicates/Circle1|Broken1/sentence/All circles are broken'
+  '/ex/trans/domain/5things/names/-/predicates/Idol1-x-is-an-idol|Dead1/sentence/∀x(Idol(x) → Dead(x))'
+  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad'
+  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))'
+  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad'
+  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing'
+
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1/sentence/A tall thing is crying'
+  '/ex/create/qq/exists x Wide(x)|exists x Frowning(x)|exists x (Wide(x) and Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and Frowning(x))'
+  '/ex/create/qq/exists x Wide(x)|exists x not Frowning(x)|exists x (Wide(x) and not Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and not Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is not crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1|Sad1/sentence/A tall sad person is not crying'
+
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is not crying'
+    
+]
 # exFast : see unit 507
+exFast: [
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"orange","f":["}:","-","("]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">",")"]}]/qq/all x (Frowning(x) arrow Happy(x))"""
+
+  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad'
+  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))'
+  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad'
+  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing'
+
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1/sentence/A tall thing is crying'
+  '/ex/create/qq/exists x Wide(x)|exists x Frowning(x)|exists x (Wide(x) and Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and Frowning(x))'
+  '/ex/create/qq/exists x Wide(x)|exists x not Frowning(x)|exists x (Wide(x) and not Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and not Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is not crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1|Sad1/sentence/A tall sad person is not crying'
+
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is not crying'
+    
+]
 ---
 
 //- move these exercises_fast to later unit: ,'9.16.10-15','9.17.7-15','9.18','9.19'
@@ -52,7 +96,7 @@ include ../../../fragments/unit_mixins
           .step5.hide
             p 
               span ∀x( 
-              span.idols Idols(x)
+              span.idols Idol(x)
               span   → 
               span.dead Dead(x)
               span  )
