@@ -313,6 +313,7 @@
           "slides": "http://logic-1.butterfill.com/units/unit_154.html",
           "rawReading": [],
           "rawExercises": [
+            "/ex/scope/qq/(Intelligent(a) and Dissatisfied(a)) or Happy(a)|Intelligent(a) and (Dissatisfied(a) or Happy(a))|(A ∧ B) ∨ C|A ∧ (B ∨ C)|A arrow (B arrow C)|(A arrow B) arrow C",
             "/ex/tt/qq/(A and B) or C|A and (B or C)",
             "/ex/create/orValid/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))",
             "/ex/create/orValid/from/Happy(a) and (Happy(b) or Happy(c))/to/(Happy(a) and Happy(b)) or Happy(c)",
@@ -459,6 +460,7 @@
             "3.7"
           ],
           "rawExercises": [
+            "/ex/scope/qq/¬(A ∨ B)|¬A ∨ ¬B|¬A and ¬B|¬(A arrow B)",
             "/ex/create/qq/Frowning(a)",
             "/ex/create/qq/Frowning(a)|Sad(a)",
             "/ex/tt/qq/not A or not B|not (A or B)",
@@ -587,6 +589,7 @@
           "slides": "http://logic-1.butterfill.com/units/unit_604.html",
           "rawReading": [],
           "rawExercises": [
+            "/ex/scope/qq/¬(A → B)|A → ¬B",
             "/ex/tt/from/¬(A → B)/to/not B",
             "/ex/proof/orInvalid/from/¬(A → B)/to/not B",
             "/ex/tt/from/(A → ¬B)/to/not B",
@@ -662,7 +665,8 @@
           "rawExercises": [
             "/ex/tt/qq/not (A and not B) or not C|not (not A or (B or not C))",
             "/ex/create/orValid/from/not (Happy(a) and not Sad(b)) or not Laughing(c)/to/not (not Happy(a) or (Sad(b) or not Laughing(c)))",
-            "/ex/create/orValid/from/not (not Happy(a) or (Sad(b) or not Laughing(c)))/to/not (Happy(a) and not Sad(b)) or not Laughing(c)"
+            "/ex/create/orValid/from/not (not Happy(a) or (Sad(b) or not Laughing(c)))/to/not (Happy(a) and not Sad(b)) or not Laughing(c)",
+            "/ex/scope/qq/¬(A ∧ B)|¬A ∨ ¬B|¬A ∧ ¬B|¬(A ∨ B)"
           ]
         },
         {
@@ -689,8 +693,8 @@
             "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Everything sad is crying.",
             "/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))",
             "/ex/TorF/world/[{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\">\",\"|\"]}]/qq/exists x (Sad(x) and Crying(x))|all x (Sad(x) arrow Crying(x))",
-            "/ex/translate/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is sad and crying.",
-            "/ex/translate/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or crying.",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is sad and crying.",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or crying.",
             "/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))",
             "/ex/create/qq/exists x LeftOf(x,a)",
             "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))",
@@ -734,7 +738,7 @@
             "6.3"
           ],
           "rawExercises": [
-            "/ex/proof/from/A→B|¬A/to/¬A",
+            "/ex/proof/from/A→B|¬B/to/¬A",
             "/ex/proof/from/¬A or ¬B/to/¬(A and B)",
             "/ex/proof/from/A|¬B/to/¬(A→B)",
             "/ex/proof/from/A/to/¬(A→¬A)"
@@ -775,6 +779,25 @@
       "units": [
         {
           "type": "unit",
+          "name": "Something Is Above Something",
+          "slides": "http://logic-1.butterfill.com/units/unit_740.html",
+          "rawReading": [
+            "11.1"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/TallerThan(a,b)",
+            "/ex/create/qq/exists y TallerThan(a,y)",
+            "/ex/create/qq/exists x exists y TallerThan(x,y)",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/TallerThan2-x-is-taller-than-y/sentence/TallerThan(a,b)",
+            "/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/TallerThan2-x-is-taller-than-y/sentence/exists x TallerThan(a,x)",
+            "/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/TallerThan2-x-is-taller-than-y/sentence/exists y exists x TallerThan(y,x)",
+            "/ex/create/qq/exists x exists y LeftOf(x,y)|all x all y (LeftOf(x,y) arrow Happy(x))|exists x not Happy(x)",
+            "/ex/create/qq/exists x exists y Adjacent(x,y)|exists x exists y not Adjacent(x,y)|all x all y ((Adjacent(x,y) and Sad(x)) arrow Sad(y))|exists x Sad(x)",
+            "/ex/create/qq/exists x exists y Adjacent(x,y)|exists x exists y not Adjacent(x,y)|all x all y ((Adjacent(x,y) and Sad(x)) arrow Sad(y))|exists x Sad(x)|exists x not Sad(x)"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "∃Intro",
           "slides": "http://logic-1.butterfill.com/units/unit_801.html",
           "rawReading": [
@@ -795,7 +818,10 @@
             "13.2"
           ],
           "rawExercises": [
-            "/ex/proof/from/∃x( Blue(x) ∧ Tall(x) )/to/∃x Blue(x)"
+            "/ex/proof/from/∃x( Blue(x) ∧ Tall(x) )/to/∃x Blue(x)",
+            "/ex/proof/from/all x ( Blue(x) arrow Tall(x) )|∃x Blue(x)/to/∃x Tall(x)",
+            "/ex/proof/from/all x not Blue(x)/to/not exists x Blue(x)",
+            "/ex/proof/from/all x ( Scary(x) or Funny(x) )|∃x not Scary(x)/to/∃x Funny(x)"
           ]
         },
         {
@@ -844,12 +870,30 @@
             "9.6"
           ],
           "rawExercises": [
+            "/ex/scope/qq/∃x(Robots(x) ∧ Intelligent(x))|∃x Robots(x) ∧ ∃x Intelligent(x)|all x Tragic(x) arrow all x Comic(x)|all x (Tragic(x) arrow Comic(x))|all x ((Tragic(x) or Comic(x)) arrow Dramatic(x))",
             "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\"}:\",\"-\",\"|\"]}]/qq/exists x (Happy(x) and Tall(x))|exists x Tall(x) and exists x Happy(x)",
             "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"orange\",\"f\":[\"}:\",\">\",\"(\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)",
             "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\"(\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"orange\",\"f\":[\"}:\",\"^\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)",
             "/ex/create/qq/exists x White(x) and exists x Sad(x)|not exists x (White(x) and Sad(x))",
             "/ex/create/qq/all x White(x) arrow all x Sad(x)|not all x (White(x) arrow Sad(x))",
             "/ex/create/orValid/from/exists x Tall(x) and exists x Happy(x)/to/exists x Tall(x) and exists y Happy(y)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "∀Intro",
+          "slides": "http://logic-1.butterfill.com/units/unit_570.html",
+          "rawReading": [
+            "12.1",
+            "12.3",
+            "13.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/∀x(Frowning(x) and Crying(x))/to/∀x Crying(x)",
+            "/ex/proof/from/∀x(Square(x) → Blue(x))/to/∀x Square(x) → ∀x Blue(x)",
+            "/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Tall(x) → Blue(x))/to/∀x (Sad(x) → Blue(x))",
+            "/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Sad(x) → not Tall(x))/to/∀x not Sad(x)",
+            "/ex/proof/from/not exists x (Happy(x) and not Blue(x))/to/∀x Happy(x) → ∀x Blue(x)"
           ]
         }
       ]
@@ -860,6 +904,23 @@
       "slides": "http://logic-1.butterfill.com/short_lecture_08.html",
       "handout": "http://logic-1.butterfill.com/handouts/short_lecture_08.handout.pdf",
       "units": [
+        {
+          "type": "unit",
+          "name": "∀Intro",
+          "slides": "http://logic-1.butterfill.com/units/unit_570.html",
+          "rawReading": [
+            "12.1",
+            "12.3",
+            "13.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/∀x(Frowning(x) and Crying(x))/to/∀x Crying(x)",
+            "/ex/proof/from/∀x(Square(x) → Blue(x))/to/∀x Square(x) → ∀x Blue(x)",
+            "/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Tall(x) → Blue(x))/to/∀x (Sad(x) → Blue(x))",
+            "/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Sad(x) → not Tall(x))/to/∀x not Sad(x)",
+            "/ex/proof/from/not exists x (Happy(x) and not Blue(x))/to/∀x Happy(x) → ∀x Blue(x)"
+          ]
+        },
         {
           "type": "unit",
           "name": "Somebody Is Not Dead",

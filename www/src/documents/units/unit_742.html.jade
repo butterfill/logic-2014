@@ -10,6 +10,28 @@ book: ['11.1']
 exercises: ['11.2']
 exercises_fast: []
 sequence: 660
+exNormal: [
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":",">","|"]},{"x":1,"y":0,"w":2,"h":2,"n":"","c":"red","f":[";","^",")"]},{"x":5,"y":0,"w":2,"h":2,"n":"","c":"pink","f":[":","^",")"]}]/qq/all x all y (LeftOf(x,y) arrow Happy(x))|all x all y ((Happy(x) and not Happy(y)) arrow LeftOf(x,y))"""
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":",">",")"]},{"x":1,"y":0,"w":2,"h":2,"n":"","c":"green","f":[";","^",")"]},{"x":5,"y":0,"w":2,"h":2,"n":"","c":"pink","f":[":","^",")"]}]/qq/all x all y (LeftOf(x,y) arrow Happy(x))|all x all y ((Happy(x) and not Happy(y)) arrow LeftOf(x,y))"""
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":",">","|"]},{"x":1,"y":0,"w":2,"h":2,"n":"","c":"red","f":[";","^",")"]},{"x":5,"y":0,"w":2,"h":2,"n":"","c":"purple","f":[":","^","|"]}]/qq/all x all y (LeftOf(x,y) arrow Happy(x))|all x all y ((Happy(x) and not Happy(y)) arrow LeftOf(x,y))"""
+
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Puffin1-x-is-a-puffin|Likes2-x-likes-y/sentence/all x (Puffin(x) arrow Likes(a,x))'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Puffin1-x-is-a-puffin|Likes2-x-likes-y/sentence/all y all x (Puffin(x) arrow Likes(y,x))'
+  
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Puffin1-x-is-a-puffin|Likes2-x-likes-y/sentence/all x (Likes(a,x) arrow Puffin(x))'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Puffin1-x-is-a-puffin|Likes2-x-likes-y/sentence/all y all x (Likes(y,x) arrow Puffin(x))'  
+]
+exFast: [
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":",">","|"]},{"x":1,"y":0,"w":2,"h":2,"n":"","c":"red","f":[";","^",")"]},{"x":5,"y":0,"w":2,"h":2,"n":"","c":"pink","f":[":","^",")"]}]/qq/all x all y (LeftOf(x,y) arrow Happy(x))|all x all y ((Happy(x) and not Happy(y)) arrow LeftOf(x,y))"""
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":",">",")"]},{"x":1,"y":0,"w":2,"h":2,"n":"","c":"green","f":[";","^",")"]},{"x":5,"y":0,"w":2,"h":2,"n":"","c":"pink","f":[":","^",")"]}]/qq/all x all y (LeftOf(x,y) arrow Happy(x))|all x all y ((Happy(x) and not Happy(y)) arrow LeftOf(x,y))"""
+  """/ex/TorF/world/[{"x":3,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":[":",">","|"]},{"x":1,"y":0,"w":2,"h":2,"n":"","c":"red","f":[";","^",")"]},{"x":5,"y":0,"w":2,"h":2,"n":"","c":"purple","f":[":","^","|"]}]/qq/all x all y (LeftOf(x,y) arrow Happy(x))|all x all y ((Happy(x) and not Happy(y)) arrow LeftOf(x,y))"""
+
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Puffin1-x-is-a-puffin|Likes2-x-likes-y/sentence/all x (Puffin(x) arrow Likes(a,x))'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Puffin1-x-is-a-puffin|Likes2-x-likes-y/sentence/all y all x (Puffin(x) arrow Likes(y,x))'
+  
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/Puffin1-x-is-a-puffin|Likes2-x-likes-y/sentence/all x (Likes(a,x) arrow Puffin(x))'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/Puffin1-x-is-a-puffin|Likes2-x-likes-y/sentence/all y all x (Likes(y,x) arrow Puffin(x))'  
+]
 ---
 
 

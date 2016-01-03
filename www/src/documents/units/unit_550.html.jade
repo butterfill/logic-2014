@@ -12,10 +12,15 @@ exercises_fast: []
 sequence: 620
 exNormal: [
   '/ex/proof/from/∃x( Blue(x) ∧ Tall(x) )/to/∃x Blue(x)'
+  '/ex/proof/from/all x ( Blue(x) arrow Tall(x) )|∃x Blue(x)/to/∃x Tall(x)'
+  '/ex/proof/from/all x not Blue(x)/to/not exists x Blue(x)'
+  '/ex/proof/from/all x ( Scary(x) or Funny(x) )|∃x not Scary(x)/to/∃x Funny(x)'
 ]
 exFast: [
   '/ex/proof/from/∃x( Blue(x) ∧ Tall(x) )/to/∃x Blue(x)'
-  '/ex/proof/from/all x Blue(x)/to/not exists x not Blue(x)'
+  '/ex/proof/from/all x ( Blue(x) arrow Tall(x) )|∃x Blue(x)/to/∃x Tall(x)'
+  '/ex/proof/from/all x not Blue(x)/to/not exists x Blue(x)'
+  '/ex/proof/from/all x ( Scary(x) or Funny(x) )|∃x not Scary(x)/to/∃x Funny(x)'
 ]
 ---
 

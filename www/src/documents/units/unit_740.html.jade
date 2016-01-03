@@ -11,6 +11,32 @@ exercises: []
 exercises_fast: ['11.2, 11.4']
 sequence: 640
 handout: false
+exNormal: [
+  '/ex/create/qq/TallerThan(a,b)'
+  '/ex/create/qq/exists y TallerThan(a,y)'
+  '/ex/create/qq/exists x exists y TallerThan(x,y)'
+  
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/TallerThan2-x-is-taller-than-y/sentence/TallerThan(a,b)'
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/TallerThan2-x-is-taller-than-y/sentence/exists x TallerThan(a,x)'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/TallerThan2-x-is-taller-than-y/sentence/exists y exists x TallerThan(y,x)'
+  
+  '/ex/create/qq/exists x exists y LeftOf(x,y)|all x all y (LeftOf(x,y) arrow Happy(x))|exists x not Happy(x)'
+  
+  '/ex/create/qq/exists x exists y Adjacent(x,y)|exists x exists y not Adjacent(x,y)|all x all y ((Adjacent(x,y) and Sad(x)) arrow Sad(y))|exists x Sad(x)'
+  '/ex/create/qq/exists x exists y Adjacent(x,y)|exists x exists y not Adjacent(x,y)|all x all y ((Adjacent(x,y) and Sad(x)) arrow Sad(y))|exists x Sad(x)|exists x not Sad(x)'
+  
+]
+exFast: [
+  '/ex/create/qq/exists x exists y TallerThan(x,y)'
+  
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha|b=Beatrice/predicates/TallerThan2-x-is-taller-than-y/sentence/TallerThan(a,b)'
+  '/ex/trans/domain/Ayesha|Beatrice/names/a=Ayesha/predicates/TallerThan2-x-is-taller-than-y/sentence/exists x TallerThan(a,x)'
+  '/ex/trans/domain/Ayesha|Beatrice/names/-/predicates/TallerThan2-x-is-taller-than-y/sentence/exists y exists x TallerThan(y,x)'
+  '/ex/create/qq/exists x exists y LeftOf(x,y)|all x all y (LeftOf(x,y) arrow Happy(x))|exists x not Happy(x)'
+  
+  '/ex/create/qq/exists x exists y Adjacent(x,y)|exists x exists y not Adjacent(x,y)|all x all y ((Adjacent(x,y) and Sad(x)) arrow Sad(y))|exists x Sad(x)'
+  '/ex/create/qq/exists x exists y Adjacent(x,y)|exists x exists y not Adjacent(x,y)|all x all y ((Adjacent(x,y) and Sad(x)) arrow Sad(y))|exists x Sad(x)|exists x not Sad(x)'
+]
 ---
 
 

@@ -1,4 +1,4 @@
----
+---cson
 layout: 'deck_units' 
 title: '∀Intro'
 description: 'Introduces the rule of proof ∀Intro with an example.  The example proof is from premise ∀x(Square(x) → Blue(x)) to conclusion ∀x Square(x) → ∀x Blue(x).'
@@ -10,6 +10,22 @@ book: ['12.1','12.3','13.1']
 exercises: ['12.4--12.5', '*12.6--12.7', '12.9--12.10']
 exercises_fast: []
 sequence: 690
+exNormal: [
+  '/ex/proof/from/∀x(Frowning(x) and Crying(x))/to/∀x Crying(x)'
+  '/ex/proof/from/∀x(Square(x) → Blue(x))/to/∀x Square(x) → ∀x Blue(x)'
+  '/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Tall(x) → Blue(x))/to/∀x (Sad(x) → Blue(x))'
+  '/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Sad(x) → not Tall(x))/to/∀x not Sad(x)'
+  '/ex/proof/from/not exists x (Happy(x) and not Blue(x))/to/∀x Happy(x) → ∀x Blue(x)'
+]
+exFast: [
+  '/ex/proof/from/∀x(Square(x) → Blue(x))/to/∀x Square(x) → ∀x Blue(x)'
+  '/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Tall(x) → Blue(x))/to/∀x (Sad(x) → Blue(x))'
+  '/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Sad(x) → not Tall(x))/to/∀x not Sad(x)'
+  '/ex/proof/orInvalid/from/exists x (Happy(x) and Tall(x))/to/∀x (Happy(x) or Tall(x))'
+  '/ex/create/orValid/from/exists x (Happy(x) and Tall(x))/to/∀x (Happy(x) or Tall(x))'
+  '/ex/proof/orInvalid/from/not exists x (Happy(x) and not Blue(x))/to/∀x Happy(x) → ∀x Blue(x)'
+  '/ex/create/orValid/from/not exists x (Happy(x) and not Blue(x))/to/∀x Happy(x) → ∀x Blue(x)'
+]
 ---
 
 
