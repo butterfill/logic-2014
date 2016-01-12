@@ -83,7 +83,15 @@
             "/ex/TorF/from/Ayesha is a big squirrel|All squirrels are animals/to/Ayesha is a big animal/qq/The argument is logically valid",
             "/ex/TorF/qq/a logically valid argument can have true premises and a true conclusion|a logically valid argument can have true premises and a false conclusion|a logically valid argument can have false premises and a true conclusion|a logically valid argument can have false premises and a false conclusion"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 02",
+      "slides": "http://logic-1.butterfill.com/lecture_02.html",
+      "handout": "http://logic-1.butterfill.com/handouts/lecture_02.handout.pdf",
+      "units": [
         {
           "type": "unit",
           "name": "Counterexamples",
@@ -103,15 +111,7 @@
             "/ex/create/from/LeftOf(a,b)|RightOf(b,c)/to/LeftOf(a,c)",
             "/ex/create/from/LeftOf(a,b)|Adjacent(b,c)/to/LeftOf(a,c)"
           ]
-        }
-      ]
-    },
-    {
-      "type": "lecture",
-      "name": "Lecture 02",
-      "slides": "http://logic-1.butterfill.com/lecture_02.html",
-      "handout": "http://logic-1.butterfill.com/handouts/lecture_02.handout.pdf",
-      "units": [
+        },
         {
           "type": "unit",
           "name": "Recap: Validity, Counterexamples",

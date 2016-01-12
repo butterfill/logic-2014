@@ -1,7 +1,7 @@
 ---
 layout: 'default2'
 title: 'Lecture 01'
-lecture_date: '2015/1/12'
+lecture_date: '2016/1/12'
 units: []
 ---
 
@@ -19,8 +19,6 @@ include ../../fragments/unit_mixins
 //- include ../../fragments/unit_01_two_pigs
 +insert_unit({unit:'01', title_slide:false, images:images})
 
-+insert_unit({unit:'016', title_slide:true, images:images})
-
 +insert_unit({unit:'011', title_slide:true, images:images})
   
 // *notes admin section
@@ -28,11 +26,11 @@ include ../../fragments/unit_mixins
   .words: .container_12: .grid_12
     +blur2_('img:eq(0)', '6px')
     ul
+      li.slide Lectures: normal and fast-track 
       li.slide Seminar groups 
-      li.slide Exercises
       li.slide Textbook
-      li.slide Fast-track lectures 
-      li.slide Web: http://logic-1.butterfill.com
+      li.slide Web: https://logic-1.butterfill.com
+      li.slide Exercises
 
 // more about support --- the exams, bad email
 //- cut exams
@@ -45,20 +43,35 @@ include ../../fragments/unit_mixins
 // *notes bad email the night before resit exam
 +slide
   p to: s.a.butterfill@warwick.ac.uk
-  p sent: 03:55 29/08/2008
+  p sent: 
+    span.time 03:55
+    span  29/
+    span.august 08
+    span /2008
   p subject: [none]
   p &nbsp;
   p Dear Stephen,
   p I am retaking starting logic on tuesday, and I wonder if you could explain to me the difference between contingent, tatologous and inconsistent in terms of truth table results, as I cannot find this information anywhere else?
   p Many Thanks,
   p ---
+  +invert('.august')
+  +invert('.time')
+  
 // *notes staircase, need to progress stepwise but we will go into the light
 section.slide
   img.bkg(src='/img/lecture_01/P4258786 merge2.jpg')
 
 
+
+//- using logic-ex
++insert_unit({unit:'016', title_slide:true, images:images})
+
+
+
 //- unit: quick intro to FOL
 +insert_unit({unit:'02', title_slide:true, images:images})
+
+//- using logic-ex to creat possible situations
 +insert_unit({unit:'026', title_slide:true, images:images})
 
 //- unit: logically valid arguments
@@ -66,7 +79,8 @@ section.slide
 
 // *notes didn't do this in 2012-3 but leave it in in case you do have time!
 //- counterexamples & sound argument
-+insert_unit({unit:'04', title_slide:true, images:images})
+//- +insert_unit({unit:'04', title_slide:true, images:images})
+
 //- 
   //- ended here in 2013-4 but could plan to include this
   

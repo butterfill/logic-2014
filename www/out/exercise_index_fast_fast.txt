@@ -638,15 +638,6 @@
         },
         {
           "type": "unit",
-          "name": "Counterexamples with Quantifiers",
-          "slides": "http://logic-1.butterfill.com/units/unit_502b.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))"
-          ]
-        },
-        {
-          "type": "unit",
           "name": "Something Is Above Something",
           "slides": "http://logic-1.butterfill.com/units/unit_740.html",
           "rawReading": [

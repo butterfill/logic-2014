@@ -41,7 +41,15 @@
             "/ex/TorF/from/Ayesha is a big squirrel|All squirrels are animals/to/Ayesha is a big animal/qq/The argument is logically valid",
             "/ex/TorF/qq/a logically valid argument can have true premises and a true conclusion|a logically valid argument can have true premises and a false conclusion|a logically valid argument can have false premises and a true conclusion|a logically valid argument can have false premises and a false conclusion"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 02",
+      "slides": "http://logic-1.butterfill.com/lecture_02.html",
+      "handout": "http://logic-1.butterfill.com/handouts/lecture_02.handout.pdf",
+      "units": [
         {
           "type": "unit",
           "name": "Counterexamples",
@@ -64,15 +72,7 @@
             "/ex/create/orValid/from/SameSize(a,b)|SameShape(b,c)/to/SameSize(a,c)",
             "/ex/create/orValid/from/not LeftOf(a,b)|not LeftOf(b,a)/to/a=b"
           ]
-        }
-      ]
-    },
-    {
-      "type": "lecture",
-      "name": "Lecture 02",
-      "slides": "http://logic-1.butterfill.com/lecture_02.html",
-      "handout": "http://logic-1.butterfill.com/handouts/lecture_02.handout.pdf",
-      "units": [
+        },
         {
           "type": "unit",
           "name": "Identity",
@@ -546,15 +546,6 @@
             "9.3",
             "9.5"
           ],
-          "rawExercises": [
-            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))"
-          ]
-        },
-        {
-          "type": "unit",
-          "name": "Counterexamples with Quantifiers",
-          "slides": "http://logic-1.butterfill.com/units/unit_502b.html",
-          "rawReading": [],
           "rawExercises": [
             "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))"
           ]

@@ -46,7 +46,7 @@ include ../../../fragments/logic_mixins
       span  in all possible situations.
     .slide
       p.em-above E.g.
-      +truth-table(['A ∨ ¬A'],[['T','T']])
+      +truth-table(['A ∧ ¬A'],[['F','F']])
   +right_half({step:true})
     p logical truth
     p.em-above A sentence that is 
@@ -54,7 +54,7 @@ include ../../../fragments/logic_mixins
       span  in all possible situations.
     .slide
       p.em-above E.g.
-      +truth-table(['A ∧ ¬A'],[['F','F']])
+      +truth-table(['A ∨ ¬A'],[['T','T']])
   +invert('.truth-value')
   +uninvert('.truth-value')
   .slide
