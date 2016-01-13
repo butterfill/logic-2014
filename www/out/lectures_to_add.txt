@@ -1,0 +1,33 @@
+** skipped part of 567 --- maybe split unit and do later
+
+
+
+       
+  
+
+
+fast lecture: include ** unit on quantifier counterexamples, 502b ?
+
+
+
+//- advertise logic options and the degree
++slide_middle
+  p.center advert
++slide_middle
+  p.center
+    img(src="/img/people/walt_s.jpg",width="300px")
++slide_rh_white
+  +left_half
+    ul
+      li Logic II: Metatheory
+      li Logic III: Incompleteness and Undecidability
+      li Modal Logic
+      li Philosophy of Logic
+      li Philosophy of Mathematics
+      li Philosophy of Computation
+  +right_half
+    p 3 year BSc in Mathematics and Philosophy
+    p.em-above 4 year BSc in Mathematics and Philosophy with specialism in Logic and Foundations
+
+
+
