@@ -119,7 +119,7 @@
             "/ex/tt/qq/not (A or B)|not A and not B",
             "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musician1-x-is-a-musician/sentence/It’s false that Tobin and Suzi are both musicians",
             "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/It’s false that Tobin is ugly and Suzi inept",
-            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musicial1/sentence/It’s false that Tobin isn’t musical and Suzi isn’t musical",
+            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musicial1/sentence/Suzi isn’t musical and it’s false that Tobin isn’t musical",
             "/ex/tt/qq/not (not A and not B)|(A and B)",
             "/ex/create/from/not (not Happy(a) and not Happy(b))/to/(Happy(a) and Happy(b))"
           ]
@@ -317,6 +317,33 @@
             "/ex/create/orInconsistent/qq/Tall(a)|not Tall(b)|a=b",
             "/ex/proof/from/Tall(a) or Happy(a)|not (Tall(a) or Happy(a))/to/Tall(a) and Happy(a)"
           ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Fast Lecture 03",
+      "slides": "http://logic-1.butterfill.com/fastlecture_03.html",
+      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_03.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "What does ‘→’ mean?",
+          "slides": "http://logic-1.butterfill.com/units/unit_700.html",
+          "rawReading": [
+            "7.1"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/not A/to/A arrow B",
+            "/ex/proof/from/not A/to/A arrow B",
+            "/ex/tt/from/A arrow B|B/to/A",
+            "/ex/tt/from/A arrow B|not B/to/not A",
+            "/ex/tt/from/(A or C) arrow B|not B/to/not A",
+            "/ex/tt/from/(A and C) arrow B|not B/to/not A",
+            "/ex/tt/from/A arrow B/to/A arrow (B and C)",
+            "/ex/tt/from/A arrow B/to/A arrow (B or C)",
+            "/ex/proof/from/A or B|A arrow C/to/C or B"
+          ]
         },
         {
           "type": "unit",
@@ -359,43 +386,6 @@
         },
         {
           "type": "unit",
-          "name": "Formal Proof",
-          "slides": "http://logic-1.butterfill.com/units/unit_111.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/proof/from/a=b/to/b=a",
-            "/ex/proof/from/LeftOf(a,b)|c=b/to/LeftOf(a,c)"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "lecture",
-      "name": "Fast Lecture 03",
-      "slides": "http://logic-1.butterfill.com/fastlecture_03.html",
-      "handout": "http://logic-1.butterfill.com/handouts/fastlecture_03.handout.pdf",
-      "units": [
-        {
-          "type": "unit",
-          "name": "What does ‘→’ mean?",
-          "slides": "http://logic-1.butterfill.com/units/unit_700.html",
-          "rawReading": [
-            "7.1"
-          ],
-          "rawExercises": [
-            "/ex/tt/from/not A/to/A arrow B",
-            "/ex/proof/from/not A/to/A arrow B",
-            "/ex/tt/from/A arrow B|B/to/A",
-            "/ex/tt/from/A arrow B|not B/to/not A",
-            "/ex/tt/from/(A or C) arrow B|not B/to/not A",
-            "/ex/tt/from/(A and C) arrow B|not B/to/not A",
-            "/ex/tt/from/A arrow B/to/A arrow (B and C)",
-            "/ex/tt/from/A arrow B/to/A arrow (B or C)",
-            "/ex/proof/from/A or B|A arrow C/to/C or B"
-          ]
-        },
-        {
-          "type": "unit",
           "name": "A ∧ B ∨ C: They Are Different",
           "slides": "http://logic-1.butterfill.com/units/unit_154.html",
           "rawReading": [],
@@ -415,7 +405,7 @@
             "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/Ayesha is not happy or not wide",
             "/ex/create/qq/not (Wide(a) and not Tall(b))",
             "/ex/tt/qq/not (A and not B)|not A or B",
-            "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (A and not B)",
+            "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))",
             "/ex/create/orValid/from/not (Happy(a) and not Wide(a))/to/not Happy(a) or Wide(a)",
             "/ex/create/orValid/from/not Happy(a) or Wide(a)/to/not (Happy(a) and not Wide(a))",
             "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Sad1|Happy1/sentence/Ayesha is sad or not happy",
@@ -434,6 +424,19 @@
             "/ex/tt/qq/(A arrow B) arrow C|A arrow (B arrow C)",
             "/ex/proof/orInvalid/from/not A and B/to/not (A and B)",
             "/ex/proof/orInvalid/from/not (A and B)/to/not A and B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Scope",
+          "slides": "http://logic-1.butterfill.com/units/unit_290.html",
+          "rawReading": [
+            "3.5"
+          ],
+          "rawExercises": [
+            "/ex/scope/qq/not Happy(a) or not Happy(b)|not (Happy(a) or Happy(b))|Happy(a) or (Happy(b) and Happy(c))|(Happy(a) or Happy(b)) and Happy(c)",
+            "/ex/create/from/not Happy(a) or not Happy(b)/to/not (Happy(a) or Happy(b))",
+            "/ex/create/from/Happy(a) or (Happy(b) and Happy(c))/to/(Happy(a) or Happy(b)) and Happy(c)"
           ]
         },
         {
@@ -457,28 +460,6 @@
             "/ex/proof/orInvalid/from/A or B/to/B or A",
             "/ex/proof/orInvalid/from/A or B/to/B and A",
             "/ex/TorF/qq/If an argument is valid it remains valid when you add a new sentence to the premises, regardless of what that new sentence is.|No valid argument may have a contradiction as its conclusion.|An invalid argument can be turned into a valid argument by replacing the conclusion with its negation"
-          ]
-        },
-        {
-          "type": "unit",
-          "name": "Scope: A Mistaken Application of ¬Elim",
-          "slides": "http://logic-1.butterfill.com/units/unit_291.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/scope/qq/not not (not A and not not A)|not not not A and not not A"
-          ]
-        },
-        {
-          "type": "unit",
-          "name": "Scope",
-          "slides": "http://logic-1.butterfill.com/units/unit_290.html",
-          "rawReading": [
-            "3.5"
-          ],
-          "rawExercises": [
-            "/ex/scope/qq/not Happy(a) or not Happy(b)|not (Happy(a) or Happy(b))|Happy(a) or (Happy(b) and Happy(c))|(Happy(a) or Happy(b)) and Happy(c)",
-            "/ex/create/from/not Happy(a) or not Happy(b)/to/not (Happy(a) or Happy(b))",
-            "/ex/create/from/Happy(a) or (Happy(b) and Happy(c))/to/(Happy(a) or Happy(b)) and Happy(c)"
           ]
         },
         {

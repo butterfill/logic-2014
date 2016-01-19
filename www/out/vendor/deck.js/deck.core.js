@@ -91,17 +91,27 @@ that use the API provided by core.
   };
 
   var removeOldSlideStates = function() {
-    var $all = $();
-    $.each(slides, function(i, el) {
-      $all = $all.add(el);
-    });
-    $all.removeClass([
+    // This is an optimisation by Steve for decks with lots of slides
+    // which are otherwise painfully slow.
+    // It assumes that the various deck class names are not used except
+    // by deck internally.
+    clsToRemove = [
       options.classes.before,
       options.classes.previous,
       options.classes.current,
       options.classes.next,
       options.classes.after
-    ].join(' '));
+    ];
+    for( var idx=0; idx < clsToRemove.length; idx++) {
+      clsName = clsToRemove[idx];
+      $('.'+clsName).removeClass(clsName)
+    }
+    // var $all = $();
+    // $.each(slides, function(i, el) {
+      //   $all = $all.add(el);
+    // });
+    //
+    // $all.removeClass(clsToRemove.join(' '));
   };
 
   var addNewSlideStates = function() {

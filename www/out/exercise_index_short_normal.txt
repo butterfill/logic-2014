@@ -190,7 +190,7 @@
             "/ex/tt/qq/not (A or B)|not A and not B",
             "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musician1-x-is-a-musician/sentence/It’s false that Tobin and Suzi are both musicians",
             "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/It’s false that Tobin is ugly and Suzi inept",
-            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musicial1/sentence/It’s false that Tobin isn’t musical and Suzi isn’t musical",
+            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musicial1/sentence/Suzi isn’t musical and it’s false that Tobin isn’t musical",
             "/ex/tt/qq/not (not A and not B)|(A and B)",
             "/ex/create/from/not (not Happy(a) and not Happy(b))/to/(Happy(a) and Happy(b))"
           ]
@@ -328,7 +328,7 @@
             "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/Ayesha is not happy or not wide",
             "/ex/create/qq/not (Wide(a) and not Tall(b))",
             "/ex/tt/qq/not (A and not B)|not A or B",
-            "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (A and not B)",
+            "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))",
             "/ex/create/orValid/from/not (Happy(a) and not Wide(a))/to/not Happy(a) or Wide(a)",
             "/ex/create/orValid/from/not Happy(a) or Wide(a)/to/not (Happy(a) and not Wide(a))",
             "/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Sad1|Happy1/sentence/Ayesha is sad or not happy",
