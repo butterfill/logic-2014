@@ -247,16 +247,6 @@
         },
         {
           "type": "unit",
-          "name": "Formal Proof",
-          "slides": "http://logic-1.butterfill.com/units/unit_111.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/proof/from/a=b/to/b=a",
-            "/ex/proof/from/LeftOf(a,b)|c=b/to/LeftOf(a,c)"
-          ]
-        },
-        {
-          "type": "unit",
           "name": "Truth-functional Connectives",
           "slides": "http://logic-1.butterfill.com/units/unit_072.html",
           "rawReading": [
