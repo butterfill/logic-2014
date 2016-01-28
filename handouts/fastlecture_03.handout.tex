@@ -49,9 +49,6 @@
 
 %--------------- 
 %--- start paste
-
-
-
 \def \ititle {Logic I}
  
 \def \isubtitle {Fast Lecture 03}
@@ -86,6 +83,44 @@ How do the rules of proof for → fix its truth table?
 \includegraphics[scale=0.3]{img/unit_700_rule_to_tt.png}
 \end{center}
  
+ 
+\section{¬Elim}
+ 
+\emph{Reading:} §6.3
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_negation_elim.png}
+\end{center}
+ 
+ 
+\section{Scope: A Mistaken Application of ¬Elim}
+ 
+What is wrong with this proof?
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/proof_negation_elim_wrong.png}
+\end{center}
+
+
+
+\vfill
+
+
+ 
+\section{¬Intro}
+ 
+\emph{Reading:} §5.3, §6.3
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/rule_negation_intro.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/proof_example_unit_281.png}
+\end{center}
+
+
+
+\vfill 
  
 \section{A ∧ B ∨ C}
  
@@ -125,11 +160,11 @@ Two derivations of Groucho Marx’ claim, ‘I shot an elephant in my pyjamas':
 \end{center}
  
  
-\section{The Syntax of FOL}
+\section{The Syntax of awFOL}
  
-\emph{Reading:} §§9.3
+\emph{Reading:} §9.3
  
-We define what counts as a sentence of FOL using rules. E.g.:
+We define what counts as a sentence of awFOL using rules. E.g.:
  
 1. If * and \# are sentences, then so is(* ∧ \#)
  
@@ -147,7 +182,7 @@ b. ¬P is a sentence // rule 4, a
  
 c. ( ¬P ∧ Q ) is a sentence // rule 1, b, a
  
-There is no structural ambiguity in FOL because these rules are formulated to ensure that for any FOL sentence, there is exactly one way of constructing it.
+There is no structural ambiguity in awFOL because these rules are formulated to ensure that for any awFOL sentence, there is exactly one way of constructing it.
  
 \begin{center}
 \includegraphics[scale=0.3]{img/unit_230_tree1.png}
@@ -157,29 +192,6 @@ There is no structural ambiguity in FOL because these rules are formulated to en
 \end{center}
 \begin{center}
 \includegraphics[scale=0.3]{img/unit_230_tree_tt.png}
-\end{center}
- 
- 
-\section{Truth-functional Connectives}
- 
-\emph{Reading:} §7.0 (the text before §7.1)
- 
-A \emph{connective} joins zero or more sentences to make a new sentence. Examples of connectives include: `∧', `¬', `$\bot$' and `because'.
- 
-A sentence joined by a connective is a \emph{constituent}. For example, consider the sentence ‘P because Q’: P is a constituent of this sentence.
- 
-A \emph{truth functional connective} produces a new sentence whose truth value depends only on the truth values of its constituent sentences.
- 
-When P and Q are both true, ‘P because Q’ is sometimes true and sometimes false. Therefore, ‘because’ is not a truth functional connective. To illustrate, consider `Alan got yellow cards because some apples are green' and `Alan got yellow cards because he used his elbows'. All the constituent sentences are true, but the first sentence is false whereas the second is true.
- 
- 
- 
-\section{Subproofs Are Tricky}
- 
-What is wrong with this apparent proof:
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_224_subproofs_tricky.png}
 \end{center}
  
  
@@ -218,6 +230,29 @@ When we do truth tables, the order we do the columns in is determined by scope.
 \end{center}
  
  
+\section{Truth-functional Connectives}
+ 
+\emph{Reading:} §7.0 (the text before §7.1)
+ 
+A \emph{connective} joins zero or more sentences to make a new sentence. Examples of connectives include: `∧', `¬', `$\bot$' and `because'.
+ 
+A sentence joined by a connective is a \emph{constituent}. For example, consider the sentence ‘P because Q’: P is a constituent of this sentence.
+ 
+A \emph{truth functional connective} produces a new sentence whose truth value depends only on the truth values of its constituent sentences.
+ 
+When P and Q are both true, ‘P because Q’ is sometimes true and sometimes false. Therefore, ‘because’ is not a truth functional connective. To illustrate, consider `Alan got yellow cards because some apples are green' and `Alan got yellow cards because he used his elbows'. All the constituent sentences are true, but the first sentence is false whereas the second is true.
+ 
+ 
+ 
+\section{Subproofs Are Tricky}
+ 
+What is wrong with the following apparent proof?
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_224_subproofs_tricky.png}
+\end{center}
+ 
+ 
 \section{Everything Is Broken}
  
 \emph{Reading:} §9.1, §9.2
@@ -226,33 +261,6 @@ Everything is broken: ∀x Broken(x)
  
 Something is broken: ∃x Broken(x)
  
-\vfill
-\begin{minipage}{\columnwidth}
-\section{Exercises}
-These exercises will be discussed in seminars the week after this lecture.
-The numbers below refer to the numbered exercises in the course textbook, e.g.\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}.
- 
-\begin{quote}
-8.20--8.25
- 
-7.2
- 
-7.5
- 
-7.6
- 
-3.14, 3.15
- 
-7.2, 7.5, 7.6
- 
-7.9
- 
-9.8–-9.10
- 
-\end{quote}
-\end{minipage}
-
-
 %--- end paste
 %--------------- 
  
