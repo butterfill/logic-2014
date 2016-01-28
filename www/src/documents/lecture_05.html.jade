@@ -25,28 +25,35 @@ include ../../fragments/unit_mixins
 //- unit: arrow intro, arrow elim
 +insert_unit({unit:'390', title_slide:true, images:images})
 
+//- Subproofs with logic-ex
++insert_unit({unit:'395', title_slide:true, images:images})
+
 
 //- skit: feedback
 +slide_middle
   p.center.huge-glow feedback
   p.center ‘The lectures are really helpful and engaging, however it is quite difficult to write down all the important points during the lectures so it would be really helpful if the powerpoints from the lectures and maybe even audio recordings could be made available to students.’
 
-+slide_middle
-  p.center.huge-glow Logic Support
-  p.center Fridays, 4-6pm in S0.13
+//- +slide_middle
+//-   p.center.huge-glow Logic Support
+//-   p.center Fridays, 4-6pm in S0.13
 
 +slide_middle
   .notes When people say they can't do logic, sometimes that's not true and they are thinking they can't do it just because they don't realise that it requires time.
   p.center.huge-glow 8 hours
+
++slide_middle
+  .notes When people say they can't do logic, sometimes that's not true and they are thinking they can't do it just because they don't realise that they need to read the textbook.
+  p.center.huge-glow read, then do exercise
 
 //-
   //- p.slide  ‘WHY HAVEN’T WE BEEN GIVEN ANY HELP FOR USING THE PROGRAMMES?!!! Pen and Paper all the way. I can’t do half of the exercises as I can’t use the programmes that we’re s’posed to do them on..’
   //- - each d in getCollection("documents").findAll({url:'/skits/skit_01.html'},[{year:-1,sort_order:1}]).toJSON()
   //-   mixin render_unit(d)
 
-
+//- Cut from 2015/6
 //- identity-Elim again (how to prove when identity is the wrong way around)
-+insert_unit({unit:'112', title_slide:true, images:images})
+//- +insert_unit({unit:'112', title_slide:true, images:images})
 
 
 //- unit: Ambiguity recap (elephant pyjamas)

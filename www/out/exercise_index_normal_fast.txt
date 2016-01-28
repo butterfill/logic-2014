@@ -332,6 +332,18 @@
             "/ex/create/orValid/from/Tall(a) arrow Tall(c)/to/(Tall(a) or Tall(b)) arrow Tall(c)",
             "/ex/proof/orInvalid/from/Tall(a) arrow Tall(c)/to/(Tall(a) or Tall(b)) arrow Tall(c)"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Subproofs with logic-ex",
+          "slides": "http://logic-1.butterfill.com/units/unit_395.html",
+          "rawReading": [
+            "8.1",
+            "8.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A arrow B|B arrow C/to/A arrow C"
+          ]
         }
       ]
     },

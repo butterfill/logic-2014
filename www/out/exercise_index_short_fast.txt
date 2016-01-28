@@ -361,6 +361,18 @@
         },
         {
           "type": "unit",
+          "name": "Subproofs with logic-ex",
+          "slides": "http://logic-1.butterfill.com/units/unit_395.html",
+          "rawReading": [
+            "8.1",
+            "8.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A arrow B|B arrow C/to/A arrow C"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "∨Elim: An Example",
           "slides": "http://logic-1.butterfill.com/units/unit_221.html",
           "rawReading": [

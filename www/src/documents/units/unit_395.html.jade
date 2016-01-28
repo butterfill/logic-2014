@@ -1,0 +1,268 @@
+---cson
+layout: 'deck_units' 
+title: "Subproofs with logic-ex"
+description: "Introduction to the rules of proof for →, →Intro and →Elim.  This is the first time subproofs are used.  Also illustrates a proof without any premises.  The proof is from premises P→Q and Q→R to conclusion P→R."
+tags: ['proof', 'proof-example', 'logic-ex', 'ex-proof']
+depends: ['']
+book: ['8.1','8.2']
+exercises: []
+duration: 10
+sequence: 330
+exNormal: [
+  '/ex/proof/from/A arrow B|B arrow C/to/A arrow C'
+]
+
+exFast: [
+  '/ex/proof/from/A arrow B|B arrow C/to/A arrow C'
+]
+---
+
+
+include ../../../fragments/unit_mixins
+
+
++slide_middle
+  p.center
+    a(href="https://logic-ex.butterfill.com/ex/proof/from/A arrow B|B arrow C/to/A arrow C") https://logic-ex.butterfill.com/ex/proof/from/A arrow B|B arrow C/to/A arrow C
+  .notes: :t
+    Let’s see how to create proofs with subproofs in this in logic-ex.
+
+
++slide({bkg:'unit_395/160122-0002.png'}) 
+  .notes: :t
+    Here we’re asked to write a proof that will
+    require a subproof.  (If you’ve been following the 
+    lectures, you’ve already seen this proof.)
+  .notes: :t
+    We’re going to create a subproof in order to use the rule arrow intro.
+    If you don’t already know the rule, please take a look at the rule now
+    so you can follow what we’re doing.
+    
++slide({bkg:'unit_395/160122-0002b.png'}) 
+  .notes: :t
+    The first thing we need is a bit more space 
+    for our subproof.
+  .notes: :t
+    Remember that the proof is just a bit of text, and the black box here 
+    is just a text editor.  
+    So to make new lines I just use the enter key.
+    
++slide({bkg:'unit_395/160122-0003.png'}) 
+  .notes: :t
+    Here I’ve added new lines to the proof.
+    Each line starts with a vertical bar, ‘|’.
+    (If you can’t find the vertical bar on your keyboard you
+    might have to copy and paste it.)
+    
++slide({bkg:'unit_395/160122-0005.png'}) 
+  .notes: :t
+    OK, let’s make a subproof.
+    
++slide({bkg:'unit_395/160122-0005b.png'}) 
+  .notes: :t
+    On each line, I need to add a new vertical bar like this one.
+    
++slide({bkg:'unit_395/160122-0005c.png'}) 
+  .notes: :t
+    So now, as you can see, there are two vertical bars at the start of line 4.
+    
++slide({bkg:'unit_395/160122-0005d.png'}) 
+  .notes: :t
+    
++slide({bkg:'unit_395/160122-0006.png'}) 
+  .notes: :t
+    I keep going with adding the extra vertical lines,
+    and I add the horizontal line as three dashes, ‘-’.
+    
++slide({bkg:'unit_395/160122-0006b.png'}) 
+  .notes: :t
+    So this is a subproof.  It’s just lie the outer proof:
+    each line that is part of it starts with a vertical bar,
+    and the premise is seperated from the rest with a horizontal
+    line comprising three dashses.
+    
++slide({bkg:'unit_395/160122-0006c.png'}) 
+  .notes: :t
+    What next?
+    When I’m doing a proof I like to put the premise
+    and conclusion of the subproof in first.
+    After all, we already know what these are from the rule
+    of proof we are using, whereas we will have
+    to think about what goes in the middle.
+    
++slide({bkg:'unit_395/160122-0007.png'}) 
+  .notes: :t
+    The premise of the subproof is A.
+    
++slide({bkg:'unit_395/160122-0007b.png'}) 
+  .notes: :t
+    But why is it A?
+    
++slide({bkg:'unit_395/160122-0007c.png'}) 
+  .notes: :t
+    Well A is the thing on the left of the condition.
+    It’s the *antecedent* of the conditional.
+    And if you look at the rule for arrow intro, it tells you
+    that the subproof has to start with the antecdent of the
+    conditional you want to introduce.
+    
++slide({bkg:'unit_395/160122-0007d.png'}) 
+  .notes: :t
+    
++slide({bkg:'unit_395/160122-0009.png'}) 
+  .notes: :t
+    Now for the conclusion of the subproof.
+    
++slide({bkg:'unit_395/160122-0009b.png'}) 
+  .notes: :t
+    Here I’ve written C.
+    But why have I written C?
+    
++slide({bkg:'unit_395/160122-0009c.png'}) 
+  .notes: :t
+    Because C is the thing on the right of the conditional
+    we are trying to introduce.
+    It is the *antecdent* of 'A → C	'
+  .notes: :t
+    And the rule for arrow intro tells us that we need a subproof
+    whose conclusion is the antecdent of the conditional we are 
+    trying to introduce.
+
++slide({bkg:'unit_395/160122-0009d.png'}) 
+  .notes: :t
+    So there’s no choice about what to put for the premise and 
+    conclusion of the subproof, we just have to do what the rule tells
+    us to do.
+    
++slide({bkg:'unit_395/160122-0009e.png'}) 
+  .notes: :t
+    We’re not done with the rule arrow intro yet.
+    To use the rule it’s not enough to have a subproof: we also neeed 
+    to provide the justification.
+  .notes: :t
+    What goes here?
+    As always the rule tells us exactly what to write.
+    
++slide({bkg:'unit_395/160122-0010.png'}) 
+  .notes: :t
+    So I’ve filled in the justification.    
+    
++slide({bkg:'unit_395/160122-0010b.png'}) 
+  .notes: :t
+    But wait a minute: the red dot means the line is not correct.
+    Why is it wrong?
+    
++slide({bkg:'unit_395/160122-0010c.png'}) 
+  .notes: :t
+    Oops, I wrote arrow elim when I should have written arrow intro.
+  .notes: :t
+    You might think this doesn’t really matter; I got the ‘arrow’ part write,
+    I just confused intro and elim, which I do all the time (sorry).
+  .notes: :t
+    But if you’re a machine, or a logican, it matters.
+    The software doesn’t do marks for effort, it just cares where what
+    you’ve written is a proof or not.  And if you’ve got a red dot,
+    you havent’t written a proof.
+    
++slide({bkg:'unit_395/160122-0011.png'}) 
+  .notes: :t
+    So I’ve changed elim to intro.
+    
++slide({bkg:'unit_395/160122-0011b.png'}) 
+  .notes: :t
+    Now I’m citing the right rule ...
+    
+    
++slide({bkg:'unit_395/160122-0011c.png'}) 
+  .notes: :t
+    ... but I still have that red dot.
+    What is wrong?
+    
++slide({bkg:'unit_395/160122-0011d.png'}) 
+  .notes: :t
+    Take a look at the error message.
+    It tells me that lines 4-6 can’t be cited here.
+    
++slide({bkg:'unit_395/160122-0011e.png'}) 
+  .notes: :t
+    And I am citing lines 4-6, so the message is relevant.
+    But why can’t I cite them?
+    
++slide({bkg:'unit_395/160122-0011f.png'}) 
+  .notes: :t
+    Wait a minute, lines 4-6 are only part of the subproof.
+    This is a mistake.
+    I wanted to cite the whole subproof.
+    And in fact the rules of proof only allow me to cite whole
+    subproofs.
+    
++slide({bkg:'unit_395/160122-0012.png'}) 
+  .notes: :t
+    Let’s update so that the justification cites the whole subproof.
+    That is, it cites lines 4-7
+    
++slide({bkg:'unit_395/160122-0012b.png'}) 
+  .notes: :t
+    
++slide({bkg:'unit_395/160122-0012c.png'}) 
+  .notes: :t
+    Now I’ve got the grren dot, at last.
+    
++slide({bkg:'unit_395/160122-0012d.png'}) 
+  .notes: :t
+    Am I done?
+    
++slide({bkg:'unit_395/160122-0012e.png'}) 
+  .notes: :t
+    Not quite, I still need to complete the subproof.
+    
++slide({bkg:'unit_395/160122-0013.png'}) 
+  .notes: :t
+    I know that I can get B from 
+    A at line 4 and the conditional ‘A → B’ at line 1.
+    
++slide({bkg:'unit_395/160122-0013b.png'}) 
+  .notes: :t
+    So I’ve added B at line 6.  
+    
++slide({bkg:'unit_395/160122-0013c.png'}) 
+  .notes: :t
+    
++slide({bkg:'unit_395/160122-0013d.png'}) 
+  .notes: :t
+    Now I need to give some justification for this line.
+    What will the justification be?
+    I’m eliminating the arrow from a conditional sentence, A → B, from line 1, and I have the 
+    antecedent of the conditional at line 4.
+    So what should I write for the justification?
+    
++slide({bkg:'unit_395/160122-0014.png'}) 
+  .notes: :t
+    
++slide({bkg:'unit_395/160122-0014b.png'}) 
+  .notes: :t
+    
++slide({bkg:'unit_395/160122-0014c.png'}) 
+  .notes: :t
+    The last thing I need is the justification for the C at line 7.
+    Where does this come from?
+    
++slide({bkg:'unit_395/160122-0015.png'}) 
+  .notes: :t
+    I’m eliminating the arrow from B → C (line 2) and I can do this because 
+    I also have the antecedent, B, at line 6.
+    
++slide({bkg:'unit_395/160122-0015b.png'}) 
+  .notes: :t
+    The proof looks ok, lots of green dots, but sometimes the dots don’t 
+    get updated (they’re a bit lazy to avoid making your browser slow down).
+    
++slide({bkg:'unit_395/160122-0015c.png'}) 
+  .notes: :t
+    So to be sure I can hit the ‘CHECK’ button.
+    
++slide({bkg:'unit_395/160122-0016.png'}) 
+  .notes: :t
+    Great, we did it!
+    
+

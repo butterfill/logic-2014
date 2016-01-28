@@ -43,10 +43,23 @@ include ../../../fragments/logic_mixins
   .words
     .container_12: .grid_12
       .notes Consider this sentence, 'Either the music has stopped or I am dead.'
-      p Either the music has stopped or I am dead.
+      p Either 
+        span.A the music has stopped
+        span  or  
+        span.B I am dead
+        span .
       .slide
-        p.indent.nodim A ∨ B
+        p.indent.nodim 
+          span.A A
+          span  ∨  
+          span.B B
         .notes Let's suppose we can represent it in awFOL as A ∨ B.
+      +highlight('.A', 'yellow')
+      
+      +unhighlight_('.A', 'yellow')
+      +highlight('.B', 'blue')
+      
+      +unhighlight_('.B', 'blue')
       .slide.nodim
         .notes What happens if you deny the whole sentence?  
         p.hidelater.em-above That’s not true.
