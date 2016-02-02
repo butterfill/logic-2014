@@ -47,7 +47,12 @@ include ../../fragments/unit_mixins
 +insert_unit({unit:'575', title_slide:true, images:images})
 
 
-
++slide_middle
+  p.center.huge-glow logic support
+  p.em-above S0.08
+  p.em-above Monday, 08 February 2016
+  p.em-above 19:00-20:00
+  
 
 
 //- advertise logic options and the degree
@@ -97,10 +102,10 @@ include ../../fragments/unit_mixins
         p.step4.hide ∀x(  ¬Square(x) ∨ Broken(x) )
       .em-above
       .existentials
-        p.step5
-          span.hide.wrong ∃x( Square(x) → Broken(x) )
-        p.step6
-          span.hide.wrong ∃x( ¬Square(x) ∨ Broken(x) )
+        p.step5.hide
+          span.wrong ∃x( Square(x) → Broken(x) )
+        p.step6.hide
+          span.wrong ∃x( ¬Square(x) ∨ Broken(x) )
         p.step5.hide ∃x( Square(x) ∧ Broken(x) )
       +show('.step2')
       +show('.step3')
