@@ -20,15 +20,20 @@ include ../../fragments/unit_mixins
 //- ¬P ∨ ¬Q compared with ¬(P ∨ Q)
 //- *skip postsecret because alt version in unit_232 for now (*todo fix)
   //- postsecret quiz: syntax
-  - each d in getCollection("documents").findAll({url:'/quizes/postsecret_02.html'},[{year:-1,sort_order:1}]).toJSON()
-    +render_unit(d)
+  //- - each d in getCollection("documents").findAll({url:'/quizes/postsecret_02.html'},[{year:-1,sort_order:1}]).toJSON()
+  //-   +render_unit(d)
 +insert_unit({unit:'232', title_slide:true, images:images})
+
+//- logically entails
++insert_unit({unit:'239', title_slide:true, images:images})
 
 //- unit: Subproofs Are Tricky: The Answer
 +insert_unit({unit:'227', title_slide:true, images:images})
 
 //- negation-intro further proof example
 +insert_unit({unit:'283', title_slide:true, images:images})
+
+//- ENDED HERE IN 2015-6 (didn’t complete the negation-intro proof.)
 
 //- deMorgan
 +insert_unit({unit:'235', title_slide:true, images:images})

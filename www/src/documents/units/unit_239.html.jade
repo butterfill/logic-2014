@@ -1,0 +1,103 @@
+---cson
+layout: 'deck_units' 
+title: "Logically Entails"
+tags: ['definitions']
+description: "One sentence logically entails another just if there’s no possible situation where the first is true and the second false."
+depends: ['']
+source: ['']
+duration: 5
+exNormal: [
+  '/ex/tt/qq/¬A ∨ ¬B|¬(A ∨ B)'
+  '/ex/tt/qq/A arrow B|B arrow A'
+  '/ex/tt/qq/A arrow B|not B arrow not A'
+  '/ex/tt/qq/not A|A arrow B'
+  '/ex/proof/orInvalid/from/A arrow B/to/not A'
+  '/ex/proof/orInvalid/from/not A/to/A arrow B'
+]
+---
+
+include ../../../fragments/unit_mixins
+include ../../../fragments/logic_mixins
+
++slide_middle
+  p
+    span ‘there are some truth tables questions in which you ask whether one 
+    span sentence logically entails another, and [we] don't know what “
+    span.logically-entails logically entails
+    span ” means.’
+  +blur2('span:not(.logically-entails)')
+  .notes: :t
+    One sentence logically entails another just if there’s no possible situation 
+    where the first is true and the second false.
+
++slide({bkg:'/unit_239/exercise.png'})
+  .notes: :t
+    I ask you about logical conseuqence in many of the truth table exercises.
+
++slide({bkg:'/unit_232/slide-034.jpeg'})
+  .notes: :t
+    Consider the example we were just looking at.
+  .notes: :t
+    ¬P ∨ ¬Q does not logically entail ¬(P ∨ Q).
+    How do I know?
+    Because here we have a possible situation (P:F, Q:T)
+    in which ¬P ∨ ¬Q is true and ¬(P ∨ Q) is false
+  .notes: :t
+    What about the converse?
+    Does ¬(P ∨ Q) logically entail ¬P ∨ ¬Q ?
+    How could I find out?
+
++slide_middle
+  .notes Let’s have some notation to celebrate.
+  p.center
+    span ¬(P ∨ Q) 
+    span.turnstyle ⊨
+    span  ¬P ∨ ¬Q
+  +invert('.turnstyle')
+  .slide
+    p.em-above.center ‘logically entails’ vs ‘logically valid argument’
+
++slide({bkg:'/unit_239/google.png'})
+  .notes: :t
+    What happens if you do a web search for the term ‘logical consequence’?
+  .notes: :t
+    The first result is an encyclopedia article.
+    That seems promising ...
+
++slide_middle({bkg:'/unit_239/wikipedia.png'})
+  .notes: :t
+    ... except that it isn’t.
+  .notes: :t
+    Wikipedia says that ‘A valid logical argument is one in which the conclusions follow from its premises’?
+    And that is not at all how we are thinking about logical validity on this course.
+  +blur2_('img.bkg', '5px')
+  .slide
+    p.center help!?
+    .notes: :t
+      Why does Wikipedia say that ‘A valid logical argument is one in which the conclusions follow from its premises’?
+      Let me put it like this.
+    .notes: :t
+      On this course our aim is to get a handle on formal logic.
+      To this end we start with some stipulations about logical validity 
+      and related notions that almost everyone agrees are roughly right and
+      acceptable simplifications.
+    .notes: :t
+      These stipulations enable us to get a handle on formal logic while
+      avoiding some interesting philosophical controversies about
+      what logic is.
+      This makes sense: you can’t really do philosophy of logic without
+      any sense of what logic is.
+    .notes: :t
+      But once you’ve understood something about formal logic, you can go on 
+      to think more critically about logical validity.
+    .notes: :t
+      Logic is the study of logical validity, and what we are learning is logic.
+      If you end up in a position to criticise our defintions of logical validity,
+      it will be on the basis of your understanding of what logic is.
+
++slide_middle
+  p.center What does ‘logically entail’ mean?
+    .notes: :t
+      One sentence logically entails another just if there’s no possible situation 
+      where the first is true and the second false.
+      

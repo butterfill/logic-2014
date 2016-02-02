@@ -1,0 +1,32 @@
+date: 2016-01-30
+total users: 285
+
+DJ 12
+AA 22
+BW 35
+HL 48
+JC 40
+
+TOTAL 157
+
+82 have no seminar tutor
+46 have someone other than the Warwick people!
+
+corrections:
+b.j.walker@warwick.ac.uk -> B.J.Walker@warwick.ac.uk
+
+J.Cunningham@warwick.ac.uk
+J.A.Anaya-Ruiz-Esparza@warwick.ac.uk
+H.Lerman@warwick.ac.uk
+Dino.Jakusic@warwick.ac.uk
+
+db.users.find({'profile.seminar_tutor':{$ne:null}},{'profile.seminar_tutor':1})
+
+db.users.update({'profile.seminar_tutor':"L.Hemdat@warwick.ac.uk"},{$set:{'profile.seminar_tutor':"h.lerman@warwick.ac.uk"}},{multi:true})
+
+db.users.update({'profile.seminar_tutor':"J.Cunningham@warwick.ac.uk"},{$set:{'profile.seminar_tutor':"j.cunningham@warwick.ac.uk"}},{multi:true})
+
+
+db.users.update({'profile.seminar_tutor':"Dino.Jakusic@warwick.ac.uk"},{$set:{'profile.seminar_tutor':"dino.jakusic@warwick.ac.uk"}},{multi:true})
+
+

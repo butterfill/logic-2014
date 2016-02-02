@@ -29,6 +29,7 @@ include ../../fragments/unit_mixins
 
 //- unit: proof: ∃Elim 
 +insert_unit({unit:'550', title_slide:true, images:images})
++insert_unit({unit:'554', title_slide:true, images:images})
 
 
 //- unit: all squares are blue (fast version)
@@ -88,15 +89,18 @@ include ../../fragments/unit_mixins
   .words
     .container_12: .grid_12
       .universals
-        p.wrong ∀x( Square(x) ∧ Broken(x) )
+        p
+          span.wrong ∀x( Square(x) ∧ Broken(x) )
         p.step2.hide ∀x( Square(x) ∧ Broken(x) ) ⊨  ∀x Square(x) 
         p.step3.hide ∀x( Square(x) ∧ Broken(x) ) ⊨  ∀x Broken(x) 
         p ∀x( Square(x) → Broken(x) )
         p.step4.hide ∀x(  ¬Square(x) ∨ Broken(x) )
       .em-above
       .existentials
-        p.step5.hide.wrong ∃x( Square(x) → Broken(x) )
-        p.step6.hide.wrong ∃x( ¬Square(x) ∨ Broken(x) )
+        p.step5
+          span.hide.wrong ∃x( Square(x) → Broken(x) )
+        p.step6
+          span.hide.wrong ∃x( ¬Square(x) ∨ Broken(x) )
         p.step5.hide ∃x( Square(x) ∧ Broken(x) )
       +show('.step2')
       +show('.step3')
