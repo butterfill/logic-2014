@@ -581,8 +581,12 @@
           "slides": "http://logic-1.butterfill.com/units/unit_502b.html",
           "rawReading": [],
           "rawExercises": [
+            "/ex/create/qq/all x Tall(x)|not (all x Sad(x))",
+            "/ex/create/from/all x Tall(x)/to/all x Sad(x)",
+            "/ex/create/from/all x (Tall(x) arrow Sad(x))/to/all x (Sad(x) arrow Tall(x))",
             "/ex/create/qq/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))",
-            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))"
+            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))",
+            "/ex/create/from/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))/to/all x (Crying(x) arrow Tall(x))"
           ]
         },
         {

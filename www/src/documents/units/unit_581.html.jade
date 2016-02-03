@@ -10,6 +10,31 @@ book: ['15.1', '15.6']
 exercises: ['15.33--15.40 (second edition)']
 exercises_fast: ['15.33, 15.37--15.39 (second edition)']
 sequence: 760
+exNormal : [
+  
+  '/ex/trans/domain/people/names/-/predicates/SameShoeSize2-x-takes-the-same-size-shoes-as-y/sentence/The relation which holds between people when one takes the same size shoes as the other is a reflexive relation.'
+  '/ex/trans/domain/people/names/-/predicates/SameShoeSize2-x-takes-the-same-size-shoes-as-y/sentence/The relation which holds between people when one takes the same size shoes as the other is a symmetric relation.'
+  '/ex/trans/domain/people/names/-/predicates/HappierThan2-x-is-happier-than-y/sentence/The relation which holds between people when one is happier than another is a transitive relation.'
+  '/ex/trans/domain/people/names/-/predicates/HappierThan2-x-is-happier-than-y/sentence/The relation which holds between people when one is happier than another is a not a symmetric relation.'
+  
+  '/ex/create/qq/exists x exists y Adjacent(x,y)'
+  '/ex/create/orValid/from/not false/to/all x all y all z ((Adjacent(x,y) and Adjacent(y,z)) arrow Adjacent(x,z))'
+  '/ex/create/qq/exists x exists y Adjacent(x,y)|all x all y (Adjacent(x,y) arrow Adjacent(y,x))'
+  '/ex/create/qq/exists x exists y Adjacent(x,y)|all x all y (Adjacent(x,y) arrow Adjacent(y,x))|not all x Adjacent(x,x)'
+  '/ex/create/orValid/from/exists x exists y Adjacent(x,y)|all x all y (Adjacent(x,y) arrow Adjacent(y,x))/to/all x Adjacent(x,x)'
+  '/ex/create/from/all x all y all z ((LeftOf(x,y) and LeftOf(y,z)) arrow LeftOf(x,z))|all x all y (LeftOf(x,y) arrow LeftOf(y,x))/to/all x LeftOf(x,x)'
+  
+]
+exFast : [
+  '/ex/trans/domain/people/names/-/predicates/SameShoeSize2-x-takes-the-same-size-shoes-as-y/sentence/The relation which holds between people when one takes the same size shoes as the other is a symmetric relation.'
+  '/ex/trans/domain/people/names/-/predicates/LargerShoeSize2-x-has-a-larger-shoe-size-than-y/sentence/The relation which holds between people when one has a larger shoe size than the other is an irreflexive relation.'
+  '/ex/trans/domain/people/names/-/predicates/HappierThan2-x-is-happier-than-y/sentence/The relation which holds between people when one is happier than another is a transitive relation.'
+  '/ex/trans/domain/people/names/-/predicates/HappierThan2-x-is-happier-than-y/sentence/The relation which holds between people when one is happier than another is an asymmetric relation.'
+
+  '/ex/create/orValid/from/not false/to/all x all y all z ((Adjacent(x,y) and Adjacent(y,z)) arrow Adjacent(x,z))'
+  '/ex/create/orValid/from/all x all y all z ((LeftOf(x,y) and LeftOf(y,z)) arrow LeftOf(x,z))|all x all y (LeftOf(x,y) arrow LeftOf(y,x))/to/all x LeftOf(x,x)'
+  
+]
 ---
 
 

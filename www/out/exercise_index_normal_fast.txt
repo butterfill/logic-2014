@@ -549,7 +549,8 @@
             "9.5"
           ],
           "rawExercises": [
-            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))"
+            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))",
+            "/ex/create/from/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))/to/all x (Crying(x) arrow Tall(x))"
           ]
         },
         {
@@ -1004,7 +1005,43 @@
       "name": "Lecture 12",
       "slides": "http://logic-1.butterfill.com/lecture_12.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_12.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Relations: Transitivity",
+          "slides": "http://logic-1.butterfill.com/units/unit_125.html",
+          "rawReading": [
+            "15.1",
+            "15.6"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/Adjacent is a transitive relation|LeftOf is a transitive relation|TallerThan is a transitive relation|DifferentShape is a transitive relation",
+            "/ex/qq/Adjacent(a,b)|Adjacent(b,c)|not Adjacent(a,c)",
+            "/ex/create/orValid/from/Adjacent(a,b)|Adjacent(b,c)/to/Adjacent(a,c)",
+            "/ex/create/orValid/from/Adjacent(a,b)|Adjacent(b,c)/to/not Adjacent(a,c)",
+            "/ex/create/orValid/from/LeftOf(a,b)|LeftOf(b,c)/to/LeftOf(a,c)",
+            "/ex/create/orValid/from/DifferentShape(a,b)|DifferentShape(b,c)/to/DifferentShape(a,c)",
+            "/ex/create/orValid/from/DifferentShape(a,b)|DifferentShape(b,c)/to/not DifferentShape(a,c)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Expressing Relations with Quantifiers",
+          "slides": "http://logic-1.butterfill.com/units/unit_581.html",
+          "rawReading": [
+            "15.1",
+            "15.6"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/people/names/-/predicates/SameShoeSize2-x-takes-the-same-size-shoes-as-y/sentence/The relation which holds between people when one takes the same size shoes as the other is a symmetric relation.",
+            "/ex/trans/domain/people/names/-/predicates/LargerShoeSize2-x-has-a-larger-shoe-size-than-y/sentence/The relation which holds between people when one has a larger shoe size than the other is an irreflexive relation.",
+            "/ex/trans/domain/people/names/-/predicates/HappierThan2-x-is-happier-than-y/sentence/The relation which holds between people when one is happier than another is a transitive relation.",
+            "/ex/trans/domain/people/names/-/predicates/HappierThan2-x-is-happier-than-y/sentence/The relation which holds between people when one is happier than another is an asymmetric relation.",
+            "/ex/create/orValid/from/not false/to/all x all y all z ((Adjacent(x,y) and Adjacent(y,z)) arrow Adjacent(x,z))",
+            "/ex/create/orValid/from/all x all y all z ((LeftOf(x,y) and LeftOf(y,z)) arrow LeftOf(x,z))|all x all y (LeftOf(x,y) arrow LeftOf(y,x))/to/all x LeftOf(x,x)"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",
