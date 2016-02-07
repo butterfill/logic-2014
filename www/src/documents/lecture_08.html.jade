@@ -19,9 +19,8 @@ include ../../fragments/unit_mixins
 
 
 
-+section({title:'Everything Is Broken', images:images})
 +insert_unit({unit:'473', title_slide:false, images:images})
-+insert_unit({unit:'471', title_slide:false, images:images})
++insert_unit({unit:'471', title_slide:true, images:images})
 
 
 //- all squares are blue
@@ -49,24 +48,25 @@ include ../../fragments/unit_mixins
     span.slide(style="border-bottom: 4px dashed yellow") ... as much.  
 
 
+//- SKIPPED IN 2015-6
 //- valid arguments can have conclusions unrelated to their premises
 +insert_unit({unit:'163', title_slide:true, images:images})
 
 //- deMorgan
 +insert_unit({unit:'235', title_slide:false, images:images})
 
-
-
-//- unit: scope
-//- *didn't cover this in 2012-3
-+section({title:'Scope', images:images})
-//- introduce it with discussion of a mistake about ¬Intro (rules of proof apply only to connective with widest scope)
-+insert_unit({unit:'291', title_slide:false, images:images})
-+insert_unit({unit:'290', title_slide:false, images:images})
-
-
-//- unit: Proof Example: ¬(P∨Q) therefore ¬P∧¬Q
-+insert_unit({unit:'821', title_slide:true, images:images})
+//- SKIPPED IN 2015-6
+//-
+//- //- unit: scope
+//- //- *didn't cover this in 2012-3
+//- +section({title:'Scope', images:images})
+//- //- introduce it with discussion of a mistake about ¬Intro (rules of proof apply only to connective with widest scope)
+//- +insert_unit({unit:'291', title_slide:false, images:images})
+//- +insert_unit({unit:'290', title_slide:false, images:images})
+//-
+//-
+//- //- unit: Proof Example: ¬(P∨Q) therefore ¬P∧¬Q
+//- +insert_unit({unit:'821', title_slide:true, images:images})
 
 .handout \usepackage{pdfpages}
 .handout \includepdf[pages={1}]{img/rules.pdf}

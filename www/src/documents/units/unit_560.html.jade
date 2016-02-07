@@ -10,6 +10,76 @@ book: ['11.2','11.3']
 exercises: ['11.3', '11.4, 11.8, 11.9', '11.11, 11.13, *11.10']
 exercises_fast: ['11.8, 11.9, *11.11']
 sequence: 790
+exNormal: [
+  '/ex/TorF/qq/‘Give me a note’ exemplifies lexical ambiguity|‘Give me a note’ exemplifies structural ambiguity|‘I shot an elephant in my pyjamas’ exemplifies lexical ambiguity|‘I shot an elephant in my pyjamas’ exemplifies structural ambiguity|‘There is a store for everything’ exemplifies lexical ambiguity|‘There is a store for everything’ exemplifies structural ambiguity'
+  
+  '/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/exists y all x StoreFor(y,x)'
+  '/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/all y exists x StoreFor(x,y)'
+  
+  '/ex/create/qq/LeftOf(a,b)'
+  '/ex/create/qq/exists y LeftOf(a,y)'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/a=Ayesha/predicates/LeftOf2/sentence/exists y LeftOf(a,y)'
+  '/ex/create/qq/exists x exists y LeftOf(x,y)'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/LeftOf2-x-is-left-of-y/sentence/exists x exists y LeftOf(x,y)'
+  
+  '/ex/trans/domain/5things/names/-/predicates/LeftOf2-x-is-left-of-y/sentence/exists x exists y LeftOf(x,y)'
+  '/ex/create/qq/exists x exists y (Happy(x) and LeftOf(x,y))'
+  '/ex/trans/domain/5things/names/-/predicates/Happy1|LeftOf2-x-is-left-of-y/sentence/exists x exists y (Happy(x) and LeftOf(x,y))'
+  '/ex/trans/domain/5things/names/-/predicates/Sad1|Above2-x-is-above-of-y/sentence/Something is above a sad thing.'
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))'
+  '/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1|DifferentSize2-x’s-size-differs-from-y’s-size/sentence/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))'
+  
+  '/ex/create/qq/DifferentSize(a,b)'
+  '/ex/create/qq/exists y DifferentSize(a,y)'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/a=Ayesha/predicates/DifferentSize2-x’s-size-differs-from-y’s-size/sentence/exists y DifferentSize(a,y)'
+  '/ex/create/qq/all x exists y (DifferentSize(x,y))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/DifferentSize2-x’s-size-differs-from-y’s-size/sentence/all x exists y (DifferentSize(x,y))'
+  '/ex/create/qq/all x exists y (DifferentSize(x,y) and SameShape(x,y))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/DifferentSize2-x’s-size-differs-from-y’s-size|SameShape2-x-and-y-have-the-same-shape/sentence/all x exists y (DifferentSize(x,y) and SameShape(x,y))'
+  
+  '/ex/create/qq/exists x exists y (DifferentSize(x,y))'
+  '/ex/create/qq/exists x exists y (DifferentSize(x,y))|all x all y (DifferentSize(x,y) arrow SameShape(x,y))'
+  
+  '/ex/create/qq/exists x exists y (DifferentSize(x,y) and Happy(x) and Sad(y))'
+  '/ex/create/qq/exists x exists y (DifferentSize(x,y) and Happy(x) and Sad(y))|all x all y ((Happy(x) and Sad(y)) arrow LeftOf(x,y))'
+
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y))'
+  '/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1/sentence/exists x exists y (Happy(x) and Sad(y))'
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (SameSize(x,y))'
+  '/ex/trans/domain/5things/names/-/predicates/SameSize2-x-is-the-same-size-as-y/sentence/all x all y (SameSize(x,y))'
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (not x=y arrow DifferentShape(x,y))'
+  '/ex/trans/domain/5things/names/-/predicates/DifferentShape2-x’s-shape-differs-from-y’s-shape/sentence/all x all y (not x=y arrow DifferentShape(x,y))'
+    
+]
+exFast: [
+  '/ex/TorF/qq/‘Give me a note’ exemplifies lexical ambiguity|‘Give me a note’ exemplifies structural ambiguity|‘I shot an elephant in my pyjamas’ exemplifies lexical ambiguity|‘I shot an elephant in my pyjamas’ exemplifies structural ambiguity|‘There is a store for everything’ exemplifies lexical ambiguity|‘There is a store for everything’ exemplifies structural ambiguity'
+
+  '/ex/create/qq/exists x exists y LeftOf(x,y)'
+  '/ex/trans/domain/5things/names/-/predicates/LeftOf2/sentence/exists x exists y LeftOf(x,y)'
+    
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))'
+  '/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1|DifferentSize2-x’s-size-differs-from-y’s-size/sentence/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))'
+  
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))'
+  '/ex/create/qq/all x exists y (DifferentSize(x,y) and SameShape(x,y))'
+
+  '/ex/create/qq/all x exists y (DifferentSize(x,y))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/DifferentSize2-x’s-size-differs-from-y’s-size/sentence/all x exists y (DifferentSize(x,y))'
+  '/ex/create/qq/all x exists y (DifferentSize(x,y) and SameShape(x,y))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/DifferentSize2-x’s-size-differs-from-y’s-size|SameShape2-x-and-y-have-the-same-shape/sentence/all x exists y (DifferentSize(x,y) and SameShape(x,y))'
+
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y))'
+  '/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1/sentence/exists x exists y (Happy(x) and Sad(y))'
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (SameSize(x,y))'
+  '/ex/trans/domain/5things/names/-/predicates/SameSize2-x-is-the-same-size-as-y/sentence/all x all y (SameSize(x,y))'
+  '/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (not x=y arrow DifferentShape(x,y))'
+  '/ex/trans/domain/5things/names/-/predicates/DifferentShape2-x’s-shape-differs-from-y’s-shape/sentence/all x all y (not x=y arrow DifferentShape(x,y))'
+
+  '/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/exists y all x StoreFor(y,x)'
+  '/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/all y exists x StoreFor(x,y)'
+  '/ex/counter/from/all y exists x StoreFor(x,y)/to/exists y all x StoreFor(y,x)'
+  
+]
 ---
 
 

@@ -361,7 +361,7 @@
         },
         {
           "type": "unit",
-          "name": "Subproofs with logic-ex",
+          "name": "Subproofs with zoxiy",
           "slides": "http://logic-1.butterfill.com/units/unit_395.html",
           "rawReading": [
             "8.1",
@@ -844,6 +844,37 @@
             "/ex/create/orValid/from/exists x (Happy(x) and Tall(x))/to/∀x (Happy(x) or Tall(x))",
             "/ex/proof/orInvalid/from/not exists x (Happy(x) and not Blue(x))/to/∀x Happy(x) → ∀x Blue(x)",
             "/ex/create/orValid/from/not exists x (Happy(x) and not Blue(x))/to/∀x Happy(x) → ∀x Blue(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "There Is a Store for Everything",
+          "slides": "http://logic-1.butterfill.com/units/unit_560.html",
+          "rawReading": [
+            "11.2",
+            "11.3"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/‘Give me a note’ exemplifies lexical ambiguity|‘Give me a note’ exemplifies structural ambiguity|‘I shot an elephant in my pyjamas’ exemplifies lexical ambiguity|‘I shot an elephant in my pyjamas’ exemplifies structural ambiguity|‘There is a store for everything’ exemplifies lexical ambiguity|‘There is a store for everything’ exemplifies structural ambiguity",
+            "/ex/create/qq/exists x exists y LeftOf(x,y)",
+            "/ex/trans/domain/5things/names/-/predicates/LeftOf2/sentence/exists x exists y LeftOf(x,y)",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1|DifferentSize2-x’s-size-differs-from-y’s-size/sentence/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))",
+            "/ex/create/qq/all x exists y (DifferentSize(x,y) and SameShape(x,y))",
+            "/ex/create/qq/all x exists y (DifferentSize(x,y))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/DifferentSize2-x’s-size-differs-from-y’s-size/sentence/all x exists y (DifferentSize(x,y))",
+            "/ex/create/qq/all x exists y (DifferentSize(x,y) and SameShape(x,y))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/DifferentSize2-x’s-size-differs-from-y’s-size|SameShape2-x-and-y-have-the-same-shape/sentence/all x exists y (DifferentSize(x,y) and SameShape(x,y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))",
+            "/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1/sentence/exists x exists y (Happy(x) and Sad(y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (SameSize(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/SameSize2-x-is-the-same-size-as-y/sentence/all x all y (SameSize(x,y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (not x=y arrow DifferentShape(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/DifferentShape2-x’s-shape-differs-from-y’s-shape/sentence/all x all y (not x=y arrow DifferentShape(x,y))",
+            "/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/exists y all x StoreFor(y,x)",
+            "/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/all y exists x StoreFor(x,y)",
+            "/ex/counter/from/all y exists x StoreFor(x,y)/to/exists y all x StoreFor(y,x)"
           ]
         },
         {

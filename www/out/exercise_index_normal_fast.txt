@@ -254,7 +254,7 @@
           ],
           "rawExercises": [
             "/ex/q/Explain why ‘Ayesha said that ...’ is not a truth-functional connective",
-            "/ex/TorF/qq/conjunction (‘∧’) is a truth-functional connective|‘Because’ is a truth-functional connective|‘Maybe’ (as in ‘Maybe Elvis lives’) is a truth-functional connective|‘Certainly’ (as in ‘Certainly, fish swim’) is a truth-functional connective|‘Probably’ (as in ‘Probably, it will rain’) is a truth-functional connective|Identity (‘=’) is a truth-functional connective"
+            "/ex/TorF/qq/conjunction (‘∧’) is a connective|conjunction (‘∧’) is a truth-functional connective|‘Because’ is a truth-functional connective|‘Maybe’ (as in ‘Maybe Elvis lives’) is a truth-functional connective|‘Certainly’ (as in ‘Certainly, fish swim’) is a truth-functional connective|‘It is probable that’ (as in ‘It is probable that, it will rain’) is a connective|‘It is probable that’ (as in ‘It is probable that, it will rain’) is a truth-functional connective|Identity (‘=’) is a connective|Identity (‘=’) is a truth-functional connective"
           ]
         },
         {
@@ -335,7 +335,7 @@
         },
         {
           "type": "unit",
-          "name": "Subproofs with logic-ex",
+          "name": "Subproofs with zoxiy",
           "slides": "http://logic-1.butterfill.com/units/unit_395.html",
           "rawReading": [
             "8.1",
@@ -561,7 +561,15 @@
           "rawExercises": [
             "/ex/proof/from/A and B|not A/to/C"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 09",
+      "slides": "http://logic-1.butterfill.com/lecture_09.html",
+      "handout": "http://logic-1.butterfill.com/handouts/lecture_09.handout.pdf",
+      "units": [
         {
           "type": "unit",
           "name": "Scope: A Mistaken Application of ¬Elim",
@@ -586,41 +594,6 @@
         },
         {
           "type": "unit",
-          "name": "Proof Example: ¬(P∨Q) therefore ¬P∧¬Q",
-          "slides": "http://logic-1.butterfill.com/units/unit_821.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/proof/from/not (A or B)/to/not A and not B",
-            "/ex/proof/from/not A and not B/to/not (A or B)",
-            "/ex/proof/from/not A or not B/to/not (A and B)",
-            "/ex/proof/from/not (A and B)/to/not A or not B",
-            "/ex/proof/from/not (A arrow B)/to/A and not B",
-            "/ex/proof/from/A and not B/to/not (A arrow B)"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "lecture",
-      "name": "Lecture 09",
-      "slides": "http://logic-1.butterfill.com/lecture_09.html",
-      "handout": "http://logic-1.butterfill.com/handouts/lecture_09.handout.pdf",
-      "units": [
-        {
-          "type": "unit",
-          "name": "Recap: Scope",
-          "slides": "http://logic-1.butterfill.com/units/unit_292.html",
-          "rawReading": [
-            "3.5"
-          ],
-          "rawExercises": [
-            "/ex/scope/qq/A and (B or C)|(A and B) or C|(A and B) arrow C|not A and (B arrow C)",
-            "/ex/tt/qq/A and (B or C)|(A and B) or C",
-            "/ex/tt/qq/A arrow (B arrow C)|(A arrow B) arrow C"
-          ]
-        },
-        {
-          "type": "unit",
           "name": "Scope and Negation",
           "slides": "http://logic-1.butterfill.com/units/unit_320.html",
           "rawReading": [
@@ -635,6 +608,20 @@
             "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":\",\"^\",\")\"]}]/qq/not (Tall(a) arrow Sad(a))|Tall(a) arrow not Sad(a)",
             "/ex/tt/from/not (A arrow B)/to/A arrow not B",
             "/ex/tt/from/A arrow not B/to/not (A arrow B)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Proof Example: ¬(P∨Q) therefore ¬P∧¬Q",
+          "slides": "http://logic-1.butterfill.com/units/unit_821.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/not (A or B)/to/not A and not B",
+            "/ex/proof/from/not A and not B/to/not (A or B)",
+            "/ex/proof/from/not A or not B/to/not (A and B)",
+            "/ex/proof/from/not (A and B)/to/not A or not B",
+            "/ex/proof/from/not (A arrow B)/to/A and not B",
+            "/ex/proof/from/A and not B/to/not (A arrow B)"
           ]
         },
         {
@@ -1040,6 +1027,28 @@
             "/ex/create/orValid/from/not false/to/all x all y all z ((Adjacent(x,y) and Adjacent(y,z)) arrow Adjacent(x,z))",
             "/ex/create/orValid/from/all x all y all z ((LeftOf(x,y) and LeftOf(y,z)) arrow LeftOf(x,z))|all x all y (LeftOf(x,y) arrow LeftOf(y,x))/to/all x LeftOf(x,x)"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Expressing Counterexamples Formally",
+          "slides": "http://logic-1.butterfill.com/units/unit_583.html",
+          "rawReading": [
+            "15.1",
+            "15.6"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/Happy(a)",
+            "/ex/counter/qq/Happy(a)",
+            "/ex/create/qq/not a=b",
+            "/ex/counter/qq/not a=b",
+            "/ex/counter/qq/all x R(x,x)",
+            "/ex/counter/qq/not all x R(x,x)",
+            "/ex/counter/from/all x all y (R(x,y) arrow R(y,x))/to/all x R(x,x)",
+            "/ex/counter/qq/not all x all y (R(x,y) arrow R(y,x))",
+            "/ex/counter/from/all x R(x,x)|all x all y all z ((R(x,y) and R(y,z)) arrow R(x,z))/to/all x all y (R(x,y) arrow R(y,x))",
+            "/ex/counter/from/all x R(x,x)|all x all y (R(x,y) arrow R(y,x))/to/all x all y all z ((R(x,y) and R(y,z)) arrow R(x,z))",
+            "/ex/counter/from/all x all y ((not x=y and R(x,y)) arrow not R(y,x))|all x all y all z ((R(x,y) and R(y,z)) arrow R(x,z))/to/all x R(x,x)"
+          ]
         }
       ]
     },
@@ -1048,7 +1057,39 @@
       "name": "Lecture 13",
       "slides": "http://logic-1.butterfill.com/lecture_13.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_13.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "There Is a Store for Everything",
+          "slides": "http://logic-1.butterfill.com/units/unit_560.html",
+          "rawReading": [
+            "11.2",
+            "11.3"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/‘Give me a note’ exemplifies lexical ambiguity|‘Give me a note’ exemplifies structural ambiguity|‘I shot an elephant in my pyjamas’ exemplifies lexical ambiguity|‘I shot an elephant in my pyjamas’ exemplifies structural ambiguity|‘There is a store for everything’ exemplifies lexical ambiguity|‘There is a store for everything’ exemplifies structural ambiguity",
+            "/ex/create/qq/exists x exists y LeftOf(x,y)",
+            "/ex/trans/domain/5things/names/-/predicates/LeftOf2/sentence/exists x exists y LeftOf(x,y)",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1|DifferentSize2-x’s-size-differs-from-y’s-size/sentence/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))",
+            "/ex/create/qq/all x exists y (DifferentSize(x,y) and SameShape(x,y))",
+            "/ex/create/qq/all x exists y (DifferentSize(x,y))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/DifferentSize2-x’s-size-differs-from-y’s-size/sentence/all x exists y (DifferentSize(x,y))",
+            "/ex/create/qq/all x exists y (DifferentSize(x,y) and SameShape(x,y))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Dura/names/-/predicates/DifferentSize2-x’s-size-differs-from-y’s-size|SameShape2-x-and-y-have-the-same-shape/sentence/all x exists y (DifferentSize(x,y) and SameShape(x,y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))",
+            "/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1/sentence/exists x exists y (Happy(x) and Sad(y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (SameSize(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/SameSize2-x-is-the-same-size-as-y/sentence/all x all y (SameSize(x,y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (not x=y arrow DifferentShape(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/DifferentShape2-x’s-shape-differs-from-y’s-shape/sentence/all x all y (not x=y arrow DifferentShape(x,y))",
+            "/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/exists y all x StoreFor(y,x)",
+            "/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/all y exists x StoreFor(x,y)",
+            "/ex/counter/from/all y exists x StoreFor(x,y)/to/exists y all x StoreFor(y,x)"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",

@@ -5,7 +5,7 @@ description: """
   Introduces and illustrates the use of rules of proof for conjunction.
   Explains how to create proofs using logic-ex.
   """
-tags: ['proof','logic-ex','ex-proof']
+tags: ['proof','zoxiy','ex-proof']
 depends: ['unit_211']
 source: ['ph133 lecture 03']
 sequence: 200
@@ -116,10 +116,9 @@ include ../../../fragments/unit_mixins
     Hopefully you will do the same because I don't really have the patience for spoon feeding.
 
 
-//- now see how to do it in logic-ex
-
+//- now see how to do it in zoxiy
 +slide_middle
-  .handout \textbf{Writing a proof in logic-ex}
+  .handout \textbf{Writing a proof in zoxiy}
   .img.handout(data-src='img/151024-0010-crop.png')
   p.center
     a(href="https://logic-ex.butterfill.com/ex/proof/from/A%20and%20B%7CB%20and%20C/to/A%20and%20C") https://logic-ex.butterfill.com/ex/proof/from/A and B|B and C/to/A and C
@@ -164,12 +163,12 @@ include ../../../fragments/unit_mixins
     First, justification needs to start with ‘//’.  This is to separate justification 
     from the sentence itself.
   .notes: :t
-    If you forget the ‘//’, logic-ex won’t be able to understand your proof and won’t 
+    If you forget the ‘//’, zoxiy won’t be able to understand your proof and won’t 
     be able to explain to you what went wrong.
 +slide({bkg:'unit_21/151024-0003d.png'})
   .notes: :t
     The next thing to note is that I typed the word ‘and’ rather than the symbol
-    for conjunction (‘∧’).  As a convenience, logic-ex will let us use words 
+    for conjunction (‘∧’).  As a convenience, zoxiy will let us use words 
     rather than making us type symbols.  But we can type the symbols if we prefer.
   .notes: :t
     The same is true when we’re writing sentences: you can type ‘A and B’ instead of
@@ -183,7 +182,7 @@ include ../../../fragments/unit_mixins
     Finally, note that we put a number at the end.  This is the number 1,
     which refers to the first line.
   .notes: :t
-    Logic-ex provides line numbers for us (you can add your own
+    zoxiy provides line numbers for us (you can add your own
     if you prefer, but then you have to be really consistent about 
     starting each line with a number).
 +slide({bkg:'unit_21/151024-0003f.png'})
@@ -192,8 +191,8 @@ include ../../../fragments/unit_mixins
     telling us our line is not justified.  But we have added the justification.
     What’s going on?
   .notes: :t
-    Logic-ex might be a bit slow to update.  In this situation, just move your
-    cursor up and down to get logic-ex to check your line again.
+    zoxiy might be a bit slow to update.  In this situation, just move your
+    cursor up and down to get zoxiy to check your line again.
     Let me do that now ...
 +slide({bkg:'unit_21/151024-0004.png'})
   .notes: :t
@@ -277,4 +276,4 @@ include ../../../fragments/unit_mixins
 +slide({bkg:'unit_21/151024-0010-1.png'})
   .notes: :t
     And here’s the finished proof.
-    This is correct; if you submit it, logic-ex should say your proof is correct.
+    This is correct; if you submit it, zoxiy should say your proof is correct.

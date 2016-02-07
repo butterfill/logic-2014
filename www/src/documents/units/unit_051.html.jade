@@ -1,8 +1,8 @@
 ---cson
 layout: 'deck_units' 
 title: "Creating Your Own Exercises"
-description: "In logic-ex, an exercise is a url. You can set exercises just by creating a list of urls."
-tags: ['logic-ex', 'tutors']
+description: "In zoxiy, an exercise is a url. You can set exercises just by creating a list of urls."
+tags: ['zoxiy', 'tutors']
 ---
 
 include ../../../fragments/unit_mixins
@@ -22,7 +22,7 @@ include ../../../fragments/unit_mixins
   
   .main-bit
     .notes: :t
-      In logic-ex, an exercise is a url. You can set exercises just by creating a list of urls.
+      In zoxiy, an exercise is a url. You can set exercises just by creating a list of urls.
     p An exercise is a url
     p.em-above To ask a question use ‘/ex/q/...’:
     ul
@@ -58,7 +58,7 @@ include ../../../fragments/unit_mixins
       get the same grade and comment.
     .notes: :t
       Which students’ answers will you see here? 
-      All those who currently specify the email you registered on logic-ex with as the 
+      All those who currently specify the email you registered on zoxiy with as the 
       email of their tutor.
       So you would typically expect to whip through a lot of answers at once.
     +hide_('.ex1-grade')
@@ -80,7 +80,7 @@ include ../../../fragments/unit_mixins
       li: a(href="https://logic-ex.butterfill.com/ex/proof/from/exists x all y Loves(x,y)/to/∀y ∃x Loves(x,y)") /ex/proof/from/exists x all y Loves(x,y)/to/∀y ∃x Loves(x,y)
     .notes: :t
       How about asking students to write proofs?
-      In logic-ex, an exercise is a url. 
+      In zoxiy, an exercise is a url. 
       The url for a proof starts ‘/ex/proof’
       Then you add ‘/from/ [premise] | [premise] | ... | [premise]’ for the premises
       and ‘/to/ [conclusion]’ for the conclusion.
@@ -125,9 +125,9 @@ include ../../../fragments/unit_mixins
     .notes: :t
       As with proofs, multiple premises may be separated by |
     .notes: :t
-      Note that logic-ex treats exercises as identical exactly if their urls are identical.
+      Note that zoxiy treats exercises as identical exactly if their urls are identical.
       So whether you use words or symbols doesn’t affect what your students see, but
-      changing a symbol to a word will cause logic-ex to treat the url as a different exercise.
+      changing a symbol to a word will cause zoxiy to treat the url as a different exercise.
     +hide_('.main-bit')
     +show('.ex3')
     .notes: :t
@@ -163,7 +163,7 @@ include ../../../fragments/unit_mixins
     +hide_('.main-bit')
     +show('.ex4')
     .notes: :t
-      Logic-ex will still grade counterexamples automatically, but you have to tell it whether 
+      zoxiy will still grade counterexamples automatically, but you have to tell it whether 
       or not the argument is valid by grading an submitted exercise which says that the 
       argument is valid.
     +show('.ex4b')
@@ -223,9 +223,9 @@ include ../../../fragments/unit_mixins
     .notes: :t
       As with proofs, multiple premises may be separated by |
     .notes: :t
-      Note that logic-ex treats exercises as identical exactly if their urls are identical.
+      Note that zoxiy treats exercises as identical exactly if their urls are identical.
       So whether you use words or symbols doesn’t affect what your students see, but
-      changing a symbol to a word will cause logic-ex to treat the url as a different exercise.
+      changing a symbol to a word will cause zoxiy to treat the url as a different exercise.
     +hide_('.main-bit')
     +show('.ex6')
     .notes: :t
@@ -304,7 +304,7 @@ include ../../../fragments/unit_mixins
     p OR: /sentence/Someone is happy
   .notes: :t
     When your sentence can be parsed as an expression of awFOL,
-    logic-ex will expect a natural language answer; otherwise it will
+    zoxiy will expect a natural language answer; otherwise it will
     expect the answer to be a sentence of awFOL and anything which is not
     a sentence of awFOL will automatically be graded as incorrect.
   
@@ -354,7 +354,7 @@ include ../../../fragments/unit_mixins
     depends on the situation).  In that case, use the command
     `encodeURIComponent(JSON.stringify(ix.getAnswer().world))`.
     (This will give you a longer string.  You don’t need to do this if you
-    are creating an ExerciseSet in logic-ex rather than writing your own page of urls.)
+    are creating an ExerciseSet in zoxiy rather than writing your own page of urls.)
   +show('.ex3')
   .notes: :t
     Here you have just a set of one or more questions (no argument or possible situation).
@@ -376,8 +376,8 @@ include ../../../fragments/unit_mixins
       or contribute the code yourself.
     .notes: :t
       If you know some code you could also contribute enhancements to the 
-      core of logic-ex (which is fairly modular).
-      The core of logic-ex is the expression and proof parsers,
+      core of zoxiy (which is fairly modular).
+      The core of zoxiy is the expression and proof parsers,
       the specification for expressing rules of proof, and the proof checker.
       (This is all maintained separately from the web interface and the 
       bits for tracking students’ progress.) 

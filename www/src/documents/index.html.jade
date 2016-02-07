@@ -32,10 +32,10 @@ html
       .span4(style='border-left: 1px dotted grey; border-right: 1px dotted grey;margin-right: -1px;margin-left: -1px;')
         #extras(style="padding-right:1em;padding-left:1em")
           h2 Exercises & Extras
-          p Exercises are set for subtopics of each lecture (links below).  You can also find a summary of all exercises set on logic-ex:
+          p Exercises are set for subtopics of each lecture (links below).  You can also find a summary of all exercises set on zoxiy:
           ul
             li 
-              a(href='https://logic-ex.butterfill.com/courses') logic-ex
+              a(href='https://logic-ex.butterfill.com/courses') zoxiy
           p Other:
           ul
             li
@@ -83,6 +83,9 @@ html
                 a(href='#{lecture.url}',target='_blank') slides
                 |  , 
                 a(href='/handouts/#{lecture.basename}.handout.pdf',target='_blank') handout [pdf]
+                if lecture.recording
+                  | , 
+                  a(href='#{lecture.recording}', target='_blank') recording [warwick only]
               p Exercises for this lecture:
               ul
                 li

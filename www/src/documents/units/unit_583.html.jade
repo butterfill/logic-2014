@@ -8,6 +8,37 @@ source: ['ph126 fastlecture 05']
 duration: 5
 book: ['15.1', '15.6']
 sequence: 770
+exNormal: [
+  '/ex/create/qq/Happy(a)'
+  '/ex/counter/qq/Happy(a)'
+  '/ex/create/qq/not a=b'
+  '/ex/counter/qq/not a=b'
+  
+  '/ex/counter/qq/exists x Happy(x)'
+  '/ex/counter/qq/exists x Happy(x)|exists x not Happy(x)'
+  '/ex/counter/from/exists x Happy(x)/to/not exists x not Happy(x)'
+  
+  '/ex/counter/qq/all x R(x,x)'
+  '/ex/counter/qq/not all x R(x,x)'
+  '/ex/counter/from/all x all y (R(x,y) arrow R(y,x))/to/all x R(x,x)'
+  '/ex/counter/qq/not all x all y (R(x,y) arrow R(y,x))'
+  '/ex/counter/from/all x R(x,x)|all x all y all z ((R(x,y) and R(y,z)) arrow R(x,z))/to/all x all y (R(x,y) arrow R(y,x))'
+]
+exFast: [
+  '/ex/create/qq/Happy(a)'
+  '/ex/counter/qq/Happy(a)'
+  '/ex/create/qq/not a=b'
+  '/ex/counter/qq/not a=b'
+  
+  '/ex/counter/qq/all x R(x,x)'
+  '/ex/counter/qq/not all x R(x,x)'
+  '/ex/counter/from/all x all y (R(x,y) arrow R(y,x))/to/all x R(x,x)'
+  '/ex/counter/qq/not all x all y (R(x,y) arrow R(y,x))'
+  '/ex/counter/from/all x R(x,x)|all x all y all z ((R(x,y) and R(y,z)) arrow R(x,z))/to/all x all y (R(x,y) arrow R(y,x))'
+  
+  '/ex/counter/from/all x R(x,x)|all x all y (R(x,y) arrow R(y,x))/to/all x all y all z ((R(x,y) and R(y,z)) arrow R(x,z))'
+  '/ex/counter/from/all x all y ((not x=y and R(x,y)) arrow not R(y,x))|all x all y all z ((R(x,y) and R(y,z)) arrow R(x,z))/to/all x R(x,x)'
+]
 ---
 
 
@@ -89,3 +120,10 @@ include ../../../fragments/unit_mixins
 +slide({bkg:'unit_583/slide-241.jpeg'})
   .notes 
 
++slide_middle
+  .notes: :t
+    Here’s a quick look at how to enter the counterexample in
+    zoxiy.  If you want more detail, please see the user guide
+    (which is linked to on the home page of zoxiy).
+  p.center
+    video(src='/img/unit_583/ex_counter.mov', controls=true)

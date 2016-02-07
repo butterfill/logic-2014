@@ -99,6 +99,9 @@ html(lang="en")
                   a(href='#{lecture.url}',target='_blank') slides
                   |  , 
                   a(href='/handouts/#{lecture.basename}.handout.pdf',target='_blank') handout [pdf]
+                  if lecture.recording
+                    | , 
+                    a(href='#{lecture.recording}', target='_blank') recording [warwick only]
                 p Exercises for this lecture:
                 ul
                   li
