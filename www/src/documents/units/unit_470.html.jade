@@ -7,9 +7,40 @@ depends: ['740']
 source: ['ph126 fastlecture 05']
 duration: 10
 book: ['14.1']
-exercises: []
-exercises_fast: []
 sequence: 710
+exNormal : [
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))'
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)'
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)|exists x exists y Below(x,y)'
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)|exists x exists y Below(x,y)|all x (exists y Below(x,y) arrow Sad(x))'
+  
+  '/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y))/to/exists x exists y (Happy(x) and Happy(y) and not x=y)'
+  '/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y) and not x=y)/to/exists x exists y (Happy(x) and Happy(y))'
+  
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/Something is crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are crying'
+  '/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y (Sad(x) and Sad(y) and not x=y)'
+  '/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y exists z (Sad(x) and Sad(y) and Sad(z) and not x=y and not y=z and not x=z)'
+  
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are not crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/It is not true that at least two things are crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At most one thing is crying'
+]
+exFast : [
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)|exists x exists y Below(x,y)|all x (exists y Below(x,y) arrow Sad(x))'
+
+  '/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y))/to/exists x exists y (Happy(x) and Happy(y) and not x=y)'
+  '/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y) and not x=y)/to/exists x exists y (Happy(x) and Happy(y))'
+  
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/Something is crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are crying'
+  '/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y (Sad(x) and Sad(y) and not x=y)'
+  '/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y exists z (Sad(x) and Sad(y) and Sad(z) and not x=y and not y=z and not x=z)'
+  
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are not crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/It is not true that at least two things are crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At most one thing is crying'
+]
 ---
 
 

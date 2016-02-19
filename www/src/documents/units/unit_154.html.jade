@@ -14,33 +14,33 @@ exNormal: [
   '/ex/tt/qq/(A and B) or C|A and (B or C)'
   '/ex/create/orValid/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))'
   '/ex/create/orValid/from/Happy(a) and (Happy(b) or Happy(c))/to/(Happy(a) and Happy(b)) or Happy(c)'
-  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/(Happy(a) and Happy(b)) or Happy(c)'
-  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/Happy(a) and (Happy(b) or Happy(c))'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/(Happy(a) and Happy(b)) or Happy(c)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/Happy(a) and (Happy(b) or Happy(c))'
 
-  '/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy; and she is frowning or crying'
-  '/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy and frowning; or Ayesha is crying'  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy; and she is frowning or crying'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy and frowning; or Ayesha is crying'  
       
   '/ex/create/qq/Wide(a)|Tall(b)'
   '/ex/tt/qq/not (A and B)|not A or not B'
   '/ex/create/orInconsistent/qq/not (Happy(a) and Wide(a))|not Happy(a) or not Wide(a)'
-  '/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and Wide(a))'  
-  '/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/Ayesha is not happy or not wide'  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and Wide(a))'  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/Ayesha is not happy or not wide'  
   
   '/ex/create/qq/not (Wide(a) and not Tall(b))'
   '/ex/tt/qq/not (A and not B)|not A or B'
-  '/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))'  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))'  
   '/ex/create/orValid/from/not (Happy(a) and not Wide(a))/to/not Happy(a) or Wide(a)'
   '/ex/create/orValid/from/not Happy(a) or Wide(a)/to/not (Happy(a) and not Wide(a))'
-  '/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Sad1|Happy1/sentence/Ayesha is sad or not happy'  
-  '/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))'  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Happy1/sentence/Ayesha is sad or not happy'  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))'  
 ]
 exFast: [
   '/ex/scope/qq/(Intelligent(a) and Dissatisfied(a)) or Happy(a)|Intelligent(a) and (Dissatisfied(a) or Happy(a))|(A ∧ B) ∨ C|A ∧ (B ∨ C)|A arrow (B arrow C)|(A arrow B) arrow C'
   '/ex/tt/qq/(A and B) or C|A and (B or C)'
   '/ex/create/orValid/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))'
   '/ex/create/orValid/from/Happy(a) and (Happy(b) or Happy(c))/to/(Happy(a) and Happy(b)) or Happy(c)'
-  '/ex/trans/domain/Ayesha/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy; and she is frowning or crying'
-  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/(Happy(a) and Happy(b)) or Happy(c)'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy; and she is frowning or crying'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/(Happy(a) and Happy(b)) or Happy(c)'
   
   '/ex/create/qq/Wide(a)|Tall(b)'
   '/ex/create/qq/not (Wide(a) and not Tall(b))'
@@ -51,8 +51,8 @@ exFast: [
   '/ex/tt/qq/not (A and not B) or not C|not (not A or (B or not C))'
   '/ex/create/orValid/from/not (Happy(a) and not Sad(b)) or not Laughing(c)/to/not (not Happy(a) or (Sad(b) or not Laughing(c)))'
   '/ex/create/orValid/from/not (not Happy(a) or (Sad(b) or not Laughing(c)))/to/not (Happy(a) and not Sad(b)) or not Laughing(c)'
-  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1|Sad1|Laughing1/sentence/not (not Happy(a) or (Sad(b) or not Laughing(c)))'
-  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1|Sad1|Laughing1/sentence/not (Happy(a) and not Sad(b)) or not Laughing(c)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1|Sad1|Laughing1/sentence/not (not Happy(a) or (Sad(b) or not Laughing(c)))'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1|Sad1|Laughing1/sentence/not (Happy(a) and not Sad(b)) or not Laughing(c)'
 ]
 ---
 

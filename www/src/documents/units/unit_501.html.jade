@@ -17,10 +17,10 @@ exNormal: [
 
   '/ex/trans/domain/5things/names/-/predicates/Circle1|Broken1/sentence/All circles are broken'
   '/ex/trans/domain/5things/names/-/predicates/Idol1-x-is-an-idol|Dead1/sentence/∀x(Idol(x) → Dead(x))'
-  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad'
-  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))'
-  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad'
-  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad'
+  '/ex/trans/domain/people/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing'
 
   '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1/sentence/A tall thing is crying'
   '/ex/create/qq/exists x Wide(x)|exists x Frowning(x)|exists x (Wide(x) and Frowning(x))'
@@ -39,10 +39,10 @@ exNormal: [
 exFast: [
   """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"orange","f":["}:","-","("]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">",")"]}]/qq/all x (Frowning(x) arrow Happy(x))"""
 
-  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad'
-  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))'
-  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad'
-  '/ex/trans/domain/Ayesha|Beatrice|Zach/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad'
+  '/ex/trans/domain/people/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing'
 
   '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1/sentence/A tall thing is crying'
   '/ex/create/qq/exists x Wide(x)|exists x Frowning(x)|exists x (Wide(x) and Frowning(x))'
@@ -92,7 +92,7 @@ include ../../../fragments/unit_mixins
             p.em-above All 
               span.idols idols
               span  are 
-              span.equal dead.
+              span.dead dead.
           .step5.hide
             p 
               span ∀x( 

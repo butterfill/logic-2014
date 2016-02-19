@@ -107,15 +107,16 @@ var inject = function(){
           </div>
         </div>
       </section>
-<!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
-<!-- create title slide for a lecture-->
-<!-- param p contains document and images (an array of images to use)-->
-<!-- param p contains p.unit and p.images (an array of images)-->
 
-<!-- see also +clip to modify the clip as an animation-->
-<!-- ------------>
-<!-- draw things-->
-<!-- ------------>
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
 <div class="slide">
   <div class="handout">Something is not dead:</div>
   <div class="handout">\hspace{3mm} ∃x ¬Dead(x)</div>
@@ -126,8 +127,7 @@ var inject = function(){
   <div class="handout">Not everything is broken:</div>
   <div class="handout">\hspace{3mm}   ¬∀x Broken(x)</div>
   <div data-src="img/unit_605_prf1.png" class="handout img"></div>
-  <div data-src="img/unit_605_prf2.png" class="handout img"></div>
-  <div data-src="img/unit_605_counterexample.png" class="handout img"></div>
+  <div data-src="img/unit_605_prf2.png" class="handout img"></div><img src="/img/unit_605/not_exists.png" style="z-index:-9999" class="ne1 hide bkg"/><img src="/img/unit_605/not_exists_2.png" style="z-index:-9999" class="ne2 hide bkg"/>
   <div class="words">
     <div class="container_12">
       <div class="grid_6 left-half">
@@ -192,8 +192,7 @@ var inject = function(){
       </div>
     </div>
     <div class="clear"></div>
-    <div data-what=".hidelater" data-dur="1000" class="slide anim-continue anim-collapse"></div>
-    <div data-what=".step2" data-dur="1000" class="slide anim-continue anim-collapse"></div>
+    <div data-what=".hidelater, .step2" data-dur="1000" class="slide anim-continue anim-collapse"></div>
     <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
     <div class="container_12">
       <grid_12>
@@ -277,11 +276,23 @@ var inject = function(){
             </table>
           </div>
         </div>
+        <div data-what=" .proof3u605 .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="img.ne1" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .proof3u605 .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .proof3u605 .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="img.ne2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .proof3u605 .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
         <div class="slide em-above nodim">
           <div style="width:300px;" class="counterexample">
             <p>Counterexample: </p>
-            <p class="indent">Domain: {Ayesha,Beatrice}</p>
-            <p class="indent">Dead : {Beatrice}</p>
+            <p class="indent">Domain: {Ayesha, Beatrice}</p>
+            <p class="indent">Dead : { &lt;Beatrice&gt; }</p>
             <p class="indent">a : Ayesha ; b : Beatrice</p>
           </div>
         </div>
@@ -296,7 +307,20 @@ var inject = function(){
       </grid_12>
     </div>
   </div>
-</div><a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+</div>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">
+            <video src="/img/unit_605/not_exists_counterexample.mp4" controls="controls"></video>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <div class="exercises">9.12</div>
       <div class="exercises_fast">9.18--9.19</div>
     </div>

@@ -1,4 +1,4 @@
----
+---cson
 layout: 'deck_units' 
 title: "There Is Exactly One"
 tags: ['translation']
@@ -9,6 +9,45 @@ duration: 5
 book: []
 exercises: ['14.10--14.12, *14.13']
 exercises_fast: ['11.10, 11.13', '14.2']
+exNormal : [
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is at least one survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/Ayesha is the one and only survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/This is one and only one survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one female survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one survivor and she is female'
+  
+  '/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  '/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)'
+  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  
+  '/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/counter/from/exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/proof/from/exists x all y (Zip(y) <-> x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/proof/from/exists x Zip(x)|not exists x exists y (Zip(x) and Zip(y) and not x=y)/to/exists x all y (Zip(y) <-> x=y)'
+]
+exFast : [
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is at least one survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/Ayesha is the one and only survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/This is one and only one survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one female survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one survivor and she is female'
+  
+  '/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  '/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)'
+  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  
+  '/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/counter/from/exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/proof/from/exists x all y (Zip(y) <-> x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/proof/from/exists x Zip(x)|not exists x exists y (Zip(x) and Zip(y) and not x=y)/to/exists x all y (Zip(y) <-> x=y)'
+]
+
 ---
 
 include ../../../fragments/unit_mixins

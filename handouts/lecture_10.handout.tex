@@ -52,8 +52,6 @@
 
 %--------------- 
 %--- start paste
-
-
 \def \ititle {Logic I}
  
 \def \isubtitle {Lecture 10}
@@ -89,6 +87,16 @@ How do the rules of proof for → fix its truth table?
 \end{center}
  
  
+\section{Not If}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/not_if.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/not_if_tt.png}
+\end{center}
+ 
+ 
 \section{Fubar Rules}
  
 \emph{Reading:} §8.3
@@ -120,7 +128,44 @@ Q2. What would be wrong with having ∧Fubar in any system of proof?
 \includegraphics[scale=0.3]{img/rule_biconditional_intro.png}
 \end{center}
  
- \columnbreak
+ 
+\section{Translation with Quantifiers}
+ 
+\emph{Reading:} §9.5, §9.6
+ 
+\begin{minipage}{\columnwidth}
+ 
+All discordians weep:
+ 
+∀x( Dscrdn(x) → Wps(x) )
+ 
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+All \textbf{quadrumanous} discordians weep:
+ 
+∀x( ( \textbf{Quadr(x) ∧} Dscrdn(x) ) → Wps(x) )
+ 
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+All quadrumanous discordians weep \textbf{and wail}:
+ 
+∀x( ( Quadr(x) ∧ Dscrdn(x) ) → ( Wps(x) \textbf{ ∧ Wls(x)} ) )
+ 
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+All quadrumanous discordians weep and wail \textbf{except Gillian Deleude}:
+ 
+∀x( ( Quadr(x) ∧ Dscrdn(x) \textbf{∧ ¬(x=a)} ) → ( Wps(x) ∧ Wls(x) ) )
+ 
+\end{minipage}
+ 
+ 
  
 \section{∃Intro}
  
@@ -152,11 +197,6 @@ We give the meaning of ∃ by specifying what it takes for a sentence containing
  
  
  
-\section{Quantifier Equivalences: \\ ¬∀x Created(x) $\leftmodels\models$ ∃x ¬Created(x)}
- 
-\emph{Reading:} §10.1, §10.3, §10.4
- 
- 
 \section{There Does Not Exist}
  
 Something is not dead:
@@ -181,34 +221,12 @@ Not everything is broken:
 \begin{center}
 \includegraphics[scale=0.3]{img/unit_605_prf2.png}
 \end{center}
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_605_counterexample.png}
-\end{center} 
  
  
+\section{Quantifier Equivalences: ¬∀x Created(x) $\leftmodels\models$ ∃x ¬Created(x)}
  
-\vfill
-\begin{minipage}{\columnwidth}
-\section{Exercises}
-These exercises will be discussed in seminars the week after this lecture.
-The numbers below refer to the numbered exercises in the course textbook, e.g.\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}. Exercises marked `*' are optional.
+\emph{Reading:} §10.1, §10.3, §10.4
  
-\begin{quote}
-8.17-–8.19, *8.20–-8.23
- 
-9.4–-9.5, 9.8–-9.9
- 
-7.1--7.6
- 
-8.1 (yes/no answers are ok)
- 
-9.12
- 
-\end{quote}
-\end{minipage}
-
-
-
 
 %--- end paste
 %--------------- 

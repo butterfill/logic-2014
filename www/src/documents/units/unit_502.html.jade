@@ -10,7 +10,31 @@ book: ['9.2','9.3','9.5']
 exercises: []
 exercises_fast: []
 sequence: 460
+exNormal:[
+  '/ex/create/qq/Happy(a)|Sad(b)|all x (Sad(x) arrow Above(x,a))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Sad1|Crying1/sentence/all x (Sad(x) arrow Crying(x))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Happy1|Crying1/sentence/all x (Happy(x) arrow not Crying(x))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Happy1|Vegetarian1/sentence/Everything happy is vegetarian'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Psychadelic1|Vegetarian1/sentence/Everything vegetarian is psychadelic'
+  
+  '/ex/create/qq/Sad(a)|Tall(a)|Happy(b)|Sad(c)|not a=c|all x ((Sad(x) and Tall(x)) arrow Above(x,b))'
+  '/ex/create/qq/Sad(a)|Tall(a)|Happy(b)|Sad(c)|not a=c|all x (Sad(x) arrow (Above(x,b) and Tall(x)))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Psychadelic1|Vegetarian1|Loves2/sentence/All psychadelic vegetarians love Ayesha'
+  
+  '/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))'
+  '/ex/create/from/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))/to/all x (Crying(x) arrow Tall(x))'
+]
 exFast:[
+  '/ex/create/qq/Happy(a)|Sad(b)|all x (Sad(x) arrow Above(x,a))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Sad1|Crying1/sentence/all x (Sad(x) arrow Crying(x))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Happy1|Crying1/sentence/all x (Happy(x) arrow not Crying(x))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Happy1|Vegetarian1/sentence/Everything happy is vegetarian'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Psychadelic1|Vegetarian1/sentence/Everything vegetarian is psychadelic'
+  
+  '/ex/create/qq/Sad(a)|Tall(a)|Happy(b)|Sad(c)|not a=c|all x ((Sad(x) and Tall(x)) arrow Above(x,b))'
+  '/ex/create/qq/Sad(a)|Tall(a)|Happy(b)|Sad(c)|not a=c|all x (Sad(x) arrow (Above(x,b) and Tall(x)))'
+  '/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Psychadelic1|Vegetarian1|Loves2/sentence/All psychadelic vegetarians love Ayesha'
+  
   '/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))'
   '/ex/create/from/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))/to/all x (Crying(x) arrow Tall(x))'
 ]

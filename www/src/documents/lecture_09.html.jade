@@ -14,6 +14,7 @@ include ../../fragments/unit_mixins
 +title_slide({document:document, images:images})
 
 
+
 //- unit: scope
 
 //- introduce it with discussion of a mistake about ¬Intro (rules of proof apply only to connective with widest scope)
@@ -26,27 +27,53 @@ include ../../fragments/unit_mixins
 //- unit: scope and negation
 +insert_unit({unit:'320', title_slide:true, images:images})
 
++slide_middle
+  p.center No lectures or seminars in reading week (Week 6).
+
++slide_middle
+  p.center.huge-glow office hours
+  
+  .container_12
+    .grid_6
+      p.em-above Tuesdays:
+      p 16-17 in S2.40 (Barney)
+
+      p.em-above Wednesdays:
+      p 11-12 in S2.40 (Hemdat)
+      p 12-13 in S2.40 (Hemdat)
+      p 13-14 in S2.40 (Alfonso)
+      p 15-16 in S2.40 (Dino)
+      p 16-17 in H3.45 (Barney*)
+
+    .grid_6
+      p.em-above Thursdays:
+      p 10-11 in S2.33 (Joe)
+      p 12-13 in S2.33 (Joe)
+      p 13-14 in S2.40 (Barney)
+      p 15-16 in S2.40 (Dino)
+
+
 
 //- unit: Proof Example: ¬(P∨Q) therefore ¬P∧¬Q
 +insert_unit({unit:'821', title_slide:true, images:images})
 
 
 
+//- postsecret quiz: state rules of proof
+- each d in getCollection("documents").findAll({url:'/quizes/postsecret_03.html'},[{year:-1,sort_order:1}]).toJSON()
+  +render_unit(d)
+
 
 
 //- I met a philosopher
 +insert_unit({unit:'501', title_slide:true, images:images})
 
-//- unit: translating sentences with quantifiers
-+insert_unit({unit:'507', title_slide:true, images:images})
-
 //- unit: scope and quantifiers
 +insert_unit({unit:'710', title_slide:true, images:images})
 
++slide_middle
+  p.center No lectures or seminars in reading week (Week 6).
 
-//- postsecret quiz: state rules of proof
-- each d in getCollection("documents").findAll({url:'/quizes/postsecret_03.html'},[{year:-1,sort_order:1}]).toJSON()
-  +render_unit(d)
 
 //- unit: proof example: ¬P∨R therefore P→R
 +insert_unit({unit:'820', title_slide:true, images:images})

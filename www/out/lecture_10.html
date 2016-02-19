@@ -138,6 +138,417 @@ var inject = function(){
 <div class="exercises">8.17-–8.19, *8.20–-8.23</div>
 <div class="exercises">9.4–-9.5, 9.8–-9.9</div>
 <div class="handout">&nbsp;</div>
+<div class="handout">\section{∃Intro}</div>
+<div class="handout">\emph{Reading:}  §13.2</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{∃Intro}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_801/slide-165.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Although this is about the rule ∃Intro, I want to start by revising universal elimination.</div>
+        <div class="notes">Consider this argument.  Actually it's not true that puffins have yellow beaks.</div>
+        <div data-src="img/rule_disjunction_intro.png" class="handout img"></div>
+        <div data-src="img/unit_801_proof.png" class="handout img"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-166.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Well, there might be a bit of yellow, </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-167.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">but that's not what I'd call a yellow beak.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-168.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Anyway, back to the argument.  How can we formalise it?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-169.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">One approach would be to use sentence letters.  Nothing wrong with this</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-170.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">except that it doesn't capture the structure in virtue of which the argument is valid.  There's a counterexample to this form.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-171.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here it is.  So how can we do better?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-172.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Start with the conclusion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-173.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We need a name and a predicate.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-174.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">These allow us to write the conclusion as 'YelBk(a)'.  Easy, no?  (It's supposed to be easy, we're just revising stuff.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-175.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What about the second premise?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-176.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">For this we need another predicate.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-177.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And then we can write this in awFOL as 'Puf(a)', Ayesha is a Puffin</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-178.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Finally, we have to formalise the first premise.  How?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-179.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Well you know that, for universal sentences, we're always going to work from this example about all Fs are Gs.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-180.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So, well you know how it goes by now I hope.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-181.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now we have the argument translated into awFOL in such a way that the translation is logically valid too.  Can we prove it?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-182.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Yes, we can.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-183.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">To this end, we need the rule we looked at at the end of last lecture, universal elim.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-184.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This allows us to infer that what is true of all things is true of Ayehsa in particular.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-185.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">In English, If she's a puffin then she has a yellow beak.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-186.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Of course we have to cite the rule we're using and the line we're applying it to.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-187.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So you remember how universal-elim goes.  We start with a universally quantified sentence ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-188.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... universal something ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-189.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... and we add the something to our proof, replacing the variable with whatever name we like.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-190.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Meraviglioso</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-191.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now we have just what we need to get to the conclusion.  But what's the rule and what lines should we cite?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-192.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">It's arrow-elim and the lines we should cite are 2 and 3.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-193.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So far so good, ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-194.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">now for existential elim</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-195.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here's some English</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-196.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">It's clear, I suppose, how we translate the premise.  But what about the conclusion?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-197.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Well we're talking about something so we're going to need the existential quantifier.</div>
+        <div class="notes">But how can we prove this argument?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-198.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Well, that's just what the rule existential-intro is made for.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-199.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">You have a statement about some named person, in this case about Ayesha.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-200.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">You remove the name and replace it with a variable (here I've used x as the variable, 
+but you can use y or z or any variable you like), 
+and add an existential quantifier to the front.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-201.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Of course we have to cite the rule and the line referenced, as always.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-202.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And that's it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-203.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now the premise of this argument is the conclusion of the argument we proved just a moment ago.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-204.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So we can join the two arguments together to make one big one.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-205.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Look, these premises allow us to prove this conclusion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_801/slide-206.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I know this maybe isn't the most exciting thing ever.
+I'm just showing you so you can see how to get from universal to existential.
+In case you ever need to.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_700" class="slide"><img src="/img/bkg/sunclouds/02.jpg" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">What does ‘→’ mean?</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
 <div class="handout">\section{What does ‘→’ mean?}</div>
 <div class="handout">\emph{Reading:}  §7.1</div>
 <div class="notes notes-header-tex">&nbsp;</div>
@@ -376,7 +787,7 @@ var inject = function(){
 <div class="exercises_fast">7.2</div>
 <div class="exercises_fast">7.5</div>
 <div class="exercises_fast">7.6</div>
-<section id="unit_604" class="slide"><img src="/img/bkg/sunclouds/02.jpg" class="bkg"/>
+<section id="unit_604" class="slide"><img src="/img/bkg/sunclouds/03.jpg" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">
@@ -484,125 +895,6 @@ var inject = function(){
     <div class="notes">Only the first negated sentence guarantees that I am alive. Once again, where negation goes is a matter of life and death.</div>
   </div>
 </div>
-<section id="unit_340" class="slide"><img src="/img/bkg/sunclouds/03.jpg" class="bkg"/>
-  <div class="spacer">&nbsp;</div>
-  <div style="" class="title-block">
-    <div class="title-container">
-      <h2 class="title1">Fubar Rules</h2>
-    </div>
-  </div>
-</section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{Fubar Rules}</div>
-<div class="handout">\emph{Reading:}  §8.3</div>
-<div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{Fubar Rules}</div>
-
-
-
-<!---->
-<!-- short form:-->
-<!--  remove_class('.blur')-->
-<!-- long forms:-->
-<!--  remove_class('.elements', 'blur')-->
-<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
-<!---->
-<section class="slide"><img src="/img/unit_340/slide-191.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-        <div class="handout">\begin{minipage}{\columnwidth}</div>
-        <div class="handout">Consider this made-up rule:</div>
-        <div data-src="img/fubar_rule.png" class="handout img"></div>
-        <div class="handout">  Q1. What would be wrong with adding ∧Fubar to Fitch?</div>
-        <div class="handout">  Q2. What would be wrong with having ∧Fubar in any system of proof?</div>
-        <div class="handout">\end{minipage}</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-192.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-193.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-194.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-195.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-196.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-197.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-198.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-199.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_340/slide-200.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes"></div>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="slide">
   <div class="container_12">
     <div class="grid_12 ">
@@ -1020,6 +1312,139 @@ var inject = function(){
     </div>
   </div>
 </div><a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+<section id="unit_340" class="slide"><img src="/img/bkg/sunclouds/05.jpg" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Fubar Rules</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Fubar Rules}</div>
+<div class="handout">\emph{Reading:}  §8.3</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Fubar Rules}</div>
+
+
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_340/slide-191.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">Consider this made-up rule:</div>
+        <div data-src="img/fubar_rule.png" class="handout img"></div>
+        <div class="handout">  Q1. What would be wrong with adding ∧Fubar to Fitch?</div>
+        <div class="handout">  Q2. What would be wrong with having ∧Fubar in any system of proof?</div>
+        <div class="handout">\end{minipage}</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-192.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-193.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-194.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-195.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-196.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-197.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-198.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-199.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_340/slide-200.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center huge-glow">logic support</p>
+          <p class="em-above">S2.81</p>
+          <p class="em-above">Mondays, 15th and 22nd February 2016</p>
+          <p class="em-above">19:00-20:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="slide">
   <div class="container_12">
     <div class="grid_12 ">
@@ -1031,423 +1456,14 @@ var inject = function(){
     </div>
   </div>
 </section>
+
+
 <section class="slide">
   <div class="container_12">
     <div class="grid_12 ">
       <div class="words">
         <div class="middle">
-          <p class="center">feedback</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="unit_801" class="slide"><img src="/img/bkg/sunclouds/05.jpg" class="bkg"/>
-  <div class="spacer">&nbsp;</div>
-  <div style="" class="title-block">
-    <div class="title-container">
-      <h2 class="title1">∃Intro</h2>
-    </div>
-  </div>
-</section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{∃Intro}</div>
-<div class="handout">\emph{Reading:}  §13.2</div>
-<div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{∃Intro}</div>
-
-
-
-<!---->
-<!-- short form:-->
-<!--  remove_class('.blur')-->
-<!-- long forms:-->
-<!--  remove_class('.elements', 'blur')-->
-<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
-<!---->
-<section class="slide"><img src="/img/unit_801/slide-165.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Although this is about the rule ∃Intro, I want to start by revising universal elimination.</div>
-        <div class="notes">Consider this argument.  Actually it's not true that puffins have yellow beaks.</div>
-        <div data-src="img/rule_disjunction_intro.png" class="handout img"></div>
-        <div data-src="img/unit_801_proof.png" class="handout img"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-166.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Well, there might be a bit of yellow, </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-167.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">but that's not what I'd call a yellow beak.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-168.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Anyway, back to the argument.  How can we formalise it?</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-169.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">One approach would be to use sentence letters.  Nothing wrong with this</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-170.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">except that it doesn't capture the structure in virtue of which the argument is valid.  There's a counterexample to this form.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-171.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Here it is.  So how can we do better?</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-172.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Start with the conclusion.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-173.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">We need a name and a predicate.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-174.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">These allow us to write the conclusion as 'YelBk(a)'.  Easy, no?  (It's supposed to be easy, we're just revising stuff.)</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-175.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">What about the second premise?</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-176.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">For this we need another predicate.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-177.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">And then we can write this in awFOL as 'Puf(a)', Ayesha is a Puffin</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-178.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Finally, we have to formalise the first premise.  How?</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-179.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Well you know that, for universal sentences, we're always going to work from this example about all Fs are Gs.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-180.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">So, well you know how it goes by now I hope.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-181.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Now we have the argument translated into awFOL in such a way that the translation is logically valid too.  Can we prove it?</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-182.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Yes, we can.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-183.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">To this end, we need the rule we looked at at the end of last lecture, universal elim.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-184.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">This allows us to infer that what is true of all things is true of Ayehsa in particular.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-185.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">In English, If she's a puffin then she has a yellow beak.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-186.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Of course we have to cite the rule we're using and the line we're applying it to.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-187.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">So you remember how universal-elim goes.  We start with a universally quantified sentence ...</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-188.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">... universal something ...</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-189.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">... and we add the something to our proof, replacing the variable with whatever name we like.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-190.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Meraviglioso</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-191.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Now we have just what we need to get to the conclusion.  But what's the rule and what lines should we cite?</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-192.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">It's arrow-elim and the lines we should cite are 2 and 3.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-193.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">So far so good, ...</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-194.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">now for existential elim</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-195.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Here's some English</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-196.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">It's clear, I suppose, how we translate the premise.  But what about the conclusion?</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-197.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Well we're talking about something so we're going to need the existential quantifier.</div>
-        <div class="notes">But how can we prove this argument?</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-198.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Well, that's just what the rule existential-intro is made for.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-199.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">You have a statement about some named person, in this case about Ayesha.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-200.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">You remove the name and replace it with a variable (here I've used x as the variable, 
-but you can use y or z or any variable you like), 
-and add an existential quantifier to the front.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-201.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Of course we have to cite the rule and the line referenced, as always.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-202.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">And that's it.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-203.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Now the premise of this argument is the conclusion of the argument we proved just a moment ago.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-204.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">So we can join the two arguments together to make one big one.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-205.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">Look, these premises allow us to prove this conclusion.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="slide"><img src="/img/unit_801/slide-206.jpeg" class="bkg"/>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_12">
-        <div class="notes">I know this maybe isn't the most exciting thing ever.
-I'm just showing you so you can see how to get from universal to existential.
-In case you ever need to.
+          <p class="center">No lectures or seminars in reading week (Week 6).</p>
         </div>
       </div>
     </div>
@@ -1707,222 +1723,7 @@ In case you ever need to.
     </div>
   </div>
 </section>
-<section class="slide">
-  <div class="container_12">
-    <div class="grid_12 ">
-      <div class="words">
-        <div class="middle">
-          <p class="center">No lectures or seminars in reading week (Week 6).</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="unit_605" class="slide"><img src="/img/bkg/sunclouds/02.jpg" class="bkg"/>
-  <div class="spacer">&nbsp;</div>
-  <div style="" class="title-block">
-    <div class="title-container">
-      <h2 class="title1">There Does Not Exist</h2>
-    </div>
-  </div>
-</section>
-<div class="handout">&nbsp;</div>
-<div class="handout">\section{There Does Not Exist}</div>
-<div class="notes notes-header-tex">&nbsp;</div>
-<div class="notes notes-header-tex">\section{There Does Not Exist}</div>
-<!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
-<!-- create title slide for a lecture-->
-<!-- param p contains document and images (an array of images to use)-->
-<!-- param p contains p.unit and p.images (an array of images)-->
-
-<!-- see also +clip to modify the clip as an animation-->
-<!-- ------------>
-<!-- draw things-->
-<!-- ------------>
-<div class="slide">
-  <div class="handout">Something is not dead:</div>
-  <div class="handout">\hspace{3mm} ∃x ¬Dead(x)</div>
-  <div class="handout">Nothing is dead:</div>
-  <div class="handout">\hspace{3mm} ¬∃x Dead(x)</div>
-  <div class="handout">Everything is not broken:</div>
-  <div class="handout">\hspace{3mm}   ∀x ¬Broken(x)</div>
-  <div class="handout">Not everything is broken:</div>
-  <div class="handout">\hspace{3mm}   ¬∀x Broken(x)</div>
-  <div data-src="img/unit_605_prf1.png" class="handout img"></div>
-  <div data-src="img/unit_605_prf2.png" class="handout img"></div>
-  <div data-src="img/unit_605_counterexample.png" class="handout img"></div>
-  <div class="words">
-    <div class="container_12">
-      <div class="grid_6 left-half">
-        <p class="hidelater">Something is dead.</p>
-        <p class="hidelater indent slide nodim">∃x Dead(x)</p>
-        <div class="slide nodim">
-          <p class="hidelater em-above">Something is not dead.</p>
-          <p class="indent side translation-with-negation"><span>∃x  </span><span class="negation">¬</span><span>Dead(x)</span></p>
-        </div>
-        <div class="slide nodim">
-          <p class="hidelater em-above">Nothing is dead.</p>
-          <p class="indent slide translation-with-negation"><span class="negation">¬</span><span>∃x  </span><span>Dead(x)</span></p>
-        </div>
-        <div data-what=".left-half .negation" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div>
-        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-        <div data-what=".left-half" class="slide anim-continue anim-fade"></div>
-        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-        <div class="step2 hide em-above">
-          <table class="fitch-proof">
-            <tr class="premise row-1">
-              <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
-              <td>1.</td>
-              <td>
-                <p class="sentence"></p>
-              </td>
-              <td></td>
-            </tr>
-            <tr class="line row-2">
-              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
-              <td>2.</td>
-              <td><span class="sentence">a=a</span></td>
-              <td>=Intro
-              </td>
-            </tr>
-            <tr class="line row-3">
-              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
-              <td>3.</td>
-              <td><span class="sentence">∃x (x=x)</span></td>
-              <td>∃Intro: <span class="citations"><span class="citation-1">2</span></span>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <div class="grid_6 slide right-half">
-        <div class="old-right-half">
-          <p class="hidelater nodim">Everything is broken.</p>
-          <p class="hidelater indent slide nodim"><span>∀x </span><span>Broken(x)</span></p>
-          <p class="hidelater em-above slide nodim">Everything is not broken.</p>
-          <p class="indent slide nodim translation-with-negation"><span>∀x </span><span class="negation">¬</span><span>Broken(x)</span></p>
-          <p class="hidelater em-above slide nodim">Not everything is broken.</p>
-          <p class="indent slide nodim translation-with-negation"><span class="negation">¬</span><span>∀x </span><span>Broken(x)</span></p>
-        </div>
-        <div data-what=".right-half .negation" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div>
-        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-        <div data-what=".left-half" class="slide anim-continue anim-show"></div>
-        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-        <div data-what=".hidelater" class="slide anim-continue anim-fade"></div>
-        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-        <div data-what=".step2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
-        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-      </div>
-    </div>
-    <div class="clear"></div>
-    <div data-what=".hidelater" data-dur="1000" class="slide anim-continue anim-collapse"></div>
-    <div data-what=".step2" data-dur="1000" class="slide anim-continue anim-collapse"></div>
-    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-    <div class="container_12">
-      <grid_12>
-        <div class="slide em-above">
-          <div class="proof2u605">
-            <table class="fitch-proof">
-              <tr class="premise row-1">
-                <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
-                <td>1.</td>
-                <td>
-                  <p class="sentence">¬∃x Dead(x)</p>
-                </td>
-                <td></td>
-              </tr>
-              <tr>
-                <td> </td>
-                <td colspan="3">
-                  <table class="fitch-proof">
-                    <tr class="premise row-2">
-                      <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
-                      <td>2.</td>
-                      <td>
-                        <p class="sentence">Dead(a)</p>
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr class="line row-3">
-                      <td class="premise"><span class="highlight-hook">&#8203;</span></td>
-                      <td>3.</td>
-                      <td><span class="sentence">∃x Dead(x)</span></td>
-                      <td>∃Intro: <span class="citations"><span class="citation-1">2</span></span>
-                      </td>
-                    </tr>
-                    <tr class="line row-4">
-                      <td class="premise"><span class="highlight-hook">&#8203;</span></td>
-                      <td>4.</td>
-                      <td><span class="sentence">⊥</span></td>
-                      <td>⊥Intro: <span class="citations"><span class="citation-1">1,</span><span class="citation-2">3</span></span>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr class="line row-5">
-                <td class="premise"><span class="highlight-hook">&#8203;</span></td>
-                <td>5.</td>
-                <td><span class="sentence">¬Dead(a)</span></td>
-                <td>¬Intro: <span class="citations"><span class="citation-1">2-4</span></span>
-                </td>
-              </tr>
-              <tr class="line row-6">
-                <td class="premise"><span class="highlight-hook">&#8203;</span></td>
-                <td>6.</td>
-                <td><span class="sentence">∃x ¬Dead(x)</span></td>
-                <td>∃Intro: <span class="citations"><span class="citation-1">5</span></span>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div data-what=".proof2u605" data-dur="1000" class="slide anim-continue anim-collapse"></div>
-          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-        </div>
-        <div class="slide em-above nodim">
-          <div class="proof3u605">
-            <table class="fitch-proof">
-              <tr class="premise row-1">
-                <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
-                <td>1.</td>
-                <td>
-                  <p class="sentence">∃x ¬Dead(x)</p>
-                </td>
-                <td></td>
-              </tr>
-              <tr class="line row-2">
-                <td class="premise"><span class="highlight-hook">&#8203;</span></td>
-                <td>2.</td>
-                <td><span class="sentence">¬∃x Dead(x)</span></td>
-                <td>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="slide em-above nodim">
-          <div style="width:300px;" class="counterexample">
-            <p>Counterexample: </p>
-            <p class="indent">Domain: {Ayesha,Beatrice}</p>
-            <p class="indent">Dead : {Beatrice}</p>
-            <p class="indent">a : Ayesha ; b : Beatrice</p>
-          </div>
-        </div>
-        <div class="slide em-above nodim">
-          <div class="indent">
-            <p class="nodim">... Dead(b) is true<span class="slide nodim">; so the conclusion, ¬∃x Dead(x), is false</span></p>
-            <p class="slide nodim">... and ¬Dead(a) is true<span class="slide nodim">; so the premise, ∃x ¬Dead(x), is true</span></p>
-          </div>
-          <div data-what=" .counterexample" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div>
-          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
-        </div>
-      </grid_12>
-    </div>
-  </div>
-</div><a href="." title="Permalink to this slide" class="deck-permalink">#</a>
-<div class="exercises">9.12</div>
-<div class="exercises_fast">9.18--9.19</div>
-<section id="unit_764" class="slide"><img src="/img/bkg/sunclouds/03.jpg" class="bkg"/>
+<section id="unit_764" class="slide"><img src="/img/bkg/sunclouds/02.jpg" class="bkg"/>
   <div class="spacer">&nbsp;</div>
   <div style="" class="title-block">
     <div class="title-container">

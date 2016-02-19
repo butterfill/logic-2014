@@ -1,7 +1,12 @@
 ---cson
 layout: 'deck_units' 
 title: "Relations: Transitivity"
-description: "Explains what it is for a relation to be transitive.  Describes how to show, using counterexamples, that the relation NotAdjacent (which holds between two objects just when the first is not adjacent to the second) is not transitive."
+description: """
+  Explains what it is for a relation to be transitive.  Describes how 
+  to show, using counterexamples, that the relation NotAdjacent (which holds between two objects 
+  just when the first is not adjacent to the second) is not transitive.
+  Also describes how to express the counterexample formally.
+  """
 tags: ['quantification','relations','counterexamples']
 depends: ['740','742']
 source: ['ph126 fastlecture 05']
@@ -12,22 +17,27 @@ exercises_fast: []
 sequence: 730
 exNormal : [
   '/ex/TorF/qq/Adjacent is a transitive relation|LeftOf is a transitive relation|TallerThan is a transitive relation|DifferentShape is a transitive relation'
-  '/ex/qq/Adjacent(a,b)|Adjacent(b,c)|not Adjacent(a,c)'
+  '/ex/create/qq/Adjacent(a,b)|Adjacent(b,c)|not Adjacent(a,c)'
   '/ex/create/from/Adjacent(a,b)|Adjacent(b,c)/to/Adjacent(a,c)'
   '/ex/create/from/Adjacent(a,b)|Adjacent(b,c)/to/not Adjacent(a,c)'
   '/ex/create/orValid/from/NotAdjacent(a,b)|NotAdjacent(b,c)/to/NotAdjacent(a,c)'
+  '/ex/counter/orValid/from/NotAdjacent(a,b)|NotAdjacent(b,c)/to/NotAdjacent(a,c)'
   '/ex/create/qq/DifferentShape(a,b)|DifferentShape(b,c)|DifferentShape(a,c)'
   '/ex/create/from/DifferentShape(a,b)|DifferentShape(b,c)/to/DifferentShape(a,c)'
   '/ex/create/from/DifferentShape(a,b)|DifferentShape(b,c)/to/not DifferentShape(a,c)'
+  '/ex/counter/from/DifferentShape(a,b)|DifferentShape(b,c)/to/not DifferentShape(a,c)'
 ]
 exFast : [
   '/ex/TorF/qq/Adjacent is a transitive relation|LeftOf is a transitive relation|TallerThan is a transitive relation|DifferentShape is a transitive relation'
-  '/ex/qq/Adjacent(a,b)|Adjacent(b,c)|not Adjacent(a,c)'
+  '/ex/create/qq/Adjacent(a,b)|Adjacent(b,c)|not Adjacent(a,c)'
   '/ex/create/orValid/from/Adjacent(a,b)|Adjacent(b,c)/to/Adjacent(a,c)'
   '/ex/create/orValid/from/Adjacent(a,b)|Adjacent(b,c)/to/not Adjacent(a,c)'
+  '/ex/create/orValid/from/NotAdjacent(a,b)|NotAdjacent(b,c)/to/NotAdjacent(a,c)'
+  '/ex/counter/orValid/from/NotAdjacent(a,b)|NotAdjacent(b,c)/to/NotAdjacent(a,c)'
   '/ex/create/orValid/from/LeftOf(a,b)|LeftOf(b,c)/to/LeftOf(a,c)'
   '/ex/create/orValid/from/DifferentShape(a,b)|DifferentShape(b,c)/to/DifferentShape(a,c)'
   '/ex/create/orValid/from/DifferentShape(a,b)|DifferentShape(b,c)/to/not DifferentShape(a,c)'
+  '/ex/counter/from/DifferentShape(a,b)|DifferentShape(b,c)/to/not DifferentShape(a,c)'
 ]
 ---
 
@@ -85,3 +95,73 @@ include ../../../fragments/unit_mixins
 +slide({bkg:'unit_125/slide-185.jpeg'})
   .notes 
 
++slide_middle
+  p.center express the counterexample formally
+
++slide({bkg:'unit_125/world1.jpeg'})
+  .container_12
+    .grid_7
+      p &nbsp;
+    .grid_5
+      p Domain
+      p.step2.hide.indent {0, 1, 2}
+      p.em-above Names
+      p.step3.hide.indent a : 0
+      p.step4.hide.indent b : 1
+      p.step5.hide.indent c : 2
+      p.em-above
+        span.predicates Predicates
+      p.indent.step6.hide NotAdjacent : {
+      p.indent.hide <0,1>, <1,2>, 
+      p.indent.hide <1,0>, <2,1> 
+      p.indent.step6.hide }
+  +show('.step2')
+  +show('.step3')
+  +show('.step4')
+  +show('.step5')
+  +invert('.predicates')
+  +show('.step6')
+      
++slide({bkg:'unit_125/world2.jpeg'})
+  .container_12
+    .grid_7
+      p &nbsp;
+    .grid_5
+      p Domain
+      p.indent {0, 1, 2}
+      p.em-above Names
+      p.indent a : 0
+      p.indent b : 1
+      p.indent c : 2
+      p.em-above Predicates
+      p.indent NotAdjacent : {
+      p.indent 
+        span.ab.hide <0,1>, 
+        span.bc.hide <1,2>, 
+      p.indent
+        span.ab.hide <1,0>, 
+        span.bc.hide <2,1>
+      p.indent }
+    +show('.ab')
+  
++slide({bkg:'unit_125/world3.jpeg'})
+  .container_12
+    .grid_7
+      p &nbsp;
+    .grid_5
+      p Domain
+      p.indent {0, 1, 2}
+      p.em-above Names
+      p.indent a : 0
+      p.indent b : 1
+      p.indent c : 2
+      p.em-above Predicates
+      p.indent NotAdjacent : {
+      p.indent 
+        span.ab <0,1>, 
+        span.bc.hide <1,2>, 
+      p.indent
+        span.ab <1,0>, 
+        span.bc.hide <2,1>
+      p.indent }
+    +show('.bc')
