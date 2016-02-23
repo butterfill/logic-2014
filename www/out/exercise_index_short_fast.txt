@@ -944,6 +944,33 @@
         },
         {
           "type": "unit",
+          "name": "Variables",
+          "slides": "http://logic-1.butterfill.com/units/unit_600.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/qq/‘Some x is a horse and x is dead’ is a correct English translation of ∃x(Horse(x) ∧ Dead(x))",
+            "/ex/TorF/qq/‘A horse is dead’ is a correct English translation of ∃x(Horse(x) ∧ Dead(x))",
+            "/ex/TorF/qq/‘All x’s are dead’ is a correct English translation of ∀x Dead(x)",
+            "/ex/TorF/qq/‘Everything is dead’ is a correct English translation of ∀x Dead(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Loving and Being Loved",
+          "slides": "http://logic-1.butterfill.com/units/unit_755.html",
+          "rawReading": [
+            "11.2",
+            "11.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/exists x exists y Loves(x,y)/to/exists y exists x Loves(x,y)",
+            "/ex/counter/orValid/from/exists x exists y Loves(x,y)/to/exists y exists x Loves(x,y)",
+            "/ex/proof/orInvalid/from/exists x all y Loves(x,y)/to/all y exists x Loves(x,y)",
+            "/ex/counter/orValid/from/exists x all y Loves(x,y)/to/all y exists x Loves(x,y)"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Quantifier Equivalences: ¬∀x Created(x) ⫤⊨ ∃x ¬Created(x)",
           "slides": "http://logic-1.butterfill.com/units/unit_764.html",
           "rawReading": [

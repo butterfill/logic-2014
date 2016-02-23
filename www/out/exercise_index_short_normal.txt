@@ -817,6 +817,20 @@
       "units": [
         {
           "type": "unit",
+          "name": "Watch Out, Here Come Multiple Quantifiers",
+          "slides": "http://logic-1.butterfill.com/units/unit_744.html",
+          "rawReading": [
+            "11.1"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Everything is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Something is broken",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/BelongsTo2-x-belongs-to-y|Broken1/sentence/All Ayesha’s things are broken",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/BelongsTo2-x-belongs-to-y|Broken1/sentence/Something of Ayesha’s is broken"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Something Is Above Something",
           "slides": "http://logic-1.butterfill.com/units/unit_740.html",
           "rawReading": [
@@ -1054,6 +1068,33 @@
             "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Ancestor2-x-is-y’s-ancestor/sentence/Everyone has an ancestor",
             "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-y’s-ancestor/sentence/Ayesha is an ancestor of everyone except herself.",
             "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-y’s-ancestor/sentence/Someone is an ancestor of everyone except herself."
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Variables",
+          "slides": "http://logic-1.butterfill.com/units/unit_600.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/qq/‘Some x is a horse and x is dead’ is a correct English translation of ∃x(Horse(x) ∧ Dead(x))",
+            "/ex/TorF/qq/‘A horse is dead’ is a correct English translation of ∃x(Horse(x) ∧ Dead(x))",
+            "/ex/TorF/qq/‘All x’s are dead’ is a correct English translation of ∀x Dead(x)",
+            "/ex/TorF/qq/‘Everything is dead’ is a correct English translation of ∀x Dead(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Loving and Being Loved",
+          "slides": "http://logic-1.butterfill.com/units/unit_755.html",
+          "rawReading": [
+            "11.2",
+            "11.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/exists x exists y Loves(x,y)/to/exists y exists x Loves(x,y)",
+            "/ex/counter/orValid/from/exists x exists y Loves(x,y)/to/exists y exists x Loves(x,y)",
+            "/ex/proof/orInvalid/from/exists x all y Loves(x,y)/to/all y exists x Loves(x,y)",
+            "/ex/counter/orValid/from/exists x all y Loves(x,y)/to/all y exists x Loves(x,y)"
           ]
         },
         {

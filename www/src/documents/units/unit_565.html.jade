@@ -7,8 +7,37 @@ depends: ['560']
 source: ['ph126 lecture 13']
 duration: 10
 book: ['11.4','11.5']
-exercises: []
-exercises_fast: []
+exNormal:[
+  '/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Everyone is crying'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Crying1/sentence/Everyone except Ayesha is crying'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Behind2-x-is-behind-y/sentence/Everyone except Ayesha is behind Ayesha'
+  '/ex/trans/domain/people/names/-/predicates/Behind2-x-is-behind-y/sentence/Someone is behind everyone else'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Loves2/sentence/all x (not a=x arrow Loves(x,a))'
+  '/ex/trans/domain/people/names/-/predicates/Loves2/sentence/exists y all x (not y=x arrow Loves(x,y))'
+  
+  '/ex/proof/orInvalid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)'
+  '/ex/counter/orValid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)'
+  '/ex/proof/orInvalid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)'
+  '/ex/counter/orValid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)'
+  '/ex/proof/orInvalid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)'
+  '/ex/counter/orValid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)'
+]
+exFast:[
+  '/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Everyone is crying'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Crying1/sentence/Everyone except Ayesha is crying'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Behind2-x-is-behind-y/sentence/Everyone except Ayesha is behind Ayesha'
+  '/ex/trans/domain/people/names/-/predicates/Behind2-x-is-behind-y/sentence/Someone is behind everyone else'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Loves2/sentence/all x (not a=x arrow Loves(x,a))'
+  '/ex/trans/domain/people/names/-/predicates/Loves2/sentence/exists y all x (not y=x arrow Loves(x,y))'
+  
+  '/ex/proof/orInvalid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)'
+  '/ex/counter/orValid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)'
+  '/ex/proof/orInvalid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)'
+  '/ex/counter/orValid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)'
+  '/ex/proof/orInvalid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)'
+  '/ex/counter/orValid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)'
+]
+
 ---
 
 

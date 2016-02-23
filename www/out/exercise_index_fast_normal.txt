@@ -901,6 +901,20 @@
         },
         {
           "type": "unit",
+          "name": "Quantifier Equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ∀x(¬Broken(x) → ¬Square(x))",
+          "slides": "http://logic-1.butterfill.com/units/unit_760.html",
+          "rawReading": [
+            "10.3"
+          ],
+          "rawExercises": [
+            "/ex/counter/orValid/from/all x (Square(x) arrow Broken(x))/to/all x (not Broken(x) arrow not Square(x))",
+            "/ex/proof/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Broken(x) arrow not Square(x))",
+            "/ex/counter/orValid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))",
+            "/ex/proof/orInvalid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "There Does Not Exist",
           "slides": "http://logic-1.butterfill.com/units/unit_605.html",
           "rawReading": [],
@@ -982,6 +996,100 @@
             "/ex/proof/from/A ↔ B/to/B arrow A",
             "/ex/proof/from/(not A or B)|(B arrow A)/to/A ↔ B"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Variables",
+          "slides": "http://logic-1.butterfill.com/units/unit_600.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/qq/‘Some x is a horse and x is dead’ is a correct English translation of ∃x(Horse(x) ∧ Dead(x))",
+            "/ex/TorF/qq/‘A horse is dead’ is a correct English translation of ∃x(Horse(x) ∧ Dead(x))",
+            "/ex/TorF/qq/‘All x’s are dead’ is a correct English translation of ∀x Dead(x)",
+            "/ex/TorF/qq/‘Everything is dead’ is a correct English translation of ∀x Dead(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "More Dead Horse",
+          "slides": "http://logic-1.butterfill.com/units/unit_565.html",
+          "rawReading": [
+            "11.4",
+            "11.5"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Everyone is crying",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Crying1/sentence/Everyone except Ayesha is crying",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Behind2-x-is-behind-y/sentence/Everyone except Ayesha is behind Ayesha",
+            "/ex/trans/domain/people/names/-/predicates/Behind2-x-is-behind-y/sentence/Someone is behind everyone else",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Loves2/sentence/all x (not a=x arrow Loves(x,a))",
+            "/ex/trans/domain/people/names/-/predicates/Loves2/sentence/exists y all x (not y=x arrow Loves(x,y))",
+            "/ex/proof/orInvalid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
+            "/ex/counter/orValid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
+            "/ex/proof/orInvalid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
+            "/ex/counter/orValid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
+            "/ex/proof/orInvalid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)",
+            "/ex/counter/orValid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "∀Intro: An Incorrect Proof",
+          "slides": "http://logic-1.butterfill.com/units/unit_572.html",
+          "rawReading": [
+            "13.1",
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/all x Square(x) arrow all x Blue(x)/to/all x( Square(x) arrow Blue(x))",
+            "/ex/counter/orValid/from/all x Square(x) arrow all x Blue(x)/to/all x( Square(x) arrow Blue(x))",
+            "/ex/proof/orInvalid/from/all x( Square(x) arrow Blue(x))/to/all x Square(x) arrow all x Blue(x)",
+            "/ex/counter/orValid/from/all x( Square(x) arrow Blue(x))/to/all x Square(x) arrow all x Blue(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Substitution of Equivalents",
+          "slides": "http://logic-1.butterfill.com/units/unit_250.html",
+          "rawReading": [
+            "4.5",
+            "10.3"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/A or not (A and B)",
+            "/ex/tt/qq/A or (A arrow B)",
+            "/ex/tt/qq/A arrow not (not A and B)",
+            "/ex/counter/orValid/from/Ant(a) or Bee(a)/to/not (not Ant(a) and not Bee(a))",
+            "/ex/counter/orValid/from/exists x (Ant(a) or Bee(a))/to/exists x (not (not Ant(x) and not Bee(x)))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Truth-functional completeness",
+          "slides": "http://logic-1.butterfill.com/units/unit_430.html",
+          "rawReading": [
+            "7.4"
+          ],
+          "rawExercises": [
+            "/ex/q/Define truth-functionally complete set of connectives",
+            "/ex/TorF/qq/{¬,∧,∨} is truth-functionally complete|{¬,∧} is truth-functionally complete|{¬,∨} is truth-functionally complete|{∧} is truth-functionally complete|{¬,→} is truth-functionally complete|{→} is truth-functionally complete",
+            "/ex/q/Sketch a proof that {¬,∧,∨} is truth-functionally complete",
+            "/ex/q/Sketch a proof that {¬,→} is truth-functionally complete; you may assume that {¬,∧,∨} is truth-functionally complete"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Soundness and Completeness: Statement of the Theorems",
+          "slides": "http://logic-1.butterfill.com/units/unit_400.html",
+          "rawReading": [
+            "8.3",
+            "13.4"
+          ],
+          "rawExercises": [
+            "/ex/q/What does it mean to say that a system of proof is sound?",
+            "/ex/q/What does it mean to say that a system of proof is complete?",
+            "/ex/TorF/qq/If we added a new rule to Fitch which allows us to get φ from φ ∨ ψ, the resulting system of proof would be sound|If we added a new rule to Fitch which allows us to get φ from φ ∨ ψ, the resulting system of proof would be complete|If we added a new rule to Fitch which allows us to get ψ from ¬φ and φ ∨ ψ, the resulting system of proof would be sound"
+          ]
         }
       ]
     },
@@ -990,7 +1098,22 @@
       "name": "Fast Lecture 07",
       "slides": "http://logic-1.butterfill.com/fastlecture_07.html",
       "handout": "http://logic-1.butterfill.com/handouts/fastlecture_07.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Every Time I Go to the Dentist Someone Dies",
+          "slides": "http://logic-1.butterfill.com/units/unit_750.html",
+          "rawReading": [
+            "11.2"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/things/names/-/predicates/FairyGodmother1-x-is-a-fairy-godmother|Wand1-x-is-a-wand|BelongsTo2-x-belongs-to-y/sentence/Every fairy godmother has a wand",
+            "/ex/trans/domain/things/names/a=Pheoebe/predicates/Person1-x-is-a-person|Time1-x-is-a-time|DentistAt2-x-goes-to-the-dentist-at-time-y|DiesAt2-x-dies-at-y/sentence/Everytime Pheoebe goes to dentist, someone dies",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/Time1-x-is-a-time|BlinksAt2-x-blinks-at-time-y|Person1-x-is-a-person|KicksAt3-x-kicks-y-at-time-z/sentence/Everytime Ayesha blinks someone kicks her",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/Time1-x-is-a-time|BlinksAt2-x-blinks-at-time-y|Person1-x-is-a-person|Kick1-x-is-a-kick|AgentOf2-x-is-the-agent-of-y|TimeOf2-x-is-the-time-of-y|RecipientOf2-x-is-the-recipient-of-y/sentence/Everytime Ayesha blinks someone kicks her"
+          ]
+        }
+      ]
     }
   ]
 }

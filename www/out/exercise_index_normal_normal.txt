@@ -1160,6 +1160,20 @@
         },
         {
           "type": "unit",
+          "name": "Watch Out, Here Come Multiple Quantifiers",
+          "slides": "http://logic-1.butterfill.com/units/unit_744.html",
+          "rawReading": [
+            "11.1"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Everything is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Something is broken",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/BelongsTo2-x-belongs-to-y|Broken1/sentence/All Ayesha’s things are broken",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/BelongsTo2-x-belongs-to-y|Broken1/sentence/Something of Ayesha’s is broken"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Something Is Above Something",
           "slides": "http://logic-1.butterfill.com/units/unit_740.html",
           "rawReading": [
@@ -1210,6 +1224,22 @@
         },
         {
           "type": "unit",
+          "name": "Summary of Quantifier Rules So Far",
+          "slides": "http://logic-1.butterfill.com/units/unit_571.html",
+          "rawReading": [
+            "12.1",
+            "12.2",
+            "12.3",
+            "13.1",
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/all x Scary(x)/to/exists x Scary(x)",
+            "/ex/proof/from/exists x Loud(x)|all x (Loud(x) arrow Scary(x))/to/exists x Scary(x)"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "∀Intro",
           "slides": "http://logic-1.butterfill.com/units/unit_570.html",
           "rawReading": [
@@ -1224,6 +1254,21 @@
             "/ex/proof/from/∀x(Sad(x) → Tall(x))|∀x(Sad(x) → not Tall(x))/to/∀x not Sad(x)",
             "/ex/proof/from/not exists x (Happy(x) and not Blue(x))/to/∀x Happy(x) → ∀x Blue(x)"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "∀Intro: An Incorrect Proof",
+          "slides": "http://logic-1.butterfill.com/units/unit_572.html",
+          "rawReading": [
+            "13.1",
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/all x Square(x) arrow all x Blue(x)/to/all x( Square(x) arrow Blue(x))",
+            "/ex/counter/orValid/from/all x Square(x) arrow all x Blue(x)/to/all x( Square(x) arrow Blue(x))",
+            "/ex/proof/orInvalid/from/all x( Square(x) arrow Blue(x))/to/all x Square(x) arrow all x Blue(x)",
+            "/ex/counter/orValid/from/all x( Square(x) arrow Blue(x))/to/all x Square(x) arrow all x Blue(x)"
+          ]
         }
       ]
     },
@@ -1233,6 +1278,25 @@
       "slides": "http://logic-1.butterfill.com/lecture_12.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_12.handout.pdf",
       "units": [
+        {
+          "type": "unit",
+          "name": "Relations: Reflexive, Symmetric",
+          "slides": "http://logic-1.butterfill.com/units/unit_120.html",
+          "rawReading": [
+            "15.1",
+            "15.6"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/Adjacent is a reflexive relation|Identity is a reflexive relation|Above is a reflexive relation|SameShape is a reflexive relation|DifferentShape is a reflexive relation",
+            "/ex/TorF/qq/Adjacent is a symmetric relation|Identity is a symmetric relation|Above is a symmetric relation|SameShape is a symmetric relation|DifferentShape is a symmetric relation",
+            "/ex/create/orValid/from/-/to/all x Above(x,x)",
+            "/ex/create/orValid/from/-/to/all x SameShape(x,x)",
+            "/ex/create/orValid/from/-/to/all x all y (SameShape(x,y) arrow SameShape(y,x))",
+            "/ex/create/orValid/from/-/to/all x all y (Above(x,y) arrow Above(y,x))",
+            "/ex/counter/orValid/from/all x R(x,x)/to/all x all y (R(x,y) arrow R(y,x))",
+            "/ex/counter/orValid/from/all x all y (R(x,y) arrow R(y,x))/to/all x R(x,x)"
+          ]
+        },
         {
           "type": "unit",
           "name": "Relations: Transitivity",
@@ -1277,6 +1341,15 @@
         },
         {
           "type": "unit",
+          "name": "Negating Identity",
+          "slides": "http://logic-1.butterfill.com/units/unit_323.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/scope/qq/not a = b"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Expressing Counterexamples Formally",
           "slides": "http://logic-1.butterfill.com/units/unit_583.html",
           "rawReading": [
@@ -1296,6 +1369,64 @@
             "/ex/counter/from/all x all y (R(x,y) arrow R(y,x))/to/all x R(x,x)",
             "/ex/counter/qq/not all x all y (R(x,y) arrow R(y,x))",
             "/ex/counter/from/all x R(x,x)|all x all y all z ((R(x,y) and R(y,z)) arrow R(x,z))/to/all x all y (R(x,y) arrow R(y,x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Summary of Relations",
+          "slides": "http://logic-1.butterfill.com/units/unit_126.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/trans/domain/things/names/-/predicates/LivesNear2-x-lives-near-y/sentence/The relation that holds between two not necessarily distinct things when the first lives near the second is a reflexive relation",
+            "/ex/trans/domain/things/names/-/predicates/Loves2-x-loves-y/sentence/The relation that holds between two not necessarily distinct things when the first loves the second is not a reflexive relation",
+            "/ex/trans/domain/things/names/-/predicates/SiblingOf2-x-is-y’s-sibling/sentence/The relation of sibinghood is a symmetric relation",
+            "/ex/trans/domain/things/names/-/predicates/SisterOf2-x-is-y’s-sister/sentence/The relation *sister of* is not a symmetric relation",
+            "/ex/trans/domain/things/names/-/predicates/-/sentence/Identity is a symmetric relation",
+            "/ex/trans/domain/things/names/-/predicates/BelongsTo2-x-belongs-to-y/sentence/not all x all y (BelongsTo(x,y) arrow BelongsTo(y,x))",
+            "/ex/trans/domain/things/names/-/predicates/SiblingOf2-x-is-y’s-sibling/sentence/The relation of sibinghood is a transitive relation",
+            "/ex/trans/domain/things/names/-/predicates/SisterOf2-x-is-y’s-sister/sentence/not all x all y all z ((SisterOf(x,y) and SisterOf(y,z)) arrow SisterOf(x,z))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Proof Example: A∧B therefore ¬(¬A∨¬B).",
+          "slides": "http://logic-1.butterfill.com/units/unit_822.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/A and B/to/not (not A or not B)",
+            "/ex/proof/from/not (not A or not B)/to/A and B",
+            "/ex/proof/from/A or B/to/not (not A and not B)",
+            "/ex/proof/from/not (not A and not B)/to/A or B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Proof Example: P therefore ¬¬P.",
+          "slides": "http://logic-1.butterfill.com/units/unit_823.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/not not A/to/A",
+            "/ex/proof/from/A/to/not not A",
+            "/ex/proof/from/-/to/A arrow A",
+            "/ex/proof/from/-/to/A arrow not not A",
+            "/ex/proof/from/A arrow false/to/not A",
+            "/ex/proof/from/A arrow not A/to/not A",
+            "/ex/proof/from/not A/to/A arrow not A"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Proof Example: S∨(Q∧R) therefore S∨Q.",
+          "slides": "http://logic-1.butterfill.com/units/unit_824.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/from/A∨(B∧C)/to/A∨B",
+            "/ex/proof/from/A∨(B∧C)/to/A∨B",
+            "/ex/tt/from/A∧(B∨C)/to/(A∧B)∨(A∧C)",
+            "/ex/proof/from/A∧(B∨C)/to/(A∧B)∨(A∧C)",
+            "/ex/proof/from/(A∧B)∨(A∧C)/to/A∧(B∨C)",
+            "/ex/proof/from/A∨(B∧C)/to/(A∨B)∧(A∨C)",
+            "/ex/proof/from/(A∨B)∧(A∨C)/to/A∨(B∧C)"
           ]
         }
       ]
@@ -1357,6 +1488,20 @@
             "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-y’s-ancestor/sentence/Ayesha is an ancestor of everyone except herself.",
             "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-y’s-ancestor/sentence/Someone is an ancestor of everyone except herself."
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Truth-functional completeness",
+          "slides": "http://logic-1.butterfill.com/units/unit_430.html",
+          "rawReading": [
+            "7.4"
+          ],
+          "rawExercises": [
+            "/ex/q/Define truth-functionally complete set of connectives",
+            "/ex/TorF/qq/{¬,∧,∨} is truth-functionally complete|{¬,∧} is truth-functionally complete|{¬,∨} is truth-functionally complete|{∧} is truth-functionally complete|{¬,→} is truth-functionally complete|{→} is truth-functionally complete",
+            "/ex/q/Sketch a proof that {¬,∧,∨} is truth-functionally complete",
+            "/ex/q/Sketch a proof that {¬,→} is truth-functionally complete; you may assume that {¬,∧,∨} is truth-functionally complete"
+          ]
         }
       ]
     },
@@ -1391,6 +1536,44 @@
         },
         {
           "type": "unit",
+          "name": "Loving and Being Loved",
+          "slides": "http://logic-1.butterfill.com/units/unit_755.html",
+          "rawReading": [
+            "11.2",
+            "11.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/exists x exists y Loves(x,y)/to/exists y exists x Loves(x,y)",
+            "/ex/counter/orValid/from/exists x exists y Loves(x,y)/to/exists y exists x Loves(x,y)",
+            "/ex/proof/orInvalid/from/exists x all y Loves(x,y)/to/all y exists x Loves(x,y)",
+            "/ex/counter/orValid/from/exists x all y Loves(x,y)/to/all y exists x Loves(x,y)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "More Dead Horse",
+          "slides": "http://logic-1.butterfill.com/units/unit_565.html",
+          "rawReading": [
+            "11.4",
+            "11.5"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Everyone is crying",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Crying1/sentence/Everyone except Ayesha is crying",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Behind2-x-is-behind-y/sentence/Everyone except Ayesha is behind Ayesha",
+            "/ex/trans/domain/people/names/-/predicates/Behind2-x-is-behind-y/sentence/Someone is behind everyone else",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Loves2/sentence/all x (not a=x arrow Loves(x,a))",
+            "/ex/trans/domain/people/names/-/predicates/Loves2/sentence/exists y all x (not y=x arrow Loves(x,y))",
+            "/ex/proof/orInvalid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
+            "/ex/counter/orValid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
+            "/ex/proof/orInvalid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
+            "/ex/counter/orValid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
+            "/ex/proof/orInvalid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)",
+            "/ex/counter/orValid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Somebody Is Not Dead",
           "slides": "http://logic-1.butterfill.com/units/unit_607.html",
           "rawReading": [],
@@ -1400,6 +1583,20 @@
             "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Not everything red is broken",
             "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Everything red is not broken"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Quantifier Equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ∀x(¬Broken(x) → ¬Square(x))",
+          "slides": "http://logic-1.butterfill.com/units/unit_760.html",
+          "rawReading": [
+            "10.3"
+          ],
+          "rawExercises": [
+            "/ex/counter/orValid/from/all x (Square(x) arrow Broken(x))/to/all x (not Broken(x) arrow not Square(x))",
+            "/ex/proof/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Broken(x) arrow not Square(x))",
+            "/ex/counter/orValid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))",
+            "/ex/proof/orInvalid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))"
+          ]
         }
       ]
     },
@@ -1408,7 +1605,22 @@
       "name": "Lecture 15",
       "slides": "http://logic-1.butterfill.com/lecture_15.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_15.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Soundness and Completeness: Statement of the Theorems",
+          "slides": "http://logic-1.butterfill.com/units/unit_400.html",
+          "rawReading": [
+            "8.3",
+            "13.4"
+          ],
+          "rawExercises": [
+            "/ex/q/What does it mean to say that a system of proof is sound?",
+            "/ex/q/What does it mean to say that a system of proof is complete?",
+            "/ex/TorF/qq/If we added a new rule to Fitch which allows us to get φ from φ ∨ ψ, the resulting system of proof would be sound|If we added a new rule to Fitch which allows us to get φ from φ ∨ ψ, the resulting system of proof would be complete|If we added a new rule to Fitch which allows us to get ψ from ¬φ and φ ∨ ψ, the resulting system of proof would be sound"
+          ]
+        }
+      ]
     },
     {
       "type": "lecture",
@@ -1416,6 +1628,20 @@
       "slides": "http://logic-1.butterfill.com/lecture_16.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_16.handout.pdf",
       "units": [
+        {
+          "type": "unit",
+          "name": "Every Time I Go to the Dentist Someone Dies",
+          "slides": "http://logic-1.butterfill.com/units/unit_750.html",
+          "rawReading": [
+            "11.2"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/things/names/-/predicates/FairyGodmother1-x-is-a-fairy-godmother|Wand1-x-is-a-wand|BelongsTo2-x-belongs-to-y/sentence/Every fairy godmother has a wand",
+            "/ex/trans/domain/things/names/a=Pheoebe/predicates/Person1-x-is-a-person|Time1-x-is-a-time|DentistAt2-x-goes-to-the-dentist-at-time-y|DiesAt2-x-dies-at-y/sentence/Everytime Pheoebe goes to dentist, someone dies",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/Time1-x-is-a-time|BlinksAt2-x-blinks-at-time-y|Person1-x-is-a-person|KicksAt3-x-kicks-y-at-time-z/sentence/Everytime Ayesha blinks someone kicks her",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/Time1-x-is-a-time|BlinksAt2-x-blinks-at-time-y|Person1-x-is-a-person|Kick1-x-is-a-kick|AgentOf2-x-is-the-agent-of-y|TimeOf2-x-is-the-time-of-y|RecipientOf2-x-is-the-recipient-of-y/sentence/Everytime Ayesha blinks someone kicks her"
+          ]
+        },
         {
           "type": "unit",
           "name": "There Is Exactly One",
