@@ -910,7 +910,7 @@
             "/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))",
             "/ex/TorF/world/[{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\">\",\"|\"]}]/qq/exists x (Sad(x) and Crying(x))|all x (Sad(x) arrow Crying(x))",
             "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Something is sad and crying.",
-            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or crying.",
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or is crying.",
             "/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))",
             "/ex/create/qq/exists x LeftOf(x,a)",
             "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))",
@@ -1108,6 +1108,27 @@
         },
         {
           "type": "unit",
+          "name": "There Does Not Exist",
+          "slides": "http://logic-1.butterfill.com/units/unit_605.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/scope/qq/exists x (not Red(x) and not Sad(x))|exists x not Red(x) and exists x not Sad(x)|not exists x (Red(x) and Sad(x))|not all x (Sad(x) arrow Crying(x))|all x (Sad(x) arrow not Crying(x))",
+            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is happy and crying",
+            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is neither happy nor crying",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is not happy",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/No one is happy",
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Everything is not broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Not everything is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Not everything red is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Everything red is not broken",
+            "/ex/proof/orInvalid/from/not exists x Dead(x)/to/exists x not Dead(x)",
+            "/ex/proof/orInvalid/from/exists x not Dead(x)/to/not exists x Dead(x)",
+            "/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)",
+            "/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)"
+          ]
+        },
+        {
+          "type": "unit",
           "name": "Expressing Counterexamples Formally",
           "slides": "http://logic-1.butterfill.com/units/unit_583.html",
           "rawReading": [
@@ -1179,6 +1200,13 @@
           ]
         }
       ]
+    },
+    {
+      "type": "lecture",
+      "name": null,
+      "slides": "http://logic-1.butterfill.com/lecture_12.handout",
+      "handout": "http://logic-1.butterfill.com/handouts/lecture_12.handout.pdf",
+      "units": []
     },
     {
       "type": "lecture",
@@ -1324,6 +1352,20 @@
             "/ex/proof/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Broken(x) arrow not Square(x))",
             "/ex/counter/orValid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))",
             "/ex/proof/orInvalid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Quantifier Equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ∀x(¬Square(x) ∨ Broken(x))",
+          "slides": "http://logic-1.butterfill.com/units/unit_762.html",
+          "rawReading": [
+            "10.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/orValid/from/all x (Square(x) arrow Broken(x))/to/all x (not Square(x) or Broken(x))",
+            "/ex/counter/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Square(x) or Broken(x))",
+            "/ex/proof/orValid/from/all x (Square(x) arrow Broken(x))/to/all x (not Square(x) and Broken(x))",
+            "/ex/counter/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Square(x) and Broken(x))"
           ]
         }
       ]

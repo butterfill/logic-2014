@@ -1,96 +1,2787 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><head><!-- (c) copyright 2013 Stephen A. Butterfill--><meta charset="utf-8"/><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><title>Lecture 03 | Logic I</title><meta name="description" content="Notes for lectures on Logic I (PH126 and PH133), an introduction to predicate logic."/><meta name="keywords" content="logic, truth, logical validity"/><meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"/><!-- - fonts--><link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/><!--if lt IE 9script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
---><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" /></head><body><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/jquery.crSplineBkg.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.custom.01932.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script><div class="deck-notes"><div class="deck-notes-container"></div></div><div class="deck-handout"><div class="deck-handout-container"></div></div><div class="deck-container"><section id="instructions" class="slide"><div class="words"><div class="container_12"><div class="grid_12"><div class="middle"><p class="center">Press the right key for the next slide (or swipe left)</p></div></div></div></div></section><section class="slide"><!-- .notes You won't believe how many people emailed me to say the slides don't work.--><div class="words"><div class="container_12"><div class="grid_12"><p>also ...</p><p>Press the left key to go backwards (or swipe right)</p><p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p><p>Press m or double tap to see a menu of slides</p></div></div></div></section>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+  <head>
+    <!-- (c) copyright 2013 Stephen A. Butterfill-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Lecture 03 | Logic I</title>
+    <meta name="description" content="Notes for lectures on Logic I (PH126 and PH133), an introduction to predicate logic."/>
+    <meta name="keywords" content="logic, truth, logical validity"/>
+    <meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" />
+    <meta name="viewport" content="width=device-width"/>
+    <!-- - fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/>
+    <!--if lt IE 9
+    script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
+    
+    --><style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" />
+  </head>
+  <body><script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/jquery.crSplineBkg.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.custom.01932.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+    <div class="deck-notes">
+      <div class="deck-notes-container"></div>
+    </div>
+    <div class="deck-handout">
+      <div class="deck-handout-container"></div>
+    </div>
+    <div class="deck-container">
+      <section id="instructions" class="slide">
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <div class="middle">
+                <p class="center">Press the right key for the next slide (or swipe left)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <!-- .notes You won't believe how many people emailed me to say the slides don't work.-->
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <p>also ...</p>
+              <p>Press the left key to go backwards (or swipe right)</p>
+              <p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p>
+              <p>Press m or double tap to see a menu of slides</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><div class="notes notes-header-tex">\title {Logic I \\ Lecture 03}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\maketitle</div><div id="title-slide" class="slide"><img src="/img/bkg/budapest/AIMG_nc_5766.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div class="fade-in"><div style="" class="title-block"><div class="title-container"><h1 class="title1 fade-in">Logic I</h1><h1 class="title2 fade-in">Lecture 03</h1><h3 class="email fade-in">s.butterfill@warwick.ac.uk</h3></div></div></div><div class="handout">\def \ititle {Logic I}</div><div class="handout">\def \isubtitle {Lecture 03}</div><div class="handout">\begin{center}</div><div class="handout">{\Large</div><div class="handout">\textbf{\ititle}: \isubtitle</div><div class="handout">}</div><div class="handout">&nbsp;</div><div class="handout">\iemail %<s.butterfill@warwick.ac.uk></div><div class="handout">\end{center}</div><div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div></div><div class="handout">&nbsp;</div><div class="handout">\section{Logical Validity and Truth Tables}</div><div class="handout">\emph{Reading:}  §4.3</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Logical Validity and Truth Tables}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<div class="notes notes-header-tex">\title {Logic I \\ Lecture 03}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\maketitle</div>
+<div id="title-slide" class="slide"><img src="/img/bkg/budapest/AIMG_nc_5766.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div class="fade-in">
+    <div style="" class="title-block">
+      <div class="title-container">
+        <h1 class="title1 fade-in">Logic I</h1>
+        <h1 class="title2 fade-in">Lecture 03</h1>
+        <h3 class="email fade-in">s.butterfill@warwick.ac.uk</h3>
+      </div>
+    </div>
+  </div>
+  <div class="handout">\def \ititle {Logic I}</div>
+  <div class="handout">\def \isubtitle {Lecture 03}</div>
+  <div class="handout">\begin{center}</div>
+  <div class="handout">{\Large</div>
+  <div class="handout">\textbf{\ititle}: \isubtitle</div>
+  <div class="handout">}</div>
+  <div class="handout">&nbsp;</div>
+  <div class="handout">\iemail %<s.butterfill@warwick.ac.uk></div>
+  <div class="handout">\end{center}</div>
+  <div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div>
+</div>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Logical Validity and Truth Tables}</div>
+<div class="handout">\emph{Reading:}  §4.3</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Logical Validity and Truth Tables}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">We can use truth tables to establish that <br/>some arguments are logically valid</p><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">Truth tables can be used to show that an argument is valid.  To illustrate ...</div><div data-src="img/unit_14_example.png" class="img handout"></div><div class="handout">\end{minipage}</div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">To establish that an argument is valid:</div><div class="handout">\begin{enumerate}</div><div class="handout">\item Create truth tables for each premise and the conclusion.</div><div class="handout">\item Check whether there is a row of the truth table where all premises are true and the conclusion is false.</div><div class="handout">\item If not, the argument is valid.</div><div class="handout">\end{enumerate}</div><div class="handout">\end{minipage}</div></div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-066.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-067.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-068.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-069.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-070.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-071.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-072.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-073.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-074.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-075.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-076.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-077.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-078.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-079.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-080.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-081.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-082.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-083.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-084.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-085.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-086.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-087.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Don’t need to go further, already have a false premise.  So this won’t be a situation in which the premises are true and the conclusion false.</div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-088.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-089.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-090.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-091.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-092.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-093.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-094.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-095.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This situation is different from the other two: the premises are true in this possible situation, so we had to think about whether the conclusion is true.</div><div class="notes">But, as you can see, the conclusion is also true.  So this is no counterexample.</div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-096.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-097.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-098.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-099.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-100.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So if someone asked you to show that this argument is valid using truth tables, what would you do?</div><div class="notes">First, create truth tables for each premise and for the conclusion.</div><div class="notes">Next, check whether there is any row where the premises are true and the conclusion false.</div><div class="notes">If not, you can write this:</div><div class="notes">By inspecting the truth table, there is no row where the premises are true and the conclusion false; therefore, the argument is logically valid.</div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-101.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-102.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">When you're doing truth tables there's a temptation to race through them.</div></div></div></div></section><section class="slide"><img src="/img/unit_14/slide-103.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But you shouldn't do that.  Be the little snail.</div></div></div></div></section><div class="exercises">5.1-5.4</div><section id="unit_211" class="slide"><img src="/img/bkg/budapest/IMG_nc_5364.low.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="position:relative; top:425px" class="title-block"><div class="title-container"><h2 class="title1">Formal Proof</h2></div></div></section><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Formal Proof}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">We can use truth tables to establish that <br/>some arguments are logically valid</p>
+          <div class="handout">\begin{minipage}{\columnwidth}</div>
+          <div class="handout">Truth tables can be used to show that an argument is valid.  To illustrate ...</div>
+          <div data-src="img/unit_14_example.png" class="img handout"></div>
+          <div class="handout">\end{minipage}</div>
+          <div class="handout">\begin{minipage}{\columnwidth}</div>
+          <div class="handout">To establish that an argument is valid:</div>
+          <div class="handout">\begin{enumerate}</div>
+          <div class="handout">\item Create truth tables for each premise and the conclusion.</div>
+          <div class="handout">\item Check whether there is a row of the truth table where all premises are true and the conclusion is false.</div>
+          <div class="handout">\item If not, the argument is valid.</div>
+          <div class="handout">\end{enumerate}</div>
+          <div class="handout">\end{minipage}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-066.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-067.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-068.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-069.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-070.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-071.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-072.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-073.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-074.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-075.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-076.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-077.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-078.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-079.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-080.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-081.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-082.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-083.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-084.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-085.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-086.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-087.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Don’t need to go further, already have a false premise.  So this won’t be a situation in which the premises are true and the conclusion false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-088.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-089.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-090.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-091.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-092.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-093.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-094.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-095.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This situation is different from the other two: the premises are true in this possible situation, so we had to think about whether the conclusion is true.</div>
+        <div class="notes">But, as you can see, the conclusion is also true.  So this is no counterexample.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-096.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-097.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-098.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-099.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-100.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So if someone asked you to show that this argument is valid using truth tables, what would you do?</div>
+        <div class="notes">First, create truth tables for each premise and for the conclusion.</div>
+        <div class="notes">Next, check whether there is any row where the premises are true and the conclusion false.</div>
+        <div class="notes">If not, you can write this:</div>
+        <div class="notes">By inspecting the truth table, there is no row where the premises are true and the conclusion false; therefore, the argument is logically valid.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-101.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-102.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">When you're doing truth tables there's a temptation to race through them.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_14/slide-103.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But you shouldn't do that.  Be the little snail.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">5.1-5.4</div>
+<section id="unit_211" class="slide"><img src="/img/bkg/budapest/IMG_nc_5364.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Formal Proof</h2>
+    </div>
+  </div>
+</section>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Formal Proof}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section id="formal_proof" class="slide"><div id="valid_df_831"><div style="width:230px;position:absolute;top:20px;left:500px;z-index:-80" class="white-box"><p style="padding: 0 0.3em;">An argument is <strong>logically valid </strong>just if <span style="opacity: 0" class="the_df">there’s <span class="no-possible-situation">no possible situation </span><span>in which </span><span class="premises-true">the premises are true </span><span>and </span><span class="conclusion-false">the conclusion false.</span></span></p></div><div data-what=".the_df" class="slide anim-show"></div></div><div class="slide"><div class="words"><div class="container_12"><div class="grid_8"><p>Two ways to show that an argument is logically valid:</p><ul><li>truth tables</li><li> <span id="highlight-hook831">&#8203;</span>fitch proof <span id="highlight-832">(formal)</span></li></ul></div></div></div><div data-what=" #highlight-hook831" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" #highlight-832" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div><div class="slide"><div class="clear"></div><div class="bottom-third-white invert"><div class="container_12 half-above compress"><div class="grid_4 prefix_2">∧Elim<table class="fitch-proof"><tr class="line row-1"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td></td><td><span class="sentence">P1 ∧ P2</span></td><td></td></tr><tr class="line row-2"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td></td><td><span class="sentence">...</span></td><td></td></tr><tr class="line row-3"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td></td><td><span class="sentence">Pi</span></td><td></td></tr></table></div></div></div></div></section><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Translating a Simple Argument}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section id="formal_proof" class="slide">
+  <div id="valid_df_831">
+    <div style="width:230px;position:absolute;top:20px;left:500px;z-index:-80" class="white-box">
+      <p style="padding: 0 0.3em;">An argument is <strong>logically valid </strong>just if <span style="opacity: 0" class="the_df">there’s <span class="no-possible-situation">no possible situation </span><span>in which </span><span class="premises-true">the premises are true </span><span>and </span><span class="conclusion-false">the conclusion false.</span></span></p>
+    </div>
+    <div data-what=".the_df" class="slide anim-show"></div>
+  </div>
+  <div class="slide">
+    <div class="words">
+      <div class="container_12">
+        <div class="grid_8">
+          <p>Two ways to show that an argument is logically valid:</p>
+          <ul>
+            <li>truth tables</li>
+            <li> <span id="highlight-hook831">&#8203;</span>fitch proof <span id="highlight-832">(formal)</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div data-what=" #highlight-hook831" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+    <div data-what=" #highlight-832" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+  </div>
+  <div class="slide">
+    <div class="clear"></div>
+    <div class="bottom-third-white invert">
+      <div class="container_12 half-above compress">
+        <div class="grid_4 prefix_2">∧Elim
+          <table class="fitch-proof">
+            <tr class="line row-1">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td></td>
+              <td><span class="sentence">P1 ∧ P2</span></td>
+              <td>
+              </td>
+            </tr>
+            <tr class="line row-2">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td></td>
+              <td><span class="sentence">...</span></td>
+              <td>
+              </td>
+            </tr>
+            <tr class="line row-3">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td></td>
+              <td><span class="sentence">Pi</span></td>
+              <td>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Translating a Simple Argument}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_213/slide-001.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We're studying a formal system of proof called Fitch.
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_213/slide-001.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We're studying a formal system of proof called Fitch.
 Here's the first rule of Fitch.  It's called  conjunction elimimnation.
-The rule says that if you have a conjunction of two things in your proof, you can add a new line to your proof containing either one.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-0011.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So if you something like this in your proof ...</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-0012.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... you can add something matching this.
-I'll explain how to use conjunction elimination in a moment.  First, let's look at another rule.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-002.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This rule is called conjunction introduction.
-The rule says that if you have two things in your proof, you can extend your proof by one line to add their conjunction.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-0021.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So if you these things matching these in your proof ...</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-0022.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... you can add something matching this.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-002.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So let's look at an application of our rules of proof.
-I want to do this by translating an argument from English into our formal language awFOL.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-003.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This doesn’t seem to be true.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-004.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But this does seem to be true, or at least horribly plausible.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-005.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And this seems right too, maybe.  </div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-006.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now if we take the first two sentences as premises and the second as a conclusion, we have an argument.
+The rule says that if you have a conjunction of two things in your proof, you can add a new line to your proof containing either one.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-0011.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So if you something like this in your proof ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-0012.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... you can add something matching this.
+I'll explain how to use conjunction elimination in a moment.  First, let's look at another rule.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-002.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This rule is called conjunction introduction.
+The rule says that if you have two things in your proof, you can extend your proof by one line to add their conjunction.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-0021.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So if you these things matching these in your proof ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-0022.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... you can add something matching this.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-002.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So let's look at an application of our rules of proof.
+I want to do this by translating an argument from English into our formal language awFOL.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-003.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This doesn’t seem to be true.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-004.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But this does seem to be true, or at least horribly plausible.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-005.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And this seems right too, maybe.  </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-006.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now if we take the first two sentences as premises and the second as a conclusion, we have an argument.
 Is the argument logically valid?
 Apparently not because the premises are true and the conclusion false.
-But look what happens when we translate it into awFOL assuming that the english 'and' means the same as the awFOL conjunction symbol, '∧'.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-007.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The first premise comes out as P∧Q</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-008.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Where P stands for the sentence 'The world will overheat'.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-009.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And Q stands for 'We will all die'.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-010.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What about the second premise?</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-011.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This comes out as Q∧R.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-012.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The key thing is that we're re-using Q because the sentence about the world overheating occurs in both the first
-and second premises.  Where we have the same English sentence, we have to use the same sentence-letter in awFOL.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-013.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now what about the conclusion?</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-014.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This is P∧R.  Not that both sentences are already familiar.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-015.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">P occurs in the first premise ...</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-016.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... and Q occurs in the second premise.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-017.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So here's our argument.</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-018.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Since we're going to do a formal proof, we should use the vertical and horizontal lines.
-(Surely you remember that the vertical line runs the length of the argument, and the horizontal line separates premises from conclusion.)</div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-019.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_213/slide-020.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We also need to use line numbers.</div></div></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Formal Proof: ∧Elim and ∧Intro}</div><div class="handout">\emph{Reading:}  §5.1, §6.1</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Formal Proof: ∧Elim and ∧Intro}</div>
+But look what happens when we translate it into awFOL assuming that the english 'and' means the same as the awFOL conjunction symbol, '∧'.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-007.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The first premise comes out as P∧Q</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-008.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Where P stands for the sentence 'The world will overheat'.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-009.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And Q stands for 'We will all die'.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-010.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What about the second premise?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-011.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This comes out as Q∧R.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-012.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The key thing is that we're re-using Q because the sentence about the world overheating occurs in both the first
+and second premises.  Where we have the same English sentence, we have to use the same sentence-letter in awFOL.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-013.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now what about the conclusion?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-014.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This is P∧R.  Not that both sentences are already familiar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-015.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">P occurs in the first premise ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-016.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... and Q occurs in the second premise.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-017.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So here's our argument.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-018.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Since we're going to do a formal proof, we should use the vertical and horizontal lines.
+(Surely you remember that the vertical line runs the length of the argument, and the horizontal line separates premises from conclusion.)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-019.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_213/slide-020.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We also need to use line numbers.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Formal Proof: ∧Elim and ∧Intro}</div>
+<div class="handout">\emph{Reading:}  §5.1, §6.1</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Formal Proof: ∧Elim and ∧Intro}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_21/slide-006.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div data-src="img/rule_conjunction_intro.png" class="img handout"></div><div data-src="img/rule_conjunction_elim.png" class="img handout"></div><div data-src="img/proof_unit_21.png" class="img handout"></div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-007.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">See how we have P in a premise and P in the conclusion?</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-008.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We have to get the P out of the conjunction and back into the conclusion.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-009.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">How can we get P out of this premise?</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-010.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">First we have to ask, What's the connective?</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-011.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The connective is conjunction.  This tells us we want to use a conjunction-rule.  But is it the introduction or elimination rule that we need?</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-012.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">It's elimination.  Nearly always we need elimination when we're acting on premises.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-013.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">See how the rule matches our premise.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-014.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Because we have a match, we can use this rule to add a line to our proof.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-015.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The rule allows us to add 'P' or 'Q' to the proof, but I've chosen to add 'P'.</div><div class="notes">Now having used the rule we have to explain exactly what we've done.  This requires two things ...</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-016.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We must cite the rule used.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-017.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And we must cite the lines we applied the rule to.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-018.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So far so good.  Can you see what we should do next?</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-019.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Getting the R out of the second premise can be done in exactly the same way.</div><div class="notes">Now, how are we going to get to the conclusion?</div><div class="notes">In general, we use introduction rules to get to the conclusion.  And since this conclusion is a conjunction, we'll use conjunction-intro to get to it.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-020.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Look at the rule for conjunction intro. </div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-021.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">See how our proof fits the pattern of the rule.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-022.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So it turns out we already did what we need for conjunction intro.  </div><div class="notes">All that's left is to explain what we've done.  As before this requres two things.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-023.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We must cite the rule used.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-024.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And we must cite the lines we applied the rule to.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-025.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Note the pattern of rules that we have for conjunction: introduction and elimination.</div><div class="notes">For each connective we'll have such a pair of rules, one introduction rule and one elimination rule.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-026.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">With the elimination rule, we have the connective at the start and we eliminate it in applying the rule.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-027.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">See how this worked in our proof.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-028.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">With the introduction rule, we don't have the connective at the start and we introduce it by appling the rule. </div></div></div></div></section><section class="slide"><img src="/img/unit_21/slide-029.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here's how we did it in the proof.</div><div class="notes">If you've been following all this, you know everything you need to know to use conjunction intro and conjunction elim in proofs.
-You also know how to do Fitch proofs.  The rest is just a matter of learning more rules.</div><div class="notes">Now it's possible you haven't entirely been following all this ...</div></div></div></div></section><section class="slide"><img src="/img/unit_21/spoon_feeding_DSC_7914.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... When I was learning logic, I often didn't immediately understand the lectures and needed 
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_21/slide-006.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/rule_conjunction_intro.png" class="img handout"></div>
+        <div data-src="img/rule_conjunction_elim.png" class="img handout"></div>
+        <div data-src="img/proof_unit_21.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-007.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">See how we have P in a premise and P in the conclusion?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-008.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We have to get the P out of the conjunction and back into the conclusion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-009.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">How can we get P out of this premise?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-010.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">First we have to ask, What's the connective?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-011.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The connective is conjunction.  This tells us we want to use a conjunction-rule.  But is it the introduction or elimination rule that we need?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-012.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">It's elimination.  Nearly always we need elimination when we're acting on premises.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-013.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">See how the rule matches our premise.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-014.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Because we have a match, we can use this rule to add a line to our proof.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-015.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The rule allows us to add 'P' or 'Q' to the proof, but I've chosen to add 'P'.</div>
+        <div class="notes">Now having used the rule we have to explain exactly what we've done.  This requires two things ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-016.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We must cite the rule used.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-017.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And we must cite the lines we applied the rule to.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-018.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So far so good.  Can you see what we should do next?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-019.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Getting the R out of the second premise can be done in exactly the same way.</div>
+        <div class="notes">Now, how are we going to get to the conclusion?</div>
+        <div class="notes">In general, we use introduction rules to get to the conclusion.  And since this conclusion is a conjunction, we'll use conjunction-intro to get to it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-020.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Look at the rule for conjunction intro. </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-021.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">See how our proof fits the pattern of the rule.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-022.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So it turns out we already did what we need for conjunction intro.  </div>
+        <div class="notes">All that's left is to explain what we've done.  As before this requres two things.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-023.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We must cite the rule used.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-024.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And we must cite the lines we applied the rule to.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-025.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Note the pattern of rules that we have for conjunction: introduction and elimination.</div>
+        <div class="notes">For each connective we'll have such a pair of rules, one introduction rule and one elimination rule.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-026.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">With the elimination rule, we have the connective at the start and we eliminate it in applying the rule.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-027.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">See how this worked in our proof.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-028.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">With the introduction rule, we don't have the connective at the start and we introduce it by appling the rule. </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/slide-029.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here's how we did it in the proof.</div>
+        <div class="notes">If you've been following all this, you know everything you need to know to use conjunction intro and conjunction elim in proofs.
+You also know how to do Fitch proofs.  The rest is just a matter of learning more rules.
+        </div>
+        <div class="notes">Now it's possible you haven't entirely been following all this ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/spoon_feeding_DSC_7914.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... When I was learning logic, I often didn't immediately understand the lectures and needed 
 to go back over my notes after each lecture.
-Hopefully you will do the same because I don't really have the patience for spoon feeding.</div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><div class="handout">\textbf{Writing a proof in zoxiy}</div><div data-src="img/151024-0010-crop.png" class="img handout"></div><p class="center"><a href="https://logic-ex.butterfill.com/ex/proof/from/A%20and%20B%7CB%20and%20C/to/A%20and%20C">https://logic-ex.butterfill.com/ex/proof/from/A and B|B and C/to/A and C</a></p></div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0001.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">When you start an exercise, you’re already given the basic form of 
-the proof, with a couple of blank lines.</div><div class="notes">The box you’re working in is just a text editor.
+Hopefully you will do the same because I don't really have the patience for spoon feeding.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <div class="handout">\textbf{Writing a proof in zoxiy}</div>
+          <div data-src="img/151024-0010-crop.png" class="img handout"></div>
+          <p class="center"><a href="https://logic-ex.butterfill.com/ex/proof/from/A%20and%20B%7CB%20and%20C/to/A%20and%20C">https://logic-ex.butterfill.com/ex/proof/from/A and B|B and C/to/A and C</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0001.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">When you start an exercise, you’re already given the basic form of 
+the proof, with a couple of blank lines.
+        </div>
+        <div class="notes">The box you’re working in is just a text editor.
 You can add lines by pressing ‘return’ and delete lines 
-just like you would in any text editor.</div><div class="notes">To repeat: the proof is just some text that you edit in the normal way.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0001b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We just need to a step here.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0002.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">I’ve gone ahead and typed A because we need to derive A from the premises.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0002b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here’s the A I typed.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0002c.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This red dot suggests that there is a problem with the line.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0002d.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The text under or proof is giving us a clue: we didn’t justify the step yet.
-Let’s do that now.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0003.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here I’ve added justification.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0003b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">It’s over here on the right (I just added spaces to move it away from the sentence ‘A’).</div><div class="notes">I want to mention a couple of conventions.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0003c.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">First, justification needs to start with ‘//’.  This is to separate justification 
-from the sentence itself.</div><div class="notes">If you forget the ‘//’, zoxiy won’t be able to understand your proof and won’t 
-be able to explain to you what went wrong.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0003d.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The next thing to note is that I typed the word ‘and’ rather than the symbol
+just like you would in any text editor.
+        </div>
+        <div class="notes">To repeat: the proof is just some text that you edit in the normal way.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0001b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We just need to a step here.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0002.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I’ve gone ahead and typed A because we need to derive A from the premises.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0002b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here’s the A I typed.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0002c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This red dot suggests that there is a problem with the line.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0002d.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The text under or proof is giving us a clue: we didn’t justify the step yet.
+Let’s do that now.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0003.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here I’ve added justification.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0003b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">It’s over here on the right (I just added spaces to move it away from the sentence ‘A’).
+        </div>
+        <div class="notes">I want to mention a couple of conventions.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0003c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">First, justification needs to start with ‘//’.  This is to separate justification 
+from the sentence itself.
+        </div>
+        <div class="notes">If you forget the ‘//’, zoxiy won’t be able to understand your proof and won’t 
+be able to explain to you what went wrong.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0003d.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The next thing to note is that I typed the word ‘and’ rather than the symbol
 for conjunction (‘∧’).  As a convenience, zoxiy will let us use words 
-rather than making us type symbols.  But we can type the symbols if we prefer.</div><div class="notes">The same is true when we’re writing sentences: you can type ‘A and B’ instead of
-‘A ∧ B’ if you like.</div><div class="notes">This is a handy feature of awFOL vs the language of the textbook we’re using.
+rather than making us type symbols.  But we can type the symbols if we prefer.
+        </div>
+        <div class="notes">The same is true when we’re writing sentences: you can type ‘A and B’ instead of
+‘A ∧ B’ if you like.
+        </div>
+        <div class="notes">This is a handy feature of awFOL vs the language of the textbook we’re using.
 awFOL let’s you use words where really there should be a symbol, just to make 
-it easy to type things.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0003e.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Finally, note that we put a number at the end.  This is the number 1,
-which refers to the first line.</div><div class="notes">zoxiy provides line numbers for us (you can add your own
+it easy to type things.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0003e.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Finally, note that we put a number at the end.  This is the number 1,
+which refers to the first line.
+        </div>
+        <div class="notes">zoxiy provides line numbers for us (you can add your own
 if you prefer, but then you have to be really consistent about 
-starting each line with a number).</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0003f.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Wait a minute.  We still have that red dot and the error message
+starting each line with a number).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0003f.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Wait a minute.  We still have that red dot and the error message
 telling us our line is not justified.  But we have added the justification.
-What’s going on?</div><div class="notes">zoxiy might be a bit slow to update.  In this situation, just move your
+What’s going on?
+        </div>
+        <div class="notes">zoxiy might be a bit slow to update.  In this situation, just move your
 cursor up and down to get zoxiy to check your line again.
-Let me do that now ...</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0004.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... and the dot has turned green, indicating that this line is ok.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0004b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What’s next?</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0004c.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We need to add another step to the proof.</div><div class="notes">(It just happens that we have the right amount of space for this proof,
+Let me do that now ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0004.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... and the dot has turned green, indicating that this line is ok.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0004b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What’s next?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0004c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We need to add another step to the proof.
+        </div>
+        <div class="notes">(It just happens that we have the right amount of space for this proof,
 but generally you are going to have to add lines to your proof.  Do this
-with the return key, as mentioned above.)</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0005.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here I’ve added the setntence we need (‘C’).</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And here’s the justification as well.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006-1.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But wait, the red dot is back.
+with the return key, as mentioned above.)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0005.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here I’ve added the setntence we need (‘C’).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And here’s the justification as well.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006-1.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But wait, the red dot is back.
 That means there’s something wrong with the line.
-What has gone wrong?</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006-3.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The status message is really unhelpful in this case, as it often will be.
+What has gone wrong?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006-3.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The status message is really unhelpful in this case, as it often will be.
 (Maybe it will be improved at some point.)
-Sorry about that.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006-4.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What could have gone wrong? Note that we’re citing line 1.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006-5.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So let’s have a look at line 1.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006-6.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This line contains ‘A and B’.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006-7.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But actually we’re trying to derive C.
-And you can’t derive C from A and B.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006-8.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The C we want to derive is actually here, in line 2.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0006-9.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So we have to edit the line number.
+Sorry about that.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006-4.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What could have gone wrong? Note that we’re citing line 1.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006-5.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So let’s have a look at line 1.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006-6.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This line contains ‘A and B’.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006-7.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But actually we’re trying to derive C.
+And you can’t derive C from A and B.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006-8.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The C we want to derive is actually here, in line 2.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0006-9.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So we have to edit the line number.
 (This kind of mistake tends to happen to me quite a bit because
-I like to copy and paste justification to save typing)</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0007.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here I’ve fixed the line number.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0007-1.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">What’s next?</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0007-2.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">There’s a big whole where the justification for the last line should be.
-(Remember that every line of the proof is either a premise or needs justification.)</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0008.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So I’ve gone ahead and added the justification.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0008-1.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But it hasn’t worked: we’ve got the red dot again.
+I like to copy and paste justification to save typing)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0007.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here I’ve fixed the line number.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0007-1.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">What’s next?
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0007-2.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">There’s a big whole where the justification for the last line should be.
+(Remember that every line of the proof is either a premise or needs justification.)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0008.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So I’ve gone ahead and added the justification.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0008-1.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But it hasn’t worked: we’ve got the red dot again.
 Unless you’re really good at logic, you’re going to be seeing a lot of the red dot
-for a few weeks.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0008-2.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here’s the mistake: we’re still citing and elim.
+for a few weeks.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0008-2.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here’s the mistake: we’re still citing and elim.
 But at this point we’re supposed to be *introducing* a conjunction
-rather than eliminating one.</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0010.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">We can fix this just by deleting ‘elim’ and replacing it with ‘intro’</div></div></div></div></section><section class="slide"><img src="/img/unit_21/151024-0010-1.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And here’s the finished proof.
-This is correct; if you submit it, zoxiy should say your proof is correct.</div></div></div></div></section><div class="exercises">6.1</div><div class="exercises_fast">5.3--5.6</div><div class="handout">&nbsp;</div><div class="handout">\section{Symbols and Words}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Symbols and Words}</div>
+rather than eliminating one.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0010.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">We can fix this just by deleting ‘elim’ and replacing it with ‘intro’
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_21/151024-0010-1.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And here’s the finished proof.
+This is correct; if you submit it, zoxiy should say your proof is correct.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">6.1</div>
+<div class="exercises_fast">5.3--5.6</div>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Symbols and Words}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Symbols and Words}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><div class="words"><div class="container_12"><div class="grid_12"><div data-src="img/awFOL_symbols.png" class="img handout"></div><div class="notes">When typing proofs or sentences, it’s often awkward to enter symbols.
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide">
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div data-src="img/awFOL_symbols.png" class="img handout"></div>
+        <div class="notes">When typing proofs or sentences, it’s often awkward to enter symbols.
 In the first-order language awFOL, you can use words as well as symbols (they are
 treated as equivalent).  This makes typing easier.
-And since zoxiy recognises awFOL, you can use the words in logic-ex.</div><div class="notes">Here’s a table listing the words you can use for each symbol.</div><table class="data"><thead><tr><td> <span>symbol</span></td><td><span>word(s)</span></td></tr></thead><tbody><tr class="odd"><td><span>¬</span></td><td><span>not</span></td></tr><tr class="even"><td><span>→</span></td><td><span>arrow, -></span></td></tr><tr class="odd"><td><span>↔</span></td><td><span>double_arrow, <-></span></td></tr><tr class="even"><td><span>⊥</span></td><td><span>_|_, false, contra, contradiction</span></td></tr><tr class="odd"><td><span>∧</span></td><td><span>and, &</span></td></tr><tr class="even"><td><span>∨</span></td><td><span>or, |, ǀǀ</span></td></tr><tr class="odd"><td><span>↓</span></td><td><span>nor</span></td></tr><tr class="even"><td><span>↑</span></td><td><span>nand</span></td></tr><tr class="odd"><td><span>∀</span></td><td><span>all, every</span></td></tr><tr class="even"><td><span>∃</span></td><td><span>some, exists</span></td></tr></tbody></table></div></div></div></section><!-- *notes: logic can be confusing at first. Don't despair. It's important to have a logic partner.--><section id="be_honest" class="slide"><img src="/img/xkcd_1146.png" width="800px" class="bkg em-above"/><div class="words"><p class="source">xkcd.com/1146</p></div></section>
-<div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Truth Tables Are Stipulations}</div>
+And since zoxiy recognises awFOL, you can use the words in logic-ex.
+        </div>
+        <div class="notes">Here’s a table listing the words you can use for each symbol.
+        </div>
+        <table class="data">
+          <thead>
+            <tr>
+              <td> <span>symbol</span></td>
+              <td><span>word(s)</span></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="odd">
+              <td><span>¬</span></td>
+              <td><span>not</span></td>
+            </tr>
+            <tr class="even">
+              <td><span>→</span></td>
+              <td><span>arrow, -></span></td>
+            </tr>
+            <tr class="odd">
+              <td><span>↔</span></td>
+              <td><span>double_arrow, <-></span></td>
+            </tr>
+            <tr class="even">
+              <td><span>⊥</span></td>
+              <td><span>_|_, false, contra, contradiction</span></td>
+            </tr>
+            <tr class="odd">
+              <td><span>∧</span></td>
+              <td><span>and, &</span></td>
+            </tr>
+            <tr class="even">
+              <td><span>∨</span></td>
+              <td><span>or, |, ǀǀ</span></td>
+            </tr>
+            <tr class="odd">
+              <td><span>↓</span></td>
+              <td><span>nor</span></td>
+            </tr>
+            <tr class="even">
+              <td><span>↑</span></td>
+              <td><span>nand</span></td>
+            </tr>
+            <tr class="odd">
+              <td><span>∀</span></td>
+              <td><span>all, every</span></td>
+            </tr>
+            <tr class="even">
+              <td><span>∃</span></td>
+              <td><span>some, exists</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- *notes: logic can be confusing at first. Don't despair. It's important to have a logic partner.-->
+<section id="be_honest" class="slide"><img src="/img/xkcd_1146.png" width="800px" class="bkg em-above"/>
+  <div class="words">
+    <p class="source">xkcd.com/1146</p>
+  </div>
+</section>
+
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Truth Tables Are Stipulations}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">A student emailed me about `... some confusion in regards to the ∨ symbol representing `or’ ...’</div><p>‘... some confusion in regards to <span class="first-mistake">the ∨ symbol <span class="first-mistake-b">representing ‘or’</span></span>...’</p><div data-what=" .first-mistake" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div class="notes">I think the source of the confusion is this mistake.  </div><div class="notes">It's a mistake to think that ∨ represents or!</div><div class="notes">Let me explain.</div><div class="notes">Here's the truth table for v ...</div><div class="slide em-above"><div class="notes">Oops, there's a mistake in this truth table.  Let's fix it ...</div><table class="truth-table"><tr><td>A</td><td>B</td><td class="result-col">A ∨ B</td></tr><tr><td>T</td><td>T</td><td class="result-col">T</td><td class="comment hide"><-- ‘surely this is illogical’</td></tr><tr><td>T</td><td>F</td><td class="result-col"><span class="error">F</span><span class="correct hide">T</span></td></tr><tr><td>F</td><td>T</td><td class="result-col"> <span class="error">F</span><span class="correct hide">T</span></td></tr><tr><td>F</td><td>F</td><td class="result-col">F</td></tr></table><div data-what=".error" data-class="hide" class="slide anim-continue anim-addclass"></div><div data-what=".correct" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div class="notes">Now we've got the right truth table.</div><div class="notes">The truth table is a stipulation about the meaning of v, the disjunction symbol.</div><div class="notes">We're not trying to capture the meaning of any English word.</div><div data-what=".first-mistake-b" data-attr="text-decoration:line-through" class="slide anim-continue anim-attribute"></div><div data-what=".first-mistake-b" data-class="dim" class="slide anim-continue anim-addclass"></div><div data-what=" .first-mistake" data-class="bkg-words-highlight-red" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div class="slide"><div class="notes">The student goes on to ask this:</div><p class="em-above">‘What makes the ∨ inclusive or exclusive, and is it always one of the two, or can it mean different things in different situations?’</p></div><div class="slide"><p> It ‘is clearer with the example: ‘The pig went down the left fork or the right fork.’ Clearly this is a case where it can only be one or the other. The pig cannot go down both forks.’ </p><div data-what=".comment" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></div></div></div></div></section><section id="unit_110" class="slide"><img src="/img/bkg/budapest/IMG_nc_5507.low.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="position:relative; top:425px" class="title-block"><div class="title-container"><h2 class="title1">Rules of Proof for Identity</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Rules of Proof for Identity}</div><div class="handout">\emph{Reading:}  §2.2</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Rules of Proof for Identity}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide">
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">A student emailed me about `... some confusion in regards to the ∨ symbol representing `or’ ...’</div>
+        <p>‘... some confusion in regards to <span class="first-mistake">the ∨ symbol <span class="first-mistake-b">representing ‘or’</span></span>...’</p>
+        <div data-what=" .first-mistake" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div class="notes">I think the source of the confusion is this mistake.  </div>
+        <div class="notes">It's a mistake to think that ∨ represents or!</div>
+        <div class="notes">Let me explain.</div>
+        <div class="notes">Here's the truth table for v ...</div>
+        <div class="slide em-above">
+          <div class="notes">Oops, there's a mistake in this truth table.  Let's fix it ...</div>
+          <table class="truth-table">
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td class="result-col">A ∨ B</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>T</td>
+              <td class="result-col">T</td>
+              <td class="comment hide"><-- ‘surely this is illogical’</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>F</td>
+              <td class="result-col"><span class="error">F</span><span class="correct hide">T</span></td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>T</td>
+              <td class="result-col"> <span class="error">F</span><span class="correct hide">T</span></td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td>F</td>
+              <td class="result-col">F</td>
+            </tr>
+          </table>
+          <div data-what=".error" data-class="hide" class="slide anim-continue anim-addclass"></div>
+          <div data-what=".correct" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div class="notes">Now we've got the right truth table.</div>
+          <div class="notes">The truth table is a stipulation about the meaning of v, the disjunction symbol.</div>
+          <div class="notes">We're not trying to capture the meaning of any English word.</div>
+          <div data-what=".first-mistake-b" data-attr="text-decoration:line-through" class="slide anim-continue anim-attribute"></div>
+          <div data-what=".first-mistake-b" data-class="dim" class="slide anim-continue anim-addclass"></div>
+          <div data-what=" .first-mistake" data-class="bkg-words-highlight-red" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div class="slide">
+            <div class="notes">The student goes on to ask this:</div>
+            <p class="em-above">‘What makes the ∨ inclusive or exclusive, and is it always one of the two, or can it mean different things in different situations?’</p>
+          </div>
+          <div class="slide">
+            <p> It ‘is clearer with the example: ‘The pig went down the left fork or the right fork.’ Clearly this is a case where it can only be one or the other. The pig cannot go down both forks.’ </p>
+            <div data-what=".comment" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+            <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_110" class="slide"><img src="/img/bkg/budapest/IMG_nc_5507.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Rules of Proof for Identity</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Rules of Proof for Identity}</div>
+<div class="handout">\emph{Reading:}  §2.2</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Rules of Proof for Identity}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_110/slide-055.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Earlier I said to understand identity as logicians think about it, there are just two principles you need.</div><div class="notes">These principles correspond to the identity and elimitation rules for identity.</div><div class="notes">The first principle said that if b=c, then whatever is true of b is also true of c.</div><div data-src="img/rule_identity_intro.png" class="img handout"></div><div data-src="img/rule_identity_elim.png" class="img handout"></div><div data-src="img/proof_identity_example.png" class="img handout"></div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-056.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This principle is the rule =Elim.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-057.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Then there was another principle, a=a is never false; this is the rule of proof =Intro.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-058.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The first rule of proof is expressed just as you would expect: 
-there are things you have to have already in your proof, and if you have them then you can extend the proof by adding this to it.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-059.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But identity intro is a bit different.  In this case there are no pre-requisites.  
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_110/slide-055.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Earlier I said to understand identity as logicians think about it, there are just two principles you need.</div>
+        <div class="notes">These principles correspond to the identity and elimitation rules for identity.</div>
+        <div class="notes">The first principle said that if b=c, then whatever is true of b is also true of c.</div>
+        <div data-src="img/rule_identity_intro.png" class="img handout"></div>
+        <div data-src="img/rule_identity_elim.png" class="img handout"></div>
+        <div data-src="img/proof_identity_example.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-056.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This principle is the rule =Elim.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-057.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Then there was another principle, a=a is never false; this is the rule of proof =Intro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-058.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The first rule of proof is expressed just as you would expect: 
+there are things you have to have already in your proof, and if you have them then you can extend the proof by adding this to it.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-059.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But identity intro is a bit different.  In this case there are no pre-requisites.  
 You can use the rule regardless of what you have.  
-The rule says that any time you like you can add a sentence of this form, so a=a or b=b or whatever.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-060.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Let's see how these rules work with a simple proof.</div><div class="notes">(Everytime I show you new rules, I'll also show you an example of how they're used.)</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-061.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">First I need some line numbers, and maybe a bit of space.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-062.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">To apply =Elim I need an identity statement; and that's just what I have at line 2.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-063.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-064.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">To apply =Elim I also need a statement about the thing named on the left hand side of the identity statement, in this case b.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-065.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">That's just what I have at line 1 of the proof.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-066.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-067.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So actually I have both of the things I need to apply =Elim.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-068.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But now look at the conclusion of this argument.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-069.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The conclusion is just what =Elim allows me to conclude.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-070.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Have I finished the proof?  Not yet.  I need to justify the step, which involves two things: I need to cite the rule and to cite the lines I've used in applying it.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-071.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Let's look at the same thing a different way.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-072.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The first premise is a statement about b (it says a is left of it) whereas the conclusion is the same statement about c (it says that a is left of it).</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-073.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">I take the b from the first premise and put it into the identity statement.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-074.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">I move accross the identity statement from left to right and find c. And this c I put into the conclusion just where b was earlier.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-075.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And this is just the pattern I need to make to use =Elim.</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-076.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">One last thing ...</div></div></div></div></section><section class="slide"><img src="/img/unit_110/slide-077.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Look at this thing on your right.  It looks much like a proof.  But actually it's no more a proof than a toddler's scribble.  Why not?  (I'll return to this question later.)</div></div></div></div></section><section id="unit_130" class="slide"><img src="/img/bkg/budapest/IMG_nc_5546.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">How to Write Proofs</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{How to Write Proofs}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{How to Write Proofs}</div>
+The rule says that any time you like you can add a sentence of this form, so a=a or b=b or whatever.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-060.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let's see how these rules work with a simple proof.</div>
+        <div class="notes">(Everytime I show you new rules, I'll also show you an example of how they're used.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-061.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">First I need some line numbers, and maybe a bit of space.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-062.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">To apply =Elim I need an identity statement; and that's just what I have at line 2.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-063.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-064.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">To apply =Elim I also need a statement about the thing named on the left hand side of the identity statement, in this case b.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-065.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">That's just what I have at line 1 of the proof.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-066.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-067.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So actually I have both of the things I need to apply =Elim.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-068.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But now look at the conclusion of this argument.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-069.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The conclusion is just what =Elim allows me to conclude.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-070.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Have I finished the proof?  Not yet.  I need to justify the step, which involves two things: I need to cite the rule and to cite the lines I've used in applying it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-071.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let's look at the same thing a different way.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-072.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The first premise is a statement about b (it says a is left of it) whereas the conclusion is the same statement about c (it says that a is left of it).</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-073.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I take the b from the first premise and put it into the identity statement.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-074.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I move accross the identity statement from left to right and find c. And this c I put into the conclusion just where b was earlier.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-075.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And this is just the pattern I need to make to use =Elim.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-076.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">One last thing ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_110/slide-077.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Look at this thing on your right.  It looks much like a proof.  But actually it's no more a proof than a toddler's scribble.  Why not?  (I'll return to this question later.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_130" class="slide"><img src="/img/bkg/budapest/IMG_nc_5546.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">How to Write Proofs</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{How to Write Proofs}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{How to Write Proofs}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_130/slide-031.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div data-src="img/how_to_write_proofs.png" class="img handout"></div></div></div></div></section><section class="slide"><img src="/img/unit_130/slide-032.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_130/slide-033.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_130/slide-034.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_130/slide-035.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><section id="unit_09" class="slide"><img src="/img/bkg/budapest/IMG_nc_5581.low.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="position:relative; top:425px" class="title-block"><div class="title-container"><h2 class="title1">Complex Truth Tables</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Complex Truth Tables}</div><div class="handout">\emph{Reading:}  §3.3, §3.5</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Complex Truth Tables}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_130/slide-031.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/how_to_write_proofs.png" class="img handout"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_130/slide-032.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_130/slide-033.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_130/slide-034.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_130/slide-035.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_09" class="slide"><img src="/img/bkg/budapest/IMG_nc_5581.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Complex Truth Tables</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Complex Truth Tables}</div>
+<div class="handout">\emph{Reading:}  §3.3, §3.5</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Complex Truth Tables}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_09/slide-034.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div data-src="img/how_to_write_truth_tables.png" class="img handout"></div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">Complex truth table example:</div><div data-src="img/tt_p_and_q_or_r.png" class="img handout"></div><div class="handout">\end{minipage}</div><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-035.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-036.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-037.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-038.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-039.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-040.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-041.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-042.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-043.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-086.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-087.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-088.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-089.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-090.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-091.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-092.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-093.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-094.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-095.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-096.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-097.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-098.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-099.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-100.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-101.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-102.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-103.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-104.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-105.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-106.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-107.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-108.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-109.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-110.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-111.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-112.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-113.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-114.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-115.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-116.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-162.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_09/slide-163.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><div class="exercises">3.12, 3.13</div><div class="exercises">4.4-4.7</div><div class="exercises">4.12-14</div><div class="exercises_fast">3.14, 3.15</div><section id="unit_161" class="slide"><img src="/img/bkg/budapest/IMG_nc_5605.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">Logic Makes Me Die Inside</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Logic Makes Me Die Inside}</div><div class="handout">\emph{Reading:}  §2.1</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Logic Makes Me Die Inside}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_09/slide-034.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div data-src="img/how_to_write_truth_tables.png" class="img handout"></div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">Complex truth table example:</div>
+        <div data-src="img/tt_p_and_q_or_r.png" class="img handout"></div>
+        <div class="handout">\end{minipage}</div>
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-035.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-036.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-037.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-038.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-039.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-040.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-041.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-042.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-043.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-086.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-087.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-088.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-089.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-090.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-091.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-092.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-093.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-094.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-095.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-096.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-097.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-098.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-099.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-100.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-101.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-102.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-103.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-104.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-105.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-106.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-107.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-108.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-109.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-110.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-111.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-112.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-113.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-114.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-115.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-116.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-162.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_09/slide-163.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">3.12, 3.13</div>
+<div class="exercises">4.4-4.7</div>
+<div class="exercises">4.12-14</div>
+<div class="exercises_fast">3.14, 3.15</div>
+<section id="unit_161" class="slide"><img src="/img/bkg/budapest/IMG_nc_5605.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Logic Makes Me Die Inside</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Logic Makes Me Die Inside}</div>
+<div class="handout">\emph{Reading:}  §2.1</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Logic Makes Me Die Inside}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_161/slide-049.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Can I logically valid argument have true premises and a false conclusion?
-Let me put this another way ...</div><div class="notes">Do you use facebook?  I’m not on it.  I already have a friend, so it didn't seem necessary.</div><div class="notes">But I was very proud to learn (from a TA) that one year some of my students set up a facebook group for logic.
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_161/slide-049.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Can I logically valid argument have true premises and a false conclusion?
+Let me put this another way ...
+        </div>
+        <div class="notes">Do you use facebook?  I’m not on it.  I already have a friend, so it didn't seem necessary.
+        </div>
+        <div class="notes">But I was very proud to learn (from a TA) that one year some of my students set up a facebook group for logic.
 How cool is that?  You love logic so much that you have a facebook group to celebrate.
-I'm like the Burial of logic lecturers ...</div></div></div></div></section><section class="slide"><img src="/img/unit_161/slide-050.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Or not.
-But let's have a closer look at the argument.</div></div></div></div></section><section class="slide"><img src="/img/unit_161/slide-051.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">One premise, one conclusion.</div></div></div></div></section><section class="slide"><img src="/img/unit_161/slide-052.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The funny thing about this argument is not just that there's a counterexample to it, ...</div></div></div></div></section><section class="slide"><img src="/img/unit_161/slide-053.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... but that the actual world is a counterexample to it.</div><div class="notes">So if you think about it, the facebook group was actually for people who love logic after all.</div><div class="notes">Earlier I asked, Can a logically valid argument have true premises and a false conclusion?</div><div class="notes">Please think about this question before writing about logic.</div></div></div></div></section><section class="slide"><div class="words"><div class="container_12"><div class="grid_6"><div class="notes">So what was logic making me die inside really about?  
-I think it was probably intended to be a response to the logical validity of two arguments, this one ...</div><table class="fitch-proof"><tr class="premise row-1"><td class="last-premise"><span class="highlight-hook">&#8203;</span></td><td></td><td><p class="sentence">P ∧ ¬P</p></td><td></td></tr><tr class="line row-2"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td></td><td><span class="sentence">Q</span></td><td></td></tr></table></div><div class="slide grid_6"><div class="notes">... and this one.</div><div class="notes">If you are really good, you'll be able to prove both arguments by the end of the course.</div><div class="notes">In fact, you could prove the argument on your left by the end of today.</div><div class="notes">In fact, let's see how to do that right away (in unit 270).</div><table class="fitch-proof"><tr class="premise row-1"><td class="last-premise"><span class="highlight-hook">&#8203;</span></td><td></td><td><p class="sentence">Q</p></td><td></td></tr><tr class="line row-2"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td></td><td><span class="sentence">P ∨ ¬P</span></td><td></td></tr></table></div></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Contradictions, Logical Truths and Logical Validity}</div><div class="handout">\emph{Reading:}  §4.1, §4.2, §5.4</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Contradictions, Logical Truths and Logical Validity}</div>
+I'm like the Burial of logic lecturers ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_161/slide-050.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Or not.
+But let's have a closer look at the argument.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_161/slide-051.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">One premise, one conclusion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_161/slide-052.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The funny thing about this argument is not just that there's a counterexample to it, ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_161/slide-053.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... but that the actual world is a counterexample to it.</div>
+        <div class="notes">So if you think about it, the facebook group was actually for people who love logic after all.</div>
+        <div class="notes">Earlier I asked, Can a logically valid argument have true premises and a false conclusion?</div>
+        <div class="notes">Please think about this question before writing about logic.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_6">
+        <div class="notes">So what was logic making me die inside really about?  
+I think it was probably intended to be a response to the logical validity of two arguments, this one ...
+        </div>
+        <table class="fitch-proof">
+          <tr class="premise row-1">
+            <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
+            <td></td>
+            <td>
+              <p class="sentence">P ∧ ¬P</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="line row-2">
+            <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+            <td></td>
+            <td><span class="sentence">Q</span></td>
+            <td>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="slide grid_6">
+        <div class="notes">... and this one.</div>
+        <div class="notes">If you are really good, you'll be able to prove both arguments by the end of the course.</div>
+        <div class="notes">In fact, you could prove the argument on your left by the end of today.</div>
+        <div class="notes">In fact, let's see how to do that right away (in unit 270).</div>
+        <table class="fitch-proof">
+          <tr class="premise row-1">
+            <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
+            <td></td>
+            <td>
+              <p class="sentence">Q</p>
+            </td>
+            <td></td>
+          </tr>
+          <tr class="line row-2">
+            <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+            <td></td>
+            <td><span class="sentence">P ∨ ¬P</span></td>
+            <td>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Contradictions, Logical Truths and Logical Validity}</div>
+<div class="handout">\emph{Reading:}  §4.1, §4.2, §5.4</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Contradictions, Logical Truths and Logical Validity}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_160/slide-142.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div data-src="img/unit_160_argument3.png" class="img handout"></div><div data-src="img/unit_160_argument3b.png" class="img handout"></div><div data-src="img/unit_160_argument4.png" class="img handout"></div><div class="handout">P $\lor{}$ ¬P is a \emph{logical truth}</div><div class="handout">logical truth defined p. 568</div><div class="handout">P $\land{}$ ¬P is a \emph{contradiction}</div><div class="handout">contradiction defined p. 564</div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-143.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-144.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-145.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-146.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-147.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-148.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-149.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-150.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-151.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-152.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-153.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-154.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-155.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-156.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-157.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-158.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-159.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-160.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-161.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-162.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-163.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-164.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-165.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_160/slide-166.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Unlike say knowledge or truth, where it’s up to you to form a view of your own to a large extent, with logical validity there is a precise and clear definition that we are working with.  Of course there are still questions about the nature of logical validity, but to get to those questions you first have to accept its definition.</div></div></div></div></section><div class="exercises">4.1, 4.2</div><div class="exercises_fast">4.1, 4.2</div><div class="exercises_fast">4.12--4.16</div></div></body></html>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_160/slide-142.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/unit_160_argument3.png" class="img handout"></div>
+        <div data-src="img/unit_160_argument3b.png" class="img handout"></div>
+        <div data-src="img/unit_160_argument4.png" class="img handout"></div>
+        <div class="handout">P $\lor{}$ ¬P is a \emph{logical truth}</div>
+        <div class="handout">logical truth defined p. 568</div>
+        <div class="handout">P $\land{}$ ¬P is a \emph{contradiction}</div>
+        <div class="handout">contradiction defined p. 564</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-143.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-144.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-145.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-146.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-147.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-148.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-149.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-150.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-151.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-152.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-153.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-154.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-155.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-156.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-157.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-158.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-159.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-160.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-161.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-162.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-163.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-164.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-165.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_160/slide-166.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Unlike say knowledge or truth, where it’s up to you to form a view of your own to a large extent, with logical validity there is a precise and clear definition that we are working with.  Of course there are still questions about the nature of logical validity, but to get to those questions you first have to accept its definition.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">4.1, 4.2</div>
+<div class="exercises_fast">4.1, 4.2</div>
+<div class="exercises_fast">4.12--4.16</div>
+    </div>
+  </body>
+</html>

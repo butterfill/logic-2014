@@ -1,3 +1,175 @@
-<html><head><!-- (c) copyright 2013 Stephen A. Butterfill--><meta charset="utf-8"/><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><title>Somebody Is Not Dead | Logic I</title><meta name="description" content="Continues discussion of how to translate sentences involving quantifiers and negation from English into our formal language awFOL?  Discusses translating 'Some person is not dead' and 'No person is dead'; also 'Every person is not dead' and 'Not every person is dead'."/><meta name="keywords" content="logic, truth, logical validity"/><meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"/><!-- - lato font--><link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/><!--if lt IE 9script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
---><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" /></head><body><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.min.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script><div class="deck-notes"><div class="deck-notes-container"></div></div><div class="deck-handout"><div class="deck-handout-container"></div></div><div class="deck-container"><section id="instructions" class="slide"><div class="words"><div class="container_12"><div class="grid_12"><div class="middle"><p class="center">Press the right key for the next slide (or swipe left)</p></div></div></div></div></section><section class="slide"><!--.notes You won't believe how many people emailed me to say the slides don't work.--><div class="words"><div class="container_12"><div class="grid_12"><p>also ...</p><p>Press the left key to go backwards (or swipe right)</p><p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p><p>Press m or double tap to see a menu of slides</p></div></div></div></section><section id="unit_607" class="slide"><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">Somebody Is Not Dead</h2></div></div></section><!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833--><!-- create title slide for a lecture--><!-- param p contains document and images (an array of images to use)--><!-- param p contains p.unit and p.images (an array of images)-->
-<!-- see also +clip to modify the clip as an animation--><!-- ------------><!-- draw things--><!-- ------------><div class="slide"><div class="handout">Some person is dead.</div><div class="handout">\hspace{5mm} ∃x(Person(x) ∧ Dead(x))</div><div class="handout">Some person is not dead.</div><div class="handout">\hspace{5mm} ∃x(Person(x) ∧ ¬Dead(x))</div><div class="handout">No person is dead.</div><div class="handout">\hspace{5mm} ¬∃x(Person(x) ∧ Dead(x))</div><div class="handout">  Every person is dead.</div><div class="handout">\hspace{5mm} ∀x(Person(x) → Dead(x))</div><div class="handout">  Every person is not dead.</div><div class="handout">\hspace{5mm}   ∀x(Person(x) → ¬Dead(x))</div><div class="handout">  Not every person is dead.</div><div class="handout">\hspace{5mm}   ¬∀x(Person(x) → Dead(x))</div><div class="words"><div class="container_12"><div class="grid_6 left-half"><p class="hidelater">Some person is dead.</p><p class="hidelater indent slide nodim">∃x(Person(x) ∧ Dead(x))</p><div class="slide nodim"><p class="hidelater em-above">Some person is not dead.</p><p class="indent slide equiv-pair1"><span>∃x(Person(x) ∧    </span><span class="negation">¬</span><span>Dead(x))</span></p></div><div class="slide nodim"><p class="hidelater em-above">No person is dead.</p><p class="indent slide equiv-pair2"><span class="negation">¬</span><span>∃x(Person(x) ∧ Dead(x))</span></p></div><div data-what=".left-half .negation" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".left-half" data-dur="5000" class="slide anim-continue anim-fade"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div><div class="grid_6 slide right-half"><p class="hidelater nodim">Every person is dead.</p><p class="hidelater indent slide nodim"><span>∀x(Person(x) → Dead(x))</span></p><p class="hidelater em-above slide nodim">Every person is not dead.</p><p class="indent slide nodim equiv-pair2"><span>∀x(Person(x) → </span><span class="negation">¬</span><span>Dead(x))</span></p><p class="hidelater em-above slide nodim">Not every person is dead.</p><p class="indent slide nodim equiv-pair1"><span class="negation">¬</span><span>∀x(Person(x) → Dead(x))</span></p><div data-what=".right-half .negation" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".left-half" class="slide anim-continue anim-show"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".hidelater" class="slide anim-continue anim-fade"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .equiv-pair1" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .equiv-pair1" data-class="bkg-words-highlight-faint-blue" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .equiv-pair2" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></div><a href="." title="Permalink to this slide" class="deck-permalink">#</a></div></div></div></body></html>
+
+<html>
+  <head>
+    <!-- (c) copyright 2013 Stephen A. Butterfill-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Somebody Is Not Dead | Logic I</title>
+    <meta name="description" content="Continues discussion of how to translate sentences involving quantifiers and negation from English into our formal language awFOL?  Discusses translating 'Some person is not dead' and 'No person is dead'; also 'Every person is not dead' and 'Not every person is dead'."/>
+    <meta name="keywords" content="logic, truth, logical validity"/>
+    <meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" />
+    <meta name="viewport" content="width=device-width"/>
+    <!-- - lato font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/>
+    <!--if lt IE 9
+    script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
+    
+    --><style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" />
+  </head>
+  <body><script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.min.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+    <div class="deck-notes">
+      <div class="deck-notes-container"></div>
+    </div>
+    <div class="deck-handout">
+      <div class="deck-handout-container"></div>
+    </div>
+    <div class="deck-container">
+      <section id="instructions" class="slide">
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <div class="middle">
+                <p class="center">Press the right key for the next slide (or swipe left)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <!--.notes You won't believe how many people emailed me to say the slides don't work.-->
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <p>also ...</p>
+              <p>Press the left key to go backwards (or swipe right)</p>
+              <p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p>
+              <p>Press m or double tap to see a menu of slides</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="unit_607" class="slide">
+        <div class="spacer">&nbsp;</div>
+        <div style="" class="title-block">
+          <div class="title-container">
+            <h2 class="title1">Somebody Is Not Dead</h2>
+          </div>
+        </div>
+      </section>
+<!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
+<!-- create title slide for a lecture-->
+<!-- param p contains document and images (an array of images to use)-->
+<!-- param p contains p.unit and p.images (an array of images)-->
+
+<!-- see also +clip to modify the clip as an animation-->
+<!-- ------------>
+<!-- draw things-->
+<!-- ------------>
+<div class="slide">
+  <div class="handout">Some person is dead.</div>
+  <div class="handout">\hspace{5mm} ∃x(Person(x) ∧ Dead(x))</div>
+  <div class="handout">Some person is not dead.</div>
+  <div class="handout">\hspace{5mm} ∃x(Person(x) ∧ ¬Dead(x))</div>
+  <div class="handout">No person is dead.</div>
+  <div class="handout">\hspace{5mm} ¬∃x(Person(x) ∧ Dead(x))</div>
+  <div class="handout">  Every person is dead.</div>
+  <div class="handout">\hspace{5mm} ∀x(Person(x) → Dead(x))</div>
+  <div class="handout">  Every person is not dead.</div>
+  <div class="handout">\hspace{5mm}   ∀x(Person(x) → ¬Dead(x))</div>
+  <div class="handout">  Not every person is dead.</div>
+  <div class="handout">\hspace{5mm}   ¬∀x(Person(x) → Dead(x))</div>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_6 left-half">
+        <p class="hidelater">Some person is dead.</p>
+        <p class="hidelater indent slide nodim">∃x(Person(x) ∧ Dead(x))</p>
+        <div class="slide nodim">
+          <p class="hidelater em-above">Some person is not dead.</p>
+          <p class="indent slide equiv-pair1"><span>∃x(Person(x) ∧    </span><span class="negation">¬</span><span>Dead(x))</span></p>
+        </div>
+        <div class="slide nodim">
+          <p class="hidelater em-above">No person is dead.</p>
+          <p class="indent slide equiv-pair2"><span class="negation">¬</span><span>∃x(Person(x) ∧ Dead(x))</span></p>
+        </div>
+        <div data-what=".left-half .negation" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".left-half" data-dur="5000" class="slide anim-continue anim-fade"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      </div>
+      <div class="grid_6 slide right-half">
+        <p class="hidelater nodim">Every person is dead.</p>
+        <p class="hidelater indent slide nodim"><span>∀x(Person(x) → Dead(x))</span></p>
+        <p class="hidelater em-above slide nodim">Every person is not dead.</p>
+        <p class="indent slide nodim equiv-pair2"><span>∀x(Person(x) → </span><span class="negation">¬</span><span>Dead(x))</span></p>
+        <p class="hidelater em-above slide nodim">Not every person is dead.</p>
+        <p class="indent slide nodim equiv-pair1"><span class="negation">¬</span><span>∀x(Person(x) → Dead(x))</span></p>
+        <div data-what=".right-half .negation" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".left-half" class="slide anim-continue anim-show"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".hidelater" class="slide anim-continue anim-fade"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .equiv-pair1" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .equiv-pair1" data-class="bkg-words-highlight-faint-blue" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .equiv-pair2" data-class="bkg-words-highlight-red" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      </div>
+    </div><a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+  </div>
+</div>
+    </div>
+  </body>
+</html>

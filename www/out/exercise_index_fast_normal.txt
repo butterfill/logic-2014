@@ -119,7 +119,7 @@
             "/ex/tt/qq/not (A or B)|not A and not B",
             "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musician1-x-is-a-musician/sentence/It’s false that Tobin and Suzi are both musicians",
             "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/It’s false that Tobin is ugly and Suzi inept",
-            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musicial1/sentence/Suzi isn’t musical and it’s false that Tobin isn’t musical",
+            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musical1/sentence/Suzi isn’t musical and it’s false that Tobin isn’t musical",
             "/ex/tt/qq/not (not A and not B)|(A and B)",
             "/ex/create/from/not (not Happy(a) and not Happy(b))/to/(Happy(a) and Happy(b))"
           ]
@@ -859,6 +859,32 @@
             "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-y’s-ancestor/sentence/Ayesha is an ancestor of everyone except herself.",
             "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-y’s-ancestor/sentence/Someone is an ancestor of everyone except herself."
           ]
+        },
+        {
+          "type": "unit",
+          "name": "There Does Not Exist",
+          "slides": "http://logic-1.butterfill.com/units/unit_605.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/scope/qq/exists x (not Red(x) and not Sad(x))|exists x not Red(x) and exists x not Sad(x)|not exists x (Red(x) and Sad(x))|not all x (Sad(x) arrow Crying(x))|all x (Sad(x) arrow not Crying(x))",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1/sentence/Ayesha is happy",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is happy",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Crying1/sentence/Ayesha is happy and crying",
+            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is happy and crying",
+            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is neither happy nor crying",
+            "/ex/create/qq/exists (x) Crying(x)",
+            "/ex/create/orValid/from/exists (x) (Happy(x) and Crying(x))/to/Happy(a) and Crying(a)",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is not happy",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/No one is happy",
+            "/ex/trans/domain/people/names/-/predicates/Broken1/sentence/Everyone is not broken",
+            "/ex/trans/domain/people/names/-/predicates/Broken1/sentence/Not everything is broken",
+            "/ex/proof/orInvalid/from/not exists x Dead(x)/to/exists x not Dead(x)",
+            "/ex/counter/orValid/from/not exists x Dead(x)/to/exists x not Dead(x)",
+            "/ex/proof/orInvalid/from/exists x not Dead(x)/to/not exists x Dead(x)",
+            "/ex/counter/orValid/from/exists x not Dead(x)/to/not exists x Dead(x)",
+            "/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)",
+            "/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)"
+          ]
         }
       ]
     },
@@ -911,32 +937,6 @@
             "/ex/proof/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Broken(x) arrow not Square(x))",
             "/ex/counter/orValid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))",
             "/ex/proof/orInvalid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))"
-          ]
-        },
-        {
-          "type": "unit",
-          "name": "There Does Not Exist",
-          "slides": "http://logic-1.butterfill.com/units/unit_605.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/scope/qq/exists x (not Red(x) and not Sad(x))|exists x not Red(x) and exists x not Sad(x)|not exists x (Red(x) and Sad(x))|not all x (Sad(x) arrow Crying(x))|all x (Sad(x) arrow not Crying(x))",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1/sentence/Ayesha is happy",
-            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is happy",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Crying1/sentence/Ayesha is happy and crying",
-            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is happy and crying",
-            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is neither happy nor crying",
-            "/ex/create/qq/exists (x) Crying(x)",
-            "/ex/create/orValid/from/exists (x) (Happy(x) and Crying(x))/to/Happy(a) and Crying(a)",
-            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is not happy",
-            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/No one is happy",
-            "/ex/trans/domain/people/names/-/predicates/Broken1/sentence/Everyone is not broken",
-            "/ex/trans/domain/people/names/-/predicates/Broken1/sentence/Not everything is broken",
-            "/ex/proof/orInvalid/from/not exists x Dead(x)/to/exists x not Dead(x)",
-            "/ex/counter/orValid/from/not exists x Dead(x)/to/exists x not Dead(x)",
-            "/ex/proof/orInvalid/from/exists x not Dead(x)/to/not exists x Dead(x)",
-            "/ex/counter/orValid/from/exists x not Dead(x)/to/not exists x Dead(x)",
-            "/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)",
-            "/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)"
           ]
         },
         {

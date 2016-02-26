@@ -616,7 +616,7 @@
             "/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))",
             "/ex/TorF/world/[{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\">\",\"|\"]}]/qq/exists x (Sad(x) and Crying(x))|all x (Sad(x) arrow Crying(x))",
             "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Something is sad and crying.",
-            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or crying.",
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or is crying.",
             "/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))",
             "/ex/create/qq/exists x LeftOf(x,a)",
             "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))",

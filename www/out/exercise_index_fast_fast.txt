@@ -768,6 +768,27 @@
             "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-y’s-ancestor/sentence/Someone is an ancestor of everyone except herself.",
             "/ex/counter/from/all y exists x StoreFor(x,y)/to/exists y all x StoreFor(y,x)"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "There Does Not Exist",
+          "slides": "http://logic-1.butterfill.com/units/unit_605.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/scope/qq/exists x (not Red(x) and not Sad(x))|exists x not Red(x) and exists x not Sad(x)|not exists x (Red(x) and Sad(x))|not all x (Sad(x) arrow Crying(x))|all x (Sad(x) arrow not Crying(x))",
+            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is happy and crying",
+            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is neither happy nor crying",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is not happy",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/No one is happy",
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Everything is not broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Not everything is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Not everything red is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Everything red is not broken",
+            "/ex/proof/orInvalid/from/not exists x Dead(x)/to/exists x not Dead(x)",
+            "/ex/proof/orInvalid/from/exists x not Dead(x)/to/not exists x Dead(x)",
+            "/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)",
+            "/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)"
+          ]
         }
       ]
     },
@@ -820,27 +841,6 @@
             "/ex/proof/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Broken(x) arrow not Square(x))",
             "/ex/counter/orValid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))",
             "/ex/proof/orInvalid/from/exists x (Square(x) or not Broken(x))/to/exists x not (not Square(x) and Broken(x))"
-          ]
-        },
-        {
-          "type": "unit",
-          "name": "There Does Not Exist",
-          "slides": "http://logic-1.butterfill.com/units/unit_605.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/scope/qq/exists x (not Red(x) and not Sad(x))|exists x not Red(x) and exists x not Sad(x)|not exists x (Red(x) and Sad(x))|not all x (Sad(x) arrow Crying(x))|all x (Sad(x) arrow not Crying(x))",
-            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is happy and crying",
-            "/ex/trans/domain/people/names/-/predicates/Happy1|Crying1/sentence/Someone is neither happy nor crying",
-            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is not happy",
-            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/No one is happy",
-            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Everything is not broken",
-            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Not everything is broken",
-            "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Not everything red is broken",
-            "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Everything red is not broken",
-            "/ex/proof/orInvalid/from/not exists x Dead(x)/to/exists x not Dead(x)",
-            "/ex/proof/orInvalid/from/exists x not Dead(x)/to/not exists x Dead(x)",
-            "/ex/create/orValid/from/not exists x Happy(x)/to/exists x not Happy(x)",
-            "/ex/create/orValid/from/exists x not Happy(x)/to/not exists x Happy(x)"
           ]
         },
         {
