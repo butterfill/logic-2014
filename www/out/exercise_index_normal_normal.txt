@@ -1459,13 +1459,6 @@
     },
     {
       "type": "lecture",
-      "name": null,
-      "slides": "http://logic-1.butterfill.com/lecture_12.handout",
-      "handout": "http://logic-1.butterfill.com/handouts/lecture_12.handout.pdf",
-      "units": []
-    },
-    {
-      "type": "lecture",
       "name": "Lecture 13",
       "slides": "http://logic-1.butterfill.com/lecture_13.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_13.handout.pdf",
@@ -1597,8 +1590,8 @@
             "/ex/trans/domain/people/names/-/predicates/Behind2-x-is-behind-y/sentence/Someone is behind everyone else",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Loves2/sentence/all x (not a=x arrow Loves(x,a))",
             "/ex/trans/domain/people/names/-/predicates/Loves2/sentence/exists y all x (not y=x arrow Loves(x,y))",
-            "/ex/proof/orInvalid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
             "/ex/counter/orValid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
+            "/ex/proof/orInvalid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
             "/ex/proof/orInvalid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
             "/ex/counter/orValid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
             "/ex/proof/orInvalid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)",
@@ -1666,6 +1659,17 @@
             "/ex/q/What does it mean to say that a system of proof is complete?",
             "/ex/TorF/qq/If we added a new rule to Fitch which allows us to get φ from φ ∨ ψ, the resulting system of proof would be sound|If we added a new rule to Fitch which allows us to get φ from φ ∨ ψ, the resulting system of proof would be complete|If we added a new rule to Fitch which allows us to get ψ from ¬φ and φ ∨ ψ, the resulting system of proof would be sound"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "Proof of the Soundness Theorem",
+          "slides": "http://logic-1.butterfill.com/units/unit_410.html",
+          "rawReading": [
+            "8.3"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/If we added to the system of proof Fitch a rule that allows introducing P to any proof in which Q and Q→¬P both occur, the resulting system of proof would be sound.|If we added to the system of proof Fitch a rule that allows introducing Q to any proof in which a subproof whose premise is P→Q and whose conclusion is ⊥ occurs, the resulting system of proof would be sound.|If we added to the system of proof Fitch a rule that allows introducing P to any proof in which a subproof whose premise is P→Q and whose conclusion is ⊥ occurs, the resulting system of proof would be sound."
+          ]
         }
       ]
     },
@@ -1700,15 +1704,25 @@
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/This is one and only one survivor",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one female survivor",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one survivor and she is female",
-            "/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
-            "/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)",
+            "/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
+            "/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y) arrow x=y) and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
             "/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
             "/ex/counter/from/exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
             "/ex/proof/from/exists x all y (Zip(y) <-> x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
             "/ex/proof/from/exists x Zip(x)|not exists x exists y (Zip(x) and Zip(y) and not x=y)/to/exists x all y (Zip(y) <-> x=y)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Proofs about Proofs",
+          "slides": "http://logic-1.butterfill.com/units/unit_440.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/qq/If ⊢ P → Q then P ⊢ Q|If ⊢ Q then P ⊢ Q|If ⊢ P → Q then ¬Q ⊢ ¬P|If P ⊢ Q and P ⊢ ¬Q then P ⊢ ⊥|If P ⊢ ⊥ then P ⊢ Q",
+            "/ex/q/Sketch a proof that if ⊢ P → Q then P ⊢ Q"
           ]
         }
       ]
@@ -1731,6 +1745,29 @@
             "/ex/proof/orInvalid/from/∃x Fish(x)/to/¬∀x¬ (Fish(x) and Swimmer(x))",
             "/ex/counter/orValid/from/∃x Fish(x)/to/¬∀x¬ (Fish(x) and Swimmer(x))"
           ]
+        },
+        {
+          "type": "unit",
+          "name": "The End Is Near",
+          "slides": "http://logic-1.butterfill.com/units/unit_790.html",
+          "rawReading": [
+            "14.3"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))",
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))",
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))",
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))|exists x (exists y Above(y,x) and all z ( exists y Above(y,z) arrow z=x))",
+            "/ex/create/qq/exists x exists y (Tall(x) and all z (Tall(z) arrow z=x) and Wide(y) and all z (Wide(z) arrow z=y) and Happy(x) and Sad(y) and Above(x,y))",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is near",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is not near",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end/sentence/There is no end",
+            "/ex/trans/domain/events/names/-/predicates/Dead1|King1/sentence/The king is dead",
+            "/ex/trans/domain/events/names/-/predicates/Beautiful1|Dead1|King1/sentence/The beautiful king is dead",
+            "/ex/proof/from/exists x (Yak(x) and all y (Yak(y) arrow x=y))/to/all x all y ((Yak(x) and Yak(y)) arrow x=y)",
+            "/ex/proof/from/exists x all y (Yak(y) <-> x=y)/to/exists x Yak(x)",
+            "/ex/proof/from/exists x Yak(x)|exists x all y (Yak(y) arrow x=y)/to/exists x all y (Yak(y) <-> x=y)"
+          ]
         }
       ]
     },
@@ -1739,7 +1776,30 @@
       "name": "Lecture 18",
       "slides": "http://logic-1.butterfill.com/lecture_18.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_18.handout.pdf",
-      "units": []
+      "units": [
+        {
+          "type": "unit",
+          "name": "Proofs about Proofs",
+          "slides": "http://logic-1.butterfill.com/units/unit_440.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/qq/If ⊢ P → Q then P ⊢ Q|If ⊢ Q then P ⊢ Q|If ⊢ P → Q then ¬Q ⊢ ¬P|If P ⊢ Q and P ⊢ ¬Q then P ⊢ ⊥|If P ⊢ ⊥ then P ⊢ Q",
+            "/ex/q/Sketch a proof that if ⊢ P → Q then P ⊢ Q"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Lemma for the Completeness Theorem",
+          "slides": "http://logic-1.butterfill.com/units/unit_453.html",
+          "rawReading": [
+            "8.3"
+          ],
+          "rawExercises": [
+            "/ex/q/Suppose that, for every sentence R which is shorter than ¬P, either ⊢R or ⊢¬R.  Show that ⊢¬P or ⊢¬¬P.",
+            "/ex/q/Suppose that, for every sentence R which is shorter than P∨Q, either ⊢R or ⊢¬R.  Show that ⊢P∨Q or ⊢¬(P∨Q)."
+          ]
+        }
+      ]
     }
   ]
 }

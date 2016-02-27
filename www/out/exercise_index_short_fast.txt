@@ -724,10 +724,10 @@
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/This is one and only one survivor",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one female survivor",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one survivor and she is female",
-            "/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
-            "/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)",
+            "/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
+            "/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y) arrow x=y) and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))",
             "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
             "/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
             "/ex/counter/from/exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
@@ -985,6 +985,26 @@
             "/ex/create/orValid/from/¬∃x Happy(x)/to/∀x ¬Happy(x)",
             "/ex/create/orValid/from/¬∃x Happy(x)/to/¬∀x ¬Happy(x)",
             "/ex/create/orValid/from/¬∃x Happy(x)/to/¬∀x Happy(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "The End Is Near",
+          "slides": "http://logic-1.butterfill.com/units/unit_790.html",
+          "rawReading": [
+            "14.3"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))|exists x (exists y Above(y,x) and all z ( exists y Above(y,z) arrow z=x))",
+            "/ex/create/qq/exists x exists y (Tall(x) and all z (Tall(z) arrow z=x) and Wide(y) and all z (Wide(z) arrow z=y) and Happy(x) and Sad(y) and Above(x,y))",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is near",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is not near",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end/sentence/There is no end",
+            "/ex/trans/domain/events/names/-/predicates/Dead1|King1/sentence/The king is dead",
+            "/ex/trans/domain/events/names/-/predicates/Beautiful1|Dead1|King1/sentence/The beautiful king is dead",
+            "/ex/proof/from/exists x (Yak(x) and all y (Yak(y) arrow x=y))/to/all x all y ((Yak(x) and Yak(y)) arrow x=y)",
+            "/ex/proof/from/exists x all y (Yak(y) <-> x=y)/to/exists x Yak(x)",
+            "/ex/proof/from/exists x Yak(x)|exists x all y (Yak(y) arrow x=y)/to/exists x all y (Yak(y) <-> x=y)"
           ]
         }
       ]

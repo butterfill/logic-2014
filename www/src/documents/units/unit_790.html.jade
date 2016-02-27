@@ -11,19 +11,38 @@ exercises: ['14.26, 14.28']
 exercises_fast: ['14.2', '14.4, 14.5', '14.10, 14.11', '14.26, 14.28']
 sequence: 1040
 exNormal : [
-  # TODO : check exercises from textbook!
+  
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))'
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))'
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))'
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))|exists x (exists y Above(y,x) and all z ( exists y Above(y,z) arrow z=x))'
+
+  '/ex/create/qq/exists x exists y (Tall(x) and all z (Tall(z) arrow z=x) and Wide(y) and all z (Wide(z) arrow z=y) and Happy(x) and Sad(y) and Above(x,y))'
+      
   '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is near'
   '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is not near'
   '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end/sentence/There is no end'
   '/ex/trans/domain/events/names/-/predicates/Dead1|King1/sentence/The king is dead'
   '/ex/trans/domain/events/names/-/predicates/Beautiful1|Dead1|King1/sentence/The beautiful king is dead'
+  
+  '/ex/proof/from/exists x (Yak(x) and all y (Yak(y) arrow x=y))/to/all x all y ((Yak(x) and Yak(y)) arrow x=y)'
+  '/ex/proof/from/exists x all y (Yak(y) <-> x=y)/to/exists x Yak(x)'
+  '/ex/proof/from/exists x Yak(x)|exists x all y (Yak(y) arrow x=y)/to/exists x all y (Yak(y) <-> x=y)'
 ]
 exFast : [
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))|exists x (exists y Above(y,x) and all z ( exists y Above(y,z) arrow z=x))'
+  
+  '/ex/create/qq/exists x exists y (Tall(x) and all z (Tall(z) arrow z=x) and Wide(y) and all z (Wide(z) arrow z=y) and Happy(x) and Sad(y) and Above(x,y))'
+    
   '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is near'
   '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is not near'
   '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end/sentence/There is no end'
   '/ex/trans/domain/events/names/-/predicates/Dead1|King1/sentence/The king is dead'
   '/ex/trans/domain/events/names/-/predicates/Beautiful1|Dead1|King1/sentence/The beautiful king is dead'
+
+  '/ex/proof/from/exists x (Yak(x) and all y (Yak(y) arrow x=y))/to/all x all y ((Yak(x) and Yak(y)) arrow x=y)'
+  '/ex/proof/from/exists x all y (Yak(y) <-> x=y)/to/exists x Yak(x)'
+  '/ex/proof/from/exists x Yak(x)|exists x all y (Yak(y) arrow x=y)/to/exists x all y (Yak(y) <-> x=y)'
 ]
 ---
 

@@ -16,11 +16,11 @@ exNormal : [
   '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one female survivor'
   '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one survivor and she is female'
   
-  '/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
-  '/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)'
+  '/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  '/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y) arrow x=y) and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))'
   
   '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))'
-  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))'
   '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
   
   '/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
@@ -35,11 +35,11 @@ exFast : [
   '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one female survivor'
   '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one survivor and she is female'
   
-  '/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
-  '/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)'
+  '/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  '/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y) arrow x=y) and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))'
   
   '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))'
-  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y))) arrow x=y)'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))'
   '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
   
   '/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
