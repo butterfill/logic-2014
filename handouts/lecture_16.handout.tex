@@ -74,6 +74,30 @@ Readings refer to sections of the course textbook, \emph{Language, Proof and Log
  
  
  
+\section{There Is Exactly One}
+ 
+There is one creator (at least one, maybe more).
+ 
+\hspace{3mm} ∃x Creator(x)
+ 
+Ahura Mazda is the one and only creator.
+ 
+\hspace{3mm} Creator(a) ∧ ∀x( Creator(x) → x=a )
+ 
+All squares are broken.
+ 
+\hspace{3mm} ∀x( Sqr(x) → Brkn(x) )
+ 
+There is one and only one creator.
+ 
+\hspace{3mm} ∃y( Creator(y) ∧ ∀x( Creator(x) → x=y ) )
+ 
+\hspace{3mm} or:
+ 
+\hspace{3mm} ∃y ∀x( Creator(x) ↔ x=y )
+ 
+ 
+ 
 \section{Every Time I Go to the Dentist Someone Dies}
  
 \emph{Reading:} §11.2
@@ -90,30 +114,6 @@ Readings refer to sections of the course textbook, \emph{Language, Proof and Log
  
  
  
-\section{There Is Exactly One}
- 
-There is one creator (at least one, maybe more).
- 
-\hspace{3mm} ∃x Creator(x)
- 
-Brian is the one and only creator.
- 
-\hspace{3mm} Creator(b) ∧ ∀x( Creator(x) → x=b )
- 
-All squares are broken.
- 
-\hspace{3mm} ∀x( Sqr(x) → Brkn(x) )
- 
-There is one and only one creator.
- 
-\hspace{3mm} ∃y( Creator(y) ∧ ∀x( Creator(x) → x=y ) )
- 
-\hspace{3mm} or:
- 
-\hspace{3mm} ∃y ∀x( Creator(x) ↔ x=y )
- 
- 
- 
 \section{Could There Be Nothing?}
  
 \emph{Reading:} §13.2
@@ -126,15 +126,6 @@ There is one and only one creator.
 \end{center}
 \begin{center}
 \includegraphics[scale=0.3]{img/uni_805_proof3.png}
-\end{center}
- 
- 
-\section{The Essence of the Completeness Theorem}
- 
-\emph{Reading:} §8.3
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_450.png}
 \end{center}
  
  
@@ -155,8 +146,8 @@ Proof Given a proof for A $\vdash$ B …
 \includegraphics[scale=0.3]{img/unit_440_b.png}
 \end{center}
 \end{minipage}
- 
-\textbf{If $\vdash$ A→B then A $\vdash$ B}
+
+\vfill 
  
 \begin{minipage}{\columnwidth}
  
@@ -190,38 +181,13 @@ These two arguments are valid: does that mean that `if' means what `→' means?
  
 \begin{minipage}{\columnwidth}
  
-The English argument isn't valid; the FOL argument is valid; therefore `if' can't mean what `→' means?
+The English argument isn't valid; the awFOL argument is valid; therefore `if' can't mean what `→' means?
  
 \begin{center}
 \includegraphics[scale=0.3]{img/if_aint_arrow.png}
 \end{center}
 \end{minipage}
  
- 
- 
-\section{Proof Example: ∃x Dead(x) $\vdash$ ¬∀x¬ Dead(x).}
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_825_proof.png}
-\end{center}
- 
- 
-\section{Proof Example: ¬∀x Dead(x) $\vdash$ ∃x¬ Dead(x).}
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_826_proof.png}
-\end{center}
-\vfill
-\begin{minipage}{\columnwidth}
-\section{Exercises}
-These exercises will be discussed in seminars the week after this lecture.
-The numbers below refer to the numbered exercises in the course textbook, e.g.\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}. Exercises marked `*' are optional.
- 
-\begin{quote}
-14.10--14.12, *14.13
- 
-\end{quote}
-\end{minipage}
 %--- end paste
 %--------------- 
  

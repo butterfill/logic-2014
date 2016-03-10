@@ -3,6 +3,7 @@ layout: 'default'
 title: 'Fast Lecture 07'
 lecture_date: '2016/3/1'
 units: []
+recording: 'https://lecturecapture.warwick.ac.uk/ess/echo/presentation/94aa43ef-cbf2-4360-8b5d-24fc87406bff'
 ---
 
 
@@ -22,17 +23,26 @@ include ../../fragments/unit_mixins
 +title_slide({document:document, images:images})
 
 
-
-
-
 //- unit: every time I go to the dentist
 +insert_unit({unit:'750', title_slide:false, images:images})
+
+//- Truth-functional completeness (430)
++insert_unit({unit:'430', title_slide:true, images:images})
+
+
 
   //- *cut in 2012-13 (I get the sense they understand this)
     //- Quantifier equivalences: ∀x(Square(x) → Broken(x)) ⫤⊨ ¬∃x(Square(x) ∧ ¬Broken(x)) 
     - d = get_unit(770)
       mixin section({unit:d, images:images})
       mixin render_unit(d)
+
+
+
+
+//- proofs about proofs
++insert_unit({unit:'440', title_slide:true, images:images})
+  
 
 
 //- --------------------------------------------------
@@ -61,9 +71,6 @@ include ../../fragments/unit_mixins
 //- outline of completeness theorem
 +insert_unit({unit:'450', title_slide:true, images:images})
 
-//- proofs about proofs
-+insert_unit({unit:'440', title_slide:true, images:images})
-  
 //- lemma for completeness
 +insert_unit({unit:'453', title_slide:true, images:images})
 

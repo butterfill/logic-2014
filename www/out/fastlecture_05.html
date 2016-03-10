@@ -1,39 +1,2736 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg"><head><!-- (c) copyright 2013 Stephen A. Butterfill--><meta charset="utf-8"/><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><title>Fast Lecture 05 | Logic I</title><meta name="description" content="Notes for lectures on Logic I (PH126 and PH133), an introduction to predicate logic."/><meta name="keywords" content="logic, truth, logical validity"/><meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"/><!-- - fonts--><link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/><!--if lt IE 9script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
---><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" /></head><body><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/jquery.crSplineBkg.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.custom.01932.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script><div class="deck-notes"><div class="deck-notes-container"></div></div><div class="deck-handout"><div class="deck-handout-container"></div></div><div class="deck-container"><section id="instructions" class="slide"><div class="words"><div class="container_12"><div class="grid_12"><div class="middle"><p class="center">Press the right key for the next slide (or swipe left)</p></div></div></div></div></section><section class="slide"><!-- .notes You won't believe how many people emailed me to say the slides don't work.--><div class="words"><div class="container_12"><div class="grid_12"><p>also ...</p><p>Press the left key to go backwards (or swipe right)</p><p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p><p>Press m or double tap to see a menu of slides</p></div></div></div></section>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+  <head>
+    <!-- (c) copyright 2013 Stephen A. Butterfill-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Fast Lecture 05 | Logic I</title>
+    <meta name="description" content="Notes for lectures on Logic I (PH126 and PH133), an introduction to predicate logic."/>
+    <meta name="keywords" content="logic, truth, logical validity"/>
+    <meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" />
+    <meta name="viewport" content="width=device-width"/>
+    <!-- - fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/>
+    <!--if lt IE 9
+    script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
+    
+    --><style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" />
+  </head>
+  <body><script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/jquery.crSplineBkg.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.custom.01932.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+    <div class="deck-notes">
+      <div class="deck-notes-container"></div>
+    </div>
+    <div class="deck-handout">
+      <div class="deck-handout-container"></div>
+    </div>
+    <div class="deck-container">
+      <section id="instructions" class="slide">
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <div class="middle">
+                <p class="center">Press the right key for the next slide (or swipe left)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <!-- .notes You won't believe how many people emailed me to say the slides don't work.-->
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <p>also ...</p>
+              <p>Press the left key to go backwards (or swipe right)</p>
+              <p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p>
+              <p>Press m or double tap to see a menu of slides</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><div class="notes notes-header-tex">\title {Logic I \\ Fast Lecture 05}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\maketitle</div><div id="title-slide" class="slide"><img src="/img/bkg/keyhaven/aDSC_AC_0044.low.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div class="fade-in"><div style="position:relative; top:325px" class="title-block"><div class="title-container"><h1 class="title1 fade-in">Logic I</h1><h1 class="title2 fade-in">Fast Lecture 05</h1><h3 class="email fade-in">s.butterfill@warwick.ac.uk</h3></div></div></div><div class="handout">\def \ititle {Logic I}</div><div class="handout">\def \isubtitle {Fast Lecture 05}</div><div class="handout">\begin{center}</div><div class="handout">{\Large</div><div class="handout">\textbf{\ititle}: \isubtitle</div><div class="handout">}</div><div class="handout">&nbsp;</div><div class="handout">\iemail %<s.butterfill@warwick.ac.uk></div><div class="handout">\end{center}</div><div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div></div><div class="exercises_fast">13.28--13.31</div><div class="handout">&nbsp;</div><div class="handout">\section{Vegetarians Are Evil}</div><div class="handout">\emph{Reading:}  §9.2, §9.3, §9.5</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Vegetarians Are Evil}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<div class="notes notes-header-tex">\title {Logic I \\ Fast Lecture 05}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\maketitle</div>
+<div id="title-slide" class="slide"><img src="/img/bkg/keyhaven/aDSC_AC_0044.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div class="fade-in">
+    <div style="position:relative; top:325px" class="title-block">
+      <div class="title-container">
+        <h1 class="title1 fade-in">Logic I</h1>
+        <h1 class="title2 fade-in">Fast Lecture 05</h1>
+        <h3 class="email fade-in">s.butterfill@warwick.ac.uk</h3>
+      </div>
+    </div>
+  </div>
+  <div class="handout">\def \ititle {Logic I}</div>
+  <div class="handout">\def \isubtitle {Fast Lecture 05}</div>
+  <div class="handout">\begin{center}</div>
+  <div class="handout">{\Large</div>
+  <div class="handout">\textbf{\ititle}: \isubtitle</div>
+  <div class="handout">}</div>
+  <div class="handout">&nbsp;</div>
+  <div class="handout">\iemail %<s.butterfill@warwick.ac.uk></div>
+  <div class="handout">\end{center}</div>
+  <div class="handout">Readings refer to sections of the course textbook, \emph{Language, Proof and Logic}.</div>
+</div>
+<div class="exercises_fast">13.28--13.31</div>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Vegetarians Are Evil}</div>
+<div class="handout">\emph{Reading:}  §9.2, §9.3, §9.5</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Vegetarians Are Evil}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_502/slide-031.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div data-src="img/vegetarians.png" class="handout img"></div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-032.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-033.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-034.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-035.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-036.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-037.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-038.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-039.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-040.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-041.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-042.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-043.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-044.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-045.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-046.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-047.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-048.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-049.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-050.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-051.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-052.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-053.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_502/slide-054.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><section id="unit_502b" class="slide"><img src="/img/bkg/keyhaven/DSC_AB_9925.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">Counterexamples with Quantifiers</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Counterexamples with Quantifiers}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Counterexamples with Quantifiers}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_502/slide-031.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div data-src="img/vegetarians.png" class="handout img"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-032.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-033.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-034.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-035.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-036.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-037.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-038.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-039.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-040.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-041.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-042.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-043.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-044.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-045.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-046.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-047.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-048.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-049.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-050.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-051.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-052.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-053.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_502/slide-054.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_502b" class="slide"><img src="/img/bkg/keyhaven/DSC_AB_9925.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Counterexamples with Quantifiers</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Counterexamples with Quantifiers}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Counterexamples with Quantifiers}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_502/slide-054.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div data-src="img/unit_502b_counterexample.png" class="handout img"></div><div class="notes"> </div><div class="slide"><table style="margin-top:250px" class="data"><thead><tr><td> </td><td class="center">Evil(x)</td><td class="center">HatesMeat(x)</td><td class="center">Vegetarian(x)</td></tr></thead><tbody> <tr class="odd"><td>Ayesha (a)</td><td class="center"><span class="step2 hide">no</span></td><td class="center"><span class="step3a hide">?</span><span class="step3b hide">no</span></td><td class="center"><span class="step1 hide">yes</span></td></tr></tbody></table><div id="truth-tables2" style="padding-top:10px" class="truth-table-arrow hide"><table class="truth-table"><tr><td><span class="col-1">A</span></td><td><span class="col-2">B</span></td><td class="result-col"><span class="result-col-1">A → B</span></td></tr><tr class="row-1"><td><span class="highlight-hook">&#8203;</span><span>T</span></td><td><span>T</span></td><td class="result-col"><span class="result-col-1">T</span></td></tr><tr class="row-2"><td><span class="highlight-hook">&#8203;</span><span>T</span></td><td><span>F</span></td><td class="result-col"><span class="result-col-1">F</span></td></tr><tr class="row-3"><td><span class="highlight-hook">&#8203;</span><span>F</span></td><td><span>T</span></td><td class="result-col"><span class="result-col-1">T</span></td></tr><tr class="row-4"><td><span class="highlight-hook">&#8203;</span><span>F</span></td><td><span>F</span></td><td class="result-col"><span class="result-col-1">T</span></td></tr></table></div><div style="position: absolute; top:0; left:0; width:100%; height:100%;"><div class="words"><div class="container_12"><div class="grid_8">  <p>&nbsp;</p></div><div class="grid_4"><div class="sentence1 hide"><p>Evil(a) → HatesMeat(a) </p></div><div class="sentence2 hide"><p>HatesMeat(a) → Vegetarian(a)</p></div><div class="sentence3 hide"> <p>Vegetarian(a) → Evil(a)</p></div></div></div></div></div><div data-what=".step1" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".sentence3" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".truth-table-arrow" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what="#truth-tables2 .truth-table .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what="#truth-tables2 .truth-table .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step3a" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".sentence3" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what=".sentence1" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what="#truth-tables2 .truth-table .row-3 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div><div data-what="#truth-tables2 .truth-table .row-4 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what="#truth-tables2 .truth-table .row-3 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div><div data-what="#truth-tables2 .truth-table .row-4 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".sentence1" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what=".sentence2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what="#truth-tables2 .truth-table .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div><div data-what="#truth-tables2 .truth-table .row-3 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what="#truth-tables2 .truth-table .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div><div data-what="#truth-tables2 .truth-table .row-3 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step3a" data-class="hide" class="slide anim-continue anim-addclass"></div><div data-what=".sentence2" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what=".truth-table-arrow" data-attr="-webkit-filter:blur(2px)" class="slide anim-continue anim-attribute"></div><div data-what=".step3b" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">No lectures or seminars in reading week (Week 6).</p></div></div></div></div></section><section id="unit_740" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0013.low.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="position:relative; top:425px" class="title-block"><div class="title-container"><h2 class="title1">Something Is Above Something</h2></div></div></section><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Something Is Above Something}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_502/slide-054.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div data-src="img/unit_502b_counterexample.png" class="handout img"></div>
+        <div class="notes"> </div>
+        <div class="slide">
+          <table style="margin-top:250px" class="data">
+            <thead>
+              <tr>
+                <td> </td>
+                <td class="center">Evil(x)</td>
+                <td class="center">HatesMeat(x)</td>
+                <td class="center">Vegetarian(x)</td>
+              </tr>
+            </thead>
+            <tbody> 
+              <tr class="odd">
+                <td>Ayesha (a)</td>
+                <td class="center"><span class="step2 hide">no</span></td>
+                <td class="center"><span class="step3a hide">?</span><span class="step3b hide">no</span></td>
+                <td class="center"><span class="step1 hide">yes</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="truth-tables2" style="padding-top:10px" class="truth-table-arrow hide">
+            <table class="truth-table">
+              <tr>
+                <td><span class="col-1">A</span></td>
+                <td><span class="col-2">B</span></td>
+                <td class="result-col"><span class="result-col-1">A → B</span></td>
+              </tr>
+              <tr class="row-1">
+                <td><span class="highlight-hook">&#8203;</span><span>T</span>
+                </td>
+                <td><span>T</span>
+                </td>
+                <td class="result-col"><span class="result-col-1">T</span></td>
+              </tr>
+              <tr class="row-2">
+                <td><span class="highlight-hook">&#8203;</span><span>T</span>
+                </td>
+                <td><span>F</span>
+                </td>
+                <td class="result-col"><span class="result-col-1">F</span></td>
+              </tr>
+              <tr class="row-3">
+                <td><span class="highlight-hook">&#8203;</span><span>F</span>
+                </td>
+                <td><span>T</span>
+                </td>
+                <td class="result-col"><span class="result-col-1">T</span></td>
+              </tr>
+              <tr class="row-4">
+                <td><span class="highlight-hook">&#8203;</span><span>F</span>
+                </td>
+                <td><span>F</span>
+                </td>
+                <td class="result-col"><span class="result-col-1">T</span></td>
+              </tr>
+            </table>
+          </div>
+          <div style="position: absolute; top:0; left:0; width:100%; height:100%;">
+            <div class="words">
+              <div class="container_12">
+                <div class="grid_8">  
+                  <p>&nbsp;</p>
+                </div>
+                <div class="grid_4">
+                  <div class="sentence1 hide">
+                    <p>Evil(a) → HatesMeat(a) </p>
+                  </div>
+                  <div class="sentence2 hide">
+                    <p>HatesMeat(a) → Vegetarian(a)</p>
+                  </div>
+                  <div class="sentence3 hide"> 
+                    <p>Vegetarian(a) → Evil(a)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-what=".step1" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what=".step2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what=".sentence3" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what=".truth-table-arrow" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what=".step3a" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what=".sentence3" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+          <div data-what=".sentence1" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-3 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-4 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-3 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-4 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what=".sentence1" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+          <div data-what=".sentence2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-3 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#truth-tables2 .truth-table .row-3 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+          <div data-what=".step3a" data-class="hide" class="slide anim-continue anim-addclass"></div>
+          <div data-what=".sentence2" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+          <div data-what=".truth-table-arrow" data-attr="-webkit-filter:blur(2px)" class="slide anim-continue anim-attribute"></div>
+          <div data-what=".step3b" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">No lectures or seminars in reading week (Week 6).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_740" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0013.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Something Is Above Something</h2>
+    </div>
+  </div>
+</section>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Something Is Above Something}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_740/slide-038.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So how can we start thinking about sentences with multiple quantifiers in our formal language, awFOL?</div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">Something is above something:</div><div class="handout">\hspace{3mm} ∃x ∃y Above(x,y)</div><div class="handout">\end{minipage}</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-039.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here's a very simple possible situation in which b is above a.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-040.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now suppose that we lost the name a.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-041.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Actually, we didn't really lose it.  There were some terrorists, the logical equivalent of Hezbollah,
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_740/slide-038.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So how can we start thinking about sentences with multiple quantifiers in our formal language, awFOL?</div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">Something is above something:</div>
+        <div class="handout">\hspace{3mm} ∃x ∃y Above(x,y)</div>
+        <div class="handout">\end{minipage}</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-039.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here's a very simple possible situation in which b is above a.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-040.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now suppose that we lost the name a.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-041.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Actually, we didn't really lose it.  There were some terrorists, the logical equivalent of Hezbollah,
 (here they are pictured in Southern Lebanon looking all military and disciplined)
 and they were taking a break from doing their good work for Bashar Assad in his war on Syria
 and Bashar had given them some cool weapons 
-and they were like, let's destroy the name a.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-042.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And so they did.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-043.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So we can't say b is above a anymore.  We can only say that b is above something.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-044.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Luckily we know how to do this.  We just drop the a, replace it with a variable (in this case, y), and add an existential quantifier.</div><div class="notes">Why existential?  Because we're talking about something, not everything.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-045.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But look what happened next.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-046.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This time is wasn't Hezbollah.</div><div class="notes">It was my terrible twins, just back from training with the taliban. 
-(You may laugh but it's just very hard to get quality childcare without religion these days.)</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-047.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Yes, and they destroyed the name b.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-048.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">So now we can't name that object either, we can only say that something is above something.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-049.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But, look, we already know how to do this.  We just remove the name b from the sentence we last had, replace it with a variable (in this case, x) and add an existential quantifer out the front.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-050.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now we've got a sentence with multiple quanifiers without doing anything new, just replacing names with quantifiers.</div><div class="notes">Let's consider translation the other way, from awFOL back to English.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-051.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Do we understand this sentence of awFOL?</div><div class="notes">Well, is it true in this possible situation?</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-052.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And is it true in this possible situation?  How do we know?</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-053.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Take this possible situation first.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-054.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">There is a procedure for determining the truth or falsity of an existentially quantified sentence.</div><div class="notes">We first give every object a name.</div><div class="notes">In this  possible situation there are two objects so there we assign two names.</div><div class="notes">(Look, here are a and b again.   I guess they weren't destroyed forever.  Maybe we had a little war on terror and got them back.)</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-055.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Then we make new sentences by removing an existential quantifier and replacing the variable with each name in turn.</div><div class="notes">Look here: two objects so two names so two sentences.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-056.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now if either of these are true, ...</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-057.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... then so is the sentence we started with, ∃x ∃y Above(x,y).</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-058.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But what does it take for one of these to be true?</div><div class="notes">Consider the second.</div><div class="notes">To work out whether it's true  we have to apply the same procedure again.</div><div class="notes">The first step is to give everything a name, but since everything already has a name there's nothing we need to do.</div><div class="notes">Then we make new sentences by removing an existential quantifier and replacing the variable with each name in turn.</div><div class="notes">This gives us these new sentences, Above(b,a) and Above(b,b)</div><div class="notes">Now if either of these are true, then so is the sentence we started with, ∃y Above(b,y).</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-059.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But the first of these is true!</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-060.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This tells us that ∃y Above(b,y) is true.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-061.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And that tells us that ∃x ∃y Above(x,y) is true as well.</div><div class="notes">This is how we can understand sentences of awFOL involving multiple quantifiers.</div><div class="notes">To work out whether they are true, we apply the procedure for determining the truth of an existentially quantified statement removing just one quantifer.</div><div class="notes">And we keep applying these procedures until not quantifiers are left.</div><div class="notes">This is much like doing complex truth-tables.</div><div class="notes">Magic, no?</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-062.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">If you've been following along you should be able to do the same in any other possible situation like this one.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-063.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The procedure has three steps.  First ... well, you know what the procedure is.</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-064.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">You do things ...</div></div></div></div></section><section class="slide"><img src="/img/unit_740/slide-065.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">... and you can see whether the sentence is true or false.</div></div></div></div></section><div class="exercises_fast">11.2, 11.4</div><section id="unit_742" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0074.low.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="position:relative; top:425px" class="title-block"><div class="title-container"><h2 class="title1">Multiple Quantifiers: Everyone Likes Puffins</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Multiple Quantifiers: Everyone Likes Puffins}</div><div class="handout">\emph{Reading:}  §11.1</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Multiple Quantifiers: Everyone Likes Puffins}</div>
+and they were like, let's destroy the name a.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-042.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And so they did.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-043.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So we can't say b is above a anymore.  We can only say that b is above something.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-044.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Luckily we know how to do this.  We just drop the a, replace it with a variable (in this case, y), and add an existential quantifier.</div>
+        <div class="notes">Why existential?  Because we're talking about something, not everything.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-045.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But look what happened next.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-046.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This time is wasn't Hezbollah.</div>
+        <div class="notes">It was my terrible twins, just back from training with the taliban. 
+(You may laugh but it's just very hard to get quality childcare without religion these days.)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-047.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Yes, and they destroyed the name b.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-048.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">So now we can't name that object either, we can only say that something is above something.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-049.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But, look, we already know how to do this.  We just remove the name b from the sentence we last had, replace it with a variable (in this case, x) and add an existential quantifer out the front.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-050.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now we've got a sentence with multiple quanifiers without doing anything new, just replacing names with quantifiers.</div>
+        <div class="notes">Let's consider translation the other way, from awFOL back to English.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-051.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Do we understand this sentence of awFOL?</div>
+        <div class="notes">Well, is it true in this possible situation?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-052.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And is it true in this possible situation?  How do we know?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-053.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Take this possible situation first.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-054.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">There is a procedure for determining the truth or falsity of an existentially quantified sentence.</div>
+        <div class="notes">We first give every object a name.</div>
+        <div class="notes">In this  possible situation there are two objects so there we assign two names.</div>
+        <div class="notes">(Look, here are a and b again.   I guess they weren't destroyed forever.  Maybe we had a little war on terror and got them back.)</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-055.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Then we make new sentences by removing an existential quantifier and replacing the variable with each name in turn.</div>
+        <div class="notes">Look here: two objects so two names so two sentences.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-056.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now if either of these are true, ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-057.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... then so is the sentence we started with, ∃x ∃y Above(x,y).</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-058.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But what does it take for one of these to be true?</div>
+        <div class="notes">Consider the second.</div>
+        <div class="notes">To work out whether it's true  we have to apply the same procedure again.</div>
+        <div class="notes">The first step is to give everything a name, but since everything already has a name there's nothing we need to do.</div>
+        <div class="notes">Then we make new sentences by removing an existential quantifier and replacing the variable with each name in turn.</div>
+        <div class="notes">This gives us these new sentences, Above(b,a) and Above(b,b)</div>
+        <div class="notes">Now if either of these are true, then so is the sentence we started with, ∃y Above(b,y).</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-059.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But the first of these is true!</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-060.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This tells us that ∃y Above(b,y) is true.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-061.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And that tells us that ∃x ∃y Above(x,y) is true as well.</div>
+        <div class="notes">This is how we can understand sentences of awFOL involving multiple quantifiers.</div>
+        <div class="notes">To work out whether they are true, we apply the procedure for determining the truth of an existentially quantified statement removing just one quantifer.</div>
+        <div class="notes">And we keep applying these procedures until not quantifiers are left.</div>
+        <div class="notes">This is much like doing complex truth-tables.</div>
+        <div class="notes">Magic, no?</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-062.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">If you've been following along you should be able to do the same in any other possible situation like this one.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-063.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The procedure has three steps.  First ... well, you know what the procedure is.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-064.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">You do things ...</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_740/slide-065.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">... and you can see whether the sentence is true or false.</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises_fast">11.2, 11.4</div>
+<section id="unit_742" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0074.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Multiple Quantifiers: Everyone Likes Puffins</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Multiple Quantifiers: Everyone Likes Puffins}</div>
+<div class="handout">\emph{Reading:}  §11.1</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Multiple Quantifiers: Everyone Likes Puffins}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_742/slide-015.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div class="handout">I like puffins:</div><div class="handout">\hspace{3mm}  ∀x ( Puffin(x) → Likes(a,x) )</div><div class="handout">y likes puffins:</div><div class="handout">\hspace{3mm} ∀x ( Puffin(x) → Likes(y,x) )</div><div class="handout">Everyone likes puffins:</div><div class="handout">\hspace{3mm} ∀y ∀x ( Puffin(x) → Likes(y,x) )</div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-016.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-017.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-018.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-019.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-020.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-021.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-022.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-023.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-024.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-025.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-026.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-027.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-028.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-029.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-030.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-031.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_742/slide-032.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><div class="exercises">11.2</div><section id="unit_125" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0088.low.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="position:relative; top:425px" class="title-block"><div class="title-container"><h2 class="title1">Relations: Transitivity</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Relations: Transitivity}</div><div class="handout">\emph{Reading:}  §15.1, §15.6</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Relations: Transitivity}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_742/slide-015.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div class="handout">I like puffins:</div>
+        <div class="handout">\hspace{3mm}  ∀x ( Puffin(x) → Likes(a,x) )</div>
+        <div class="handout">y likes puffins:</div>
+        <div class="handout">\hspace{3mm} ∀x ( Puffin(x) → Likes(y,x) )</div>
+        <div class="handout">Everyone likes puffins:</div>
+        <div class="handout">\hspace{3mm} ∀y ∀x ( Puffin(x) → Likes(y,x) )</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-016.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-017.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-018.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-019.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-020.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-021.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-022.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-023.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-024.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-025.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-026.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-027.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-028.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-029.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-030.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-031.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_742/slide-032.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">11.2</div>
+<section id="unit_125" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0088.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Relations: Transitivity</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Relations: Transitivity}</div>
+<div class="handout">\emph{Reading:}  §15.1, §15.6</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Relations: Transitivity}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_125/slide-173.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div class="handout">A \emph{transitive} relation is one such that if x bears it to y and y bears it to z then x bears it to z.  (E.g. LeftOf is transitive; NotAdjacent is not transitive.)</div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">If NotAdjacent were transitive, the following argument would be logically valid:</div><div data-src="img/unit_125_argument.png" class="handout img"></div><div class="handout">\end{minipage}</div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">A counterexample to this argument:</div><div data-src="img/unit_125_counterexample.png" class="handout img"></div><div class="handout">\end{minipage}</div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-174.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-175.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-176.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-177.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-178.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-179.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-180.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-181.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-182.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-183.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-184.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_125/slide-185.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">express the counterexample formally</p></div></div></div></div></section><section class="slide"><img src="/img/unit_125/world1.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="container_12"><div class="grid_7"><p>&nbsp;</p></div><div class="grid_5"><p>Domain</p><p class="step2 hide indent">{0, 1, 2}</p><p class="em-above">Names</p><p class="step3 hide indent">a : 0</p><p class="step4 hide indent">b : 1</p><p class="step5 hide indent">c : 2</p><p class="em-above"><span class="predicates">Predicates</span></p><p class="indent step6 hide">NotAdjacent : {</p><p class="indent hide"><0,1>, <1,2>, </p><p class="indent hide"><1,0>, <2,1> </p><p class="indent step6 hide">}</p></div></div><div data-what=".step2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step3" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step4" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step5" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .predicates" data-class="bkg-words-highlight-invert" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step6" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></div></div></section><section class="slide"><img src="/img/unit_125/world2.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="container_12"><div class="grid_7"><p>&nbsp;</p></div><div class="grid_5"><p>Domain</p><p class="indent">{0, 1, 2}</p><p class="em-above">Names</p><p class="indent">a : 0</p><p class="indent">b : 1</p><p class="indent">c : 2</p><p class="em-above">Predicates</p><p class="indent">NotAdjacent : {</p><p class="indent"> <span class="ab hide"><0,1>, </span><span class="bc hide"><1,2>, </span></p><p class="indent"><span class="ab hide"><1,0>, </span><span class="bc hide"><2,1></span></p><p class="indent">}</p></div><div data-what=".ab" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></div></div></div></section><section class="slide"><img src="/img/unit_125/world3.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="container_12"><div class="grid_7"><p>&nbsp;</p></div><div class="grid_5"><p>Domain</p><p class="indent">{0, 1, 2}</p><p class="em-above">Names</p><p class="indent">a : 0</p><p class="indent">b : 1</p><p class="indent">c : 2</p><p class="em-above">Predicates</p><p class="indent">NotAdjacent : {</p><p class="indent"> <span class="ab"><0,1>, </span><span class="bc hide"><1,2>, </span></p><p class="indent"><span class="ab"><1,0>, </span><span class="bc hide"><2,1></span></p><p class="indent">}</p></div><div data-what=".bc" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></div></div></div></section><section id="unit_581" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0125.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">Expressing Relations with Quantifiers</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Expressing Relations with Quantifiers}</div><div class="handout">\emph{Reading:}  §15.1, §15.6</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Expressing Relations with Quantifiers}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_125/slide-173.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div class="handout">A \emph{transitive} relation is one such that if x bears it to y and y bears it to z then x bears it to z.  (E.g. LeftOf is transitive; NotAdjacent is not transitive.)</div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">If NotAdjacent were transitive, the following argument would be logically valid:</div>
+        <div data-src="img/unit_125_argument.png" class="handout img"></div>
+        <div class="handout">\end{minipage}</div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">A counterexample to this argument:</div>
+        <div data-src="img/unit_125_counterexample.png" class="handout img"></div>
+        <div class="handout">\end{minipage}</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-174.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-175.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-176.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-177.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-178.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-179.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-180.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-181.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-182.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-183.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-184.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/slide-185.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">express the counterexample formally</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/world1.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="container_12">
+          <div class="grid_7">
+            <p>&nbsp;</p>
+          </div>
+          <div class="grid_5">
+            <p>Domain</p>
+            <p class="step2 hide indent">{0, 1, 2}</p>
+            <p class="em-above">Names</p>
+            <p class="step3 hide indent">a : 0</p>
+            <p class="step4 hide indent">b : 1</p>
+            <p class="step5 hide indent">c : 2</p>
+            <p class="em-above"><span class="predicates">Predicates</span></p>
+            <p class="indent step6 hide">NotAdjacent : {</p>
+            <p class="indent hide"><0,1>, <1,2>, </p>
+            <p class="indent hide"><1,0>, <2,1> </p>
+            <p class="indent step6 hide">}</p>
+          </div>
+        </div>
+        <div data-what=".step2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".step3" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".step4" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".step5" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .predicates" data-class="bkg-words-highlight-invert" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".step6" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/world2.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="container_12">
+          <div class="grid_7">
+            <p>&nbsp;</p>
+          </div>
+          <div class="grid_5">
+            <p>Domain</p>
+            <p class="indent">{0, 1, 2}</p>
+            <p class="em-above">Names</p>
+            <p class="indent">a : 0</p>
+            <p class="indent">b : 1</p>
+            <p class="indent">c : 2</p>
+            <p class="em-above">Predicates</p>
+            <p class="indent">NotAdjacent : {</p>
+            <p class="indent"> <span class="ab hide"><0,1>, </span><span class="bc hide"><1,2>, </span></p>
+            <p class="indent"><span class="ab hide"><1,0>, </span><span class="bc hide"><2,1></span></p>
+            <p class="indent">}</p>
+          </div>
+          <div data-what=".ab" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_125/world3.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="container_12">
+          <div class="grid_7">
+            <p>&nbsp;</p>
+          </div>
+          <div class="grid_5">
+            <p>Domain</p>
+            <p class="indent">{0, 1, 2}</p>
+            <p class="em-above">Names</p>
+            <p class="indent">a : 0</p>
+            <p class="indent">b : 1</p>
+            <p class="indent">c : 2</p>
+            <p class="em-above">Predicates</p>
+            <p class="indent">NotAdjacent : {</p>
+            <p class="indent"> <span class="ab"><0,1>, </span><span class="bc hide"><1,2>, </span></p>
+            <p class="indent"><span class="ab"><1,0>, </span><span class="bc hide"><2,1></span></p>
+            <p class="indent">}</p>
+          </div>
+          <div data-what=".bc" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_581" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0125.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Expressing Relations with Quantifiers</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Expressing Relations with Quantifiers}</div>
+<div class="handout">\emph{Reading:}  §15.1, §15.6</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Expressing Relations with Quantifiers}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_581/slide-187.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">A \emph{reflexive} relation is one that everything bears to itself.  (E.g. SameShape)  </div><div class="handout">reflexive: ∀x R(x,x)</div><div data-src="img/reflexive.png" class="handout img"></div><div class="handout">\end{minipage}</div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">A \emph{symmetric} relation is one such that if x bears it to y, then y bears it to x.  (E.g. Adjacent(x,y)) </div><div class="handout">symmetric: ∀x∀y ( R(x,y) → R(y,x) )</div><div data-src="img/symmetric.png" class="handout img"></div><div class="handout">\end{minipage}</div><div class="handout">\begin{minipage}{\columnwidth}</div><div class="handout">A \emph{transitive} relation is one such that if x bears it to y and y bears it to z then x bears it to z.  (E.g. LeftOf is transitive; DifferentShape is not transitive) 	</div><div class="handout">transitive: ∀x∀y∀z ( ( R(x,y) ∧ R(y,z) ) → R(x,z) )</div><div data-src="img/transitive.png" class="handout img"></div><div class="handout">\end{minipage}</div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-188.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-189.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-190.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-191.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-192.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-193.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-194.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-195.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-196.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-197.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-198.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-199.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-200.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-201.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-202.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-203.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-204.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-205.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-206.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-207.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-208.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-209.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-210.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-211.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-212.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-213.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-214.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-215.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-216.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-217.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-218.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_581/slide-219.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><div class="exercises">15.33--15.40 (second edition)</div><div class="exercises_fast">15.33, 15.37--15.39 (second edition)</div><section id="unit_583" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0131.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">Expressing Counterexamples Formally</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{Expressing Counterexamples Formally}</div><div class="handout">\emph{Reading:}  §15.1, §15.6</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{Expressing Counterexamples Formally}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_581/slide-187.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">A \emph{reflexive} relation is one that everything bears to itself.  (E.g. SameShape)  </div>
+        <div class="handout">reflexive: ∀x R(x,x)</div>
+        <div data-src="img/reflexive.png" class="handout img"></div>
+        <div class="handout">\end{minipage}</div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">A \emph{symmetric} relation is one such that if x bears it to y, then y bears it to x.  (E.g. Adjacent(x,y)) </div>
+        <div class="handout">symmetric: ∀x∀y ( R(x,y) → R(y,x) )</div>
+        <div data-src="img/symmetric.png" class="handout img"></div>
+        <div class="handout">\end{minipage}</div>
+        <div class="handout">\begin{minipage}{\columnwidth}</div>
+        <div class="handout">A \emph{transitive} relation is one such that if x bears it to y and y bears it to z then x bears it to z.  (E.g. LeftOf is transitive; DifferentShape is not transitive) 	</div>
+        <div class="handout">transitive: ∀x∀y∀z ( ( R(x,y) ∧ R(y,z) ) → R(x,z) )</div>
+        <div data-src="img/transitive.png" class="handout img"></div>
+        <div class="handout">\end{minipage}</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-188.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-189.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-190.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-191.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-192.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-193.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-194.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-195.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-196.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-197.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-198.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-199.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-200.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-201.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-202.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-203.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-204.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-205.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-206.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-207.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-208.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-209.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-210.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-211.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-212.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-213.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-214.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-215.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-216.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-217.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-218.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_581/slide-219.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">15.33--15.40 (second edition)</div>
+<div class="exercises_fast">15.33, 15.37--15.39 (second edition)</div>
+<section id="unit_583" class="slide"><img src="/img/bkg/keyhaven/DSC_AC_0131.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">Expressing Counterexamples Formally</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{Expressing Counterexamples Formally}</div>
+<div class="handout">\emph{Reading:}  §15.1, §15.6</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{Expressing Counterexamples Formally}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_583/slide-221.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div class="handout">Give a counterexample to this argument:</div><div data-src="img/unit_583_argument.png" class="handout img"></div><div class="handout">Informally:</div><div data-src="img/unit_583_counterexample.png" class="handout img"></div><div class="handout">Formally:</div><div class="handout">\hspace{3mm} <span>Domain: \{a, b\}</span></div><div class="handout">\hspace{3mm} <span>R: \{&lt;a,a&gt;, &lt;a,b&gt;, &lt;b,b&gt;\}</span></div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-222.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-223.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-224.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-225.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-226.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-227.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-228.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-229.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-230.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-231.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-232.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-233.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-234.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-235.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-236.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-237.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-238.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-239.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-240.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_583/slide-241.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><div class="notes">Here’s a quick look at how to enter the counterexample in
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_583/slide-221.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div class="handout">Give a counterexample to this argument:</div>
+        <div data-src="img/unit_583_argument.png" class="handout img"></div>
+        <div class="handout">Informally:</div>
+        <div data-src="img/unit_583_counterexample.png" class="handout img"></div>
+        <div class="handout">Formally:</div>
+        <div class="handout">\hspace{3mm} <span>Domain: \{a, b\}</span></div>
+        <div class="handout">\hspace{3mm} <span>R: \{&lt;a,a&gt;, &lt;a,b&gt;, &lt;b,b&gt;\}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-222.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-223.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-224.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-225.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-226.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-227.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-228.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-229.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-230.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-231.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-232.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-233.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-234.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-235.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-236.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-237.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-238.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-239.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-240.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_583/slide-241.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <div class="notes">Here’s a quick look at how to enter the counterexample in
 zoxiy.  If you want more detail, please see the user guide
-(which is linked to on the home page of zoxiy).</div><p class="center"><video src="/img/unit_583/ex_counter.mov" controls="controls"></video></p></div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">No lectures or seminars in reading week (Week 6).</p></div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center huge-glow">office hours</p><div class="container_12"><div class="grid_6"><p class="em-above">Tuesdays:</p><p>16-17 in S2.40 (Barney)</p><p class="em-above">Wednesdays:</p><p>11-12 in S2.40 (Hemdat)</p><p>12-13 in S2.40 (Hemdat)</p><p>13-14 in S2.40 (Alfonso)</p><p>15-16 in S2.40 (Dino)</p><p>16-17 in H3.45 (Barney*)</p></div><div class="grid_6"><p class="em-above">Thursdays:</p><p>10-11 in S2.33 (Joe)</p><p>12-13 in S2.33 (Joe)</p><p>13-14 in S2.40 (Barney)</p><p>15-16 in S2.40 (Dino)</p></div></div></div></div></div></div></section><section id="unit_560" class="slide"><img src="/img/bkg/keyhaven/yDSC_AC_0005.low.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="position:relative; top:425px" class="title-block"><div class="title-container"><h2 class="title1">There Is a Store for Everything</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{There Is a Store for Everything}</div><div class="handout">\emph{Reading:}  §11.2, §11.3</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{There Is a Store for Everything}</div>
+(which is linked to on the home page of zoxiy).
+          </div>
+          <p class="center">
+            <video src="/img/unit_583/ex_counter.mov" controls="controls"></video>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">No lectures or seminars in reading week (Week 6).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center huge-glow">office hours</p>
+          <div class="container_12">
+            <div class="grid_6">
+              <p class="em-above">Tuesdays:</p>
+              <p>16-17 in S2.40 (Barney)</p>
+              <p class="em-above">Wednesdays:</p>
+              <p>11-12 in S2.40 (Hemdat)</p>
+              <p>12-13 in S2.40 (Hemdat)</p>
+              <p>13-14 in S2.40 (Alfonso)</p>
+              <p>15-16 in S2.40 (Dino)</p>
+              <p>16-17 in H3.45 (Barney*)</p>
+            </div>
+            <div class="grid_6">
+              <p class="em-above">Thursdays:</p>
+              <p>10-11 in S2.33 (Joe)</p>
+              <p>12-13 in S2.33 (Joe)</p>
+              <p>13-14 in S2.40 (Barney)</p>
+              <p>15-16 in S2.40 (Dino)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_560" class="slide"><img src="/img/bkg/keyhaven/yDSC_AC_0005.low.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="position:relative; top:425px" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">There Is a Store for Everything</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{There Is a Store for Everything}</div>
+<div class="handout">\emph{Reading:}  §11.2, §11.3</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{There Is a Store for Everything}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><img src="/img/unit_560/slide-023.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div><div class="handout">There is a store for everything:</div><div class="handout">\hspace{3mm}	∃y∀x StoreFor(y,x) </div><div class="handout">\hspace{3mm} 	∀y∃x StoreFor(x,y)</div><div class="handout">Other sentences to translate:</div><div class="handout"> \hspace{3mm} Wikipedia has an article about everything</div><div class="handout"> \hspace{3mm} 	Everyone hurts someone they love</div><div class="handout"> \hspace{3mm} 	Someone hurts everyone she loves</div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-024.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-025.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-026.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-027.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-028.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-029.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-030.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-031.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-032.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-033.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-034.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-035.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-036.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-037.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-038.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-039.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-040.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-041.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-042.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-043.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-044.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-045.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-046.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-047.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-048.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-049.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-050.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-051.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-052.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-053.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-054.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-055.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-056.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-057.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-058.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-059.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-060.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-061.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-062.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-063.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-064.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-065.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-066.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-067.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-068.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-069.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-070.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-071.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-072.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-073.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-074.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-075.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-076.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-077.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-078.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-079.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-080.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-081.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/slide-082.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"> </div></div></div></div></section><section class="slide"><img src="/img/unit_560/xslide-057.jpeg" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes"></div></div></div></div></section><div class="exercises">11.3</div><div class="exercises">11.4, 11.8, 11.9</div><div class="exercises">11.11, 11.13, *11.10</div><div class="exercises_fast">11.8, 11.9, *11.11</div><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">No lectures or seminars in reading week (Week 6).</p></div></div></div></div></section><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">feedback</p></div></div></div></div></section><section id="unit_605" class="slide"><img src="/img/bkg/keyhaven/zDSC_AB_9897.JPG" class="bkg"/><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">There Does Not Exist</h2></div></div></section><div class="handout">&nbsp;</div><div class="handout">\section{There Does Not Exist}</div><div class="notes notes-header-tex">&nbsp;</div><div class="notes notes-header-tex">\section{There Does Not Exist}</div>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide"><img src="/img/unit_560/slide-023.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+        <div class="handout">There is a store for everything:</div>
+        <div class="handout">\hspace{3mm}	∃y∀x StoreFor(y,x) </div>
+        <div class="handout">\hspace{3mm} 	∀y∃x StoreFor(x,y)</div>
+        <div class="handout">Other sentences to translate:</div>
+        <div class="handout"> \hspace{3mm} Wikipedia has an article about everything</div>
+        <div class="handout"> \hspace{3mm} 	Everyone hurts someone they love</div>
+        <div class="handout"> \hspace{3mm} 	Someone hurts everyone she loves</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-024.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-025.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-026.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-027.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-028.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-029.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-030.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-031.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-032.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-033.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-034.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-035.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-036.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-037.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-038.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-039.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-040.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-041.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-042.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-043.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-044.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-045.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-046.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-047.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-048.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-049.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-050.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-051.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-052.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-053.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-054.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-055.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-056.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-057.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-058.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-059.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-060.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-061.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-062.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-063.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-064.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-065.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-066.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-067.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-068.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-069.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-070.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-071.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-072.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-073.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-074.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-075.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-076.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-077.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-078.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-079.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-080.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-081.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/slide-082.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_560/xslide-057.jpeg" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">11.3</div>
+<div class="exercises">11.4, 11.8, 11.9</div>
+<div class="exercises">11.11, 11.13, *11.10</div>
+<div class="exercises_fast">11.8, 11.9, *11.11</div>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">No lectures or seminars in reading week (Week 6).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">feedback</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="unit_605" class="slide"><img src="/img/bkg/keyhaven/zDSC_AB_9897.JPG" class="bkg"/>
+  <div class="spacer">&nbsp;</div>
+  <div style="" class="title-block">
+    <div class="title-container">
+      <h2 class="title1">There Does Not Exist</h2>
+    </div>
+  </div>
+</section>
+<div class="handout">&nbsp;</div>
+<div class="handout">\section{There Does Not Exist}</div>
+<div class="notes notes-header-tex">&nbsp;</div>
+<div class="notes notes-header-tex">\section{There Does Not Exist}</div>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><div class="slide"><div class="handout">Something is not dead:</div><div class="handout">\hspace{3mm} ∃x ¬Dead(x)</div><div class="handout">Nothing is dead:</div><div class="handout">\hspace{3mm} ¬∃x Dead(x)</div><div class="handout">Everything is not broken:</div><div class="handout">\hspace{3mm}   ∀x ¬Broken(x)</div><div class="handout">Not everything is broken:</div><div class="handout">\hspace{3mm}   ¬∀x Broken(x)</div><div data-src="img/unit_605_prf1.png" class="handout img"></div><div data-src="img/unit_605_prf2.png" class="handout img"></div><img src="/img/unit_605/not_exists.png" style="z-index:-9999" class="ne1 hide bkg"/><img src="/img/unit_605/not_exists_2.png" style="z-index:-9999" class="ne2 hide bkg"/><div class="words"><div class="container_12"><div class="grid_6 left-half"><p class="hidelater">Something is dead.</p><p class="hidelater indent slide nodim">∃x Dead(x)</p><div class="slide nodim"><p class="hidelater em-above">Something is not dead.</p><p class="indent side translation-with-negation"><span>∃x  </span><span class="negation">¬</span><span>Dead(x)</span></p></div><div class="slide nodim"><p class="hidelater em-above">Nothing is dead.</p><p class="indent slide translation-with-negation"><span class="negation">¬</span><span>∃x  </span><span>Dead(x)</span></p></div><div data-what=".left-half .negation" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".left-half" class="slide anim-continue anim-fade"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div class="step2 hide em-above"><table class="fitch-proof"><tr class="premise row-1"><td class="last-premise"><span class="highlight-hook">&#8203;</span></td><td>1.</td><td><p class="sentence"></p></td><td></td></tr><tr class="line row-2"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td>2.</td><td><span class="sentence">a=a</span></td><td>=Intro</td></tr><tr class="line row-3"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td>3.</td><td><span class="sentence">∃x (x=x)</span></td><td>∃Intro: <span class="citations"><span class="citation-1">2</span></span></td></tr></table></div></div><div class="grid_6 slide right-half"><div class="old-right-half"><p class="hidelater nodim">Everything is broken.</p><p class="hidelater indent slide nodim"><span>∀x </span><span>Broken(x)</span></p><p class="hidelater em-above slide nodim">Everything is not broken.</p><p class="indent slide nodim translation-with-negation"><span>∀x </span><span class="negation">¬</span><span>Broken(x)</span></p><p class="hidelater em-above slide nodim">Not everything is broken.</p><p class="indent slide nodim translation-with-negation"><span class="negation">¬</span><span>∀x </span><span>Broken(x)</span></p></div><div data-what=".right-half .negation" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".left-half" class="slide anim-continue anim-show"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".hidelater" class="slide anim-continue anim-fade"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></div><div class="clear"></div><div data-what=".hidelater, .step2" data-dur="1000" class="slide anim-continue anim-collapse"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div class="container_12"><grid_12><div class="slide em-above"><div class="proof2u605"><table class="fitch-proof"><tr class="premise row-1"><td class="last-premise"><span class="highlight-hook">&#8203;</span></td><td>1.</td><td><p class="sentence">¬∃x Dead(x)</p></td><td></td></tr><tr><td> </td><td colspan="3"><table class="fitch-proof"><tr class="premise row-2"><td class="last-premise"><span class="highlight-hook">&#8203;</span></td><td>2.</td><td><p class="sentence">Dead(a)</p></td><td></td></tr><tr class="line row-3"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td>3.</td><td><span class="sentence">∃x Dead(x)</span></td><td>∃Intro: <span class="citations"><span class="citation-1">2</span></span></td></tr><tr class="line row-4"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td>4.</td><td><span class="sentence">⊥</span></td><td>⊥Intro: <span class="citations"><span class="citation-1">1,</span><span class="citation-2">3</span></span></td></tr></table></td></tr><tr class="line row-5"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td>5.</td><td><span class="sentence">¬Dead(a)</span></td><td>¬Intro: <span class="citations"><span class="citation-1">2-4</span></span></td></tr><tr class="line row-6"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td>6.</td><td><span class="sentence">∃x ¬Dead(x)</span></td><td>∃Intro: <span class="citations"><span class="citation-1">5</span></span></td></tr></table></div><div data-what=".proof2u605" data-dur="1000" class="slide anim-continue anim-collapse"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div><div class="slide em-above nodim"><div class="proof3u605"><table class="fitch-proof"><tr class="premise row-1"><td class="last-premise"><span class="highlight-hook">&#8203;</span></td><td>1.</td><td><p class="sentence">∃x ¬Dead(x)</p></td><td></td></tr><tr class="line row-2"><td class="premise"><span class="highlight-hook">&#8203;</span></td><td>2.</td><td><span class="sentence">¬∃x Dead(x)</span></td><td></td></tr></table></div></div><div data-what=" .proof3u605 .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what="img.ne1" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .proof3u605 .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .proof3u605 .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what="img.ne2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .proof3u605 .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div class="slide em-above nodim"><div style="width:300px;" class="counterexample"><p>Counterexample: </p><p class="indent">Domain: {Ayesha, Beatrice}</p><p class="indent">Dead : { &lt;Beatrice&gt; }</p><p class="indent">a : Ayesha ; b : Beatrice</p></div></div><div class="slide em-above nodim"><div class="indent"><p class="nodim">... Dead(b) is true<span class="slide nodim">; so the conclusion, ¬∃x Dead(x), is false</span></p><p class="slide nodim">... and ¬Dead(a) is true<span class="slide nodim">; so the premise, ∃x ¬Dead(x), is true</span></p></div><div data-what=" .counterexample" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></grid_12></div></div></div><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center"><video src="/img/unit_605/not_exists_counterexample.mp4" controls="controls"></video></p></div></div></div></div></section><div class="exercises">9.12</div><div class="exercises_fast">9.18--9.19</div><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">No lectures or seminars in reading week (Week 6).</p></div></div></div></div></section></div></body></html>
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<div class="slide">
+  <div class="handout">Something is not dead:</div>
+  <div class="handout">\hspace{3mm} ∃x ¬Dead(x)</div>
+  <div class="handout">Nothing is dead:</div>
+  <div class="handout">\hspace{3mm} ¬∃x Dead(x)</div>
+  <div class="handout">Everything is not broken:</div>
+  <div class="handout">\hspace{3mm}   ∀x ¬Broken(x)</div>
+  <div class="handout">Not everything is broken:</div>
+  <div class="handout">\hspace{3mm}   ¬∀x Broken(x)</div>
+  <div data-src="img/unit_605_prf1.png" class="handout img"></div>
+  <div data-src="img/unit_605_prf2.png" class="handout img"></div><img src="/img/unit_605/not_exists.png" style="z-index:-9999" class="ne1 hide bkg"/><img src="/img/unit_605/not_exists_2.png" style="z-index:-9999" class="ne2 hide bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_6 left-half">
+        <p class="hidelater">Something is dead.</p>
+        <p class="hidelater indent slide nodim">∃x Dead(x)</p>
+        <div class="slide nodim">
+          <p class="hidelater em-above">Something is not dead.</p>
+          <p class="indent side translation-with-negation"><span>∃x  </span><span class="negation">¬</span><span>Dead(x)</span></p>
+        </div>
+        <div class="slide nodim">
+          <p class="hidelater em-above">Nothing is dead.</p>
+          <p class="indent slide translation-with-negation"><span class="negation">¬</span><span>∃x  </span><span>Dead(x)</span></p>
+        </div>
+        <div data-what=".left-half .negation" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".left-half" class="slide anim-continue anim-fade"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div class="step2 hide em-above">
+          <table class="fitch-proof">
+            <tr class="premise row-1">
+              <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
+              <td>1.</td>
+              <td>
+                <p class="sentence"></p>
+              </td>
+              <td></td>
+            </tr>
+            <tr class="line row-2">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td>2.</td>
+              <td><span class="sentence">a=a</span></td>
+              <td>=Intro
+              </td>
+            </tr>
+            <tr class="line row-3">
+              <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+              <td>3.</td>
+              <td><span class="sentence">∃x (x=x)</span></td>
+              <td>∃Intro: <span class="citations"><span class="citation-1">2</span></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="grid_6 slide right-half">
+        <div class="old-right-half">
+          <p class="hidelater nodim">Everything is broken.</p>
+          <p class="hidelater indent slide nodim"><span>∀x </span><span>Broken(x)</span></p>
+          <p class="hidelater em-above slide nodim">Everything is not broken.</p>
+          <p class="indent slide nodim translation-with-negation"><span>∀x </span><span class="negation">¬</span><span>Broken(x)</span></p>
+          <p class="hidelater em-above slide nodim">Not everything is broken.</p>
+          <p class="indent slide nodim translation-with-negation"><span class="negation">¬</span><span>∀x </span><span>Broken(x)</span></p>
+        </div>
+        <div data-what=".right-half .negation" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".left-half" class="slide anim-continue anim-show"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".hidelater" class="slide anim-continue anim-fade"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=".step2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div data-what=".hidelater, .step2" data-dur="1000" class="slide anim-continue anim-collapse"></div>
+    <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+    <div class="container_12">
+      <grid_12>
+        <div class="slide em-above">
+          <div class="proof2u605">
+            <table class="fitch-proof">
+              <tr class="premise row-1">
+                <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
+                <td>1.</td>
+                <td>
+                  <p class="sentence">¬∃x Dead(x)</p>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td> </td>
+                <td colspan="3">
+                  <table class="fitch-proof">
+                    <tr class="premise row-2">
+                      <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
+                      <td>2.</td>
+                      <td>
+                        <p class="sentence">Dead(a)</p>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr class="line row-3">
+                      <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+                      <td>3.</td>
+                      <td><span class="sentence">∃x Dead(x)</span></td>
+                      <td>∃Intro: <span class="citations"><span class="citation-1">2</span></span>
+                      </td>
+                    </tr>
+                    <tr class="line row-4">
+                      <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+                      <td>4.</td>
+                      <td><span class="sentence">⊥</span></td>
+                      <td>⊥Intro: <span class="citations"><span class="citation-1">1,</span><span class="citation-2">3</span></span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr class="line row-5">
+                <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+                <td>5.</td>
+                <td><span class="sentence">¬Dead(a)</span></td>
+                <td>¬Intro: <span class="citations"><span class="citation-1">2-4</span></span>
+                </td>
+              </tr>
+              <tr class="line row-6">
+                <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+                <td>6.</td>
+                <td><span class="sentence">∃x ¬Dead(x)</span></td>
+                <td>∃Intro: <span class="citations"><span class="citation-1">5</span></span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div data-what=".proof2u605" data-dur="1000" class="slide anim-continue anim-collapse"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        </div>
+        <div class="slide em-above nodim">
+          <div class="proof3u605">
+            <table class="fitch-proof">
+              <tr class="premise row-1">
+                <td class="last-premise"><span class="highlight-hook">&#8203;</span></td>
+                <td>1.</td>
+                <td>
+                  <p class="sentence">∃x ¬Dead(x)</p>
+                </td>
+                <td></td>
+              </tr>
+              <tr class="line row-2">
+                <td class="premise"><span class="highlight-hook">&#8203;</span></td>
+                <td>2.</td>
+                <td><span class="sentence">¬∃x Dead(x)</span></td>
+                <td>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div data-what=" .proof3u605 .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="img.ne1" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .proof3u605 .row-1 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .proof3u605 .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-addclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what="img.ne2" data-class="hide" data-scope="" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div data-what=" .proof3u605 .row-2 .highlight-hook" data-class="bkg-grey-row" class="slide anim-continue anim-removeclass"></div>
+        <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        <div class="slide em-above nodim">
+          <div style="width:300px;" class="counterexample">
+            <p>Counterexample: </p>
+            <p class="indent">Domain: {Ayesha, Beatrice}</p>
+            <p class="indent">Dead : { &lt;Beatrice&gt; }</p>
+            <p class="indent">a : Ayesha ; b : Beatrice</p>
+          </div>
+        </div>
+        <div class="slide em-above nodim">
+          <div class="indent">
+            <p class="nodim">... Dead(b) is true<span class="slide nodim">; so the conclusion, ¬∃x Dead(x), is false</span></p>
+            <p class="slide nodim">... and ¬Dead(a) is true<span class="slide nodim">; so the premise, ∃x ¬Dead(x), is true</span></p>
+          </div>
+          <div data-what=" .counterexample" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div>
+          <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+        </div>
+      </grid_12>
+    </div>
+  </div>
+</div>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">
+            <video src="/img/unit_605/not_exists_counterexample.mp4" controls="controls"></video>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="exercises">9.12</div>
+<div class="exercises_fast">9.18--9.19</div>
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">No lectures or seminars in reading week (Week 6).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+  </body>
+</html>

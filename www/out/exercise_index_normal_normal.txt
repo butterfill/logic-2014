@@ -1577,29 +1577,6 @@
         },
         {
           "type": "unit",
-          "name": "More Dead Horse",
-          "slides": "http://logic-1.butterfill.com/units/unit_565.html",
-          "rawReading": [
-            "11.4",
-            "11.5"
-          ],
-          "rawExercises": [
-            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Everyone is crying",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Crying1/sentence/Everyone except Ayesha is crying",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Behind2-x-is-behind-y/sentence/Everyone except Ayesha is behind Ayesha",
-            "/ex/trans/domain/people/names/-/predicates/Behind2-x-is-behind-y/sentence/Someone is behind everyone else",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Loves2/sentence/all x (not a=x arrow Loves(x,a))",
-            "/ex/trans/domain/people/names/-/predicates/Loves2/sentence/exists y all x (not y=x arrow Loves(x,y))",
-            "/ex/counter/orValid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
-            "/ex/proof/orInvalid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
-            "/ex/proof/orInvalid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
-            "/ex/counter/orValid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
-            "/ex/proof/orInvalid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)",
-            "/ex/counter/orValid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)"
-          ]
-        },
-        {
-          "type": "unit",
           "name": "Somebody Is Not Dead",
           "slides": "http://logic-1.butterfill.com/units/unit_607.html",
           "rawReading": [],
@@ -1636,6 +1613,29 @@
             "/ex/counter/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Square(x) or Broken(x))",
             "/ex/proof/orValid/from/all x (Square(x) arrow Broken(x))/to/all x (not Square(x) and Broken(x))",
             "/ex/counter/orInvalid/from/all x (Square(x) arrow Broken(x))/to/all x (not Square(x) and Broken(x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "More Dead Horse",
+          "slides": "http://logic-1.butterfill.com/units/unit_565.html",
+          "rawReading": [
+            "11.4",
+            "11.5"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Everyone is crying",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Crying1/sentence/Everyone except Ayesha is crying",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Behind2-x-is-behind-y/sentence/Everyone except Ayesha is behind Ayesha",
+            "/ex/trans/domain/people/names/-/predicates/Behind2-x-is-behind-y/sentence/Someone is behind everyone else",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Loves2/sentence/all x (not a=x arrow Loves(x,a))",
+            "/ex/trans/domain/people/names/-/predicates/Loves2/sentence/exists y all x (not y=x arrow Loves(x,y))",
+            "/ex/counter/orValid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
+            "/ex/proof/orInvalid/from/exists x all y StoreFor(x,y)/to/exists x StoreFor(x,x)",
+            "/ex/proof/orInvalid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
+            "/ex/counter/orValid/from/exists x all y (not x=y arrow StoreFor(x,y))/to/exists x StoreFor(x,x)",
+            "/ex/proof/orInvalid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)",
+            "/ex/counter/orValid/from/all y exists x Loves(x,y)/to/exists x all y Loves(x,y)"
           ]
         }
       ]
@@ -1678,98 +1678,14 @@
       "name": "Lecture 16",
       "slides": "http://logic-1.butterfill.com/lecture_16.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_16.handout.pdf",
-      "units": [
-        {
-          "type": "unit",
-          "name": "Every Time I Go to the Dentist Someone Dies",
-          "slides": "http://logic-1.butterfill.com/units/unit_750.html",
-          "rawReading": [
-            "11.2"
-          ],
-          "rawExercises": [
-            "/ex/trans/domain/things/names/-/predicates/FairyGodmother1-x-is-a-fairy-godmother|Wand1-x-is-a-wand|BelongsTo2-x-belongs-to-y/sentence/Every fairy godmother has a wand",
-            "/ex/trans/domain/things/names/a=Pheoebe/predicates/Person1-x-is-a-person|Time1-x-is-a-time|DentistAt2-x-goes-to-the-dentist-at-time-y|DiesAt2-x-dies-at-y/sentence/Everytime Pheoebe goes to dentist, someone dies",
-            "/ex/trans/domain/things/names/a=Ayesha/predicates/Time1-x-is-a-time|BlinksAt2-x-blinks-at-time-y|Person1-x-is-a-person|KicksAt3-x-kicks-y-at-time-z/sentence/Everytime Ayesha blinks someone kicks her",
-            "/ex/trans/domain/things/names/a=Ayesha/predicates/Time1-x-is-a-time|BlinksAt2-x-blinks-at-time-y|Person1-x-is-a-person|Kick1-x-is-a-kick|AgentOf2-x-is-the-agent-of-y|TimeOf2-x-is-the-time-of-y|RecipientOf2-x-is-the-recipient-of-y/sentence/Everytime Ayesha blinks someone kicks her"
-          ]
-        },
-        {
-          "type": "unit",
-          "name": "There Is Exactly One",
-          "slides": "http://logic-1.butterfill.com/units/unit_625.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is at least one survivor",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/Ayesha is the one and only survivor",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/This is one and only one survivor",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one female survivor",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/This is one and only one survivor and she is female",
-            "/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
-            "/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y) arrow x=y) and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))",
-            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
-            "/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
-            "/ex/counter/from/exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
-            "/ex/proof/from/exists x all y (Zip(y) <-> x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
-            "/ex/proof/from/exists x Zip(x)|not exists x exists y (Zip(x) and Zip(y) and not x=y)/to/exists x all y (Zip(y) <-> x=y)"
-          ]
-        },
-        {
-          "type": "unit",
-          "name": "Proofs about Proofs",
-          "slides": "http://logic-1.butterfill.com/units/unit_440.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/TorF/qq/If ⊢ P → Q then P ⊢ Q|If ⊢ Q then P ⊢ Q|If ⊢ P → Q then ¬Q ⊢ ¬P|If P ⊢ Q and P ⊢ ¬Q then P ⊢ ⊥|If P ⊢ ⊥ then P ⊢ Q",
-            "/ex/q/Sketch a proof that if ⊢ P → Q then P ⊢ Q"
-          ]
-        }
-      ]
+      "units": []
     },
     {
       "type": "lecture",
       "name": "Lecture 17",
       "slides": "http://logic-1.butterfill.com/lecture_17.html",
       "handout": "http://logic-1.butterfill.com/handouts/lecture_17.handout.pdf",
-      "units": [
-        {
-          "type": "unit",
-          "name": "Proof Example: ∃x Dead(x) ⊢ ¬∀x¬ Dead(x).",
-          "slides": "http://logic-1.butterfill.com/units/unit_825.html",
-          "rawReading": [],
-          "rawExercises": [
-            "/ex/proof/orInvalid/from/∃x Dead(x)/to/¬∀x¬ Dead(x)",
-            "/ex/proof/orInvalid/from/∃x (Fish(x) and Swimmer(x))/to/¬∀x¬ Fish(x)",
-            "/ex/counter/orValid/from/∃x (Fish(x) and Swimmer(x))/to/¬∀x¬ Fish(x)",
-            "/ex/proof/orInvalid/from/∃x Fish(x)/to/¬∀x¬ (Fish(x) and Swimmer(x))",
-            "/ex/counter/orValid/from/∃x Fish(x)/to/¬∀x¬ (Fish(x) and Swimmer(x))"
-          ]
-        },
-        {
-          "type": "unit",
-          "name": "The End Is Near",
-          "slides": "http://logic-1.butterfill.com/units/unit_790.html",
-          "rawReading": [
-            "14.3"
-          ],
-          "rawExercises": [
-            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))",
-            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))",
-            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))",
-            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))|exists x (exists y Above(y,x) and all z ( exists y Above(y,z) arrow z=x))",
-            "/ex/create/qq/exists x exists y (Tall(x) and all z (Tall(z) arrow z=x) and Wide(y) and all z (Wide(z) arrow z=y) and Happy(x) and Sad(y) and Above(x,y))",
-            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is near",
-            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is not near",
-            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end/sentence/There is no end",
-            "/ex/trans/domain/events/names/-/predicates/Dead1|King1/sentence/The king is dead",
-            "/ex/trans/domain/events/names/-/predicates/Beautiful1|Dead1|King1/sentence/The beautiful king is dead",
-            "/ex/proof/from/exists x (Yak(x) and all y (Yak(y) arrow x=y))/to/all x all y ((Yak(x) and Yak(y)) arrow x=y)",
-            "/ex/proof/from/exists x all y (Yak(y) <-> x=y)/to/exists x Yak(x)",
-            "/ex/proof/from/exists x Yak(x)|exists x all y (Yak(y) arrow x=y)/to/exists x all y (Yak(y) <-> x=y)"
-          ]
-        }
-      ]
+      "units": []
     },
     {
       "type": "lecture",

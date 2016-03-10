@@ -85,69 +85,25 @@ Readings refer to sections of the course textbook, \emph{Language, Proof and Log
  
 )
  
+\vfill
+\columnbreak
+
+\section{Truth-functional completeness}
  
+\emph{Reading:} §7.4
  
-\section{The Soundness Property and the Fubar Rules (fast)}
+‘A set of truth-functors is said to be \emph{expressively adequate} (or sometimes \emph{functionally complete}) iff, for every truth-function whatever, there is a formula containing only those truth-functors which express that truth-function, i.e. which has as its truth-table the truth-table specifying that function.’ (Bostock, \emph{Intermediate Logic} p. 45)
  
-\emph{Reading:} §8.3
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_346_and.png}
-\end{center}
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_346_fubar.png}
-\end{center}
- 
- 
-\section{Proof of the Soundness Theorem}
- 
-\emph{Reading:} §8.3
- 
-\begin{minipage}{\columnwidth}
- 
-\textbf{Illustration of soundness proof: ∨Intro}
+Illustration of the proof that $\{$¬, ∧, ∨$\}$ is truth-functionally complete:
  
 \begin{center}
-\includegraphics[scale=0.3]{img/soundness_or.png}
+\includegraphics[scale=0.3]{img/unit_430_fig2.pdf}
 \end{center}
-\end{minipage}
+\emph{Exercise} assuming $\{$¬,∨,∧$\}$ is truth-functionally complete, show that $\{$¬,∨$\}$ is.
  
-\emph{Useful Observation about any argument that ends with ∨Intro.} Suppose this argument is not valid, i.e. the premises are true and the conclusion false. Then Z must be false. So the argument from the premises to Z (line n) is not a valid argument. So there is a shorter proof which is not valid.
- 
-\emph{Stipulation}: when I say that \emph{a proof is not valid}, I mean that the last step of the proof is not a logical consequence of the premises (including premises of any open subproofs).
- 
-\begin{minipage}{\columnwidth}
- 
-\textbf{Illustration of soundness proof: ¬Intro}
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/soundness_not.png}
-\end{center}
-\end{minipage}
- 
-\begin{minipage}{\columnwidth}
- 
-\textbf{How to prove soundness? Outline}
- 
-Step 1: show that each rule has this property:
- 
-\hspace{5mm} Where the last step in a proof involves that rule, if proof is not valid then there is a shorter proof which is not valid.
- 
-Step 2: Suppose (for a contradiction) that some Fitch proofs are not valid. Select one of the shortest invalid proofs. The last step must involve one of the Fitch rules. Whichever rule it involves, we know that there must be a shorter proof which is not valid. This contradicts the fact that the selected proof is a shortest invalid proof.
- 
-\end{minipage}
- 
- 
- 
-\section{The Essence of the Completeness Theorem}
- 
-\emph{Reading:} §8.3
- 
-\begin{center}
-\includegraphics[scale=0.3]{img/unit_450.png}
-\end{center}
- 
- 
+
+
+
 \section{Proofs about Proofs}
  
 \begin{minipage}{\columnwidth}
@@ -182,6 +138,69 @@ Proof:
 \textbf{If A $\vdash$ C then A $\vdash$ B→C}
  
 \textbf{If A $\vdash$ B and A $\vdash$ ¬C then A $\vdash$ ¬(B→C)}
+ 
+ 
+ 
+\section{The Soundness Property and the Fubar Rules (fast)}
+ 
+\emph{Reading:} §8.3
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_346_and.png}
+\end{center}
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_346_fubar.png}
+\end{center}
+ 
+ 
+\section{Proof of the Soundness Theorem}
+ 
+\emph{Reading:} §8.3
+ 
+\begin{minipage}{\columnwidth}
+ 
+\textbf{Illustration of soundness proof: ∨Intro}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/soundness_or.png}
+\end{center}
+\end{minipage}
+ 
+\emph{Useful Observation about any argument that ends with ∨Intro.} Suppose this argument is not valid, i.e. the premises are true and the conclusion false. Then Z must be false. So Z cannot be a premise.  But the argument from the premises to Z (line n) is not a valid argument. So there is a shorter proof which is not valid.
+ 
+\emph{Stipulation}: when I say that \emph{a proof is not valid}, I mean that the last step of the proof is not a logical consequence of the premises (including premises of any open subproofs).
+ 
+\begin{minipage}{\columnwidth}
+ 
+\textbf{Illustration of soundness proof: ¬Intro}
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/soundness_not.png}
+\end{center}
+\end{minipage}
+ 
+\begin{minipage}{\columnwidth}
+ 
+\textbf{How to prove soundness? Outline}
+ 
+Step 1: show that each rule has this property:
+ 
+\hspace{5mm} Where the last step in a proof involves that rule, if proof is not valid then there is a shorter proof which is not valid.
+ 
+Step 2: Suppose (for a contradiction) that some Fitch proofs are not valid. Select one of the shortest invalid proofs. The last step must involve one of the Fitch rules. Whichever rule it involves, we know that there must be a shorter proof which is not valid. This contradicts the fact that the selected proof is a shortest invalid proof.
+ 
+\end{minipage}
+ 
+ 
+ 
+\section{The Essence of the Completeness Theorem}
+ 
+\emph{Reading:} §8.3
+ 
+\begin{center}
+\includegraphics[scale=0.3]{img/unit_450.png}
+\end{center}
+ 
  
  
  
@@ -239,7 +258,7 @@ Case 3: …
 \emph{Reading:} §8.3, §17.2
  
 \begin{center}
-\includegraphics[scale=0.3]{img/unit_455_completeness.png}
+\includegraphics[scale=0.35]{img/unit_455_completeness.png}
 \end{center}
  
  
@@ -253,49 +272,6 @@ Case 3: …
  
 \emph{Reading:} §14.3
  
-\vfill
-\begin{minipage}{\columnwidth}
-\section{Exercises}
-These exercises will be discussed in seminars the week after this lecture.
-The numbers below refer to the numbered exercises in the course textbook, e.g.\ `1.1' refers to exercise 1.1. on page 39 of the second edition of \emph{Language, Proof and Logic}. Exercises marked `*' are optional.
- 
-\begin{quote}
-14.2
- 
-14.4, 14.5
- 
-14.10, 14.11
- 
-14.26, 14.28
- 
-13.51–2, 14.13 %proofs
- 
-For each of the following sentences of FOL, give a logically equivalent sentence of idiomatic English using the specified interpretation. Your English sentences should be as concise as possible.
- 
-Domain : people and actions
- 
-D(x)	: x is desirable
- 
-V(x)	: x is virtuous
- 
-A(x)	: x is an action
- 
-H(x)	: x is a person
- 
-P(x,y)	: x performed y
- 
-i.	∀x (( D(x) → V(x) )
- 
-ii.	∀x ( (A(x)∧ D(x) ) → V(x) ) )
- 
-iii.	∃x ( A(x) ∧ ¬( D(x) → V(x) ) )
- 
-*iv. ∃x(H(x)∧∀y((A(y)∧P(x,y))→V(y)))
- 
-**v. ¬∃x (∃y (H(x) ∧ P(x,y) ∧ A(y) ∧ ¬V(y))	∧ ¬∃z[P(x,z) ∧ A(z) ∧ V(z)))
- 
-\end{quote}
-\end{minipage}
 %--- end paste
 %--------------- 
  
