@@ -16,8 +16,10 @@ sequence: 990
 
 include ../../../fragments/unit_mixins
 
-+slide({bkg:'unit_971/slide-001.jpeg'})
-  .notes 
+
+
++slide_middle
+
   //- handout
   .handout \emph{Exercise}  Translate the following sentences of English into awFOL using the interpretation below:
   .handout \hspace{5mm} L(x,y)	: x is a logical consequence of y
@@ -29,38 +31,148 @@ include ../../../fragments/unit_mixins
   .handout iii.	There is a sentence which is the negation of ‘Fire melts ice’
   .handout iv.	Some sentences are contradictions and all contradictions are logically equivalent.
 
-  
+  p i.	‘Fire melts ice’ is a sentence
+  .slide
+    p.indent S(a)
+  .slide
+    p.em-above ii.	There is a sentence 
+  .slide
+    p.indent ∃y S(y) 
+  .slide 
+    p.em-above iii.	There is a 
+      span.sentence sentence
+      span  which is 
+      span.negation-of the negation of ‘Fire melts ice’
+    .slide
+      p.indent ∃y ( 
+        span.step2.hide S(y)
+        span  ∧ 
+        span.step3.hide N(y,a)
+        span  )
+    +highlight('.step2, .sentence', 'yellow')
+    +show('.step2')
+    +unhighlight('.step2, .sentence', 'yellow')
+    +highlight('.step3, .negation-of', 'pink')
+    +show('.step3')
+    +unhighlight('.step3, .negation-of', 'pink')
+  .slide
+    p.em-above iv.	Some sentences are contradictions and all contradictions are logically equivalent.  
 
-+slide({bkg:'unit_971/slide-002.jpeg'})
-+slide({bkg:'unit_971/slide-003.jpeg'})
-+slide({bkg:'unit_971/slide-004.jpeg'})
-+slide({bkg:'unit_971/slide-005.jpeg'})
-+slide({bkg:'unit_971/slide-006.jpeg'})
-+slide({bkg:'unit_971/slide-007.jpeg'})
-+slide({bkg:'unit_971/slide-008.jpeg'})
-+slide({bkg:'unit_971/slide-009.jpeg'})
-+slide({bkg:'unit_971/slide-011.jpeg'})
-+slide({bkg:'unit_971/slide-012.jpeg'})
 +slide({bkg:'unit_971/slide-013.jpeg'})
-+slide({bkg:'unit_971/slide-014.jpeg'})
-+slide({bkg:'unit_971/slide-015.jpeg'})
-+slide({bkg:'unit_971/slide-016.jpeg'})
-+slide({bkg:'unit_971/slide-017.jpeg'})
-+slide({bkg:'unit_971/slide-018.jpeg'})
-+slide({bkg:'unit_971/slide-019.jpeg'})
-+slide({bkg:'unit_971/slide-020.jpeg'})
-+slide({bkg:'unit_971/slide-021.jpeg'})
-+slide({bkg:'unit_971/slide-022.jpeg'})
-+slide({bkg:'unit_971/slide-023.jpeg'})
-+slide({bkg:'unit_971/slide-024.jpeg'})
-+slide({bkg:'unit_971/slide-025.jpeg'})
-+slide({bkg:'unit_971/slide-026.jpeg'})
-+slide({bkg:'unit_971/slide-027.jpeg'})
-+slide({bkg:'unit_971/slide-028.jpeg'})
-+slide({bkg:'unit_971/slide-029.jpeg'})
-+slide({bkg:'unit_971/slide-030.jpeg'})
-+slide({bkg:'unit_971/slide-031.jpeg'})
-+slide({bkg:'unit_971/slide-032.jpeg'})
-+slide({bkg:'unit_971/slide-033.jpeg'})
-+slide({bkg:'unit_971/slide-034.jpeg'})
-+slide({bkg:'unit_971/slide-035.jpeg'})
+  .notes: :t
+    This kind of thing is just here to make you cry like a baby;
+    you’re not supposed to be able to get 100% without being
+    exceptionally good at alogic.
+  .notes: :t
+    But let’s look at how you could get something
+    approximately this complex ...
+
++slide_middle
+  p i.	Some 
+    span.sentences sentence
+      span.plural s
+    span  are 
+    span.le logically equivalent
+    span .
+  .slide
+    p.indent 
+      span.plural ∃x ∃y
+      span  ( 
+      span.step2.hide S(y) ∧ S(x)
+      span  ∧ 
+      span.step3.hide LgcllyEqvlnt(x,y)
+      span  )
+    +invert('.plural')
+    +uninvert('.plural')
+    +highlight('.sentences, .step2', 'pink')
+    +show('.step2')
+    +unhighlight('.sentences, .step2', 'pink')
+    +highlight('.le, .step3', 'blue')
+    +show('.step3')
+    .slide
+      p.indent LgcllyEqvlnt(x,y) = 
+        span.slide L(x,y) ∧ L(y,x)
+      +unhighlight('.le, .step3', 'blue')
+  
+  .slide
+    p.em-above ii.	Some 
+      span.sentences sentences
+      span  are 
+      span.contradictions contradictions
+      span .
+    .slide
+      p.indent ∃y ( 
+        span.step4.hide S(y)
+        span  ∧ 
+        span.step5.hide Contradiction(y)
+        span  )
+      +highlight('.sentences, .step4', 'pink')
+      +show('.step4')
+      +unhighlight('.sentences, .step4', 'pink')
+      +highlight('.contradictions, .step5', 'yellow')
+      +show('.step5')
+      .slide
+        p.indent Contradiction(y) = 
+           span.slide ∀x L(y,x)
+        +unhighlight('.contradictions, .step5', 'yellow')
+  .slide
+    p.em-above iii.	All 
+      span.contradictions contradiction
+        span.plural s
+      span  are 
+      span.logically-equivalent logically equivalent
+      span .
+    .slide
+      p.indent 
+        span.plural ∀x ∀y
+        span  ( 
+        span.step6.hide Contradiction(x) ∧ Contradiction(y) 
+        span  → 
+        span.step7.hide LgcllyEqvlnt(y)
+        span  )
+      +invert('.plural')
+      +uninvert('.plural')
+      +highlight('.contradictions, .step6', 'pink')
+      +show('.step6')
+      +unhighlight('.contradictions, .step6', 'pink')
+      +highlight('.logically-equivalent, .step7', 'blue')
+      +show('.step7')
+      .slide
+      +unhighlight('.logically-equivalent, .step7', 'blue')
+//-
+//-
+//- +slide({bkg:'unit_971/slide-001.jpeg'})
+//-
+//- +slide({bkg:'unit_971/slide-002.jpeg'})
+//- +slide({bkg:'unit_971/slide-003.jpeg'})
+//- +slide({bkg:'unit_971/slide-004.jpeg'})
+//- +slide({bkg:'unit_971/slide-005.jpeg'})
+//- +slide({bkg:'unit_971/slide-006.jpeg'})
+//- +slide({bkg:'unit_971/slide-007.jpeg'})
+//- +slide({bkg:'unit_971/slide-008.jpeg'})
+//- +slide({bkg:'unit_971/slide-009.jpeg'})
+//- +slide({bkg:'unit_971/slide-011.jpeg'})
+//- +slide({bkg:'unit_971/slide-012.jpeg'})
+//- +slide({bkg:'unit_971/slide-013.jpeg'})
+//- +slide({bkg:'unit_971/slide-014.jpeg'})
+//- +slide({bkg:'unit_971/slide-015.jpeg'})
+//- +slide({bkg:'unit_971/slide-016.jpeg'})
+//- +slide({bkg:'unit_971/slide-017.jpeg'})
+//- +slide({bkg:'unit_971/slide-018.jpeg'})
+//- +slide({bkg:'unit_971/slide-019.jpeg'})
+//- +slide({bkg:'unit_971/slide-020.jpeg'})
+//- +slide({bkg:'unit_971/slide-021.jpeg'})
+//- +slide({bkg:'unit_971/slide-022.jpeg'})
+//- +slide({bkg:'unit_971/slide-023.jpeg'})
+//- +slide({bkg:'unit_971/slide-024.jpeg'})
+//- +slide({bkg:'unit_971/slide-025.jpeg'})
+//- +slide({bkg:'unit_971/slide-026.jpeg'})
+//- +slide({bkg:'unit_971/slide-027.jpeg'})
+//- +slide({bkg:'unit_971/slide-028.jpeg'})
+//- +slide({bkg:'unit_971/slide-029.jpeg'})
+//- +slide({bkg:'unit_971/slide-030.jpeg'})
+//- +slide({bkg:'unit_971/slide-031.jpeg'})
+//- +slide({bkg:'unit_971/slide-032.jpeg'})
+//- +slide({bkg:'unit_971/slide-033.jpeg'})
+//- +slide({bkg:'unit_971/slide-034.jpeg'})
+//- +slide({bkg:'unit_971/slide-035.jpeg'})
