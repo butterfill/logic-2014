@@ -1,45 +1,541 @@
-<html><head><!-- (c) copyright 2013 Stephen A. Butterfill--><meta charset="utf-8"/><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><title>zoxiy | Logic I</title><meta name="description" content="There are logic exercises associated with each lecture.  This is how to complete them ..."/><meta name="keywords" content="logic, truth, logical validity"/><meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"/><!-- - lato font--><link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/><!--if lt IE 9script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
---><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" /></head><body><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.min.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script><div class="deck-notes"><div class="deck-notes-container"></div></div><div class="deck-handout"><div class="deck-handout-container"></div></div><div class="deck-container"><section id="instructions" class="slide"><div class="words"><div class="container_12"><div class="grid_12"><div class="middle"><p class="center">Press the right key for the next slide (or swipe left)</p></div></div></div></div></section><section class="slide"><!--.notes You won't believe how many people emailed me to say the slides don't work.--><div class="words"><div class="container_12"><div class="grid_12"><p>also ...</p><p>Press the left key to go backwards (or swipe right)</p><p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p><p>Press m or double tap to see a menu of slides</p></div></div></div></section><section id="unit_016" class="slide"><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">zoxiy</h2></div></div></section>
+
+<html>
+  <head>
+    <!-- (c) copyright 2013 Stephen A. Butterfill-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>zoxiy | Logic I</title>
+    <meta name="description" content="There are logic exercises associated with each lecture.  This is how to complete them ..."/>
+    <meta name="keywords" content="logic, truth, logical validity"/>
+    <meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" />
+    <meta name="viewport" content="width=device-width"/>
+    <!-- - lato font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/>
+    <!--if lt IE 9
+    script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
+    
+    --><style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" />
+  </head>
+  <body><script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.min.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+    <div class="deck-notes">
+      <div class="deck-notes-container"></div>
+    </div>
+    <div class="deck-handout">
+      <div class="deck-handout-container"></div>
+    </div>
+    <div class="deck-container">
+      <section id="instructions" class="slide">
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <div class="middle">
+                <p class="center">Press the right key for the next slide (or swipe left)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <!--.notes You won't believe how many people emailed me to say the slides don't work.-->
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <p>also ...</p>
+              <p>Press the left key to go backwards (or swipe right)</p>
+              <p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p>
+              <p>Press m or double tap to see a menu of slides</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="unit_016" class="slide">
+        <div class="spacer">&nbsp;</div>
+        <div style="" class="title-block">
+          <div class="title-container">
+            <h2 class="title1">zoxiy</h2>
+          </div>
+        </div>
+      </section>
 
 
-<!----><!-- short form:--><!--  remove_class('.blur')--><!-- long forms:--><!--  remove_class('.elements', 'blur')--><!--  remove_class(['.el1', '.el_group_2'], 'blur')--><!----><section class="slide"><div class="container_12"><div class="grid_12 "><div class="words"><div class="middle"><p class="center">http://logic-1.butterfill.com</p><div class="handout">There are logic exercises associated with each lecture.
+
+<!---->
+<!-- short form:-->
+<!--  remove_class('.blur')-->
+<!-- long forms:-->
+<!--  remove_class('.elements', 'blur')-->
+<!--  remove_class(['.el1', '.el_group_2'], 'blur')-->
+<!---->
+<section class="slide">
+  <div class="container_12">
+    <div class="grid_12 ">
+      <div class="words">
+        <div class="middle">
+          <p class="center">http://logic-1.butterfill.com</p>
+          <div class="handout">There are logic exercises associated with each lecture.
 After each lecture (or before, if you prefer), you should
-complete the associated exercises.</div><div class="handout">You can find links to the exercises for each lecture at:
-\url{http://logic-1.butterfill.com}</div><div class="handout">To complete the exercises you need to register at
+complete the associated exercises.
+          </div>
+          <div class="handout">You can find links to the exercises for each lecture at:
+\url{http://logic-1.butterfill.com}
+          </div>
+          <div class="handout">To complete the exercises you need to register at
 \url{https://logic-ex.butterfill.com}
 (If you don’t want to do this, you can complete the 
 alternative textbook exercises on paper.
-These are also specified for each lecture at \url{http://logic-1.butterfill.com}).</div><div class="handout">Seminars will discuss exercises associated with
+These are also specified for each lecture at \url{http://logic-1.butterfill.com}).
+          </div>
+          <div class="handout">Seminars will discuss exercises associated with
 the previous week’s lectures.  As your seminar tutor will
 track your progress and mark your exercises, you should
 be sure to \textbf{complete the exercises by 2pm on the day before
-your seminar}.</div></div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0001.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here is the web page describing the logic lectures at
-http://logic-1.butterfill.com</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0001b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This is for the regular (twice-weekly) lectures</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0001c.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">You might need to switch to the fast set of lectures,
+your seminar}.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0001.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here is the web page describing the logic lectures at
+http://logic-1.butterfill.com
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0001b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This is for the regular (twice-weekly) lectures
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0001c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">You might need to switch to the fast set of lectures,
 for which there are different exercises.
-(Choose the right page for the lectures you are attending.)</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0001d.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">For each set of lectures, you can choose between ‘regular
+(Choose the right page for the lectures you are attending.)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0001d.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">For each set of lectures, you can choose between ‘regular
 exercises’ and ‘fast exercises’.
 The ‘normal’ exercises are aimed at students who did not take a 
 mathematical subject at A-Level or equivalent.  The ‘fast’
 exercises are for students who find logic relatively easy and
 want to focus on more difficult questions.
-You can switch between fast and normal exercises at any time.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0002.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">When you hit the link for ‘regular exercises’, you’re told to sign in.
-But you can’t because you don’t yet have a password.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0002b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">You need to register the first time you use logic-ex.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0015.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">This is the registration form.
-Note that this isn’t a secure web page (no ssl).</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0015b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The email you use should be your university email.
+You can switch between fast and normal exercises at any time.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0002.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">When you hit the link for ‘regular exercises’, you’re told to sign in.
+But you can’t because you don’t yet have a password.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0002b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">You need to register the first time you use logic-ex.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0015.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">This is the registration form.
+Note that this isn’t a secure web page (no ssl).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0015b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The email you use should be your university email.
 Otherwise your tutor won’t know who you are and won’t
-grade your work.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0001d.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">After you sign up, you might be taken to the wrong page.
+grade your work.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0001d.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">After you sign up, you might be taken to the wrong page.
 So go back to http://logic-1.butterfill.com and hit the 
-exercises link again.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0003.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Now we’ve made it into zoxiy.
+exercises link again.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0003.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Now we’ve made it into zoxiy.
 Here’s my motivational progress donut.
-It’s very motivating.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0003b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Selecting ‘follow’ will make it easier to find the 
-exercises later, so I’ll do that.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0003c.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Scroll down to see the exercises.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0004.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here are the exercises.
-Each of the links is an exercise.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0004b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Click on the first exercise link
-to get started.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0005.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Oh look, it’s asking me to define logically valid argument.
-This is the first exercise, so it must be important.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0006.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Complete the exercise.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0006b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Submit the exercise by pressing the button.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0007.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">After you submit, it should tell you you answered the question.
+It’s very motivating.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0003b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Selecting ‘follow’ will make it easier to find the 
+exercises later, so I’ll do that.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0003c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Scroll down to see the exercises.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0004.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here are the exercises.
+Each of the links is an exercise.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0004b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Click on the first exercise link
+to get started.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0005.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Oh look, it’s asking me to define logically valid argument.
+This is the first exercise, so it must be important.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0006.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Complete the exercise.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0006b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Submit the exercise by pressing the button.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0007.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">After you submit, it should tell you you answered the question.
 This can take a while to come up.
 Sometimes it will tell you whether you were right or wrong, but
-this time it doesn’t.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0007b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">You can go direct to the next exercise.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0008.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">I’m not going to do this one now, I’ll save it for later.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0008b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Instead I want to go back to the list of exercises.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0009.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">My progress has been updated</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0014.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">If I scroll down, I can also see that it recorded that I submitted
-the exercise here.  (So I can easily see where to start from next time.)</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0009.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">But go back up, I want to show you something else.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0009b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Click on ‘zoxiy’ (top left) to get to the home page.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0010.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here’s what I see when I go to \url{https://logic-ex.butterfill.com}.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0010b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">There’s a link that will take me straight to the exercises I’m
-currently working on (the normal exercises for the normal lectures).</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0010c.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Also, I need to tell zoxiy who my tutor is so that she can mark
-my work and check my progress.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0010d.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Let’s see how the page changes once I’ve done that...</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0011.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">I added my tutor a while ago, and in the meantime she’s graded my answer.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0011b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">I can tell she’s graded my answer because there’s a message.
-(This message only appears when there are new grades, grades I haven’t seen yet.)</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0011c.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Follow the link to see the feedback.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0012.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">The exercise I just submitted has already been marked.
-(Usually your work will be marked an hour or two before your seminar.)</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0012b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Let’s see whether I got it right ...</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0013.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">Here’s my answer again.</div></div></div></div></section><section class="slide"><img src="/img/unit_016/151023-0013b.png" class="bkg"/><div class="words"><div class="container_12"><div class="grid_12"><div class="notes">And look, it’s been marked correct</div></div></div></div></section></div></body></html>
+this time it doesn’t.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0007b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">You can go direct to the next exercise.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0008.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I’m not going to do this one now, I’ll save it for later.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0008b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Instead I want to go back to the list of exercises.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0009.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">My progress has been updated
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0014.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">If I scroll down, I can also see that it recorded that I submitted
+the exercise here.  (So I can easily see where to start from next time.)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0009.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">But go back up, I want to show you something else.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0009b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Click on ‘zoxiy’ (top left) to get to the home page.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0010.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here’s what I see when I go to \url{https://logic-ex.butterfill.com}.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0010b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">There’s a link that will take me straight to the exercises I’m
+currently working on (the normal exercises for the normal lectures).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0010c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Also, I need to tell zoxiy who my tutor is so that she can mark
+my work and check my progress.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0010d.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let’s see how the page changes once I’ve done that...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0011.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I added my tutor a while ago, and in the meantime she’s graded my answer.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0011b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">I can tell she’s graded my answer because there’s a message.
+(This message only appears when there are new grades, grades I haven’t seen yet.)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0011c.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Follow the link to see the feedback.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0012.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">The exercise I just submitted has already been marked.
+(Usually your work will be marked an hour or two before your seminar.)
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0012b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Let’s see whether I got it right ...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0013.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">Here’s my answer again.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide"><img src="/img/unit_016/151023-0013b.png" class="bkg"/>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_12">
+        <div class="notes">And look, it’s been marked correct
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+  </body>
+</html>
