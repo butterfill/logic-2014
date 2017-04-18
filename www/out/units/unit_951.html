@@ -1,3 +1,264 @@
-<html><head><!-- (c) copyright 2013 Stephen A. Butterfill--><meta charset="utf-8"/><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><title>Translation from awFOL to English | Logic I</title><meta name="description" content="Revises translation from awFOL to English by considering some questions from an exam paper."/><meta name="keywords" content="logic, truth, logical validity"/><meta name="author" content=""/><meta name="generator" content="DocPad v6.78.4" /><meta name="viewport" content="width=device-width"/><!-- - lato font--><link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/><!--if lt IE 9script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
---><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" /></head><body><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.min.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script><div class="deck-notes"><div class="deck-notes-container"></div></div><div class="deck-handout"><div class="deck-handout-container"></div></div><div class="deck-container"><section id="instructions" class="slide"><div class="words"><div class="container_12"><div class="grid_12"><div class="middle"><p class="center">Press the right key for the next slide (or swipe left)</p></div></div></div></div></section><section class="slide"><!--.notes You won't believe how many people emailed me to say the slides don't work.--><div class="words"><div class="container_12"><div class="grid_12"><p>also ...</p><p>Press the left key to go backwards (or swipe right)</p><p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p><p>Press m or double tap to see a menu of slides</p></div></div></div></section><section id="unit_951" class="slide"><div class="spacer">&nbsp;</div><div style="" class="title-block"><div class="title-container"><h2 class="title1">Translation from awFOL to English</h2></div></div></section><!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833--><!-- create title slide for a lecture--><!-- param p contains document and images (an array of images to use)--><!-- param p contains p.unit and p.images (an array of images)-->
-<!-- see also +clip to modify the clip as an animation--><!-- ------------><!-- draw things--><!-- ------------><div id="fguypasD" class="slide"><div class="handout">Using the interpretation below, providing English translations of the following sentences of awFOL.</div><div class="handout">\hspace{5mm} \begin{minipage}{\columnwidth}</div><div class="handout">\hspace{5mm}  Domain: {people and actions} </div><div class="handout">\hspace{5mm}  D(x) : x is desirable </div><div class="handout">\hspace{5mm}  V(x) : x is virtuous </div><div class="handout">\hspace{5mm}  A(x) : x is an action </div><div class="handout">\hspace{5mm}  P(x,y) : x performed y </div><div class="handout">\hspace{5mm}  a : Ayesha </div><div class="handout">\end{minipage}</div><div class="handout">i. ∀x( D(x) → V(x) ) </div><div class="handout">ii. ∀x( (A(x) ∧ D(x)) → V(x) ) </div><div class="handout">iii. ∃x( A(x) ∧ ¬D(x) ) </div><div class="handout">iv. ∃x( A(x) ∧ ¬D(x) ∧ V(x) ) </div><div class="handout">v. ∃x( A(x) ∧ P(a,x) ∧ ¬V(x) ) </div><div class="handout">vi. ¬∃x( </div><div class="handout">\hspace{5mm} ∃y( A(y) ∧ P(x,y) ∧ ¬V(y) ) </div><div class="handout">\hspace{5mm}  ∧ </div><div class="handout"> \hspace{5mm} ¬∃z( A(z) ∧ P(x,z) ∧ V(z) ) </div><div class="handout"> )</div><div class="words"><div class="container_12"><div class="grid_5"><div class="white-box"><p>Domain: {people and actions}</p><p>D(x) : x is desirable </p><p>V(x) : x is virtuous </p><p>A(x) : x is an action </p><p>P(x,y) : x performed y</p><p>a : Ayesha</p></div><div class="step3 hide em-above"><div style="position:relative;z-index:-10;" class="white-box"><p class="center">All <span class="antecedent">squares</span> are <span class="consequence">blue.</span></p><p class="center">∀x( <span class="antecedent">S(x)</span> → <span class="consequent">B(x)</span> ) </p></div></div><div class="step5 hide em-above"><div style="position:relative;z-index:-10;" class="white-box"><p class="center">Some <span class="left-conjunct">squares</span> are <span class="right-conjunct">blue.</span></p><p class="center">∃x( <span class="left-conjunct">S(x)</span> ∧ <span class="right-conjunct">B(x)</span> ) </p></div></div></div><div class="grid_7"><div class="em-above-each-td"><table><tbody><tr class="hide step2"><td>i.</td><td>∀x( <span class="antecedent">D(x)</span> → <span class="consequent">V(x)</span> ) </td></tr><tr class="hide step4"><td>ii.</td><td>∀x( <span class="antecedent2">(A(x) ∧ D(x))</span> → <span class="consequent2">V(x)</span> )</td></tr><tr class="hide step6"><td>iii.</td><td>∃x( <span class="left-conjunct">A(x)</span> ∧ <span class="right-conjunct">¬D(x)</span> )</td></tr><tr class="hide step8"><td>iv.</td><td>∃x( <span class="left-conjunct2">A(x) ∧ <span class="fuiosfq">¬D(x)</span></span> ∧ V(x) )</td></tr><tr class="hide step10"><td style="padding-right:1em;">v.</td><td>∃x( A(x) ∧ <span class="fuiosfq">P(a,x)</span>  ∧ ¬V(x) )</td></tr><tr class="hide step12"><td style="padding-right:1em;">vi.</td><td>¬∃x(<div class="indent left-conjunct12">∃y( A(y) ∧ P(x,y) ∧ ¬V(y) )</div><div class="indent">∧</div><div class="indent right-conjunct12"> ¬∃z( A(z) ∧ P(x,z) ∧ V(z) )</div><div> )</div></td></tr></tbody></table></div></div><div data-what=" .step2" data-class="hide" class="slide anim-removeclass"></div><div data-what=" .step3" data-class="hide" class="slide anim-removeclass"></div><div data-what=" .antecedent" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .consequent" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step2" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .step3 .antecedent" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div><div data-what=" .step3 .consequent" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .step4" data-class="hide" class="slide anim-removeclass"></div><div data-what=" .antecedent" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div><div data-what=" .antecedent2" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step4" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what=".step3" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .step6" data-class="hide" class="slide anim-removeclass"></div><div data-what=".step5" data-class="hide" class="slide anim-continue anim-removeclass"></div><div data-what=".step3" data-class="remove-me" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .left-conjunct" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .right-conjunct" data-class="bkg-words-highlight-orange" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step6" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .step5 .left-conjunct" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div><div data-what=" .step5 .right-conjunct" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .step8" data-class="hide" class="slide anim-removeclass"></div><div data-what=" .left-conjunct" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-addclass"></div><div data-what=" .left-conjunct2" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step8" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what=".step5" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .step10" data-class="hide" class="slide anim-removeclass"></div><div data-what=".step8" data-class="blur-text" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .left-conjunct2" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .fuiosfq" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=".step8" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what=".step10" data-class="blur-text" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .step12" data-class="hide" class="slide anim-removeclass"></div><div data-what=" .left-conjunct12" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .left-conjunct12" data-class="bkg-words-highlight-faint-yellow" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .right-conjunct12" data-class="bkg-words-highlight-orange" class="slide anim-continue anim-addclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div><div data-what=" .left-conjunct12" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div><div data-what=" .right-conjunct12" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div><div data-what="#notanelement" data-class="" class="slide anim-addclass"></div></div></div></div><div class="exercises">14.1--14.3, (*14.4--14.5)</div></div></body></html>
+
+<html>
+  <head>
+    <!-- (c) copyright 2013 Stephen A. Butterfill-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Translation from awFOL to English | Logic I</title>
+    <meta name="description" content="Revises translation from awFOL to English by considering some questions from an exam paper."/>
+    <meta name="keywords" content="logic, truth, logical validity"/>
+    <meta name="author" content=""/><meta name="generator" content="DocPad v6.79.0" />
+    <meta name="viewport" content="width=device-width"/>
+    <!-- - lato font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900,400italic" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet" type="text/css"/>
+    <!--if lt IE 9
+    script(async src="https://html5shim.googlecode.com/svn/trunk/html5.js")
+    
+    --><style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/vendor/normalize.css" /><link  rel="stylesheet" href="/vendor/deck.js/style.neon.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.core.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.menu.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.hash.css" /><link  rel="stylesheet" href="/vendor/deck.js/deck.notes.css" /><link  rel="stylesheet" href="/vendor/960_12_col_custom.css" /><link  rel="stylesheet" href="/styles/steve_deck_style.css" />
+  </head>
+  <body><script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/docpad-livereload/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/jquery.min.js"></script><script defer="defer"  src="/vendor/jquery-svgfix.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.min.js"></script><script defer="defer"  src="/vendor/deck.js/deck.core.js"></script><script defer="defer"  src="/vendor/deck.js/deck.menu.js"></script><script defer="defer"  src="/vendor/deck.js/deck.hash.js"></script><script defer="defer"  src="/vendor/deck.js/deck.notes.js"></script><script defer="defer"  src="/vendor/deck.js/deck.slide-clone.js"></script><script defer="defer"  src="/vendor/deck.js/deck.fit.js"></script><script defer="defer"  src="/vendor/deck.js/deck.step.js"></script><script defer="defer"  src="/vendor/deck.js/deck.events.js"></script><script defer="defer"  src="/vendor/deck.js/deck.anim.js"></script><script defer="defer"  src="/vendor/jquery.jsPlumb-1.3.16-all-min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+    <div class="deck-notes">
+      <div class="deck-notes-container"></div>
+    </div>
+    <div class="deck-handout">
+      <div class="deck-handout-container"></div>
+    </div>
+    <div class="deck-container">
+      <section id="instructions" class="slide">
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <div class="middle">
+                <p class="center">Press the right key for the next slide (or swipe left)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slide">
+        <!--.notes You won't believe how many people emailed me to say the slides don't work.-->
+        <div class="words">
+          <div class="container_12">
+            <div class="grid_12">
+              <p>also ...</p>
+              <p>Press the left key to go backwards (or swipe right)</p>
+              <p>Press n to toggle whether notes are shown (no equivalent if you don't have a keyboard)</p>
+              <p>Press m or double tap to see a menu of slides</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="unit_951" class="slide">
+        <div class="spacer">&nbsp;</div>
+        <div style="" class="title-block">
+          <div class="title-container">
+            <h2 class="title1">Translation from awFOL to English</h2>
+          </div>
+        </div>
+      </section>
+<!-- make a range of numbers, from http://stackoverflow.com/questions/3746725/create-a-javascript-array-containing-1-n/3748833#3748833-->
+<!-- create title slide for a lecture-->
+<!-- param p contains document and images (an array of images to use)-->
+<!-- param p contains p.unit and p.images (an array of images)-->
+
+<!-- see also +clip to modify the clip as an animation-->
+<!-- ------------>
+<!-- draw things-->
+<!-- ------------>
+<div id="fguypasD" class="slide">
+  <div class="handout">Using the interpretation below, providing English translations of the following sentences of awFOL.</div>
+  <div class="handout">\hspace{5mm} \begin{minipage}{\columnwidth}</div>
+  <div class="handout">\hspace{5mm}  Domain: {people and actions} </div>
+  <div class="handout">\hspace{5mm}  D(x) : x is desirable </div>
+  <div class="handout">\hspace{5mm}  V(x) : x is virtuous </div>
+  <div class="handout">\hspace{5mm}  A(x) : x is an action </div>
+  <div class="handout">\hspace{5mm}  P(x,y) : x performed y </div>
+  <div class="handout">\hspace{5mm}  a : Ayesha </div>
+  <div class="handout">\end{minipage}</div>
+  <div class="handout">i. ∀x( D(x) → V(x) ) </div>
+  <div class="handout">ii. ∀x( (A(x) ∧ D(x)) → V(x) ) </div>
+  <div class="handout">iii. ∃x( A(x) ∧ ¬D(x) ) </div>
+  <div class="handout">iv. ∃x( A(x) ∧ ¬D(x) ∧ V(x) ) </div>
+  <div class="handout">v. ∃x( A(x) ∧ P(a,x) ∧ ¬V(x) ) </div>
+  <div class="handout">vi. ¬∃x( </div>
+  <div class="handout">\hspace{5mm} ∃y( A(y) ∧ P(x,y) ∧ ¬V(y) ) </div>
+  <div class="handout">\hspace{5mm}  ∧ </div>
+  <div class="handout"> \hspace{5mm} ¬∃z( A(z) ∧ P(x,z) ∧ V(z) ) </div>
+  <div class="handout"> )</div>
+  <div class="words">
+    <div class="container_12">
+      <div class="grid_5">
+        <div class="white-box">
+          <p>Domain: {people and actions}</p>
+          <p>D(x) : x is desirable </p>
+          <p>V(x) : x is virtuous </p>
+          <p>A(x) : x is an action </p>
+          <p>P(x,y) : x performed y</p>
+          <p>a : Ayesha</p>
+        </div>
+        <div class="step3 hide em-above">
+          <div style="position:relative;z-index:-10;" class="white-box">
+            <p class="center">All <span class="antecedent">squares</span> are <span class="consequence">blue.</span></p>
+            <p class="center">∀x( <span class="antecedent">S(x)</span> → <span class="consequent">B(x)</span> ) </p>
+          </div>
+        </div>
+        <div class="step5 hide em-above">
+          <div style="position:relative;z-index:-10;" class="white-box">
+            <p class="center">Some <span class="left-conjunct">squares</span> are <span class="right-conjunct">blue.</span></p>
+            <p class="center">∃x( <span class="left-conjunct">S(x)</span> ∧ <span class="right-conjunct">B(x)</span> ) </p>
+          </div>
+        </div>
+      </div>
+      <div class="grid_7">
+        <div class="em-above-each-td">
+          <table>
+            <tbody>
+              <tr class="hide step2">
+                <td>i.</td>
+                <td>∀x( <span class="antecedent">D(x)</span> → <span class="consequent">V(x)</span> ) </td>
+              </tr>
+              <tr class="hide step4">
+                <td>ii.</td>
+                <td>∀x( <span class="antecedent2">(A(x) ∧ D(x))</span> → <span class="consequent2">V(x)</span> )</td>
+              </tr>
+              <tr class="hide step6">
+                <td>iii.</td>
+                <td>∃x( <span class="left-conjunct">A(x)</span> ∧ <span class="right-conjunct">¬D(x)</span> )</td>
+              </tr>
+              <tr class="hide step8">
+                <td>iv.</td>
+                <td>∃x( <span class="left-conjunct2">A(x) ∧ <span class="fuiosfq">¬D(x)</span></span> ∧ V(x) )</td>
+              </tr>
+              <tr class="hide step10">
+                <td style="padding-right:1em;">v.</td>
+                <td>∃x( A(x) ∧ <span class="fuiosfq">P(a,x)</span>  ∧ ¬V(x) )</td>
+              </tr>
+              <tr class="hide step12">
+                <td style="padding-right:1em;">vi.</td>
+                <td>¬∃x(
+                  <div class="indent left-conjunct12">∃y( A(y) ∧ P(x,y) ∧ ¬V(y) )</div>
+                  <div class="indent">∧</div>
+                  <div class="indent right-conjunct12"> ¬∃z( A(z) ∧ P(x,z) ∧ V(z) )</div>
+                  <div> )</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div data-what=" .step2" data-class="hide" class="slide anim-removeclass"></div>
+      <div data-what=" .step3" data-class="hide" class="slide anim-removeclass"></div>
+      <div data-what=" .antecedent" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .consequent" data-class="bkg-words-highlight-blue" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=".step2" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .step3 .antecedent" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div>
+      <div data-what=" .step3 .consequent" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .step4" data-class="hide" class="slide anim-removeclass"></div>
+      <div data-what=" .antecedent" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div>
+      <div data-what=" .antecedent2" data-class="bkg-words-highlight-pink" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=".step4" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+      <div data-what=".step3" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .step6" data-class="hide" class="slide anim-removeclass"></div>
+      <div data-what=".step5" data-class="hide" class="slide anim-continue anim-removeclass"></div>
+      <div data-what=".step3" data-class="remove-me" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .left-conjunct" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .right-conjunct" data-class="bkg-words-highlight-orange" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=".step6" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .step5 .left-conjunct" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div>
+      <div data-what=" .step5 .right-conjunct" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .step8" data-class="hide" class="slide anim-removeclass"></div>
+      <div data-what=" .left-conjunct" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-addclass"></div>
+      <div data-what=" .left-conjunct2" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=".step8" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+      <div data-what=".step5" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .step10" data-class="hide" class="slide anim-removeclass"></div>
+      <div data-what=".step8" data-class="blur-text" class="slide anim-continue anim-removeclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .left-conjunct2" data-class="bkg-words-highlight-lime" class="slide anim-continue anim-removeclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .fuiosfq" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=".step8" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+      <div data-what=".step10" data-class="blur-text" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .step12" data-class="hide" class="slide anim-removeclass"></div>
+      <div data-what=" .left-conjunct12" data-class="bkg-words-highlight-yellow" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .left-conjunct12" data-class="bkg-words-highlight-faint-yellow" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .right-conjunct12" data-class="bkg-words-highlight-orange" class="slide anim-continue anim-addclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+      <div data-what=" .left-conjunct12" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div>
+      <div data-what=" .right-conjunct12" data-class="bkg-words-highlight-*" class="slide anim-continue anim-removeclass"></div>
+      <div data-what="#notanelement" data-class="" class="slide anim-addclass"></div>
+    </div>
+  </div>
+</div>
+      <div class="exercises">14.1--14.3, (*14.4--14.5)</div>
+    </div>
+  </body>
+</html>
